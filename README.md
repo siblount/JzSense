@@ -15,15 +15,15 @@ If I made your life wonderful, if you're feeling generious enough to donate to m
 - JzIntellisense comes with billions of errors. This is perfectly fine. If it bothers you, you may need to disable JS vailidation errors.
 
 # How to use 
-###### ⚠  The following instructions is for Visual Studio Code  ⚠ 
-1. - Download the `JzIntellisense.js` script and import it into your workspace.
-2. - If you haven't made a `.dsa` DzScript (ASCII) script yet, go ahead and do so.
-3. - After creating a `.dsa ` file, go to the bottom-right of the screen where you see the current language. At default, you will see `Text File` . Click on it and a Language Dialog will pop up.
-4. - Select "Configure File Association for `.dsa" and then select JavaScript as your mode.
+###### ⚠  The following instructions is for Visual Studio Code  ⚠
+1.  Download the `JzIntellisense.js` script and import it into your workspace.
+2.  If you haven't made a `.dsa` DzScript (ASCII) script yet, go ahead and do so.
+3.  After creating a `.dsa ` file, go to the bottom-right of the screen where you see the current language. At default, you will see `Text File` . Click on it and a Language Dialog will pop up.
+4.  Select "Configure File Association for `.dsa" and then select JavaScript as your mode.
 
 ##### Optional
 ###### Disable JavaScript validation errors.
-5. - Go to File -> Preferences -> Settings. In the User tab (or Workspace) select TypeScript (TypeScript is the interpreter for JavaScript & TypeScript for VS Code). Search for `JavaScript > Validate: Enable` and disable JavaScript validation.
+5.  Go to File -> Preferences -> Settings. In the User tab (or Workspace) select TypeScript (TypeScript is the interpreter for JavaScript & TypeScript for VS Code). Search for `JavaScript > Validate: Enable` and disable JavaScript validation.
 
 
 ## Planned Updates
