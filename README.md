@@ -6,7 +6,7 @@ JzIntellisense contents is ported directly from the [DAZ Documentation website] 
 # Me
 I DO NOT WORK FOR DAZ PRODUCTIONS AND THIS SCRIPT WAS NOT SUPPORTED BY OR ENDORSED BY ANYONE AT DAZ PRODUCTIONS INC.
 
-If I made your life wonderful, if you're feeling generious enough to donate to make me feel wonderful, you can do so by going here: https://www.buymeacoffee.com/therealsoll
+If I made your life wonderful, if you're feeling generious enough to donate to make me feel wonderful, you can do so by going here: 🌟https://www.buymeacoffee.com/therealsoll🌟
 # ⚠ Heads up ⚠ 
 ##### The current version of JzIntellisense is in its early stages.
 - The current version does not include signals as of yet.
@@ -16,7 +16,7 @@ If I made your life wonderful, if you're feeling generious enough to donate to m
 
 # How to use 
 ###### ⚠  The following instructions is for Visual Studio Code  ⚠ 
-1. -Download the `JzIntellisense.js` script and import it into your workspace.
+1. - Download the `JzIntellisense.js` script and import it into your workspace.
 2. - If you haven't made a `.dsa` DzScript (ASCII) script yet, go ahead and do so.
 3. - After creating a `.dsa ` file, go to the bottom-right of the screen where you see the current language. At default, you will see `Text File` . Click on it and a Language Dialog will pop up.
 4. - Select "Configure File Association for `.dsa" and then select JavaScript as your mode.
