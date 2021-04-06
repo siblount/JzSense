@@ -6,7 +6,7 @@ JzIntellisense contents is ported directly from the [DAZ Documentation website] 
 # Me
 I DO NOT WORK FOR DAZ PRODUCTIONS AND THIS SCRIPT WAS NOT SUPPORTED BY OR ENDORSED BY ANYONE AT DAZ PRODUCTIONS INC.
 
-If I made your life wonderful, if you're feeling generious enough to donate to make me feel wonderful, you can do so by going here: 🌟https://www.buymeacoffee.com/therealsoll🌟
+If I made your life wonderful, if you're feeling generious enough to donate to help me out, you can do so by going here: 🌟https://www.buymeacoffee.com/therealsoll🌟
 ## Latest Update ##
 - Added enums.
 - Methods without constructors now have static methods & properties.
