@@ -10,7 +10,7 @@ If I made your life wonderful, if you're feeling generious enough to donate to m
 # ⚠ Heads up ⚠ 
 ##### The current version of JzIntellisense is in its early stages.
 - The current version does not include signals as of yet.
-- The current version does not include the Global, String, Number, Boolean, Object, Date, Function, and JSON.
+- The current version does not include the `Global`, `String`, `Number`, `Boolean`, `Object`, `Date`, `Function`, and `JSON`.
 - The current version has a few enums missing.
 - JzIntellisense comes with billions of errors. This is perfectly fine. If it bothers you, you may need to disable JS vailidation errors.
 
