@@ -24,235 +24,235 @@
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/3dviewport_dz}*/
  class Dz3DViewport extends QWidget {
 	/**
- * @description No floor is drawn.
+ * @description ENUMERATOR: No floor is drawn.
 */
 	
-static NoFloor;
+	static NoFloor;
 	/**
- * @description A grid floor is drawn.
+ * @description ENUMERATOR: A grid floor is drawn.
 */
 	
-static WireFloor;
+	static WireFloor;
 	/**
- * @description A solid floor is drawn. (not currently implemented)
+ * @description ENUMERATOR: A solid floor is drawn. (not currently implemented)
 */
 	
-static SolidFloor;
+	static SolidFloor;
 	/**
- * @description Draws unlit wire-frame bounding boxes.
+ * @description ENUMERATOR: Draws unlit wire-frame bounding boxes.
 */
 	
-static WireBox;
+	static WireBox;
 	/**
- * @description Draws smooth-shaded bounding boxes.
+ * @description ENUMERATOR: Draws smooth-shaded bounding boxes.
 */
 	
-static SolidBox;
+	static SolidBox;
 	/**
- * @description Draws unlit wire-frames.
+ * @description ENUMERATOR: Draws unlit wire-frames.
 */
 	
-static Wireframe;
+	static Wireframe;
 	/**
- * @description Draws lit wire-frames.
+ * @description ENUMERATOR: Draws lit wire-frames.
 */
 	
-static LitWireframe;
+	static LitWireframe;
 	/**
- * @description Draws unlit wire-frames, front geometry facing only.
+ * @description ENUMERATOR: Draws unlit wire-frames, front geometry facing only.
 */
 	
-static HiddenLine;
+	static HiddenLine;
 	/**
- * @description Draws lit smooth shaded objects with wireframes imposed.
+ * @description ENUMERATOR: Draws lit smooth shaded objects with wireframes imposed.
 */
 	
-static WireShaded;
+	static WireShaded;
 	/**
- * @description Draws lit smooth shaded objects.
+ * @description ENUMERATOR: Draws lit smooth shaded objects.
 */
 	
-static SmoothShaded;
+	static SmoothShaded;
 	/**
- * @description Draws lit smooth shaded objects with any texture/transparency maps applied and wireframes imposed.
+ * @description ENUMERATOR: Draws lit smooth shaded objects with any texture/transparency maps applied and wireframes imposed.
 */
 	
-static WireTextured;
+	static WireTextured;
 	/**
- * @description Draws lit smooth shaded objects with any texture/transparency maps applied.
+ * @description ENUMERATOR: Draws lit smooth shaded objects with any texture/transparency maps applied.
 */
 	
-static Textured;
+	static Textured;
 	/**
- * @description A mode that docks the toolbar along the top edge of the viewport.
+ * @description ENUMERATOR: A mode that docks the toolbar along the top edge of the viewport.
 */
 	
-static DockedToolBar;
+	static DockedToolBar;
 	/**
- * @description A mode that uses a Camera Cube HUD in the top right corner of the viewport.
+ * @description ENUMERATOR: A mode that uses a Camera Cube HUD in the top right corner of the viewport.
 */
 	
-static CameraCubeHUD;
+	static CameraCubeHUD;
 	/**
  * @description Aim the viewport's camera at the selected nodes in the scene. If the scene does not have any select nodes, all nodes in the scene are aimed. Note that the viewport's camera is excluded, as are any nodes that are parented to the viewport's camera.
 */
-	static aimCamera() {
+	aimCamera() {
 	
 	}
 	/**
  * @description Aim the viewport's camera at the given box. If the box is invalid this function does nothing.
 */
-	static aimCameraAtBox(box:DzBox3):DzBox3 {
+	aimCameraAtBox(box:DzBox3):DzBox3 {
 	
 	}
 	/**
  * @description Aim the viewport's camera at the selected nodes in the scene. If the scene does not have any select nodes, all nodes in the scene are aimed. Note that the viewport's camera is excluded, as are any nodes that are parented to the viewport's camera.
 */
-	static aimCameraAtPrimaryNode() {
+	aimCameraAtPrimaryNode() {
 	
 	}
 	/**
  * @description Captures the current contents from the OpenGL frame buffer as an image.
 */
-	static captureImage() {
+	captureImage() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static currentDimensions() {
+	currentDimensions() {
 	
 	}
 	/**
  * @description Frame the viewport's camera at the selected nodes in the scene. If the scene does not have any select nodes, all nodes in the scene are framed. Note that the viewport's camera is excluded, as are any nodes that are parented to the viewport's camera.
 */
-	static frameCamera() {
+	frameCamera() {
 	
 	}
 	/**
  * @description Frame the viewport's camera at the given box. If the box is invalid this function does nothing.
 */
-	static frameCameraOnBox(box:DzBox3):DzBox3 {
+	frameCameraOnBox(box:DzBox3):DzBox3 {
 	
 	}
 	/**
  * @description Frame the viewport's camera at the selected nodes in the scene. If the scene does not have any select nodes, all nodes in the scene are framed. Note that the viewport's camera is excluded, as are any nodes that are parented to the viewport's camera.
 */
-	static frameCameraOnSelectedNodes() {
+	frameCameraOnSelectedNodes() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getAspectFrameRect() {
+	getAspectFrameRect() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getCamera() {
+	getCamera() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getCameraCube() {
+	getCameraCube() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getUserDrawStyle() {
+	getUserDrawStyle() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getViewport() {
+	getViewport() {
 	
 	}
 	/**
  * @description Performs a hardware assisted OpenGL render in this viewport with the given settings.
 */
-	static hardwareRender(handler:DzRenderHandler):Boolean {
+	hardwareRender(handler:DzRenderHandler):Boolean {
 	
 	}
 	/**
  * @description Performs a hardware assisted OpenGL render in this viewport with the given settings.
 */
-	static hardwareRenderWithOptions(handler:DzRenderHandler, options:DzRenderOptions, camera:DzCamera, style:DzDrawStyle):Boolean {
+	hardwareRenderWithOptions(handler:DzRenderHandler, options:DzRenderOptions, camera:DzCamera, style:DzDrawStyle):Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isHardwareRenderable() {
+	isHardwareRenderable() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static mouseIsDown() {
+	mouseIsDown() {
 	
 	}
 	/**
  * @description Performs a facet picking operation on the scene through this viewport.
 */
-	static pickOnFacet(pnt:Point):Number {
+	pickOnFacet(pnt:Point):Number {
 	
 	}
 	/**
  * @description Performs a gizmo picking operation through this viewport. View tools (see DzViewTool) can draw a 'gizmo' in the viewport for the user to interact with. The tool can assign different parts of the gizmo to specific indices, so as to tell what part of the gizmo was clicked by the user.
 */
-	static pickOnGizmo(pnt:Point):Number {
+	pickOnGizmo(pnt:Point):Number {
 	
 	}
 	/**
  * @description Performs a material picking operation on the scene through this viewport. This example shows the mousePress() implementation from a view tool (see DzViewTool) that sets the color of any material that the user clicks in the viewport.
 */
-	static pickOnMaterial(pnt:Point):DzMaterial {
+	pickOnMaterial(pnt:Point):DzMaterial {
 	
 	}
 	/**
  * @description Performs a node picking operation on the scene through this viewport. View tools (see DzViewTool) will commonly use this function to determine what node (if any) that the user clicks on. This example shows the mousePress() implementation from a view tool that selects the node that the user clicks in the viewport.
 */
-	static pickOnNode(pnt:Point, useSelectionMaps:Boolean):DzNode {
+	pickOnNode(pnt:Point, useSelectionMaps:Boolean):DzNode {
 	
 	}
 	/**
  * @description Performs a quick render of the scene suitable for a thumbnail image.
 */
-	static renderThumbnail(handler:DzRenderHandler):Boolean {
+	renderThumbnail(handler:DzRenderHandler):Boolean {
 	
 	}
 	/**
  * @description Reset the viewport's camera to its default state.
 */
-	static resetCamera() {
+	resetCamera() {
 	
 	}
 	/**
  * @description Set the camera for the view. If a matching camera is not found, this function does nothing.
 */
-	static setCamera(cam:String):String {
+	setCamera(cam:String):String {
 	
 	}
 	/**
  * @description Set the camera for the view. The pointer passed in must be a camera in the scene, or one of the view cameras from DzViewportMgr.
 */
-	static setCamera(cam:DzCamera):DzCamera {
+	setCamera(cam:DzCamera):DzCamera {
 	
 	}
 	/**
  * @description Set the draw style for the viewport. DzDrawStyle objects are ref counted, so the viewport refs the style when it is set, and unrefs it when it is no longer using the style. The draw style will then delete itself when its ref count reaches zero.
 */
-	static setDrawStyle(style:DzDrawStyle):DzDrawStyle {
+	setDrawStyle(style:DzDrawStyle):DzDrawStyle {
 	
 	}
 	/**
  * @description Attempts to set the DrawStyle for the viewport.
 */
-	static setUserDrawStyle(description:String):Boolean {
+	setUserDrawStyle(description:String):Boolean {
 	
 	}
 
@@ -264,7 +264,7 @@ class Dz3DViewRenderHandler extends DzImageRenderHandler {
 	/**
  * @description Constructor. Creates a render handler that will render to the given viewport.
  * @constructor
-*/
+*/;
 	constructor(view:DzViewport, startTime:DzTime, filename:String) {
 	
 	}
@@ -274,6 +274,24 @@ class Dz3DViewRenderHandler extends DzImageRenderHandler {
 	getLeftOffset() {
 	
 	}
+	/**
+ * @description Return Value:
+*/
+	getTopOffset() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getView() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getViewport() {
+	
+	}
 
 }
 /**
@@ -281,199 +299,199 @@ class Dz3DViewRenderHandler extends DzImageRenderHandler {
 Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/abstractassetcontainer_dz}*/
 class DzAbstractAssetContainer extends QObject, DzRefCountedItem {
-	static canCopyContainers:Boolean;
-	static canDeleteContainer:Boolean;
-	static canInsertSubContainer:Boolean;
-	static canModifyAssets:Boolean;
-	static canRenameContainer:Boolean;
-	static id:Object;
-	static removeAssetCausesDelete:Boolean;
-	static tooltip:String;
-	static useCount:Number;
+	canCopyContainers:Boolean;
+	canDeleteContainer:Boolean;
+	canInsertSubContainer:Boolean;
+	canModifyAssets:Boolean;
+	canRenameContainer:Boolean;
+	id:Object;
+	removeAssetCausesDelete:Boolean;
+	tooltip:String;
+	useCount:Number;
 	/**
  * @description Attempts to clear out the assets that can be rebuilt.
 */
-	static clearRebuildableAssets() {
+	clearRebuildableAssets() {
 	
 	}
 	/**
  * @description Attempts to create a new child container.
 */
-	static createNewChildContainer(containerName:String):Boolean {
+	createNewChildContainer(containerName:String):Boolean {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getAsset(index:Number):DzAsset {
+	getAsset(index:Number):DzAsset {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getAssets() {
+	getAssets() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getChildContainer(index:Number):Number {
+	getChildContainer(index:Number):Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getChildContainers() {
+	getChildContainers() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getChildIconSize() {
+	getChildIconSize() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getContainerName() {
+	getContainerName() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getIDPath() {
+	getIDPath() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumAssets() {
+	getNumAssets() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumChildContainers() {
+	getNumChildContainers() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getOwner() {
+	getOwner() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getSmallChildIconSize() {
+	getSmallChildIconSize() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getSupportFile() {
+	getSupportFile() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static hasAsset(asset:DzAsset):Boolean {
+	hasAsset(asset:DzAsset):Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static hasChildContainers() {
+	hasChildContainers() {
 	
 	}
 	/**
  * @description Boolean DzAbstractAssetContainer.ingoreAssetConflicts()
 */
-	static ignoreAssetConflicts() {
+	ignoreAssetConflicts() {
 	
 	}
 	/**
  * @description Initializes this containers child containers.
 */
-	static initChildren() {
+	initChildren() {
 	
 	}
 	/**
  * @description Attempts to insert the given asset into this container.
 */
-	static insertAsset(asset:DzAsset):Boolean {
+	insertAsset(asset:DzAsset):Boolean {
 	
 	}
 	/**
  * @description Attempts to insert container as a child of this container.
 */
-	static insertChildContainer(container:DzAbstractAssetContainer):Boolean {
+	insertChildContainer(container:DzAbstractAssetContainer):Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isFileSystemBased() {
+	isFileSystemBased() {
 	
 	}
 	/**
  * @description Attempts to move the given container from its parent.
 */
-	static moveFromParent(child:DzAbstractAssetContainer):Boolean {
+	moveFromParent(child:DzAbstractAssetContainer):Boolean {
 	
 	}
 	/**
  * @description Attempts to remove the given asset from this container.
 */
-	static removeAsset(asset:DzAsset):Boolean {
+	removeAsset(asset:DzAsset):Boolean {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static removeAssetOnCut(toContainer:DzAbstractAssetContainer):Boolean {
+	removeAssetOnCut(toContainer:DzAbstractAssetContainer):Boolean {
 	
 	}
 	/**
  * @description Attempts to remove the given container.
 */
-	static removeChildContainer(container:DzAbstractAssetContainer):Boolean {
+	removeChildContainer(container:DzAbstractAssetContainer):Boolean {
 	
 	}
 	/**
  * @description Attempts to rename this container.
 */
-	static rename(name:String):Boolean {
+	rename(name:String):Boolean {
 	
 	}
 	/**
  * @description Attempts to rename the given asset.
 */
-	static renameAsset(asset:DzAsset, newAssetName:String):Boolean {
+	renameAsset(asset:DzAsset, newAssetName:String):Boolean {
 	
 	}
 	/**
  * @description Attempts to rename the given child container.
 */
-	static renameChildContainer(container:DzAbstractAssetContainer, name:String):Boolean {
+	renameChildContainer(container:DzAbstractAssetContainer, name:String):Boolean {
 	
 	}
 	/**
  * @description Sets the name for this container.
 */
-	static setContainerName(name:String):String {
+	setContainerName(name:String):String {
 	
 	}
 	/**
  * @description Attemps to update this container.
 */
-	static update() {
+	update() {
 	
 	}
 	/**
  * @description Attempts to update the assets associated with this container.
 */
-	static updateAssets() {
+	updateAssets() {
 	
 	}
 
@@ -486,7 +504,67 @@ class DzAbstractNodeEditorPane extends DzPane {
 	/**
  * @description Return Value:
 */
-	static displaySeparate() {
+	displaySeparate() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getContentTab() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getEditorGuidePage() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getInfoDivider() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNodeEditor() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPresetGuidePage() {
+	
+	}
+	/**
+ * @description Sets the current page to the index specified by which; 0 based.
+*/
+	setCurrentTab(which:Number):Number {
+	
+	}
+	/**
+ * @description Sets whether or not hidden properties are displayed in the pane.
+*/
+	showHidden(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	showingHidden() {
+	
+	}
+	/**
+ * @description Toggle between whether each selected node is displayed separately in the navigation list or not.
+*/
+	toggleDisplaySeparate() {
+	
+	}
+	/**
+ * @description Toggle between whether hidden properties are shown in the list or not.
+*/
+	toggleShowHidden() {
 	
 	}
 
@@ -506,73 +584,73 @@ See Also:
  DzActionMgr.findAction()
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/action_dz}*/
 class DzAction extends QObject {
-	static actionGroup:String;
-	static autoRepeat:Boolean;
-	static checkable:Boolean;
-	static checked:Boolean;
-	static defaultMenu:String;
-	static defaultMenus:Array;
-	static defaultShortcut:String;
-	static defaultToolBar:String;
-	static defaultToolBars:Array;
-	static description:String;
-	static enabled:Boolean;
-	static iconFile:String;
-	static iconText:String;
-	static iconVisibleInMenu:Boolean;
-	static shortcut:String;
-	static statusTip:String;
-	static styleIcon:Number;
-	static text:String;
-	static toolTip:String;
-	static visible:Boolean;
-	static whatsThis:String;
+	actionGroup:String;
+	autoRepeat:Boolean;
+	checkable:Boolean;
+	checked:Boolean;
+	defaultMenu:String;
+	defaultMenus:Array;
+	defaultShortcut:String;
+	defaultToolBar:String;
+	defaultToolBars:Array;
+	description:String;
+	enabled:Boolean;
+	iconFile:String;
+	iconText:String;
+	iconVisibleInMenu:Boolean;
+	shortcut:String;
+	statusTip:String;
+	styleIcon:Number;
+	text:String;
+	toolTip:String;
+	visible:Boolean;
+	whatsThis:String;
 	/**
  * @description Activates the action in the 'Hover' state programatically.
 */
-	static hover() {
+	hover() {
 	
 	}
 	/**
  * @description Sets the action's toggle state.
 */
-	static setChecked(onOff:Boolean):Boolean {
+	setChecked(onOff:Boolean):Boolean {
 	
 	}
 	/**
  * @description Disables/Enables the action in the interface.
 */
-	static setDisabled(onOff:Boolean):Boolean {
+	setDisabled(onOff:Boolean):Boolean {
 	
 	}
 	/**
  * @description Enables/Disables the action in the interface.
 */
-	static setEnabled(onOff:Boolean):Boolean {
+	setEnabled(onOff:Boolean):Boolean {
 	
 	}
 	/**
  * @description The same as calling setChecked( !onOff ). This method is provided for convenience when connecting this slot to a signal that emits a value that is the inverse of the desired onOff state.
 */
-	static setOff(onOff:Boolean):Boolean {
+	setOff(onOff:Boolean):Boolean {
 	
 	}
 	/**
  * @description Sets whether the action is visible in the interface.
 */
-	static setVisible(onOff:Boolean):Boolean {
+	setVisible(onOff:Boolean):Boolean {
 	
 	}
 	/**
  * @description Toggles the action programatically.
 */
-	static toggle() {
+	toggle() {
 	
 	}
 	/**
  * @description Activates the action programatically.
 */
-	static trigger() {
+	trigger() {
 	
 	}
 
@@ -585,34 +663,136 @@ class DzAction extends QObject {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/actionmenu_dz}*/
 class DzActionMenu extends QObject {
 	/**
- * @description A menu where each DzActionMenuItem is explicitly defined
+ * @description ENUMERATOR: A menu where each DzActionMenuItem is explicitly defined
 */
 	
-static CustomMenu;
+	static CustomMenu;
 	/**
- * @description A menu where each DzActionMenuItem is implicitly defined; built dynamically from paneaction_dz subclasses
+ * @description ENUMERATOR: A menu where each DzActionMenuItem is implicitly defined; built dynamically from paneaction_dz subclasses
 */
 	
-static PaneMenu;
+	static PaneMenu;
 	/**
- * @description A menu where each DzActionMenuItem is implicitly defined; built dynamically from viewtoolaction_dz subclasses
+ * @description ENUMERATOR: A menu where each DzActionMenuItem is implicitly defined; built dynamically from viewtoolaction_dz subclasses
 */
 	
-static ViewToolMenu;
+	static ViewToolMenu;
 	/**
- * @description A menu where each DzActionMenuItem is implicitly defined; built dynamically from assetiofilteraction_dz and savefilteraction_dz subclasses
+ * @description ENUMERATOR: A menu where each DzActionMenuItem is implicitly defined; built dynamically from assetiofilteraction_dz and savefilteraction_dz subclasses
 */
 	
-static SaveAsMenu;
+	static SaveAsMenu;
 	/**
- * @description A menu where each DzActionMenuItem is implicitly defined; built dynamically from the return value of DzContentMgr.getRecentFileList() Since: 4.6.0.44
+ * @description ENUMERATOR: A menu where each DzActionMenuItem is implicitly defined; built dynamically from the return value of DzContentMgr.getRecentFileList() Since: 4.6.0.44
 */
 	
-static OpenRecentMenu;
+	static OpenRecentMenu;
 	/**
  * @description Removes all items from the menu.
 */
-	static clear() {
+	clear() {
+	
+	}
+	/**
+ * @description Displays the menu to the user
+*/
+	exec() {
+	
+	}
+	/**
+ * @description Displays the menu to the user at the given position.
+*/
+	exec(pos:Point):Point {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findSubMenu(label:String):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getItem(which:Number):DzActionMenuItem {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getItemList() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumItems() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getSubMenu(label:String):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	hasItems() {
+	
+	}
+	/**
+ * @description Inserts the given action into the menu at the given location.
+*/
+	insertAction(className:String, at:Number):String {
+	
+	}
+	/**
+ * @description Inserts the given custom action into the menu at the given location.
+*/
+	insertCustomAction(guid:String, at:Number):String {
+	
+	}
+	/**
+ * @description Inserts the given file merge action into the menu at the given location.
+*/
+	insertFileMergeAction(fileName:String, label:String, at:Number):String {
+	
+	}
+	/**
+ * @description Inserts the given file open action into the menu at the given location.
+*/
+	insertFileOpenAction(fileName:String, label:String, at:Number):String {
+	
+	}
+	/**
+ * @description Inserts the given item into the menu at the given location.
+*/
+	insertItem(item:DzActionMenuItem, at:Number):DzActionMenuItem {
+	
+	}
+	/**
+ * @description Inserts the given menu into the menu at the given location as a submenu.
+*/
+	insertMenu(label:String, menu:DzActionMenu, at:Number):String {
+	
+	}
+	/**
+ * @description Inserts a separator into the menu at the given location.
+*/
+	insertSeparator(where:Number):Number {
+	
+	}
+	/**
+ * @description Remove the given item from the menu.
+*/
+	removeItem(item:DzActionMenuItem):DzActionMenuItem {
+	
+	}
+	/**
+ * @description Removes any duplicate separators from the menu by replacing two or more adjacent separators with a single separator.
+*/
+	simplifySeparators() {
 	
 	}
 
@@ -622,51 +802,51 @@ static OpenRecentMenu;
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/actionmenuitem_dz}*/
 class DzActionMenuItem extends QObject {
 	/**
- * @description A menu separator (i.e. horizontal divider)
+ * @description ENUMERATOR: A menu separator (i.e. horizontal divider)
 */
 	
-static Separator;
+	static Separator;
 	/**
- * @description A menu entry that activates a DzAction object
+ * @description ENUMERATOR: A menu entry that activates a DzAction object
 */
 	
-static Action;
+	static Action;
 	/**
- * @description A menu entry that activates a custom action.  See Also: DzActionMgr - for more about custom actions.
+ * @description ENUMERATOR: A menu entry that activates a custom action.  See Also: DzActionMgr - for more about custom actions.
 */
 	
-static CustomAction;
+	static CustomAction;
 	/**
- * @description A menu entry that opens a submenu
+ * @description ENUMERATOR: A menu entry that opens a submenu
 */
 	
-static SubMenu;
+	static SubMenu;
 	/**
- * @description A menu entry that opens a file, replacing the contents of the current scene  See Also: DzContentMgr.openFile() - for more about opening a file.
+ * @description ENUMERATOR: A menu entry that opens a file, replacing the contents of the current scene  See Also: DzContentMgr.openFile() - for more about opening a file.
 */
 	
-static FileOpenAction;
+	static FileOpenAction;
 	/**
- * @description A menu entry that merges a file with the current scene  See Also: DzContentMgr.openFile() - for more about merging a file.
+ * @description ENUMERATOR: A menu entry that merges a file with the current scene  See Also: DzContentMgr.openFile() - for more about merging a file.
 */
 	
-static FileMergeAction;
+	static FileMergeAction;
 	/**
  * @description Return Value:
 */
-	static getSubMenu() {
+	getSubMenu() {
 	
 	}
 	/**
  * @description Causes the file for a FileOpenAction or FileMergeAction item to load
 */
-	static loadFile() {
+	loadFile() {
 	
 	}
 	/**
  * @description Sets the menu that is displayed as the submenu when this menu item is activated. This call has no effect unless the type of this item is SubMenu.
 */
-	static setSubMenu(menu:DzActionMenu):DzActionMenu {
+	setSubMenu(menu:DzActionMenu):DzActionMenu {
 	
 	}
 
@@ -684,7 +864,7 @@ class DzActionMgr extends QWidget {
 	/**
  * @description Uses the regular expression "([A-z]+[A-z0-9]*)" to strip characters/symbols/etc from a string in order to 'legalize' it.
  * @constructor
-*/
+*/;
 	constructor(name:String) {
 	
 	}
@@ -692,6 +872,246 @@ class DzActionMgr extends QWidget {
  * @description Adds a custom action to the action manager.
 */
 	addCustomAction(text:String, desc:String, script:String, isFile:Boolean, shortcut:String, iconFile:String):String {
+	
+	}
+	/**
+ * @description Clears the active menu.
+*/
+	clearActiveMenu() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findAction(className:String):DzAction {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findCustomAction(guid:String):Number {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findPaneAction(className:String):DzAction {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findPersistentMenu(className:String):DzPersistentMenu {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findViewToolAction(className:String):DzAction {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getAction(which:Number):DzAction {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getActiveMenu() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getCustomAction(guid:String):Number {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getCustomActionDesc(which:Number):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getCustomActionFile(which:Number):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getCustomActionIcon(which:Number):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getCustomActionName(which:Number):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getCustomActionScript(which:Number):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getCustomActionShortcut(which:Number):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getCustomActionText(which:Number):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getMenu() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumActions() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumCustomActions() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumPersistentMenus() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getPersistentMenu(which:Number):DzPersistentMenu {
+	
+	}
+	/**
+ * @description Builds the main menu, pane menus and tool bars from the given file.
+*/
+	loadInterfaceFile(filename:String, overrideDefaults:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Deprecated
+*/
+	loadInterfaceFile(filename:String):Boolean {
+	
+	}
+	/**
+ * @description Removes all custom actions from the application.
+*/
+	removeAllCustomActions() {
+	
+	}
+	/**
+ * @description Removes the custom action at the given index.
+*/
+	removeCustomAction(which:Number):Number {
+	
+	}
+	/**
+ * @description Saves the actions to the given file.
+*/
+	saveActionsFile(filename:String):Boolean {
+	
+	}
+	/**
+ * @description Saves the actions to the given file.
+*/
+	saveCustomActionsFile(filename:String):Boolean {
+	
+	}
+	/**
+ * @description Saves the actions, menus and toolbars to their respective files in the default location.
+*/
+	saveInterfaceFiles() {
+	
+	}
+	/**
+ * @description Saves the main menu, pane menus to the given file.
+*/
+	saveMenusFile(filename:String):Boolean {
+	
+	}
+	/**
+ * @description Saves the tool bars to the given file.
+*/
+	saveToolBarsFile(filename:String):Boolean {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	setAccel(className:String, key:String):String {
+	
+	}
+	/**
+ * @description Sets the active menu, so that actions relying on the active menu can get it. This may be called before the menu exec() call to allow context for script actions.
+*/
+	setActiveMenu(menu:DzActionMenu):DzActionMenu {
+	
+	}
+	/**
+ * @description Deprecated
+*/
+	setCustomActionAccel(which:Number, shortcut:String):Number {
+	
+	}
+	/**
+ * @description Sets the description for the custom action at the given index.
+*/
+	setCustomActionDesc(which:Number, desc:String):Number {
+	
+	}
+	/**
+ * @description Sets the icon for the custom action at the given index.
+*/
+	setCustomActionIcon(which:Number, iconFile:String):Number {
+	
+	}
+	/**
+ * @description Sets the script for the custom action at the given index.
+*/
+	setCustomActionScript(which:Number, script:String, isFile:Boolean):Number {
+	
+	}
+	/**
+ * @description Sets the keyboard shortcut for the custom action at the given index.
+*/
+	setCustomActionShortcut(which:Number, shortcut:String):Number {
+	
+	}
+	/**
+ * @description Sets whether or not the text of the action is displayed with the icon for the custom action at the given index.
+*/
+	setCustomActionShowTextWithIcon(which:Number, onOff:Boolean):Number {
+	
+	}
+	/**
+ * @description Sets the text for the custom action at the given index.
+*/
+	setCustomActionText(which:Number, text:String):Number {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	unsetAccel(key:String):String {
 	
 	}
 
@@ -711,7 +1131,7 @@ class DzActivityLayout extends QObject, DzRefCountedItem {
 	/**
  * @description Default Constructor. Creates a new activity layout with the given name and description.
  * @constructor
-*/
+*/;
 	constructor(label:String, desc:String) {
 	
 	}
@@ -743,7 +1163,7 @@ class DzAddBlend extends DzImageBlend {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -768,7 +1188,7 @@ class DzAlembicExporter extends DzExporter {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -782,7 +1202,7 @@ class DzAlphaBlend extends DzImageBlend {
 	/**
  * @description Default Constructor
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -796,753 +1216,753 @@ Can be directly accessed using the global variable App.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/app_dz}*/
 class DzApp extends QObject {
 	/**
- * @description No interface or graphical subsystem is initialized.
+ * @description ENUMERATOR: No interface or graphical subsystem is initialized.
 */
 	
-static NoInterface;
+	static NoInterface;
 	/**
- * @description The OpenGL subsystem is initialized without a user interface.
+ * @description ENUMERATOR: The OpenGL subsystem is initialized without a user interface.
 */
 	
-static NoInterfaceWithOpenGL;
+	static NoInterfaceWithOpenGL;
 	/**
- * @description The user interface and all graphical subsystems are initialized.
+ * @description ENUMERATOR: The user interface and all graphical subsystems are initialized.
 */
 	
-static FullInterface;
+	static FullInterface;
 	/**
- * @description An unknown operating system.
+ * @description ENUMERATOR: An unknown operating system.
 */
 	
-static Unknown;
+	static Unknown;
 	/**
- * @description An unknown version of Windows.
+ * @description ENUMERATOR: An unknown version of Windows.
 */
 	
-static WindowsUnknown;
+	static WindowsUnknown;
 	/**
- * @description The Windows 95 operating system.
+ * @description ENUMERATOR: The Windows 95 operating system.
 */
 	
-static Windows95;
+	static Windows95;
 	/**
- * @description The Windows 98 operating system.
+ * @description ENUMERATOR: The Windows 98 operating system.
 */
 	
-static Windows98;
+	static Windows98;
 	/**
- * @description The Windows Me operating system.
+ * @description ENUMERATOR: The Windows Me operating system.
 */
 	
-static WindowsMe;
+	static WindowsMe;
 	/**
- * @description The Windows 2000 operating system.
+ * @description ENUMERATOR: The Windows 2000 operating system.
 */
 	
-static Windows2000;
+	static Windows2000;
 	/**
- * @description The Windows XP operating system.
+ * @description ENUMERATOR: The Windows XP operating system.
 */
 	
-static WindowsXP;
+	static WindowsXP;
 	/**
- * @description The Windows 2003 operating system.
+ * @description ENUMERATOR: The Windows 2003 operating system.
 */
 	
-static Windows2003;
+	static Windows2003;
 	/**
- * @description The Windows Vista operating system.
+ * @description ENUMERATOR: The Windows Vista operating system.
 */
 	
-static WindowsVista;
+	static WindowsVista;
 	/**
- * @description The Windows 7 operating system.
+ * @description ENUMERATOR: The Windows 7 operating system.
 */
 	
-static Windows7;
+	static Windows7;
 	/**
- * @description The Windows 8 operating system.
+ * @description ENUMERATOR: The Windows 8 operating system.
 */
 	
-static Windows8;
+	static Windows8;
 	/**
- * @description The Windows 8.1 operating system.
+ * @description ENUMERATOR: The Windows 8.1 operating system.
 */
 	
-static Windows8_1;
+	static Windows8_1;
 	/**
- * @description The Windows 10 operating system.
+ * @description ENUMERATOR: The Windows 10 operating system.
 */
 	
-static Windows10;
+	static Windows10;
 	/**
- * @description An unknown version of the Macintosh operating system.
+ * @description ENUMERATOR: An unknown version of the Macintosh operating system.
 */
 	
-static MacUnknown;
+	static MacUnknown;
 	/**
- * @description The OS X 10.0 (Cheetah) operating system.
+ * @description ENUMERATOR: The OS X 10.0 (Cheetah) operating system.
 */
 	
-static Mac10_0;
+	static Mac10_0;
 	/**
- * @description The OS X 10.1 (Puma) operating system.
+ * @description ENUMERATOR: The OS X 10.1 (Puma) operating system.
 */
 	
-static Mac10_1;
+	static Mac10_1;
 	/**
- * @description The OS X 10.2 (Jaguar) operating system.
+ * @description ENUMERATOR: The OS X 10.2 (Jaguar) operating system.
 */
 	
-static Mac10_2;
+	static Mac10_2;
 	/**
- * @description The OS X 10.3 (Panther) operating system.
+ * @description ENUMERATOR: The OS X 10.3 (Panther) operating system.
 */
 	
-static Mac10_3;
+	static Mac10_3;
 	/**
- * @description The OS X 10.4 (Tiger) operating system.
+ * @description ENUMERATOR: The OS X 10.4 (Tiger) operating system.
 */
 	
-static Mac10_4;
+	static Mac10_4;
 	/**
- * @description The OS X 10.5 (Leopard) operating system.
+ * @description ENUMERATOR: The OS X 10.5 (Leopard) operating system.
 */
 	
-static Mac10_5;
+	static Mac10_5;
 	/**
- * @description The OS X 10.6 (Snow Leopard) operating system.
+ * @description ENUMERATOR: The OS X 10.6 (Snow Leopard) operating system.
 */
 	
-static Mac10_6;
+	static Mac10_6;
 	/**
- * @description The OS X 10.7 (Lion) operating system.
+ * @description ENUMERATOR: The OS X 10.7 (Lion) operating system.
 */
 	
-static Mac10_7;
+	static Mac10_7;
 	/**
- * @description The OS X 10.8 (Mountain Lion) operating system.
+ * @description ENUMERATOR: The OS X 10.8 (Mountain Lion) operating system.
 */
 	
-static Mac10_8;
+	static Mac10_8;
 	/**
- * @description The OS X 10.9 (Mavericks) operating system.
+ * @description ENUMERATOR: The OS X 10.9 (Mavericks) operating system.
 */
 	
-static Mac10_9;
+	static Mac10_9;
 	/**
- * @description The OS X 10.10 (Yosemite) operating system.
+ * @description ENUMERATOR: The OS X 10.10 (Yosemite) operating system.
 */
 	
-static Mac10_10;
+	static Mac10_10;
 	/**
- * @description The OSX 10.11 (El Capitan) operating system.
+ * @description ENUMERATOR: The OSX 10.11 (El Capitan) operating system.
 */
 	
-static Mac10_11;
+	static Mac10_11;
 	/**
- * @description The OSX 10.12 (Sierra) operating system.
+ * @description ENUMERATOR: The OSX 10.12 (Sierra) operating system.
 */
 	
-static Mac10_12;
+	static Mac10_12;
 	/**
- * @description Supported Microsoft Windows Operating Systems.
+ * @description ENUMERATOR: Supported Microsoft Windows Operating Systems.
 */
 	
-static Windows;
+	static Windows;
 	/**
- * @description Supported Apple Macintosh OS X Operating Systems.
+ * @description ENUMERATOR: Supported Apple Macintosh OS X Operating Systems.
 */
 	
-static MacOSX;
+	static MacOSX;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static GeneralRelease;
+	static GeneralRelease;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static PublicBuild;
+	static PublicBuild;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static PublishingBuild;
+	static PublishingBuild;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static PrivateBuild;
+	static PrivateBuild;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static DevBuild;
+	static DevBuild;
 	/**
- * @description The free edition of the application.
+ * @description ENUMERATOR: The free edition of the application.
 */
 	
-static Free;
+	static Free;
 	/**
- * @description The standard edition of the application.
+ * @description ENUMERATOR: The standard edition of the application.
 */
 	
-static Standard;
+	static Standard;
 	/**
- * @description The advanced edition of the application.
+ * @description ENUMERATOR: The advanced edition of the application.
 */
 	
-static Advanced;
+	static Advanced;
 	/**
- * @description The pro edition of the application.
+ * @description ENUMERATOR: The pro edition of the application.
 */
 	
-static Pro;
+	static Pro;
 	/**
- * @description The alpha edition of the application.
+ * @description ENUMERATOR: The alpha edition of the application.
 */
 	
-static Alpha;
+	static Alpha;
 	/**
- * @description The beta edition of the application.
+ * @description ENUMERATOR: The beta edition of the application.
 */
 	
-static Beta;
+	static Beta;
 	/**
  * @description TODO:
 Add description.
 */
-	static addSessionFileLoad(name:String):String {
+	addSessionFileLoad(name:String):String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static bitArchitecture() {
+	bitArchitecture() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static bitArchitectureString() {
+	bitArchitectureString() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static byteSizeToString(bytes:Number):String {
+	byteSizeToString(bytes:Number):String {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static canShowSceneBuilder(definition:Object):Boolean {
+	canShowSceneBuilder(definition:Object):Boolean {
 	
 	}
 	/**
  * @description Forces a deletion of all objects currently waiting to be deleted to free up more memory. If you are using this to clear memory you will generally want to clear the Undo Stack first.
 */
-	static clearDelayedDeleteStack(doProgress:Boolean):Boolean {
+	clearDelayedDeleteStack(doProgress:Boolean):Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static createDigest(tokens:Array):String {
+	createDigest(tokens:Array):String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static createDigest(data:ByteArray):String {
+	createDigest(data:ByteArray):String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static createUuid() {
+	createUuid() {
 	
 	}
 	/**
  * @description Write a debug message to the application log file.
 */
-	static debug(msg:String):String {
+	debug(msg:String):String {
 	
 	}
 	/**
  * @description Posts an event that causes the application to exit.
 */
-	static delayedExit(exitCode:Number):Number {
+	delayedExit(exitCode:Number):Number {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static enableMultiThreading(onOff:Boolean):Boolean {
+	enableMultiThreading(onOff:Boolean):Boolean {
 	
 	}
 	/**
  * @description Writes any currently buffered log messages to the log file. This is automatically called whenever the log buffer has more than 512 characters of data, but can be called at any time to force all messages to be written out.
 */
-	static flushLogBuffer() {
+	flushLogBuffer() {
 	
 	}
 	/**
  * @description Searches in default locations for a script file of the given name.
 */
-	static getAbsoluteScriptPath(scriptName:String):String {
+	getAbsoluteScriptPath(scriptName:String):String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getAppDataPath() {
+	getAppDataPath() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getApplicationBaseName() {
+	getApplicationBaseName() {
 	
 	}
 	/**
  * @description Deprecated
 */
-	static getAppSettingsMgr() {
+	getAppSettingsMgr() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getAssetIOMgr() {
+	getAssetIOMgr() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getAssetMgr() {
+	getAssetMgr() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getAuthenticationMgr() {
+	getAuthenticationMgr() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getCallBackMgr() {
+	getCallBackMgr() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getCommonUserDocumentPath() {
+	getCommonUserDocumentPath() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getContentMgr() {
+	getContentMgr() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getCurrentAuthor() {
+	getCurrentAuthor() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getDataFolderName() {
+	getDataFolderName() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getDataFolderPath() {
+	getDataFolderPath() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getDataFolderPathBase() {
+	getDataFolderPathBase() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getDAZDataPath() {
+	getDAZDataPath() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getDeviceMgr() {
+	getDeviceMgr() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getDialogParent() {
+	getDialogParent() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getDocumentationPath() {
+	getDocumentationPath() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getDocumentsPath() {
+	getDocumentsPath() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getExportMgr() {
+	getExportMgr() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getFileIOPresetMgr() {
+	getFileIOPresetMgr() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getGeneratedScriptsPath() {
+	getGeneratedScriptsPath() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getGeneratedShadersPath() {
+	getGeneratedShadersPath() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getGraphicsMode() {
+	getGraphicsMode() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getHelpMgr() {
+	getHelpMgr() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getHomePath() {
+	getHomePath() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getImageMgr() {
+	getImageMgr() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getImportMgr() {
+	getImportMgr() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getInterface() {
+	getInterface() {
 	
 	}
 	/**
  * @description Last directory that files were loaded or saved to/from.
 */
-	static getLoadSavePath() {
+	getLoadSavePath() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getMultiMediaMgr() {
+	getMultiMediaMgr() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getPluginMgr() {
+	getPluginMgr() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getPluginsPath() {
+	getPluginsPath() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getProgramDataPath() {
+	getProgramDataPath() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getRenderMgr() {
+	getRenderMgr() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getResourcesPath() {
+	getResourcesPath() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getSaveFilterMgr() {
+	getSaveFilterMgr() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getScriptsPath() {
+	getScriptsPath() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getShadersPath() {
+	getShadersPath() {
 	
 	}
 	/**
  * @description Get the application wide style.
 */
-	static getStyle() {
+	getStyle() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getStyleDefinition() {
+	getStyleDefinition() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getStyleDefinitionList() {
+	getStyleDefinitionList() {
 	
 	}
 	/**
  * @description Get a filename for temporary storage.
 */
-	static getTempFilename() {
+	getTempFilename() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getTempPath() {
+	getTempPath() {
 	
 	}
 	/**
  * @description Get a filename for temporary storage of rendered images.
 */
-	static getTempRenderFilename() {
+	getTempRenderFilename() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getUtilitiesPath() {
+	getUtilitiesPath() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isClosing() {
+	isClosing() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static isKeyDown(key:Number):Boolean {
+	isKeyDown(key:Number):Boolean {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static isKeySequenceDown(sequence:String):Boolean {
+	isKeySequenceDown(sequence:String):Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isMultiThreadingEnabled() {
+	isMultiThreadingEnabled() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isRegistered() {
+	isRegistered() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isRunning() {
+	isRunning() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isSlave() {
+	isSlave() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isStarting() {
+	isStarting() {
 	
 	}
 	/**
  * @description Write a message to the application log file.
 */
-	static log(buffer:String):String {
+	log(buffer:String):String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static modifierKeyState() {
+	modifierKeyState() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static operatingSystem() {
+	operatingSystem() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static operatingSystemString() {
+	operatingSystemString() {
 	
 	}
 	/**
  * @description The application is intended to be as platform independent as possible, but there are cases where something needs to be done differently on one platform or another. This function provides a simple way to check which platform the application is running under.
 */
-	static platform() {
+	platform() {
 	
 	}
 	/**
  * @description Posts an event that causes execution of a script as it is encountered in the event stack.
 */
-	static postScriptEvent(evaluate:Boolean, script:String, args:Array):Boolean {
+	postScriptEvent(evaluate:Boolean, script:String, args:Array):Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static releaseCycle() {
+	releaseCycle() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static releaseCycleString() {
+	releaseCycleString() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static releaseEdition() {
+	releaseEdition() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static releaseEditionString() {
+	releaseEditionString() {
 	
 	}
 	/**
  * @description Restores the temporary files directory to the default location.
 */
-	static restoreDefaultTempPath() {
+	restoreDefaultTempPath() {
 	
 	}
 	/**
  * @description Set the default directory for loading or saving files.
 */
-	static setLoadSavePath(dir:String):String {
+	setLoadSavePath(dir:String):String {
 	
 	}
 	/**
  * @description Sets the current style for the application.
 */
-	static setStyleDefinition(name:String):Boolean {
+	setStyleDefinition(name:String):Boolean {
 	
 	}
 	/**
  * @description Sets the directory path where temporary files are stored. The path provided needs to be an absolute path. A directory will be created at the new location if it does not already exist.
 */
-	static setTempPath(tempPath:String):Boolean {
+	setTempPath(tempPath:String):Boolean {
 	
 	}
 	/**
  * @description A convenience method for opening a showing a file/directory in the OS file browser.
 */
-	static showInNativeBrowser(absFilePath:String):Boolean {
+	showInNativeBrowser(absFilePath:String):Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static showPrompts() {
+	showPrompts() {
 	
 	}
 	/**
  * @description Displays the Scene Builder dialog.
 */
-	static showSceneBuilder(definition:Object, asEvent:Boolean):Array {
+	showSceneBuilder(definition:Object, asEvent:Boolean):Array {
 	
 	}
 	/**
  * @description A convenience method for browsing to a given URL.
 */
-	static showURL(url:String):String {
+	showURL(url:String):String {
 	
 	}
 	/**
  * @description Display a message in the current status interface.
 */
-	static statusLine(msg:String, writeToLog:Boolean):String {
+	statusLine(msg:String, writeToLog:Boolean):String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static usingInterface() {
+	usingInterface() {
 	
 	}
 	/**
  * @description Write a warning message to the application log file.
 */
-	static warning(msg:String):String {
+	warning(msg:String):String {
 	
 	}
 	/**
  * @description Saves out a user configuration script to the given filename. If no filename is given, the script is saved to the same file read from in startup(). The run() function calls this at the end of each execution.
 */
-	static writeConfigScript(configScriptFilename:String):Boolean {
+	writeConfigScript(configScriptFilename:String):Boolean {
 	
 	}
 
@@ -1557,14 +1977,111 @@ class DzAppSettings extends DzBase {
 	/**
  * @description Default Constructor - creates a new settings object that starts out at the default application path.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Constructor - creates a new settings object that pushes the given path onto the default application path. This is the same as using the default constructor and then calling pushPath() with the given path.
+ * @constructor
+*/;
+	constructor(startPath:String) {
 	
 	}
 	/**
  * @description Parameter(s):
 */
 	containsValue(key:String):Boolean {
+	
+	}
+	/**
+ * @description Read a boolean value from the given key.
+*/
+	getBoolValue(key:String, def:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Read a color value from the given key.
+*/
+	getColorValue(key:String, def:Color):Color {
+	
+	}
+	/**
+ * @description Read a float color value from the given key.
+*/
+	getFloatColorValue(key:String, def:DzFloatColor):DzFloatColor {
+	
+	}
+	/**
+ * @description Read a floating point value from the given key.
+*/
+	getFloatValue(key:String, def:Number):Number {
+	
+	}
+	/**
+ * @description Read a integer value from the given key.
+*/
+	getIntValue(key:String, def:Number):Number {
+	
+	}
+	/**
+ * @description Read a string value from the given key.
+*/
+	getStringValue(key:String, def:String):String {
+	
+	}
+	/**
+ * @description Pops a temporary key path off the top of the stack.
+*/
+	popPath() {
+	
+	}
+	/**
+ * @description Sets the current key path temporarily to the given path; popPath() can be called to remove this path.
+*/
+	pushPath(path:String):String {
+	
+	}
+	/**
+ * @description Removes a setting by name.
+*/
+	removeValue(key:String):Boolean {
+	
+	}
+	/**
+ * @description Sets a key with a boolean value.
+*/
+	setBoolValue(key:String, setting:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets a key with a color value.
+*/
+	setColorValue(key:String, setting:Color):Boolean {
+	
+	}
+	/**
+ * @description Sets a key with a float color value.
+*/
+	setFloatColorValue(key:String, setting:DzFloatColor):Boolean {
+	
+	}
+	/**
+ * @description Sets a key with a floating point value.
+*/
+	setFloatValue(key:String, setting:Number):Boolean {
+	
+	}
+	/**
+ * @description Sets a key with a integer value.
+*/
+	setIntValue(key:String, setting:Number):Boolean {
+	
+	}
+	/**
+ * @description Sets a key with a string value.
+*/
+	setStringValue(key:String, setting:String):Boolean {
 	
 	}
 
@@ -1604,177 +2121,177 @@ See Also:
  DzContentMgr
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/asset_dz}*/
 class DzAsset extends QObject, DzRefCountedItem {
-	static assetID:Object;
-	static assetName:String;
-	static audience:Number;
-	static categories:Array;
-	static companionIsScript:Boolean;
-	static companionPath:String;
-	static compatibilities:Array;
-	static compatibilityBase:String;
-	static contentType:String;
-	static dateCreated:Date;
-	static dateLastModified:Date;
-	static description:String;
-	static displayName:String;
-	static groupId:Number;
-	static hasCloudMetadata:Boolean;
-	static hasCompanion:Boolean;
-	static hasCompanionScript:Boolean;
-	static hidden:Boolean;
-	static icon:Pixmap;
-	static isCloudInstallable:Boolean;
-	static isCloudInstalled:Boolean;
-	static isCloudOwned:Boolean;
-	static isInstalled:Boolean;
-	static isMetadataValid:Boolean;
-	static isNative:Boolean;
-	static isScript:Boolean;
-	static isSymLink:Boolean;
-	static isVendor:Boolean;
-	static needsCloudInstall:Boolean;
-	static needsCloudUpdate:Boolean;
-	static orginalFilename:String;
-	static orginalPath:String;
-	static productGUID:String;
-	static productID:String;
-	static productName:String;
-	static productPath:String;
-	static smallIcon:Pixmap;
-	static storeID:String;
-	static symLinkPath:String;
-	static url:String;
-	static urlEncoded:String;
-	static userCategories:Array;
-	static userCompatibilities:Array;
-	static userKeywords:Array;
-	static vendorCategories:Array;
-	static vendorCompatibilities:Array;
-	static vendorKeywords:Array;
+	assetID:Object;
+	assetName:String;
+	audience:Number;
+	categories:Array;
+	companionIsScript:Boolean;
+	companionPath:String;
+	compatibilities:Array;
+	compatibilityBase:String;
+	contentType:String;
+	dateCreated:Date;
+	dateLastModified:Date;
+	description:String;
+	displayName:String;
+	groupId:Number;
+	hasCloudMetadata:Boolean;
+	hasCompanion:Boolean;
+	hasCompanionScript:Boolean;
+	hidden:Boolean;
+	icon:Pixmap;
+	isCloudInstallable:Boolean;
+	isCloudInstalled:Boolean;
+	isCloudOwned:Boolean;
+	isInstalled:Boolean;
+	isMetadataValid:Boolean;
+	isNative:Boolean;
+	isScript:Boolean;
+	isSymLink:Boolean;
+	isVendor:Boolean;
+	needsCloudInstall:Boolean;
+	needsCloudUpdate:Boolean;
+	orginalFilename:String;
+	orginalPath:String;
+	productGUID:String;
+	productID:String;
+	productName:String;
+	productPath:String;
+	smallIcon:Pixmap;
+	storeID:String;
+	symLinkPath:String;
+	url:String;
+	urlEncoded:String;
+	userCategories:Array;
+	userCompatibilities:Array;
+	userKeywords:Array;
+	vendorCategories:Array;
+	vendorCompatibilities:Array;
+	vendorKeywords:Array;
 	/**
  * @description Sets the compatibility bases that this asset is compatible with.
 */
-	static addCompatibilities(bases:Array, create:Boolean):Array {
+	addCompatibilities(bases:Array, create:Boolean):Array {
 	
 	}
 	/**
  * @description Sets the categories for this asset.
 */
-	static addToCategories(categories:Array, create:Boolean):Array {
+	addToCategories(categories:Array, create:Boolean):Array {
 	
 	}
 	/**
  * @description Sets the asset as belonging to the default group identifier; 0.
 */
-	static clearGroup() {
+	clearGroup() {
 	
 	}
 	/**
  * @description Forces the icon to reload.
 */
-	static forceImageReload() {
+	forceImageReload() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getAsLocalFile() {
+	getAsLocalFile() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getBaseExtension() {
+	getBaseExtension() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getDSLinkExtension() {
+	getDSLinkExtension() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getDSLinkText() {
+	getDSLinkText() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getOwner() {
+	getOwner() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getProduct() {
+	getProduct() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getRelativeFilePath() {
+	getRelativeFilePath() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isGroup(id:Number):Boolean {
+	isGroup(id:Number):Boolean {
 	
 	}
 	/**
  * @description Loads the default icon for the asset.
 */
-	static loadDefaultIcon(delayLoad:Boolean):Boolean {
+	loadDefaultIcon(delayLoad:Boolean):Boolean {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static readLinkData(linkPath:String):Object {
+	readLinkData(linkPath:String):Object {
 	
 	}
 	/**
  * @description Removes the compatibility bases that this asset is compatible with.
 */
-	static removeCompatibilities(bases:Array, isVender:Boolean):Array {
+	removeCompatibilities(bases:Array, isVender:Boolean):Array {
 	
 	}
 	/**
  * @description Removes the asset from the categories.
 */
-	static removeFromCategories(categories:Array, isVender:Boolean):Array {
+	removeFromCategories(categories:Array, isVender:Boolean):Array {
 	
 	}
 	/**
  * @description Changes the name of this asset.
 */
-	static rename(name:String):Boolean {
+	rename(name:String):Boolean {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static saveDSLink(linkSavePath:String):Boolean {
+	saveDSLink(linkSavePath:String):Boolean {
 	
 	}
 	/**
  * @description Sets whether existence of the asset should be ignored.
 */
-	static setIgnoreExists(onOff:Boolean):Boolean {
+	setIgnoreExists(onOff:Boolean):Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static toUri() {
+	toUri() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static updateFromMetadata(guid:String):Boolean {
+	updateFromMetadata(guid:String):Boolean {
 	
 	}
 
@@ -1792,7 +2309,73 @@ class DzAssetIOFilter extends DzFileIO {
 	/**
  * @description Saves to a file.
 */
-	static doSave(filename:String, startingDir:String):DzError {
+	doSave(filename:String, startingDir:String):DzError {
+	
+	}
+	/**
+ * @description Saves to a file.
+*/
+	doSave(options:DzFileIOSettings, filename:String, startingDir:String):DzError {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getAssetDefinitionUri(base:DzBase):DzUri {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getAssetInstanceUri(base:DzBase):DzUri {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getCompatiblityBase() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getContentType() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDescription() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDoSavePath() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLoadSavePath() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getStandardSaveRelativePath() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isSupportAssetFilter() {
+	
+	}
+	/**
+ * @description Sets the path to use for loading/saving files with this filter.
+*/
+	setLoadSavePath(path:String):String {
 	
 	}
 
@@ -1808,78 +2391,108 @@ See Also:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/assetiomgr_dz}*/
 class DzAssetIOMgr extends QObject {
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static DefaultMethod;
+	static DefaultMethod;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static OpenNew;
+	static OpenNew;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static MergeFile;
+	static MergeFile;
 	/**
- * @description Loads an asset file.
+ * @description Parameter(s):
 */
-	static doLoad(filePath:String, open:DzOpenMethod, filter:DzFileLoadFilter):DzError {
-	
-	}
-	/**
- * @description Save the scene contents to a file with the given save filter. Prompts the user for a file to save to.
-*/
-	static doSave(filterIndex:Number):DzError {
-	
-	}
-	/**
- * @description Save the scene contents to a file with the given save filter. Prompts the user for a file to save to.
-*/
-	static doSaveWithOptions(filter:DzAssetIOFilter, options:DzFileIOSettings, saveOnly:Boolean, filePath:String, startingDir:String, category:String):DzError {
-	
-	}
-	/**
- * @description Save the scene contents to a file. Prompts the user for a file to save to.
-*/
-	static doSceneSaveAs() {
+	static findFilter(className:String):Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getDefaultDSONAssetCachePath() {
-	
-	}
-	/**
- * @description Return Value:
-*/
-	static getDSONAssetCachePath() {
-	
-	}
-	/**
- * @description Return Value:
-*/
-	static getLoadPath() {
-	
-	}
-	/**
- * @description Return Value:
-*/
-	static getSavePath() {
-	
-	}
-	/**
- * @description Loads an asset from URI.
-*/
-	static loadFromUri(fileUri:DzUri, open:DzOpenMethod, filter:DzFileLoadFilter):DzError {
+	static findObjectInstance(uri:DzUri):QObject {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static setDSONAssetCachePath(cacheFullPath:String):String {
+	static getFilter(i:Number):DzAssetIOFilter {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	static getFilterName(i:Number):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumFilters() {
+	
+	}
+	/**
+ * @description Loads an asset file.
+*/
+	doLoad(filePath:String, open:DzOpenMethod, filter:DzFileLoadFilter):DzError {
+	
+	}
+	/**
+ * @description Save the scene contents to a file with the given save filter. Prompts the user for a file to save to.
+*/
+	doSave(filterIndex:Number):DzError {
+	
+	}
+	/**
+ * @description Save the scene contents to a file with the given save filter. Prompts the user for a file to save to.
+*/
+	doSaveWithOptions(filter:DzAssetIOFilter, options:DzFileIOSettings, saveOnly:Boolean, filePath:String, startingDir:String, category:String):DzError {
+	
+	}
+	/**
+ * @description Save the scene contents to a file. Prompts the user for a file to save to.
+*/
+	doSceneSaveAs() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDefaultDSONAssetCachePath() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDSONAssetCachePath() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLoadPath() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSavePath() {
+	
+	}
+	/**
+ * @description Loads an asset from URI.
+*/
+	loadFromUri(fileUri:DzUri, open:DzOpenMethod, filter:DzFileLoadFilter):DzError {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	setDSONAssetCachePath(cacheFullPath:String):String {
 	
 	}
 
@@ -1892,791 +2505,899 @@ There is only one instance of this manager in an application. This instance is c
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/assetmgr_dz}*/
 class DzAssetMgr extends DzBase {
 	/**
- * @description No options
+ * @description ENUMERATOR: No options
 */
 	
-static None;
+	static None;
 	/**
- * @description A whole word search. Only works with file system based searches.
+ * @description ENUMERATOR: A whole word search. Only works with file system based searches.
 */
 	
-static WholeWord;
+	static WholeWord;
 	/**
- * @description A Regular Expression search. Only works with file system based searches.
+ * @description ENUMERATOR: A Regular Expression search. Only works with file system based searches.
 */
 	
-static RegExp;
+	static RegExp;
 	/**
- * @description Include native scene files (*.duf, *.dsf, *.daz) in the search.
+ * @description ENUMERATOR: Include native scene files (*.duf, *.dsf, *.daz) in the search.
 */
 	
-static NativeScenes;
+	static NativeScenes;
 	/**
- * @description Include native script files (*.ds, *.dsa, *.dsb, *.dse) in the search.
+ * @description ENUMERATOR: Include native script files (*.ds, *.dsa, *.dsb, *.dse) in the search.
 */
 	
-static NativeScripts;
+	static NativeScripts;
 	/**
- * @description Include Poser Character files (*.cr2, *.crz) in the search.
+ * @description ENUMERATOR: Include Poser Character files (*.cr2, *.crz) in the search.
 */
 	
-static PoserFigures;
+	static PoserFigures;
 	/**
- * @description Include Poser Pose files (*.pz2, *.p2z) in the search.
+ * @description ENUMERATOR: Include Poser Pose files (*.pz2, *.p2z) in the search.
 */
 	
-static PoserPoses;
+	static PoserPoses;
 	/**
- * @description Include Poser Prop files (*.pp2, *.ppz) in the search.
+ * @description ENUMERATOR: Include Poser Prop files (*.pp2, *.ppz) in the search.
 */
 	
-static PoserProps;
+	static PoserProps;
 	/**
- * @description Include Poser Hair files (*.hr2, *.hrz) in the search.
+ * @description ENUMERATOR: Include Poser Hair files (*.hr2, *.hrz) in the search.
 */
 	
-static PoserHair;
+	static PoserHair;
 	/**
- * @description Include Poser Face (Expression) files (*.fc2,*.fcz) in the search.
+ * @description ENUMERATOR: Include Poser Face (Expression) files (*.fc2,*.fcz) in the search.
 */
 	
-static PoserFaces;
+	static PoserFaces;
 	/**
- * @description Include Poser Light files (*.lt2, *.ltz) in the search.
+ * @description ENUMERATOR: Include Poser Light files (*.lt2, *.ltz) in the search.
 */
 	
-static PoserLights;
+	static PoserLights;
 	/**
- * @description Include Poser Camera files (*.cm2, *.cmz) in the search.
+ * @description ENUMERATOR: Include Poser Camera files (*.cm2, *.cmz) in the search.
 */
 	
-static PoserCameras;
+	static PoserCameras;
 	/**
- * @description Include Poser Hand files (*.hd2, *.hdz) in the search.
+ * @description ENUMERATOR: Include Poser Hand files (*.hd2, *.hdz) in the search.
 */
 	
-static PoserHands;
+	static PoserHands;
 	/**
- * @description Include Poser Material Collection files (*.mc6, *.mcz) in the search.
+ * @description ENUMERATOR: Include Poser Material Collection files (*.mc6, *.mcz) in the search.
 */
 	
-static PoserMaterials;
+	static PoserMaterials;
 	/**
- * @description Include Poser Scene files (*.pz3, *.pzz) in the search.
+ * @description ENUMERATOR: Include Poser Scene files (*.pz3, *.pzz) in the search.
 */
 	
-static PoserScenes;
+	static PoserScenes;
 	/**
- * @description Include general import files in the search.
+ * @description ENUMERATOR: Include general import files in the search.
 */
 	
-static ImportFiles;
+	static ImportFiles;
 	/**
- * @description Include all native files (*.duf, *.dsf, *.daz, *.ds, *.dsa, *.dsb, *.dse) in the search.
+ * @description ENUMERATOR: Include all native files (*.duf, *.dsf, *.daz, *.ds, *.dsa, *.dsb, *.dse) in the search.
 */
 	
-static AllNativeFiles;
+	static AllNativeFiles;
 	/**
- * @description Mask for no native files in the search.
+ * @description ENUMERATOR: Mask for no native files in the search.
 */
 	
-static NoNativeFilesMask;
+	static NoNativeFilesMask;
 	/**
- * @description Include all Poser files in the search.
+ * @description ENUMERATOR: Include all Poser files in the search.
 */
 	
-static AllPoserFiles;
+	static AllPoserFiles;
 	/**
- * @description Mask for no Poser files in the search.
+ * @description ENUMERATOR: Mask for no Poser files in the search.
 */
 	
-static NoPoserFilesMask;
+	static NoPoserFilesMask;
 	/**
- * @description Search through all files.
+ * @description ENUMERATOR: Search through all files.
 */
 	
-static AllFiles;
+	static AllFiles;
 	/**
- * @description Same as AllFiles.
+ * @description ENUMERATOR: Same as AllFiles.
 */
 	
-static DefaultOptions;
+	static DefaultOptions;
+	/**
+ * @description Parameter(s):
+*/
+	static escapeSearchTerm(searchTerm:String):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	static findCommonBaseCategoryPath(categoryPaths:Array, flatten:Boolean):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	static getAssetUriForNode(node:DzNode):String {
+	
+	}
 	/**
  * @description Return Value:
 */
-	static canStartAndStopCMS() {
+	getCategoriesID() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	static getCompatibilityBasePathForNode(node:DzNode):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getImportDirID() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPoserDirID() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPoserVirtualDirID() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getProductsID() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	static getRealPathCasing(path:String, search:String):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	static getRelativeProductMetafilePath(store:String, token:String, title:String, extension:String):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSpecialPoserFolders() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getStudioDirID() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getStudioExcludes() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getStudioVirtualDirID() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	static normalizePath(type:String, relative:Boolean):String {
+	
+	}
+	/**
+ * @description Saves user owned metadata to an XML file (or a series of XML files).
+*/
+	static saveUserDBData(dirPath:String, filePrefix:String):DzError {
+	
+	}
+	/**
+ * @description Sets the metadata associated with a file.
+*/
+	static setFileMetadata(filepath:String, contentType:String, compatibleWith:String, category:String, assetNode:DzNode, compatiblityBase:String):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	canStartAndStopCMS() {
 	
 	}
 	/**
  * @description Checks for new metadata scripts within the RunOnce directories.
 */
-	static checkforNewMetadataScripts() {
+	checkforNewMetadataScripts() {
 	
 	}
 	/**
  * @description Removes all groups from all assets.
 */
-	static clearAllGroupIDs(notify:Boolean):Boolean {
+	clearAllGroupIDs(notify:Boolean):Boolean {
 	
 	}
 	/**
  * @description Clears the metadata queue.
 */
-	static clearDBMetaFileQueue() {
+	clearDBMetaFileQueue() {
 	
 	}
 	/**
  * @description Creates a compatibility base.
 */
-	static createCompatibilityBase(base:String):Number {
+	createCompatibilityBase(base:String):Number {
 	
 	}
 	/**
  * @description Creates a new product.
 */
-	static createProduct(name:String, storeID:String, token:String):DzProductAssetContainer {
+	createProduct(name:String, storeID:String, token:String):DzProductAssetContainer {
 	
 	}
 	/**
  * @description Creates a new product from a list of assets.
 */
-	static createProductFromAssets(assets:Array, name:String):DzProductAssetContainer {
+	createProductFromAssets(assets:Array, name:String):DzProductAssetContainer {
 	
 	}
 	/**
  * @description Creates a new product from container and its children.
 */
-	static createProductFromContainer(container:DzAbstractAssetContainer, name:String):DzProductAssetContainer {
+	createProductFromContainer(container:DzAbstractAssetContainer, name:String):DzProductAssetContainer {
 	
 	}
 	/**
  * @description Attempts to create a store in the database.
 */
-	static createStore(storeID:String, token:String, url:String):Boolean {
+	createStore(storeID:String, token:String, url:String):Boolean {
 	
 	}
 	/**
  * @description Creates a content type.
 */
-	static createType(type:String, defaultLoad:Boolean):Number {
+	createType(type:String, defaultLoad:Boolean):Number {
 	
 	}
 	/**
  * @description Causes the category identified by idPath to update.
 */
-	static emitCategoryChanged(idPath:Array):Array {
+	emitCategoryChanged(idPath:Array):Array {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static findAssetPathFromShortFilename(fileName:String):String {
+	findAssetPathFromShortFilename(fileName:String):String {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static findAssetsForFile(relativePath:String, userFacing:Boolean, installed:Boolean):Array {
+	findAssetsForFile(relativePath:String, userFacing:Boolean, installed:Boolean):Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static findAudienceID(audience:String):Number {
+	findAudienceID(audience:String):Number {
 	
 	}
 	/**
  * @description Attempts to find a compatibility base, and potentially create it if it doesn't already exist.
 */
-	static findCompatibilityBaseID(base:String, create:Boolean):Number {
+	findCompatibilityBaseID(base:String, create:Boolean):Number {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static findProductByGuid(guid:String):DzProductAssetContainer {
+	findProductByGuid(guid:String):DzProductAssetContainer {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static findProductByStoreToken(storeID:String, token:String):DzProductAssetContainer {
+	findProductByStoreToken(storeID:String, token:String):DzProductAssetContainer {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static findProductsByName(name:String):Array {
+	findProductsByName(name:String):Array {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static findProductsForFile(relativePath:String):Array {
+	findProductsForFile(relativePath:String):Array {
 	
 	}
 	/**
  * @description Attempts to find the identifier used to identify a content type.
 */
-	static findTypeID(type:String, create:Boolean, defaultLoad:Boolean):Number {
+	findTypeID(type:String, create:Boolean, defaultLoad:Boolean):Number {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getAudience(id:Number):String {
+	getAudience(id:Number):String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getAudiences() {
+	getAudiences() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getCategories() {
+	getCategories() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getCategoryPath(id:Number):String {
+	getCategoryPath(id:Number):String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getCMSOptions() {
+	getCMSOptions() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getCompatibilityBase(id:Number):String {
+	getCompatibilityBase(id:Number):String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getContentDirs() {
+	getContentDirs() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getDatabaseDsn() {
+	getDatabaseDsn() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getDatabaseFilePath() {
+	getDatabaseFilePath() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getDBMetaFileQueue() {
+	getDBMetaFileQueue() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getFirstCategory(assetPath:String, preferredCategory:String):String {
+	getFirstCategory(assetPath:String, preferredCategory:String):String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getGroupNewProductsAsNew() {
+	getGroupNewProductsAsNew() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getImportDirs() {
+	getImportDirs() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getMaxFileSearchResultSize() {
+	getMaxFileSearchResultSize() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumMaxItemsPerPage() {
+	getNumMaxItemsPerPage() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getPoserDirs() {
+	getPoserDirs() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getProducts() {
+	getProducts() {
 	
 	}
 	/**
  * @description Attempts to shorten absolutePath to a list of paths that are relative to one of the mapped content directories.
 */
-	static getRelativePaths(absolutePath:String, useImportFolders:Boolean):Array {
+	getRelativePaths(absolutePath:String, useImportFolders:Boolean):Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getRootCategoryStrings() {
+	getRootCategoryStrings() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getShowHiddenVendorCategorization() {
+	getShowHiddenVendorCategorization() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getStoresIDs() {
+	getStoresIDs() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getStoreToken(storeID:String):String {
+	getStoreToken(storeID:String):String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getStoreUrl(storeID:String):String {
+	getStoreUrl(storeID:String):String {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getType(id:Number):String {
+	getType(id:Number):String {
 	
 	}
 	/**
  * @description Performs a database lookup on a user-facing content file to get its content type.
 */
-	static getTypeForContentFile(fullPath:String):String {
+	getTypeForContentFile(fullPath:String):String {
 	
 	}
 	/**
  * @description Checks the given node for content type in its presentation (if any), falls back to a source file data item and performs a content database lookup on the path it specifies (if any), and finally falls back to the content file path of the node (if any) to find its content type.
 */
-	static getTypeForNode(node:DzNode):String {
+	getTypeForNode(node:DzNode):String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getTypes() {
+	getTypes() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static haveDatabase() {
+	haveDatabase() {
 	
 	}
 	/**
  * @description Causes metadata files at absoluteProductPaths to be imported.
 */
-	static importMetadataFiles(productRelativePaths:Array, runSilent:Boolean, markAsVendor:Boolean):Array {
+	importMetadataFiles(productRelativePaths:Array, runSilent:Boolean, markAsVendor:Boolean):Array {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static isClothingType(type:String):Boolean {
+	isClothingType(type:String):Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isConnectedToCMS() {
+	isConnectedToCMS() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static isFigureType(type:String):Boolean {
+	isFigureType(type:String):Boolean {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static isFollowingType(type:String):Boolean {
+	isFollowingType(type:String):Boolean {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static isHairType(type:String):Boolean {
+	isHairType(type:String):Boolean {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static isNeedsBaseFigureType(type:String):Boolean {
+	isNeedsBaseFigureType(type:String):Boolean {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static isPresetForFigureType(type:String):Boolean {
+	isPresetForFigureType(type:String):Boolean {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static isPresetType(type:String):Boolean {
+	isPresetType(type:String):Boolean {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static isPropType(type:String):Boolean {
+	isPropType(type:String):Boolean {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static isReplaceableType(type:String):Boolean {
+	isReplaceableType(type:String):Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isResettingDatabase() {
+	isResettingDatabase() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isSynchronizing() {
+	isSynchronizing() {
 	
 	}
 	/**
  * @description Signals that categories need to be updated.
 */
-	static markCategoriesChanged() {
+	markCategoriesChanged() {
 	
 	}
 	/**
  * @description Signals that products need to be updated.
 */
-	static markProductsChanged() {
+	markProductsChanged() {
 	
 	}
 	/**
  * @description Causes the metadata file at productRelativePath to be processed and category containers to update.
 */
-	static processDBMetaFile(productRelativePath:String, runSilent:Boolean, markAsVendor:Boolean, groupAsNew:Boolean):Array {
+	processDBMetaFile(productRelativePath:String, runSilent:Boolean, markAsVendor:Boolean, groupAsNew:Boolean):Array {
 	
 	}
 	/**
  * @description Causes the metadata file at productRelativePath to be processed, without causing category containers to update.
 */
-	static processDBMetaFileNoEmit(productRelativePath:String, runSilent:Boolean, markAsVendor:Boolean, groupAsNew:Boolean):Array {
+	processDBMetaFileNoEmit(productRelativePath:String, runSilent:Boolean, markAsVendor:Boolean, groupAsNew:Boolean):Array {
 	
 	}
 	/**
  * @description If metadata files are queued, causes the metadata import dialog to be displayed and allows the user to select which products to process metadata for, then starts the import process on the selected products.
 */
-	static processDBMetaFileQueue() {
+	processDBMetaFileQueue() {
 	
 	}
 	/**
  * @description Adds the file at productRelativePath to the metadata queue.
 */
-	static queueDBMetaFile(productRelativePath:String):String {
+	queueDBMetaFile(productRelativePath:String):String {
 	
 	}
 	/**
  * @description Causes the internal list of root categories to be rebuilt.
 */
-	static refreshCategoryRoots() {
+	refreshCategoryRoots() {
 	
 	}
 	/**
  * @description Causes the internal list of stores to be rebuilt.
 */
-	static refreshStores() {
+	refreshStores() {
 	
 	}
 	/**
  * @description Causes the internal list of content types to be rebuilt
 */
-	static refreshTypes() {
+	refreshTypes() {
 	
 	}
 	/**
  * @description Causes all *.dsx metadata files in the "./Runtime/Support" folder of each mapped native and Poser content directory to be queued, and then imported.
 */
-	static reimportDBMetaFiles() {
+	reimportDBMetaFiles() {
 	
 	}
 	/**
  * @description Removes assets in list that have been orphaned (no longer exist) from the database.
 */
-	static removeOrphanedAssetReferences(list:Array):Array {
+	removeOrphanedAssetReferences(list:Array):Array {
 	
 	}
 	/**
  * @description Attempts to remove a store from the database.
 */
-	static removeStore(storeID:String):Boolean {
+	removeStore(storeID:String):Boolean {
 	
 	}
 	/**
  * @description Triggers the connected PostgreSQL server to reset (delete) the current database and re-establish the default content types, compatibility bases, and categories.
 */
-	static resetDatabase() {
+	resetDatabase() {
 	
 	}
 	/**
  * @description Performs a user-facing file scan, ultimately mapping any directories found to contain compatible content.
 */
-	static scanFiles(options:SearchOption, assignToGroup:Boolean, addToCategory:Boolean, onlyNewToCategory:Boolean):SearchOption {
+	scanFiles(options:SearchOption, assignToGroup:Boolean, addToCategory:Boolean, onlyNewToCategory:Boolean):SearchOption {
 	
 	}
 	/**
  * @description Performs a user-facing file search on the mapped content directories.
 */
-	static searchFiles(filename:String, options:SearchOption):DzSearchContainer {
+	searchFiles(filename:String, options:SearchOption):DzSearchContainer {
 	
 	}
 	/**
  * @description Performs a user-facing asset search on the content database, where the results are confined to those that indicate they are compatible with the compatibility base of the specified asset.
 */
-	static searchForAssetAddOns(asset:DzAsset, filterText:String, categories:Array, sorting:Number):DzSearchContainer {
+	searchForAssetAddOns(asset:DzAsset, filterText:String, categories:Array, sorting:Number):DzSearchContainer {
 	
 	}
 	/**
  * @description Performs a user-facing asset search on the content database.
 */
-	static searchForAssets(filterText:String, categories:Array, compatibilityBases:Array, contentTypes:Array, sorting:Number):DzSearchContainer {
+	searchForAssets(filterText:String, categories:Array, compatibilityBases:Array, contentTypes:Array, sorting:Number):DzSearchContainer {
 	
 	}
 	/**
  * @description Performs a user-facing asset search on the content database.
 */
-	static searchForAssetsByKeywords(keywords:String, options:SearchOption, sorting:Number):DzSearchContainer {
+	searchForAssetsByKeywords(keywords:String, options:SearchOption, sorting:Number):DzSearchContainer {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static searchForAssetsInCategory(categoryPath:String, userFacing:Boolean, installed:Boolean):DzSearchContainer {
+	searchForAssetsInCategory(categoryPath:String, userFacing:Boolean, installed:Boolean):DzSearchContainer {
 	
 	}
 	/**
  * @description Performs a user-facing asset search on the content database, where the results are confined to those that indicate they are the compatibility base of the specified asset.
 */
-	static searchForAssetTargets(asset:DzAsset, filterText:String, categories:Array, sorting:Number):DzSearchContainer {
+	searchForAssetTargets(asset:DzAsset, filterText:String, categories:Array, sorting:Number):DzSearchContainer {
 	
 	}
 	/**
  * @description Performs a user-facing asset search on the content database, where the results are confined to a specified product.
 */
-	static searchForProductAssets(product:DzProductAssetContainer, filterText:String, categories:Array, compatibilityBases:Array, contentTypes:Array, sorting:Number):DzSearchContainer {
+	searchForProductAssets(product:DzProductAssetContainer, filterText:String, categories:Array, compatibilityBases:Array, contentTypes:Array, sorting:Number):DzSearchContainer {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static searchForProducts(filterText:String, categories:Array, compatibilityBases:Array, contentTypes:Array, installStateFlags:Number, sorting:Number):DzProductHolderContainer {
+	searchForProducts(filterText:String, categories:Array, compatibilityBases:Array, contentTypes:Array, installStateFlags:Number, sorting:Number):DzProductHolderContainer {
 	
 	}
 	/**
  * @description Sets the options for the Content Management Service (CMS), if it is of the type that can accept options.
 */
-	static setCMSOptions(clusterDirectory:String, port:Number):String {
+	setCMSOptions(clusterDirectory:String, port:Number):String {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static setGroupNewProductsAsNew(onOff:Boolean):Boolean {
+	setGroupNewProductsAsNew(onOff:Boolean):Boolean {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static setMaxFileSearchResultSize(maxNum:Number):Number {
+	setMaxFileSearchResultSize(maxNum:Number):Number {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static setMaxItemsPerPage(maxNum:Number):Number {
+	setMaxItemsPerPage(maxNum:Number):Number {
 	
 	}
 	/**
  * @description Sets the group identifier on products and/or files, for a list of products.
 */
-	static setProductGroupIDs(guids:Array, groupId:Number, groupProduct:Boolean, groupFiles:Boolean):Array {
+	setProductGroupIDs(guids:Array, groupId:Number, groupProduct:Boolean, groupFiles:Boolean):Array {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static setShowAssetToolTip(onOff:Boolean):Boolean {
+	setShowAssetToolTip(onOff:Boolean):Boolean {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static setShowExtensions(onOff:Boolean):Boolean {
+	setShowExtensions(onOff:Boolean):Boolean {
 	
 	}
 	/**
  * @description Sets whether or not hidden vendor categorizations are shown.
 */
-	static setShowHiddenVendorCategorization(shown:Boolean):Boolean {
+	setShowHiddenVendorCategorization(shown:Boolean):Boolean {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static setShowLargeIcons(onOff:Boolean):Boolean {
+	setShowLargeIcons(onOff:Boolean):Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static showAssetToolTip() {
+	showAssetToolTip() {
 	
 	}
 	/**
  * @description Causes the Content DB Editor to be displayed, allowing the user to view/edit metadata for products and/or assets all within a centralized dialog.
 */
-	static showDatabaseEditor(assetContainer:DzAbstractAssetContainer):Boolean {
+	showDatabaseEditor(assetContainer:DzAbstractAssetContainer):Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static showExtensions() {
+	showExtensions() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static showLargeIcons() {
+	showLargeIcons() {
 	
 	}
 	/**
  * @description Executes a script named after the store associated with product, in the ./resources/stores directory. A single anonymous JSON object is passed to the script, which can be retrieved using the global "getArguments()" function. The properties on the Object consist of values stored in the content database.
 */
-	static showMoreProductInfo(product:DzProductAssetContainer):DzProductAssetContainer {
+	showMoreProductInfo(product:DzProductAssetContainer):DzProductAssetContainer {
 	
 	}
 	/**
  * @description Starts the Content Management Service (CMS), if it is not already running.
 */
-	static startCMS() {
+	startCMS() {
 	
 	}
 	/**
  * @description Stops all searches that were started by any of the search* methods on DzAssetMgr.
 */
-	static stopAllSearches() {
+	stopAllSearches() {
 	
 	}
 	/**
  * @description Stops the Content Management Service (CMS), if it is running and is of the type that can be stopped.
 */
-	static stopCMS(mode:Number, wait:Boolean, timeout:Number):Number {
+	stopCMS(mode:Number, wait:Boolean, timeout:Number):Number {
 	
 	}
 	/**
  * @description Stops any searches that were started by DzAssetMgr.scanFiles().
 */
-	static stopFileScan() {
+	stopFileScan() {
 	
 	}
 	/**
  * @description Stops any searches that were started by DzAssetMgr.searchFiles().
 */
-	static stopFileSearch() {
+	stopFileSearch() {
 	
 	}
 	/**
  * @description Stops any searches that were started by DzAssetMgr.searchForAssetAddOns().
 */
-	static stopSearchForAssetAddOns() {
+	stopSearchForAssetAddOns() {
 	
 	}
 	/**
  * @description Stops any searches that were started by DzAssetMgr.searchForAssets(), DzAssetMgr.searchForAssetsByKeywords() or DzAssetMgr.searchForProductAssets().
 */
-	static stopSearchForAssets() {
+	stopSearchForAssets() {
 	
 	}
 	/**
  * @description Stops any searches that were started by DzAssetMgr.searchForAssetTargets().
 */
-	static stopSearchForAssetTargets() {
+	stopSearchForAssetTargets() {
 	
 	}
 	/**
  * @description Stops any searches that were started by DzAssetMgr.searchForProducts().
 */
-	static stopSearchForProducts() {
+	stopSearchForProducts() {
 	
 	}
 	/**
  * @description Triggers an update to asset containers within the Categories top-level container.
 */
-	static updateCategoryContainers() {
+	updateCategoryContainers() {
 	
 	}
 	/**
  * @description Triggers an update to asset containers within the native formats top-level container.
 */
-	static updateContentContainers() {
+	updateContentContainers() {
 	
 	}
 	/**
  * @description Triggers an update to asset containers within the folder based top-level containers.
 */
-	static updateFolderBasedContainers() {
+	updateFolderBasedContainers() {
 	
 	}
 	/**
  * @description Triggers an update to asset containers within the other import formats top-level container.
 */
-	static updateImportContainers() {
+	updateImportContainers() {
 	
 	}
 	/**
  * @description Triggers an update to asset containers within the Poser formats top-level container.
 */
-	static updatePoserContainers() {
+	updatePoserContainers() {
 	
 	}
 	/**
  * @description Triggers an update to asset containers within the Products top-level container.
 */
-	static updateProductContainers() {
+	updateProductContainers() {
 	
 	}
 	/**
  * @description Reclaims space in the database previously occupied by deleted or updated data.
 */
-	static vacuumDatabase() {
+	vacuumDatabase() {
 	
 	}
 
@@ -2691,32 +3412,32 @@ See Also:
  DzScene.getAudio(), DzScene.setAudio(), DzAudioImporter, DzMultiMediaMgr.importAudioClip()
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/audioclip_dz}*/
 class DzAudioClip extends DzBase, DzRefCountedItem {
-	static currentPosition:DzTime;
-	static filename:String;
-	static length:DzTime;
-	static rate:Number;
+	currentPosition:DzTime;
+	filename:String;
+	length:DzTime;
+	rate:Number;
 	/**
  * @description Opens the file specified by filename and sets up the audio clip.
 */
-	static openFile(filename:String):DzError {
+	openFile(filename:String):DzError {
 	
 	}
 	/**
  * @description Pauses the audio clip without resetting current position.
 */
-	static pause() {
+	pause() {
 	
 	}
 	/**
  * @description Plays the audio clip from current position.
 */
-	static play() {
+	play() {
 	
 	}
 	/**
  * @description Resets the current position of the audio clip to the beginning.
 */
-	static reset() {
+	reset() {
 	
 	}
 
@@ -2731,7 +3452,32 @@ class DzAudioImporter extends DzFileIO {
 	/**
  * @description Return Value:
 */
-	static getDescription() {
+	getDescription() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getExtension() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	loadAudio(filename:String, clip:DzAudioClip, options:DzFileIOSettings):DzError {
+	
+	}
+	/**
+ * @description Reads the file.
+*/
+	loadAudio(filename:String, clip:DzAudioClip):DzError {
+	
+	}
+	/**
+ * @description Test the given filename and file contents to see if this importer can read it.
+*/
+	recognize(filename:String):Boolean {
 	
 	}
 
@@ -2752,7 +3498,31 @@ class DzAuthenticationMgr extends QObject {
 	/**
  * @description This function will attempt to authenticate a Daz 3D user account. If no account information has been entered by the user, a dialog will be displayed to securely acquire the username and password to be authenticated.
 */
-	static authenticateUser() {
+	authenticateUser() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getUserToken() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isAuthenticated() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isLoggingIn() {
+	
+	}
+	/**
+ * @description Invalidates any existing authentication.
+*/
+	logout() {
 	
 	}
 
@@ -2774,21 +3544,21 @@ class DzAuthor extends Object {
 	/**
  * @description Default constructor. Creates an empty author.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/
+*/;
 	constructor(author:DzAuthor) {
 	
 	}
 	/**
  * @description Create a DzAuthor with the given name, email, and url.
  * @constructor
-*/
+*/;
 	constructor(name:String, email:String, url="":String) {
 	
 	}
@@ -2805,29 +3575,29 @@ See Also:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/backdrop_dz}*/
 class DzBackdrop extends DzElement {
 	/**
- * @description No rotation
+ * @description ENUMERATOR: No rotation
 */
 	
-static NO_ROTATION;
+	static NO_ROTATION;
 	/**
- * @description 90 degree rotation Counter-Clockwise
+ * @description ENUMERATOR: 90 degree rotation Counter-Clockwise
 */
 	
-static ROTATE_LEFT_90;
+	static ROTATE_LEFT_90;
 	/**
- * @description 90 degree rotation Clockwise
+ * @description ENUMERATOR: 90 degree rotation Clockwise
 */
 	
-static ROTATE_RIGHT_90;
+	static ROTATE_RIGHT_90;
 	/**
- * @description 180 degree rotation
+ * @description ENUMERATOR: 180 degree rotation
 */
 	
-static ROTATE_180;
+	static ROTATE_180;
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -2918,7 +3688,7 @@ class DzBase extends QObject {
 	/**
  * @description Provides scripts a way to make objects persistent; i.e., so that Qt will not delete them when they are no longer referenced by the script. This allows object instances to be created in script, then passed into the core and remain after the script has finished execution.
 */
-	static makePersistent() {
+	makePersistent() {
 	
 	}
 
@@ -2936,7 +3706,7 @@ class DzBasicCamera extends DzCamera {
 	/**
  * @description Create a camera of the given type.
  * @constructor
-*/
+*/;
 	constructor(type=DzCamera.PERSPECTIVE_CAMERA:DzCamera::CameraType, isViewCamera=false:Boolean) {
 	
 	}
@@ -3194,7 +3964,7 @@ class DzBasicDialog extends DzDialog {
 	/**
  * @description Default Constructor. Creates a typical DAZ Studio dialog with 'What's This', 'Apply', 'Accept', and 'Cancel' buttons. By default, the 'Apply' button is hidden, call showApplyButton() to make it visible.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -3202,6 +3972,102 @@ class DzBasicDialog extends DzDialog {
  * @description Adds a button into the horizontal layout of the dialog's button bar.
 */
 	addButton(btn:DzButton, index:Number):DzButton {
+	
+	}
+	/**
+ * @description Adds a layout into the main vertical layout of the dialog.
+*/
+	addLayout(layout:DzLayout, stretch:Number):DzLayout {
+	
+	}
+	/**
+ * @description Adds spacing into the main vertical layout of the dialog.
+*/
+	addSpacing(spacing:Number):Number {
+	
+	}
+	/**
+ * @description Adds stretch into the main vertical layout of the dialog.
+*/
+	addStretch(stretch:Number):Number {
+	
+	}
+	/**
+ * @description Adds a widget into the main vertical layout of the dialog.
+*/
+	addWidget(child:DzWidget, stretch:Number, alignment:DzWidget.AlignmentFlags):DzWidget {
+	
+	}
+	/**
+ * @description Inserts a widget into the main vertical layout of the dialog.
+*/
+	insertWidget(index:Number, child:DzWidget, stretch:Number, alignment:DzWidget.AlignmentFlags):Number {
+	
+	}
+	/**
+ * @description Enables or disables the Accept button. By default, the button is enabled.
+*/
+	setAcceptButtonEnabled(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the text for the dialog's accept button. By default, the button is labelled 'Accept'.
+*/
+	setAcceptButtonText(text:String):String {
+	
+	}
+	/**
+ * @description Enables or disables the Apply button. By default, the button is disabled.
+*/
+	setApplyButtonEnabled(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the text for the dialog's apply button. By default, the button is labelled 'Apply'.
+*/
+	setApplyButtonText(text:String):String {
+	
+	}
+	/**
+ * @description Enables or disables the Cancel button. By default, the button is enabled.
+*/
+	setCancelButtonEnabled(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the text for the dialog's cancel button. By default, the button is labelled 'Cancel'.
+*/
+	setCancelButtonText(text:String):String {
+	
+	}
+	/**
+ * @description Enables or disables the Help button. By default, the button is enabled.
+*/
+	setHelpButtonEnabled(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Shows or hides the 'Accept' button. By default, the button is shown.
+*/
+	showAcceptButton(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Shows or hides the 'Apply' button. By default, the button is hidden.
+*/
+	showApplyButton(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Shows or hides the 'Cancel' button. By default, the button is shown.
+*/
+	showCancelButton(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Shows or hides the 'What's This' button. By default, the button is shown.
+*/
+	showHelpButton(onOff:Boolean):Boolean {
 	
 	}
 
@@ -3216,7 +4082,7 @@ class DzBone extends DzNode {
 	/**
  * @description Default Constructor. Creates a new Bone node.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -3224,6 +4090,18 @@ class DzBone extends DzNode {
  * @description Parameter(s):
 */
 	getBoneLocalScale(tm:DzTime):DzMatrix3 {
+	
+	}
+	/**
+ * @description Get the node that this node is following.
+*/
+	getFollowBone() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getFollowMode() {
 	
 	}
 
@@ -3243,28 +4121,28 @@ class DzBox3 extends Object {
 	/**
  * @description Creates an uninitialized box - the first point included in an uninitialized box will become the min and max for the box.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
 	/**
  * @description Creates an initialized box with the given min and max values.
  * @constructor
-*/
+*/;
 	constructor(xMin:Number, yMin:Number, zMin:Number, xMax:Number, yMax:Number, zMax:Number) {
 	
 	}
 	/**
  * @description Creates an initialized box with the given min and max values.
  * @constructor
-*/
+*/;
 	constructor(min:DzVec3, max:DzVec3) {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/
+*/;
 	constructor(box:DzBox3) {
 	
 	}
@@ -3342,30 +4220,37 @@ Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/boxlayout_dz}*/
 class DzBoxLayout extends DzLayout {
 	/**
- * @description Horizontal from left to right.
+ * @description ENUMERATOR: Horizontal from left to right.
 */
 	
-static LeftToRight;
+	static LeftToRight;
 	/**
- * @description Horizontal from right to left.
+ * @description ENUMERATOR: Horizontal from right to left.
 */
 	
-static RightToLeft;
+	static RightToLeft;
 	/**
- * @description Vertical from top to bottom.
+ * @description ENUMERATOR: Vertical from top to bottom.
 */
 	
-static TopToBottom;
+	static TopToBottom;
 	/**
- * @description Vertical from bottom to top.
+ * @description ENUMERATOR: Vertical from bottom to top.
 */
 	
-static BottomToTop;
+	static BottomToTop;
 	/**
  * @description Creates a box layout that manages the children widgets of the given parent widget
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget, direction=LeftToRight:Direction) {
+	
+	}
+	/**
+ * @description Creates a vertical box layout as a sub-layout of the given layout
+ * @constructor
+*/;
+	constructor(parent:DzLayout, direction=LeftToRight:Direction) {
 	
 	}
 	/**
@@ -3408,8 +4293,20 @@ class DzBrickMaterial extends DzMaterial, DzRefCountedItem {
 	/**
  * @description Creates a new brick material.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Converts the given default material to a brick material.
+*/
+	static convertDefaultMaterial(mat:DzDefaultMaterial):DzDefaultMaterial {
+	
+	}
+	/**
+ * @description Converts the given Uber Iray material to a brick material.
+*/
+	static convertUberIrayMaterial(mat:DzMaterial):DzMaterial {
 	
 	}
 	/**
@@ -3556,19 +4453,19 @@ DzPushButton provides both push and toggle buttons. The DzRadioButton and DzChec
 The difference between down and on is, when a user clicks a [toggle] button to toggle it on, the button is first pressed and then released into the On state (on is true, down is false). When the user clicks it again (to toggle it off), the button is first pressed and then released to the Off state (on and down are false).
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/button_dz}*/
 class DzButton extends DzWidget {
-	static autoRepeat:Boolean;
-	static autoRepeatDelay:Number;
-	static autoRepeatInterval:Number;
-	static checkable:Boolean;
-	static checked:Boolean;
-	static down:Boolean;
-	static pixmap:Pixmap;
-	static text:String;
-	static toggleButton:Boolean;
+	autoRepeat:Boolean;
+	autoRepeatDelay:Number;
+	autoRepeatInterval:Number;
+	checkable:Boolean;
+	checked:Boolean;
+	down:Boolean;
+	pixmap:Pixmap;
+	text:String;
+	toggleButton:Boolean;
 	/**
  * @description Toggles the state of a toggle button.
 */
-	static toggle() {
+	toggle() {
 	
 	}
 
@@ -3585,7 +4482,7 @@ class DzButtonGroup extends DzGroupBox {
 	/**
  * @description Creates a button group as a child of the given parent widget
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -3657,8 +4554,22 @@ class ByteArray extends QObject {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Copy Constructor.
+ * @constructor
+*/;
+	constructor(byteArray:ByteArray) {
+	
+	}
+	/**
+ * @description Creates a byte array containing the ascii representation of the string.
+ * @constructor
+*/;
+	constructor(str:String) {
 	
 	}
 	/**
@@ -3742,7 +4653,127 @@ class DzCallBack extends QObject {
 	/**
  * @description Adds the callback to the given callback group.
 */
-	static addToGroup(group:String):String {
+	addToGroup(group:String):String {
+	
+	}
+	/**
+ * @description Disconnects from the signal that triggers this callback.
+*/
+	clearConnection() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getArg(i:Number):Object {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getArgCount() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getBlockedDuringSceneLoad() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDeleteAfterExecution() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDynamicProperty(name:String):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getGroups() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getProcessAsEvent() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getScript() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSender() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isEvaluated() {
+	
+	}
+	/**
+ * @description Removes this callback from the group callback group.
+*/
+	removeFromGroup(group:String):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	setBlockedDuringSceneLoad(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Makes the connection that triggers this callback.
+*/
+	setConnection(sender:QObject, signal:String, garbageCollect:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Makes the connection that triggers this callback.
+*/
+	setConnection(sender:QObject, signal:String):Boolean {
+	
+	}
+	/**
+ * @description Makes the connection that triggers this callback.
+*/
+	setConnections(sender:QObject, signalList:Array, garbageCollect:Boolean):Number {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	setDeleteAfterExecution(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Set QObject dynamic property on this callback
+*/
+	setDynamicProperty(name:String, value:QVariant):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	setProcessAsEvent(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the script that will be executed by this callback.
+*/
+	setScript(script:String, evaluate:Boolean):String {
 	
 	}
 
@@ -3811,7 +4842,85 @@ class DzCallBackMgr extends QObject {
 	/**
  * @description Deletes all callbacks.
 */
-	static clearAllCallBacks() {
+	clearAllCallBacks() {
+	
+	}
+	/**
+ * @description Creates a DzCallBack object.
+*/
+	createCallBack(name:String, script:String, evaluate:Boolean):DzCallBack {
+	
+	}
+	/**
+ * @description Creates a DzCallBack object.
+*/
+	createCallBack(name:String):DzCallBack {
+	
+	}
+	/**
+ * @description Deletes the callback at the given index.
+*/
+	deleteCallBack(index:Number):Number {
+	
+	}
+	/**
+ * @description Deletes all callbacks with the given name.
+*/
+	deleteCallBack(name:String):String {
+	
+	}
+	/**
+ * @description Deletes the specified callback.
+*/
+	deleteCallBack(callBack:DzCallBack):DzCallBack {
+	
+	}
+	/**
+ * @description Deletes all callbacks in a given group.
+*/
+	deleteCallBackGroup(name:String):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getCallBack(index:Number):DzCallBack {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getCallBack(name:String):DzCallBack {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getCallBackIndex(name:String):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getCallBackList() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getGroup(name:String):Array {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumCallBacks() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSignalSignature(obj:QObject, signalName:String):Array {
 	
 	}
 
@@ -3822,145 +4931,145 @@ Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/camera_dz}*/
 class DzCamera extends DzNode {
 	/**
- * @description The width in pixels. Since: 4.6.4.70
+ * @description ENUMERATOR: The width in pixels. Since: 4.6.4.70
 */
 	
-static LOCAL_PIXEL_WIDTH;
+	static LOCAL_PIXEL_WIDTH;
 	/**
- * @description The height in pixels. Since: 4.6.4.70
+ * @description ENUMERATOR: The height in pixels. Since: 4.6.4.70
 */
 	
-static LOCAL_PIXEL_HEIGHT;
+	static LOCAL_PIXEL_HEIGHT;
 	/**
- * @description The relative width of the aspect frame. Since: 4.6.4.70
+ * @description ENUMERATOR: The relative width of the aspect frame. Since: 4.6.4.70
 */
 	
-static LOCAL_ASPECT_WIDTH;
+	static LOCAL_ASPECT_WIDTH;
 	/**
- * @description The relative height of the aspect frame. Since: 4.6.4.70
+ * @description ENUMERATOR: The relative height of the aspect frame. Since: 4.6.4.70
 */
 	
-static LOCAL_ASPECT_HEIGHT;
+	static LOCAL_ASPECT_HEIGHT;
 	/**
- * @description Orthogonal camera positioned to view the front of a figure
+ * @description ENUMERATOR: Orthogonal camera positioned to view the front of a figure
 */
 	
-static FRONT_CAMERA;
+	static FRONT_CAMERA;
 	/**
- * @description Orthogonal camera positioned to view the back of a figure
+ * @description ENUMERATOR: Orthogonal camera positioned to view the back of a figure
 */
 	
-static BACK_CAMERA;
+	static BACK_CAMERA;
 	/**
- * @description Orthogonal camera positioned to view the left side of a figure.
+ * @description ENUMERATOR: Orthogonal camera positioned to view the left side of a figure.
 */
 	
-static LEFT_CAMERA;
+	static LEFT_CAMERA;
 	/**
- * @description Orthogonal camera positioned to view the right side of a figure.
+ * @description ENUMERATOR: Orthogonal camera positioned to view the right side of a figure.
 */
 	
-static RIGHT_CAMERA;
+	static RIGHT_CAMERA;
 	/**
- * @description Orthogonal camera positioned to view a figure from the top.
+ * @description ENUMERATOR: Orthogonal camera positioned to view a figure from the top.
 */
 	
-static TOP_CAMERA;
+	static TOP_CAMERA;
 	/**
- * @description Orthogonal camera positioned to view a figure from the bottom.
+ * @description ENUMERATOR: Orthogonal camera positioned to view a figure from the bottom.
 */
 	
-static BOTTOM_CAMERA;
+	static BOTTOM_CAMERA;
 	/**
- * @description Default perspective camera - defaults to a front view of a figure.
+ * @description ENUMERATOR: Default perspective camera - defaults to a front view of a figure.
 */
 	
-static PERSPECTIVE_CAMERA;
+	static PERSPECTIVE_CAMERA;
 	/**
- * @description General Orthogonal camera.
+ * @description ENUMERATOR: General Orthogonal camera.
 */
 	
-static ORTHO_CAMERA;
+	static ORTHO_CAMERA;
 	/**
- * @description General Perspective camera.
+ * @description ENUMERATOR: General Perspective camera.
 */
 	
-static GENERAL_CAMERA;
+	static GENERAL_CAMERA;
 	/**
- * @description The headlight is automatically on or off depending on whether or not lights are in the scene. Since: 4.7.1.94
+ * @description ENUMERATOR: The headlight is automatically on or off depending on whether or not lights are in the scene. Since: 4.7.1.94
 */
 	
-static hmAuto;
+	static hmAuto;
 	/**
- * @description The headlight is on. Since: 4.7.1.94
+ * @description ENUMERATOR: The headlight is on. Since: 4.7.1.94
 */
 	
-static hmOn;
+	static hmOn;
 	/**
- * @description The headlight is off. Since: 4.7.1.94
+ * @description ENUMERATOR: The headlight is off. Since: 4.7.1.94
 */
 	
-static hmOff;
+	static hmOff;
 	/**
  * @description Rotates the camera and adjusts its focal distance so that its focal point is at the given point.
 */
-	static aimAt(pos:DzVec3):DzVec3 {
+	aimAt(pos:DzVec3):DzVec3 {
 	
 	}
 	/**
  * @description Translates the camera so that its view frames the given box, and sets the camera's focal point to the center of the box, given the aspect ratio of the current view (w / h)
 */
-	static frame(box:DzBox3, aspect:Number):DzBox3 {
+	frame(box:DzBox3, aspect:Number):DzBox3 {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getFieldOfView() {
+	getFieldOfView() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getFocalPoint() {
+	getFocalPoint() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getHeadlight() {
+	getHeadlight() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isViewCamera() {
+	isViewCamera() {
 	
 	}
 	/**
  * @description Resets the camera viewing parameters to defaults.
 */
-	static reset() {
+	reset() {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static shouldDoHeadLight(hasLights:Boolean, isRender:Boolean):Boolean {
+	shouldDoHeadLight(hasLights:Boolean, isRender:Boolean):Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static shouldSortOnLoad() {
+	shouldSortOnLoad() {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static updateDimensions(anchor:CameraDimension):CameraDimension {
+	updateDimensions(anchor:CameraDimension):CameraDimension {
 	
 	}
 
@@ -3979,7 +5088,7 @@ class DzCameraAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -3997,11 +5106,23 @@ See Also:
  DzAsset
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/categoryassetcontainer_dz}*/
 class DzCategoryAssetContainer extends DzAbstractAssetContainer, DzRefCountedItem {
-	static isVendor:Boolean;
+	isVendor:Boolean;
 	/**
  * @description Parameter(s):
 */
-	static getAssetsInCategory(userFacing:Boolean, installed:Boolean):Array {
+	getAssetsInCategory(userFacing:Boolean, installed:Boolean):Array {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPath() {
+	
+	}
+	/**
+ * @description Updates the container using the data that is currently stored in the database.
+*/
+	updateRow() {
 	
 	}
 
@@ -4020,7 +5141,7 @@ class DzCharacterAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -4063,7 +5184,7 @@ class DzCheckBox extends DzButton {
 	/**
  * @description Creates a check box as a child of the given parent widget
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -4074,58 +5195,58 @@ class DzCheckBox extends DzButton {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/checklistitem_dz}*/
 class DzCheckListItem extends DzListViewItem {
 	/**
- * @description The item is off
+ * @description ENUMERATOR: The item is off
 */
 	
-static Off;
+	static Off;
 	/**
- * @description The item has not changed - i.e. it is in the third state and the user has not clicked it.
+ * @description ENUMERATOR: The item has not changed - i.e. it is in the third state and the user has not clicked it.
 */
 	
-static NoChange;
+	static NoChange;
 	/**
- * @description The item is on
+ * @description ENUMERATOR: The item is on
 */
 	
-static On;
+	static On;
 	/**
- * @description Radio Button item. Must be the child of a RadioButtonController
+ * @description ENUMERATOR: Radio Button item. Must be the child of a RadioButtonController
 */
 	
-static RadioButton;
+	static RadioButton;
 	/**
- * @description Check Box item.
+ * @description ENUMERATOR: Check Box item.
 */
 	
-static CheckBox;
+	static CheckBox;
 	/**
- * @description Radio Button parent item.
+ * @description ENUMERATOR: Radio Button parent item.
 */
 	
-static RadioButtonController;
+	static RadioButtonController;
 	/**
- * @description Check Box parent item.
+ * @description ENUMERATOR: Check Box parent item.
 */
 	
-static CheckBoxController;
+	static CheckBoxController;
 	/**
  * @description Creates a checklist item at the root level of the given list view
  * @constructor
-*/
+*/;
 	constructor(parent:DzListView, type=RadioButtonController:Type, id=-1:Number) {
 	
 	}
 	/**
  * @description Creates a checklist item as a child of the given list item
  * @constructor
-*/
+*/;
 	constructor(parent:DzCheckListItem, type=RadioButtonController:Type, id=-1:Number) {
 	
 	}
 	/**
  * @description Creates a checklist item as a child of the given list item
  * @constructor
-*/
+*/;
 	constructor(parent:DzListViewItem, type=RadioButtonController:Type, id=-1:Number) {
 	
 	}
@@ -4142,21 +5263,21 @@ class DzCircle3 extends Object {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/
+*/;
 	constructor(circle:DzCircle3) {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/
+*/;
 	constructor(center:DzVec3, normal:DzVec3, radius:Number) {
 	
 	}
@@ -4184,28 +5305,28 @@ class Color extends QObject {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
 	/**
  * @description Sets the RGB value from colorName, which may be in one of these formats (each of R, G and B is a single hex digit):
  * @constructor
-*/
+*/;
 	constructor(colorName:String) {
 	
 	}
 	/**
  * @description Component-wise constructor. Each value (i.e., r, g, b, a ) should be in the [0, 255] range.
  * @constructor
-*/
+*/;
 	constructor(r:Number, g:Number, b:Number, a=255:Number) {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/
+*/;
 	constructor(color:Color) {
 	
 	}
@@ -4264,7 +5385,31 @@ class DzColorDialog extends QObject {
 	/**
  * @description Return Value:
 */
-	static customColor(i:Number):Color {
+	customColor(i:Number):Color {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	customCount() {
+	
+	}
+	/**
+ * @description Shows a color picker dialog to the user.
+*/
+	getColor(initial:Color):Color {
+	
+	}
+	/**
+ * @description Set the i'th custom color in the color picker.
+*/
+	setCustomColor(i:Number, c:Color):Number {
+	
+	}
+	/**
+ * @description Set the i'th standard color in the color picker.
+*/
+	setStandardColor(i:Number, c:Color):Number {
 	
 	}
 
@@ -4274,39 +5419,51 @@ class DzColorDialog extends QObject {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/colorproperty_dz}*/
 class DzColorProperty extends DzIntProperty {
 	/**
- * @description Hue, Saturation, and Value.
+ * @description ENUMERATOR: Hue, Saturation, and Value.
 */
 	
-static HSV;
+	static HSV;
 	/**
- * @description Hue, Saturation, and Lightness (or Luminosity).
+ * @description ENUMERATOR: Hue, Saturation, and Lightness (or Luminosity).
 */
 	
-static HSL;
+	static HSL;
 	/**
- * @description Red, Green, Blue.
+ * @description ENUMERATOR: Red, Green, Blue.
 */
 	
-static RGB;
+	static RGB;
 	/**
  * @description Default Constructor. Creates a non-animatable, non-user property.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/
+*/;
 	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean, initVal:Color) {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/
+*/;
 	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean) {
+	
+	}
+	/**
+ * @description Converts a string to an enumerated animation blend mode value.
+*/
+	static animationBlendModeFromStr(str:String):AnimationBlendMode {
+	
+	}
+	/**
+ * @description Converts an enumerated animation blend mode value to a string.
+*/
+	static animationBlendModeToStr(type:AnimationBlendMode):String {
 	
 	}
 	/**
@@ -4392,7 +5549,7 @@ class DzColorWgt extends DzWidget {
 	/**
  * @description Creates a color widget as a child of the given parent widget.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -4403,64 +5560,64 @@ class DzColorWgt extends DzWidget {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/combobox_dz}*/
 class DzComboBox extends DzWidget {
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static NoInsert;
+	static NoInsert;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static InsertAtTop;
+	static InsertAtTop;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static InsertAtCurrent;
+	static InsertAtCurrent;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static InsertAtBottom;
+	static InsertAtBottom;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static InsertAfterCurrent;
+	static InsertAfterCurrent;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static InsertBeforeCurrent;
+	static InsertBeforeCurrent;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static InsertAlphabetically;
+	static InsertAlphabetically;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AdjustToContents;
+	static AdjustToContents;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AdjustToContentsOnFirstShow;
+	static AdjustToContentsOnFirstShow;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AdjustToMinimumContentsLength;
+	static AdjustToMinimumContentsLength;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AdjustToMinimumContentsLengthWithIcon;
+	static AdjustToMinimumContentsLengthWithIcon;
 	/**
  * @description Creates a combobox as a child of the given parent widget.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -4609,7 +5766,7 @@ class DzComboEdit extends DzWidget {
 	/**
  * @description Creates a combo edit as a child of the given parent widget.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget, updateOnSelect=true:Boolean) {
 	
 	}
@@ -4681,12 +5838,18 @@ See Also:
  DzAssetMgr.getCompatibilityBases()
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/compatibilitybaseassetcontainer_dz}*/
 class DzCompatibilityBaseAssetContainer extends DzAbstractAssetContainer, DzRefCountedItem {
-	static isFilter:Boolean;
-	static isVendor:Boolean;
+	isFilter:Boolean;
+	isVendor:Boolean;
 	/**
  * @description Return Value:
 */
-	static getPath() {
+	getPath() {
+	
+	}
+	/**
+ * @description Attempts to update the child containers of this container.
+*/
+	updateChildren() {
 	
 	}
 
@@ -4701,47 +5864,47 @@ See Also:
  DzContentFolder
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/contentfile_dz}*/
 class DzContentFile extends QObject, DzRefCountedItem {
-	static canDelete:Boolean;
-	static canRename:Boolean;
-	static companionIsScript:Boolean;
-	static companionPath:String;
-	static fullPath:String;
-	static hasCompanion:Boolean;
-	static hasCompanionScript:Boolean;
-	static icon:Pixmap;
-	static isNative:Boolean;
-	static isScript:Boolean;
-	static label:String;
-	static name:String;
-	static smallIcon:Pixmap;
+	canDelete:Boolean;
+	canRename:Boolean;
+	companionIsScript:Boolean;
+	companionPath:String;
+	fullPath:String;
+	hasCompanion:Boolean;
+	hasCompanionScript:Boolean;
+	icon:Pixmap;
+	isNative:Boolean;
+	isScript:Boolean;
+	label:String;
+	name:String;
+	smallIcon:Pixmap;
 	/**
  * @description Removes this file from its content folder. The default implementation of this function deletes the content file and any associated thumbnail image from the disk, so use with care!
 */
-	static deleteFile() {
+	deleteFile() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getFolder() {
+	getFolder() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNext() {
+	getNext() {
 	
 	}
 	/**
  * @description Force the file to reload its icon.
 */
-	static reloadIcon() {
+	reloadIcon() {
 	
 	}
 	/**
  * @description Rename the file to the given name.
 */
-	static rename(newName:String):Boolean {
+	rename(newName:String):Boolean {
 	
 	}
 
@@ -4757,108 +5920,108 @@ See Also:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/contentfolder_dz}*/
 class DzContentFolder extends DzBase, DzRefCountedItem {
 	/**
- * @description Folder containing native content.
+ * @description ENUMERATOR: Folder containing native content.
 */
 	
-static NATIVE_TYPE;
+	static NATIVE_TYPE;
 	/**
- * @description Folder containing Poser content.
+ * @description ENUMERATOR: Folder containing Poser content.
 */
 	
-static POSER_TYPE;
+	static POSER_TYPE;
 	/**
- * @description Folder containing other importable content.
+ * @description ENUMERATOR: Folder containing other importable content.
 */
 	
-static IMPORT_TYPE;
+	static IMPORT_TYPE;
 	/**
  * @description Adds a new subfolder with the given name to this folder.
 */
-	static addSubFolder(folderName:String):Boolean {
+	addSubFolder(folderName:String):Boolean {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static canMoveFile(file:DzContentFile):Boolean {
+	canMoveFile(file:DzContentFile):Boolean {
 	
 	}
 	/**
  * @description Copies the given content file to this folder.
 */
-	static copyFile(file:DzContentFile):Boolean {
+	copyFile(file:DzContentFile):Boolean {
 	
 	}
 	/**
  * @description Removes this content folder. The default implementation of this function deletes all files and subfolders in this directory from the disk, so use with care!
 */
-	static deleteFolder() {
+	deleteFolder() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getFirstFile() {
+	getFirstFile() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getFirstFolder() {
+	getFirstFolder() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getFirstHiddenFile() {
+	getFirstHiddenFile() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getFirstHiddenFolder() {
+	getFirstHiddenFolder() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNext() {
+	getNext() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getParent() {
+	getParent() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static hasSubFolders() {
+	hasSubFolders() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isModifiable() {
+	isModifiable() {
 	
 	}
 	/**
  * @description Moves the given content file to this folder.
 */
-	static moveFile(file:DzContentFile):Boolean {
+	moveFile(file:DzContentFile):Boolean {
 	
 	}
 	/**
  * @description Checks for changes in sub folders and files (if loaded).
 */
-	static refresh(reloadIcons:Boolean):Boolean {
+	refresh(reloadIcons:Boolean):Boolean {
 	
 	}
 	/**
  * @description Rename the folder to the given name.
 */
-	static rename(newName:String):Boolean {
+	rename(newName:String):Boolean {
 	
 	}
 
@@ -4871,638 +6034,650 @@ There is only one instance of this manager in an application. This instance is c
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/contentmgr_dz}*/
 class DzContentMgr extends DzBase {
 	/**
- * @description Represents the directories that are mapped and expected to contain files in the DAZ Studio native file format.
+ * @description ENUMERATOR: Represents the directories that are mapped and expected to contain files in the DAZ Studio native file format.
 */
 	
-static NativeDirs;
+	static NativeDirs;
 	/**
- * @description Represents the directories that are mapped and expected to contain files in the Poser file formats.
+ * @description ENUMERATOR: Represents the directories that are mapped and expected to contain files in the Poser file formats.
 */
 	
-static PoserDirs;
+	static PoserDirs;
 	/**
- * @description Represents the directories that are mapped and expected to contain files in formats supported by the various importers a user has installed (with the exception of the Poser format importer - see PoserDirs).
+ * @description ENUMERATOR: Represents the directories that are mapped and expected to contain files in formats supported by the various importers a user has installed (with the exception of the Poser format importer - see PoserDirs).
 */
 	
-static ImportDirs;
+	static ImportDirs;
 	/**
- * @description Represents the built-in directories that are expected to contain files in compatible formats.
+ * @description ENUMERATOR: Represents the built-in directories that are expected to contain files in compatible formats.
 */
 	
-static BuiltInDirs;
+	static BuiltInDirs;
 	/**
- * @description Represents the built-in MDL directories and the directories that are expected to contain files in the MDL format. Since: 4.8.1.50
+ * @description ENUMERATOR: Represents the built-in MDL directories and the directories that are expected to contain files in the MDL format. Since: 4.8.1.50
 */
 	
-static MDLDirs;
+	static MDLDirs;
 	/**
- * @description Represents the directories managed by the database, a given storeId_productId subdirectory, within a CloudDir directory. Since: 4.9.0.46
+ * @description ENUMERATOR: Represents the directories managed by the database, a given storeId_productId subdirectory, within a CloudDir directory. Since: 4.9.0.46
 */
 	
-static CloudDB;
+	static CloudDB;
 	/**
- * @description Represents the mapped cloud directory and any ./data/cloud subdirectory located within NativeDirs and PoserDirs. Since: 4.9.0.46
+ * @description ENUMERATOR: Represents the mapped cloud directory and any ./data/cloud subdirectory located within NativeDirs and PoserDirs. Since: 4.9.0.46
 */
 	
-static CloudDir;
+	static CloudDir;
 	/**
- * @description Represents the directory types defined by NativeDirs and BuiltInDirs (typically used to provide legacy support for methods that now use this enum).
+ * @description ENUMERATOR: Represents the directory types defined by NativeDirs and BuiltInDirs (typically used to provide legacy support for methods that now use this enum).
 */
 	
-static NativeAndBuiltInDirs;
+	static NativeAndBuiltInDirs;
 	/**
- * @description Represents the directory types defined by NativeDirs and BuiltInDirs, CloudDir, and CloudDB.
+ * @description ENUMERATOR: Represents the directory types defined by NativeDirs and BuiltInDirs, CloudDir, and CloudDB.
 */
 	
-static CloudNativeAndBuiltInDirs;
+	static CloudNativeAndBuiltInDirs;
 	/**
- * @description Represents the directory types defined by NativeDirs and BuiltInDirs, PoserDirs, ImportDirs, and MDLDirs. Since: 4.9.0.51
+ * @description ENUMERATOR: Represents the directory types defined by NativeDirs and BuiltInDirs, PoserDirs, ImportDirs, and MDLDirs. Since: 4.9.0.51
 */
 	
-static AllLocalNonCloudDirs;
+	static AllLocalNonCloudDirs;
 	/**
- * @description Represents the directory types defined by NativeDirs and BuiltInDirs, PoserDirs, ImportDirs, MDLDirs, and CloudDir. Since: 4.9.0.51
+ * @description ENUMERATOR: Represents the directory types defined by NativeDirs and BuiltInDirs, PoserDirs, ImportDirs, MDLDirs, and CloudDir. Since: 4.9.0.51
 */
 	
-static AllLocalDirs;
+	static AllLocalDirs;
 	/**
- * @description Represents all directory types except those defined by MDLDirs, CloudDir and CloudDB. The "all" prior to 4.8.
+ * @description ENUMERATOR: Represents all directory types except those defined by MDLDirs, CloudDir and CloudDB. The "all" prior to 4.8.
 */
 	
-static AllDirs;
+	static AllDirs;
 	/**
- * @description Represents all directory types. Since: 4.9.0.51
+ * @description ENUMERATOR: Represents all directory types. Since: 4.9.0.51
 */
 	
-static AllDirsAndCloud;
+	static AllDirsAndCloud;
+	/**
+ * @description Return Value:
+*/
+	getCloudPathPrefix() {
+	
+	}
+	/**
+ * @description Checks the given node for a source file data item, and returns the path of the source file if one is found.
+*/
+	static getContentPath(node:DzNode):String {
+	
+	}
 	/**
  * @description Adds a native content directory to the list.
 */
-	static addContentDirectory(directory:String, saveSetting:Boolean):String {
+	addContentDirectory(directory:String, saveSetting:Boolean):String {
 	
 	}
 	/**
  * @description Adds an import directory to the list.
 */
-	static addImportDirectory(directory:String, saveSetting:Boolean):String {
+	addImportDirectory(directory:String, saveSetting:Boolean):String {
 	
 	}
 	/**
  * @description Adds a directory where MDL files can reside to the list.
 */
-	static addMDLDirectory(directory:String, saveSetting:Boolean):String {
+	addMDLDirectory(directory:String, saveSetting:Boolean):String {
 	
 	}
 	/**
  * @description Adds a Poser import content directory to the list.
 */
-	static addPoserDirectory(directory:String, saveSetting:Boolean):String {
+	addPoserDirectory(directory:String, saveSetting:Boolean):String {
 	
 	}
 	/**
  * @description Adds a file to the list of recent files.
 */
-	static addRecentFile(filename:String):String {
+	addRecentFile(filename:String):String {
 	
 	}
 	/**
  * @description Clears the list of recent files.
 */
-	static clearRecentFileList() {
+	clearRecentFileList() {
 	
 	}
 	/**
  * @description Attempts to locate dirPath among the mapped native content directories.
 */
-	static contentDirectoryIsMapped(dirPath:String):Boolean {
+	contentDirectoryIsMapped(dirPath:String):Boolean {
 	
 	}
 	/**
  * @description Displays a dialog to the user to perform a Poser content search on the local machine.
 */
-	static doContentSearch() {
+	doContentSearch() {
 	
 	}
 	/**
  * @description Causes the content manager to check the number of mapped content directories, and display a warning to the user if it is excessive.
 */
-	static doDirNumCheck() {
+	doDirNumCheck() {
 	
 	}
 	/**
  * @description Notifies the content manager that a new content file has been saved.
 */
-	static fileCreated(filename:String):String {
+	fileCreated(filename:String):String {
 	
 	}
 	/**
  * @description Given an absolute path, this method traverses the content directories and attempts to find the base (mapped) folder.
 */
-	static findBaseDirectory(dirTypes:DirectoryTypes, path:String):DzContentFolder {
+	findBaseDirectory(dirTypes:DirectoryTypes, path:String):DzContentFolder {
 	
 	}
 	/**
  * @description Given an absolute path, this method traverses the content directories and attempts to find the base (mapped) folder.
 */
-	static findBaseDirectory(path:String, useImportFolders:Boolean):DzContentFolder {
+	findBaseDirectory(path:String, useImportFolders:Boolean):DzContentFolder {
 	
 	}
 	/**
  * @description Given a partial path (a file path that is relative to a content directory) this function traverses all folders of the specified mapped directory types in the following order (NativeDirs, PoserDirs, ImportDirs, BuiltInDirs)
 */
-	static findFile(partialPath:String, dirTypes:DirectoryTypes):String {
+	findFile(partialPath:String, dirTypes:DirectoryTypes):String {
 	
 	}
 	/**
  * @description Finds the source path for a node in the scene.
 */
-	static findSourcePathForNode(sceneNode:DzNode):String {
+	findSourcePathForNode(sceneNode:DzNode):String {
 	
 	}
 	/**
  * @description Attempts to locate relativePath by pre-pending the path information for each mapped content directory.
 */
-	static getAbsolutePath(dirTypes:DirectoryTypes, relativePath:String, preferredPath:String):String {
+	getAbsolutePath(dirTypes:DirectoryTypes, relativePath:String, preferredPath:String):String {
 	
 	}
 	/**
  * @description Attempts to locate relativePath by pre-pending the path information for each mapped content directory.
 */
-	static getAbsolutePath(relativePath:String, useImportFolders:Boolean, preferredPath:String):String {
+	getAbsolutePath(relativePath:String, useImportFolders:Boolean, preferredPath:String):String {
 	
 	}
 	/**
  * @description Attempts to locate relativePath by pre-pending the path information for each mapped content directory.
 */
-	static getAbsolutePaths(dirTypes:DirectoryTypes, relativePath:String):Array {
+	getAbsolutePaths(dirTypes:DirectoryTypes, relativePath:String):Array {
 	
 	}
 	/**
  * @description Attempts to locate relativePath by pre-pending the path information for each mapped directory.
 */
-	static getAbsolutePaths(relativePath:String, useImportFolders:Boolean):Array {
+	getAbsolutePaths(relativePath:String, useImportFolders:Boolean):Array {
 	
 	}
 	/**
  * @description Attempts to locate relativePath by pre-pending the path information for each mapped content directory.
 */
-	static getAbsoluteUri(dirTypes:DirectoryTypes, relativePath:String, preferredPath:String):DzUri {
+	getAbsoluteUri(dirTypes:DirectoryTypes, relativePath:String, preferredPath:String):DzUri {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getBuiltInContentDirectory() {
+	getBuiltInContentDirectory() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getBuiltInContentDirectoryPath() {
+	getBuiltInContentDirectoryPath() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getBuiltInMDLDirectory(which:Number):DzContentFolder {
+	getBuiltInMDLDirectory(which:Number):DzContentFolder {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getBuiltInMDLDirectoryPath(which:Number):String {
+	getBuiltInMDLDirectoryPath(which:Number):String {
 	
 	}
 	/**
  * @description Attempts to locate relativePath by pre-pending the path information for the mapped cloud directory.
 */
-	static getCloudAbsolutePath(relativePath:String):String {
+	getCloudAbsolutePath(relativePath:String):String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getCloudContentDirectory() {
+	getCloudContentDirectory() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getCloudContentDirectoryPath() {
+	getCloudContentDirectoryPath() {
 	
 	}
 	/**
  * @description Attempts to shorten absolutePath to a path that is relative to the cloud directory. If the path cannot be shortened, the original string is returned.
 */
-	static getCloudRelativePath(absolutePath:String):String {
+	getCloudRelativePath(absolutePath:String):String {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getContentDirectory(which:Number):DzContentFolder {
+	getContentDirectory(which:Number):DzContentFolder {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getContentDirectoryPath(which:Number):String {
+	getContentDirectoryPath(which:Number):String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getContentReplaceMgr() {
+	getContentReplaceMgr() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getDefaultContentDir() {
+	getDefaultContentDir() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getDirectoryContentsUrisList(dirTypes:DirectoryTypes, relativeDirPaths:Array, fileSuffixes:Array):Array {
+	getDirectoryContentsUrisList(dirTypes:DirectoryTypes, relativeDirPaths:Array, fileSuffixes:Array):Array {
 	
 	}
 	/**
  * @description Attempts to locate a file with the given relative path by pre-pending the path information for each mapped import directory, finally falling back to the Built-In content directory.
 */
-	static getImportAbsolutePath(relativePath:String):String {
+	getImportAbsolutePath(relativePath:String):String {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getImportDirectory(which:Number):DzContentFolder {
+	getImportDirectory(which:Number):DzContentFolder {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getImportDirectoryPath(which:Number):String {
+	getImportDirectoryPath(which:Number):String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getImportFileExtensions() {
+	getImportFileExtensions() {
 	
 	}
 	/**
  * @description Attempts to extract the mapped directory portion of path.
 */
-	static getMappedPath(path:String, useImportFolders:Boolean, isRelative:Boolean):String {
+	getMappedPath(path:String, useImportFolders:Boolean, isRelative:Boolean):String {
 	
 	}
 	/**
  * @description Attempts to extract the mapped directory portion of path.
 */
-	static getMappedPath(dirTypes:DirectoryTypes, path:String, isRelative:Boolean):String {
+	getMappedPath(dirTypes:DirectoryTypes, path:String, isRelative:Boolean):String {
 	
 	}
 	/**
  * @description Attempts to locate a file with the given relative path by pre-pending the path information for each mapped MDL directory, as well as the built-in MDL directories, finally falling back to the built-in content directory.
 */
-	static getMDLAbsolutePath(relativePath:String):String {
+	getMDLAbsolutePath(relativePath:String):String {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getMDLDirectory(which:Number):DzContentFolder {
+	getMDLDirectory(which:Number):DzContentFolder {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getMDLDirectoryPath(which:Number):String {
+	getMDLDirectoryPath(which:Number):String {
 	
 	}
 	/**
  * @description Attempts to shorten absolutePath to a path that is relative to one of the mapped MDL directories. If the path cannot be shortened, the original string is returned.
 */
-	static getMDLRelativePath(absolutePath:String):String {
+	getMDLRelativePath(absolutePath:String):String {
 	
 	}
 	/**
  * @description Attempts to locate relativePath by pre-pending the path information for each mapped native directory, finally falling back to the Built-In content directory.
 */
-	static getNativeAbsolutePath(relativePath:String):String {
+	getNativeAbsolutePath(relativePath:String):String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNativeBaseUserFacingExcludedDirs() {
+	getNativeBaseUserFacingExcludedDirs() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNativeFileExtensions() {
+	getNativeFileExtensions() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumBuiltInMDLDirectories() {
+	getNumBuiltInMDLDirectories() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumContentDirectories() {
+	getNumContentDirectories() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumImportDirectories() {
+	getNumImportDirectories() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumMDLDirectories() {
+	getNumMDLDirectories() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumPoserDirectories() {
+	getNumPoserDirectories() {
 	
 	}
 	/**
  * @description Attempts to locate a file with the given relative path by pre-pending the path information for each mapped Poser directory, finally falling back to the Built-In content directory.
 */
-	static getPoserAbsolutePath(relativePath:String):String {
+	getPoserAbsolutePath(relativePath:String):String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getPoserBaseUserFacingDirs() {
+	getPoserBaseUserFacingDirs() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getPoserDirectory(which:Number):DzContentFolder {
+	getPoserDirectory(which:Number):DzContentFolder {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getPoserDirectoryPath(which:Number):String {
+	getPoserDirectoryPath(which:Number):String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getPoserFileExtensions() {
+	getPoserFileExtensions() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getRecentFileList() {
+	getRecentFileList() {
 	
 	}
 	/**
  * @description Attempts to shorten absolutePath to a path that is relative to one of the mapped content directories. If the path cannot be shortened, the original path is returned.
 */
-	static getRelativePath(dirTypes:DirectoryTypes, absolutePath:String):String {
+	getRelativePath(dirTypes:DirectoryTypes, absolutePath:String):String {
 	
 	}
 	/**
  * @description Attempts to shorten absolutePath to a path that is relative to one of the mapped content directories. If the path cannot be shortened, the original string is returned.
 */
-	static getRelativePath(absolutePath:String, useImportFolders:Boolean):String {
+	getRelativePath(absolutePath:String, useImportFolders:Boolean):String {
 	
 	}
 	/**
  * @description Attempts to shorten absolutePath to a list of paths that are relative to one of the mapped content directories.
 */
-	static getRelativePaths(dirTypes:DirectoryTypes, absolutePath:String):Array {
+	getRelativePaths(dirTypes:DirectoryTypes, absolutePath:String):Array {
 	
 	}
 	/**
  * @description Attempts to shorten absolutePath to a list of paths that are relative to one of the mapped content directories.
 */
-	static getRelativePaths(absolutePath:String, useImportFolders:Boolean):Array {
+	getRelativePaths(absolutePath:String, useImportFolders:Boolean):Array {
 	
 	}
 	/**
  * @description Attempts to locate dirPath among the mapped import directories.
 */
-	static importDirectoryIsMapped(dirPath:String):Boolean {
+	importDirectoryIsMapped(dirPath:String):Boolean {
 	
 	}
 	/**
  * @description Imports the file at the given path. A companion file (a DAZ Script file with the same name as the file being imported, or a DUF file if a DAZ Script does not exist) will be executed if one exists. This function should only be used in special circumstances. Use openFile() instead.
 */
-	static importFile(path:String):Boolean {
+	importFile(path:String):Boolean {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static isDirectoryMapped(directory:String):Boolean {
+	isDirectoryMapped(directory:String):Boolean {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static isUserFacingDirectoryPath(dirTypes:DirectoryTypes, relativePath:String):Boolean {
+	isUserFacingDirectoryPath(dirTypes:DirectoryTypes, relativePath:String):Boolean {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static isUserFacingFilePath(dirTypes:DirectoryTypes, relativePath:String):Boolean {
+	isUserFacingFilePath(dirTypes:DirectoryTypes, relativePath:String):Boolean {
 	
 	}
 	/**
  * @description Loads an asset as a new scene.
 */
-	static loadAsset(asset:DzAsset):Boolean {
+	loadAsset(asset:DzAsset):Boolean {
 	
 	}
 	/**
  * @description Loads an asset into the scene.
 */
-	static loadAsset(asset:DzAsset, merge:Boolean):Boolean {
+	loadAsset(asset:DzAsset, merge:Boolean):Boolean {
 	
 	}
 	/**
  * @description Attempts to locate dirPath among the mapped MDL directories.
 */
-	static mdlDirectoryIsMapped(dirPath:String):Boolean {
+	mdlDirectoryIsMapped(dirPath:String):Boolean {
 	
 	}
 	/**
  * @description Merges a list of files, either as native files or imported files, by calling openNativeFile() or importFile() based on the file extension. For file imports, a companion file (a DAZ Script file with the same name as the file being imported, or a DUF file if a DAZ Script does not exist) will be executed if one exists.
 */
-	static mergeFiles(filenames:Array):Boolean {
+	mergeFiles(filenames:Array):Boolean {
 	
 	}
 	/**
  * @description Loads the file, either as a native file or an imported file, by calling openNativeFile() or importFile() based on the file extension. For file imports, a companion file (a DAZ Script file with the same name as the file being imported, or a DUF file if a DAZ Script does not exist) will be executed if one exists.
 */
-	static openFile(filename:String, merge:Boolean):Boolean {
+	openFile(filename:String, merge:Boolean):Boolean {
 	
 	}
 	/**
  * @description Loads a native file into the scene. This function should only be used in special circumstances. Use openFile() instead.
 */
-	static openNativeFile(filename:String, isMerge:Boolean):Boolean {
+	openNativeFile(filename:String, isMerge:Boolean):Boolean {
 	
 	}
 	/**
  * @description Loads a native file into the scene. This function should only be used in special circumstances. Use openFile() instead.
 */
-	static openNativeUri(uri:DzUri, filename:String, isMerge:Boolean):Boolean {
+	openNativeUri(uri:DzUri, filename:String, isMerge:Boolean):Boolean {
 	
 	}
 	/**
  * @description Loads the file, either as a native file or an imported file, by calling openNativeFile() or importFile() based on the file extension. For file imports, a companion file (a DAZ Script file with the same name as the file being imported, or a DUF file if a DAZ Script does not exist) will be executed if one exists.
 */
-	static openUri(uri:DzUri, filename:String, merge:Boolean):Boolean {
+	openUri(uri:DzUri, filename:String, merge:Boolean):Boolean {
 	
 	}
 	/**
  * @description Attempts to locate dirPath path among the mapped Poser content directories.
 */
-	static poserDirectoryIsMapped(dirPath:String):Boolean {
+	poserDirectoryIsMapped(dirPath:String):Boolean {
 	
 	}
 	/**
  * @description Refreshes any currently loaded content directories. Call this after any operation that makes changes to the file system, e.g. saving or deleting files, etc.
 */
-	static refresh(reloadIcons:Boolean):Boolean {
+	refresh(reloadIcons:Boolean):Boolean {
 	
 	}
 	/**
  * @description Causes assets for a given node in the scene to be reloaded, using the given settings, from source files at the given path.
 */
-	static reloadAssetsFromSource(sceneNode:DzNode, settings:DzSettings, srcFilePath:String):DzError {
+	reloadAssetsFromSource(sceneNode:DzNode, settings:DzSettings, srcFilePath:String):DzError {
 	
 	}
 	/**
  * @description Causes the assets for all nodes in the scene to be reloaded from their respective source files.
 */
-	static reloadSceneAssetsFromSource(settings:DzSettings):Boolean {
+	reloadSceneAssetsFromSource(settings:DzSettings):Boolean {
 	
 	}
 	/**
  * @description Removes all native content mapped directories.
 */
-	static removeAllContentDirectories() {
+	removeAllContentDirectories() {
 	
 	}
 	/**
  * @description Removes all import content directory mappings from the list.
 */
-	static removeAllImportDirectories() {
+	removeAllImportDirectories() {
 	
 	}
 	/**
  * @description Removes all MDL directory mappings from the list.
 */
-	static removeAllMDLDirectories() {
+	removeAllMDLDirectories() {
 	
 	}
 	/**
  * @description Removes all Poser import content directory mappings from the list.
 */
-	static removeAllPoserDirectories() {
+	removeAllPoserDirectories() {
 	
 	}
 	/**
  * @description Removes a navtive content directory mapping from the list.
 */
-	static removeContentDirectory(directory:String):Boolean {
+	removeContentDirectory(directory:String):Boolean {
 	
 	}
 	/**
  * @description Removes an import content directory mapping from the list.
 */
-	static removeImportDirectory(directory:String):Boolean {
+	removeImportDirectory(directory:String):Boolean {
 	
 	}
 	/**
  * @description Removes a MDL directory mapping from the list.
 */
-	static removeMDLDirectory(directory:String):Boolean {
+	removeMDLDirectory(directory:String):Boolean {
 	
 	}
 	/**
  * @description Removes a Poser import content directory mapping from the list.
 */
-	static removePoserDirectory(directory:String):Boolean {
+	removePoserDirectory(directory:String):Boolean {
 	
 	}
 	/**
  * @description Saves all currently mapped directories to the registry.
 */
-	static saveAllMappedDirectories() {
+	saveAllMappedDirectories() {
 	
 	}
 	/**
  * @description Deprecated
 */
-	static setCheckCompatibilityOn(useCheckCompatibility:Boolean):Boolean {
+	setCheckCompatibilityOn(useCheckCompatibility:Boolean):Boolean {
 	
 	}
 	/**
  * @description Sets the directory for content and utilities downloaded and installed through the application.
 */
-	static setCloudContentDirectory(directory:String, saveSetting:Boolean):String {
+	setCloudContentDirectory(directory:String, saveSetting:Boolean):String {
 	
 	}
 	/**
  * @description Sets the list of directories for native format files.
 */
-	static setContentDirectories(directories:Array, saveSettings:Boolean):Array {
+	setContentDirectories(directories:Array, saveSettings:Boolean):Array {
 	
 	}
 	/**
  * @description Sets the list of directories for other import format files.
 */
-	static setImportDirectories(directories:Array, saveSettings:Boolean):Array {
+	setImportDirectories(directories:Array, saveSettings:Boolean):Array {
 	
 	}
 	/**
  * @description Sets the list of directories for Poser format files.
 */
-	static setPoserDirectories(directories:Array, saveSettings:Boolean):Array {
+	setPoserDirectories(directories:Array, saveSettings:Boolean):Array {
 	
 	}
 	/**
  * @description Sets whether or not to use the database.
 */
-	static setUseDatabaseSearch(useDatabase:Boolean):Boolean {
+	setUseDatabaseSearch(useDatabase:Boolean):Boolean {
 	
 	}
 	/**
  * @description Given the filename, determines if the file should be treated as a merge or an open when loaded. This is determined first by content type. If that does not exist and the file is a .duf it will attempt to retrieve the type from inside the file.
 */
-	static shouldMerge(filename:String):Boolean {
+	shouldMerge(filename:String):Boolean {
 	
 	}
 	/**
  * @description Deprecated
 */
-	static usingCheckCompatibility() {
+	usingCheckCompatibility() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static usingDatabaseSearch() {
+	usingDatabaseSearch() {
 	
 	}
 
@@ -5515,29 +6690,89 @@ static AllDirsAndCloud;
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/contentreplacemgr_dz}*/
 class DzContentReplaceMgr extends QObject {
 	/**
- * @description When a piece of content of a specific type is loaded, any content already in the scene of the same type is removed, so the new item replaces the old one.
+ * @description ENUMERATOR: When a piece of content of a specific type is loaded, any content already in the scene of the same type is removed, so the new item replaces the old one.
 */
 	
-static ALWAYS_REPLACE;
+	static ALWAYS_REPLACE;
 	/**
- * @description When a piece of content is loaded, a dialog prompts the user to choose which (if any) items already in the scene should be removed.
+ * @description ENUMERATOR: When a piece of content is loaded, a dialog prompts the user to choose which (if any) items already in the scene should be removed.
 */
 	
-static ASK_TO_REPLACE;
+	static ASK_TO_REPLACE;
 	/**
- * @description Items already in the scene are never removed when loading a piece of content.
+ * @description ENUMERATOR: Items already in the scene are never removed when loading a piece of content.
 */
 	
-static NEVER_REPLACE;
+	static NEVER_REPLACE;
 	/**
- * @description When a piece of content is loaded, a dialog prompts the user to choose which (if any) items already in the scene should be removed if there is an item of matching content type.
+ * @description ENUMERATOR: When a piece of content is loaded, a dialog prompts the user to choose which (if any) items already in the scene should be removed if there is an item of matching content type.
 */
 	
-static ASK_WHEN_MATCHING;
+	static ASK_WHEN_MATCHING;
 	/**
  * @description Resets all replace data to default values, excluding replace mode.
 */
-	static clearReplaceData() {
+	clearReplaceData() {
+	
+	}
+	/**
+ * @description Performs all the necessary steps to remove content marked for replacement.
+*/
+	doReplace() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNewContentPath() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNewContentType() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getReplaceMode() {
+	
+	}
+	/**
+ * @description Performs all the necessary initialization for doing content replacement when the given file will be loaded, using items attached to baseNode as potential items to replace.
+*/
+	initReplaceForContentLoad(path:String, baseNode:DzNode):String {
+	
+	}
+	/**
+ * @description Removes all nodes in the replace list from the scene.
+*/
+	removeReplaceNodes() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	setNewContentPath(contentPath:String):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	setNewContentType(contentType:String):String {
+	
+	}
+	/**
+ * @description Sets the content replace mode.
+*/
+	setReplaceMode(mode:ContentReplaceMode):ContentReplaceMode {
+	
+	}
+	/**
+ * @description Updates the replace list to contain all items that should be removed during content load. If the replace mode is ALWAYS_REPLACE, the list will contain all nodes attached (following, parented, etc.) to baseNode whose type matches the current "New Content Type" (as set through setNewContentType()). If the replace mode is ASK_TO_REPLACE, a dialog will allow the user to select what nodes should be replaced.
+*/
+	updateReplaceNodes(baseNode:DzNode):DzNode {
 	
 	}
 
@@ -5547,25 +6782,25 @@ static ASK_WHEN_MATCHING;
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/controller_dz}*/
 class DzController extends DzBase {
 	/**
- * @description Has no effect on the property
+ * @description ENUMERATOR: Has no effect on the property
 */
 	
-static None;
+	static None;
 	/**
- * @description Uses the current value of the property to calculate the result
+ * @description ENUMERATOR: Uses the current value of the property to calculate the result
 */
 	
-static Additive;
+	static Additive;
 	/**
- * @description Ignores the current value of the property, and calculates the result from unrelated factors.
+ * @description ENUMERATOR: Ignores the current value of the property, and calculates the result from unrelated factors.
 */
 	
-static Replace;
+	static Replace;
 	/**
  * @description TODO:
 Add description.
 */
-	static getOwner() {
+	getOwner() {
 	
 	}
 
@@ -5584,7 +6819,7 @@ class DzCr2Exporter extends DzExporter {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -5598,7 +6833,7 @@ class DzCustomData extends DzBase {
 	/**
  * @description Return Value:
 */
-	static isPersistent() {
+	isPersistent() {
 	
 	}
 
@@ -5620,7 +6855,7 @@ class DzDateTimeEdit extends DzWidget {
 	/**
  * @description Creates a date time edit widget as a child of the given parent widget.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -5634,7 +6869,7 @@ class DzDefaultMaterial extends DzMaterial, DzRefCountedItem {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -5642,6 +6877,684 @@ class DzDefaultMaterial extends DzMaterial, DzRefCountedItem {
  * @description Return Value:
 */
 	getAmbientColor() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getAmbientColorControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getAmbientColorMap() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getAmbientStrength() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getAmbientStrengthControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getAmbientValueMap() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getBumpControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getBumpMap() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getBumpMax() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getBumpMaxControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getBumpMin() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getBumpMinControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getBumpStrength() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDiffuseColorControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDiffuseStrength() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDiffuseStrengthControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDiffuseValueMap() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDisplacementControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDisplacementMap() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDisplacementMax() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDisplacementMaxControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDisplacementMin() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDisplacementMinControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDisplacementStrength() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getGlossinessControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getGlossinessStrength() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getGlossinessValueMap() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getHorizontalOffset() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getHorizontalOffsetControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getHorizontalTiles() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getHorizontalTilesControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getIndexOfRefraction() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getIndexOfRefractionControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getMultThroughOpacityControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNormalValueMap() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNormalValueMapControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getOpacityControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getReflectionColor() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getReflectionColorControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getReflectionMap() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getReflectionStrength() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getReflectionStrengthControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getReflectionValueMap() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRefractionColor() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRefractionColorControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRefractionColorMap() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRefractionStrength() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRefractionStrengthControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRefractionValueMap() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getScatterColor() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getScatterColorControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getScatterColorMap() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSheenColor() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSheenColorControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSheenColorMap() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSpecularColor() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSpecularColorControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSpecularColorMap() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSpecularStrength() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSpecularStrengthControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSpecularValueMap() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSurfaceType() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSurfaceTypeControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getThickness() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getThicknessControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getThicknessValueMap() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getVerticalOffset() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getVerticalOffsetControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getVerticalTiles() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getVerticalTilesControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isMultThroughOpacity() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	needsTangentSpaceParams() {
+	
+	}
+	/**
+ * @description Set the ambient color for this material.
+*/
+	setAmbientColor(color:Color):Color {
+	
+	}
+	/**
+ * @description Set the ambient color map for this material.
+*/
+	setAmbientColorMap(img:DzTexture):DzTexture {
+	
+	}
+	/**
+ * @description Set the ambient strength for this material.
+*/
+	setAmbientStrength(val:Number):Number {
+	
+	}
+	/**
+ * @description Set the ambient strength map for this material.
+*/
+	setAmbientValueMap(img:DzTexture):DzTexture {
+	
+	}
+	/**
+ * @description Set the map for the bump strength channel.
+*/
+	setBumpMap(img:DzTexture):DzTexture {
+	
+	}
+	/**
+ * @description Set the maximum bump for this material.
+*/
+	setBumpMax(val:Number):Number {
+	
+	}
+	/**
+ * @description Set the minimum bump for this material.
+*/
+	setBumpMin(val:Number):Number {
+	
+	}
+	/**
+ * @description Set the bump strength for this material.
+*/
+	setBumpStrength(val:Number):Number {
+	
+	}
+	/**
+ * @description Set the diffuse strength for this material.
+*/
+	setDiffuseStrength(val:Number):Number {
+	
+	}
+	/**
+ * @description Set the diffuse strength map for this material.
+*/
+	setDiffuseValueMap(img:DzTexture):DzTexture {
+	
+	}
+	/**
+ * @description Set the displacement map for this material.
+*/
+	setDisplacementMap(img:DzTexture):DzTexture {
+	
+	}
+	/**
+ * @description Set the maximum displacement for this material.
+*/
+	setDisplacementMax(val:Number):Number {
+	
+	}
+	/**
+ * @description Set the minimum displacement for this material.
+*/
+	setDisplacementMin(val:Number):Number {
+	
+	}
+	/**
+ * @description Set the displacement strength for this material.
+*/
+	setDisplacementStrength(val:Number):Number {
+	
+	}
+	/**
+ * @description Set glossiness for this material.
+*/
+	setGlossinessStrength(size:Number):Number {
+	
+	}
+	/**
+ * @description Set glossiness value map for this material.
+*/
+	setGlossinessValueMap(img:DzTexture):DzTexture {
+	
+	}
+	/**
+ * @description Set the horizontal offset for the material
+*/
+	setHorizontalOffset(offset:Number):Number {
+	
+	}
+	/**
+ * @description Set the horizontal tiling for the material
+*/
+	setHorizontalTiles(tiles:Number):Number {
+	
+	}
+	/**
+ * @description Set the index of refraction for this material.
+*/
+	setIndexOfRefraction(val:Number):Number {
+	
+	}
+	/**
+ * @description Set the multiply through opacity parameter. If true, Specular highlights are multiplied through the opacity of the material (i.e. a transparent material will not show specular highlights). If false, specular highlights can contribute to the local opacity of the material (i.e. transparent objects show highlights)
+*/
+	setMultThroughOpacity(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Set the normal map for this material.
+*/
+	setNormalValueMap(img:DzTexture):DzTexture {
+	
+	}
+	/**
+ * @description Set the reflection color for this material.
+*/
+	setReflectionColor(color:Color):Color {
+	
+	}
+	/**
+ * @description Set the reflection map for this material.
+*/
+	setReflectionMap(img:DzTexture):DzTexture {
+	
+	}
+	/**
+ * @description Set the reflection strength for this material.
+*/
+	setReflectionStrength(val:Number):Number {
+	
+	}
+	/**
+ * @description Set reflection strength map for this material.
+*/
+	setReflectionValueMap(img:DzTexture):DzTexture {
+	
+	}
+	/**
+ * @description Set the refraction color for this material.
+*/
+	setRefractionColor(color:Color):Color {
+	
+	}
+	/**
+ * @description Set the refraction color map for this material.
+*/
+	setRefractionColorMap(img:DzTexture):DzTexture {
+	
+	}
+	/**
+ * @description Set the refraction strength for this material.
+*/
+	setRefractionStrength(val:Number):Number {
+	
+	}
+	/**
+ * @description Set the refraction strength map for this material.
+*/
+	setRefractionValueMap(img:DzTexture):DzTexture {
+	
+	}
+	/**
+ * @description Set the scatter color for this material.
+*/
+	setScatterColor(color:Color):Color {
+	
+	}
+	/**
+ * @description Set the scatter color map for this material.
+*/
+	setScatterColorMap(DzTexture):DzTexture {
+	
+	}
+	/**
+ * @description Set the sheen color for this material.
+*/
+	setSheenColor(color:Color):Color {
+	
+	}
+	/**
+ * @description Set the sheen color map for this material.
+*/
+	setSheenColorMap(DzTexture):DzTexture {
+	
+	}
+	/**
+ * @description Set base specular color for this material.
+*/
+	setSpecularColor(color:Color):Color {
+	
+	}
+	/**
+ * @description Set the specular color map for this material.
+*/
+	setSpecularColorMap(img:DzTexture):DzTexture {
+	
+	}
+	/**
+ * @description Set base specular strength for this material.
+*/
+	setSpecularStrength(size:Number):Number {
+	
+	}
+	/**
+ * @description Set specular strength map for this material.
+*/
+	setSpecularValueMap(img:DzTexture):DzTexture {
+	
+	}
+	/**
+ * @description Set the surface type for this material.
+*/
+	setSurfaceType(val:Number):Number {
+	
+	}
+	/**
+ * @description Set the refraction strength for this material.
+*/
+	setThickness(Number):Number {
+	
+	}
+	/**
+ * @description Set the thickness map for this material.
+*/
+	setThicknessValueMap(DzTexture):DzTexture {
+	
+	}
+	/**
+ * @description Set the vertical offset for the material
+*/
+	setVerticalOffset(offset:Number):Number {
+	
+	}
+	/**
+ * @description Set the vertical tiling for the material
+*/
+	setVerticalTiles(tiles:Number):Number {
 	
 	}
 
@@ -5653,7 +7566,7 @@ class DzDelightRenderer extends DzRenderer {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -5670,9 +7583,9 @@ Add description.
  * @classdesc This pages exists in order to indicate the DAZScript accessible properties and signals of the Qt native QDesktopWidget class.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/desktopwidget_q}*/
 class QDesktopWidget extends QWidget {
-	static primaryScreen:Number;
-	static screenCount:Number;
-	static virtualDesktop:Boolean;
+	primaryScreen:Number;
+	screenCount:Number;
+	virtualDesktop:Boolean;
 
 }
 /**
@@ -5683,7 +7596,31 @@ class DzDevice extends QObject {
 	/**
  * @description Parameter(s):
 */
-	static getDefaultSettings(settings:DzSettings):DzSettings {
+	getDefaultSettings(settings:DzSettings):DzSettings {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDescription() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDeviceName() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getSettings(settings:DzSettings):DzSettings {
+	
+	}
+	/**
+ * @description Changes the current settings for the device.
+*/
+	setSettings(settings:DzSettings):DzSettings {
 	
 	}
 
@@ -5696,7 +7633,13 @@ class DzDeviceMgr extends QObject {
 	/**
  * @description Parameter(s):
 */
-	static getDevice(which:Number):DzDevice {
+	getDevice(which:Number):DzDevice {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumDevices() {
 	
 	}
 
@@ -5708,7 +7651,7 @@ class DzDForm extends DzNode {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -5716,6 +7659,90 @@ class DzDForm extends DzNode {
  * @description Adds the effect of this DForm to the given node
 */
 	applyToNode(node:DzNode):DzNode {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getAvatarScale() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getBase() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getGradientMax() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getGradientMin() {
+	
+	}
+	/**
+ * @description Gets the ith Modifier of the DForm. The index is zero based. Can be used with getNumTargets to iterate over all the DForm Modifiers.
+*/
+	getModifier(index:Number):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumModifiers() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getOpacity() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getZone() {
+	
+	}
+	/**
+ * @description Sets the avatar scale factor of the DForm representation
+*/
+	setAvatarScale(val:Number):Number {
+	
+	}
+	/**
+ * @description Sets the Base for this DForm.
+*/
+	setBase(base:DzDFormBase):DzDFormBase {
+	
+	}
+	/**
+ * @description Sets the Color used in the gradient for weights at the maximum end of the scale
+*/
+	setGradientMax(color:Color):Color {
+	
+	}
+	/**
+ * @description Sets the Color used in the gradient for weights at the minimum end of the scale
+*/
+	setGradientMin(color:Color):Color {
+	
+	}
+	/**
+ * @description Sets the opacity of the DForm representation
+*/
+	setOpacity(val:Number):Number {
+	
+	}
+	/**
+ * @description Sets the Zone for this DForm.
+*/
+	setZone(zone:DzDFormZone):DzDFormZone {
 	
 	}
 
@@ -5734,7 +7761,7 @@ class DzDFormAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -5759,7 +7786,7 @@ class DzDFormBase extends DzNode {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -5790,7 +7817,7 @@ class DzDFormZone extends DzNode {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -5798,6 +7825,12 @@ class DzDFormZone extends DzNode {
  * @description Returns the DForm for the Zone.
 */
 	getDForm() {
+	
+	}
+	/**
+ * @description Returns the spline used to compute the falloff for the Zone.
+*/
+	getSpline() {
 	
 	}
 
@@ -5819,7 +7852,7 @@ class DzDial extends DzWidget {
 	/**
  * @description Creates a dial widget as a child of the given parent widget.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -5835,7 +7868,7 @@ class DzDialog extends DzWidget {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor(parent=undefined:QWidget) {
 	
 	}
@@ -5900,180 +7933,282 @@ class DzDialog extends DzWidget {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/dir_dz}*/
 class DzDir extends QObject {
 	/**
- * @description List directories that match the filters.
+ * @description ENUMERATOR: List directories that match the filters.
 */
 	
-static Dirs;
+	static Dirs;
 	/**
- * @description List files that match the filters.
+ * @description ENUMERATOR: List files that match the filters.
 */
 	
-static Files;
+	static Files;
 	/**
- * @description List drives that match the filters.
+ * @description ENUMERATOR: List drives that match the filters.
 */
 	
-static Drives;
+	static Drives;
 	/**
- * @description Do not list symbolic links.
+ * @description ENUMERATOR: Do not list symbolic links.
 */
 	
-static NoSymLinks;
+	static NoSymLinks;
 	/**
- * @description List directories, files, drives and symbolic links.
+ * @description ENUMERATOR: List directories, files, drives and symbolic links.
 */
 	
-static AllEntries;
+	static AllEntries;
 	/**
- * @description List directories, files, drives and symbolic links.
+ * @description ENUMERATOR: List directories, files, drives and symbolic links.
 */
 	
-static All;
+	static All;
 	/**
- * @description Type Mask
+ * @description ENUMERATOR: Type Mask
 */
 	
-static TypeMask;
+	static TypeMask;
 	/**
- * @description List entries for which the application has read access. Needs to be combined with Dirs or Files.
+ * @description ENUMERATOR: List entries for which the application has read access. Needs to be combined with Dirs or Files.
 */
 	
-static Readable;
+	static Readable;
 	/**
- * @description List entries for which the application has write access. Needs to be combined with Dirs or Files.
+ * @description ENUMERATOR: List entries for which the application has write access. Needs to be combined with Dirs or Files.
 */
 	
-static Writable;
+	static Writable;
 	/**
- * @description List entries for which the application has execute access. Needs to be combined with Dirs or Files.
+ * @description ENUMERATOR: List entries for which the application has execute access. Needs to be combined with Dirs or Files.
 */
 	
-static Executable;
+	static Executable;
 	/**
- * @description Include Readable, Writable, and Executable entries
+ * @description ENUMERATOR: Include Readable, Writable, and Executable entries
 */
 	
-static PermissionMask;
+	static PermissionMask;
 	/**
- * @description Include Readable, Writable, and Executable entries
+ * @description ENUMERATOR: Include Readable, Writable, and Executable entries
 */
 	
-static RWEMask;
+	static RWEMask;
 	/**
- * @description Only list entries that have been modified.
+ * @description ENUMERATOR: Only list entries that have been modified.
 */
 	
-static Modified;
+	static Modified;
 	/**
- * @description List hidden entries.
+ * @description ENUMERATOR: List hidden entries.
 */
 	
-static Hidden;
+	static Hidden;
 	/**
- * @description List system entries.
+ * @description ENUMERATOR: List system entries.
 */
 	
-static System;
+	static System;
 	/**
- * @description Access mask
+ * @description ENUMERATOR: Access mask
 */
 	
-static AccessMask;
+	static AccessMask;
 	/**
- * @description List all directories; don't apply filters to directory names.
+ * @description ENUMERATOR: List all directories; don't apply filters to directory names.
 */
 	
-static AllDirs;
+	static AllDirs;
 	/**
- * @description The filter should be treated as case sensitive.
+ * @description ENUMERATOR: The filter should be treated as case sensitive.
 */
 	
-static CaseSensitive;
+	static CaseSensitive;
 	/**
- * @description Do not list the special entries '.' and '..'.
+ * @description ENUMERATOR: Do not list the special entries '.' and '..'.
 */
 	
-static NoDotAndDotDot;
+	static NoDotAndDotDot;
 	/**
- * @description Do not list the special entry '.'.
+ * @description ENUMERATOR: Do not list the special entry '.'.
 */
 	
-static NoDot;
+	static NoDot;
 	/**
- * @description Do not list the special entry '..'.
+ * @description ENUMERATOR: Do not list the special entry '..'.
 */
 	
-static NoDotDot;
+	static NoDotDot;
 	/**
- * @description Do not filter.
+ * @description ENUMERATOR: Do not filter.
 */
 	
-static NoFilter;
+	static NoFilter;
 	/**
- * @description Sort by name.
+ * @description ENUMERATOR: Sort by name.
 */
 	
-static Name;
+	static Name;
 	/**
- * @description Sort by time (modification time).
+ * @description ENUMERATOR: Sort by time (modification time).
 */
 	
-static Time;
+	static Time;
 	/**
- * @description Sort by size.
+ * @description ENUMERATOR: Sort by size.
 */
 	
-static Size;
+	static Size;
 	/**
- * @description Do not sort.
+ * @description ENUMERATOR: Do not sort.
 */
 	
-static Unsorted;
+	static Unsorted;
 	/**
- * @description Mask for Sort by
+ * @description ENUMERATOR: Mask for Sort by
 */
 	
-static SortByMask;
+	static SortByMask;
 	/**
- * @description Put the directories first, then the files.
+ * @description ENUMERATOR: Put the directories first, then the files.
 */
 	
-static DirsFirst;
+	static DirsFirst;
 	/**
- * @description Reverse the sort order.
+ * @description ENUMERATOR: Reverse the sort order.
 */
 	
-static Reversed;
+	static Reversed;
 	/**
- * @description Sort case-insensitively.
+ * @description ENUMERATOR: Sort case-insensitively.
 */
 	
-static IgnoreCase;
+	static IgnoreCase;
 	/**
- * @description Put the files first, then the directories.
+ * @description ENUMERATOR: Put the files first, then the directories.
 */
 	
-static DirsLast;
+	static DirsLast;
 	/**
- * @description Sort items appropriately using the current locale settings.
+ * @description ENUMERATOR: Sort items appropriately using the current locale settings.
 */
 	
-static LocaleAware;
+	static LocaleAware;
 	/**
- * @description Sort by file type (extension).
+ * @description ENUMERATOR: Sort by file type (extension).
 */
 	
-static Type;
+	static Type;
 	/**
- * @description Not sorted by default.
+ * @description ENUMERATOR: Not sorted by default.
 */
 	
-static NoSort;
+	static NoSort;
 	/**
  * @description Creates a directory object with the given path.
  * @constructor
-*/
+*/;
 	constructor(path:String) {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	static cleanPath(path:String):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	current() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	currentPath() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	static fromNativeSeparators(pathName:String):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	home() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	homePath() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	static isAbsolutePath(path:String):Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	static isRelativePath(path:String):Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	static match(filter:String, fileName:String):Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	static match(filters:Array, fileName:String):Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	root() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	rootPath() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	separator() {
+	
+	}
+	/**
+ * @description Sets the application's current working directory to path.
+*/
+	static setCurrent(path:String):Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	temp() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	tempPath() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	static toNativeSeparators(pathName:String):String {
 	
 	}
 	/**
@@ -6346,34 +8481,34 @@ Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/distantlight_dz}*/
 class DzDistantLight extends DzLight {
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static Point;
+	static Point;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static Rectangle;
+	static Rectangle;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static Disc;
+	static Disc;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static Sphere;
+	static Sphere;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static Cylinder;
+	static Cylinder;
 	/**
  * @description Default Constructor. Creates a new distant light.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -6381,6 +8516,198 @@ static Cylinder;
  * @description Return Value:
 */
 	getDiffuseColor() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDiffuseColorControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getFarClippingPlane() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getFlux() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getIlluminationControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getIntensity() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getIntensityControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getIntensityScale() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getIntensityScaleControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLightFluxControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLightGeometry() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLightGeometryControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLightHeight() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLightHeightControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLightPortalControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLightTempature() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLightTemperatureControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLightTwoSided() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLightTwoSidedControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLightWidth() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLightWidthControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNearClippingPlane() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPhotometricModeControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRenderEmitterControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getShadowBiasControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getShadowColorControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getShadowIntensityControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getShadowSoftnessControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getWSDirection() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isLightPortal() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isOn() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	photometricMode() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	renderEmitter() {
 	
 	}
 
@@ -6393,7 +8720,13 @@ class DzDockArea extends QWidget {
 	/**
  * @description Parameter(s):
 */
-	static getColumn(which:Number):DzDockAreaColumn {
+	getColumn(which:Number):DzDockAreaColumn {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumColumns() {
 	
 	}
 
@@ -6406,7 +8739,61 @@ class DzDockAreaColumn extends QWidget {
 	/**
  * @description Return Value:
 */
-	static depth() {
+	depth() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumWindows() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPreferredDepth() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getWindow(which:Number):DzDockWindow {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isMinimized() {
+	
+	}
+	/**
+ * @description Minimizes the column, if it is not already. The column shrinks so that only its resizing handle is visible.
+*/
+	minimize() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	minimumDepth() {
+	
+	}
+	/**
+ * @description Restores the column to its previous depth if the column is currently minimized.
+*/
+	restore() {
+	
+	}
+	/**
+ * @description Sets the 'depth' of the column.
+*/
+	setPreferredDepth(depth:Number):Number {
+	
+	}
+	/**
+ * @description Toggles whether this column is minimized - if minimized, the column restores itself, if full size the column becomes minimized.
+*/
+	toggleMinimized() {
 	
 	}
 
@@ -6422,34 +8809,58 @@ See Also:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/dockbar_dz}*/
 class DzDockBar {
 	/**
- * @description The dock area at the top of a DzActivityLayout.
+ * @description ENUMERATOR: The dock area at the top of a DzActivityLayout.
 */
 	
-static ToolBarTop;
+	static ToolBarTop;
 	/**
- * @description The dock area at the bottom of a DzActivityLayout.
+ * @description ENUMERATOR: The dock area at the bottom of a DzActivityLayout.
 */
 	
-static ToolBarBottom;
+	static ToolBarBottom;
 	/**
- * @description The dock area on the left side of a DzActivityLayout.
+ * @description ENUMERATOR: The dock area on the left side of a DzActivityLayout.
 */
 	
-static ToolBarLeft;
+	static ToolBarLeft;
 	/**
- * @description The dock area on the right side of a DzActivityLayout.
+ * @description ENUMERATOR: The dock area on the right side of a DzActivityLayout.
 */
 	
-static ToolBarRight;
+	static ToolBarRight;
 	/**
- * @description No dock area. The bar cannot be docked.
+ * @description ENUMERATOR: No dock area. The bar cannot be docked.
 */
 	
-static NoToolBarArea;
+	static NoToolBarArea;
 	/**
  * @description Docks the bar in the specified area on the DzActivityLayout, and shows the bar if it is hidden.
 */
-	static dock(area:DzDockBar.DockArea, beforeBar:String):DockArea {
+	dock(area:DzDockBar.DockArea, beforeBar:String):DockArea {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	dockedArea() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isClosed() {
+	
+	}
+	/**
+ * @description Sets whether the bar is closed (not displayed), or open (displayed).
+*/
+	setClosed(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Undocks the bar, moves it to the given global coordinates, and shows the bar if it is hidden.
+*/
+	undock(pos:Point):Point {
 	
 	}
 
@@ -6462,7 +8873,145 @@ class DzDockWindow {
 	/**
  * @description Re-Docks this window in the last area it was docked in.
 */
-	static dock() {
+	dock() {
+	
+	}
+	/**
+ * @description Docks this window in the given area.
+*/
+	dock(area:DzDockArea, newColumn:Boolean):DzDockArea {
+	
+	}
+	/**
+ * @description Docks this window in the given area in the given column number.
+*/
+	dock(area:DzDockArea, columnNum:Number):DzDockArea {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getArea() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getColumnDimension() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getColumnNum() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLastSize() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLength() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getMinimumLength() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPreferredLength() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isDocked() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isLengthFixed() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isMinimized() {
+	
+	}
+	/**
+ * @description Sets this window to a minimized state.
+*/
+	minimize() {
+	
+	}
+	/**
+ * @description Returns this window to its former length if it is minimized.
+*/
+	restore() {
+	
+	}
+	/**
+ * @description Store the width (or height) of the column (or row) that the window is docked in.
+*/
+	setColumnDimension(dimension:Number):Number {
+	
+	}
+	/**
+ * @description Sets the column of the dock area that this window was last docked in.
+*/
+	setColumnNum(columnNum:Number):Number {
+	
+	}
+	/**
+ * @description Sets the length for this window while docked.
+*/
+	setLength(length:Number):Number {
+	
+	}
+	/**
+ * @description Sets the preferred length for this window while docked.
+*/
+	setPreferredLength(length:Number):Number {
+	
+	}
+	/**
+ * @description Sets the visibility of the resizing handles.
+*/
+	setResizeHandlesVisible(yesNo:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the visibility of the title bar.
+*/
+	setTitleBarVisible(yesNo:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Toggles this window between its docked and undocked state. Calls dock() if this window is undocked, or undock() if it is docked.
+*/
+	toggleDock() {
+	
+	}
+	/**
+ * @description Toggles this window between the minimized and restored state.
+*/
+	toggleMinimized() {
+	
+	}
+	/**
+ * @description Undocks this window.
+*/
+	undock() {
 	
 	}
 
@@ -6476,7 +9025,7 @@ class DzDomAttr extends DzDomNode {
 	/**
  * @description Default constructor. Typically, you will not construct these directly, but will call DzDomElement.setAttribute() or DzDomDocument.createAttribute() to create a new attribute node as a member of an existing element or document.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -6501,7 +9050,7 @@ class DzDomBasicNode extends DzDomNode {
 	/**
  * @description Default constructor
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -6514,7 +9063,7 @@ class DzDomCDATASection extends DzDomText {
 	/**
  * @description Default constructor. Typically, you will not construct these directly, but will call DzDomDocument.createCDATASection() to create a new CDATA node as a member of a document.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -6529,7 +9078,7 @@ class DzDomCharacterData extends DzDomNode {
 	/**
  * @description Default constructor. Typically, you will not construct these directly, but will call DzDomDocument.createText() or DzDomDocument.createCDATASection() to create a new character data node as a member of a document.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -6572,7 +9121,7 @@ class DzDomComment extends DzDomCharacterData {
 	/**
  * @description Default constructor. Typically, you will not construct these directly, but will call DzDomDocument.createComment() to create a new comment node as a member of a document.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -6604,14 +9153,117 @@ class DzDomDocument extends DzDomNode {
 	/**
  * @description Default constructor
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Overloaded constructor. Loads the given file name as the content for this document.
+ * @constructor
+*/;
+	constructor(filename:String) {
 	
 	}
 	/**
  * @description Return Value:
 */
 	createAttribute(name:String):DzDomNode {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	createAttributeNS(nsURI:String, qName:String):DzDomNode {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	createCDATASection(value:String):DzDomNode {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	createComment(value:String):DzDomNode {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	createDocumentFragment() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	createElement(tagName:String):DzDomNode {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	createElementNS(nsURI:String, qName:String):DzDomNode {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	createEntityReference(name:String):DzDomNode {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	createProcessingInstruction(target:String, data:String):DzDomNode {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	createTextNode(value:String):DzDomNode {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	doctype() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	elementById(id:String):DzDomNode {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	importNode(node:DzDomNode, deep:Boolean):DzDomNode {
+	
+	}
+	/**
+ * @description Sets the content of the document by reading the file with the given string.
+*/
+	loadContent(filename:String):Boolean {
+	
+	}
+	/**
+ * @description Saves the contents of the document to the file with the given name.
+*/
+	saveContent(filename:String):Boolean {
+	
+	}
+	/**
+ * @description Sets the content of the document from the given string.
+*/
+	setContent(text:String):Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	toString() {
 	
 	}
 
@@ -6623,7 +9275,7 @@ class DzDomDocumentFragment extends DzDomNode {
 	/**
  * @description Default constructor. Typically, you will not construct these directly, but will call DzDomDocument.createDocumentFragment() to create a new fragment as a member of a document.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -6640,7 +9292,7 @@ class DzDomDocumentType extends DzDomNode {
 	/**
  * @description Default constructor
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -6654,7 +9306,7 @@ class DzDomElement extends DzDomNode {
 	/**
  * @description Default constructor. Typically, you will not construct these directly, but will call DzDomDocument.createElement() to create a new element node as a member of a document.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -6662,6 +9314,84 @@ class DzDomElement extends DzDomNode {
  * @description Return Value:
 */
 	attribute(name:String):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	attribute(name:String, defValue:String):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	attributeNode(name:String):DzDomNode {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	attributeNodeNS(nsURI:String, localName:String):DzDomNode {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	attributeNS(nsURI:String, localName:String, defValue:String):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	hasAttribute(name:String):Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	hasAttributeNS(nsURI:String, localName:String):Boolean {
+	
+	}
+	/**
+ * @description Removes the attribute called name.
+*/
+	removeAttribute(name:String):String {
+	
+	}
+	/**
+ * @description Removes oldAttr from the element.
+*/
+	removeAttributeNode(oldAttr:DzDomNode):DzDomNode {
+	
+	}
+	/**
+ * @description Removes the attribute called name in the  namespace.
+*/
+	removeAttributeNS(nsURI:String, localName:String):String {
+	
+	}
+	/**
+ * @description Adds an attribute called name with value. If an attribute with the given name already exists, it value is set to value.
+*/
+	setAttribute(name:String, value:String):String {
+	
+	}
+	/**
+ * @description Adds newAttr to this element. If an attribute with the same name already exists, it is replaced with the new one.
+*/
+	setAttributeNode(newAttr:DzDomNode):DzDomNode {
+	
+	}
+	/**
+ * @description Adds newAttr to this element. If an attribute with the same name already exists, it is replaced with the new one.
+*/
+	setAttributeNodeNS(newAttr:DzDomNode):DzDomNode {
+	
+	}
+	/**
+ * @description Adds an attribute called qName in the nsURI namespace with value. If an attribute with the given name already exists, it value is set to value.
+*/
+	setAttributeNS(nsURI:String, qName:String, value:String):String {
 	
 	}
 
@@ -6676,7 +9406,7 @@ class DzDomEntity extends DzDomNode {
 	/**
  * @description Default constructor
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -6689,7 +9419,7 @@ class DzDomEntityReference extends DzDomNode {
 	/**
  * @description Default constructor. Typically, you will not construct these directly, but will call DzDomDocument.createEntityReference() to create a new entity reference node as a member of a document.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -6700,265 +9430,265 @@ class DzDomEntityReference extends DzDomNode {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/domnode_dz}*/
 class DzDomNode extends QObject {
 	/**
- * @description A DOM Element.  See Also: DzDomElement
+ * @description ENUMERATOR: A DOM Element.  See Also: DzDomElement
 */
 	
-static ElementNode;
+	static ElementNode;
 	/**
- * @description A DOM Attribute.  See Also: DzDomAttr
+ * @description ENUMERATOR: A DOM Attribute.  See Also: DzDomAttr
 */
 	
-static AttributeNode;
+	static AttributeNode;
 	/**
- * @description Plain Text in the DOM.  See Also: DzDomText
+ * @description ENUMERATOR: Plain Text in the DOM.  See Also: DzDomText
 */
 	
-static TextNode;
+	static TextNode;
 	/**
- * @description Character DATA node in the DOM.  See Also: DzDomCDATASection
+ * @description ENUMERATOR: Character DATA node in the DOM.  See Also: DzDomCDATASection
 */
 	
-static CDATASectionNode;
+	static CDATASectionNode;
 	/**
- * @description A Reference to a DOM Entity.  See Also: DzDomEntityReference
+ * @description ENUMERATOR: A Reference to a DOM Entity.  See Also: DzDomEntityReference
 */
 	
-static EntityReferenceNode;
+	static EntityReferenceNode;
 	/**
- * @description A DOM Entity.  See Also: DzDomEntity
+ * @description ENUMERATOR: A DOM Entity.  See Also: DzDomEntity
 */
 	
-static EntityNode;
+	static EntityNode;
 	/**
- * @description A DOM Processing Instruction.  See Also: DzDomProcessingInstruction
+ * @description ENUMERATOR: A DOM Processing Instruction.  See Also: DzDomProcessingInstruction
 */
 	
-static ProcessingInstructionNode;
+	static ProcessingInstructionNode;
 	/**
- * @description A DOM Comment.  See Also: DzDomComment
+ * @description ENUMERATOR: A DOM Comment.  See Also: DzDomComment
 */
 	
-static CommentNode;
+	static CommentNode;
 	/**
- * @description A DOM Document.  See Also: DzDomDocument
+ * @description ENUMERATOR: A DOM Document.  See Also: DzDomDocument
 */
 	
-static DocumentNode;
+	static DocumentNode;
 	/**
- * @description A DOM Document Type.  See Also: DzDomDocumentType
+ * @description ENUMERATOR: A DOM Document Type.  See Also: DzDomDocumentType
 */
 	
-static DocumentTypeNode;
+	static DocumentTypeNode;
 	/**
- * @description A DOM Document Fragment.  See Also: DzDomDocumentFragment
+ * @description ENUMERATOR: A DOM Document Fragment.  See Also: DzDomDocumentFragment
 */
 	
-static DocumentFragmentNode;
+	static DocumentFragmentNode;
 	/**
- * @description A DOM Notation.  See Also: DzDomNotation
+ * @description ENUMERATOR: A DOM Notation.  See Also: DzDomNotation
 */
 	
-static NotationNode;
+	static NotationNode;
 	/**
- * @description A basic node.  See Also: DzDomBasicNode
+ * @description ENUMERATOR: A basic node.  See Also: DzDomBasicNode
 */
 	
-static BaseNode;
+	static BaseNode;
 	/**
- * @description A Character Data node.  See Also: DzDomCharacterData
+ * @description ENUMERATOR: A Character Data node.  See Also: DzDomCharacterData
 */
 	
-static CharacterDataNode;
+	static CharacterDataNode;
 	/**
  * @description Appends child to the end of this node's child list.
 */
-	static appendChild(child:DzDomNode):void {
+	appendChild(child:DzDomNode):void {
 	
 	}
 	/**
  * @description Converts the node into an invalid (Null) node. Its type and contents are cleared.
 */
-	static clear() {
+	clear() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static cloneNode(deep:Boolean):Boolean {
+	cloneNode(deep:Boolean):Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static firstChild() {
+	firstChild() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static hasAttributes() {
+	hasAttributes() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static hasChildNodes() {
+	hasChildNodes() {
 	
 	}
 	/**
  * @description Inserts newChild into this node's child list following refChild.
 */
-	static insertAfter(newChild:DzDomNode, refChild:DzDomNode):void {
+	insertAfter(newChild:DzDomNode, refChild:DzDomNode):void {
 	
 	}
 	/**
  * @description Inserts newChild into this node's child list in front of refChild.
 */
-	static insertBefore(newChild:DzDomNode, refChild:DzDomNode):void {
+	insertBefore(newChild:DzDomNode, refChild:DzDomNode):void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isAttr() {
+	isAttr() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isCDATASection() {
+	isCDATASection() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isCharacterData() {
+	isCharacterData() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isComment() {
+	isComment() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isDocument() {
+	isDocument() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isDocumentFragment() {
+	isDocumentFragment() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isDocumentType() {
+	isDocumentType() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isElement() {
+	isElement() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isEntity() {
+	isEntity() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isEntityReference() {
+	isEntityReference() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isNotation() {
+	isNotation() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isNull() {
+	isNull() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isProcessingInstruction() {
+	isProcessingInstruction() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isSupported(feature:String, version:String):Boolean {
+	isSupported(feature:String, version:String):Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isText() {
+	isText() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static lastChild() {
+	lastChild() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static namedItem(name:String):String {
+	namedItem(name:String):String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static nextSibling() {
+	nextSibling() {
 	
 	}
 	/**
  * @description Converts all the node's children into standard form (e.g. adjacent text nodes will be merged )
 */
-	static normalize() {
+	normalize() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static ownerDocument() {
+	ownerDocument() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static parentNode() {
+	parentNode() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static previousSibling() {
+	previousSibling() {
 	
 	}
 	/**
  * @description Removes oldChild from this node's child list.
 */
-	static removeChild(oldChild:DzDomNode):void {
+	removeChild(oldChild:DzDomNode):void {
 	
 	}
 	/**
  * @description Inserts newChild into this node's child list in place of refChild.
 */
-	static replaceChild(newChild:DzDomNode, oldChild:DzDomNode):void {
+	replaceChild(newChild:DzDomNode, oldChild:DzDomNode):void {
 	
 	}
 
@@ -6972,7 +9702,7 @@ class DzDomNotation extends DzDomNode {
 	/**
  * @description Default constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -6987,7 +9717,7 @@ class DzDomProcessingInstruction extends DzDomNode {
 	/**
  * @description Default constructor. Typically, you will not construct these directly, but will call DzDomDocument.createProcessingInstruction() to create a new processing instruction node as a member of a document.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -7000,7 +9730,7 @@ class DzDomText extends DzDomCharacterData {
 	/**
  * @description Default constructor. Typically, you will not construct these directly, but will call DzDomDocument.createText() to create a new text node as a member of a document.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -7018,99 +9748,99 @@ Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/drawstyle_dz}*/
 class DzDrawStyle extends DzBase {
 	/**
- * @description Draws unlit wire-frame bounding boxes
+ * @description ENUMERATOR: Draws unlit wire-frame bounding boxes
 */
 	
-static WireBox;
+	static WireBox;
 	/**
- * @description Draws smooth-shaded bounding boxes
+ * @description ENUMERATOR: Draws smooth-shaded bounding boxes
 */
 	
-static SolidBox;
+	static SolidBox;
 	/**
- * @description Draws unlit wire-frames
+ * @description ENUMERATOR: Draws unlit wire-frames
 */
 	
-static Wireframe;
+	static Wireframe;
 	/**
- * @description Draws lit wire-frames
+ * @description ENUMERATOR: Draws lit wire-frames
 */
 	
-static LitWireframe;
+	static LitWireframe;
 	/**
- * @description Draws unlit wire-frames, front geometry facing only
+ * @description ENUMERATOR: Draws unlit wire-frames, front geometry facing only
 */
 	
-static HiddenLine;
+	static HiddenLine;
 	/**
- * @description Draws lit smooth shaded objects with wireframes imposed
+ * @description ENUMERATOR: Draws lit smooth shaded objects with wireframes imposed
 */
 	
-static WireShaded;
+	static WireShaded;
 	/**
- * @description Draws lit smooth shaded objects
+ * @description ENUMERATOR: Draws lit smooth shaded objects
 */
 	
-static SmoothShaded;
+	static SmoothShaded;
 	/**
- * @description Draws lit smooth shaded objects with any texture/transparency maps applied and wireframes imposed
+ * @description ENUMERATOR: Draws lit smooth shaded objects with any texture/transparency maps applied and wireframes imposed
 */
 	
-static WireTextured;
+	static WireTextured;
 	/**
- * @description Draws lit smooth shaded objects with any texture/transparency maps applied
+ * @description ENUMERATOR: Draws lit smooth shaded objects with any texture/transparency maps applied
 */
 	
-static Textured;
+	static Textured;
 	/**
- * @description Draws lit smooth shaded objects with a GLSL shader applied
+ * @description ENUMERATOR: Draws lit smooth shaded objects with a GLSL shader applied
 */
 	
-static GLSLShader;
+	static GLSLShader;
 	/**
- * @description Draws unlit smooth shaded objects
+ * @description ENUMERATOR: Draws unlit smooth shaded objects
 */
 	
-static Unshaded;
+	static Unshaded;
 	/**
- * @description Special mode for using OpenGL to determine a selected object when the user clicks in the view
+ * @description ENUMERATOR: Special mode for using OpenGL to determine a selected object when the user clicks in the view
 */
 	
-static Picking;
+	static Picking;
 	/**
  * @description Return Value:
 */
-	static drawCues() {
+	drawCues() {
 	
 	}
 	/**
  * @description If the current shade style is not using lighting, this method will set the shade style to the nearest match that uses single-pass drawing and lighting.
 */
-	static forceUseLighting() {
+	forceUseLighting() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static pass() {
+	pass() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static selectionMapsEnabled() {
+	selectionMapsEnabled() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static shader() {
+	shader() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static shadeStyle() {
+	shadeStyle() {
 	
 	}
 
@@ -7123,76 +9853,76 @@ For complex arrangements you can nest instances of this class by specifying them
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/dynamicdividerwgt_dz}*/
 class DzDynamicDividerWgt extends DzWidget {
 	/**
- * @description Use the thick divider bar.
+ * @description ENUMERATOR: Use the thick divider bar.
 */
 	
-static BSFull;
+	static BSFull;
 	/**
- * @description Use the medium sized divider bar.
+ * @description ENUMERATOR: Use the medium sized divider bar.
 */
 	
-static BSSemi;
+	static BSSemi;
 	/**
- * @description Use the thin divider bar.
+ * @description ENUMERATOR: Use the thin divider bar.
 */
 	
-static BSThin;
+	static BSThin;
 	/**
- * @description Represents a horizontal divider bar (widgets are top and bottom).
+ * @description ENUMERATOR: Represents a horizontal divider bar (widgets are top and bottom).
 */
 	
-static DOHorizontal;
+	static DOHorizontal;
 	/**
- * @description Represents a vertical divider bar (widgets are left and right).
+ * @description ENUMERATOR: Represents a vertical divider bar (widgets are left and right).
 */
 	
-static DOVertical;
+	static DOVertical;
 	/**
- * @description Stretch the left (or top) widget when resizing.
+ * @description ENUMERATOR: Stretch the left (or top) widget when resizing.
 */
 	
-static RTStretchFirst;
+	static RTStretchFirst;
 	/**
- * @description Stretch the right (or bottom) widget when resizing.
+ * @description ENUMERATOR: Stretch the right (or bottom) widget when resizing.
 */
 	
-static RTStretchSecond;
+	static RTStretchSecond;
 	/**
- * @description Stretch both widgets equally when resizing.
+ * @description ENUMERATOR: Stretch both widgets equally when resizing.
 */
 	
-static RTStretchBoth;
+	static RTStretchBoth;
 	/**
- * @description References the widget to the left of the divider if the orientation is vertical or the widget to the top of the divider if the orientation is horizontal.
+ * @description ENUMERATOR: References the widget to the left of the divider if the orientation is vertical or the widget to the top of the divider if the orientation is horizontal.
 */
 	
-static WTLeftOrTop;
+	static WTLeftOrTop;
 	/**
- * @description References the widget to the right of the divider if the orientation is vertical or the widget to the bottom of the divider if the orientation is horizontal.
+ * @description ENUMERATOR: References the widget to the right of the divider if the orientation is vertical or the widget to the bottom of the divider if the orientation is horizontal.
 */
 	
-static WTRightOrBottom;
+	static WTRightOrBottom;
 	/**
- * @description References both widgets of the divider bar.
+ * @description ENUMERATOR: References both widgets of the divider bar.
 */
 	
-static WTBoth;
+	static WTBoth;
 	/**
- * @description References neither widget of the divider bar.
+ * @description ENUMERATOR: References neither widget of the divider bar.
 */
 	
-static WTNone;
+	static WTNone;
 	/**
  * @description Instantiates DzDynamicDividerWgt.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
 	/**
  * @description Instantiates DzDynamicDividerWgt.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget, firstChild:DzWidget, secondChild:DzWidget) {
 	
 	}
@@ -7261,7 +9991,7 @@ class DzEdge extends Object {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -7269,7 +9999,7 @@ class DzEdge extends Object {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor(vertex1:Number, vertex2:Number) {
 	
 	}
@@ -7277,7 +10007,7 @@ Add description.
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor(edge:DzEdge) {
 	
 	}
@@ -7302,11 +10032,359 @@ DzElement takes ownership of all properties added via addProperty(). Subclasses 
 DzElement also handles saving and loading of all properties. When DzElement loads a property from a file, it will delete any existing property of the same name and replace it with the new property read in - subclasses are responsible for updating any local references to properties whenever a file is loaded. The easiest and most reliable way to do this is for the subclass to write out and read back in any local pointers it maintains to properties. Another approach would be for the subclass to reimplement the postLoadFile() function and update its references by calling findProperty() to lookup the properties by name.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/element_dz}*/
 class DzElement extends DzBase {
-	static elementID:Number;
+	elementID:Number;
 	/**
  * @description Hang a new custom data item off of this element. Data items will be deleted when this element is deleted, so ownership of the data item is transferred to the element after this call. Do not attempt to delete the data item yourself unless you call removeDataItem() first.
 */
-	static addDataItem(item:DzElementData):DzError {
+	addDataItem(item:DzElementData):DzError {
+	
+	}
+	/**
+ * @description Add a new private property that will be available for connections or direct editing.
+*/
+	addPrivateProperty(prop:DzProperty):DzError {
+	
+	}
+	/**
+ * @description Add a new property. Adds a new property that will be available for connections or direct editing.
+*/
+	addProperty(prop:DzProperty):DzError {
+	
+	}
+	/**
+ * @description Begins an editing operation for this element - DzProperty.beginEdit() will be called for all properties belonging to this element.
+*/
+	beginEdit() {
+	
+	}
+	/**
+ * @description Cancels an editing operation for this element - DzProperty.cancelEdit() will be called for all properties belonging to this element.
+*/
+	cancelEdit() {
+	
+	}
+	/**
+ * @description Removes all animation keys on this object.
+*/
+	clearAllAnimData() {
+	
+	}
+	/**
+ * @description Clear animation keys in the currently active animation layer. Removes animation data on all animatible properties owned by this element over the given range.
+*/
+	clearAnimData(range:DzTimeRange):DzTimeRange {
+	
+	}
+	/**
+ * @description Matches the properties on this element to properties on the given element by name, and then copies the values of matching properties on source to the properties on this element.
+*/
+	copyFrom(source:DzElement):void {
+	
+	}
+	/**
+ * @description Copies the property values of the element to a 'clipboard' so that they may be saved and applied (copied) to another element - or to the same element.
+*/
+	copyToClipboard(contentTypes:Array):Array {
+	
+	}
+	/**
+ * @description Remove the the data item from this element and deletes it. Pointer is invalid after this call if DZ_NO_ERROR is returned.
+*/
+	deleteDataItem(item:DzElementData):DzError {
+	
+	}
+	/**
+ * @description Retrieve the user data item with the given ID, if one with that ID is attached to this element.
+*/
+	findDataItem(dataName:String):DzElementData {
+	
+	}
+	/**
+ * @description Searches for the first data item index.
+*/
+	findDataItemIndex(item:DzElementData):Number {
+	
+	}
+	/**
+ * @description Locate a matching property.
+*/
+	findMatchingProperty(srcProp:DzProperty):DzProperty {
+	
+	}
+	/**
+ * @description Locate a property by name.
+*/
+	findPrivateProperty(name:String):DzProperty {
+	
+	}
+	/**
+ * @description Locate a property by name.
+*/
+	findPrivateProperty(name:String, caseSensitive:Boolean):DzProperty {
+	
+	}
+	/**
+ * @description Locate a property by label.
+*/
+	findPrivatePropertyByLabel(label:String):DzProperty {
+	
+	}
+	/**
+ * @description Locate a property by label.
+*/
+	findPrivatePropertyByLabel(label:String, caseSensitive:Boolean):DzProperty {
+	
+	}
+	/**
+ * @description Locate a property by name.
+*/
+	findProperty(name:String):DzProperty {
+	
+	}
+	/**
+ * @description Locate a property by name.
+*/
+	findProperty(name:String, caseSensitive:Boolean):DzProperty {
+	
+	}
+	/**
+ * @description Locate a property by label.
+*/
+	findPropertyByLabel(label:String):DzProperty {
+	
+	}
+	/**
+ * @description Locate a property by label.
+*/
+	findPropertyByLabel(label:String, caseSensitive:Boolean):DzProperty {
+	
+	}
+	/**
+ * @description finishes an editing operation for this element - DzProperty.finishEdit() will be called for all properties belonging to this element.
+*/
+	finishEdit() {
+	
+	}
+	/**
+ * @description Populates the given settings object with the attributes of this element. If this settings object is not empty the save filters will save out this settings information in the preset.
+*/
+	getAttributes(settings:DzSettings):DzSettings {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getDataItem(index:Number):DzElementData {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDataItemList() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getElementChild(which:Number):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getElementParent() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLabel() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLoadScript() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumDataItems() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumElementChildren() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumPrivateProperties() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumProperties() {
+	
+	}
+	/**
+ * @description Get a property from this element's property list.
+*/
+	getPrivateProperty(index:Number):DzProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPrivatePropertyGroups() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPrivatePropertyList() {
+	
+	}
+	/**
+ * @description Get a property from this element's property list.
+*/
+	getProperty(index:Number):DzProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPropertyGroups() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPropertyList() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getUniqueDataItemName(dataName:String):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getUniquePrivatePropertyName(name:String):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getUniquePropertyName(name:String):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	inEdit() {
+	
+	}
+	/**
+ * @description Adds a new property that will be available for connections or direct editing.
+*/
+	insertPrivateProperty(index:Number, prop:DzProperty):DzError {
+	
+	}
+	/**
+ * @description Add a new property. Adds a new property that will be available for connections or direct editing.
+*/
+	insertProperty(index:Number, prop:DzProperty):DzError {
+	
+	}
+	/**
+ * @description Moves a data item to a new index.
+*/
+	moveDataItemToIndex(item:DzElementData, index:Number):DzError {
+	
+	}
+	/**
+ * @description Moves the given property from this element to newElement, if it can be removed. Properties can be specified as non-removable (e.g. the rotation channels of the DzNode class). Doing so makes it impossible to move that property to another element.
+*/
+	movePrivateProperty(prop:DzProperty, element:DzElement):DzError {
+	
+	}
+	/**
+ * @description Moves the given property from this element to newElement, if it can be removed. Properties can be specified as non-removable (e.g. the rotation channels of the DzNode class). Doing so makes it impossible to move that property to another element.
+*/
+	moveProperty(prop:DzProperty, element:DzElement):DzError {
+	
+	}
+	/**
+ * @description Remove the data item from this element.
+*/
+	removeDataItem(item:DzElementData):DzError {
+	
+	}
+	/**
+ * @description Removes the given property, if it can be removed. Properties can be specified as non-removable (e.g. the rotation channels of the DzNode class). Doing so makes it impossible to remove that property from the object.
+*/
+	removePrivateProperty(prop:DzProperty):DzError {
+	
+	}
+	/**
+ * @description Attempts to remove the named property. Fails if the property could not be found or could not be removed.
+*/
+	removePrivateProperty(name:String):DzError {
+	
+	}
+	/**
+ * @description Removes the given property, if it can be removed. Properties can be specified as non-removable (e.g. the rotation channels of the DzNode class). Doing so makes it impossible to remove that property from the object.
+*/
+	removeProperty(prop:DzProperty):DzError {
+	
+	}
+	/**
+ * @description Attempts to remove the named property. Fails if the property could not be found or could not be removed.
+*/
+	removeProperty(name:String):DzError {
+	
+	}
+	/**
+ * @description Sets attributes in the handed in settings and returns a pointer to an element set by these settings. The element returned may not be a new element or null if the settings are not correct. Default implementation returns this with no changes.
+*/
+	setAttributes(settings:DzSettings):DzSettings {
+	
+	}
+	/**
+ * @description Set the user-defined label that is displayed in the interface for this object.
+*/
+	setLabel(name:String):DzError {
+	
+	}
+	/**
+ * @description Sets the script that will be executed when this element is loaded from a file.
+*/
+	setLoadScript(script:DzScript):DzScript {
+	
+	}
+	/**
+ * @description Set the internal name of this object.
+*/
+	setName(name:String):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	shouldSortOnLoad() {
+	
+	}
+	/**
+ * @description Called to update any cached or display data for this object.
+*/
+	update() {
 	
 	}
 
@@ -7341,7 +10419,13 @@ class DzElementData extends DzCustomData {
 	/**
  * @description Parameter(s):
 */
-	static duplicate(owner:DzElement):DzElement {
+	duplicate(owner:DzElement):DzElement {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getOwner() {
 	
 	}
 
@@ -7369,7 +10453,7 @@ class DzElementPostLoadFileData extends DzElementData {
 	/**
  * @description Default constructor.
  * @constructor
-*/
+*/;
 	constructor(name:String, persistent=true:Boolean) {
 	
 	}
@@ -7377,6 +10461,12 @@ class DzElementPostLoadFileData extends DzElementData {
  * @description Return Value:
 */
 	getPostLoadFilePath() {
+	
+	}
+	/**
+ * @description Sets the file path of the file for this data item.
+*/
+	setPostLoadFilePath(script:String):String {
 	
 	}
 
@@ -7388,14 +10478,117 @@ class DzEnumProperty extends DzIntProperty {
 	/**
  * @description Default Constructor. Creates a non-animatable, non-user property.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Parameter(s):
+ * @constructor
+*/;
+	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean) {
 	
 	}
 	/**
  * @description Adds a string to the available choices for this property. Duplicates are not allowed.
 */
 	addItem(item:String, index:Number):Number {
+	
+	}
+	/**
+ * @description Searches the property for an item that matches the given string.
+*/
+	findItemString(str:String):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDefaultStringValue() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getItem(i:Number):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getKeyStringValue(i:Number):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumItems() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRawStringValue() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getRawStringValue(tm:DzTime):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getStringValue(tm:DzTime):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getStringValue() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getUniqueItemString(item:String):String {
+	
+	}
+	/**
+ * @description Removes all items and makes this property essentially invalid.
+*/
+	removeAllItems() {
+	
+	}
+	/**
+ * @description Removes the item at the given index.
+*/
+	removeItem(index:Number):Boolean {
+	
+	}
+	/**
+ * @description Replaces the item at the given index with the given string.
+*/
+	replaceItem(index:Number, item:String):Boolean {
+	
+	}
+	/**
+ * @description Sets the items for this property.
+*/
+	setItems(items:Array):Array {
+	
+	}
+	/**
+ * @description Sets the current value of the property to the index of the item that matches the given string.
+*/
+	setValueFromString(str:String):Boolean {
+	
+	}
+	/**
+ * @description Sets the value of the property at the given time to the index of the item that matches the given string.
+*/
+	setValueFromString(tm:DzTime, str:String):Boolean {
 	
 	}
 
@@ -7410,7 +10603,7 @@ class DzEnumSlider extends DzWidget {
 	/**
  * @description Creates a new enumerated slider widget.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -7482,7 +10675,7 @@ class DzERCBake extends QObject {
 	/**
  * @description Default constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -7490,6 +10683,24 @@ class DzERCBake extends QObject {
  * @description Performs the ERC bake based on the current settings.
 */
 	doBake() {
+	
+	}
+	/**
+ * @description Performs the ERC bake based on the current settings.
+*/
+	doBakeKeyed(warn:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getControllerProperty() {
+	
+	}
+	/**
+ * @description Sets the property that controls the properties that will be baked when doBake() is called.
+*/
+	setControllerProperty(prop:DzNumericProperty):DzNumericProperty {
 	
 	}
 
@@ -7528,19 +10739,19 @@ Since:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/ercfreeze_dz}*/
 class DzERCFreeze extends QObject {
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static SubComponents;
+	static SubComponents;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static Controller;
+	static Controller;
 	/**
  * @description Default constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -7548,6 +10759,120 @@ static Controller;
  * @description Adds all numeric properties on node whose values differ from their raw values to the list of properties to 'freeze' (link) to the controller property.
 */
 	addPropertiesToFreeze(node:DzNode):Boolean {
+	
+	}
+	/**
+ * @description Performs the ERC freeze based on the current settings.
+*/
+	doFreeze() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getApplyController() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getAttenuateMode() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getAttenuateProperty() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getControllerNode() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getControllerProperty() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getKeyed() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPropertiesToFreeze() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRestoreFigure() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRestoreRigging() {
+	
+	}
+	/**
+ * @description Sets whether or not the controller property will be set to the value that causes the 'frozen' properties to be at their current value once the 'freeze' operation is complete.
+*/
+	setApplyController(yesNo:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the mode that determines how the attenuate property will be used.
+*/
+	setAttenuateMode(mode:AttenuateMode):void {
+	
+	}
+	/**
+ * @description Sets the property that will be used to attenuate either the controller property, or the affect of the controller property on the properties returned by getPropertiesToFreeze(), depending on the AttenuateMode set.
+*/
+	setAttenuateProperty(prop:DzNumericProperty):DzNumericProperty {
+	
+	}
+	/**
+ * @description Sets the node that the controller property is on.
+*/
+	setControllerNode(node:DzNode):DzNode {
+	
+	}
+	/**
+ * @description Sets the property that the properties returned by getPropertiesToFreeze() will be linked to when doFreeze() is called.
+*/
+	setControllerProperty(prop:DzNumericProperty):DzNumericProperty {
+	
+	}
+	/**
+ * @description Sets whether or not the DzERCLink created between the controller property and the 'frozen' properties will be a DzERCLink.ERCKeyed (using the keys in timeline) or a DzERCLink.ERCDeltaAdd.
+*/
+	setKeyed(yesNo:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the list of properties that will be linked to the property returned by getControllerProperty() when doFreeze() is called.
+*/
+	setPropertiesToFreeze(propList:Array):Array {
+	
+	}
+	/**
+ * @description Sets whether or not the Restore Figure action will be executed once the 'freeze' operation is complete.
+*/
+	setRestoreFigure(yesNo:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not the Restore Figure Rigging action will be executed once the 'freeze' operation is complete.
+*/
+	setRestoreRigging(yesNo:Boolean):Boolean {
 	
 	}
 
@@ -7598,59 +10923,59 @@ A = 10.0 B = 5.0 + (10.0 * 1.0) + 0.0 = 15.0 C = 2.0 + (15.0 * 2.0) + 1.0 = 33.0
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/erclink_dz}*/
 class DzERCLink extends DzNumericController {
 	/**
- * @description Linear interpolation between key values.
+ * @description ENUMERATOR: Linear interpolation between key values.
 */
 	
-static LINEAR_INTERP;
+	static LINEAR_INTERP;
 	/**
- * @description Constant interpolation between key values.
+ * @description ENUMERATOR: Constant interpolation between key values.
 */
 	
-static CONSTANT_INTERP;
+	static CONSTANT_INTERP;
 	/**
- * @description TCB (Kochanek-Bartels) Spline interpolation between key values.
+ * @description ENUMERATOR: TCB (Kochanek-Bartels) Spline interpolation between key values.
 */
 	
-static TCB_INTERP;
+	static TCB_INTERP;
 	/**
- * @description This type of ERC is the most common, and implements the formula f(v) = v + (c * m) + a where:
+ * @description ENUMERATOR: This type of ERC is the most common, and implements the formula f(v) = v + (c * m) + a where:
 */
 	
-static ERCDeltaAdd;
+	static ERCDeltaAdd;
 	/**
- * @description This type of ERC implements the formula f(v) = (c / v) + a where:
+ * @description ENUMERATOR: This type of ERC implements the formula f(v) = (c / v) + a where:
 */
 	
-static ERCDivideInto;
+	static ERCDivideInto;
 	/**
- * @description This type of ERC implements the formula f(v) = (v / c) + a where:
+ * @description ENUMERATOR: This type of ERC implements the formula f(v) = (v / c) + a where:
 */
 	
-static ERCDivideBy;
+	static ERCDivideBy;
 	/**
- * @description This type of implements the formula f(v) = (c * v) + a where:
+ * @description ENUMERATOR: This type of implements the formula f(v) = (c * v) + a where:
 */
 	
-static ERCMultiply;
+	static ERCMultiply;
 	/**
- * @description This type of ERC implements the formula f(v) = v - c + a where:
+ * @description ENUMERATOR: This type of ERC implements the formula f(v) = v - c + a where:
 */
 	
-static ERCSubtract;
+	static ERCSubtract;
 	/**
- * @description This type of ERC implements the formula f(v) = v + c + a where:
+ * @description ENUMERATOR: This type of ERC implements the formula f(v) = v + c + a where:
 */
 	
-static ERCAdd;
+	static ERCAdd;
 	/**
- * @description This type of ERC is used to define value by a parametric function f(v) = v + P(c) where:
+ * @description ENUMERATOR: This type of ERC is used to define value by a parametric function f(v) = v + P(c) where:
 */
 	
-static ERCKeyed;
+	static ERCKeyed;
 	/**
  * @description Default constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -7658,21 +10983,21 @@ static ERCKeyed;
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor(copyFrom:DzERCLink, property=undefined:DzNumericProperty) {
 	
 	}
 	/**
  * @description Creates a controller that is driven by property.
  * @constructor
-*/
+*/;
 	constructor(type:ERCType, property:DzNumericProperty, scalar=1.0:Number, addend=0.0:Number) {
 	
 	}
 	/**
  * @description Creates a controller that is driven by property.
  * @constructor
-*/
+*/;
 	constructor(property:DzNumericProperty, scalar=1.0:Number, addend=0.0:Number) {
 	
 	}
@@ -7793,7 +11118,67 @@ class DzExportMgr extends QObject {
 	/**
  * @description Uses the extension from each of the exporters and attempts to match an exporter with the extension of the filename.
 */
-	static canExport(filename:String):Boolean {
+	canExport(filename:String):Boolean {
+	
+	}
+	/**
+ * @description Export the scene contents to a file.
+*/
+	exportFile(fileName:String, exporterIndex:Number, options:DzFileIOSettings):DzError {
+	
+	}
+	/**
+ * @description Export the scene contents to a file.
+*/
+	exportFile(fileName:String, exporterIndex:Number):DzError {
+	
+	}
+	/**
+ * @description Uses the extension from each of the exporters and attempts to match an exporter with the extension of the filename.
+*/
+	findExporter(filename:String):DzExporter {
+	
+	}
+	/**
+ * @description Uses the class name of each of the exporters and attempts to find an exporter with the given class name.
+*/
+	findExporterByClassName(className:String):DzExporter {
+	
+	}
+	/**
+ * @description Uses the extension from each of the exporters and attempts to match an exporter with the extension of the filename.
+*/
+	findExporterIndex(filename:String):Number {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getExporter(i:Number):DzExporter {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getExportPath() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumExporters() {
+	
+	}
+	/**
+ * @description Populates the given filter with all the types recognized by the export manager.
+*/
+	makeExportFileFilter(filter:DzFileFilter, defaultFilter:String):DzFileFilter {
+	
+	}
+	/**
+ * @description Sets the default directory that files are exported to.
+*/
+	setExportPath(path:String):String {
 	
 	}
 
@@ -7830,7 +11215,7 @@ class DzFacet extends Object {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -7838,7 +11223,7 @@ class DzFacet extends Object {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor(facet:DzFacet) {
 	
 	}
@@ -7960,7 +11345,7 @@ class DzFbxExporter extends DzExporter {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -7980,7 +11365,7 @@ class DzFbxImporter extends DzImporter {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -7991,124 +11376,124 @@ class DzFbxImporter extends DzImporter {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/file_dz}*/
 class DzFile extends DzFileInfo {
 	/**
- * @description No error occurred.
+ * @description ENUMERATOR: No error occurred.
 */
 	
-static NoError;
+	static NoError;
 	/**
- * @description An error occurred when reading from the file.
+ * @description ENUMERATOR: An error occurred when reading from the file.
 */
 	
-static ReadError;
+	static ReadError;
 	/**
- * @description An error occurred when writing to the file.
+ * @description ENUMERATOR: An error occurred when writing to the file.
 */
 	
-static WriteError;
+	static WriteError;
 	/**
- * @description A fatal error occurred.
+ * @description ENUMERATOR: A fatal error occurred.
 */
 	
-static FatalError;
+	static FatalError;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static ResourceError;
+	static ResourceError;
 	/**
- * @description The file could not be opened.
+ * @description ENUMERATOR: The file could not be opened.
 */
 	
-static OpenError;
+	static OpenError;
 	/**
- * @description The operation was aborted.
+ * @description ENUMERATOR: The operation was aborted.
 */
 	
-static AbortError;
+	static AbortError;
 	/**
- * @description A timeout occurred.
+ * @description ENUMERATOR: A timeout occurred.
 */
 	
-static TimeOutError;
+	static TimeOutError;
 	/**
- * @description An unspecified error occurred.
+ * @description ENUMERATOR: An unspecified error occurred.
 */
 	
-static UnspecifiedError;
+	static UnspecifiedError;
 	/**
- * @description The file could not be removed.
+ * @description ENUMERATOR: The file could not be removed.
 */
 	
-static RemoveError;
+	static RemoveError;
 	/**
- * @description The file could not be renamed.
+ * @description ENUMERATOR: The file could not be renamed.
 */
 	
-static RenameError;
+	static RenameError;
 	/**
- * @description The position in the file could not be changed.
+ * @description ENUMERATOR: The position in the file could not be changed.
 */
 	
-static PositionError;
+	static PositionError;
 	/**
- * @description The file could not be resized.
+ * @description ENUMERATOR: The file could not be resized.
 */
 	
-static ResizeError;
+	static ResizeError;
 	/**
- * @description The file could not be accessed.
+ * @description ENUMERATOR: The file could not be accessed.
 */
 	
-static PermissionsError;
+	static PermissionsError;
 	/**
- * @description The file could not be copied.
+ * @description ENUMERATOR: The file could not be copied.
 */
 	
-static CopyError;
+	static CopyError;
 	/**
- * @description The file is not open.
+ * @description ENUMERATOR: The file is not open.
 */
 	
-static NotOpen;
+	static NotOpen;
 	/**
- * @description The file is open the for reading.
+ * @description ENUMERATOR: The file is open the for reading.
 */
 	
-static ReadOnly;
+	static ReadOnly;
 	/**
- * @description The file is open the for writing.
+ * @description ENUMERATOR: The file is open the for writing.
 */
 	
-static WriteOnly;
+	static WriteOnly;
 	/**
- * @description The file is open the for reading and writing.
+ * @description ENUMERATOR: The file is open the for reading and writing.
 */
 	
-static ReadWrite;
+	static ReadWrite;
 	/**
- * @description The file is opened in append mode, so that all data is written to the end of the file.
+ * @description ENUMERATOR: The file is opened in append mode, so that all data is written to the end of the file.
 */
 	
-static Append;
+	static Append;
 	/**
- * @description If possible, the file is truncated before it is opened. All earlier contents of the file are lost.
+ * @description ENUMERATOR: If possible, the file is truncated before it is opened. All earlier contents of the file are lost.
 */
 	
-static Truncate;
+	static Truncate;
 	/**
- * @description When reading, the end-of-line terminators are translated to '
+ * @description ENUMERATOR: When reading, the end-of-line terminators are translated to '
 */
 	
-static Text;
+	static Text;
 	/**
- * @description Alias for Text.
+ * @description ENUMERATOR: Alias for Text.
 */
 	
-static Translate;
+	static Translate;
 	/**
  * @description Creates a file object with the given file name.
  * @constructor
-*/
+*/;
 	constructor(file:String) {
 	
 	}
@@ -8116,6 +11501,175 @@ static Translate;
  * @description Closes the file, sets its openMode() to NotOpen, and resets the error string.
 */
 	close() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	copy(newName:String):Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	eof() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	error() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	errorString() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isOpen() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isTextModeEnabled() {
+	
+	}
+	/**
+ * @description Creates a link named linkName that points to the file currently specified by fileName(). What a link is depends on the underlying filesystem (be it a shortcut on Windows or a symbolic link on Mac OS X).
+*/
+	link(linkName:String):Boolean {
+	
+	}
+	/**
+ * @description Opens the file and sets its openMode() to mode.
+*/
+	open(mode:OpenMode):Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	openMode() {
+	
+	}
+	/**
+ * @description Peeks at most maxSize bytes from the file, without side effects (i.e., if you read after you peek, you will get the same data).
+*/
+	peek(maxSize:Number):ByteArray {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	pos() {
+	
+	}
+	/**
+ * @description Read the entire file.
+*/
+	read() {
+	
+	}
+	/**
+ * @description Reads at most maxSize bytes from the file.
+*/
+	read(maxSize:Number):ByteArray {
+	
+	}
+	/**
+ * @description Read the entire file.
+*/
+	readAll() {
+	
+	}
+	/**
+ * @description Read one character from the file.
+*/
+	readByte() {
+	
+	}
+	/**
+ * @description Reads a line from the file, but no more than maxSize characters.
+*/
+	readByteLine(maxSize:Number):ByteArray {
+	
+	}
+	/**
+ * @description Read a line of text from the file.
+*/
+	readLine() {
+	
+	}
+	/**
+ * @description Read the entire file and split it into lines of text.
+*/
+	readLines() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	rename(newName:String):Boolean {
+	
+	}
+	/**
+ * @description Seeks to the start of input.
+*/
+	reset() {
+	
+	}
+	/**
+ * @description Sets the current position to pos.
+*/
+	seek(pos:Number):Boolean {
+	
+	}
+	/**
+ * @description Sets the name of the file to name. The name can have no path, a relative path, or an absolute path.
+*/
+	setFileName(name:String):String {
+	
+	}
+	/**
+ * @description Sets the permissions for the file to permissions.
+*/
+	setPermissions(permissions:Permissions):Boolean {
+	
+	}
+	/**
+ * @description If enabled is true, sets the Text flag on the file, otherwise the Text flag is removed.
+*/
+	setTextModeEnabled(enabled:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Write a string to the file.
+*/
+	write(data:String, maxSize:Number):Number {
+	
+	}
+	/**
+ * @description Writes the content of byteArray to the file.
+*/
+	write(byteArray:ByteArray):Number {
+	
+	}
+	/**
+ * @description Write a single byte (character) to the file.
+*/
+	writeByte(byte:Number):Number {
+	
+	}
+	/**
+ * @description Write a line to the file.
+*/
+	writeLine(data:String):String {
 	
 	}
 
@@ -8130,7 +11684,43 @@ class DzFileDialog extends QObject {
 	/**
  * @description A convenience file dialog that automatically creates a filter list for all audio formats the application can import and displays a file open dialog.
 */
-	static doAudioClipOpenDialog(startWith:String, parent:DzWidget):String {
+	doAudioClipOpenDialog(startWith:String, parent:DzWidget):String {
+	
+	}
+	/**
+ * @description Display a dialog for the user to choose a directory.
+*/
+	doDirectoryDialog(title:String, desc:String, parent:DzWidget):String {
+	
+	}
+	/**
+ * @description Display a dialog for the user to choose a directory.
+*/
+	doDirectoryDialog(title:String, desc:String, startWith:String, parent:DzWidget):String {
+	
+	}
+	/**
+ * @description Display a dialog for the user to choose a file.
+*/
+	doFileDialog(open:Boolean, title:String, startWith:String, filter:String, selectedFilter:Number, parent:DzWidget):String {
+	
+	}
+	/**
+ * @description A convenience file dialog that automatically creates a filter list for all image formats the application can import/export and displays a file open/save dialog.
+*/
+	doImageDialog(open:Boolean, startWith:String, parent:DzWidget):String {
+	
+	}
+	/**
+ * @description A convenience file dialog that automatically creates a filter list for all video formats the application can export and displays a file save dialog.
+*/
+	doVideoClipSaveDialog(startWith:String, parent:DzWidget):String {
+	
+	}
+	/**
+ * @description Shows an open file dialog to the user that allows selection of multiple files.
+*/
+	getOpenFileNames(dir:String, filter:String, title:String, parent:DzWidget):Array {
 	
 	}
 
@@ -8142,8 +11732,22 @@ class DzFileFilter extends QObject {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Creates a new file filter and adds a filter with the given description and extensions.
+ * @constructor
+*/;
+	constructor(description:String, extensions:Array) {
+	
+	}
+	/**
+ * @description Creates a new file filter and adds a filter with the given description and extension.
+ * @constructor
+*/;
+	constructor(description:String, extension:String) {
 	
 	}
 	/**
@@ -8207,69 +11811,69 @@ class DzFileFilter extends QObject {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/fileinfo_dz}*/
 class DzFileInfo extends QObject {
 	/**
- * @description The file is readable by the owner of the file.
+ * @description ENUMERATOR: The file is readable by the owner of the file.
 */
 	
-static ReadOwner;
+	static ReadOwner;
 	/**
- * @description The file is writable by the owner of the file.
+ * @description ENUMERATOR: The file is writable by the owner of the file.
 */
 	
-static WriteOwner;
+	static WriteOwner;
 	/**
- * @description The file is executable by the owner of the file.
+ * @description ENUMERATOR: The file is executable by the owner of the file.
 */
 	
-static ExeOwner;
+	static ExeOwner;
 	/**
- * @description The file is readable by the user.
+ * @description ENUMERATOR: The file is readable by the user.
 */
 	
-static ReadUser;
+	static ReadUser;
 	/**
- * @description The file is writable by the user.
+ * @description ENUMERATOR: The file is writable by the user.
 */
 	
-static WriteUser;
+	static WriteUser;
 	/**
- * @description The file is executable by the user.
+ * @description ENUMERATOR: The file is executable by the user.
 */
 	
-static ExeUser;
+	static ExeUser;
 	/**
- * @description The file is readable by the group.
+ * @description ENUMERATOR: The file is readable by the group.
 */
 	
-static ReadGroup;
+	static ReadGroup;
 	/**
- * @description The file is writable by the group.
+ * @description ENUMERATOR: The file is writable by the group.
 */
 	
-static WriteGroup;
+	static WriteGroup;
 	/**
- * @description The file is executable by the group.
+ * @description ENUMERATOR: The file is executable by the group.
 */
 	
-static ExeGroup;
+	static ExeGroup;
 	/**
- * @description The file is readable by anyone.
+ * @description ENUMERATOR: The file is readable by anyone.
 */
 	
-static ReadOther;
+	static ReadOther;
 	/**
- * @description The file is writable by anyone.
+ * @description ENUMERATOR: The file is writable by anyone.
 */
 	
-static WriteOther;
+	static WriteOther;
 	/**
- * @description The file is executable by anyone.
+ * @description ENUMERATOR: The file is executable by anyone.
 */
 	
-static ExeOther;
+	static ExeOther;
 	/**
  * @description Creates a file info object to retrieve information about the given file.
  * @constructor
-*/
+*/;
 	constructor(file:String) {
 	
 	}
@@ -8279,18 +11883,290 @@ static ExeOther;
 	absFileName() {
 	
 	}
+	/**
+ * @description Return Value:
+*/
+	absoluteDir() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	absoluteFilePath() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	absolutePath() {
+	
+	}
+	/**
+ * @description Deprecated
+*/
+	baseName() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	bundleName() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	caching() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	canonicalFilePath() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	canonicalPath() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	completeBaseName() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	completeSuffix() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	created() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	dir() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	exists() {
+	
+	}
+	/**
+ * @description Deprecated
+*/
+	extension() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	fileName() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	filePath() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isAbsolute() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isBundle() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isDir() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isExecutable() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isFile() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isHidden() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isReadable() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isRelative() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isRoot() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isSymLink() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isWritable() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	lastModified() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	lastRead() {
+	
+	}
+	/**
+ * @description Converts the file's path to an absolute path if it is not already in that form.
+*/
+	makeAbsolute() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	path() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	permission(permissions:Permissions):Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	permissions() {
+	
+	}
+	/**
+ * @description Refreshes information about the file, i.e. reads in information from the file system the next time a cached property is fetched.
+*/
+	refresh() {
+	
+	}
+	/**
+ * @description Delete the file from the disk.
+*/
+	remove() {
+	
+	}
+	/**
+ * @description Sets whether or not caching of file information caching is enabled. When caching is enabled, file information is read from the file system the first time it's needed, but generally not later.
+*/
+	setCaching(enable:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the file to provide information about to file in dir.
+*/
+	setFile(dir:DzDir, file:String):DzDir {
+	
+	}
+	/**
+ * @description Sets the file to provide information about to file.
+*/
+	setFile(file:DzFile):DzFile {
+	
+	}
+	/**
+ * @description Sets the file to provide information about to file.
+*/
+	setFile(file:String):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	size() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	sizeStr() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	suffix() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	symLinkTarget() {
+	
+	}
 
 }
 /**
  * @classdesc This class provides functionality common to all file importers and exporters such as the ability to edit options before file import/export. Also, this class provides functions for importers/exporters to report errors to the user/log file, and provides static convenience functions for dissecting file paths into their parts.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/fileio_dz}*/
 class DzFileIO extends DzBase {
-	static optionsShown:Boolean;
+	optionsShown:Boolean;
 	/**
  * @description TODO:
 Add description.
 */
-	static getDefaultOptions(options:DzFileIOSettings):DzFileIOSettings {
+	getDefaultOptions(options:DzFileIOSettings):DzFileIOSettings {
+	
+	}
+	/**
+ * @description Gets the options for an import operation.
+*/
+	getOptions(options:DzFileIOSettings, useInterface:Boolean, filename:String):Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	showOptions() {
 	
 	}
 
@@ -8336,7 +12212,189 @@ class DzFileIOPresetMgr extends QObject {
  * @description TODO:
 Add description.
 */
-	static getAllCurrentSettings(className:String, settings:DzFileIOSettings):Boolean {
+	getAllCurrentSettings(className:String, settings:DzFileIOSettings):Boolean {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getAllDefaults(className:String, settings:DzFileIOSettings):Boolean {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getAllSettings(presetName:String, className:String, settings:DzFileIOSettings):Boolean {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getAvailableClasses(presetName:String):Array {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getAvailablePresets(className:String):Array {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getCommonApplicationDefaults(settings:DzFileIOSettings):DzFileIOSettings {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getCommonDefaults(className:String, settings:DzFileIOSettings):Boolean {
+	
+	}
+	/**
+ * @description Populates settings with the values for common to all presets named presetName
+*/
+	getCommonSettings(presetName:String, className:String, settings:DzFileIOSettings):Boolean {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getCurrentCommonSettings(className:String, settings:DzFileIOSettings):Boolean {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getCurrentSpecificSettings(className:String, settings:DzFileIOSettings):Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getCustomPresetLabel() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDepthAxisKey() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getInvertDepthAxisKey() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getInvertLateralAxisKey() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getInvertVerticalAxisKey() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLateralAxisKey() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getPresetID(presetName:String, className:String):Number {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getPresetName(id:Number, className:String):String {
+	
+	}
+	/**
+ * @description Note:
+*/
+	getScaleKey() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getSpecificDefaults(className:String, settings:DzFileIOSettings):Boolean {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getSpecificSettings(presetName:String, className:String, settings:DzFileIOSettings):Boolean {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getSystemPresets(className:String):Array {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getUserPresets(className:String):Array {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getVerticalAxisKey() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	isSystemPreset(presetName:String):Boolean {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	isUserPreset(presetName:String):Boolean {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	presetExists(id:Number, className:String):Boolean {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	presetExists(presetName:String, className:String):Boolean {
+	
+	}
+	/**
+ * @description Attempts to remove the preset with the given preset name and class name.
+*/
+	removeUserPreset(presetName:String, className:String):Boolean {
+	
+	}
+	/**
+ * @description Attempts to save a user preset with the given preset name and class name
+*/
+	saveUserPreset(presetName:String, className:String, keepCommonSettings:Boolean, settings:DzFileIOSettings):Boolean {
 	
 	}
 
@@ -8349,8 +12407,15 @@ class DzFileIOSettings extends DzSettings {
 	/**
  * @description Default Constructor - creates an empty set of options
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Copy constructor.
+ * @constructor
+*/;
+	constructor(settings:DzFileIOSettings) {
 	
 	}
 
@@ -8361,25 +12426,32 @@ Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/fileproperty_dz}*/
 class DzFileProperty extends DzStringProperty {
 	/**
- * @description The user will be prompted with a 'Save As' type dialog when browsing for a file.
+ * @description ENUMERATOR: The user will be prompted with a 'Save As' type dialog when browsing for a file.
 */
 	
-static FileSave;
+	static FileSave;
 	/**
- * @description The user will be prompted with an 'Open' type dialog when browsing for a file.
+ * @description ENUMERATOR: The user will be prompted with an 'Open' type dialog when browsing for a file.
 */
 	
-static FileOpen;
+	static FileOpen;
 	/**
- * @description The user will be prompted with a 'Select Folder' type dialog when browsing for a directory.
+ * @description ENUMERATOR: The user will be prompted with a 'Select Folder' type dialog when browsing for a directory.
 */
 	
-static Dir;
+	static Dir;
 	/**
  * @description Default Constructor. Creates a non-user property.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Parameter(s):
+ * @constructor
+*/;
+	constructor(name:String, isUserProperty:Boolean) {
 	
 	}
 	/**
@@ -8422,7 +12494,25 @@ class DzFlipManip extends DzImageManip {
 	/**
  * @description Return Value:
 */
-	static flipHorizontal() {
+	flipHorizontal() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	flipVertical() {
+	
+	}
+	/**
+ * @description Sets whether or not the image is flipped horizontally.
+*/
+	setFlipHorizontal(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not the image is flipped vertically.
+*/
+	setFlipVertical(onOff:Boolean):Boolean {
 	
 	}
 
@@ -8434,8 +12524,22 @@ class DzFloat2Property extends DzFloatProperty {
 	/**
  * @description Default Constructor. Creates a non-animatable, non-user property.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Parameter(s):
+ * @constructor
+*/;
+	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean, initVal:DzVec2) {
+	
+	}
+	/**
+ * @description Parameter(s):
+ * @constructor
+*/;
+	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean) {
 	
 	}
 	/**
@@ -8557,8 +12661,22 @@ class DzFloat3Property extends DzFloatProperty {
 	/**
  * @description Default Constructor. Creates a non-animatable, non-user property.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Parameter(s):
+ * @constructor
+*/;
+	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean, initVal:DzVec3) {
+	
+	}
+	/**
+ * @description Parameter(s):
+ * @constructor
+*/;
+	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean) {
 	
 	}
 	/**
@@ -8683,42 +12801,42 @@ class DzFloatColor extends Object {
 	/**
  * @description Default constructor. Initializes a new color to opaque black.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
 	/**
  * @description Constructor that takes individual floating-point RGBA components. Initializes the color to the given values. Values should be in the [0,1] range.
  * @constructor
-*/
+*/;
 	constructor(r:Number, g:Number, b:Number, a=1.0:Number) {
 	
 	}
 	/**
  * @description Constructor that creates an achromatic color.
  * @constructor
-*/
+*/;
 	constructor(val:Number, alpha=1.0:Number) {
 	
 	}
 	/**
  * @description Constructor that takes a floating-point array to define RGBA colors. Initializes the color to the given values.
  * @constructor
-*/
+*/;
 	constructor(color:Array) {
 	
 	}
 	/**
  * @description Constructor that takes a QColor. Initializes the color to the given color. The color is assumed to be completely opaque.
  * @constructor
-*/
+*/;
 	constructor(color:Color) {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/
+*/;
 	constructor(color:DzFloatColor) {
 	
 	}
@@ -8882,8 +13000,22 @@ class DzFloatColorProperty extends DzColorProperty {
 	/**
  * @description Default Constructor. Creates a non-animatable, non-user property.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Parameter(s):
+ * @constructor
+*/;
+	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean, initVal:Color) {
+	
+	}
+	/**
+ * @description Parameter(s):
+ * @constructor
+*/;
+	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean) {
 	
 	}
 	/**
@@ -9104,60 +13236,67 @@ Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/floatproperty_dz}*/
 class DzFloatProperty extends DzNumericProperty {
 	/**
- * @description Linear interpolation between key values.
+ * @description ENUMERATOR: Linear interpolation between key values.
 */
 	
-static LINEAR_INTERP;
+	static LINEAR_INTERP;
 	/**
- * @description Constant interpolation between key values.
+ * @description ENUMERATOR: Constant interpolation between key values.
 */
 	
-static CONSTANT_INTERP;
+	static CONSTANT_INTERP;
 	/**
- * @description TCB (Kochanek-Bartels) Spline interpolation between key values.
+ * @description ENUMERATOR: TCB (Kochanek-Bartels) Spline interpolation between key values.
 */
 	
-static TCB_INTERP;
+	static TCB_INTERP;
 	/**
- * @description Hermite Spline interpolation between key values.
+ * @description ENUMERATOR: Hermite Spline interpolation between key values.
 */
 	
-static HERMITE_INTERP;
+	static HERMITE_INTERP;
 	/**
- * @description This property is not a transform property.
+ * @description ENUMERATOR: This property is not a transform property.
 */
 	
-static NON_TRANSFORM;
+	static NON_TRANSFORM;
 	/**
- * @description This property is a scale transform.
+ * @description ENUMERATOR: This property is a scale transform.
 */
 	
-static SCALE;
+	static SCALE;
 	/**
- * @description This property is a translation transform property.
+ * @description ENUMERATOR: This property is a translation transform property.
 */
 	
-static TRANSLATE;
+	static TRANSLATE;
 	/**
- * @description This property is a rotation on the first axis of the rotation order.
+ * @description ENUMERATOR: This property is a rotation on the first axis of the rotation order.
 */
 	
-static ROT_FIRST_AXIS;
+	static ROT_FIRST_AXIS;
 	/**
- * @description This property is a rotation on the second axis of the rotation order.
+ * @description ENUMERATOR: This property is a rotation on the second axis of the rotation order.
 */
 	
-static ROT_SECOND_AXIS;
+	static ROT_SECOND_AXIS;
 	/**
- * @description This property is a rotation on the third axis of the rotation order.
+ * @description ENUMERATOR: This property is a rotation on the third axis of the rotation order.
 */
 	
-static ROT_THIRD_AXIS;
+	static ROT_THIRD_AXIS;
 	/**
  * @description Default Constructor. Creates a non-animatable, non-user property.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Parameter(s):
+ * @constructor
+*/;
+	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean, defaultVal=0.0:Number) {
 	
 	}
 	/**
@@ -9422,7 +13561,7 @@ class DzFloatSlider extends DzWidget {
 	/**
  * @description Creates a slider as a child of the given parent widget.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -9444,44 +13583,44 @@ See Also:
  DzAsset
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/folderassetcontainer_dz}*/
 class DzFolderAssetContainer extends DzAbstractAssetContainer, DzRefCountedItem {
-	static excludeFolders:Array;
-	static fileFilters:Array;
-	static isImport:Boolean;
-	static isImportTopLevel:Boolean;
-	static isNative:Boolean;
-	static isNativeTopLevel:Boolean;
-	static isPoser:Boolean;
-	static isPoserIntermediate:Boolean;
-	static isPoserTopLevel:Boolean;
-	static onlyIncludeFolders:Array;
+	excludeFolders:Array;
+	fileFilters:Array;
+	isImport:Boolean;
+	isImportTopLevel:Boolean;
+	isNative:Boolean;
+	isNativeTopLevel:Boolean;
+	isPoser:Boolean;
+	isPoserIntermediate:Boolean;
+	isPoserTopLevel:Boolean;
+	onlyIncludeFolders:Array;
 	/**
  * @description Return Value:
 */
-	static fileMatchesFilter(shortFileName:String):Boolean {
+	fileMatchesFilter(shortFileName:String):Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getFullPath() {
+	getFullPath() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static hasDirectoryChildren() {
+	hasDirectoryChildren() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static insertsAsLink(asset:DzAsset):Boolean {
+	insertsAsLink(asset:DzAsset):Boolean {
 	
 	}
 	/**
  * @description Attempts to update the child containers of this container.
 */
-	static updateChildren() {
+	updateChildren() {
 	
 	}
 
@@ -9506,21 +13645,21 @@ class Font extends QObject {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/
+*/;
 	constructor(font:Font) {
 	
 	}
 	/**
  * @description Constructs a new font of the given family.
  * @constructor
-*/
+*/;
 	constructor(familyName:String) {
 	
 	}
@@ -9569,7 +13708,7 @@ class DzGeometryShellNode extends DzNode {
 	/**
  * @description Default Constructor. Creates a shell with DzObject, pushmodifier_dz, and DzGeometryShellShape. This is the preferred way to create a shell node.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -9589,7 +13728,19 @@ class DzGeometryUtil {
 	/**
  * @description Converts a scene item with polygon mesh geometry to a SubD object. If the node passed in is a DzBone or DzSkeleton, the entire figure will be converted to SubD.
 */
-	static convertToSubD(node:DzNode, defaultLevel:Number):DzError {
+	convertToSubD(node:DzNode, defaultLevel:Number):DzError {
+	
+	}
+	/**
+ * @description Converts a scene item with polygon mesh geometry to a SubD object. If the node passed in is a DzBone or DzSkeleton, the entire figure will be converted to SubD.
+*/
+	convertToSubD(node:DzNode, defaultViewLevel:Number, defaultRenderLevel:Number):DzError {
+	
+	}
+	/**
+ * @description Creates a primitive based on the settings supplied.
+*/
+	createPrimitive(settings:DzSettings):DzNode {
 	
 	}
 
@@ -9603,7 +13754,7 @@ class DzGeomSourceFileData extends DzSourceFileData {
 	/**
  * @description Creates a new Geometry Source File Data object that stores the given file path and group name.
  * @constructor
-*/
+*/;
 	constructor(filePath="":String, groupName="":String) {
 	
 	}
@@ -9625,7 +13776,7 @@ class DzGroupBox extends DzWidget {
 	/**
  * @description Creates a group box as a child of the given parent widget.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -9648,7 +13799,7 @@ class DzGroupNode extends DzNode {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -9664,7 +13815,37 @@ class DzGuidePage extends QWidget {
 	/**
  * @description Return Value:
 */
-	static defaultScriptPath() {
+	defaultScriptPath() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isCurrentPage() {
+	
+	}
+	/**
+ * @description Sets whether the guide page is the current widget in the stack.
+*/
+	makeCurrentPage(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Loads the contents of the page by calling the current script. A special script context is provided to this script which exposes a global "getWidget()" function that returns a DzWidget wrapper. This DzWidget can be used by the script to create, populate, and connect the UI components inside the widget.
+*/
+	reload() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	scriptFilename() {
+	
+	}
+	/**
+ * @description Loads the contents of the page by calling the script at scriptPath. A special script context is provided to this script which exposes a global "getWidget()" function that returns a DzWidget wrapper. This DzWidget can be used by the script to create, populate, and connect the UI components inside the widget.
+*/
+	setUiScript(scriptPath:String):DzError {
 	
 	}
 
@@ -9674,44 +13855,44 @@ class DzGuidePage extends QWidget {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/gzfile_dz}*/
 class DzGZFile extends DzFileInfo {
 	/**
- * @description Open the file for reading only.
+ * @description ENUMERATOR: Open the file for reading only.
 */
 	
-static ReadOnly;
+	static ReadOnly;
 	/**
- * @description Open the file for writing only.
+ * @description ENUMERATOR: Open the file for writing only.
 */
 	
-static WriteOnly;
+	static WriteOnly;
 	/**
- * @description Open the file for reading and writing.
+ * @description ENUMERATOR: Open the file for reading and writing.
 */
 	
-static ReadWrite;
+	static ReadWrite;
 	/**
- * @description The file is opened in append mode, so that all data is written to the end of the file.
+ * @description ENUMERATOR: The file is opened in append mode, so that all data is written to the end of the file.
 */
 	
-static Append;
+	static Append;
 	/**
- * @description If possible, the file is truncated before it is opened. All earlier contents of the file are lost.
+ * @description ENUMERATOR: If possible, the file is truncated before it is opened. All earlier contents of the file are lost.
 */
 	
-static Truncate;
+	static Truncate;
 	/**
- * @description When reading, the end-of-line terminators are translated to '
+ * @description ENUMERATOR: When reading, the end-of-line terminators are translated to '
 */
 	
-static Text;
+	static Text;
 	/**
- * @description Alias for Text.
+ * @description ENUMERATOR: Alias for Text.
 */
 	
-static Translate;
+	static Translate;
 	/**
  * @description Creates a gzip file with the given file name.
  * @constructor
-*/
+*/;
 	constructor(file:String) {
 	
 	}
@@ -9719,6 +13900,72 @@ static Translate;
  * @description Closes the file.
 */
 	close() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	eof() {
+	
+	}
+	/**
+ * @description Open the file with the given mode.
+*/
+	open(accessMode:AccessMode):Boolean {
+	
+	}
+	/**
+ * @description Reads the entire file.
+*/
+	read() {
+	
+	}
+	/**
+ * @description Read one uncompressed character from the file buffer.
+*/
+	readByte() {
+	
+	}
+	/**
+ * @description Read an uncompressed line of text from the file.
+*/
+	readLine() {
+	
+	}
+	/**
+ * @description Uncompresses the entire file and splits it into lines of text.
+*/
+	readLines() {
+	
+	}
+	/**
+ * @description Unzips this file into the given filename.
+*/
+	unzip(filename:String):Boolean {
+	
+	}
+	/**
+ * @description Write a string to the file compression buffer.
+*/
+	write(data:String, length:Number):String {
+	
+	}
+	/**
+ * @description Write a single byte (character) to the file compression buffer.
+*/
+	writeByte(byte:Number):Number {
+	
+	}
+	/**
+ * @description Write a line of text to the file compression buffer.
+*/
+	writeLine(data:String):String {
+	
+	}
+	/**
+ * @description Replaces this file's contents with the gzipped contents of the given file. If this file does not exist, it will be created.
+*/
+	zip(filename:String):Boolean {
 	
 	}
 
@@ -9730,8 +13977,15 @@ class DzHBoxLayout extends DzBoxLayout {
 	/**
  * @description Creates a horizontal box layout that manages the children widgets of the given parent widget
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
+	
+	}
+	/**
+ * @description Creates a horizontal box layout as a sub-layout of the given layout
+ * @constructor
+*/;
+	constructor(parent:DzLayout) {
 	
 	}
 
@@ -9743,7 +13997,7 @@ class DzHButtonGroup extends DzButtonGroup {
 	/**
  * @description Creates a button group as a child of the given parent widget
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -9756,44 +14010,44 @@ class DzHButtonGroup extends DzButtonGroup {
  DzListView.header()
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/header_dz}*/
 class DzHeader extends DzWidget {
-	static clickEnabled:Boolean;
-	static movingEnabled:Boolean;
-	static resizeEnabled:Boolean;
-	static stretchEnabled:Boolean;
+	clickEnabled:Boolean;
+	movingEnabled:Boolean;
+	resizeEnabled:Boolean;
+	stretchEnabled:Boolean;
 	/**
  * @description Return Value:
 */
-	static isClickEnabled(section:Number):Number {
+	isClickEnabled(section:Number):Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isResizeEnabled(section:Number):Number {
+	isResizeEnabled(section:Number):Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isStretchEnabled(section:Number):Number {
+	isStretchEnabled(section:Number):Number {
 	
 	}
 	/**
  * @description Sets whether or not the header for a given section responds to mouse clicks
 */
-	static setClickEnabled(enable:Boolean, section:Number):Boolean {
+	setClickEnabled(enable:Boolean, section:Number):Boolean {
 	
 	}
 	/**
  * @description Sets whether or not resizing for a given section is enabled
 */
-	static setResizeEnabled(enable:Boolean, section:Number):Boolean {
+	setResizeEnabled(enable:Boolean, section:Number):Boolean {
 	
 	}
 	/**
  * @description Sets whether or not stretch for a given section is enabled
 */
-	static setStretchEnabled(enable:Boolean, section:Number):Boolean {
+	setStretchEnabled(enable:Boolean, section:Number):Boolean {
 	
 	}
 
@@ -9808,7 +14062,134 @@ class DzHelpMgr extends QObject {
 	/**
  * @description Opens the help browser at the given identifier.
 */
-	static browseToIdentifier(identifier:String):String {
+	browseToIdentifier(identifier:String):String {
+	
+	}
+	/**
+ * @description Opens the help browser at the given keyword.
+*/
+	browseToKeyword(keyword:String):String {
+	
+	}
+	/**
+ * @description Opens the given page in the help browser.
+*/
+	browseToPage(page:String):String {
+	
+	}
+	/**
+ * @description Opens the help browser at the given url.
+*/
+	browseToUrl(urlString:String):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findFilterAttributes(name:String):Array {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	findIdentifierUrl(id:String):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findKeywordUrl(keyword:String):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getDescription(label:String):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getFilterAttributes(which:Number):Array {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getFilterName(which:Number):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getGroup(label:String):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getHelpContents() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getHelpString(label:String):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getIdentifier(which:Number):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getIdentifierUrl(which:Number):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getKeyword(which:Number):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getKeywordUrl(which:Number):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumFilters() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumIdentifiers() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumKeywords() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getStatusTip(label:String):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getToolTip(label:String):String {
 	
 	}
 
@@ -9820,7 +14201,7 @@ class DzHGroupBox extends DzGroupBox {
 	/**
  * @description Creates a group box as a child of the given parent widget.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -9840,7 +14221,7 @@ class DzHierarchicalMaterialAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -9860,7 +14241,7 @@ class DzHierarchicalPoseAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -9877,110 +14258,110 @@ Attention:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/image}*/
 class Image extends QObject {
 	/**
- * @description The image is invalid.
+ * @description ENUMERATOR: The image is invalid.
 */
 	
-static Format_Invalid;
+	static Format_Invalid;
 	/**
- * @description The image is stored using 1-bit per pixel. Bytes are packed with the most significant bit (MSB) first.
+ * @description ENUMERATOR: The image is stored using 1-bit per pixel. Bytes are packed with the most significant bit (MSB) first.
 */
 	
-static Format_Mono;
+	static Format_Mono;
 	/**
- * @description The image is stored using 1-bit per pixel. Bytes are packed with the less significant bit (LSB) first.
+ * @description ENUMERATOR: The image is stored using 1-bit per pixel. Bytes are packed with the less significant bit (LSB) first.
 */
 	
-static Format_MonoLSB;
+	static Format_MonoLSB;
 	/**
- * @description The image is stored using 8-bit indexes into a colormap.
+ * @description ENUMERATOR: The image is stored using 8-bit indexes into a colormap.
 */
 	
-static Format_Indexed8;
+	static Format_Indexed8;
 	/**
- * @description The image is stored using a 32-bit RGB format (0xffRRGGBB).
+ * @description ENUMERATOR: The image is stored using a 32-bit RGB format (0xffRRGGBB).
 */
 	
-static Format_RGB32;
+	static Format_RGB32;
 	/**
- * @description The image is stored using a 32-bit ARGB format (0xAARRGGBB).
+ * @description ENUMERATOR: The image is stored using a 32-bit ARGB format (0xAARRGGBB).
 */
 	
-static Format_ARGB32;
+	static Format_ARGB32;
 	/**
- * @description The image is stored using a premultiplied 32-bit ARGB format (0xAARRGGBB), i.e. the red, green, and blue channels are multiplied by the alpha component divided by 255. (If RR, GG, or BB has a higher value than the alpha channel, the results are undefined.) Certain operations (such as image composition using alpha blending) are faster using premultiplied ARGB32 than with plain ARGB32.
+ * @description ENUMERATOR: The image is stored using a premultiplied 32-bit ARGB format (0xAARRGGBB), i.e. the red, green, and blue channels are multiplied by the alpha component divided by 255. (If RR, GG, or BB has a higher value than the alpha channel, the results are undefined.) Certain operations (such as image composition using alpha blending) are faster using premultiplied ARGB32 than with plain ARGB32.
 */
 	
-static Format_ARGB32_Premultiplied;
+	static Format_ARGB32_Premultiplied;
 	/**
- * @description The image is stored using a 16-bit RGB format (5-6-5).
+ * @description ENUMERATOR: The image is stored using a 16-bit RGB format (5-6-5).
 */
 	
-static Format_RGB16;
+	static Format_RGB16;
 	/**
- * @description The image is stored using a premultiplied 24-bit ARGB format (8-5-6-5).
+ * @description ENUMERATOR: The image is stored using a premultiplied 24-bit ARGB format (8-5-6-5).
 */
 	
-static Format_ARGB8565_Premultiplied;
+	static Format_ARGB8565_Premultiplied;
 	/**
- * @description The image is stored using a 24-bit RGB format (6-6-6). The unused most significant bits is always zero.
+ * @description ENUMERATOR: The image is stored using a 24-bit RGB format (6-6-6). The unused most significant bits is always zero.
 */
 	
-static Format_RGB666;
+	static Format_RGB666;
 	/**
- * @description The image is stored using a premultiplied 24-bit ARGB format (6-6-6-6).
+ * @description ENUMERATOR: The image is stored using a premultiplied 24-bit ARGB format (6-6-6-6).
 */
 	
-static Format_ARGB6666_Premultiplied;
+	static Format_ARGB6666_Premultiplied;
 	/**
- * @description The image is stored using a 16-bit RGB format (5-5-5). The unused most significant bit is always zero.
+ * @description ENUMERATOR: The image is stored using a 16-bit RGB format (5-5-5). The unused most significant bit is always zero.
 */
 	
-static Format_RGB555;
+	static Format_RGB555;
 	/**
- * @description The image is stored using a premultiplied 24-bit ARGB format (8-5-5-5).
+ * @description ENUMERATOR: The image is stored using a premultiplied 24-bit ARGB format (8-5-5-5).
 */
 	
-static Format_ARGB8555_Premultiplied;
+	static Format_ARGB8555_Premultiplied;
 	/**
- * @description The image is stored using a 24-bit RGB format (8-8-8).
+ * @description ENUMERATOR: The image is stored using a 24-bit RGB format (8-8-8).
 */
 	
-static Format_RGB888;
+	static Format_RGB888;
 	/**
- * @description The image is stored using a 16-bit RGB format (4-4-4). The unused bits are always zero.
+ * @description ENUMERATOR: The image is stored using a 16-bit RGB format (4-4-4). The unused bits are always zero.
 */
 	
-static Format_RGB444;
+	static Format_RGB444;
 	/**
- * @description The image is stored using a premultiplied 16-bit ARGB format (4-4-4-4).
+ * @description ENUMERATOR: The image is stored using a premultiplied 16-bit ARGB format (4-4-4-4).
 */
 	
-static Format_ARGB4444_Premultiplied;
+	static Format_ARGB4444_Premultiplied;
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/
+*/;
 	constructor(width:Number, height:Number, format:Format) {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/
+*/;
 	constructor(image:Image) {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/
+*/;
 	constructor(filename:String) {
 	
 	}
@@ -10270,7 +14651,13 @@ class DzImageBlend extends QObject {
 	/**
  * @description Used to blend src into dest.
 */
-	static blendImage(dest:Image, src:Image):Image {
+	blendImage(dest:Image, src:Image):Image {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDescription() {
 	
 	}
 
@@ -10280,11 +14667,11 @@ class DzImageBlend extends QObject {
 Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/imagecolorlayer_dz}*/
 class DzImageColorLayer extends DzImageLayer {
-	static color:Color;
+	color:Color;
 	/**
  * @description Sets the size for this color layer.
 */
-	static setSize(size:Size):Size {
+	setSize(size:Size):Size {
 	
 	}
 
@@ -10294,13 +14681,74 @@ class DzImageColorLayer extends DzImageLayer {
 Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/imagecomponent_dz}*/
 class DzImageComponent extends QObject {
-	static label:String;
-	static visible:Boolean;
+	label:String;
+	visible:Boolean;
 	/**
  * @description TODO:
 Add description.
 */
-	static addManipulator(manip:DzImageManip):DzImageManip {
+	addManipulator(manip:DzImageManip):DzImageManip {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	freeImageData() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getImageData() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getManipulator(idx:Number):DzImageManip {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getNumManipulators() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSize() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	insertManipulator(idx:Number, manip:DzImageManip):Number {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	removeManipulator(idx:Number):Boolean {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	removeManipulator(manip:DzImageManip):Boolean {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	toTextureLayer(layer:DzTextureLayer, imageSize:Size):Boolean {
 	
 	}
 
@@ -10310,7 +14758,7 @@ Add description.
 Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/imagefilelayer_dz}*/
 class DzImageFileLayer extends DzImageLayer {
-	static filename:String;
+	filename:String;
 
 }
 /**
@@ -10321,7 +14769,31 @@ class DzImageLayer extends DzImageComponent {
 	/**
  * @description Return Value:
 */
-	static getBlendMode() {
+	getBlendMode() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDescription() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getMask() {
+	
+	}
+	/**
+ * @description Sets the blending mode for this image layer.
+*/
+	setBlendMode(mode:DzImageBlend):DzImageBlend {
+	
+	}
+	/**
+ * @description Sets the mask for this image layer.
+*/
+	setMask(mask:DzImageMask):DzImageMask {
 	
 	}
 
@@ -10333,7 +14805,13 @@ class DzImageManip extends QObject {
 	/**
  * @description Return Value:
 */
-	static getDescription() {
+	getDescription() {
+	
+	}
+	/**
+ * @description Applies the manipulator to img.
+*/
+	manipulate(img:Image):Image {
 	
 	}
 
@@ -10343,7 +14821,7 @@ class DzImageManip extends QObject {
 Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/imagemask_dz}*/
 class DzImageMask extends DzImageComponent {
-	static filename:String;
+	filename:String;
 
 }
 /**
@@ -10351,9 +14829,153 @@ class DzImageMask extends DzImageComponent {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/imagemgr_dz}*/
 class DzImageMgr extends QObject {
 	/**
+ * @description Parameter(s):
+*/
+	static getImageSize(imagePath:String):Size {
+	
+	}
+	/**
  * @description Called prior to editing an image; pauses image preparation.
 */
-	static beginEditingImage() {
+	beginEditingImage() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	createLayeredTexture(name:String):DzLayeredTexture {
+	
+	}
+	/**
+ * @description This method is called from the 3D viewports to clear out any texture objects that are no longer being used. It has to be called only when a Studio OGL context is current.
+*/
+	deleteUnusedTextureObjects() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findImage(fullPath:String):DzTexture {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findImageByName(name:String):DzTexture {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findLayeredTexture(uri:DzUri):DzLayeredTexture {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findTexture(uri:DzUri):DzTexture {
+	
+	}
+	/**
+ * @description Called after editing an image; restarts image preparation.
+*/
+	finishedEditingImage(img:DzTexture):DzTexture {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getImage(which:Number):DzTexture {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getImage(fullPath:String, creationGamma:Number):DzTexture {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getImage(fullPath:String):DzTexture {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getImage(fullPath:String, creationGamma:Number, creationType:Number):DzTexture {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getImageOpenPath() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getImageSavePath() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumImages() {
+	
+	}
+	/**
+ * @description Creates a modified version of the given name if necessary to make it unique.
+*/
+	getUniqueImageName(name:String):String {
+	
+	}
+	/**
+ * @description Called by the framework to notify the manager that the image has been prepared for the off-line renderer.
+*/
+	imagePrepared(img:DzTexture, tempName:String):DzTexture {
+	
+	}
+	/**
+ * @description Reads an image from a file.
+*/
+	loadImage(filename:String):Image {
+	
+	}
+	/**
+ * @description Reads an image from a file.
+*/
+	loadImage(filename:String, img:Image, importerIdx:Number):DzError {
+	
+	}
+	/**
+ * @description Forces a flush of the background image processing buffer.
+*/
+	prepareAllImages(r:DzRenderer):DzRenderer {
+	
+	}
+	/**
+ * @description Reloads any images whose source files have changed.
+*/
+	refresh() {
+	
+	}
+	/**
+ * @description Writes an image to a file.
+*/
+	saveImage(filename:String, image:Image, exporterIdx:Number):DzError {
+	
+	}
+	/**
+ * @description Sets the file path that a file open dialog will point to for images.
+*/
+	setImageOpenPath(path:String):String {
+	
+	}
+	/**
+ * @description Sets the file path that a file save dialog will point to for images.
+*/
+	setImageSavePath(path:String):String {
 	
 	}
 
@@ -10366,14 +14988,81 @@ class DzImageProperty extends DzProperty {
 	/**
  * @description Default Constructor. Creates a non-user property.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Parameter(s):
+ * @constructor
+*/;
+	constructor(name:String, isUserProperty:Boolean) {
 	
 	}
 	/**
  * @description Return Value:
 */
 	getDefaultMapGamma() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDefaultMapTextureType() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTextureModifier() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTextureModifierFlags() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getValue() {
+	
+	}
+	/**
+ * @description Sets the default map gamma.
+*/
+	setDefaultMapGamma(gamma:Number):Number {
+	
+	}
+	/**
+ * @description Sets the default map texture type.
+*/
+	setDefaultMapTextureType(type:Number):Number {
+	
+	}
+	/**
+ * @description Sets the texture modifier.
+*/
+	setTextureModifier(txtMod:DzTextureModifier):void {
+	
+	}
+	/**
+ * @description Sets texture modifier flags for this property.
+*/
+	setTextureModifierFlags(flags:Number):Number {
+	
+	}
+	/**
+ * @description Sets the texture value on this property.
+*/
+	setValue(val:DzTexture):Boolean {
+	
+	}
+	/**
+ * @description Sets the image value.
+*/
+	setValue(imgFile:String):Boolean {
 	
 	}
 
@@ -10386,8 +15075,15 @@ class DzImageRenderHandler extends DzRenderHandler {
 	/**
  * @description Create a new image render handler for rendering a single frame.
  * @constructor
-*/
+*/;
 	constructor(size:Size, renderTime:DzTime, filename:String) {
+	
+	}
+	/**
+ * @description Create a new image render handler for rendering a multiple frames.
+ * @constructor
+*/;
+	constructor(size:Size, startingTime:DzTime, numFrames:Number, filename:String, isMovie:Boolean) {
 	
 	}
 	/**
@@ -10467,7 +15163,7 @@ class DzImageTexture extends DzTexture, DzRefCountedItem {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor(filename:String, gamma:Number) {
 	
 	}
@@ -10475,7 +15171,7 @@ Add description.
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor(filename:String, gamma:Number, textureType:Number) {
 	
 	}
@@ -10489,7 +15185,37 @@ class DzImporter extends DzFileIO {
 	/**
  * @description Return Value:
 */
-	static getDescription() {
+	getDescription() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getExtension(i:Number):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumExtensions() {
+	
+	}
+	/**
+ * @description Imports from a file.
+*/
+	readFile(filename:String, options:DzFileIOSettings):DzError {
+	
+	}
+	/**
+ * @description Imports from a file.
+*/
+	readFile(filename:String):DzError {
+	
+	}
+	/**
+ * @description Test the given filename and file contents to see if this importer can read it.
+*/
+	recognize(filename:String):Boolean {
 	
 	}
 
@@ -10507,7 +15233,97 @@ class DzImportMgr extends QObject {
 	/**
  * @description Calls recognize() on each of the importers and attempts to match an importer with the filename.
 */
-	static canImport(filename:String):Boolean {
+	canImport(filename:String):Boolean {
+	
+	}
+	/**
+ * @description Calls recognize() on each of the importers and attempts to match an importer with the filename.
+*/
+	findImporter(filename:String):DzImporter {
+	
+	}
+	/**
+ * @description Attempts to locate an importer class type by name.
+*/
+	findImporterByClassName(className:String):DzImporter {
+	
+	}
+	/**
+ * @description Calls recognize() on each of the importers and attempts to match an importer with the filename.
+*/
+	findImporterIndex(filename:String):Number {
+	
+	}
+	/**
+ * @description Gets the full import file name.
+*/
+	getImportFileName() {
+	
+	}
+	/**
+ * @description Gets the default import directory - this is typically the last directory that the user imported a file from, and will be the directory that user will be taken to next time the file import dialog is displayed.
+*/
+	getImportPath() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumImporters() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isImporting() {
+	
+	}
+	/**
+ * @description Populates the given filter with all the geometry types recognized by the import manager.
+*/
+	makeGeometryFileFilter(filter:DzFileFilter, defaultFilter:String, makeAllFilesEntry:Boolean):DzFileFilter {
+	
+	}
+	/**
+ * @description Populates the given filter with all the types recognized by the import manager.
+*/
+	makeImportFileFilter(filter:DzFileFilter, defaultFilter:String, makeAllFilesEntry:Boolean):DzFileFilter {
+	
+	}
+	/**
+ * @description Import the contents of a file into the scene.
+*/
+	readFile(filename:String, importerIdx:Number):DzError {
+	
+	}
+	/**
+ * @description Import the contents of a file into the scene.
+*/
+	readFile(filename:String, importerIdx:Number, options:DzFileIOSettings):DzError {
+	
+	}
+	/**
+ * @description Reads the geometry file into a new shape.
+*/
+	readGeometry(filename:String, importerIdx:Number, options:DzFileIOSettings):String {
+	
+	}
+	/**
+ * @description Reads the geometry file into a new shape.
+*/
+	readGeometry(filename:String, importerIdx:Number):String {
+	
+	}
+	/**
+ * @description Sets the import file name - this is the full file name that file was import
+*/
+	setImportFileName(fileName:String):String {
+	
+	}
+	/**
+ * @description Sets the default import directory - this is the directory that user will be taken to next time the file import dialog is displayed.
+*/
+	setImportPath(path:String):String {
 	
 	}
 
@@ -10519,7 +15335,73 @@ class DzInfoDivider extends QWidget {
 	/**
  * @description Return Value:
 */
-	static getActualDividerPercent() {
+	getActualDividerPercent() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getInfoTabs() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPreferredDividerPercent() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getToggleState() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isMinimized() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isToggled() {
+	
+	}
+	/**
+ * @description Moves the divider distance pixels from the current location.
+*/
+	moveDivider(distance:Number):Number {
+	
+	}
+	/**
+ * @description Sets the location of the divider bar.
+*/
+	setPreferredDividerPercent(distance:Number):Number {
+	
+	}
+	/**
+ * @description Sets the toggled state of this divider bar.
+*/
+	setToggleState(state:Number):Number {
+	
+	}
+	/**
+ * @description Toggles the second widget between fully closed and fully open.
+*/
+	toggleClosed() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	toggleEnabled() {
+	
+	}
+	/**
+ * @description Toggles the minimized state of the second widget. If toggling is disabled, this method has no effect. If either the first or second widget is null, toggling this method will also have no effect.
+*/
+	toggleMinimized() {
 	
 	}
 
@@ -10531,7 +15413,97 @@ class DzInfoTabs extends QWidget {
 	/**
  * @description Return Value:
 */
-	static currentTab() {
+	currentTab() {
+	
+	}
+	/**
+ * @description Hides the widget responsible for displaying tab contents
+*/
+	hideStack() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isStackHidden() {
+	
+	}
+	/**
+ * @description Sets the current tab to which
+*/
+	setCurrentTab(which:Number):Number {
+	
+	}
+	/**
+ * @description Sets the file info for the given asset
+*/
+	setFileInfo(asset:DzAsset):DzAsset {
+	
+	}
+	/**
+ * @description Sets file and meta data info for the given asset
+*/
+	setInfo(asset:DzAsset):DzAsset {
+	
+	}
+	/**
+ * @description Sets metadata info for the given asset
+*/
+	setMetaInfo(asset:DzAsset):DzAsset {
+	
+	}
+	/**
+ * @description Sets info for the given node
+*/
+	setNodeInfo(node:DzNode):DzNode {
+	
+	}
+	/**
+ * @description Sets file info from the given asset container
+*/
+	setProductInfo(product:DzProductAssetContainer):DzProductAssetContainer {
+	
+	}
+	/**
+ * @description Sets the UI script responsible for displaying the contents of the Tips tab
+*/
+	setTipUIScript(path:String):DzError {
+	
+	}
+	/**
+ * @description Specifies whether the file tab is shown or not
+*/
+	showFileTab(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Specifies whether the metadata tab is shown or not
+*/
+	showMetaTab(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Specifies whether the node tab is shown or not
+*/
+	showNodeTab(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Specifies whether the render tab is shown or not
+*/
+	showRenderTab(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Shows the widget responsible for displaying the contents of the tabs
+*/
+	showStack() {
+	
+	}
+	/**
+ * @description Specifies whether the store tab is shown or not
+*/
+	showStoreTab(onOff:Boolean):Boolean {
 	
 	}
 
@@ -10544,7 +15516,7 @@ class DzInstanceGroupItem extends DzBase {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -10552,6 +15524,204 @@ Add description.
  * @description Copies the transform values of the given nodes transform properties. Also copies rotation order.
 */
 	copyTransformFromNode(node:DzNode):DzNode {
+	
+	}
+	/**
+ * @description Copies the transform values to the given nodes transform properties. Also copies rotation order
+*/
+	copyTransformToNode(node:DzNode):DzNode {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getEndPointValues() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getGeneralScaleValue() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLabel() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLocalPos() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLocalRot() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLocalScale() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLocalTransform() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getOrientation() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getOrientationValues() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getOriginValues() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPositionValues() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRotationOrder() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRotationValues() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getWSPos(tm:DzTime, defaultVal:Boolean):DzVec3 {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getWSPos() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getWSRot(tm:DzTime, defaultVal:Boolean):DzQuat {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getWSRot() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getWSScale(tm:DzTime, defaultVal:Boolean):DzMatrix3 {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getWSScale() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getWSTransform() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getWSTransform(tm:DzTime, defaultVal:Boolean):DzMatrix3 {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getXYZScaleValues() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	inheritsScale() {
+	
+	}
+	/**
+ * @description Sets the endpoint for this item.
+*/
+	setEndPoint(x:Number, y:Number, z:Number):Number {
+	
+	}
+	/**
+ * @description Sets whether or not this node inherits the scale of its parent.
+*/
+	setInheritScale(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the label for this item.
+*/
+	setLabel(label:String):String {
+	
+	}
+	/**
+ * @description Sets the orientation for this item.
+*/
+	setOrientation(x:Number, y:Number, z:Number):Number {
+	
+	}
+	/**
+ * @description Sets the origin for this item.
+*/
+	setOrigin(x:Number, y:Number, z:Number):Number {
+	
+	}
+	/**
+ * @description Sets the position for this item.
+*/
+	setPosition(x:Number, y:Number, z:Number):Number {
+	
+	}
+	/**
+ * @description Sets the rotation for this item.
+*/
+	setRotation(x:Number, y:Number, z:Number):Number {
+	
+	}
+	/**
+ * @description Sets the rotation order for this item.
+*/
+	setRotationOrder(order:DzRotationOrder):DzRotationOrder {
+	
+	}
+	/**
+ * @description Sets the scale for this item.
+*/
+	setScale(x:Number, y:Number, z:Number, genScale:Number):Number {
 	
 	}
 
@@ -10563,7 +15733,7 @@ class DzInstanceGroupNode extends DzInstanceNode {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -10571,6 +15741,54 @@ class DzInstanceGroupNode extends DzInstanceNode {
  * @description Begin edit of this node.
 */
 	beginItemEdit() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	clearItems() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	createItem() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findIndexForItem(item:DzInstanceGroupItem):Number {
+	
+	}
+	/**
+ * @description Finish edit of this node.
+*/
+	finishItemEdit() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getGroupItem(index:Number):DzInstanceGroupItem {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumberOfGroupItems() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isEditingItems() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	removeItem(index:Number):Number {
 	
 	}
 
@@ -10582,7 +15800,7 @@ class DzInstanceNode extends DzNode {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -10590,6 +15808,18 @@ class DzInstanceNode extends DzNode {
  * @description Return Value:
 */
 	getCopyModeControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTarget() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTargetControl() {
 	
 	}
 
@@ -10615,35 +15845,35 @@ class DzInt2 extends Object {
 	/**
  * @description Default Constructor. Creates an uninitialized vector.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/
+*/;
 	constructor(vec:DzVec2) {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/
+*/;
 	constructor(vec:DzInt2) {
 	
 	}
 	/**
  * @description Creates and inititializes this vector with an array of 2 integer values.
  * @constructor
-*/
+*/;
 	constructor(vals:Array) {
 	
 	}
 	/**
  * @description Creates and inititializes this vector with 2 integers.
  * @constructor
-*/
+*/;
 	constructor(x:Number, y:Number) {
 	
 	}
@@ -10806,8 +16036,22 @@ class DzInt2Property extends DzIntProperty {
 	/**
  * @description Default Constructor. Creates a non-animatable, non-user property.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Parameter(s):
+ * @constructor
+*/;
+	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean, initVal:DzInt2) {
+	
+	}
+	/**
+ * @description Parameter(s):
+ * @constructor
+*/;
+	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean) {
 	
 	}
 	/**
@@ -10932,7 +16176,25 @@ class DzInteractiveInstructionObject extends QObject {
 	/**
  * @description Return Value:
 */
-	static getMember(name:String):Object {
+	getMember(name:String):Object {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	hasMember(name:String):Boolean {
+	
+	}
+	/**
+ * @description Removes the member/value named name from the instruction.
+*/
+	removeMember(name:String):String {
+	
+	}
+	/**
+ * @description Sets the member name of the instruction to value. A valid value depends on the type of instruction and can be one of Boolean, Number, String or Array.
+*/
+	setMember(name:String, value:Object):String {
 	
 	}
 
@@ -10941,11 +16203,141 @@ class DzInteractiveInstructionObject extends QObject {
  * @classdesc This class manages interactive lessons that the user can perform in the interface via lessonstripwgt_dz. There is only one instance of this manager in an application. This instance is created and owned by DzMainWindow. Request the instance from DzMainWindow via DzMainWindow.getInteractiveLessonMgr().
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/interactivelessonmgr_dz}*/
 class DzInteractiveLessonMgr extends QObject {
-	static progressWidth:Number;
+	progressWidth:Number;
 	/**
  * @description Starts the lesson using a list of instructions in a separate file.
 */
-	static begin(path:String):String {
+	begin(path:String):String {
+	
+	}
+	/**
+ * @description Starts the lesson using the instructions list.
+*/
+	begin(instructions:Array):Array {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	currentIndex() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	currentPath() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	currentQuery() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	currentQuery() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	currentQuery() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	currentType() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getActionInstruction(classname:String, info:String, tag:String, locateOnly:Boolean):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getActivityInstruction(activity:String, info:String, tag:String, locateOnly:Boolean):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDisplayInstruction(info:String, button:String):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getInstruction(type:String, query:ByteArray, info:String, tag:String, locateOnly:Boolean):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getInstruction(type:String, query:String, info:String, tag:String, locateOnly:Boolean):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getInstruction(type:String, query:Boolean, info:String, tag:String, locateOnly:Boolean):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getInstruction(type:String, query:Number, info:String, tag:String, locateOnly:Boolean):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLayoutInstruction(layout:String, info:String, tag:String, locateOnly:Boolean):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getWidgetInstruction(widgetPath:String, info:String, tag:String, locateOnly:Boolean):String {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	instructionTypes() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isRunning() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	iterate() {
+	
+	}
+	/**
+ * @description Skips the next instruction in the lesson.
+*/
+	skip() {
+	
+	}
+	/**
+ * @description Stops the lesson.
+*/
+	stop() {
 	
 	}
 
@@ -10960,7 +16352,37 @@ class DzInteractiveLessonObject extends QObject {
 	/**
  * @description Return Value:
 */
-	static appendInstruction() {
+	appendInstruction() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	count() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	currentIndex() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	insertInstruction(index:Number):DzInteractiveInstructionObject {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	instructionAt(index:Number):DzInteractiveInstructionObject {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	nextInstruction() {
 	
 	}
 
@@ -10973,14 +16395,165 @@ class DzIntProperty extends DzNumericProperty {
 	/**
  * @description Default Constructor. Creates a non-animatable, non-user property.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Parameter(s):
+ * @constructor
+*/;
+	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean, initVal=0:Number) {
 	
 	}
 	/**
  * @description Adjust the value of the property based on the contribution of property controllers.
 */
 	adjustValue(val:Number):Number {
+	
+	}
+	/**
+ * @description Adjust the value of the property at the given time based on the contribution of property controllers.
+*/
+	adjustValue(tm:DzTime, val:Number):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDefaultValue() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDoubleDefaultValue() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getDoubleValue(tm:DzTime):Number {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getKeyValue(i:Number):Number {
+	
+	}
+	/**
+ * @description This function is provided for the special case of ERC link redirection; sometimes called 'cross-talk'. For example, if Figure A (a piece of clothing, for example) is 'Fit To' Figure B, the ERC links on Figure A are redirected to follow channels on Figure B; this is how morphs on an item of clothing will follow morphs on the figure, etc. This function will provide the value of the property ignoring any redirection of ERC links. So, for a figure that is not 'Fit To' another figure, this will return the same value as getValue(). For a figure that is 'Fit To' another figure, this will return the value that the property would have if the ERC link had not been redirected.
+*/
+	getLocalValue() {
+	
+	}
+	/**
+ * @description This function is provided for the special case of ERC link redirection; sometimes called 'cross-talk'. For example, if Figure A (a piece of clothing, for example) is 'Fit To' Figure B, the ERC links on Figure A are redirected to follow channels on Figure B; this is how morphs on an item of clothing will follow morphs on the figure, etc. This function will provide the value of the property ignoring any redirection of ERC links. So, for a figure that is not 'Fit To' another figure, this will return the same value as getValue(). For a figure that is 'Fit To' another figure, this will return the value that the property would have if the ERC link had not been redirected.
+*/
+	getLocalValue(tm:DzTime):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getMax() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getMin() {
+	
+	}
+	/**
+ * @description This function is provided to make it easy to get the 'keyed' value of the property without any modifications. When the value of a property is evaluated, first the value based on key interpolation is calculated, that value is then passed to each of the controllers on the property (ERC links for example) which can modify that value. This modified value is then returned as the value of the property by getValue(). This function returns the value of the property before the application of the controllers; strictly the result of key interpolation.
+*/
+	getRawValue(tm:DzTime):Number {
+	
+	}
+	/**
+ * @description This function is provided to make it easy to get the 'keyed' value of the property without any modifications. When the value of a property is evaluated, first the value based on key interpolation is calculated, that value is then passed to each of the controllers on the property (ERC links for example) which can modify that value. This modified value is then returned as the value of the property by getValue(). This function returns the value of the property before the application of the controllers; strictly the result of key interpolation.
+*/
+	getRawValue() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSensitivity() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getValue(tm:DzTime):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getValue() {
+	
+	}
+	/**
+ * @description Sets the default value for this property.
+*/
+	setDefaultValue(val:Number):Number {
+	
+	}
+	/**
+ * @description Truncates a double precision value to an integer and sets the default value.
+*/
+	setDoubleDefaultValue(val:Number):Number {
+	
+	}
+	/**
+ * @description Sets the value for this property at the given time; or the default value if this property is not animatable; truncates a double precision value to an integer.
+*/
+	setDoubleValue(tm:DzTime, val:Number):DzTime {
+	
+	}
+	/**
+ * @description Sets the value of the i'th key.
+*/
+	setKeyValue(keyIndex:Number, val:Number):Number {
+	
+	}
+	/**
+ * @description Set the maximum allowable value.
+*/
+	setMax(max:Number):Number {
+	
+	}
+	/**
+ * @description Set the mininimum allowable value.
+*/
+	setMin(min:Number):Number {
+	
+	}
+	/**
+ * @description Set the mininimum and maximum allowable values.
+*/
+	setMinMax(min:Number, max:Number):Number {
+	
+	}
+	/**
+ * @description Set the sensitivity for this property. This value describes the amount of change in the value of this property caused by adjustment in the interface, especially if limits are off.
+*/
+	setSensitivity(sens:Number):Number {
+	
+	}
+	/**
+ * @description Sets the value for this property at the given time; or the default value if this property is not animatable. This function differs from setRawValue() in that it takes into account any controllers on the property such that calling setValue( getValue() ) should not change the value of the property.
+*/
+	setValue(tm:DzTime, val:Number):DzTime {
+	
+	}
+	/**
+ * @description Sets the value for this property at the current time; or the default value if this property is not animatable. This function differs from setRawValue() in that it takes into account any controllers on the property such that calling setValue( getValue() ) should not change the value of the property.
+*/
+	setValue(val:Number):Number {
 	
 	}
 
@@ -11004,7 +16577,7 @@ class DzIntSlider extends DzWidget {
 	/**
  * @description Creates a slider as a child of the given parent widget.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -11019,7 +16592,7 @@ class DzInvertManip extends DzImageManip {
 	/**
  * @description Holds whether or not the manipulater is active
  * @constructor
-*/
+*/;
 	constructor(onOff=false:Boolean) {
 	
 	}
@@ -11027,6 +16600,12 @@ class DzInvertManip extends DzImageManip {
  * @description Return Value:
 */
 	isOn() {
+	
+	}
+	/**
+ * @description Sets whether or not the invert manipulator is applied.
+*/
+	setOn(onOff:Boolean):Boolean {
 	
 	}
 
@@ -11038,7 +16617,7 @@ class DzIrayRenderer extends DzRenderer {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -11046,6 +16625,12 @@ class DzIrayRenderer extends DzRenderer {
  * @description Return Value:
 */
 	getPropertyHolder() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isIPRRendering() {
 	
 	}
 
@@ -11064,7 +16649,7 @@ class DzLayerAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -11077,7 +16662,67 @@ class DzLayeredImage extends DzBase {
 	/**
  * @description Add a layer to the image.
 */
-	static addLayer(layer:DzImageLayer):DzImageLayer {
+	addLayer(layer:DzImageLayer):DzImageLayer {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getFlattenedImage(freeMem:Boolean):Image {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLayer(which:Number):DzImageLayer {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLayerCount() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSize() {
+	
+	}
+	/**
+ * @description Insert a layer at a specific index.
+*/
+	insertLayer(layer:DzImageLayer, idx:Number):DzImageLayer {
+	
+	}
+	/**
+ * @description Adjust layer order.
+*/
+	moveLayer(from:Number, to:Number):Number {
+	
+	}
+	/**
+ * @description Remove the specified layer.
+*/
+	removeLayer(layer:DzImageLayer):Boolean {
+	
+	}
+	/**
+ * @description Replace a layer with a new layer.
+*/
+	replaceLayer(oldLayer:DzImageLayer, newLayer:DzImageLayer):Boolean {
+	
+	}
+	/**
+ * @description Sets the size of the image's canvas.
+*/
+	setSize(size:Size):Size {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	toLayeredTexture(img:DzLayeredTexture):Boolean {
 	
 	}
 
@@ -11086,130 +16731,130 @@ class DzLayeredImage extends DzBase {
  * @classdesc This is a sharable object that stores information for a layered texture (image map) that is used in OpenGL. Do not create a layered texture, rather, request one from DzImageMgr - this insures that there is only one instance of a given image in memory at a time, and also ensures that necessary conversions for rendering the image via OpenGL and offline renderers occurs correctly.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/layeredtexture_dz}*/
 class DzLayeredTexture extends DzTexture, DzRefCountedItem {
-	static assetAuthor:DzAuthor;
-	static assetFileRevision:DzVersion;
-	static assetId:String;
-	static assetModifiedDate:Date;
-	static assetSource:DzUri;
-	static assetUri:DzUri;
-	static size:Boolean;
+	assetAuthor:DzAuthor;
+	assetFileRevision:DzVersion;
+	assetId:String;
+	assetModifiedDate:Date;
+	assetSource:DzUri;
+	assetUri:DzUri;
+	size:Boolean;
 	/**
  * @description TODO:
 Add description.
 */
-	static addLayer(layer:DzTextureLayer):DzTextureLayer {
+	addLayer(layer:DzTextureLayer):DzTextureLayer {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static beginEditing() {
+	beginEditing() {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static copyFrom(texture:DzLayeredTexture):void {
+	copyFrom(texture:DzLayeredTexture):void {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static createLayer(name:String):DzTextureLayer {
+	createLayer(name:String):DzTextureLayer {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static endEditing() {
+	endEditing() {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static findLayer(layer:DzTextureLayer):Number {
+	findLayer(layer:DzTextureLayer):Number {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static getLayer(index:Number):DzTextureLayer {
+	getLayer(index:Number):DzTextureLayer {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static getNumLayers() {
+	getNumLayers() {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static getSourceDSI() {
+	getSourceDSI() {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static insertLayer(index:Number, layer:DzTextureLayer):Number {
+	insertLayer(index:Number, layer:DzTextureLayer):Number {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static moveLayer(fromIndex:Number, toIndex:Number):Boolean {
+	moveLayer(fromIndex:Number, toIndex:Number):Boolean {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static refeshLayeredTexture() {
+	refeshLayeredTexture() {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static removeAllLayers() {
+	removeAllLayers() {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static removeLayer(index:Number):Boolean {
+	removeLayer(index:Number):Boolean {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static removeLayer(layer:DzTextureLayer):Boolean {
+	removeLayer(layer:DzTextureLayer):Boolean {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static replaceLayer(oldLayer:DzTextureLayer, newLayer:DzTextureLayer):Boolean {
+	replaceLayer(oldLayer:DzTextureLayer, newLayer:DzTextureLayer):Boolean {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static takeLayer(index:Number):DzTextureLayer {
+	takeLayer(index:Number):DzTextureLayer {
 	
 	}
 
@@ -11218,13 +16863,13 @@ Add description.
  * @classdesc This is an abstract base class that provides general functionality for DAZ Script interface layout components.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/layout_dz}*/
 class DzLayout extends QObject {
-	static autoAdd:Boolean;
-	static margin:Number;
-	static spacing:Number;
+	autoAdd:Boolean;
+	margin:Number;
+	spacing:Number;
 	/**
  * @description Adds the given widget to the items managed by this layout
 */
-	static addWidget(item:DzWidget):DzWidget {
+	addWidget(item:DzWidget):DzWidget {
 	
 	}
 
@@ -11243,64 +16888,64 @@ Illegal characters are substituted with spaces.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/lcdnumber_dz}*/
 class DzLCDNumber extends DzWidget {
 	/**
- * @description Hexadecimal (base 16)
+ * @description ENUMERATOR: Hexadecimal (base 16)
 */
 	
-static Hex;
+	static Hex;
 	/**
- * @description Decimal (base 10)
+ * @description ENUMERATOR: Decimal (base 10)
 */
 	
-static Dec;
+	static Dec;
 	/**
- * @description Octal (base 8)
+ * @description ENUMERATOR: Octal (base 8)
 */
 	
-static Oct;
+	static Oct;
 	/**
- * @description Binary (base 2)
+ * @description ENUMERATOR: Binary (base 2)
 */
 	
-static Bin;
+	static Bin;
 	/**
- * @description Same as Hex
+ * @description ENUMERATOR: Same as Hex
 */
 	
-static HEX;
+	static HEX;
 	/**
- * @description Same as Dec
+ * @description ENUMERATOR: Same as Dec
 */
 	
-static DEC;
+	static DEC;
 	/**
- * @description Same as Oct
+ * @description ENUMERATOR: Same as Oct
 */
 	
-static OCT;
+	static OCT;
 	/**
- * @description Same as Bin
+ * @description ENUMERATOR: Same as Bin
 */
 	
-static BIN;
+	static BIN;
 	/**
- * @description Raised segments filled with the background color
+ * @description ENUMERATOR: Raised segments filled with the background color
 */
 	
-static Outline;
+	static Outline;
 	/**
- * @description Raised segments filled with the foreground color
+ * @description ENUMERATOR: Raised segments filled with the foreground color
 */
 	
-static Filled;
+	static Filled;
 	/**
- * @description Flat segments filled with the foreground color
+ * @description ENUMERATOR: Flat segments filled with the foreground color
 */
 	
-static Flat;
+	static Flat;
 	/**
  * @description Creates a LCD number widget as a child of the given parent widget.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -11312,24 +16957,72 @@ Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/light_dz}*/
 class DzLight extends DzCamera {
 	/**
- * @description The light does not utilize shadows.
+ * @description ENUMERATOR: The light does not utilize shadows.
 */
 	
-static None;
+	static None;
 	/**
- * @description The light utilizes a Deep Shadow Map (DSM).
+ * @description ENUMERATOR: The light utilizes a Deep Shadow Map (DSM).
 */
 	
-static DeepShadowMap;
+	static DeepShadowMap;
 	/**
- * @description The light utilizes ray-traced shadows.
+ * @description ENUMERATOR: The light utilizes ray-traced shadows.
 */
 	
-static Raytraced;
+	static Raytraced;
 	/**
  * @description Return Value:
 */
-	static getCategories() {
+	getCategories() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getCategoriesControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDiffuseColor() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getShadowType() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getShadowTypeControl() {
+	
+	}
+	/**
+ * @description Calculates the direction that light is being cast from this light.
+*/
+	getWSDirection() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isAreaLight() {
+	
+	}
+	/**
+ * @description Indicates if this light is an infinite directional light.
+*/
+	isDirectional() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isOn() {
 	
 	}
 
@@ -11348,7 +17041,7 @@ class DzLightAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -11364,8 +17057,22 @@ class DzLine3 extends Object {
 	/**
  * @description Default Constructor. Creates an uninitialized line.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Copy Constructor.
+ * @constructor
+*/;
+	constructor(line:DzLine3) {
+	
+	}
+	/**
+ * @description Parameterized Constructor.
+ * @constructor
+*/;
+	constructor(origin:DzVec3, end:DzVec3) {
 	
 	}
 	/**
@@ -11450,7 +17157,7 @@ class DzLinearPointLight extends DzPointLight {
 	/**
  * @description Default Constructor. Creates a new linear point light.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -11460,6 +17167,36 @@ class DzLinearPointLight extends DzPointLight {
 	getFallOffEnd() {
 	
 	}
+	/**
+ * @description Return Value:
+*/
+	getFallOffEndControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getFallOffStart() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getFallOffStartControl() {
+	
+	}
+	/**
+ * @description Sets the distance from the origin of the node where the intensity reaches 0.
+*/
+	setFallOffEnd(end:Number):Number {
+	
+	}
+	/**
+ * @description Sets the distance from the origin of the node where the intensity begins to decrease.
+*/
+	setFallOffStart(start:Number):Number {
+	
+	}
 
 }
 /**
@@ -11467,29 +17204,29 @@ class DzLinearPointLight extends DzPointLight {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/lineedit_dz}*/
 class DzLineEdit extends DzWidget {
 	/**
- * @description Display characters as they are entered.
+ * @description ENUMERATOR: Display characters as they are entered.
 */
 	
-static Normal;
+	static Normal;
 	/**
- * @description Do not display anything. This may be appropriate for passwords where even the length of the password should be kept secret.
+ * @description ENUMERATOR: Do not display anything. This may be appropriate for passwords where even the length of the password should be kept secret.
 */
 	
-static NoEcho;
+	static NoEcho;
 	/**
- * @description Display asterisks instead of the characters actually entered.
+ * @description ENUMERATOR: Display asterisks instead of the characters actually entered.
 */
 	
-static Password;
+	static Password;
 	/**
- * @description Display characters as they are entered while editing otherwise display asterisks.
+ * @description ENUMERATOR: Display characters as they are entered while editing otherwise display asterisks.
 */
 	
-static PasswordEchoOnEdit;
+	static PasswordEchoOnEdit;
 	/**
  * @description Creates a line edit as a child of the given parent widget.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -11651,49 +17388,49 @@ Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/listbox_dz}*/
 class DzListBox extends DzScrollView {
 	/**
- * @description There is a fixed number of rows or columns
+ * @description ENUMERATOR: There is a fixed number of rows or columns
 */
 	
-static FixedNumber;
+	static FixedNumber;
 	/**
- * @description There are as many columns as will fit
+ * @description ENUMERATOR: There are as many columns as will fit
 */
 	
-static FitToWidth;
+	static FitToWidth;
 	/**
- * @description There are as many rows as will fit
+ * @description ENUMERATOR: There are as many rows as will fit
 */
 	
-static FitToHeight;
+	static FitToHeight;
 	/**
- * @description There are as many rows as required by the column mode and vice-versa
+ * @description ENUMERATOR: There are as many rows as required by the column mode and vice-versa
 */
 	
-static Variable;
+	static Variable;
 	/**
- * @description Single selection - only one item in the box can be selected at a time
+ * @description ENUMERATOR: Single selection - only one item in the box can be selected at a time
 */
 	
-static Single;
+	static Single;
 	/**
- * @description Multi selection - when the user clicks on an item, its selection state is toggled, all other items remain the same
+ * @description ENUMERATOR: Multi selection - when the user clicks on an item, its selection state is toggled, all other items remain the same
 */
 	
-static Multi;
+	static Multi;
 	/**
- * @description Extended selection - when the user clicks on an item, the current selection is replaced with that item. The ctrl and shift keys can be used to select multiple items.
+ * @description ENUMERATOR: Extended selection - when the user clicks on an item, the current selection is replaced with that item. The ctrl and shift keys can be used to select multiple items.
 */
 	
-static Extended;
+	static Extended;
 	/**
- * @description Items can not be selected
+ * @description ENUMERATOR: Items can not be selected
 */
 	
-static NoSelection;
+	static NoSelection;
 	/**
  * @description Creates a list box with the given parent widget
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -11743,89 +17480,89 @@ The findItem() method takes a ComparisonFlags enum. ComparisonFlags is either no
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/listview_dz}*/
 class DzListView extends DzScrollView {
 	/**
- * @description The selected items
+ * @description ENUMERATOR: The selected items
 */
 	
-static Selected;
+	static Selected;
 	/**
- * @description The unselected items
+ * @description ENUMERATOR: The unselected items
 */
 	
-static Unselected;
+	static Unselected;
 	/**
- * @description The items that are checked
+ * @description ENUMERATOR: The items that are checked
 */
 	
-static Checked;
+	static Checked;
 	/**
- * @description The items that are not checked
+ * @description ENUMERATOR: The items that are not checked
 */
 	
-static NotChecked;
+	static NotChecked;
 	/**
- * @description All the items in the view
+ * @description ENUMERATOR: All the items in the view
 */
 	
-static All;
+	static All;
 	/**
- * @description The item is renamed if return is pressed or if the user clicks away from the entry field (it loses focus)
+ * @description ENUMERATOR: The item is renamed if return is pressed or if the user clicks away from the entry field (it loses focus)
 */
 	
-static Accept;
+	static Accept;
 	/**
- * @description The item is renamed only if the user presses return in the entry field. If the entry field loses focus, the rename operation is discarded.
+ * @description ENUMERATOR: The item is renamed only if the user presses return in the entry field. If the entry field loses focus, the rename operation is discarded.
 */
 	
-static Reject;
+	static Reject;
 	/**
- * @description The columns do not get resized
+ * @description ENUMERATOR: The columns do not get resized
 */
 	
-static NoColumn;
+	static NoColumn;
 	/**
- * @description All columns get resized equally
+ * @description ENUMERATOR: All columns get resized equally
 */
 	
-static AllColumns;
+	static AllColumns;
 	/**
- * @description The last column is resized to fit the width of the view
+ * @description ENUMERATOR: The last column is resized to fit the width of the view
 */
 	
-static LastColumn;
+	static LastColumn;
 	/**
- * @description Only one item in the list view can be selected
+ * @description ENUMERATOR: Only one item in the list view can be selected
 */
 	
-static Single;
+	static Single;
 	/**
- * @description Multiple items in the list view can be selected. When the user clicks on an item, its selection state is toggled on/off.
+ * @description ENUMERATOR: Multiple items in the list view can be selected. When the user clicks on an item, its selection state is toggled on/off.
 */
 	
-static Multi;
+	static Multi;
 	/**
- * @description Multiple items in the list view can be selected. When the user clicks on an item, the current selection is cleared, and that item becomes selected. Multiple items are selected by clicking with the CTRL key, or SHIFT key pressed, or by clicking and dragging.
+ * @description ENUMERATOR: Multiple items in the list view can be selected. When the user clicks on an item, the current selection is cleared, and that item becomes selected. Multiple items are selected by clicking with the CTRL key, or SHIFT key pressed, or by clicking and dragging.
 */
 	
-static Extended;
+	static Extended;
 	/**
- * @description No items in the list view can be selected
+ * @description ENUMERATOR: No items in the list view can be selected
 */
 	
-static NoSelection;
+	static NoSelection;
 	/**
- * @description The column width does not change automatically
+ * @description ENUMERATOR: The column width does not change automatically
 */
 	
-static Manual;
+	static Manual;
 	/**
- * @description The column width grows automatically according to the maximum width of all items in the column.
+ * @description ENUMERATOR: The column width grows automatically according to the maximum width of all items in the column.
 */
 	
-static Maximum;
+	static Maximum;
 	/**
  * @description Creates a list view widget with the given parent widget
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -12023,14 +17760,14 @@ class DzListViewItem extends QObject {
 	/**
  * @description Creates a list view item at the root level of the given list view
  * @constructor
-*/
+*/;
 	constructor(parent:DzListView, id=-1:Number) {
 	
 	}
 	/**
  * @description Creates a list view item as a child of the given list view item
  * @constructor
-*/
+*/;
 	constructor(parent:DzListViewItem, id=-1:Number) {
 	
 	}
@@ -12196,12 +17933,222 @@ class DzListViewItem extends QObject {
  * @classdesc There is only one of these widgets in the application, which is created and owned by DzApp. It can be accessed by using the Global.MainWindow variable.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/mainwindow_dz}*/
 class DzMainWindow extends QWidget {
-	static alwaysOnTop:Boolean;
-	static toolTipsEnabled:Boolean;
+	alwaysOnTop:Boolean;
+	toolTipsEnabled:Boolean;
 	/**
  * @description Presents the user with a dialog that asks if they want to save changes to the scene, and does a scene save if the user selects yes.
 */
-	static askSaveChanges() {
+	askSaveChanges() {
+	
+	}
+	/**
+ * @description Presents the user with a dialog that asks if they want to turn off limits to apply the preset currently being loaded.
+*/
+	askTurnOffLimits() {
+	
+	}
+	/**
+ * @description Checks to see if the given file already exists - if it does, prompts the user if they want to overwrite it.
+*/
+	checkExistingFile(name:String):Boolean {
+	
+	}
+	/**
+ * @description Clears a the current UI popup if there is one.
+*/
+	clearUIPopUp() {
+	
+	}
+	/**
+ * @description Display a message in the status bar.
+*/
+	displayPrompt(msg:String, millisec:Number):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	dockArea(pos:Point):DzDockArea {
+	
+	}
+	/**
+ * @description Displays a dialog for saving the scene to a non-native file, and saves the scene if the user does not cancel.
+*/
+	doFileExport(parent:QWidget):Boolean {
+	
+	}
+	/**
+ * @description Displays a dialog for loading a non-native file, and loads the file if the user does not cancel.
+*/
+	doFileImport(parent:QWidget):Boolean {
+	
+	}
+	/**
+ * @description Displays a dialog for loading a native scene file, and merges the file into the current scene if the user does not cancel.
+*/
+	doFileMerge(parent:QWidget):Boolean {
+	
+	}
+	/**
+ * @description Displays a dialog for loading a native scene file, and opens the file as a new scene if the user does not cancel.
+*/
+	doFileOpen(parent:QWidget):Boolean {
+	
+	}
+	/**
+ * @description Saves the scene to the current scene file - displaying a dialog to the user if a file needs to be selected.
+*/
+	doFileSave(parent:QWidget):Boolean {
+	
+	}
+	/**
+ * @description Displays a dialog for loading an image file, and loads the file if the user does not cancel.
+*/
+	doImageOpen(parent:QWidget):Image {
+	
+	}
+	/**
+ * @description Displays a dialog for saving the given image, and saves the image if the user does not cancel.
+*/
+	doImageSaveAs(image:Image, parent:QWidget):Boolean {
+	
+	}
+	/**
+ * @description Clears the scene
+*/
+	doNewFile() {
+	
+	}
+	/**
+ * @description Displays a dialog for saving the given video clip, and saves the clip if the user does not cancel.
+*/
+	doVideoClipSaveAs(clip:DzVideoClip, parent:QWidget):Boolean {
+	
+	}
+	/**
+ * @description Switches from full screen back to normal mode
+*/
+	exitFullScreen() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getActionMgr() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getBottomDockArea() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getCenterDockArea() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getInteractiveLessonMgr() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLeftDockArea() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPaneMgr() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRightDockArea() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTopDockArea() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getUIPopUp() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getViewportMgr() {
+	
+	}
+	/**
+ * @description Switches from normal to full screen mode
+*/
+	goFullScreen() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isUILocked() {
+	
+	}
+	/**
+ * @description Position the popup according to a widget.
+*/
+	positionUIPopUp(posWgt:QWidget):QWidget {
+	
+	}
+	/**
+ * @description Clear the message in the status bar.
+*/
+	removePrompt() {
+	
+	}
+	/**
+ * @description A convenience method for forcing a repaint of the currently active 3D viewport (if any).
+*/
+	repaintActive3DViewport() {
+	
+	}
+	/**
+ * @description Restores the state of the UI Lock variable to the setting in the registry.
+*/
+	restoreUILockState() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	setUILocked(onOff:Boolean, storeSetting:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Show the Home page dialog.
+*/
+	showHomeDlg() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	showUIPopUpWgt(filename:String, posWgt:QWidget):DzUIPopUpWgt {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	toggleUIPopUpWgt(filename:String, posWgt:QWidget):DzUIPopUpWgt {
 	
 	}
 
@@ -12222,295 +18169,307 @@ See Also:
  materialselectionset_dz
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/material_dz}*/
 class DzMaterial extends DzElement, DzRefCountedItem {
-	static assetAuthor:DzAuthor;
-	static assetFileRevision:DzVersion;
-	static assetId:String;
-	static assetModifiedDate:Date;
-	static assetSource:DzUri;
-	static assetUri:DzUri;
-	static renderPriority:DzRenderMgr;
+	assetAuthor:DzAuthor;
+	assetFileRevision:DzVersion;
+	assetId:String;
+	assetModifiedDate:Date;
+	assetSource:DzUri;
+	assetUri:DzUri;
+	renderPriority:DzRenderMgr;
+	/**
+ * @description Return Value:
+*/
+	static getMaterial(which:Number):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumMaterials() {
+	
+	}
 	/**
  * @description Parameter(s):
 */
-	static duplicateOrDefaultMaterial(context:DzElementDuplicateContext):void {
+	duplicateOrDefaultMaterial(context:DzElementDuplicateContext):void {
 	
 	}
 	/**
  * @description Sets whether or not this material should propagate its render priority up to all the nodes that use it. Setting this to true will also ensure that the render priority is set for nodes that the material is assigned to at a later time.
 */
-	static enablePropagateRenderPriorityToNodes(propagate:Boolean):Boolean {
+	enablePropagateRenderPriorityToNodes(propagate:Boolean):Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getActiveUVSet(shape:shape_dz):DzUVSet {
+	getActiveUVSet(shape:shape_dz):DzUVSet {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getActiveUVSet(geom:geometry_dz):DzUVSet {
+	getActiveUVSet(geom:geometry_dz):DzUVSet {
 	
 	}
 	/**
  * @description Collects all the images that are being used by this material at the current time and inserts them into the given list if they are not already there.
 */
-	static getAllMaps() {
+	getAllMaps() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getBakedMap() {
+	getBakedMap() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getBaseOpacity() {
+	getBaseOpacity() {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static getBoundingBox() {
+	getBoundingBox() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getColorMap() {
+	getColorMap() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getDiffuseColor() {
+	getDiffuseColor() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getIndex() {
+	getIndex() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getMaterialName() {
+	getMaterialName() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumGLMaps() {
+	getNumGLMaps() {
 	
 	}
 	/**
  * @description Deprecated
 */
-	static getNumUVMaps() {
+	getNumUVMaps() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getOpacityMap() {
+	getOpacityMap() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getPropagatePriorityControl() {
+	getPropagatePriorityControl() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getRenderPriorityControl() {
+	getRenderPriorityControl() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getShapeList() {
+	getShapeList() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getSmoothAngleControl() {
+	getSmoothAngleControl() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getSmoothControl() {
+	getSmoothControl() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getSmoothingAngle() {
+	getSmoothingAngle() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getTags() {
+	getTags() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getTagsControl() {
+	getTagsControl() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getUVSetControl() {
+	getUVSetControl() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isColorMappable() {
+	isColorMappable() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isHighlighted() {
+	isHighlighted() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isOpacityMappable() {
+	isOpacityMappable() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isOpaque() {
+	isOpaque() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isPropagateRenderPriorityToNodesEnabled() {
+	isPropagateRenderPriorityToNodesEnabled() {
 	
 	}
 	/**
  * @description Retrieve selection state.
 */
-	static isSelected() {
+	isSelected() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isSmoothingOn() {
+	isSmoothingOn() {
 	
 	}
 	/**
  * @description Marks the asset as being modified. Makes the current author the author of the file.
 */
-	static modifyAsset() {
+	modifyAsset() {
 	
 	}
 	/**
  * @description Marks the asset as being modified. Makes the current author the author of the file. Sets the file URI for the asset to the given URI.
 */
-	static modifyAsset(newUri:DzUri):Boolean {
+	modifyAsset(newUri:DzUri):Boolean {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static needsPtex() {
+	needsPtex() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static needsTangentSpaceParams() {
+	needsTangentSpaceParams() {
 	
 	}
 	/**
  * @description Set the selection state for this material.
 */
-	static select(onOff:Boolean):Boolean {
+	select(onOff:Boolean):Boolean {
 	
 	}
 	/**
  * @description Set the 'baked' shader map for this material. This overrides any current material settings and just draws the map. This is useful for representing the results of off-line shaders that can not be represented in OpenGL - the results of the shader are 'baked' onto a texture map, and then applied to the material with this function.
 */
-	static setBakedMap(img:DzTexture):DzTexture {
+	setBakedMap(img:DzTexture):DzTexture {
 	
 	}
 	/**
  * @description Set the opacity value for this material.
 */
-	static setBaseOpacity(val:Number):Number {
+	setBaseOpacity(val:Number):Number {
 	
 	}
 	/**
  * @description Set the color ('texture') map for this material.
 */
-	static setColorMap(img:DzTexture):DzTexture {
+	setColorMap(img:DzTexture):DzTexture {
 	
 	}
 	/**
  * @description Set the diffuse color for this material.
 */
-	static setDiffuseColor(color:Color):Color {
+	setDiffuseColor(color:Color):Color {
 	
 	}
 	/**
  * @description Set the opactiy map for this material.
 */
-	static setOpacityMap(img:DzTexture):DzTexture {
+	setOpacityMap(img:DzTexture):DzTexture {
 	
 	}
 	/**
  * @description Sets the smoothing angle for the material. This only has effect on the material if smoothing is enabled.
 */
-	static setSmoothingAngle(angle:Number):Number {
+	setSmoothingAngle(angle:Number):Number {
 	
 	}
 	/**
  * @description Sets whether or not smoothing is enabled for the material.
 */
-	static setSmoothingOn(onOff:Boolean):Boolean {
+	setSmoothingOn(onOff:Boolean):Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static shadersMatch(otherMat:DzMaterial):Boolean {
+	shadersMatch(otherMat:DzMaterial):Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static shouldAlwaysEmbed() {
+	shouldAlwaysEmbed() {
 	
 	}
 	/**
  * @description Causes this material to be drawn with a highlight based on the styles current highlight color. This is used by material selection tools, etc, to give visual feedback to the user about a material in the viewport.
 */
-	static startDrawHighlight() {
+	startDrawHighlight() {
 	
 	}
 	/**
  * @description Causes this material to stop being drawn with a highlight.
 */
-	static stopDrawHighlight() {
+	stopDrawHighlight() {
 	
 	}
 
@@ -12529,7 +18488,7 @@ class DzMaterialAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -12559,35 +18518,35 @@ class DzMatrix4 extends Object {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor(initIdentity=false:Boolean) {
 	
 	}
 	/**
  * @description Constructs a 4×4 matrix from 16 elements in "Column Major" order.
  * @constructor
-*/
+*/;
 	constructor(m11:Number, m21:Number, m31:Number, m41:Number, m12:Number, m22:Number, m32:Number, m42:Number, m13:Number, m23:Number, m33:Number, m43:Number, m14:Number, m24:Number, m34:Number, m44:Number) {
 	
 	}
 	/**
  * @description Constructor from three axes of the rotation coord system. These are assumed to be (but do not have to be if a sheared or warped coord system is desired) to be orthogonal unit vectors.
  * @constructor
-*/
+*/;
 	constructor(xAxis:DzVec3, yAxis:DzVec3, zAxis:DzVec3) {
 	
 	}
 	/**
  * @description Constructs a 4×4 matrix from a quaternion. Initializes the matrix to the given rotation.
  * @constructor
-*/
+*/;
 	constructor(rot:DzQuat) {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/
+*/;
 	constructor(mat:DzMatrix4) {
 	
 	}
@@ -12788,7 +18747,55 @@ class DzMenu extends QObject {
 	/**
  * @description Adds the DzAction to the given menu.
 */
-	static addAction(action:DzAction, menu:Number):Number {
+	addAction(action:DzAction, menu:Number):Number {
+	
+	}
+	/**
+ * @description Adds an entry to the given menu.
+*/
+	addItem(item:String, menu:Number):Number {
+	
+	}
+	/**
+ * @description Adds an entry to the given menu and connects it to a slot.
+*/
+	addItem(item:String, :const, member:String, menu:Number):Number {
+	
+	}
+	/**
+ * @description Adds a separator bar to the given menu.
+*/
+	addSeparator(menu:Number):Number {
+	
+	}
+	/**
+ * @description Creates a submenu with the given label, and adds it to the given menu.
+*/
+	addSubMenu(label:String, menu:Number):Number {
+	
+	}
+	/**
+ * @description Shows the menu to the user.
+*/
+	exec(pos:Point):Number {
+	
+	}
+	/**
+ * @description Shows the menu to the user.
+*/
+	exec() {
+	
+	}
+	/**
+ * @description Finds a submenu with the given label, and returns its menu id.
+*/
+	findSubMenu(label:String, menu:Number):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isEmpty() {
 	
 	}
 
@@ -12840,7 +18847,25 @@ class DzMessageBox extends QObject {
 	/**
  * @description Shows a critical dialog box to the user.
 */
-	static critical(text:String, title:String, button0:String, button1:String, button2:String):Number {
+	critical(text:String, title:String, button0:String, button1:String, button2:String):Number {
+	
+	}
+	/**
+ * @description Shows an information dialog box to the user.
+*/
+	information(text:String, title:String, button0:String, button1:String, button2:String):Number {
+	
+	}
+	/**
+ * @description Shows a question dialog box to the user.
+*/
+	question(text:String, title:String, button0:String, button1:String, button2:String):Number {
+	
+	}
+	/**
+ * @description Shows a warning dialog box to the user.
+*/
+	warning(text:String, title:String, button0:String, button1:String, button2:String):Number {
 	
 	}
 
@@ -12853,7 +18878,19 @@ class DzModifier extends DzElement {
 	/**
  * @description Return Value:
 */
-	static getAssignedModifierStackSectionID() {
+	getAssignedModifierStackSectionID() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPreferredModifierStackSectionID() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getUnknownModifierStackSectionID() {
 	
 	}
 
@@ -12873,125 +18910,131 @@ Attention:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/morphloader_dz}*/
 class DzMorphLoader extends QObject {
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static WeightMap;
+	static WeightMap;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static FacetList;
+	static FacetList;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static EdgeList;
+	static EdgeList;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static VertexList;
+	static VertexList;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static UnknownMap;
+	static UnknownMap;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static EntireFigure;
+	static EntireFigure;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static SelectedNodes;
+	static SelectedNodes;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static PrimaryNode;
+	static PrimaryNode;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static SingleSkinFigure;
+	static SingleSkinFigure;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static SingleSkinFigureFromGraft;
+	static SingleSkinFigureFromGraft;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static DoNotMirror;
+	static DoNotMirror;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static XSwap;
+	static XSwap;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static XPosToNeg;
+	static XPosToNeg;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static XNegToPos;
+	static XNegToPos;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static YSwap;
+	static YSwap;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static YPosToNeg;
+	static YPosToNeg;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static YNegToPos;
+	static YNegToPos;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static ZSwap;
+	static ZSwap;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static ZPosToNeg;
+	static ZPosToNeg;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static ZNegToPos;
+	static ZNegToPos;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static MakeUnique;
+	static MakeUnique;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static DeltasAndERCLinks;
+	static DeltasAndERCLinks;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static DeltasOnly;
+	static DeltasOnly;
 	/**
  * @description Default Constructor. Creates a morph loader with default settings.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Gets the path for a given weight map context and a given node.
+*/
+	static getPathForContext(context:DzWeightMapContext, node:DzNode):String {
 	
 	}
 	/**
@@ -13322,7 +19365,7 @@ class DzMorphLoaderBatch extends QObject {
 	/**
  * @description Default Constructor. Creates a morph loader batch that will be applied to the given node.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -13330,6 +19373,120 @@ class DzMorphLoaderBatch extends QObject {
  * @description Adds a morph to the list to load.
 */
 	addFromConfigFile(filename:String):String {
+	
+	}
+	/**
+ * @description Adds a morph to the list to load.
+*/
+	addFromFile(file:String):String {
+	
+	}
+	/**
+ * @description Adds a list of morphs to the list to load.
+*/
+	addFromFiles(files:Array):Array {
+	
+	}
+	/**
+ * @description Adds a morph to the list to load.
+*/
+	addFromMesh(mesh:vertexmesh_dz):void {
+	
+	}
+	/**
+ * @description Adds a morph to the list to load.
+*/
+	addMorph(morph:DzMorphLoader):DzMorphLoader {
+	
+	}
+	/**
+ * @description Clears the list of morphs to load.
+*/
+	clear() {
+	
+	}
+	/**
+ * @description Creates morphs on the node provided from the given geometry. This function supports morph creation from vertex-only geometries.
+*/
+	createMorphs(mesh:vertexmesh_dz, node:DzNode, onlyErrorsOrWarnings:Boolean, plainText:Boolean):String {
+	
+	}
+	/**
+ * @description Creates morphs on the node provided from the geometry loaded from the files. This function supports morph creation from vertex-only geometries.
+*/
+	createMorphs(settings:DzFileIOSettings, node:DzNode, onlyErrorsOrWarnings:Boolean, plainText:Boolean):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findMorph(morph:DzMorphLoader):Number {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getMorph(index:Number):DzMorphLoader {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNode() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumMorphs() {
+	
+	}
+	/**
+ * @description Moves the position of a morph in the list.
+*/
+	moveMorph(morph:DzMorphLoader, upDown:Boolean):DzMorphLoader {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	presetConfigurationFile() {
+	
+	}
+	/**
+ * @description Removes a morph from the list to load.
+*/
+	removeMorph(morph:DzMorphLoader):DzMorphLoader {
+	
+	}
+	/**
+ * @description Saves project (and potentially object) settings to configuration files (*.dsx).
+*/
+	saveProjectSettingsToConfigFile(filename:String, saveRelative:Boolean, saveObjects:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the node with the object to load morphs for.
+*/
+	setNode(node:DzNode):DzNode {
+	
+	}
+	/**
+ * @description Sets the filename of a preset configuration file to use to setup morphs that are added to the list from file.
+*/
+	setPresetConfigurationFile(filename:String):String {
+	
+	}
+	/**
+ * @description Sets whether or not a preset configuration file should be used to setup morphs that are added from file.
+*/
+	setUsePresetConfiguration(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	usePresetConfiguration() {
 	
 	}
 
@@ -13348,7 +19505,7 @@ class DzMorphSupportAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -13359,27 +19516,75 @@ Add description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/multimediamgr_dz}*/
 class DzMultiMediaMgr extends QObject {
 	/**
+ * @description Uses the filename extension to find an appropriate audio importer.
+*/
+	static findAudioImporter(filename:String):DzAudioImporter {
+	
+	}
+	/**
+ * @description Uses the filename extension to find an appropriate video exporter.
+*/
+	static findVideoExporter(filename:String):DzVideoExporter {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	static getAudioImporter(i:Number):DzAudioImporter {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumAudioImporters() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumVideoExporters() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	static getVideoExporter(i:Number):DzVideoExporter {
+	
+	}
+	/**
+ * @description Populates the given filter with all the audio types recognized by the multimedia manager.
+*/
+	static makeAudioImportFileFilter(filter:DzFileFilter, defaultFilter:String, makeAllFilesEntry:Boolean):DzFileFilter {
+	
+	}
+	/**
+ * @description Populates the given filter with all the video types recognized by the multimedia manager.
+*/
+	static makeVideoExportFileFilter(filter:DzFileFilter, defaultFilter:String):DzFileFilter {
+	
+	}
+	/**
  * @description Export the clip to a video file.
 */
-	static exportVideoClip(fileName:String, clip:DzVideoClip, exporterIndex:Number):DzError {
+	exportVideoClip(fileName:String, clip:DzVideoClip, exporterIndex:Number):DzError {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getAudioClipLoadPath() {
+	getAudioClipLoadPath() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getVideoClipSavePath() {
+	getVideoClipSavePath() {
 	
 	}
 	/**
  * @description Import an audio clip from a file.
 */
-	static importAudioClip(fileName:String, clip:DzAudioClip, importerIndex:Number):DzError {
+	importAudioClip(fileName:String, clip:DzAudioClip, importerIndex:Number):DzError {
 	
 	}
 
@@ -13392,7 +19597,7 @@ class DzMultiplyBlend extends DzImageBlend {
 	/**
  * @description Default Constructor
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -13420,199 +19625,199 @@ Since:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/nodealigner_dz}*/
 class DzNodeAligner extends QObject {
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static NoneX;
+	static NoneX;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AlignXLefts;
+	static AlignXLefts;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AlignXCenters;
+	static AlignXCenters;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AlignXOrigins;
+	static AlignXOrigins;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AlignXRights;
+	static AlignXRights;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static StackXLefts;
+	static StackXLefts;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static StackXRights;
+	static StackXRights;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static DistributeXLefts;
+	static DistributeXLefts;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static DistributeXCenters;
+	static DistributeXCenters;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static DistributeXOrigins;
+	static DistributeXOrigins;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static DistributeXRights;
+	static DistributeXRights;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static NoneY;
+	static NoneY;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AlignYTops;
+	static AlignYTops;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AlignYCenters;
+	static AlignYCenters;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AlignYOrigins;
+	static AlignYOrigins;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AlignYBottoms;
+	static AlignYBottoms;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static StackYTops;
+	static StackYTops;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static StackYBottoms;
+	static StackYBottoms;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static DistributeYTops;
+	static DistributeYTops;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static DistributeYCenters;
+	static DistributeYCenters;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static DistributeYOrigins;
+	static DistributeYOrigins;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static DistributeYBottoms;
+	static DistributeYBottoms;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static NoneZ;
+	static NoneZ;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AlignZFronts;
+	static AlignZFronts;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AlignZCenters;
+	static AlignZCenters;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AlignZOrigins;
+	static AlignZOrigins;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AlignZBacks;
+	static AlignZBacks;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static StackZFronts;
+	static StackZFronts;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static StackZBacks;
+	static StackZBacks;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static DistributeZFronts;
+	static DistributeZFronts;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static DistributeZCenters;
+	static DistributeZCenters;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static DistributeZOrigins;
+	static DistributeZOrigins;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static DistributeZBacks;
+	static DistributeZBacks;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static UnitsM;
+	static UnitsM;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static UnitsCM;
+	static UnitsCM;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static UnitsYD;
+	static UnitsYD;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static UnitsFT;
+	static UnitsFT;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static UnitsIN;
+	static UnitsIN;
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -13620,6 +19825,138 @@ static UnitsIN;
  * @description Adds a node to the list of node to be processed.
 */
 	addNode(node:DzNode):DzError {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	canAlign() {
+	
+	}
+	/**
+ * @description Clears the list of nodes to be processed.
+*/
+	clearNodes() {
+	
+	}
+	/**
+ * @description Performs an alignment of nodes, based on the current options set.
+*/
+	doAlign() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNodes() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getXAlign() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getXUnits(size:UnitSize):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getXUseInterval() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getYAlign() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getYUnits(size:UnitSize):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getYUseInterval() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getZAlign() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getZUnits(size:UnitSize):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getZUseInterval() {
+	
+	}
+	/**
+ * @description Sets the align operation to perform along the X axis.
+*/
+	setXAlign(align:AlignX):void {
+	
+	}
+	/**
+ * @description Sets the interval to use along the X axis.
+*/
+	setXUnits(units:Number, size:UnitSize):Number {
+	
+	}
+	/**
+ * @description Sets whether or not to use an interval along the X axis.
+*/
+	setXUseInterval(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the align operation to perform along the Y axis.
+*/
+	setYAlign(align:AlignY):void {
+	
+	}
+	/**
+ * @description Sets the interval to use along the Y axis.
+*/
+	setYUnits(units:Number, size:UnitSize):Number {
+	
+	}
+	/**
+ * @description Sets whether or not to use an interval along the Y axis.
+*/
+	setYUseInterval(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the align operation to perform along the Z axis.
+*/
+	setZAlign(align:AlignZ):void {
+	
+	}
+	/**
+ * @description Sets the interval to use along the Z axis.
+*/
+	setZUnits(units:Number, size:UnitSize):Number {
+	
+	}
+	/**
+ * @description Sets whether or not to use an interval along the Z axis.
+*/
+	setZUseInterval(onOff:Boolean):Boolean {
 	
 	}
 
@@ -13631,14 +19968,75 @@ class DzNodeProperty extends DzProperty {
 	/**
  * @description Constructor. Creates a non-animatable, non-user property.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Parameter(s):
+ * @constructor
+*/;
+	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean) {
 	
 	}
 	/**
  * @description Excludes the given node from becoming the value of this property.
 */
 	exclude(node:DzNode):DzNode {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDefaultValue() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getKeyValue(i:Number):DzNode {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getValue(tm:DzTime):DzNode {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getValue() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	isExcluded(node:DzNode):Boolean {
+	
+	}
+	/**
+ * @description Set the default value of the property.
+*/
+	setDefaultValue(val:DzNode):DzNode {
+	
+	}
+	/**
+ * @description Set the value of the property for the given key.
+*/
+	setKeyValue(which:Number, val:DzNode):Number {
+	
+	}
+	/**
+ * @description Set the value of the property at the given time.
+*/
+	setValue(tm:DzTime, val:DzNode):DzTime {
+	
+	}
+	/**
+ * @description Set the value of the property.
+*/
+	setValue(val:DzNode):DzNode {
 	
 	}
 
@@ -13650,7 +20048,7 @@ class DzNodeSelectionComboBox extends DzWidget {
 	/**
  * @description Creates a node selection combobox as a child of the given parent widget.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget, nodeType="DzNode":String, allowNone=false:Boolean) {
 	
 	}
@@ -13658,6 +20056,48 @@ class DzNodeSelectionComboBox extends DzWidget {
  * @description Clears the selection of any node(s).
 */
 	clearNodeSelection() {
+	
+	}
+	/**
+ * @description Gets the nodes to be shown in the popup.
+*/
+	getNodes() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSelectedNode() {
+	
+	}
+	/**
+ * @description Hide the popup.
+*/
+	hidePopup() {
+	
+	}
+	/**
+ * @description Sets the node from the scene to be shown in the popup.
+*/
+	setNode(node:DzNode):DzNode {
+	
+	}
+	/**
+ * @description Sets the nodes from the scene to be shown in the popup.
+*/
+	setNodes(nodes:Array):Array {
+	
+	}
+	/**
+ * @description Sets the node from the scene to be selected.
+*/
+	setSelectedNode(node:DzNode):DzNode {
+	
+	}
+	/**
+ * @description Display the popup.
+*/
+	showPopup() {
 	
 	}
 
@@ -13676,7 +20116,7 @@ class DzNodeSupportAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -13684,6 +20124,12 @@ Add description.
  * @description Return Value:
 */
 	getSetNode() {
+	
+	}
+	/**
+ * @description Sets a node to save support assets for.
+*/
+	setNode(node:DzNode):DzNode {
 	
 	}
 
@@ -13695,14 +20141,39 @@ class DzNumericNodeProperty extends DzFloatProperty {
 	/**
  * @description Default Constructor. Creates a non-animatable, non-user property.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Parameter(s):
+ * @constructor
+*/;
+	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean, initVal=0.0:Number) {
 	
 	}
 	/**
  * @description Return Value:
 */
 	getNode() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isInvalidWithoutNode() {
+	
+	}
+	/**
+ * @description Sets whether or not this property value is valid when no node is assigned.
+*/
+	setMustHaveNode(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Set the node for this property.
+*/
+	setNode(node:DzNode):DzNode {
 	
 	}
 
@@ -13713,34 +20184,364 @@ Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/numericproperty_dz}*/
 class DzNumericProperty extends DzProperty {
 	/**
- * @description Default - this property is not associated with an axis.
+ * @description ENUMERATOR: Default - this property is not associated with an axis.
 */
 	
-static NO_INTEREST;
+	static NO_INTEREST;
 	/**
- * @description Value is used by an X Axis control.
+ * @description ENUMERATOR: Value is used by an X Axis control.
 */
 	
-static X_INTEREST;
+	static X_INTEREST;
 	/**
- * @description Value is used by an Y Axis control.
+ * @description ENUMERATOR: Value is used by an Y Axis control.
 */
 	
-static Y_INTEREST;
+	static Y_INTEREST;
 	/**
- * @description Value is used by an Z Axis control.
+ * @description ENUMERATOR: Value is used by an Z Axis control.
 */
 	
-static Z_INTEREST;
+	static Z_INTEREST;
 	/**
- * @description Value is used by the General Scale control.
+ * @description ENUMERATOR: Value is used by the General Scale control.
 */
 	
-static ALL_INTEREST;
+	static ALL_INTEREST;
 	/**
  * @description Clear the image map for this property.
 */
-	static clearMap() {
+	clearMap() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	copyMapFrom(otherProp:DzNumericProperty):void {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	doesClampChangeValue() {
+	
+	}
+	/**
+ * @description Searches node for a property that matches the name of this property.
+*/
+	findMatchingProperty(node:DzNode, useStrictMatching:Boolean):DzProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDefaultMapGamma() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDefaultMapTextureType() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getDoubleDefaultValue() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getDoubleValue(tm:DzTime):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDoubleValue() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getFollowProperty() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getFollowValue() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getFollowValue(tm:DzTime):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLinkProperty() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getMapValue() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getMapValue(time:DzTime):DzTexture {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getNDoubleValue() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getNDoubleValue(tm:DzTime):DzTime {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getNValueCount() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTextureModifier() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTextureModifierFlags() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getValueAsFloatColor(tm:DzTime):DzFloatColor {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getValueAsFloatColor() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getValueAsInt2() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getValueAsInt2(tm:DzTime):DzInt2 {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getValueAsVec2() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getValueAsVec2(tm:DzTime):DzVec2 {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getValueAsVec3() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getValueAsVec3(tm:DzTime):DzVec3 {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getXYZInterest() {
+	
+	}
+	/**
+ * @description Adds a controller to this property.
+*/
+	insertController(controller:DzNumericController, idx:Number):DzNumericController {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isClamped() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isInvalidWithoutMap() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isLinked() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isMappable() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isMapped() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isMaster() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isModulo() {
+	
+	}
+	/**
+ * @description Establishes a direct link between this property and the given property.
+*/
+	linkTo(master:DzNumericProperty):void {
+	
+	}
+	/**
+ * @description Sets the default map gamma.
+*/
+	setDefaultMapGamma(gamma:Number):Number {
+	
+	}
+	/**
+ * @description Sets the default map texture type.
+*/
+	setDefaultMapTextureType(type:Number):Number {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	setDoubleDefaultValue(val:Number):Number {
+	
+	}
+	/**
+ * @description Sets the value for this property at the current time, or the default value if this property is not animatable, as a double precision number.
+*/
+	setDoubleValue(val:Number):Number {
+	
+	}
+	/**
+ * @description Sets the value of the property at the given time, with the double precision number.
+*/
+	setDoubleValue(tm:DzTime, val:Number):DzTime {
+	
+	}
+	/**
+ * @description Sets whether or not the value is clamped to its min and max.
+*/
+	setIsClamped(val:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not this property is mappable.
+*/
+	setIsMappable(val:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not the value is modulo over min and max; i.e., the amount in which the value exceeds the min or max is applied as the value in the same direction from the opposite limit.
+*/
+	setIsModulo(val:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Set the image map for this property.
+*/
+	setMap(imgFile:String):String {
+	
+	}
+	/**
+ * @description Set the image map for this property.
+*/
+	setMap(img:DzTexture):DzTexture {
+	
+	}
+	/**
+ * @description Sets whether or not this property value is valid when no map is assigned.
+*/
+	setMustHaveMap(val:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the texture modifier.
+*/
+	setTextureModifier(txtMod:DzTextureModifier):void {
+	
+	}
+	/**
+ * @description Sets texture modifier flags for this property.
+*/
+	setTextureModifierFlags(flags:Number):Number {
+	
+	}
+	/**
+ * @description Set the XYZ interest for this property.
+*/
+	setXYZInterest(interest:XYZInterest):XYZInterest {
+	
+	}
+	/**
+ * @description Unlinks this property.
+*/
+	unlink() {
 	
 	}
 
@@ -13750,12 +20551,48 @@ static ALL_INTEREST;
 Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/object_q}*/
 class QObject {
-	static objectName:String;
-	static name:String;
+	objectName:String;
+	name:String;
 	/**
  * @description Schedules this object for deletion.
 */
-	static deleteLater() {
+	deleteLater() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findChild(name:String):Object {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findChildren(name:String):Array {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	toString() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	className() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	inherits(classname:String):Boolean {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	isA(classname:String):Boolean {
 	
 	}
 
@@ -13774,7 +20611,7 @@ class DzObjExporter extends DzExporter {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -13794,7 +20631,7 @@ class DzObjImporter extends DzGeometryImporter {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -13810,7 +20647,7 @@ class DzOffsetManip extends DzImageManip {
 	/**
  * @description Holds the vertical offset.
  * @constructor
-*/
+*/;
 	constructor(x=0:Number, y=0:Number) {
 	
 	}
@@ -13831,7 +20668,7 @@ class DzOpacityManip extends DzImageManip {
 	/**
  * @description Holds the opacity value.
  * @constructor
-*/
+*/;
 	constructor(opacity=1.0:Number) {
 	
 	}
@@ -13841,6 +20678,12 @@ class DzOpacityManip extends DzImageManip {
 	getOpacity() {
 	
 	}
+	/**
+ * @description Sets the opacity for the image.
+*/
+	setOpacity(opacity:Number):Number {
+	
+	}
 
 }
 /**
@@ -13848,29 +20691,29 @@ class DzOpacityManip extends DzImageManip {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/opengl_dz}*/
 class DzOpenGL extends QObject {
 	/**
- * @description Lowest quality / Best performance. Texture sizes are clamped to a small size or the maximum size supported by the hardware, whichever is less.
+ * @description ENUMERATOR: Lowest quality / Best performance. Texture sizes are clamped to a small size or the maximum size supported by the hardware, whichever is less.
 */
 	
-static OGLLow;
+	static OGLLow;
 	/**
- * @description Medium quality / Better performance. Texture sizes are clamped to a medium size or the maximum size supported by the hardware, whichever is less.
+ * @description ENUMERATOR: Medium quality / Better performance. Texture sizes are clamped to a medium size or the maximum size supported by the hardware, whichever is less.
 */
 	
-static OGLMed;
+	static OGLMed;
 	/**
- * @description High quality / Good performance. Texture sizes are clamped to a large size or the maximum size supported by the hardware, whichever is less.
+ * @description ENUMERATOR: High quality / Good performance. Texture sizes are clamped to a large size or the maximum size supported by the hardware, whichever is less.
 */
 	
-static OGLHigh;
+	static OGLHigh;
 	/**
- * @description Best quality / Low performance. Texture sizes are clamped to the maximum size supported by the hardware.
+ * @description ENUMERATOR: Best quality / Low performance. Texture sizes are clamped to the maximum size supported by the hardware.
 */
 	
-static OGLBest;
+	static OGLBest;
 	/**
  * @description Return Value:
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -13878,6 +20721,222 @@ static OGLBest;
  * @description Return Value:
 */
 	getBoundingBoxActiveOpacity() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getBoundingBoxEdgeLength() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getBoundingBoxInactiveOpacity() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDepthBufferBits() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDrawNodeHighlight() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getMajorVersion() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getMaxTextureSize() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getMaxTextureUnits() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getMinorVersion() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumAuxBuffers() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumLights() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumOGLExtensions() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getOpenGLVersion() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPBuffer() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getReleaseNumber() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSubDivisionWireOpacity() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTextureQuality() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTextureQualityMaxSize() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTriDivisionWireOpacity() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getWireframeOpacity() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isDisplayOptimizationEnabled() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isMultisampleEnabled() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isMultisampleSupported() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	isOGLExtensionSupported(extension:String):Boolean {
+	
+	}
+	/**
+ * @description Checks for support of the four following extensions: GL_ARB_shader_objects, GL_ARB_fragment_shader, GL_ARB_vertex_shader, GL_ARB_shading_language_100. All four extensions must exist for this function to return true.
+*/
+	isOGLShaderLanguageSupported() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isShadowingSupported() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isVBOSupported() {
+	
+	}
+	/**
+ * @description Sets the opacity of the bounding box for active ( highlighted ) nodes.
+*/
+	setBoundingBoxActiveOpacity(opacity:Number):Number {
+	
+	}
+	/**
+ * @description Sets the length of the edges of the bounding boxes.
+*/
+	setBoundingBoxEdgeLength(length:Number):Number {
+	
+	}
+	/**
+ * @description Sets the opacity of the bounding box for inactive nodes that are selected.
+*/
+	setBoundingBoxInactiveOpacity(opacity:Number):Number {
+	
+	}
+	/**
+ * @description Sets whether or not display optimization is enabled in the OpenGL viewports
+*/
+	setDisplayOptimizationEnabled(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	setDrawNodeHighlight(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not multisampling is enabled in the OpenGL viewports
+*/
+	setMultisampleEnabled(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the opacity of the wireframe for the generated edges of a subdivided mesh.
+*/
+	setSubDivisionWireOpacity(opacity:Number):Number {
+	
+	}
+	/**
+ * @description Sets the quality setting for loading OpenGL textures
+*/
+	setTextureQuality(quality:OGLTexQuality):OGLTexQuality {
+	
+	}
+	/**
+ * @description Sets the opacity of the wireframe for the generated edges of a subdivided mesh.
+*/
+	setTriDivisionWireOpacity(opacity:Number):Number {
+	
+	}
+	/**
+ * @description Sets the opacity of the wireframe for the edges of a mesh.
+*/
+	setWireframeOpacity(opacity:Number):Number {
 	
 	}
 
@@ -13891,8 +20950,43 @@ class DzOrientedBox3 extends Object {
 	/**
  * @description Constructor. Creates an uninitialized box with an identity transform - the first point included in an uninitialized box will become the min and max for the box.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Copy constructor.
+ * @constructor
+*/;
+	constructor(box:DzOrientedBox3) {
+	
+	}
+	/**
+ * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Creates an uninitialized box with the given transform - the first point included in an uninitialized box will become the min and max for the box.
+ * @constructor
+*/;
+	constructor(transform:DzMatrix3) {
+	
+	}
+	/**
+ * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Creates an oriented box that is the given box with the given transform.
+ * @constructor
+*/;
+	constructor(box:DzBox3, transform:DzMatrix3) {
+	
+	}
+	/**
+ * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Creates an oriented box that is the given box with the given transform.
+ * @constructor
+*/;
+	constructor(box:DzBox3, translation:DzVec3, rotation:DzQuat, scale:DzVec3) {
+	
+	}
+	/**
+ * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Creates an uninitialized box with the given transform - the first point included in an uninitialized box will become the min and max for the box.
+ * @constructor
+*/;
+	constructor(translation:DzVec3, rotation:DzQuat, scale:DzVec3) {
 	
 	}
 
@@ -13934,7 +21028,7 @@ class Palette extends QObject {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor(active:Palette, disabled:Palette, inactive:Palette) {
 	
 	}
@@ -13959,7 +21053,103 @@ class DzPane extends QWidget {
 	/**
  * @description Sub classes must reimplement this function to generate a default options menu if they have one. This function is called when the pane is loaded for the first time or the interface is reset. Otherwise, the option menus are loaded from the user's interface settings file.
 */
-	static buildOptionsMenu(menu:DzActionMenu):DzActionMenu {
+	buildOptionsMenu(menu:DzActionMenu):DzActionMenu {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLabel() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getOptionsMenu() {
+	
+	}
+	/**
+ * @description Sub classes must reimplement this function to provide the interface manager with the ability to update the user's settings file when the pane's default menu has changed. This function should return a value of 1 or greater if the pane provides a menu. Each time the default menu changes, this number should be incremented.
+*/
+	getOptionsMenuVersion() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPaneGroup() {
+	
+	}
+	/**
+ * @description Hides this pane in the interface.
+*/
+	hidePane() {
+	
+	}
+	/**
+ * @description Moves the DzPaneGroup that this pane is in, out of an undockable dialog.
+*/
+	makeGroupDockable() {
+	
+	}
+	/**
+ * @description Moves the DzPaneGroup that this pane resides in to a dialog.
+*/
+	makeGroupUndockable() {
+	
+	}
+	/**
+ * @description Creates a DzPaneGroup in a dialog, and moves this pane into it.
+*/
+	makeUndockable(minSize:Size):Size {
+	
+	}
+	/**
+ * @description Moves this pane from its current pane group into the given pane group.
+*/
+	moveToGroup(group:DzPaneGroup):DzPaneGroup {
+	
+	}
+	/**
+ * @description Called to refresh internal pane data when scene contents, etc have changed.
+*/
+	refresh() {
+	
+	}
+	/**
+ * @description Sub classes must reimplement this function to restore their saved settings.
+*/
+	restoreSettings(settings:DzPaneSettings):DzPaneSettings {
+	
+	}
+	/**
+ * @description Sub classes must reimplement this function to save their current settings.
+*/
+	saveSettings(settings:DzPaneSettings):DzPaneSettings {
+	
+	}
+	/**
+ * @description Sets the label for this pane.
+*/
+	setLabel(label:String):String {
+	
+	}
+	/**
+ * @description Shows this pane in the interface.
+*/
+	showPane() {
+	
+	}
+	/**
+ * @description Creates an undocked DzPaneGroup and moves this pane into it.
+*/
+	undock(pos:Point, size:Size):Point {
+	
+	}
+	/**
+ * @description Undocks the DzPaneGroup that this pane resides in.
+*/
+	undockGroup(pos:Point, size:Size):Point {
 	
 	}
 
@@ -13971,7 +21161,73 @@ class DzPaneGroup extends DzDockWindow {
 	/**
  * @description Return Value:
 */
-	static getCurrentPane() {
+	getCurrentPane() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDragOffset() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumPanes() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumShownPanes() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getPane(i:Number):DzPane {
+	
+	}
+	/**
+ * @description Hides all panes without changing their group ownership.
+*/
+	hideAllPanes() {
+	
+	}
+	/**
+ * @description Hides the given pane without changing its group ownership.
+*/
+	hidePane(pane:DzPane):DzPane {
+	
+	}
+	/**
+ * @description Sets whether this pane group's tab bar is hidden or not. Emits DzPane.tabBarHiddenChanged(). When the tab bar is hidden, the options menu for the current pane is not visible. If desired, DzPane instances should connect to it's DzPane.tabBarHiddenChanged() signal to be able to provide an alternate options menu when the tab bar is hidden.
+*/
+	hideTabBar(hide:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isUndockable() {
+	
+	}
+	/**
+ * @description Enable or disabled the given pane in the interface, if it is a member of this group.
+*/
+	setPaneEnabled(pane:DzPane, enabled:Boolean):DzPane {
+	
+	}
+	/**
+ * @description Makes sure the given pane is showing (if it is a member of this group).
+*/
+	showPane(pane:DzPane):DzPane {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	tabBarHidden() {
 	
 	}
 
@@ -13981,34 +21237,520 @@ class DzPaneGroup extends DzDockWindow {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/panemgr_dz}*/
 class DzPaneMgr extends QWidget {
 	/**
- * @description Not docked.
+ * @description ENUMERATOR: Not docked.
 */
 	
-static NO_DOCKING;
+	static NO_DOCKING;
 	/**
- * @description Docked on the left side.
+ * @description ENUMERATOR: Docked on the left side.
 */
 	
-static DOCK_LEFT;
+	static DOCK_LEFT;
 	/**
- * @description Docked on the top.
+ * @description ENUMERATOR: Docked on the top.
 */
 	
-static DOCK_TOP;
+	static DOCK_TOP;
 	/**
- * @description Docked on the right side.
+ * @description ENUMERATOR: Docked on the right side.
 */
 	
-static DOCK_RIGHT;
+	static DOCK_RIGHT;
 	/**
- * @description Docked on the bottom.
+ * @description ENUMERATOR: Docked on the bottom.
 */
 	
-static DOCK_BOTTOM;
+	static DOCK_BOTTOM;
 	/**
  * @description Adds the activity layout to the list of layouts.
 */
-	static addActivityLayout(layout:DzActivityLayout):DzActivityLayout {
+	addActivityLayout(layout:DzActivityLayout):DzActivityLayout {
+	
+	}
+	/**
+ * @description Adds the given pane group dialog to the list of dialogs.
+*/
+	addPaneGroupDlg(dlg:panegroupdlg_dz):void {
+	
+	}
+	/**
+ * @description Removes all panes from all groups.
+*/
+	clearAllGroups() {
+	
+	}
+	/**
+ * @description Closes all pane group dialogs.
+*/
+	closeAllPaneGroupDlgs() {
+	
+	}
+	/**
+ * @description Creates a new activity layout and adds it to the list.
+*/
+	createActivityLayout(name:String, description:String):DzActivityLayout {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	createEmptyPaneGroup() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	createToolBar(name:String):DzToolBar {
+	
+	}
+	/**
+ * @description Sets whether or not the activity bar is visible in the interface.
+*/
+	enableActivityBar(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findActivityLayout(name:String):DzActivityLayout {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findDockBar(className:String):DzDockBar {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findDockBarByName(name:String):DzDockBar {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findPane(className:String):DzPane {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findToolBar(name:String):DzToolBar {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getActiveActivityLayout() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getActiveActivityLayoutIndex() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getActivityBarImage() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getActivityBarImageList() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getActivityLayout(which:Number):DzActivityLayout {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getAdvancedLayout() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getBasicLayout() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDefaultLayout() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDefaultLayoutNames() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getDockBar(i:Number):DzDockBar {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumActivityLayouts() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumDockBars() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumPaneGroupDlgs() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumPaneGroups() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumPanes() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumToolBars() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getOrientTabsAlongTop() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getPaneGroup(which:Number):DzPaneGroup {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getPaneGroupDlg(which:Number):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPaneGroupList() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPaneList() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getProLayout() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSessionLayout() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getShowLessonStrip() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSimpleLayout() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getStandardLayout() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getToolBar(i:Number):DzToolBar {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getUseWorkflowAssistance() {
+	
+	}
+	/**
+ * @description Hide all panes from view in the interface.
+*/
+	hideAllPanes() {
+	
+	}
+	/**
+ * @description Hides all the tool bars in the application.
+*/
+	hideAllToolBars() {
+	
+	}
+	/**
+ * @description Hide the given pane from view in the interface.
+*/
+	hidePane(pane:DzPane):DzError {
+	
+	}
+	/**
+ * @description Hide the given pane from view in the interface.
+*/
+	hidePane(className:String):DzError {
+	
+	}
+	/**
+ * @description Hide a pane group in the interface.
+*/
+	hidePaneGroup(which:Number):DzError {
+	
+	}
+	/**
+ * @description Hide a pane group in the interface.
+*/
+	hidePaneGroup(group:DzPaneGroup):DzError {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isActivityBarEnabled() {
+	
+	}
+	/**
+ * @description Loads the next image from the directory and sets it for the activity bar.
+*/
+	loadNextActivityBarImage() {
+	
+	}
+	/**
+ * @description Moves a group to a new dock location.
+*/
+	movePaneGroup(group:DzPaneGroup, dock:DockSide):DzError {
+	
+	}
+	/**
+ * @description Moves a group to a new dock location.
+*/
+	movePaneGroup(group:DzPaneGroup, dock:DockSide, index:Number, newLine:Boolean):DzError {
+	
+	}
+	/**
+ * @description Removes the given layout.
+*/
+	removeActivityLayout(name:String):Boolean {
+	
+	}
+	/**
+ * @description Removes the given layout.
+*/
+	removeActivityLayout(which:Number):Boolean {
+	
+	}
+	/**
+ * @description Removes all the current layouts.
+*/
+	removeAllActivityLayouts() {
+	
+	}
+	/**
+ * @description Removes all tool bars from the application.
+*/
+	removeAllToolBars() {
+	
+	}
+	/**
+ * @description Removes the given pane group.
+*/
+	removePaneGroup(group:DzPaneGroup):DzPaneGroup {
+	
+	}
+	/**
+ * @description Removes the given pane group dialog from the list of dialogs.
+*/
+	removePaneGroupDlg(dlg:panegroupdlg_dz):void {
+	
+	}
+	/**
+ * @description Removes a tool bar from the application.
+*/
+	removeToolBar(name:String):String {
+	
+	}
+	/**
+ * @description Restores the activity layout from the given file.
+*/
+	restoreLayout(filename:String, executeScript:Boolean):DzError {
+	
+	}
+	/**
+ * @description Deprecated
+*/
+	restoreLayout(filename:String):DzError {
+	
+	}
+	/**
+ * @description Saves the current activity layout to the given file.
+*/
+	saveLayout(filename:String, description:String):DzError {
+	
+	}
+	/**
+ * @description Selects the lesson at the given path.
+*/
+	selectLesson(path:String):Boolean {
+	
+	}
+	/**
+ * @description Sets the active activity layout.
+*/
+	setActiveActivityLayout(which:Number):Number {
+	
+	}
+	/**
+ * @description Sets the active layout.
+*/
+	setActiveActivityLayout(layout:DzActivityLayout):DzActivityLayout {
+	
+	}
+	/**
+ * @description Sets the image for the activity bar.
+*/
+	setActivityBarImage(img:String):String {
+	
+	}
+	/**
+ * @description Sets whether or not the position of tabs for selecting a pane are oriented along the top of the pane groups.
+*/
+	setOrientTabsAlongTop(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Enables or disables a given pane in the interface.
+*/
+	setPaneEnabled(pane:DzPane, enabled:Boolean):DzError {
+	
+	}
+	/**
+ * @description Enables or disables a given pane in the interface.
+*/
+	setPaneEnabled(className:String, enabled:Boolean):DzError {
+	
+	}
+	/**
+ * @description Sets the file that will be loaded and saved as the user's layout for the session.
+*/
+	setSessionLayout(filename:String):DzError {
+	
+	}
+	/**
+ * @description Sets the visibility of the Lesson Strip.
+*/
+	setShowLessonStrip(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not workflow assistance will be enabled.
+*/
+	setUseWorkflowAssistance(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Make all panes visible in the interface.
+*/
+	showAllPanes() {
+	
+	}
+	/**
+ * @description Make the given pane visible in the interface.
+*/
+	showPane(pane:DzPane):DzError {
+	
+	}
+	/**
+ * @description Make the given pane visible in the interface.
+*/
+	showPane(className:String):DzError {
+	
+	}
+	/**
+ * @description Show a pane group in the interface.
+*/
+	showPaneGroup(group:DzPaneGroup):DzError {
+	
+	}
+	/**
+ * @description Show a pane group in the interface.
+*/
+	showPaneGroup(which:Number):DzError {
+	
+	}
+	/**
+ * @description Put the pane in its own pane group, if it's not already, and moves the pane group out of any dock area.
+*/
+	tearOffPane(className:String, x:Number, y:Number):DzError {
+	
+	}
+	/**
+ * @description Put the pane in its own pane group, if it's not already, and moves the pane group out of any dock area.
+*/
+	tearOffPane(index:Number, x:Number, y:Number):DzError {
+	
+	}
+	/**
+ * @description Put the pane in its own pane group, if it's not already, and moves the pane group out of any dock area.
+*/
+	tearOffPane(pane:DzPane, x:Number, y:Number):DzError {
+	
+	}
+	/**
+ * @description Toggle the given pane's visibility in the interface.
+*/
+	togglePane(index:Number):DzError {
+	
+	}
+	/**
+ * @description Toggle the given pane's visibility in the interface.
+*/
+	togglePane(className:String):DzError {
+	
+	}
+	/**
+ * @description Toggle the given pane's visibility in the interface.
+*/
+	togglePane(pane:DzPane):DzError {
 	
 	}
 
@@ -14021,7 +21763,7 @@ class DzPaneSettings extends DzSettings {
 	/**
  * @description Default Constructor
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -14034,7 +21776,7 @@ class DzParentProductContainer extends DzAbstractAssetContainer, DzRefCountedIte
 	/**
  * @description Attempts to update the child containers of this container.
 */
-	static updateChildren() {
+	updateChildren() {
 	
 	}
 
@@ -14046,7 +21788,7 @@ class DzPathComboBox extends DzWidget {
 	/**
  * @description Instantiates DzPathComboBox
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget, useMarkableView=false:Boolean) {
 	
 	}
@@ -14054,6 +21796,55 @@ class DzPathComboBox extends DzWidget {
  * @description Clear selection
 */
 	clearSelection() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	currentType() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	currentType() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getRoot() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSelectionPath(.Array):Array {
+	
+	}
+	/**
+ * @description Sets empty text
+*/
+	setEmptyText(text:String):String {
+	
+	}
+	/**
+ * @description sets the current selection
+*/
+	setSelection(idPath:Array):Array {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	setTopLevelType(idPath:Array):Array {
+	
+	}
+	/**
+ * @description Sets paths for the combobox.
+*/
+	setTypes(list:Array):Array {
 	
 	}
 
@@ -14065,7 +21856,25 @@ class DzPersistentMenu extends QObject {
 	/**
  * @description Clear the active widget for this persistent menu.
 */
-	static clearActiveWgt() {
+	clearActiveWgt() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getActionMenu() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getActiveWgt() {
+	
+	}
+	/**
+ * @description Sets the active widget for this persistent menu.
+*/
+	setActiveWgt(wgt:QWidget):QWidget {
 	
 	}
 
@@ -14088,21 +21897,21 @@ class Pixmap extends QObject {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/
+*/;
 	constructor(pixmap:Pixmap) {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/
+*/;
 	constructor(filename:String) {
 	
 	}
@@ -14167,34 +21976,118 @@ class Pixmap extends QObject {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/plugin_dz}*/
 class DzPlugin extends QObject {
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static Loaded;
+	static Loaded;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static RequiresRestart;
+	static RequiresRestart;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static ManuallyDisabled;
+	static ManuallyDisabled;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static EvaluationInvalid;
+	static EvaluationInvalid;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static Failed;
+	static Failed;
 	/**
  * @description Return Value:
 */
-	static getAuthor() {
+	getAuthor() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDescription() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getEvaluationInformation() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getFilename() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLoadOnStart() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getName() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPrefixes() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getStatus() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getStatusInformation() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getStatusString() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getVersion() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getVersionString() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isActivated() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isRegistered() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	validateSerialNumber(serialNumber:String, saveIfValid:Boolean):Boolean {
 	
 	}
 
@@ -14206,7 +22099,37 @@ class DzPluginMgr extends QObject {
 	/**
  * @description Shows the "About Installed Plugins" dialog.
 */
-	static doAboutPluginsDlg() {
+	doAboutPluginsDlg() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findPlugin(pluginName:String):DzPlugin {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumPlugins() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getPlugin(which:Number):DzPlugin {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	saveConfiguration() {
+	
+	}
+	/**
+ * @description Sets whether or not the plug-in should load when the application starts.
+*/
+	setPluginLoadOnStartup(plugin:DzPlugin, onOff:Boolean):DzPlugin {
 	
 	}
 
@@ -14226,22 +22149,28 @@ class Point extends QObject {
 	/**
  * @description Default constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/
+*/;
 	constructor(pnt:Point) {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/
+*/;
 	constructor(x:Number, y:Number) {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	cursorPos() {
 	
 	}
 
@@ -14254,7 +22183,7 @@ class DzPointLight extends DzDistantLight {
 	/**
  * @description Default Constructor. Creates a new point light.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -14262,6 +22191,84 @@ class DzPointLight extends DzDistantLight {
  * @description Return Value:
 */
 	getDecay() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDecayControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDisplayPersistence() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDisplayPersistenceControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getFalloffDistance(lightPercent:Number):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLightProfile() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLightProfileControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLightVisibility() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSphereOpacity() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSphereOpacityControl() {
+	
+	}
+	/**
+ * @description Sets the amount of decay.
+*/
+	setDecay(decay:Number):Number {
+	
+	}
+	/**
+ * @description Sets the persistance of the display sphere.
+*/
+	setDisplayPersistence(persistence:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the path of the IES light profile.
+*/
+	setLightProfile(profilePath:String):String {
+	
+	}
+	/**
+ * @description Sets the opacity of the display sphere.
+*/
+	setSphereOpacity(opacity:Number):Number {
 	
 	}
 
@@ -14275,7 +22282,7 @@ class DzPopupMenu extends DzWidget {
 	/**
  * @description Creates a popup menu as a child of the given parent widget.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -14478,7 +22485,7 @@ class DzPoseAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -14503,7 +22510,7 @@ class DzPresentation extends DzBase {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -14516,21 +22523,21 @@ class DzProcess extends QObject {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
 	/**
  * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.
  * @constructor
-*/
+*/;
 	constructor(args:Array) {
 	
 	}
 	/**
  * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.
  * @constructor
-*/
+*/;
 	constructor(arg0:String) {
 	
 	}
@@ -14640,150 +22647,156 @@ See Also:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/productassetcontainer_dz}*/
 class DzProductAssetContainer extends DzAbstractAssetContainer, DzRefCountedItem {
 	/**
- * @description Metadata that is created, owned and maintained by the user.
+ * @description ENUMERATOR: Metadata that is created, owned and maintained by the user.
 */
 	
-static User;
+	static User;
 	/**
- * @description Metadata that is created, owned and maintained by the vendor (originating source).
+ * @description ENUMERATOR: Metadata that is created, owned and maintained by the vendor (originating source).
 */
 	
-static Vendor;
+	static Vendor;
 	/**
- * @description Metadata that is created, owned and maintained by the vendor (originating source) and/or the user.
+ * @description ENUMERATOR: Metadata that is created, owned and maintained by the vendor (originating source) and/or the user.
 */
 	
-static UserAndVendor;
+	static UserAndVendor;
+	/**
+ * @description Return Value:
+*/
+	getDefaultStoreIconSize() {
+	
+	}
 	/**
  * @description Cancels any pending cloud operation on the product, if any.
 */
-	static cancelFromCloud() {
+	cancelFromCloud() {
 	
 	}
 	/**
  * @description Sets the product as belonging to the default group identifier; 0.
 */
-	static clearGroup() {
+	clearGroup() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getCategories(metaType:ProductMetadataType, installedAssets:Boolean):Array {
+	getCategories(metaType:ProductMetadataType, installedAssets:Boolean):Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getIconSize() {
+	getIconSize() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getImage() {
+	getImage() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getMetadataXML(metaType:ProductMetadataType):String {
+	getMetadataXML(metaType:ProductMetadataType):String {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getMetadataXMLPath(userData:Boolean):String {
+	getMetadataXMLPath(userData:Boolean):String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getRealtiveInstallPath() {
+	getRealtiveInstallPath() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getSupportFiles(forceRefresh:Boolean):Array {
+	getSupportFiles(forceRefresh:Boolean):Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getURL() {
+	getURL() {
 	
 	}
 	/**
  * @description Installs a product from the cloud if it is not currently installed. The user will be prompted to authenticate if necessary.
 */
-	static installFromCloud() {
+	installFromCloud() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isGroup(group:Number):Boolean {
+	isGroup(group:Number):Boolean {
 	
 	}
 	/**
  * @description Loads the default icon for this product.
 */
-	static loadDefaultIcon() {
+	loadDefaultIcon() {
 	
 	}
 	/**
  * @description Causes the product image to be loaded.
 */
-	static loadProductImage() {
+	loadProductImage() {
 	
 	}
 	/**
  * @description Pushes the metadata information into the database.
 */
-	static pushMetadata() {
+	pushMetadata() {
 	
 	}
 	/**
  * @description Sets the icon size for this product container.
 */
-	static setIconSize(size:Size):Size {
+	setIconSize(size:Size):Size {
 	
 	}
 	/**
  * @description Sets the image that will be used to draw the icon for this product.
 */
-	static setImage(img:Image):Image {
+	setImage(img:Image):Image {
 	
 	}
 	/**
  * @description Sets the URL for this asset container
 */
-	static setURL(url:String):String {
+	setURL(url:String):String {
 	
 	}
 	/**
  * @description Uninstalls the product if it is currently installed.
 */
-	static uninstall() {
+	uninstall() {
 	
 	}
 	/**
  * @description Uninstalls the product if it is currently installed.
 */
-	static uninstallFromCloud() {
+	uninstallFromCloud() {
 	
 	}
 	/**
  * @description Updates the product if no other operations are currently being performed on it. The user will be prompted to authenticate if necessary.
 */
-	static updateFromCloud() {
+	updateFromCloud() {
 	
 	}
 	/**
  * @description Updates the metadata for this product. The user will be prompted to authenticate if necessary.
 */
-	static updateMetaDataFromCloud(force:Boolean):Boolean {
+	updateMetaDataFromCloud(force:Boolean):Boolean {
 	
 	}
 
@@ -14801,7 +22814,7 @@ class DzProductHolderContainer extends DzTopLevelAssetContainer, DzRefCountedIte
 	/**
  * @description Attempts to insert the given container as a child to this container.
 */
-	static insertChildProductContainer(container:DzProductAssetContainer):Boolean {
+	insertChildProductContainer(container:DzProductAssetContainer):Boolean {
 	
 	}
 
@@ -14820,7 +22833,7 @@ class DzPropertiesAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -14837,646 +22850,646 @@ See Also:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/property_dz}*/
 class DzProperty extends DzBase {
 	/**
- * @description Best for saving/loading; includes raw value; sets without adjusting.
+ * @description ENUMERATOR: Best for saving/loading; includes raw value; sets without adjusting.
 */
 	
-static Standard;
+	static Standard;
 	/**
- * @description Include the default value.
+ * @description ENUMERATOR: Include the default value.
 */
 	
-static IncludeDefault;
+	static IncludeDefault;
 	/**
- * @description Includes the value instead of the raw value.
+ * @description ENUMERATOR: Includes the value instead of the raw value.
 */
 	
-static CurrentValue;
+	static CurrentValue;
 	/**
- * @description Best for setting.
+ * @description ENUMERATOR: Best for setting.
 */
 	
-static AdjustValue;
+	static AdjustValue;
 	/**
- * @description Excludes images.
+ * @description ENUMERATOR: Excludes images.
 */
 	
-static SkipImages;
+	static SkipImages;
 	/**
  * @description Adds a value to a settings.
 */
-	static addValueToSettings(tm:DzTime, settings:DzSettings, flags:PropertyValueSettingsFlags):DzTime {
+	addValueToSettings(tm:DzTime, settings:DzSettings, flags:PropertyValueSettingsFlags):DzTime {
 	
 	}
 	/**
  * @description Adds a value to a settings.
 */
-	static addValueToSettings(settings:DzSettings, flags:PropertyValueSettingsFlags):DzSettings {
+	addValueToSettings(settings:DzSettings, flags:PropertyValueSettingsFlags):DzSettings {
 	
 	}
 	/**
  * @description Creates an undo item for the property.
 */
-	static beginEdit() {
+	beginEdit() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static buildNameUriToRoot(rootNode:DzNode):DzUri {
+	buildNameUriToRoot(rootNode:DzNode):DzUri {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static canAnimate() {
+	canAnimate() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static canAutoFollow() {
+	canAutoFollow() {
 	
 	}
 	/**
  * @description Finish the edit operation but cancel any changes.
 */
-	static cancelEdit() {
+	cancelEdit() {
 	
 	}
 	/**
  * @description Clears the region associated with this property.
 */
-	static clearRegion(preservePath:Boolean):Boolean {
+	clearRegion(preservePath:Boolean):Boolean {
 	
 	}
 	/**
  * @description Copies the value(s) of the given property into this property.
 */
-	static copyFrom(prop:DzProperty):void {
+	copyFrom(prop:DzProperty):void {
 	
 	}
 	/**
  * @description Copies the value(s) of the property to a 'clipboard' so that they may be saved and applied (pasted) to another property; or to the same property.
 */
-	static copyToClipboard() {
+	copyToClipboard() {
 	
 	}
 	/**
  * @description Creates a new property that forwards all edits of its values to the property it is an alias of.
 */
-	static createAlias() {
+	createAlias() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static currentValueIsDefaultValue() {
+	currentValueIsDefaultValue() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static currentValueIsDefinitionValue() {
+	currentValueIsDefinitionValue() {
 	
 	}
 	/**
  * @description Deletes all keys on this property.
 */
-	static deleteAllKeys() {
+	deleteAllKeys() {
 	
 	}
 	/**
  * @description Clears key values within the given range, including the endpoints.
 */
-	static deleteKeys(interval:DzTimeRange):Number {
+	deleteKeys(interval:DzTimeRange):Number {
 	
 	}
 	/**
  * @description Deletes all keys within a specified range.
 */
-	static deleteKeys(start:Number, end:Number):Number {
+	deleteKeys(start:Number, end:Number):Number {
 	
 	}
 	/**
  * @description Deletes all selected keys.
 */
-	static deleteSelectedKeys() {
+	deleteSelectedKeys() {
 	
 	}
 	/**
  * @description Searches node for a property that matches the name of this property.
 */
-	static findMatchingProperty(node:DzNode):DzNode {
+	findMatchingProperty(node:DzNode):DzNode {
 	
 	}
 	/**
  * @description Finalizes the undo item and pushes it on to the undo stack.
 */
-	static finishEdit() {
+	finishEdit() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getAlias(index:Number):Number {
+	getAlias(index:Number):Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getAliasTarget() {
+	getAliasTarget() {
 	
 	}
 	/**
  * @description Populates the given settings object with the attributes of this property.
 */
-	static getAttributes(settings:DzPropertySettings):DzPropertySettings {
+	getAttributes(settings:DzPropertySettings):DzPropertySettings {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getAutoFollowTargetUri() {
+	getAutoFollowTargetUri() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getController(idx:Number):DzController {
+	getController(idx:Number):DzController {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getControllerList() {
+	getControllerList() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getGroup() {
+	getGroup() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getIndexOfSlaveControllers(cntrl:DzController):Number {
+	getIndexOfSlaveControllers(cntrl:DzController):Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getKeyRange() {
+	getKeyRange() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getKeyTime(i:Number):DzTime {
+	getKeyTime(i:Number):DzTime {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getLabel() {
+	getLabel() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumAliases() {
+	getNumAliases() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumControllers() {
+	getNumControllers() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumKeys() {
+	getNumKeys() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getNumKeys(range:DzTimeRange):Number {
+	getNumKeys(range:DzTimeRange):Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumSelectedKeys() {
+	getNumSelectedKeys() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumSlaveControllers() {
+	getNumSlaveControllers() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getOwner() {
+	getOwner() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getPath() {
+	getPath() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getPresentation() {
+	getPresentation() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getRegion() {
+	getRegion() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getSelectedKeyRange() {
+	getSelectedKeyRange() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getSlaveController(idx:Number):DzController {
+	getSlaveController(idx:Number):DzController {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getSlaveControllerList() {
+	getSlaveControllerList() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getWidgetClass(styled:Boolean):String {
+	getWidgetClass(styled:Boolean):String {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getWidgetClassOverride(styled:Boolean):String {
+	getWidgetClassOverride(styled:Boolean):String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static hasControllers() {
+	hasControllers() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static hasKeys() {
+	hasKeys() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static hasSlaveControllers() {
+	hasSlaveControllers() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static hasWidgetClassOverride(styled:Boolean):Boolean {
+	hasWidgetClassOverride(styled:Boolean):Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isAlias() {
+	isAlias() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static isCombinable(prop:DzProperty):Boolean {
+	isCombinable(prop:DzProperty):Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isDynamicallyAutoFollow() {
+	isDynamicallyAutoFollow() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isDynamicallyHidden() {
+	isDynamicallyHidden() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isEditing() {
+	isEditing() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isFavorite() {
+	isFavorite() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isGlobalFavorite() {
+	isGlobalFavorite() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isHidden() {
+	isHidden() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static isKeySelected(i:Number):Boolean {
+	isKeySelected(i:Number):Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isLocked() {
+	isLocked() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isManipulator() {
+	isManipulator() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isNew() {
+	isNew() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isNumeric() {
+	isNumeric() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isOverridingControllers() {
+	isOverridingControllers() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isPrivateProperty() {
+	isPrivateProperty() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isRigProperty() {
+	isRigProperty() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isSelected() {
+	isSelected() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isUserProperty() {
+	isUserProperty() {
 	
 	}
 	/**
  * @description Locks/Unlocks this property. When locked, a property will not accept new key values or changes to current key values.
 */
-	static lock(onOff:Boolean):Boolean {
+	lock(onOff:Boolean):Boolean {
 	
 	}
 	/**
  * @description Marks the asset as being modified.
 */
-	static modifyAsset(newUri:DzUri):Boolean {
+	modifyAsset(newUri:DzUri):Boolean {
 	
 	}
 	/**
  * @description Marks the asset as being modified.
 */
-	static modifyAsset() {
+	modifyAsset() {
 	
 	}
 	/**
  * @description Moves the controller at curIdx to newIdx
 */
-	static moveControllerToIndex(curIdx:Number, newIdx:Number):Boolean {
+	moveControllerToIndex(curIdx:Number, newIdx:Number):Boolean {
 	
 	}
 	/**
  * @description Moves the controller ctrl to location newIdx
 */
-	static moveControllerToIndex(ctrl:DzController, newIdx:Number):Boolean {
+	moveControllerToIndex(ctrl:DzController, newIdx:Number):Boolean {
 	
 	}
 	/**
  * @description Creates a copy of this property. The property will not have controllers, an owner, be in a region, or be linked.
 */
-	static propertyDuplicate() {
+	propertyDuplicate() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static rawValueIsDefinitionValue() {
+	rawValueIsDefinitionValue() {
 	
 	}
 	/**
  * @description Removes all controllers from this property.
 */
-	static removeAllControllers() {
+	removeAllControllers() {
 	
 	}
 	/**
  * @description Removes the given controller from this property.
 */
-	static removeController(ctrl:DzController):DzController {
+	removeController(ctrl:DzController):DzController {
 	
 	}
 	/**
  * @description Removes the controller at the given index from this property.
 */
-	static removeController(idx:Number):Number {
+	removeController(idx:Number):Number {
 	
 	}
 	/**
  * @description Removes the controller that references the given property.
 */
-	static removeController(prop:DzProperty):void {
+	removeController(prop:DzProperty):void {
 	
 	}
 	/**
  * @description Select or deselect all keys.
 */
-	static selectAllKeys(onOff:Boolean):Number {
+	selectAllKeys(onOff:Boolean):Number {
 	
 	}
 	/**
  * @description Selects/deselects the i'th key.
 */
-	static selectKey(i:Number, onOff:Boolean):Number {
+	selectKey(i:Number, onOff:Boolean):Number {
 	
 	}
 	/**
  * @description Sets the selection state of any keys in the given range.
 */
-	static selectKeys(range:DzTimeRange, onOff:Boolean):Number {
+	selectKeys(range:DzTimeRange, onOff:Boolean):Number {
 	
 	}
 	/**
  * @description Sets attributes for this property. "UserProperty" and "RigProperty" attributes are not copied from the settings unless a bool setting of "ForceSetUser" and/or "ForceSetRig" is set on the property settings object respectively.
 */
-	static setAttributes(settings:DzPropertySettings):DzPropertySettings {
+	setAttributes(settings:DzPropertySettings):DzPropertySettings {
 	
 	}
 	/**
  * @description Sets a path to locate the property on the follow target to follow.
 */
-	static setAutoFollowTargetUri(path:DzUri):DzUri {
+	setAutoFollowTargetUri(path:DzUri):DzUri {
 	
 	}
 	/**
  * @description Sets whether this property is animatable.
 */
-	static setCanAnimate(yesNo:Boolean):Boolean {
+	setCanAnimate(yesNo:Boolean):Boolean {
 	
 	}
 	/**
  * @description Sets whether or not the property can automatically follow properties on a following figure.
 */
-	static setCanAutoFollow(onOff:Boolean):Boolean {
+	setCanAutoFollow(onOff:Boolean):Boolean {
 	
 	}
 	/**
  * @description Sets whether or not this property should [temporarily] auto-follow.
 */
-	static setDynamicallyAutoFollow(yesNo:Boolean):Boolean {
+	setDynamicallyAutoFollow(yesNo:Boolean):Boolean {
 	
 	}
 	/**
  * @description Sets whether or not this property should be [temporarily] hidden in the interfacee.
 */
-	static setDynamicallyHidden(yesNo:Boolean):Boolean {
+	setDynamicallyHidden(yesNo:Boolean):Boolean {
 	
 	}
 	/**
  * @description Sets whether or not this property is hidden in the interface.
 */
-	static setHidden(yesNo:Boolean):Boolean {
+	setHidden(yesNo:Boolean):Boolean {
 	
 	}
 	/**
  * @description Sets whether or not the property is a favorite.
 */
-	static setIsFavorite(onOff:Boolean):Boolean {
+	setIsFavorite(onOff:Boolean):Boolean {
 	
 	}
 	/**
  * @description Sets whether or not the property is a global favorite.
 */
-	static setIsGlobalFavorite(onOff:Boolean):Boolean {
+	setIsGlobalFavorite(onOff:Boolean):Boolean {
 	
 	}
 	/**
  * @description Sets whether or not the property is one that will cause manipulation updates of the object in the viewport.
 */
-	static setIsManipulator(onOff:Boolean):Boolean {
+	setIsManipulator(onOff:Boolean):Boolean {
 	
 	}
 	/**
  * @description Sets whether this property is a rigging property.
 */
-	static setIsRigProperty(yesNo:Boolean):Boolean {
+	setIsRigProperty(yesNo:Boolean):Boolean {
 	
 	}
 	/**
  * @description Sets whether this property is a user property (i.e., can be deleted by the user).
 */
-	static setIsUserProperty(yesNo:Boolean):Boolean {
+	setIsUserProperty(yesNo:Boolean):Boolean {
 	
 	}
 	/**
  * @description Sets the label that the user sees in the interface for this property.
 */
-	static setLabel(label:String):String {
+	setLabel(label:String):String {
 	
 	}
 	/**
  * @description Sets whether or not the property is marked new.
 */
-	static setNew(onOff:Boolean):Boolean {
+	setNew(onOff:Boolean):Boolean {
 	
 	}
 	/**
  * @description Sets whether or not this property will override its controllers.
 */
-	static setOverrideControllers(onOff:Boolean):Boolean {
+	setOverrideControllers(onOff:Boolean):Boolean {
 	
 	}
 	/**
  * @description Sets the group that this property belongs to.
 */
-	static setPath(path:String):String {
+	setPath(path:String):String {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static setPresentation(pres:DzPresentation):DzPresentation {
+	setPresentation(pres:DzPresentation):DzPresentation {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static setRegion(reg:geometryregion_dz):void {
+	setRegion(reg:geometryregion_dz):void {
 	
 	}
 	/**
  * @description Sets whether or not the property is selected.
 */
-	static setSelected(onOff:Boolean):Boolean {
+	setSelected(onOff:Boolean):Boolean {
 	
 	}
 	/**
  * @description Sets the value using settings.
 */
-	static setValueFromSettings(settings:DzSettings, flags:PropertyValueSettingsFlags):DzSettings {
+	setValueFromSettings(settings:DzSettings, flags:PropertyValueSettingsFlags):DzSettings {
 	
 	}
 	/**
  * @description Sets the value using settings.
 */
-	static setValueFromSettings(tm:DzTime, settings:DzSettings, flags:PropertyValueSettingsFlags):DzTime {
+	setValueFromSettings(tm:DzTime, settings:DzSettings, flags:PropertyValueSettingsFlags):DzTime {
 	
 	}
 	/**
  * @description Sets the name of the widget class to override the default widget class for this property.
 */
-	static setWidgetClassOverride(styledWgtClassName:String, wgtClassName:String):DzError {
+	setWidgetClassOverride(styledWgtClassName:String, wgtClassName:String):DzError {
 	
 	}
 
@@ -15498,9 +23511,141 @@ See Also:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/propertygroup_dz}*/
 class DzPropertyGroup extends DzBase {
 	/**
+ * @description Return Value:
+*/
+	getDefaultGroupName() {
+	
+	}
+	/**
  * @description Parameter(s):
 */
-	static findChild(name:String):String {
+	findChild(name:String):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findProperty(propName:String, traverse:Boolean, recurse:Boolean):DzProperty {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findPropertyByLabel(propLabel:String, traverse:Boolean, recurse:Boolean):DzProperty {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findSibling(name:String):String {
+	
+	}
+	/**
+ * @description Provided for convenience and DAZ Script access.
+*/
+	getAllPaths() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getAllProperties() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getCollapsed() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getFirstChild() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNextSibling() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumProperties() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getParent() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPath() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPreviousSibling() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getProperty(i:Number):DzProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRegion() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTree() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	indexOfProperty(prop:DzProperty):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isRegion() {
+	
+	}
+	/**
+ * @description Moves prop to a new location within the group.
+*/
+	movePropertyToIndex(prop:DzProperty, newIndex:Number):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not the group is displayed as collapsed in the interface.
+*/
+	setCollapsed(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the label of prop to a unique version of itself.
+*/
+	setUniquePropertyLabel(prop:DzProperty):DzProperty {
+	
+	}
+	/**
+ * @description Alpha-numerically sorts the property groups, and the properties in them.
+*/
+	sort() {
 	
 	}
 
@@ -15515,7 +23660,61 @@ class DzPropertyGroupTree extends DzBase {
 	/**
  * @description Parameter(s):
 */
-	static findChild(name:String):DzPropertyGroup {
+	findChild(name:String):DzPropertyGroup {
+	
+	}
+	/**
+ * @description Attempts to find a property with a given name.
+*/
+	findProperty(name:String):DzProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getAllPaths() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getAllProperties() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDefaultGroup() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getFirstChild() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getOwner() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isPrivate() {
+	
+	}
+	/**
+ * @description Sets whether or not this property group tree is private.
+*/
+	setIsPrivate(onoff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Alpha-numerically sorts the property groups, keeping "General" at the top.
+*/
+	sortGroups() {
 	
 	}
 
@@ -15527,7 +23726,7 @@ class DzPropertySelectionComboBox extends DzWidget {
 	/**
  * @description Creates a property selection combobox as a child of the given parent widget.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -15535,6 +23734,114 @@ class DzPropertySelectionComboBox extends DzWidget {
  * @description Clears the selection of any properties.
 */
 	clearPropertySelection() {
+	
+	}
+	/**
+ * @description Gets the properties to be excluded in the popup.
+*/
+	getExcludeList() {
+	
+	}
+	/**
+ * @description Gets the nodes to be shown in the popup.
+*/
+	getNodes() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSelectedProperty() {
+	
+	}
+	/**
+ * @description Hide the popup.
+*/
+	hidePopup() {
+	
+	}
+	/**
+ * @description Sets whether or not the popup should display rigging properties, regardless of their existence in the exclude list.
+*/
+	setEditMode(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the properties to be excluded in the popup.
+*/
+	setExcludeList(properties:Array):Array {
+	
+	}
+	/**
+ * @description Sets whether or not the popup should filter non-morph properties from the list.
+*/
+	setMorphOnly(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the node from the scene to be shown in the popup.
+*/
+	setNode(node:DzNode):DzNode {
+	
+	}
+	/**
+ * @description Sets the nodes from the scene to be shown in the popup.
+*/
+	setNodes(nodes:Array):Array {
+	
+	}
+	/**
+ * @description Sets whether or not the popup should filter non-numeric properties from the list.
+*/
+	setNumericOnly(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the height of the popup to height.
+*/
+	setPopUpHeight(height:Number):Number {
+	
+	}
+	/**
+ * @description Sets the minimum width of the popup to width.
+*/
+	setPopUpMinWidth(width:Number):Number {
+	
+	}
+	/**
+ * @description Sets whether or not the popup should filter non-private properties from the list.
+*/
+	setPrivateOnly(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not the popup should filter non-public properties from the list.
+*/
+	setPublicOnly(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the property to be selected.
+*/
+	setSelectedProperty(prop:DzProperty):DzProperty {
+	
+	}
+	/**
+ * @description Sets whether or not the popup should display hidden properties.
+*/
+	setShowHidden(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not the popup should filter non-transform properties from the list.
+*/
+	setTransformOnly(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Display the popup.
+*/
+	showPopup() {
 	
 	}
 
@@ -15547,8 +23854,15 @@ class DzPropertySettings extends DzSettings {
 	/**
  * @description Default Constructor - creates an empty set of options
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Copy constructor.
+ * @constructor
+*/;
+	constructor(settings:DzSettings) {
 	
 	}
 
@@ -15567,7 +23881,7 @@ class DzPuppeteerAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -15579,69 +23893,69 @@ Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/pushbutton_dz}*/
 class DzPushButton extends DzButton {
 	/**
- * @description Deprecated
+ * @description ENUMERATOR: Deprecated
 */
 	
-static Off;
+	static Off;
 	/**
- * @description Deprecated
+ * @description ENUMERATOR: Deprecated
 */
 	
-static NoChange;
+	static NoChange;
 	/**
- * @description Deprecated
+ * @description ENUMERATOR: Deprecated
 */
 	
-static On;
+	static On;
 	/**
- * @description Deprecated
+ * @description ENUMERATOR: Deprecated
 */
 	
-static SingleShot;
+	static SingleShot;
 	/**
- * @description Deprecated
+ * @description ENUMERATOR: Deprecated
 */
 	
-static Toggle;
+	static Toggle;
 	/**
- * @description Deprecated
+ * @description ENUMERATOR: Deprecated
 */
 	
-static Tristate;
+	static Tristate;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static BCommand;
+	static BCommand;
 	/**
- * @description The button is drawn as a typical Push Button.
+ * @description ENUMERATOR: The button is drawn as a typical Push Button.
 */
 	
-static BTool;
+	static BTool;
 	/**
- * @description The button is drawn as a typical Tool Button.
+ * @description ENUMERATOR: The button is drawn as a typical Tool Button.
 */
 	
-static BDefault;
+	static BDefault;
 	/**
- * @description The button is drawn as a Default Push Button.
+ * @description ENUMERATOR: The button is drawn as a Default Push Button.
 */
 	
-static BBasic;
+	static BBasic;
 	/**
- * @description The button is drawn with the style's Button Bevel.
+ * @description ENUMERATOR: The button is drawn with the style's Button Bevel.
 */
 	
-static BNoFrame;
+	static BNoFrame;
 	/**
- * @description The button is drawn without a frame. The button is drawn with a custom style.
+ * @description ENUMERATOR: The button is drawn without a frame. The button is drawn with a custom style.
 */
 	
-static BCustom;
+	static BCustom;
 	/**
  * @description Holds whether or not the button will be sized based on the size of its icon (if any). If true, this overrides iconMetric.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -15674,7 +23988,7 @@ class DzPZ3Importer extends DzImporter {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -15692,49 +24006,49 @@ class DzQuat extends Object {
 	/**
  * @description Default Constructor. Creates an identity quaternion.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/
+*/;
 	constructor(quat:DzQuat) {
 	
 	}
 	/**
  * @description Initialize with a rotation matrix.
  * @constructor
-*/
+*/;
 	constructor(mtx:DzMatrix3) {
 	
 	}
 	/**
  * @description Initialize with a rotation matrix.
  * @constructor
-*/
+*/;
 	constructor(mtx:DzMatrix4) {
 	
 	}
 	/**
  * @description Initialize with an Euler angle rotation.
  * @constructor
-*/
+*/;
 	constructor(order:DzRotationOrder, angles:DzVec3) {
 	
 	}
 	/**
  * @description Initialize with a rotation around an axis of the given angle (in radians).
  * @constructor
-*/
+*/;
 	constructor(axis:DzVec3, radians:Number) {
 	
 	}
 	/**
  * @description Initialize with 4-component quaternion.
  * @constructor
-*/
+*/;
 	constructor(x:Number, y:Number, z:Number, w:Number, normalize=true:Boolean) {
 	
 	}
@@ -15904,7 +24218,7 @@ class DzRadioButton extends DzButton {
 	/**
  * @description Creates a radio button as a child of the given parent widget
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -15929,7 +24243,133 @@ class DzRenderer extends DzBase {
 	/**
  * @description Compiles the shader at the given path, if necessary, and returns the path to the compiled shader.
 */
-	static compileShader(shaderPath:String):String {
+	compileShader(shaderPath:String):String {
+	
+	}
+	/**
+ * @description Render a custom set of items.
+*/
+	customRender(handler:DzRenderHandler, camera:DzCamera, lights:Array, nodes:Array, opt:DzRenderOptions):Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getCurrentNode() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getIPRRenderHandler() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getName() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRendererMode() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getShaderCompilerPath() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getShaderExtension() {
+	
+	}
+	/**
+ * @description Given a shader name (e.g. "metal"), this method returns the file name for it by appending the shader extension for the renderer (e.g. "metal.sdl").
+*/
+	getShaderFileName(shaderName:String):String {
+	
+	}
+	/**
+ * @description Gets the parameter information for the given shader. The passed shader name should be the path to the compiled shader.
+*/
+	getShaderInfo(shaderPath:String):DzShaderDescription {
+	
+	}
+	/**
+ * @description Given a shader name (e.g. "metal"), looks in all the shader directories attempting to find the file for it. If withExtension is true, the shader path including the extension for the renderer is returned. Otherwise, it returns the full shader path without the extension appended. If it fails to find the shader, it returns an empty string.
+*/
+	getShaderPath(shaderName:String, withExtension:Boolean):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getShaderSearchPaths() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTextureUtilityPath() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isRendering() {
+	
+	}
+	/**
+ * @description Stops the render.
+*/
+	killRender() {
+	
+	}
+	/**
+ * @description Called by the framework to prepare/convert an image into a format that this renderer can understand/use when rendering. In derived classes, the function should result in a new image file being generated along with a path that the renderer can use to refer to the file. If the image could not be converted or is not usable by this renderer, the returned string should be empty.
+*/
+	prepareImage(img:DzTexture, filename:String):DzTexture {
+	
+	}
+	/**
+ * @description Processes the given shader name into a form the renderer can use (i.e. appending file extensions, finding absolute paths, etc.).
+*/
+	processShaderName(shaderName:String):String {
+	
+	}
+	/**
+ * @description Render the current scene.
+*/
+	render(handler:DzRenderHandler, camera:DzCamera, opt:DzRenderOptions):Boolean {
+	
+	}
+	/**
+ * @description Converts a .bake file into an image file.
+*/
+	saveBakeImage(opt:DzBakerOptions, wait:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the handler used for Interactive Progressive Rendering (IPR) on this renderer.
+*/
+	setIPRRenderHandler(handler:iprrenderhandler_dz):void {
+	
+	}
+	/**
+ * @description Stops an active baking operation, if possible.
+*/
+	stopBaking() {
+	
+	}
+	/**
+ * @description Performs texture conversion.
+*/
+	textureConvert(handler:DzRenderHandler, camera:DzCamera, opt:DzTextureConvertorOptions):Boolean {
 	
 	}
 
@@ -15941,7 +24381,49 @@ class DzRendererMode extends QObject {
 	/**
  * @description Return Value:
 */
-	static hasFeatures() {
+	hasFeatures() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isBiased() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isPhysicallyBased() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isRenderManCompliant() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	supportedLaunguages() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	supportsAdvancedCamera() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	supportsCameraBlades() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	usesCatmarkLimitSurface() {
 	
 	}
 
@@ -15959,7 +24441,55 @@ class DzRenderHandler extends QObject {
 	/**
  * @description Return Value:
 */
-	static getBackColor() {
+	getBackColor() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getCropWindow() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumFrames() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSize() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getStartingTime() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getUseCropWindow() {
+	
+	}
+	/**
+ * @description Set background color for the render
+*/
+	setBackColor(color:Color):Color {
+	
+	}
+	/**
+ * @description Set the portion of the view to be rendered, if the whole view is not to be rendered
+*/
+	setCropWindow(window:Rect):Rect {
+	
+	}
+	/**
+ * @description Set the render to be limited to a portion of the view, or the whole view
+*/
+	setUseCropWindow(onOff:Boolean):Boolean {
 	
 	}
 
@@ -15972,200 +24502,224 @@ There is only one instance of this manager in an application. This instance is c
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/rendermgr_dz}*/
 class DzRenderMgr extends DzBase {
 	/**
- * @description The lowest priority.
+ * @description ENUMERATOR: The lowest priority.
 */
 	
-static RENDER_PRIORITY_LOWEST;
+	static RENDER_PRIORITY_LOWEST;
 	/**
- * @description A low priority.
+ * @description ENUMERATOR: A low priority.
 */
 	
-static RENDER_PRIORITY_LOW;
+	static RENDER_PRIORITY_LOW;
 	/**
- * @description A below normal priority.
+ * @description ENUMERATOR: A below normal priority.
 */
 	
-static RENDER_PRIORITY_BELOW_NORMAL;
+	static RENDER_PRIORITY_BELOW_NORMAL;
 	/**
- * @description The normal priority.
+ * @description ENUMERATOR: The normal priority.
 */
 	
-static RENDER_PRIORITY_NORMAL;
+	static RENDER_PRIORITY_NORMAL;
 	/**
- * @description An above normal priority.
+ * @description ENUMERATOR: An above normal priority.
 */
 	
-static RENDER_PRIORITY_ABOVE_NORMAL;
+	static RENDER_PRIORITY_ABOVE_NORMAL;
 	/**
- * @description A high priority.
+ * @description ENUMERATOR: A high priority.
 */
 	
-static RENDER_PRIORITY_HIGH;
+	static RENDER_PRIORITY_HIGH;
 	/**
- * @description The highest priority.
+ * @description ENUMERATOR: The highest priority.
 */
 	
-static RENDER_PRIORITY_HIGHEST;
+	static RENDER_PRIORITY_HIGHEST;
+	/**
+ * @description Return Value:
+*/
+	getIconSuffix() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	static getMetaXmlFileName(imageName:String, basenameOnly:Boolean):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	static getRenderBaseFileName(imageName:String, basenameOnly:Boolean):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	static getRenderIconFileName(imageName:String, basenameOnly:Boolean):String {
+	
+	}
 	/**
  * @description Adds a directory to the list of known render directories.
 */
-	static addRenderDirectory(directory:String, saveSetting:Boolean):String {
+	addRenderDirectory(directory:String, saveSetting:Boolean):String {
 	
 	}
 	/**
  * @description Interactively and progressively renders the scene with the given render settings, using the given handler from the given camera.
 */
-	static doIPRRender(camera:DzCamera, renderHandler:DzRenderHandler, opt:DzRenderOptions):Boolean {
+	doIPRRender(camera:DzCamera, renderHandler:DzRenderHandler, opt:DzRenderOptions):Boolean {
 	
 	}
 	/**
  * @description Renders the scene with the given render settings. If no render settings are specified, then the current application render settings are used.
 */
-	static doRender(opt:DzRenderOptions):Boolean {
+	doRender(opt:DzRenderOptions):Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static findRenderer(className:String):DzRenderer {
+	findRenderer(className:String):DzRenderer {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getActiveRenderer() {
+	getActiveRenderer() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getBaseAndRelativePath(absPath:String):Array {
+	getBaseAndRelativePath(absPath:String):Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getLastSavedRenderPath() {
+	getLastSavedRenderPath() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumRenderDirectories() {
+	getNumRenderDirectories() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumRenderers() {
+	getNumRenderers() {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static getOptionHelper() {
+	getOptionHelper() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getRenderDirectoryPath(which:Number):String {
+	getRenderDirectoryPath(which:Number):String {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static getRenderElementObjects() {
+	getRenderElementObjects() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getRenderer(which:Number):DzRenderer {
+	getRenderer(which:Number):DzRenderer {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getRendererList() {
+	getRendererList() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getRenderOptions() {
+	getRenderOptions() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static hasRender() {
+	hasRender() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isRendering() {
+	isRendering() {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static rebuildRenderElements() {
+	rebuildRenderElements() {
 	
 	}
 	/**
  * @description Removes all render directories.
 */
-	static removeAllRenderDirectories() {
+	removeAllRenderDirectories() {
 	
 	}
 	/**
  * @description Removes a directory from the list of known render directories.
 */
-	static removeRenderDirectory(directory:String):Boolean {
+	removeRenderDirectory(directory:String):Boolean {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static restoreDefaultRenderOptions() {
+	restoreDefaultRenderOptions() {
 	
 	}
 	/**
  * @description Displays a dialog for saving the last render, and saves the image(s)/movie if the user does not cancel.
 */
-	static saveLastRender() {
+	saveLastRender() {
 	
 	}
 	/**
  * @description Sets the active renderer for the application.
 */
-	static setActiveRenderer(renderer:DzRenderer):DzRenderer {
+	setActiveRenderer(renderer:DzRenderer):DzRenderer {
 	
 	}
 	/**
  * @description Displays the render options dialog to the user. This only works if the application is being run with the interface on, if the interface is off, this function does nothing.
 */
-	static showRenderDialog() {
+	showRenderDialog() {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static shutdown() {
+	shutdown() {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static stopIPRRender() {
+	stopIPRRender() {
 	
 	}
 
@@ -16175,94 +24729,94 @@ Add description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/renderoptions_dz}*/
 class DzRenderOptions extends QObject {
 	/**
- * @description Gamma correction off.
+ * @description ENUMERATOR: Gamma correction off.
 */
 	
-static GCOff;
+	static GCOff;
 	/**
- * @description Gamma correction on.
+ * @description ENUMERATOR: Gamma correction on.
 */
 	
-static GCOn;
+	static GCOn;
 	/**
- * @description The Box filter.
+ * @description ENUMERATOR: The Box filter.
 */
 	
-static Box;
+	static Box;
 	/**
- * @description The triangle filter.
+ * @description ENUMERATOR: The triangle filter.
 */
 	
-static Triangle;
+	static Triangle;
 	/**
- * @description The Catmull-Rom filter.
+ * @description ENUMERATOR: The Catmull-Rom filter.
 */
 	
-static CatmullRom;
+	static CatmullRom;
 	/**
- * @description The Gaussian filter.
+ * @description ENUMERATOR: The Gaussian filter.
 */
 	
-static Gaussian;
+	static Gaussian;
 	/**
- * @description The Sinc filter.
+ * @description ENUMERATOR: The Sinc filter.
 */
 	
-static Sinc;
+	static Sinc;
 	/**
- * @description Renders the image in the active viewport.
+ * @description ENUMERATOR: Renders the image in the active viewport.
 */
 	
-static ActiveView;
+	static ActiveView;
 	/**
- * @description Renders the image in a new window.
+ * @description ENUMERATOR: Renders the image in a new window.
 */
 	
-static NewWindow;
+	static NewWindow;
 	/**
- * @description Renders the image directly to a file.
+ * @description ENUMERATOR: Renders the image directly to a file.
 */
 	
-static DirectToFile;
+	static DirectToFile;
 	/**
- * @description A video file created/compressed by system specific video API's.
+ * @description ENUMERATOR: A video file created/compressed by system specific video API's.
 */
 	
-static MovieFile;
+	static MovieFile;
 	/**
- * @description A series of image files, one for each frame in the movie.
+ * @description ENUMERATOR: A series of image files, one for each frame in the movie.
 */
 	
-static ImageSeries;
+	static ImageSeries;
 	/**
- * @description The shaders/materials for the objects will be used to render.
+ * @description ENUMERATOR: The shaders/materials for the objects will be used to render.
 */
 	
-static Normal;
+	static Normal;
 	/**
- * @description The entire scene will be rendered with a cartoon style shader.
+ * @description ENUMERATOR: The entire scene will be rendered with a cartoon style shader.
 */
 	
-static Cartoon;
+	static Cartoon;
 	/**
- * @description Performs a 'Screen Shot' render, grabbing a frame from the interactive OpenGL viewport.
+ * @description ENUMERATOR: Performs a 'Screen Shot' render, grabbing a frame from the interactive OpenGL viewport.
 */
 	
-static ScreenShot;
+	static ScreenShot;
 	/**
- * @description Performs a 'Fast Time' render, using OpenGL to create a render quality image.
+ * @description ENUMERATOR: Performs a 'Fast Time' render, using OpenGL to create a render quality image.
 */
 	
-static HardwareAssisted;
+	static HardwareAssisted;
 	/**
- * @description Perfomrs an 'Offline' render with the current RenderMan renderer.
+ * @description ENUMERATOR: Perfomrs an 'Offline' render with the current RenderMan renderer.
 */
 	
-static Software;
+	static Software;
 	/**
  * @description Default Constructor. Initializes render options.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -16324,7 +24878,7 @@ class DzRenderSettingsAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -16335,29 +24889,29 @@ Add description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/rotatemanip_dz}*/
 class DzRotateManip extends DzImageManip {
 	/**
- * @description No rotation is performed.
+ * @description ENUMERATOR: No rotation is performed.
 */
 	
-static RotNone;
+	static RotNone;
 	/**
- * @description A 90 degree (clockwise) rotation is performed.
+ * @description ENUMERATOR: A 90 degree (clockwise) rotation is performed.
 */
 	
-static Rot90;
+	static Rot90;
 	/**
- * @description A 180 degree rotation is performed.
+ * @description ENUMERATOR: A 180 degree rotation is performed.
 */
 	
-static Rot180;
+	static Rot180;
 	/**
- * @description A 270 degree (clockwise) rotation is performed.
+ * @description ENUMERATOR: A 270 degree (clockwise) rotation is performed.
 */
 	
-static Rot270;
+	static Rot270;
 	/**
  * @description Holds the amount of rotation, in degrees.
  * @constructor
-*/
+*/;
 	constructor(rot=RotNone:Rotation) {
 	
 	}
@@ -16399,28 +24953,28 @@ class DzRotationOrder extends Object {
 	/**
  * @description Default Constructor. Creates a new rotation order and sets it to XYZ by default.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/
+*/;
 	constructor(order:DzRotationOrder) {
 	
 	}
 	/**
  * @description Creates a new rotation order with the given axis order
  * @constructor
-*/
+*/;
 	constructor(firstAxis:Number, secondAxis:Number, thirdAxis:Number) {
 	
 	}
 	/**
  * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Creates a new rotation order with the given enumerated representation.
  * @constructor
-*/
+*/;
 	constructor(order:Number) {
 	
 	}
@@ -16720,54 +25274,54 @@ Recommended Reading:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/rslshader_dz}*/
 class DzRSLShader extends DzBase, DzRefCountedItem {
 	/**
- * @description Null
+ * @description ENUMERATOR: Null
 */
 	
-static None;
+	static None;
 	/**
- * @description Uses the RiSurfaceV API call when passed to the renderer.
+ * @description ENUMERATOR: Uses the RiSurfaceV API call when passed to the renderer.
 */
 	
-static Surface;
+	static Surface;
 	/**
- * @description Uses the RiLightSourceV API call when passed to the renderer.
+ * @description ENUMERATOR: Uses the RiLightSourceV API call when passed to the renderer.
 */
 	
-static Light;
+	static Light;
 	/**
- * @description Uses the RiAreaLightSourceV API call when passed to the renderer.
+ * @description ENUMERATOR: Uses the RiAreaLightSourceV API call when passed to the renderer.
 */
 	
-static LightArea;
+	static LightArea;
 	/**
- * @description Uses the RiAtmosphereV API call when passed to the renderer.
+ * @description ENUMERATOR: Uses the RiAtmosphereV API call when passed to the renderer.
 */
 	
-static VolumeAtmosphere;
+	static VolumeAtmosphere;
 	/**
- * @description Uses the RiInteriorV API call when passed to the renderer.
+ * @description ENUMERATOR: Uses the RiInteriorV API call when passed to the renderer.
 */
 	
-static VolumeInterior;
+	static VolumeInterior;
 	/**
- * @description Uses the RiExteriorV API call when passed to the renderer.
+ * @description ENUMERATOR: Uses the RiExteriorV API call when passed to the renderer.
 */
 	
-static VolumeExterior;
+	static VolumeExterior;
 	/**
- * @description Uses the RiDisplacementV API call when passed to the renderer.
+ * @description ENUMERATOR: Uses the RiDisplacementV API call when passed to the renderer.
 */
 	
-static Displacement;
+	static Displacement;
 	/**
- * @description Uses the RiImagerV API call when passed to the renderer.
+ * @description ENUMERATOR: Uses the RiImagerV API call when passed to the renderer.
 */
 	
-static Imager;
+	static Imager;
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -16777,6 +25331,384 @@ static Imager;
 	addMappableProperty(prop:DzNumericProperty, token:String, mapToken:String):Boolean {
 	
 	}
+	/**
+ * @description Adds a mappable numeric property to this shader object (intended for situations where the property itself is passed as an attribute via the render-time script, or simply for display purposes, but the associated map should be passed as an arg to the shader). If the property is mapped, the absolute path of the image file is passed as a string type variable to the shader.
+*/
+	addMapProperty(prop:DzNumericProperty, mapToken:String):Boolean {
+	
+	}
+	/**
+ * @description Adds a standard property to the list of properties used by this shader object, and adds the property to this shader object's owner if it does not already exist. DzColorProperty instances are passed as color type variables to the shader - all other DzNumericProperty derived instances are passed as float type variables. DzImageProperty instances are passed as string type variables (the value of which is the absolute path of the image file).
+*/
+	addShaderProperty(prop:DzProperty, token:String):Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	findMapTokenByProperty(prop:DzNumericProperty):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	findProperty(name:String):DzProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	findPropertyByToken(token:String):DzProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	findTokenByProperty(prop:DzProperty):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDefinitionFile() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumProperties() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getOwner() {
+	
+	}
+	/**
+ * @description Get a property from this shader's property list.
+*/
+	getProperty(which:Number):DzProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPropertyList() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRenderTimeFile() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getShaderFile() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getShaderType() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isActiveInBakePass() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isActiveInBeautyPass() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isActiveInShadowPass() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isOnlyInShadowPass() {
+	
+	}
+	/**
+ * @description Removes the given property, if it can be found.
+*/
+	removeProperty(prop:DzProperty):Boolean {
+	
+	}
+	/**
+ * @description Removes the property named name, if it can be found.
+*/
+	removeProperty(name:String):Boolean {
+	
+	}
+	/**
+ * @description Sets whether this shader object participates in the baking pass; false by default. If this is set to true, the shader must have a string input variable named "BakeFileName" and another string input variable named "BakeType".
+*/
+	setActiveInBakePass(yesNo:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether this shader object participates in the beauty/final pass; true by default.
+*/
+	setActiveInBeautyPass(yesNo:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether this shader object participates in the shadow pass; false by default.
+*/
+	setActiveInShadowPass(yesNo:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the relative path of the (DAZ Script) file that builds this shader object's property list.
+*/
+	setDefinitionFile(definitionFile:String, doOverride:Boolean, runScript:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether this shader object ONLY participates in the shadow pass; false by default. This is the same as calling setActiveInBeautyPass( false ) and setActiveInShadowPass( true ).
+*/
+	setOnlyInShadowPass(yesNo:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the relative path of the (DAZ Script) file that will be executed at render-time. This script can set attributes as well as shader parameters for the element, and implement custom logic for special effects.
+*/
+	setRenderTimeFile(renderTimeFile:String):Boolean {
+	
+	}
+	/**
+ * @description Sets the shader file that this shader object calls when rendered.
+*/
+	setShaderFile(shaderFile:String):Boolean {
+	
+	}
+	/**
+ * @description Sets the type for this shader object.
+*/
+	setShaderType(shaderType:ShaderType):Boolean {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	gammaCorrectColor(color:Color):DzVec3 {
+	
+	}
+	/**
+ * @description Adds a RiAttribute call with a float value.
+*/
+	setFloatAttrib(attrib:String, token:String, val:Number):String {
+	
+	}
+	/**
+ * @description Adds a RiAttribute call with an integer value.
+*/
+	setIntegerAttrib(attrib:String, token:String, val:Number):String {
+	
+	}
+	/**
+ * @description Adds a RiAttribute call with a color value.
+*/
+	setColorAttrib(attrib:String, token:String, r:Number, g:Number, b:Number, isFloat:Boolean):String {
+	
+	}
+	/**
+ * @description Adds a RiAttribute call with a string value.
+*/
+	setStringAttrib(attrib:String, token:String, val:String):String {
+	
+	}
+	/**
+ * @description Adds a RiAttribute call with a point value.
+*/
+	setPointAttrib(attrib:String, token:String, vec:DzVec3):String {
+	
+	}
+	/**
+ * @description Adds a RiAttribute call with a vector value.
+*/
+	setVectorAttrib(attrib:String, token:String, vec:DzVec3):String {
+	
+	}
+	/**
+ * @description Adds a RiAttribute call with a normal value.
+*/
+	setNormalAttrib(attrib:String, token:String, vec:DzVec3):String {
+	
+	}
+	/**
+ * @description Adds a RiAttribute call with a matrix value.
+*/
+	setMatrixAttrib(attrib:String, token:String, mtx:DzMatrix4):String {
+	
+	}
+	/**
+ * @description Sets the value of a float token in the list of tokens passed to the shader.
+*/
+	setFloatToken(token:String, val:Number):String {
+	
+	}
+	/**
+ * @description Sets the value of an integer token in the list of tokens passed to the shader.
+*/
+	setIntegerToken(token:String, val:Number):String {
+	
+	}
+	/**
+ * @description Sets the value of a color token in the list of tokens passed to the shader.
+*/
+	setColorToken(token:String, val:Color):String {
+	
+	}
+	/**
+ * @description Sets the value of a string token in the list of tokens passed to the shader.
+*/
+	setStringToken(token:String, val:String):String {
+	
+	}
+	/**
+ * @description Sets the value of a point token in the list of tokens passed to the shader.
+*/
+	setPointToken(token:String, vec:DzVec3):String {
+	
+	}
+	/**
+ * @description Sets the value of a vector token in the list of tokens passed to the shader.
+*/
+	setVectorToken(token:String, vec:DzVec3):String {
+	
+	}
+	/**
+ * @description Sets the value of a normal token in the list of tokens passed to the shader.
+*/
+	setNormalToken(token:String, vec:DzVec3):String {
+	
+	}
+	/**
+ * @description Sets the value of a matrix token in the list of tokens passed to the shader.
+*/
+	setMatrixToken(token:String, mtx:DzMatrix4):String {
+	
+	}
+	/**
+ * @description Convert six images representing six viewing directions into an environment map in the format required by the renderer.
+*/
+	makeCubeFaceEnvironment(px:String, nx:String, py:String, ny:String, pz:String, nz:String, tex:String, fov:Number, filter:DzRenderOptions.PixelFilter, swidth:Number, twidth:Number, tokens:Array, params:Array):String {
+	
+	}
+	/**
+ * @description Convert an image representing a latitude-longitude map into an environment map in the format required by the renderer.
+*/
+	makeLatLongEnvironment(pic:String, tex:String, filter:DzRenderOptions.PixelFilter, swidth:Number, twidth:Number, tokens:Array, params:Array):String {
+	
+	}
+	/**
+ * @description Convert a depth image into a shadow map in the format required by the renderer.
+*/
+	makeShadow(pic:String, tex:String, tokens:Array, params:Array):String {
+	
+	}
+	/**
+ * @description Convert an image map into a map in the format required by the renderer.
+*/
+	makeTexture(pic:String, tex:String, swrap:String, twrap:String, filter:DzRenderOptions.PixelFilter, swidth:Number, twidth:Number, tokens:Array, params:Array):String {
+	
+	}
+	/**
+ * @description Convert a bump map into a map in the format required by the renderer.
+*/
+	makeBump(pic:String, tex:String, swrap:String, twrap:String, filter:DzRenderOptions.PixelFilter, swidth:Number, twidth:Number, tokens:Array, params:Array):String {
+	
+	}
+	/**
+ * @description Adds a RiSpec RiTransformBegin() call.
+*/
+	addTransformBegin() {
+	
+	}
+	/**
+ * @description Adds a RiSpec RiTransformEnd() call.
+*/
+	addTransformEnd() {
+	
+	}
+	/**
+ * @description Adds a RiSpec RiTransformEnd() call after the owner.
+*/
+	addScheduledTransformEnd() {
+	
+	}
+	/**
+ * @description Adds a RiSpec RiConcatTransform() call.
+*/
+	addConcatTransform(transform:DzMatrix4):DzMatrix4 {
+	
+	}
+	/**
+ * @description Adds a RiSpec RiCoordinateSystem() call.
+*/
+	addCoordinateSystem(space:String):String {
+	
+	}
+	/**
+ * @description Adds a RiSpec RiCoordSysTransform() call.
+*/
+	addCoordSysTransform(space:String):String {
+	
+	}
+	/**
+ * @description Adds a RiSpec RiIdentity() call.
+*/
+	addIdentity() {
+	
+	}
+	/**
+ * @description Adds a RiSpec RiRotate() call.
+*/
+	addRotate(angle:Number, dx:Number, dy:Number, dz:Number):Number {
+	
+	}
+	/**
+ * @description Adds a RiSpec RiScale() call.
+*/
+	addScale(dx:Number, dy:Number, dz:Number):Number {
+	
+	}
+	/**
+ * @description Adds a RiSpec DDiScopedCoordinateSystem() call.
+*/
+	addScopedCoordinateSystem(space:String):String {
+	
+	}
+	/**
+ * @description Adds a RiSpec RiSkew() call.
+*/
+	addSkew(angle:Number, dx1:Number, dy1:Number, dz1:Number, dx2:Number, dy2:Number, dz2:Number):Number {
+	
+	}
+	/**
+ * @description Adds a RiSpec RiTransform() call.
+*/
+	addTransform(transform:DzMatrix4):DzMatrix4 {
+	
+	}
+	/**
+ * @description Adds a RiSpec RiTranslate() call.
+*/
+	addTranslate(dx:Number, dy:Number, dz:Number):Number {
+	
+	}
 
 }
 /**
@@ -16784,29 +25716,55 @@ static Imager;
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/savefilter_dz}*/
 class DzSaveFilter extends DzFileIO {
 	/**
- * @description If the file name extension is .dsb, the file is saved as DAZScriptFile, otherwise as TextScriptFile
+ * @description ENUMERATOR: If the file name extension is .dsb, the file is saved as DAZScriptFile, otherwise as TextScriptFile
 */
 	
-static UseExtension;
+	static UseExtension;
 	/**
- * @description Plain text file - no Unicode support
+ * @description ENUMERATOR: Plain text file - no Unicode support
 */
 	
-static TextScriptFile;
+	static TextScriptFile;
 	/**
- * @description Binary DAZ file format - supports Unicode characters
+ * @description ENUMERATOR: Binary DAZ file format - supports Unicode characters
 */
 	
-static DAZScriptFile;
+	static DAZScriptFile;
 	/**
- * @description Encrypted Binary DAZ file format - supports Unicode characters
+ * @description ENUMERATOR: Encrypted Binary DAZ file format - supports Unicode characters
 */
 	
-static EncDAZScriptFile;
+	static EncDAZScriptFile;
 	/**
  * @description Return Value:
 */
-	static getDescription() {
+	getDescription() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getLoadSavePath() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	setLoadSavePath(path:String):String {
+	
+	}
+	/**
+ * @description Saves to a file.
+*/
+	writeFile(filename:String, mode:ScriptFileMode):DzError {
+	
+	}
+	/**
+ * @description Saves to a file.
+*/
+	writeFile(filename:String, mode:ScriptFileMode, options:DzFileIOSettings):DzError {
 	
 	}
 
@@ -16830,41 +25788,65 @@ for( var i = 0; i < nSaveFilters; i +=1 ){
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/savefiltermgr_dz}*/
 class DzSaveFilterMgr extends QObject {
 	/**
- * @description If the file name extension is .dsb, the file is saved as DAZScriptFile, otherwise as TextScriptFile
+ * @description ENUMERATOR: If the file name extension is .dsb, the file is saved as DAZScriptFile, otherwise as TextScriptFile
 */
 	
-static UseExtension;
+	static UseExtension;
 	/**
- * @description Plain text file - no Unicode support
+ * @description ENUMERATOR: Plain text file - no Unicode support
 */
 	
-static TextScriptFile;
+	static TextScriptFile;
 	/**
- * @description Binary DAZ file format - supports Unicode characters
+ * @description ENUMERATOR: Binary DAZ file format - supports Unicode characters
 */
 	
-static DAZScriptFile;
+	static DAZScriptFile;
 	/**
- * @description Encrypted Binary DAZ file format - supports Unicode characters
+ * @description ENUMERATOR: Encrypted Binary DAZ file format - supports Unicode characters
 */
 	
-static EncDAZScriptFile;
+	static EncDAZScriptFile;
 	/**
- * @description Save the scene contents to a file with the given save filter. Prompts the user for a file to save to.
+ * @description Parameter(s):
 */
-	static doSave(filterIndex:Number, dir:String):DzError {
+	static findFilter(className:String):Number {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	static getFilter(i:Number):DzSaveFilter {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	static getFilterName(i:Number):String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getSavePath() {
+	getNumFilters() {
+	
+	}
+	/**
+ * @description Save the scene contents to a file with the given save filter. Prompts the user for a file to save to.
+*/
+	doSave(filterIndex:Number, dir:String):DzError {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSavePath() {
 	
 	}
 	/**
  * @description Save the scene contents to a file with the given save filter.
 */
-	static writeFile(mode:ScriptFileMode, fileName:String, filterName:String):DzError {
+	writeFile(mode:ScriptFileMode, fileName:String, filterName:String):DzError {
 	
 	}
 
@@ -16879,7 +25861,7 @@ class DzScaleManip extends DzImageManip {
 	/**
  * @description Holds the scaling of the image across its height.
  * @constructor
-*/
+*/;
 	constructor(w=1.0:Number, h=1.0:Number) {
 	
 	}
@@ -16896,697 +25878,703 @@ class DzScaleManip extends DzImageManip {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/scene_dz}*/
 class DzScene extends DzBase {
 	/**
- * @description DefaultMethod - If no nodes (or only the default camera) exist, this behaves as OpenNew. Otherwise, this behaves as MergeFile.
+ * @description ENUMERATOR: DefaultMethod - If no nodes (or only the default camera) exist, this behaves as OpenNew. Otherwise, this behaves as MergeFile.
 */
 	
-static DefaultMethod;
+	static DefaultMethod;
 	/**
- * @description OpenNew - Resets the scene to its initial, clean state. All scene data is deleted and the undo stack is cleared.
+ * @description ENUMERATOR: OpenNew - Resets the scene to its initial, clean state. All scene data is deleted and the undo stack is cleared.
 */
 	
-static OpenNew;
+	static OpenNew;
 	/**
- * @description MergeFile - Merges the file with any pre-existing elements in the scene.
+ * @description ENUMERATOR: MergeFile - Merges the file with any pre-existing elements in the scene.
 */
 	
-static MergeFile;
+	static MergeFile;
 	/**
- * @description Only visible items with geometry that cast shadows will be included.
+ * @description ENUMERATOR: Only visible items with geometry that cast shadows will be included.
 */
 	
-static DzObjectsOnly;
+	static DzObjectsOnly;
 	/**
- * @description Include lights in the bounding box.
+ * @description ENUMERATOR: Include lights in the bounding box.
 */
 	
-static DzIncludeLightsFlag;
+	static DzIncludeLightsFlag;
 	/**
- * @description Include cameras in the bounding box.
+ * @description ENUMERATOR: Include cameras in the bounding box.
 */
 	
-static DzIncludeCamerasFlag;
+	static DzIncludeCamerasFlag;
 	/**
- * @description Include items that do not cast shadows in the bounding box.
+ * @description ENUMERATOR: Include items that do not cast shadows in the bounding box.
 */
 	
-static DzIncludeNonShadowersFlag;
+	static DzIncludeNonShadowersFlag;
 	/**
- * @description Include items that are not visible in the bounding box.
+ * @description ENUMERATOR: Include items that are not visible in the bounding box.
 */
 	
-static DzIncludeNonVisibleFlag;
+	static DzIncludeNonVisibleFlag;
 	/**
- * @description Include all nodes in the bounding box.
+ * @description ENUMERATOR: Include all nodes in the bounding box.
 */
 	
-static DzIncludeAllFlag;
+	static DzIncludeAllFlag;
+	/**
+ * @description Parameter(s):
+*/
+	static stripLabelNumber(label:String):String {
+	
+	}
 	/**
  * @description Adds a scene data item to the scene.
 */
-	static addDataItem(item:DzSceneData):DzError {
+	addDataItem(item:DzSceneData):DzError {
 	
 	}
 	/**
  * @description Adds a node to the scene if it is not already in the scene.
 */
-	static addNode(node:DzNode):Boolean {
+	addNode(node:DzNode):Boolean {
 	
 	}
 	/**
  * @description Adds a world-space modifier to the scene's modifier stack.
 */
-	static addWSModifier(modifier:wsmodifier_dz, index:Number):DzError {
+	addWSModifier(modifier:wsmodifier_dz, index:Number):DzError {
 	
 	}
 	/**
  * @description Starts a time-editing operation. All changes to scene time, play range, and animation range that occur between this call and a call to finishTimeEdit() will be wrapped into a single undo item.
 */
-	static beginTimeEdit() {
+	beginTimeEdit() {
 	
 	}
 	/**
  * @description Resets the scene to its initial, clean state. All data is deleted and the undo stack is cleared.
 */
-	static clear() {
+	clear() {
 	
 	}
 	/**
  * @description Attempts to find a camera with the given name in the scene.
 */
-	static findCamera(name:String):DzCamera {
+	findCamera(name:String):DzCamera {
 	
 	}
 	/**
  * @description Attempts to find a camera with the given label in the scene.
 */
-	static findCameraByLabel(label:String):DzCamera {
+	findCameraByLabel(label:String):DzCamera {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static findDataItem(name:String):DzSceneData {
+	findDataItem(name:String):DzSceneData {
 	
 	}
 	/**
  * @description Attempts to find a light with the given name in the scene.
 */
-	static findLight(name:String):DzLight {
+	findLight(name:String):DzLight {
 	
 	}
 	/**
  * @description Attempts to find a light with the given label in the scene.
 */
-	static findLightByLabel(label:String):DzLight {
+	findLightByLabel(label:String):DzLight {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static findMaterialByElementID(id:Number):DzMaterial {
+	findMaterialByElementID(id:Number):DzMaterial {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static findModifierByElementID(id:Number):DzModifier {
+	findModifierByElementID(id:Number):DzModifier {
 	
 	}
 	/**
  * @description Attempts to find a node with the given name in the scene.
 */
-	static findNode(name:String):DzNode {
+	findNode(name:String):DzNode {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static findNodeByElementID(id:Number):DzNode {
+	findNodeByElementID(id:Number):DzNode {
 	
 	}
 	/**
  * @description Attempts to find a node with the given label in the scene.
 */
-	static findNodeByLabel(label:String):DzNode {
+	findNodeByLabel(label:String):DzNode {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static findNodeIndex(node:DzNode):Number {
+	findNodeIndex(node:DzNode):Number {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static findObjectByElementID(id:Number):DzObject {
+	findObjectByElementID(id:Number):DzObject {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static findShapeByElementID(id:Number):Number {
+	findShapeByElementID(id:Number):Number {
 	
 	}
 	/**
  * @description Attempts to find a skeleton with the given name in the scene.
 */
-	static findSkeleton(name:String):DzSkeleton {
+	findSkeleton(name:String):DzSkeleton {
 	
 	}
 	/**
  * @description Attempts to find a skeleton with the given label in the scene.
 */
-	static findSkeletonByLabel(label:String):DzSkeleton {
+	findSkeletonByLabel(label:String):DzSkeleton {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static findSkeletonIndex(skelton:DzSkeleton):Number {
+	findSkeletonIndex(skelton:DzSkeleton):Number {
 	
 	}
 	/**
  * @description Ends a time editing operation started with a call to beginTimeEdit().
 */
-	static finishTimeEdit() {
+	finishTimeEdit() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getAnimRange() {
+	getAnimRange() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getAssetLoadPath() {
+	getAssetLoadPath() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getAudio() {
+	getAudio() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getAudioStartFrame() {
+	getAudioStartFrame() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getAuthor() {
+	getAuthor() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getBackdrop() {
+	getBackdrop() {
 	
 	}
 	/**
  * @description Calculate the bounding box for the current scene.
 */
-	static getBoundingBox(flags:Number):DzBox3 {
+	getBoundingBox(flags:Number):DzBox3 {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getCamera(index:Number):DzCamera {
+	getCamera(index:Number):DzCamera {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getCameraList() {
+	getCameraList() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getDataItem(index:Number):DzSceneData {
+	getDataItem(index:Number):DzSceneData {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getDataItemList() {
+	getDataItemList() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getFilename() {
+	getFilename() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getFrame() {
+	getFrame() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getHighlightNode() {
+	getHighlightNode() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getLight(index:Number):DzLight {
+	getLight(index:Number):DzLight {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getLightList() {
+	getLightList() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getNode(index:Number):DzNode {
+	getNode(index:Number):DzNode {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNodeList() {
+	getNodeList() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumCameras() {
+	getNumCameras() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumDataItems() {
+	getNumDataItems() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumLights() {
+	getNumLights() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumNodes() {
+	getNumNodes() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumSelectedCameras() {
+	getNumSelectedCameras() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumSelectedLights() {
+	getNumSelectedLights() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumSelectedNodes() {
+	getNumSelectedNodes() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumSelectedSkeletons() {
+	getNumSelectedSkeletons() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumSelectedTimeRanges() {
+	getNumSelectedTimeRanges() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumSkeletons() {
+	getNumSkeletons() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumStorablesInScene() {
+	getNumStorablesInScene() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getNumWSModifiers() {
+	getNumWSModifiers() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getPlayRange() {
+	getPlayRange() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getPreviewLights() {
+	getPreviewLights() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getPrimarySelection() {
+	getPrimarySelection() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getSelectedCamera(index:Number):DzCamera {
+	getSelectedCamera(index:Number):DzCamera {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getSelectedCameraList() {
+	getSelectedCameraList() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getSelectedLight(index:Number):DzLight {
+	getSelectedLight(index:Number):DzLight {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getSelectedLightList() {
+	getSelectedLightList() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getSelectedNode(index:Number):DzNode {
+	getSelectedNode(index:Number):DzNode {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getSelectedNodeList() {
+	getSelectedNodeList() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getSelectedSkeleton(index:Number):DzSkeleton {
+	getSelectedSkeleton(index:Number):DzSkeleton {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getSelectedSkeletonList() {
+	getSelectedSkeletonList() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getSkeleton(index:Number):DzSkeleton {
+	getSkeleton(index:Number):DzSkeleton {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getSkeletonList() {
+	getSkeletonList() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getSortedLightList() {
+	getSortedLightList() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getTime() {
+	getTime() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getTimeStep() {
+	getTimeStep() {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getUniqueTopLevelLabel(label:String, node:DzNode):String {
+	getUniqueTopLevelLabel(label:String, node:DzNode):String {
 	
 	}
 	/**
  * @description Parameter(s):
 */
-	static getWSModifier(index:Number):Number {
+	getWSModifier(index:Number):Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static getWSModifierList() {
+	getWSModifierList() {
 	
 	}
 	/**
  * @description Invalidates the scene, flagging it as needing to be redrawn.
 */
-	static invalidate() {
+	invalidate() {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static invalidateLightSorting() {
+	invalidateLightSorting() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isClearing() {
+	isClearing() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isDAZLoading() {
+	isDAZLoading() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isLoading() {
+	isLoading() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isLoopingEnabled() {
+	isLoopingEnabled() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static isPlaying() {
+	isPlaying() {
 	
 	}
 	/**
  * @description Attempts to load a native file from the given filename.
 */
-	static loadScene(filename:String, method:DzOpenMethod):DzError {
+	loadScene(filename:String, method:DzOpenMethod):DzError {
 	
 	}
 	/**
  * @description Sets looping of playback on/off.
 */
-	static loopPlayback(onOff:Boolean):Boolean {
+	loopPlayback(onOff:Boolean):Boolean {
 	
 	}
 	/**
  * @description Indicate that the scene has changed since the last save.
 */
-	static markChanged() {
+	markChanged() {
 	
 	}
 	/**
  * @description Return Value:
 */
-	static needsSave() {
+	needsSave() {
 	
 	}
 	/**
  * @description Pauses playback of the current animation.
 */
-	static pause() {
+	pause() {
 	
 	}
 	/**
  * @description Start playback of the current play range.
 */
-	static play(realtime:Boolean):Boolean {
+	play(realtime:Boolean):Boolean {
 	
 	}
 	/**
  * @description Removes all cameras from the scene.
 */
-	static removeAllCameras() {
+	removeAllCameras() {
 	
 	}
 	/**
  * @description Removes all lights from the scene.
 */
-	static removeAllLights() {
+	removeAllLights() {
 	
 	}
 	/**
  * @description Removes the scene data item from the scene.
 */
-	static removeDataItem(item:DzSceneData):DzError {
+	removeDataItem(item:DzSceneData):DzError {
 	
 	}
 	/**
  * @description Removes the given node from the scene.
 */
-	static removeNode(node:DzNode):Boolean {
+	removeNode(node:DzNode):Boolean {
 	
 	}
 	/**
  * @description Removes all nodes that have items in their hierarchy that are currently selected.
 */
-	static removeSelected() {
+	removeSelected() {
 	
 	}
 	/**
  * @description Removes the modifier from the scene's modifier stack if it exists.
 */
-	static removeWSModifier(modifier:wsmodifier_dz):DzError {
+	removeWSModifier(modifier:wsmodifier_dz):DzError {
 	
 	}
 	/**
  * @description Deprecated
 */
-	static saveScene(filename:String):DzError {
+	saveScene(filename:String):DzError {
 	
 	}
 	/**
  * @description Saves a thumbnail-size OpenGL render of the current viewport to the given file name.
 */
-	static saveThumbnail(filename:String):String {
+	saveThumbnail(filename:String):String {
 	
 	}
 	/**
  * @description Sets the selection state for all nodes in the scene.
 */
-	static selectAllNodes(onOff:Boolean):Boolean {
+	selectAllNodes(onOff:Boolean):Boolean {
 	
 	}
 	/**
  * @description Sets the selection state for all skeletons in the scene.
 */
-	static selectAllSkeletons(onOff:Boolean):Boolean {
+	selectAllSkeletons(onOff:Boolean):Boolean {
 	
 	}
 	/**
  * @description Selects/Deselects all time range.
 */
-	static selectAllTime(onOff:Boolean):Boolean {
+	selectAllTime(onOff:Boolean):Boolean {
 	
 	}
 	/**
  * @description Sets the animation range for the scene.
 */
-	static setAnimRange(range:DzTimeRange):DzTimeRange {
+	setAnimRange(range:DzTimeRange):DzTimeRange {
 	
 	}
 	/**
  * @description Sets the asset load path of this scene.
 */
-	static setAssetLoadPath(absolutePath:String):String {
+	setAssetLoadPath(absolutePath:String):String {
 	
 	}
 	/**
  * @description Sets the current audio object and the frame on which it should start playing.
 */
-	static setAudio(audio:DzAudioClip, startFrame:Number):DzAudioClip {
+	setAudio(audio:DzAudioClip, startFrame:Number):DzAudioClip {
 	
 	}
 	/**
  * @description Sets the backdrop object.
 */
-	static setBackdrop(backdrop:DzBackdrop):DzBackdrop {
+	setBackdrop(backdrop:DzBackdrop):DzBackdrop {
 	
 	}
 	/**
  * @description Set the scene time to the given frame based on current time step.
 */
-	static setFrame(frame:Number):Number {
+	setFrame(frame:Number):Number {
 	
 	}
 	/**
  * @description Sets the currently highlighted node. This is typically called from DzViewTool-derived classes.
 */
-	static setHighlightNode(node:DzNode):DzNode {
+	setHighlightNode(node:DzNode):DzNode {
 	
 	}
 	/**
  * @description Sets the play range for the scene.
 */
-	static setPlayRange(range:DzTimeRange):DzTimeRange {
+	setPlayRange(range:DzTimeRange):DzTimeRange {
 	
 	}
 	/**
  * @description Sets whether or not light preview is enabled or disabled.
 */
-	static setPreviewLights(onoff:Boolean):Boolean {
+	setPreviewLights(onoff:Boolean):Boolean {
 	
 	}
 	/**
  * @description Sets the node to use as the primary selection.
 */
-	static setPrimarySelection(node:DzNode):Boolean {
+	setPrimarySelection(node:DzNode):Boolean {
 	
 	}
 	/**
  * @description Set the scene time to the given time.
 */
-	static setTime(time:DzTime):DzTime {
+	setTime(time:DzTime):DzTime {
 	
 	}
 	/**
  * @description Sets the Frame rate for the scene.
 */
-	static setTimeStep(time:DzTime):DzTime {
+	setTimeStep(time:DzTime):DzTime {
 	
 	}
 	/**
  * @description Step time forward/back by number of frames.
 */
-	static stepTime(nFrames:Number, forward:Boolean):Number {
+	stepTime(nFrames:Number, forward:Boolean):Number {
 	
 	}
 	/**
  * @description Recursively updates all nodes in the scene.
 */
-	static update() {
+	update() {
 	
 	}
 
@@ -17605,7 +26593,7 @@ class DzSceneAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -17638,7 +26626,7 @@ class DzSceneHelper extends QObject {
 	/**
  * @description Default Constructor
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -17646,6 +26634,258 @@ class DzSceneHelper extends QObject {
  * @description Parameter(s):
 */
 	collectNodes(selectedOnly:Boolean, boneTopSelected:Boolean, boneSkeleton:Boolean):Array {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	createLink(bone:DzNode, propertyName:String, controlBone:DzNode, controllerName:String, type:Number, scalar:Number, addend:Number):DzERCLink {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	createMorph(bone:DzNode, name:String, deltas:Array, overwrite:Boolean):DzNode {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findControlProperty(propertyName:String, node:DzNode, recurse:Boolean, nameLabelMatch:Boolean):DzProperty {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findPropertyInGroup(propertyName:String, group:DzPropertyGroup, traverse:Boolean, recurse:Boolean, nameLabelMatch:Boolean):DzProperty {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findPropertyOnNode(propName:String, node:DzNode):DzProperty {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findPropertyOnNodeByInternalName(internalName:String, node:DzNode):DzProperty {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findPropertyOnNodeByLabel(label:String, node:DzNode):DzProperty {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getDisplayNode(prop:DzProperty):DzNode {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getErcController(controlledProp:DzProperty, controllingProp:DzProperty):DzERCLink {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getInternalName(prop:DzProperty):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getLabel(prop:DzProperty):String {
+	
+	}
+	/**
+ * @description Gets the maximum value for prop.
+*/
+	getMax(prop:DzProperty):Number {
+	
+	}
+	/**
+ * @description Gets the minimum value for prop.
+*/
+	getMin(prop:DzProperty):Number {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getNode(prop:DzProperty):DzNode {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getNodeName(prop:DzProperty):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getNodeType(prop:DzProperty):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getPrivatePropertiesOnNode(prop:DzProperty):Array {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getPrivatePropertiesOnNode(node:DzNode):Array {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getPropertiesOnElement(elem:DzElement):Array {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getPropertiesOnNode(node:DzNode, includeModifiers:Boolean):Array {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getPropertiesOnNode(prop:DzProperty, includeModifiers:Boolean):Array {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getRegionPropertiesOnNode(node:DzNode):Array {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getRegionPropertiesRecurse(region:geometryregion_dz):Array {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getUniqueMorphName(node:DzNode, name:String):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	helperCanRemove(prop:DzProperty):Boolean {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	helperRemoveProperty(prop:DzProperty):Boolean {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	isAtDefaultValue(prop:DzProperty):Boolean {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	isControlledByTransform(prop:DzProperty, recurse:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	isDFormModProperty(prop:DzProperty):DzProperty {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	isLegacyJointProperty(prop:DzProperty):DzProperty {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	isLegacyProperty(prop:DzProperty):Boolean {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	isModifierProperty(prop:DzProperty):DzProperty {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	isMorphProperty(prop:DzProperty):DzProperty {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	isNodeProperty(prop:DzProperty):DzProperty {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	isTransform(prop:DzProperty):Boolean {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	isTransformProperty(prop:DzProperty):DzProperty {
+	
+	}
+	/**
+ * @description Attempts to rename prop to name. If the property is a morph property or a DForm modifier property then the modifier is renamed to name. If any other property associated with the node that this property is associated with has the same internal name as name, this method returns false.
+*/
+	setInternalName(prop:DzProperty, name:String):Boolean {
+	
+	}
+	/**
+ * @description Sets the maximum value for prop. This method only applies if prop is non-null and inherits either DzFloatProperty or DzIntProperty. Otherwise this method has no effect.
+*/
+	setMax(prop:DzProperty, max:Number):DzProperty {
+	
+	}
+	/**
+ * @description Sets the minimum value for prop. This method only applies if prop is non-null and inherits either DzFloatProperty or DzIntProperty. Otherwise this method has no effect.
+*/
+	setMin(prop:DzProperty, min:Number):DzProperty {
+	
+	}
+	/**
+ * @description Essentially behaves the same as calling both DzSceneHelper.setMin() and DzSceneHelper.setMax().
+*/
+	setMinMax(prop:DzProperty, min:Number, max:Number):DzProperty {
+	
+	}
+	/**
+ * @description Sets the DzPropertyGoup path (and appropriate DzGeoemtryRegion) for the given property.
+*/
+	setPropertyPath(prop:DzProperty, inPath:String):DzProperty {
+	
+	}
+	/**
+ * @description Sets the name of node to a unique version of name.
+*/
+	setUniqueName(node:DzNode, name:String):DzNode {
 	
 	}
 
@@ -17664,7 +26904,7 @@ class DzSceneSubsetAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -17688,7 +26928,7 @@ class DzSceneSupportAssetFilter extends DzSceneAssetFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -17700,52 +26940,160 @@ Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/script_dz}*/
 class DzScript extends DzBase {
 	/**
- * @description If the file extension is .dsb, the file is saved as DAZScriptFile, otherwise as TextScriptFile
+ * @description ENUMERATOR: If the file extension is .dsb, the file is saved as DAZScriptFile, otherwise as TextScriptFile
 */
 	
-static UseExtension;
+	static UseExtension;
 	/**
- * @description Plain text file - no Unicode support
+ * @description ENUMERATOR: Plain text file - no Unicode support
 */
 	
-static TextScriptFile;
+	static TextScriptFile;
 	/**
- * @description Binary DAZ file format - supports Unicode characters
+ * @description ENUMERATOR: Binary DAZ file format - supports Unicode characters
 */
 	
-static DAZScriptFile;
+	static DAZScriptFile;
 	/**
- * @description Encrypted Binary DAZ file format - supports Unicode characters
+ * @description ENUMERATOR: Encrypted Binary DAZ file format - supports Unicode characters
 */
 	
-static EncDAZScriptFile;
+	static EncDAZScriptFile;
 	/**
- * @description Unknown language.
+ * @description ENUMERATOR: Unknown language.
 */
 	
-static Unknown;
+	static Unknown;
 	/**
- * @description DAZ Script 1 (QSA) language.
+ * @description ENUMERATOR: DAZ Script 1 (QSA) language.
 */
 	
-static DAZScript1;
+	static DAZScript1;
 	/**
- * @description DAZ Script 2 (QtScript) language.
+ * @description ENUMERATOR: DAZ Script 2 (QtScript) language.
 */
 	
-static DAZScript2;
+	static DAZScript2;
 	/**
  * @description Constructor.
  * @constructor
-*/
+*/;
 	constructor(name="":String) {
 	
 	}
 	/**
  * @description Copy Constructor
  * @constructor
-*/
+*/;
 	constructor(script:DzScript) {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	static addScriptBinaryExtensionsAsMultipleFilters(filter:DzFileFilter):DzFileFilter {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	static addScriptBinaryExtensionsToFilter(filter:DzFileFilter):DzFileFilter {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	static addScriptOpenExtensionsAsMultipleFilters(filter:DzFileFilter):DzFileFilter {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	static addScriptOpenExtensionsToFilter(filter:DzFileFilter):DzFileFilter {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	static addScriptSaveExtensionsAsMultipleFilters(filter:DzFileFilter):DzFileFilter {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	static addScriptSaveExtensionsToFilter(filter:DzFileFilter):DzFileFilter {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	static addScriptTextExtensionsAsMultipleFilters(filter:DzFileFilter, includeDeprecated:Boolean):DzFileFilter {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	static addScriptTextExtensionsToFilter(filter:DzFileFilter, includeDeprecated:Boolean):DzFileFilter {
+	
+	}
+	/**
+ * @description This function is provided as a quick method of evaluating DAZ Script statements without needing to create a DAZ Script object.
+*/
+	static evaluate(code:String, context:QObject):Object {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getScriptExtensions() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	static getScriptFile(filenameWithoutExtension:String):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	static isScriptBinaryExtension(ext:String):Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	static isScriptBinaryFile(filename:String):Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	static isScriptExtension(ext:String):Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	static isScriptFile(filename:String):Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	static isScriptTextExtension(ext:String):Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	static isScriptTextFile(filename:String):Boolean {
+	
+	}
+	/**
+ * @description Takes a string that may contain special characters and returns a converted version that would be legal as a variable name in script. If the string contains no special characters, the result will be identical to the input.
+*/
+	static legalizeName(str:String):String {
 	
 	}
 	/**
@@ -17931,7 +27279,223 @@ class DzScriptContext extends DzBase {
 	/**
  * @description Accept and finish a hold on the undo stack started by calling beginUndo().
 */
-	static acceptUndo(caption:String):String {
+	acceptUndo(caption:String):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	backgroundProgressIsActive() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	backgroundProgressIsCancelled() {
+	
+	}
+	/**
+ * @description Captures a view of scene seletion.
+*/
+	beginNodeSelectionHold() {
+	
+	}
+	/**
+ * @description Starts a hold on the undo stack.
+*/
+	beginUndo() {
+	
+	}
+	/**
+ * @description Cancel a hold on the undo stack started by calling beginUndo().
+*/
+	cancelUndo() {
+	
+	}
+	/**
+ * @description Clears the application-standard busy cursor and returns the mouse cursor to the previous cursor. Match every call to setBusyCursor() with a call to this function.
+*/
+	clearBusyCursor() {
+	
+	}
+	/**
+ * @description Clears all selection holds without restoring the selection.
+*/
+	clearNodeSelectionHolds() {
+	
+	}
+	/**
+ * @description Clears the override cursor stack.
+*/
+	clearOverrideCursor() {
+	
+	}
+	/**
+ * @description Clears the undo stack.
+*/
+	clearUndoStack() {
+	
+	}
+	/**
+ * @description Deprecated
+*/
+	ctrlPressed() {
+	
+	}
+	/**
+ * @description Removes a scene node selection hold on scene selection without restoring the selection.
+*/
+	dropNodeSelectionHold() {
+	
+	}
+	/**
+ * @description Drops a hold on the undo stack started by calling beginUndo().
+*/
+	dropUndo() {
+	
+	}
+	/**
+ * @description Ends the current background progress operation in the application from script.
+*/
+	finishBackgroundProgress() {
+	
+	}
+	/**
+ * @description Ends the current progress operation in the application from script.
+*/
+	finishProgress() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getArguments() {
+	
+	}
+	/**
+ * @description This function provides access to the desktop widget.
+*/
+	getDesktop() {
+	
+	}
+	/**
+ * @description This function converts an error code into a string message.
+*/
+	getErrorMessage(errCode:Number):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getObjectParent(obj:QObject):QObject {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getScriptAuthor() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getScriptFileName() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getScriptType() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getScriptVersionString() {
+	
+	}
+	/**
+ * @description This function allows a script to test if two QObject-derived variables point to the same instance.
+*/
+	pointersAreEqual(ptr1:QObject, ptr2:QObject):Boolean {
+	
+	}
+	/**
+ * @description Pauses execution of the script and allows the GUI thread time to process events.
+*/
+	processEvents() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	progressIsActive() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	progressIsCancelled() {
+	
+	}
+	/**
+ * @description Restores the scene selection to the view at last call to beginNodeSelectionHold().
+*/
+	restoreNodeSelectionHold() {
+	
+	}
+	/**
+ * @description Sets the application-standard busy cursor. Match every call to this function with a call to clearBusyCursor() to restore the previous cursor.
+*/
+	setBusyCursor() {
+	
+	}
+	/**
+ * @description Deprecated
+*/
+	shiftPressed() {
+	
+	}
+	/**
+ * @description Pauses the script for the specified number of milliseconds without blocking the application event loop.
+*/
+	sleep(milliseconds:Number):Number {
+	
+	}
+	/**
+ * @description Starts a background progress operation in the application from script.
+*/
+	startBackgroundProgress(info:String, totalSteps:Number, isCancellable:Boolean):String {
+	
+	}
+	/**
+ * @description Starts a progress operation in the application from script.
+*/
+	startProgress(info:String, totalSteps:Number, isCancellable:Boolean, showTimeElapsed:Boolean):String {
+	
+	}
+	/**
+ * @description Steps the current background progress operation in the application from script.
+*/
+	stepBackgroundProgress(numSteps:Number):Number {
+	
+	}
+	/**
+ * @description Steps the current progress operation in the application from script.
+*/
+	stepProgress(numSteps:Number):Number {
+	
+	}
+	/**
+ * @description Updates the background current progress operation in the application from script.
+*/
+	updateBackgroundProgress(position:Number):Number {
+	
+	}
+	/**
+ * @description Updates the current progress operation in the application from script.
+*/
+	updateProgress(position:Number):Number {
 	
 	}
 
@@ -17966,7 +27530,7 @@ class DzScriptedRenderer extends DzRenderer {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -17974,6 +27538,690 @@ class DzScriptedRenderer extends DzRenderer {
  * @description Builds an environment space transform that can be used by shaders to account for differences between the application and the 3Delight render engine.
 */
 	buildEnvironmentSpaceTransform() {
+	
+	}
+	/**
+ * @description Sets up the camera for the pass.
+*/
+	cameraProject(camera:DzCamera, width:Number, height:Number):DzCamera {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	continueAfterPreProcess() {
+	
+	}
+	/**
+ * @description Creates a light in the stream.
+*/
+	createLight(light:DzLight, shadowMap:String):DzLight {
+	
+	}
+	/**
+ * @description Deletes a list of files.
+*/
+	deleteFiles(files:Array):Array {
+	
+	}
+	/**
+ * @description Causes the renderer to call the same display as the standard 3Delight renderer.
+*/
+	doDefaultDisplay() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	doDefaultShadowPass(options:DzRenderOptions, camera:DzCamera, dir:String, reuse:Boolean):Array {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	doDefaultShadowPass(options:DzRenderOptions, camera:DzCamera, light:DzLight, dir:String, reuse:Boolean):String {
+	
+	}
+	/**
+ * @description Cleans up after doDefaultShadowPassPrep().
+*/
+	doDefaultShadowPassEnd(options:DzRenderOptions, camera:DzCamera, light:DzLight):DzRenderOptions {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	doDefaultShadowPassPrep(options:DzRenderOptions, camera:DzCamera, light:DzLight, dir:String, reuse:Boolean):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiShutter() function.
+*/
+	doShutter(opts:DzRenderOptions):DzRenderOptions {
+	
+	}
+	/**
+ * @description Sets up the camera for the pass, ensuring all render-able objects are in view.
+*/
+	fullSceneCameraProject(camera:DzCamera, width:Number, height:Number):DzCamera {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDefaultShaderSearchPath() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDefinitionFile() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDisplacementPreProcessScript() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getHandler() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getLight(index:Number):DzLight {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLightCount() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLightPreProcessScript() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLightsToRender() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getNode(index:Number):DzNode {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNodeCount() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNodesToRender() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumIlluminateHandels() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPropertyHolder() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRenderScript() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSurfacePreProcessScript() {
+	
+	}
+	/**
+ * @description Prepares motion samples for all nodes to render.
+*/
+	prepareMotionSamples() {
+	
+	}
+	/**
+ * @description Prepares motion samples for a list of nodes.
+*/
+	prepareMotionSamples(nodes:Array):Array {
+	
+	}
+	/**
+ * @description Prepares motion samples for node.
+*/
+	prepareNodeMotionSamples(node:DzNode):DzNode {
+	
+	}
+	/**
+ * @description Removes a light from the render list.
+*/
+	removeLight(index:Number):Number {
+	
+	}
+	/**
+ * @description Removes a node from the render list.
+*/
+	removeNode(index:Number):Number {
+	
+	}
+	/**
+ * @description Renders the backdrop for the scene.
+*/
+	renderBackDrop(backdrop:DzBackdrop, width:Number, height:Number):DzBackdrop {
+	
+	}
+	/**
+ * @description Adds a node to the list of nodes to be rendered.
+*/
+	renderNode(node:DzNode):DzNode {
+	
+	}
+	/**
+ * @description Adds a node to the list of nodes to be rendered.
+*/
+	renderNodes(nodes:Array):Array {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiAreaLightSource() function.
+*/
+	riAreaLightSource(name:String, tokens:Array, params:Array):Number {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiAtmosphere() function.
+*/
+	riAtmosphere(name:String, tokens:Array, params:Array):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiAttribute() function.
+*/
+	riAttribute(name:String, tokens:Array, params:Array):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiAttributeBegin() function.
+*/
+	riAttributeBegin() {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiAttributeEnd() function.
+*/
+	riAttributeEnd() {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiBegin() function.
+*/
+	riBegin(ribPath:String):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiCamera() function.
+*/
+	riCamera(camera:String, tokens:Array, params:Array):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiClipping() function.
+*/
+	riClipping(hither:Number, yon:Number):Number {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiClipping() function.
+*/
+	riClippingPlane(x:Number, y:Number, z:Number, nx:Number, ny:Number, nz:Number):Number {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiColor() function.
+*/
+	riColor(Cs:Color):Color {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiConcatTransform() function.
+*/
+	riConcatTransform(transform:DzMatrix4):DzMatrix4 {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiCoordinateSystem() function.
+*/
+	riCoordinateSystem(space:String):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiCoordSysTransform() function.
+*/
+	riCoordSysTransform(space:String):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiCropWindow() function.
+*/
+	riCropWindow(xmin:Number, xmax:Number, ymin:Number, ymax:Number):Number {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiDeclare() function.
+*/
+	riDeclare(name:String, declaration:String):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiDepthOfField() function.
+*/
+	riDepthOfField(fstop:Number, focallength:Number, focaldistance:Number):Number {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiDetailRange() function.
+*/
+	riDetailRange(minvis:Number, lowtran:Number, uptran:Number, maxvis:Number):Number {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiDisplacement() function.
+*/
+	riDisplacement(name:String, tokens:Array, params:Array):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiDisplay() function.
+*/
+	riDisplay(name:String, type:String, mode:String, tokens:Array, params:Array):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiDisplayChannel() function.
+*/
+	riDisplayChannel(channel:String, tokens:Array, params:Array):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiElse() function.
+*/
+	riElse() {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiElseIf() function.
+*/
+	riElseIf(expression:String, tokens:Array, params:Array):String {
+	
+	}
+	/**
+ * @description Attempts to finish the render.
+*/
+	riEndWorld(message:String):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiExposure() function.
+*/
+	riExposure(gain:Number, gamma:Number):Number {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiExterior() function.
+*/
+	riExterior(name:String, tokens:Array, params:Array):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiFormat() function.
+*/
+	riFormat(xres:Number, yres:Number, aspect:Number):Number {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiFrameAspectRatio() function.
+*/
+	riFrameAspectRatio(aspect:Number):Number {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiGeometricApproximation() function.
+*/
+	riGeometricApproximation(type:String, value:Number):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiHider() function.
+*/
+	riHider(type:String, tokens:Array, params:Array):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiIdentity() function.
+*/
+	riIdentity() {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiIfBegin() function.
+*/
+	riIfBegin(expression:String, tokens:Array, params:Array):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiIfEnd() function.
+*/
+	riIfEnd() {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiIlluminate() function.
+*/
+	riIlluminate(light:Number, onOff:Boolean):Number {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiImager() function.
+*/
+	riImager(name:String, tokens:Array, params:Array):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiInterior() function.
+*/
+	riInterior(name:String, tokens:Array, params:Array):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiLightSource() function.
+*/
+	riLightSource(name:String, tokens:Array, params:Array):Number {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiMakeBump() function.
+*/
+	riMakeBump(pic:String, tex:String, swrap:String, twrap:String, filterType:Number, swidth:Number, twidth:Number, tokens:Array, params:Array):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiMakeCubeFaceEnvironment() function.
+*/
+	riMakeCubeFaceEnvironment(px:String, nx:String, py:String, ny:String, pz:String, nz:String, tex:String, fov:Number, filterType:Number, swidth:Number, twidth:Number, tokens:Array, params:Array):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiMakeLatLongEnvironment() function.
+*/
+	riMakeLatLongEnvironment(pic:String, tex:String, filterType:Number, swidth:Number, twidth:Number, tokens:Array, params:Array):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiMakeShadow() function.
+*/
+	riMakeShadow(pic:String, tex:String, tokens:Array, params:Array):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiMakeTexture() function.
+*/
+	riMakeTexture(pic:String, tex:String, swrap:String, twrap:String, filterType:Number, swidth:Number, twidth:Number, tokens:Array, params:Array):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiMatte() function.
+*/
+	riMatte(onoff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiMultiplyShadingRate() function.
+*/
+	riMultiplyShadingRate(ratemultiplier:Number):Number {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiOpacity() function.
+*/
+	riOpacity(Os:Color):Color {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiOption() function.
+*/
+	riOption(name:String, tokens:Array, params:Array):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiOrientation() function.
+*/
+	riOrientation(orientation:String):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiPerspective() function.
+*/
+	riPerspective(fov:Number):Number {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiPixelFilter() function.
+*/
+	riPixelFilter(filterType:Number, xwidth:Number, ywidth:Number):Number {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiPixelSamples() function.
+*/
+	riPixelSamples(xsamples:Number, ysamples:Number):Number {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiPixelVariance() function.
+*/
+	riPixelVariance(variation:Number):Number {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiProjection() function.
+*/
+	riProjection(name:String, tokens:Array, params:Array):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiWQuantize() function.
+*/
+	riQuantize(type:String, one:Number, qmin:Number, qmax:Number, ampl:Number):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiRelativeDetail() function.
+*/
+	riRelativeDetail(relativedetail:Number):Number {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiReverseOrientation() function.
+*/
+	riReverseOrientation() {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiRotate() function.
+*/
+	riRotate(angle:Number, dx:Number, dy:Number, dz:Number):Number {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiScale() function.
+*/
+	riScale(dx:Number, dy:Number, dz:Number):Number {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec DDiScopedCoordinateSystem() function.
+*/
+	riScopedCoordinateSystem(space:String):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiScreenWindow() function.
+*/
+	riScreenWindow(left:Number, right:Number, bot:Number, top:Number):Number {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiShader() function.
+*/
+	riShader(name:String, handle:String, tokens:Array, params:Array):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiShadingInterpolation() function.
+*/
+	riShadingInterpolation(type:String):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiShadingRate() function.
+*/
+	riShadingRate(size:Number):Number {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiShutter() function.
+*/
+	riShutter(smin:Number, smax:Number):Number {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiSides() function.
+*/
+	riSides(nsides:Number):Number {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiSkew() function.
+*/
+	riSkew(angle:Number, dx1:Number, dy1:Number, dz1:Number, dx2:Number, dy2:Number, dz2:Number):Number {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiSurface() function.
+*/
+	riSurface(name:String, tokens:Array, params:Array):String {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiTransform() function.
+*/
+	riTransform(transform:DzMatrix4):DzMatrix4 {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiTransformBegin() function.
+*/
+	riTransformBegin() {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiTransformEnd() function.
+*/
+	riTransformEnd() {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiTranslate() function.
+*/
+	riTranslate(dx:Number, dy:Number, dz:Number):Number {
+	
+	}
+	/**
+ * @description Script implementation of the RiSpec RiWorldBegin() function.
+*/
+	riWorldBegin() {
+	
+	}
+	/**
+ * @description Sets the background color.
+*/
+	setBackgroundColor(color:Color):Color {
+	
+	}
+	/**
+ * @description Sets the path of the script to be run when the script definition is called.
+*/
+	setCleanUpScript(filename:String):String {
+	
+	}
+	/**
+ * @description Sets whether or not the Ri call that launches a pre-process script should execute.
+*/
+	setContinueAfterPreProcess(shouldContinue:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the crop window from the handler for the render.
+*/
+	setCropWindow(handler:DzRenderHandler):DzRenderHandler {
+	
+	}
+	/**
+ * @description Sets the path of the script to run in order to define the renderer. Causes the renderer to be cleared, the cleanup script (if any) to be run and then the render script, clean up script, surface pre-process script, light pre-process script and displacement pre-process script to be cleared.
+*/
+	setDefinitionFile(definitionFile:String):String {
+	
+	}
+	/**
+ * @description Sets the path of the script to be run before a material displacement is processed.
+*/
+	setDisplacementPreProcessScript(filename:String):String {
+	
+	}
+	/**
+ * @description Set whether or not this is a shadow pass.
+*/
+	setIsShadowPass(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the path of the script to be run before riLightSource() and riAreaLightSource() are processed.
+*/
+	setLightPreProcessScript(filename:String):String {
+	
+	}
+	/**
+ * @description Sets the path of the script that controls the rendering process.
+*/
+	setRenderScript(filename:String):String {
+	
+	}
+	/**
+ * @description Sets the path of the script to be run before riSurface is processed.
+*/
+	setSurfacePreProcessScript(filename:String):String {
 	
 	}
 
@@ -17988,7 +28236,7 @@ class DzScrollArea extends DzWidget {
 	/**
  * @description Creates a scroll area as a child of the given parent widget.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -18043,7 +28291,7 @@ class DzScrollView extends DzWidget {
 	/**
  * @description Creates a scroll view as a child of the given parent widget.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -18063,7 +28311,7 @@ class DzSelectionMap extends DzBase {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -18071,6 +28319,66 @@ class DzSelectionMap extends DzBase {
  * @description Adds a new face group/node mapping to the selection map.
 */
 	addPair(faceGroupName:String, node:DzNode, replaceIfExists:Boolean):DzError {
+	
+	}
+	/**
+ * @description Clears all pairs in the map.
+*/
+	clearAll() {
+	
+	}
+	/**
+ * @description Clears the missing groups based on the face groups on mesh.
+*/
+	clearMissingGroups(mesh:facetmesh_dz):void {
+	
+	}
+	/**
+ * @description Searches for the first group for a node.
+*/
+	findGroupForNode(node:DzNode):String {
+	
+	}
+	/**
+ * @description Searches for the first node for a group.
+*/
+	findNodeForGroup(groupName:String):DzNode {
+	
+	}
+	/**
+ * @description Searches for the first pair.
+*/
+	findPair(node:DzNode):Number {
+	
+	}
+	/**
+ * @description Searches for the first pair.
+*/
+	findPair(groupName:String):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumPairs() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getPairGroup(index:Number):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getPairNode(index:Number):DzNode {
+	
+	}
+	/**
+ * @description Removes a face group/node mapping from the selection map.
+*/
+	removePair(index:Number):DzError {
 	
 	}
 
@@ -18081,35 +28389,42 @@ Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/settings_dz}*/
 class DzSettings extends QObject {
 	/**
- * @description A string value.
+ * @description ENUMERATOR: A string value.
 */
 	
-static StringValue;
+	static StringValue;
 	/**
- * @description An integer (whole number) value.
+ * @description ENUMERATOR: An integer (whole number) value.
 */
 	
-static IntValue;
+	static IntValue;
 	/**
- * @description A boolean (true/false) value.
+ * @description ENUMERATOR: A boolean (true/false) value.
 */
 	
-static BoolValue;
+	static BoolValue;
 	/**
- * @description A floating-point (decimal) value.
+ * @description ENUMERATOR: A floating-point (decimal) value.
 */
 	
-static FloatValue;
+	static FloatValue;
 	/**
- * @description A nested settings value.
+ * @description ENUMERATOR: A nested settings value.
 */
 	
-static SettingsValue;
+	static SettingsValue;
 	/**
  * @description Default constructor.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Copy constructor.
+ * @constructor
+*/;
+	constructor(settings:DzSettings) {
 	
 	}
 	/**
@@ -18283,7 +28598,7 @@ class DzSettingsHelper extends QObject {
 	/**
  * @description Default Constructor
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -18291,6 +28606,24 @@ class DzSettingsHelper extends QObject {
  * @description Retrieves a value from the subkey at the given key.
 */
 	get(path:String, name:String, value:Object):Object {
+	
+	}
+	/**
+ * @description Retrieves whether a value exists at the given key.
+*/
+	hasValue(path:String, name:String):Boolean {
+	
+	}
+	/**
+ * @description Removes a named value at the given path.
+*/
+	removeValue(path:String, name:String):Boolean {
+	
+	}
+	/**
+ * @description Records a named value to the path specified.
+*/
+	set(path:String, name:String, value:Object):String {
 	
 	}
 
@@ -18314,8 +28647,22 @@ class DzShaderCamera extends DzBasicCamera {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.
+ * @constructor
+*/;
+	constructor(definitionFile:String, renderTimeFile:String) {
+	
+	}
+	/**
+ * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.
+ * @constructor
+*/;
+	constructor(definitionFile:String) {
 	
 	}
 	/**
@@ -18409,34 +28756,40 @@ class DzShaderCamera extends DzBasicCamera {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/shaderdescription_dz}*/
 class DzShaderDescription extends QObject {
 	/**
- * @description Surface shader.
+ * @description ENUMERATOR: Surface shader.
 */
 	
-static SurfaceShader;
+	static SurfaceShader;
 	/**
- * @description Light Shader.
+ * @description ENUMERATOR: Light Shader.
 */
 	
-static LightShader;
+	static LightShader;
 	/**
- * @description Displacement Shader.
+ * @description ENUMERATOR: Displacement Shader.
 */
 	
-static DisplacementShader;
+	static DisplacementShader;
 	/**
- * @description Volume Shader.
+ * @description ENUMERATOR: Volume Shader.
 */
 	
-static VolumeShader;
+	static VolumeShader;
 	/**
- * @description Image Shader.
+ * @description ENUMERATOR: Image Shader.
 */
 	
-static ImageShader;
+	static ImageShader;
 	/**
  * @description Return Value:
 */
-	static getNumParameters() {
+	getNumParameters() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getParameter(i:Number):DzShaderParameter {
 	
 	}
 
@@ -18446,35 +28799,42 @@ static ImageShader;
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/shaderlight_dz}*/
 class DzShaderLight extends DzLight {
 	/**
- * @description Null - Only in the scene to provide access to properties.
+ * @description ENUMERATOR: Null - Only in the scene to provide access to properties.
 */
 	
-static NullLight;
+	static NullLight;
 	/**
- * @description Emits global light.
+ * @description ENUMERATOR: Emits global light.
 */
 	
-static AmbientLight;
+	static AmbientLight;
 	/**
- * @description Emits light in all directions.
+ * @description ENUMERATOR: Emits light in all directions.
 */
 	
-static PointLight;
+	static PointLight;
 	/**
- * @description Emits parallel light.
+ * @description ENUMERATOR: Emits parallel light.
 */
 	
-static DistantLight;
+	static DistantLight;
 	/**
- * @description Emits light in a pattern.
+ * @description ENUMERATOR: Emits light in a pattern.
 */
 	
-static SpotLight;
+	static SpotLight;
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Parameter(s):
+ * @constructor
+*/;
+	constructor(definitionFile:String, type:LightType) {
 	
 	}
 	/**
@@ -18603,8 +28963,22 @@ class DzShaderMaterial extends DzMaterial, DzRefCountedItem {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.
+ * @constructor
+*/;
+	constructor(mat:DzShaderMaterial, duplicateMissingProps=true:Boolean) {
+	
+	}
+	/**
+ * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.
+ * @constructor
+*/;
+	constructor(definitionFile:String) {
 	
 	}
 	/**
@@ -18675,45 +29049,45 @@ Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/shaderparameter_dz}*/
 class DzShaderParameter extends QObject {
 	/**
- * @description Unknown Parameter type.
+ * @description ENUMERATOR: Unknown Parameter type.
 */
 	
-static UnknownType;
+	static UnknownType;
 	/**
- * @description Point type parameter.
+ * @description ENUMERATOR: Point type parameter.
 */
 	
-static PointType;
+	static PointType;
 	/**
- * @description Normal type parameter.
+ * @description ENUMERATOR: Normal type parameter.
 */
 	
-static NormalType;
+	static NormalType;
 	/**
- * @description Vector type parameter.
+ * @description ENUMERATOR: Vector type parameter.
 */
 	
-static VectorType;
+	static VectorType;
 	/**
- * @description Color type parameter.
+ * @description ENUMERATOR: Color type parameter.
 */
 	
-static ColorType;
+	static ColorType;
 	/**
- * @description Scalar type parameter.
+ * @description ENUMERATOR: Scalar type parameter.
 */
 	
-static ScalarType;
+	static ScalarType;
 	/**
- * @description String type parameter.
+ * @description ENUMERATOR: String type parameter.
 */
 	
-static StringType;
+	static StringType;
 	/**
- * @description Matrix type parameter.
+ * @description ENUMERATOR: Matrix type parameter.
 */
 	
-static MatrixType;
+	static MatrixType;
 
 }
 /**
@@ -18730,7 +29104,7 @@ class DzShaderSupportAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -18760,7 +29134,7 @@ class DzShapeRiggingAdjuster extends QObject {
 	/**
  * @description Default Constructor. Creates a shape rigging adjuster that can be used to adjust bone positions and orientations of the selected figure, based on the current shape.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -18768,6 +29142,42 @@ class DzShapeRiggingAdjuster extends QObject {
  * @description Performs the rigging adjustment based on the current shape.
 */
 	doAdjustments() {
+	
+	}
+	/**
+ * @description Sets whether or not center points of bones being ajusted are allowed to be modified.
+*/
+	setAdjustCenterPoints(yesNo:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not end points of bones being ajusted are allowed to be modified.
+*/
+	setAdjustEndPoints(yesNo:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not the orientations of bones being ajusted are allowed to be modified.
+*/
+	setAdjustOrientation(yesNo:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the list of bones to exclude when adjusting.
+*/
+	setExcludedBones(boneNames:Array):Array {
+	
+	}
+	/**
+ * @description Sets the list of facet groups to exclude when calculating adjustments to make.
+*/
+	setExcludedFacetGroups(groupNames:Array):Array {
+	
+	}
+	/**
+ * @description Sets the target asset to be the geometry contained by the given node.
+*/
+	setFigure(figure:figure_dz):void {
 	
 	}
 
@@ -18786,7 +29196,7 @@ class DzShapingAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -18800,7 +29210,7 @@ class DzSimpleElementData extends DzElementData {
 	/**
  * @description Default constructor.
  * @constructor
-*/
+*/;
 	constructor(name:String, persistent=false:Boolean) {
 	
 	}
@@ -18834,7 +29244,7 @@ class DzSimpleElementScriptData extends DzSimpleElementData {
 	/**
  * @description Default constructor.
  * @constructor
-*/
+*/;
 	constructor(name:String, persistent=true:Boolean) {
 	
 	}
@@ -18842,6 +29252,12 @@ class DzSimpleElementScriptData extends DzSimpleElementData {
  * @description Return Value:
 */
 	getScriptFilePath() {
+	
+	}
+	/**
+ * @description Sets the file path of the script for this data item.
+*/
+	setScriptFilePath(script:String):String {
 	
 	}
 
@@ -18854,7 +29270,7 @@ class DzSimpleSceneData extends DzSceneData {
 	/**
  * @description Default constructor.
  * @constructor
-*/
+*/;
 	constructor(name:String, persistent=false:Boolean) {
 	
 	}
@@ -18882,7 +29298,7 @@ class DzSimpleSceneScriptData extends DzSimpleSceneData {
 	/**
  * @description Default constructor.
  * @constructor
-*/
+*/;
 	constructor(name:String, persistent=true:Boolean) {
 	
 	}
@@ -18890,6 +29306,12 @@ class DzSimpleSceneScriptData extends DzSimpleSceneData {
  * @description Return Value:
 */
 	getScriptFilePath() {
+	
+	}
+	/**
+ * @description Sets the file path of the script for this data item.
+*/
+	setScriptFilePath(script:String):String {
 	
 	}
 
@@ -18908,7 +29330,7 @@ class DzSimulationSettingsAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -18929,8 +29351,22 @@ class Size extends QObject {
 	/**
  * @description Default constructor.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Copy Constructor.
+ * @constructor
+*/;
+	constructor(size:Size) {
+	
+	}
+	/**
+ * @description Parameter(s):
+ * @constructor
+*/;
+	constructor(width:Number, height:Number) {
 	
 	}
 	/**
@@ -18949,14 +29385,140 @@ class DzSkeleton extends DzNode {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Converts an articulate figure to a static prop.
+*/
+	static convertFigureToProp(skeleton:DzSkeleton, newName:String):DzNode {
 	
 	}
 	/**
  * @description Clears the generated morphs.
 */
 	clearGeneratedMorphs() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findBone(name:String):DzBone {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findBoneByLabel(label:String):DzBone {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findUniqueBoneName(desiredName:String):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getAllBones() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDrawGLBones() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDrawGLBonesControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getFigureIDControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getFollowControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getFollowMode() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getFollowModeControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getFollowSkeleton(which:Number):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getFollowTarget() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getGLBonesColorControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getGLBonesEdgeOpacityControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getGLBonesEdgeStyleControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getGLBonesFillOpacityControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumFollowSkeletons() {
+	
+	}
+	/**
+ * @description Invalidates the bounding boxes for this node, causing them to be recalculated.
+*/
+	invalidateBoundingBoxes(checkSkeleton:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not OpenGL bones will draw in the viewport.
+*/
+	setDrawGLBones(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the figure that we are currently following.
+*/
+	setFollowTarget(skeleton:DzSkeleton):void {
 	
 	}
 
@@ -18968,8 +29530,15 @@ class DzSkeletonProperty extends DzNodeProperty {
 	/**
  * @description Default Constructor. Creates a non-animatable, non-user property.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Parameter(s):
+ * @constructor
+*/;
+	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean) {
 	
 	}
 	/**
@@ -18998,7 +29567,7 @@ class DzSourceFileData extends DzElementData {
 	/**
  * @description Creates a new Source File Data object that stores the given file path.
  * @constructor
-*/
+*/;
 	constructor(filePath="":String) {
 	
 	}
@@ -19006,6 +29575,18 @@ class DzSourceFileData extends DzElementData {
  * @description Return Value:
 */
 	getGeometryChanged() {
+	
+	}
+	/**
+ * @description Tries to convert the source path into a "Poser" style Runtime-relative path (i.e. ":Runtime:Libraries:Character:FileName.cr2"). Returns the converted path if successful, and an empty string if unsuccessful.
+*/
+	getPoserRuntimeRelativePath() {
+	
+	}
+	/**
+ * @description Sets whether or not the source geometry has changed.
+*/
+	setGeometryChanged(onoff:Boolean):Boolean {
 	
 	}
 
@@ -19021,7 +29602,7 @@ class DzSplitter extends DzWidget {
 	/**
  * @description Creates a splitter widget as a child of the given parent widget.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -19105,7 +29686,7 @@ class DzSpotLight extends DzDistantLight {
 	/**
  * @description Default Constructor. Creates a new spotlight.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -19113,6 +29694,237 @@ class DzSpotLight extends DzDistantLight {
  * @description Return Value:
 */
 	getBaseOpacity() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getBaseOpacityControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getBeamDistribution() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getBeamDistributionControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDecay() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDecayControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDisplayPersistence() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDisplayPersistenceControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getEdgeOpacity() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getEdgeOpacityControl() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getFalloffDistance(lightPercent:Number):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLightExponent() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLightExponentControl() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getLightVisibility() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getLineOpacity() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getOpacityScale() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getOpacityScaleControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRayLength() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRayLengthControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRayOpacity() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRayOpacityControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getShowBase() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getShowBaseControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getShowEdge() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getShowEdgeControl() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSpreadAngle() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSpreadAngleControl() {
+	
+	}
+	/**
+ * @description Sets the base opacity.
+*/
+	setBaseOpacity(opacity:Number):Number {
+	
+	}
+	/**
+ * @description Sets beam distribution.
+*/
+	setBeamDistribution(distribution:Number):Number {
+	
+	}
+	/**
+ * @description Sets the amount of decay.
+*/
+	setDecay(decay:Number):Number {
+	
+	}
+	/**
+ * @description Sets the persistance of the display cone.
+*/
+	setDisplayPersistence(persistence:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the edge opacity.
+*/
+	setEdgeOpacity(opacity:Number):Number {
+	
+	}
+	/**
+ * @description Sets the exponent (rate of decay from center to edge) of the light.
+*/
+	setLightExponent(exponent:Number):Number {
+	
+	}
+	/**
+ * @description Sets the opacity scale.
+*/
+	setOpacityScale(scale:Number):Number {
+	
+	}
+	/**
+ * @description Sets the ray length.
+*/
+	setRayLength(length:Number):Number {
+	
+	}
+	/**
+ * @description Sets the ray opacity.
+*/
+	setRayOpacity(opacity:Number):Number {
+	
+	}
+	/**
+ * @description Sets whether or not to show the base.
+*/
+	setShowBase(yesNo:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not to show the edge.
+*/
+	setShowEdge(yesNo:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the spread angle.
+*/
+	setSpreadAngle(spreadAngle:Number):Number {
 	
 	}
 
@@ -19125,14 +29937,27 @@ class DzStringProperty extends DzProperty {
 	/**
  * @description Default Constructor. Creates a non-user property.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Parameter(s):
+ * @constructor
+*/;
+	constructor(name:String, isUserProperty:Boolean) {
 	
 	}
 	/**
  * @description Return Value:
 */
 	getValue() {
+	
+	}
+	/**
+ * @description Sets the string value.
+*/
+	setValue(val:String):Boolean {
 	
 	}
 
@@ -19152,39 +29977,183 @@ Reset the current style colors to their default values.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/style_dz}*/
 class DzStyle extends QObject {
 	/**
- * @description The mode when the user is not interacting with the pixmap, but the item represented by the pixmap is available.
+ * @description ENUMERATOR: The mode when the user is not interacting with the pixmap, but the item represented by the pixmap is available.
 */
 	
-static Normal;
+	static Normal;
 	/**
- * @description The mode when the item represented by the pixmap is not available.
+ * @description ENUMERATOR: The mode when the item represented by the pixmap is not available.
 */
 	
-static Disabled;
+	static Disabled;
 	/**
- * @description The mode when the item represented by the pixmap is available and the user is interacting with it.
+ * @description ENUMERATOR: The mode when the item represented by the pixmap is available and the user is interacting with it.
 */
 	
-static Active;
+	static Active;
 	/**
- * @description The mode when the item represented by the pixmap is selected.
+ * @description ENUMERATOR: The mode when the item represented by the pixmap is selected.
 */
 	
-static Selected;
+	static Selected;
 	/**
- * @description The pixmap when the widget is in the On state.
+ * @description ENUMERATOR: The pixmap when the widget is in the On state.
 */
 	
-static On;
+	static On;
 	/**
- * @description The pixmap when the widget is in the Off state.
+ * @description ENUMERATOR: The pixmap when the widget is in the Off state.
 */
 	
-static Off;
+	static Off;
 	/**
  * @description Return Value:
 */
-	static actionPixmap(className:String, mode:PixmapMode, state:PixmapState):Pixmap {
+	actionPixmap(className:String, mode:PixmapMode, state:PixmapState):Pixmap {
+	
+	}
+	/**
+ * @description Compiles a text-based style definition and its images into a single binary style definition file.
+*/
+	compileStyleDefinition(infile:String, outfile:String):DzError {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	findInterfaceColor(name:String):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	findInterfaceNumber(name:String):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getInterfaceColor(name:String):Color {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getInterfaceColor(which:Number):Color {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getInterfaceColorDefault(which:Number):Color {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getInterfaceColorDescription(which:Number):String {
+	
+	}
+	/**
+ * @description Since:
+*/
+	getInterfaceColorDisplaySettings(which:Number, settings:DzSettings):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getInterfaceColorName(which:Number):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getInterfaceNumber(name:String):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getInterfaceNumber(which:Number):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getInterfaceNumberDefault(which:Number):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getInterfaceNumberDescription(which:Number):String {
+	
+	}
+	/**
+ * @description Since:
+*/
+	getInterfaceNumberDisplaySettings(which:Number, settings:DzSettings):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getInterfaceNumberName(which:Number):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumInterfaceColors() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumInterfaceNumbers() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getStyleDefinition() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	pixelMetric(metricName:String):Number {
+	
+	}
+	/**
+ * @description Sets the given interface color to the new value. The interface will not automatically update - the current style must be reloaded before the changes will take affect.
+*/
+	setInterfaceColor(which:Number, color:Color):Number {
+	
+	}
+	/**
+ * @description Sets the given interface number to the new value. The interface will not automatically update - the current style must be reloaded before the changes will take affect.
+*/
+	setInterfaceNumber(which:Number, number:Number):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	standardPixmap(pixmapName:String):Pixmap {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	textStyle(styleName:String):Font {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	textStyleColor(styleName:String):Color {
 	
 	}
 
@@ -19197,7 +30166,7 @@ class DzSubtractBlend extends DzImageBlend {
 	/**
  * @description Default Constructor
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -19208,29 +30177,29 @@ class DzSubtractBlend extends DzImageBlend {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/tabwidget_dz}*/
 class DzTabWidget extends DzWidget {
 	/**
- * @description The top of the widget.
+ * @description ENUMERATOR: The top of the widget.
 */
 	
-static North;
+	static North;
 	/**
- * @description The bottom of the widget.
+ * @description ENUMERATOR: The bottom of the widget.
 */
 	
-static South;
+	static South;
 	/**
- * @description The left of the widget.
+ * @description ENUMERATOR: The left of the widget.
 */
 	
-static West;
+	static West;
 	/**
- * @description The right of the widget.
+ * @description ENUMERATOR: The right of the widget.
 */
 	
-static East;
+	static East;
 	/**
  * @description Creates a tab widget as a child of the given parent widget.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -19359,7 +30328,7 @@ class DzTextBrowser extends DzTextEdit {
 	/**
  * @description Creates a text browser widget as a child of the given parent widget.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -19412,69 +30381,69 @@ class DzTextBrowser extends DzTextEdit {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/textedit_dz}*/
 class DzTextEdit extends DzWidget {
 	/**
- * @description Do not perform any automatic formatting.
+ * @description ENUMERATOR: Do not perform any automatic formatting.
 */
 	
-static AutoNone;
+	static AutoNone;
 	/**
- * @description Only automatically format bulletted lists.
+ * @description ENUMERATOR: Only automatically format bulletted lists.
 */
 	
-static AutoBulletList;
+	static AutoBulletList;
 	/**
- * @description Apply all available autoformatting.
+ * @description ENUMERATOR: Apply all available autoformatting.
 */
 	
-static AutoAll;
+	static AutoAll;
 	/**
- * @description Do not wrap the text.
+ * @description ENUMERATOR: Do not wrap the text.
 */
 	
-static NoLineWrap;
+	static NoLineWrap;
 	/**
- * @description Wrap the text at the current width of the widget.
+ * @description ENUMERATOR: Wrap the text at the current width of the widget.
 */
 	
-static WidgetWidth;
+	static WidgetWidth;
 	/**
- * @description Wrap the text at a fixed number of pixels from the widget's left side.
+ * @description ENUMERATOR: Wrap the text at a fixed number of pixels from the widget's left side.
 */
 	
-static FixedPixelWidth;
+	static FixedPixelWidth;
 	/**
- * @description Wrap the text at a fixed number of character columns from the widget's left side.
+ * @description ENUMERATOR: Wrap the text at a fixed number of character columns from the widget's left side.
 */
 	
-static FixedColumnWidth;
+	static FixedColumnWidth;
 	/**
- * @description Do not wrap the text at all.
+ * @description ENUMERATOR: Do not wrap the text at all.
 */
 	
-static NoWrap;
+	static NoWrap;
 	/**
- * @description Wrap the text at word boundaries.
+ * @description ENUMERATOR: Wrap the text at word boundaries.
 */
 	
-static WordWrap;
+	static WordWrap;
 	/**
- * @description Same as NoWrap.
+ * @description ENUMERATOR: Same as NoWrap.
 */
 	
-static ManualWrap;
+	static ManualWrap;
 	/**
- * @description Wrap the text at any point on a line, even if it occurs in the middle of a word.
+ * @description ENUMERATOR: Wrap the text at any point on a line, even if it occurs in the middle of a word.
 */
 	
-static WrapAnywhere;
+	static WrapAnywhere;
 	/**
- * @description If possible, WordWrap, otherwise WrapAnywhere.
+ * @description ENUMERATOR: If possible, WordWrap, otherwise WrapAnywhere.
 */
 	
-static WrapAtWordBoundaryOrAnywhere;
+	static WrapAtWordBoundaryOrAnywhere;
 	/**
  * @description Creates a text edit widget as a child of the given parent widget.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -19713,29 +30682,102 @@ static WrapAtWordBoundaryOrAnywhere;
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/texture_dz}*/
 class DzTexture extends QObject, DzRefCountedItem {
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static Standard;
+	static Standard;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static LatLong;
+	static LatLong;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static LightProbe;
+	static LightProbe;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static CustomTexture;
+	static CustomTexture;
 	/**
  * @description Return Value:
 */
-	static getFilename() {
+	getFilename() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getGamma() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getGLAlphaTextureSize() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getGLTextureSize() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getOriginalImageSize() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getPreviewPixmap(size:Size):Pixmap {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getPreviewPixmap(width:Number, height:Number):Pixmap {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTempFilename() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTextureType() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	loadImageData(image:Image):Boolean {
+	
+	}
+	/**
+ * @description Reloads the image if its source file has changed
+*/
+	refresh() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	setGamma(gamma:Number):Number {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	setTextureType(type:Number):Number {
 	
 	}
 
@@ -19745,37 +30787,37 @@ static CustomTexture;
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/texturecomponent_dz}*/
 class DzTextureComponent extends QObject {
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static RotNone;
+	static RotNone;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static Rot90;
+	static Rot90;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static Rot180;
+	static Rot180;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static Rot270;
+	static Rot270;
 	/**
  * @description TODO:
 Add description.
 */
-	static flip(horizontal:Boolean, vertical:Boolean):Boolean {
+	flip(horizontal:Boolean, vertical:Boolean):Boolean {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static loadImageData(image:Image):Image {
+	loadImageData(image:Image):Image {
 	
 	}
 
@@ -19785,30 +30827,51 @@ Add description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/texturelayer_dz}*/
 class DzTextureLayer extends DzTextureComponent {
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static BlendAlpha;
+	static BlendAlpha;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static BlendAdd;
+	static BlendAdd;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static BlendSubtract;
+	static BlendSubtract;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static BlendMultiply;
+	static BlendMultiply;
 	/**
  * @description TODO:
 Add description.
 */
-	static clearMask() {
+	clearMask() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	createMask(maskLabel:String):DzTextureMask {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getMask() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	setMask(mask:DzTextureMask):DzTextureMask {
 	
 	}
 
@@ -19856,7 +30919,7 @@ class DzTime {
 	/**
  * @description Return Value:
 */
-	static valueOf() {
+	valueOf() {
 	
 	}
 
@@ -19871,7 +30934,7 @@ class DzTimeEdit extends DzDateTimeEdit {
 	/**
  * @description Creates a time edit widget as a child of the given parent widget.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -19887,7 +30950,7 @@ class DzTimer extends QObject {
 	/**
  * @description Construct a timer with the given parent.
  * @constructor
-*/
+*/;
 	constructor(parent=undefined:QObject) {
 	
 	}
@@ -19921,8 +30984,22 @@ class DzTimeRange extends Object {
 	/**
  * @description Default Constructor. Creates the time range [DZ_MIN_TIME,DZ_MAX_TIME]
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.
+ * @constructor
+*/;
+	constructor(interval:DzTimeRange) {
+	
+	}
+	/**
+ * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.
+ * @constructor
+*/;
+	constructor(start:DzTime, end:DzTime) {
 	
 	}
 	/**
@@ -20004,34 +31081,154 @@ class DzTimeRange extends Object {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/toolbar_dz}*/
 class DzToolBar extends QWidget {
 	/**
- * @description The dock area at the top of a DzActivityLayout.
+ * @description ENUMERATOR: The dock area at the top of a DzActivityLayout.
 */
 	
-static ToolBarTop;
+	static ToolBarTop;
 	/**
- * @description The dock area at the bottom of a DzActivityLayout.
+ * @description ENUMERATOR: The dock area at the bottom of a DzActivityLayout.
 */
 	
-static ToolBarBottom;
+	static ToolBarBottom;
 	/**
- * @description The dock area on the left side of a DzActivityLayout.
+ * @description ENUMERATOR: The dock area on the left side of a DzActivityLayout.
 */
 	
-static ToolBarLeft;
+	static ToolBarLeft;
 	/**
- * @description The dock area on the right side of a DzActivityLayout.
+ * @description ENUMERATOR: The dock area on the right side of a DzActivityLayout.
 */
 	
-static ToolBarRight;
+	static ToolBarRight;
 	/**
- * @description No dock area. The toolbar cannot be docked.
+ * @description ENUMERATOR: No dock area. The toolbar cannot be docked.
 */
 	
-static NoToolBarArea;
+	static NoToolBarArea;
 	/**
  * @description Removes all items from the bar.
 */
-	static clear() {
+	clear() {
+	
+	}
+	/**
+ * @description Docks the toolbar in the specified area on the DzActivityLayout, and shows the toolbar if it is hidden.
+*/
+	dock(area:DzToolBar.DockArea, beforeBar:String):DockArea {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	dockedArea() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getItem(which:Number):DzToolBarItem {
+	
+	}
+	/**
+ * @description This function is provided for DAZ Script access. Plug-in developers are encouraged to use the much more efficient itemListIterator() method.
+*/
+	getItemList() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumItems() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	hasItems() {
+	
+	}
+	/**
+ * @description Adds the given action to the toolbar.
+*/
+	insertAction(action:DzAction, before:DzAction):DzAction {
+	
+	}
+	/**
+ * @description Adds the given action to the toolbar.
+*/
+	insertAction(action:String, index:Number):String {
+	
+	}
+	/**
+ * @description Adds the given custom action to the toolbar.
+*/
+	insertCustomAction(action:String, index:Number):String {
+	
+	}
+	/**
+ * @description Adds a custom widget to the toolbar.
+*/
+	insertCustomWidget(uiScript:String, index:Number):String {
+	
+	}
+	/**
+ * @description Inserts the given item into the toolbar at the given location.
+*/
+	insertItem(item:DzToolBarItem, index:Number):DzToolBarItem {
+	
+	}
+	/**
+ * @description Adds a separator to the toolbar.
+*/
+	insertSeparator(index:Number):Number {
+	
+	}
+	/**
+ * @description Adds a spacer to the toolbar which adjusts itself so that items added after it are aligned over the application viewport.
+*/
+	insertViewportAlignmentSpacer(alignment:Number, index:Number):Number {
+	
+	}
+	/**
+ * @description Adds a spacer to the toolbar which adjusts itself so that any items after it are centered over the application viewport.
+*/
+	insertViewportCenterAlignSpacer(index:Number):Number {
+	
+	}
+	/**
+ * @description Adds a spacer to the toolbar which adjusts itself so that any items after it are left aligned over the application viewport.
+*/
+	insertViewportLeftAlignSpacer(index:Number):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isClosed() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	removeItem(index:Number):Number {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	removeItem(item:DzToolBarItem):DzToolBarItem {
+	
+	}
+	/**
+ * @description Sets whether the toolbar is closed (not displayed), or open (displayed).
+*/
+	setClosed(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Undocks the toolbar, moves it to the given global coordinates, and shows the toolbar if it is hidden.
+*/
+	undock(pos:Point):Point {
 	
 	}
 
@@ -20042,35 +31239,35 @@ Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/toolbaritem_dz}*/
 class DzToolBarItem extends QObject {
 	/**
- * @description A toolbar separator (i.e. divider)
+ * @description ENUMERATOR: A toolbar separator (i.e. divider)
 */
 	
-static Separator;
+	static Separator;
 	/**
- * @description An action item - a toolbar item that activates a DzAction
+ * @description ENUMERATOR: An action item - a toolbar item that activates a DzAction
 */
 	
-static Action;
+	static Action;
 	/**
- * @description A toolbar item that activates a custom DzAction.  See Also: DzActionMgr for more about custom actions.
+ * @description ENUMERATOR: A toolbar item that activates a custom DzAction.  See Also: DzActionMgr for more about custom actions.
 */
 	
-static CustomAction;
+	static CustomAction;
 	/**
- * @description A toolbar item that provides a non-standard widget.
+ * @description ENUMERATOR: A toolbar item that provides a non-standard widget.
 */
 	
-static CustomWidget;
+	static CustomWidget;
 	/**
- * @description A toolbar item that adjusts itself so that any items after it are left aligned over the application viewport.
+ * @description ENUMERATOR: A toolbar item that adjusts itself so that any items after it are left aligned over the application viewport.
 */
 	
-static ViewportLeftAlignSpacer;
+	static ViewportLeftAlignSpacer;
 	/**
- * @description A toolbar item that adjusts itself so that any items after it are centered over the application viewport.
+ * @description ENUMERATOR: A toolbar item that adjusts itself so that any items after it are centered over the application viewport.
 */
 	
-static ViewportCenterAlignSpacer;
+	static ViewportCenterAlignSpacer;
 
 }
 /**
@@ -20078,34 +31275,40 @@ static ViewportCenterAlignSpacer;
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/toplevelassetcontainer_dz}*/
 class DzTopLevelAssetContainer extends DzAbstractAssetContainer, DzRefCountedItem {
 	/**
- * @description The container is idle.
+ * @description ENUMERATOR: The container is idle.
 */
 	
-static csNone;
+	static csNone;
 	/**
- * @description The container is busy with an update.
+ * @description ENUMERATOR: The container is busy with an update.
 */
 	
-static csBusy;
+	static csBusy;
 	/**
- * @description The update operation completed without errors.
+ * @description ENUMERATOR: The update operation completed without errors.
 */
 	
-static csFinished;
+	static csFinished;
 	/**
- * @description The update operation was canceled.
+ * @description ENUMERATOR: The update operation was canceled.
 */
 	
-static csCanceled;
+	static csCanceled;
 	/**
- * @description An error occured during the update operation.
+ * @description ENUMERATOR: An error occured during the update operation.
 */
 	
-static csError;
+	static csError;
 	/**
  * @description Return Value:
 */
-	static getState() {
+	getState() {
+	
+	}
+	/**
+ * @description Sets the state of this container.
+*/
+	setState(state:ContainerState):ContainerState {
 	
 	}
 
@@ -20125,69 +31328,69 @@ Since:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/transferutility_dz}*/
 class DzTransferUtility extends QObject {
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static NoAsset;
+	static NoAsset;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static GeometryAsset;
+	static GeometryAsset;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static NodeAsset;
+	static NodeAsset;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static BaseGeom;
+	static BaseGeom;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static BaseMorph;
+	static BaseMorph;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static BaseCurrent;
+	static BaseCurrent;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static NoMorphs;
+	static NoMorphs;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static NameList;
+	static NameList;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static Favorites;
+	static Favorites;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static FavoritesAndSubComponets;
+	static FavoritesAndSubComponets;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static ShapingAndPoseType;
+	static ShapingAndPoseType;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AllMorphs;
+	static AllMorphs;
 	/**
  * @description Default Constructor. Creates a transfer utility that can be used to transfer weights, morph, maps, etc using projection.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -20197,17 +31400,545 @@ static AllMorphs;
 	doTransfer() {
 	
 	}
+	/**
+ * @description Return Value:
+*/
+	getAdaptiveTolerance() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getAddSmoothModifier() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getAdjustTargetBase() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getContentType() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDistanceSquaredTolerance() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getFitToFigure() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLockViewOnTransfer() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getMergeHierarchies() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getMorphTransferList() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNearness() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getOverrideExistingMorphs() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getParentToFigure() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getProjectionTemplatePath() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRemoveUnusedTargetBones() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRespectHiddenFacets() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSmartLeftRightHandling() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSourceBase() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSourceBaseMorph() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSourceGeom() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSourceNode() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSourceType() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTargetBase() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTargetBaseMorph() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTargetGeom() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTargetNode() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTargetOutputFigure() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTargetReplacesSource() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTargetType() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTransferBinding() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTransferFaceGroups() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTransferMaterialGroups() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTransferMorphs() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTransferRegionGroups() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTransferSelectionMap() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTransferSourceMorphs() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTransferTemplateMorphs() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTransferUVs() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getUseNearness() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getUseSpecifiedContentType() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getUVSpaceProjection() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getVertexFirstProjection() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isSourceBaseMorphClone() {
+	
+	}
+	/**
+ * @description Removes unused bones from the given figure. Unused bones are those whose bone binding weight maps are all filled with zero.
+*/
+	removeUnusedBones(figure:figure_dz):void {
+	
+	}
+	/**
+ * @description Sets the adaptive tolerance factor if near vertices will be used to calculate the projection.
+*/
+	setAdaptiveTolerance(val:Number):Number {
+	
+	}
+	/**
+ * @description Sets whether or not to add a smoothing modifier to the target figure.
+*/
+	setAddSmoothModifier(yesNo:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not the target will be adjusted to the unmodified base geometry of the source.
+*/
+	setAdjustTargetBase(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the content type to be set on the presentation of the figure.
+*/
+	setContentType(conType:String):String {
+	
+	}
+	/**
+ * @description Sets the distance squared tolerance to use for calculating the projection.
+*/
+	setDistanceSquaredTolerance(val:Number):Number {
+	
+	}
+	/**
+ * @description Sets whether or not the target figure will be fit to the source figure once the projection has been performed.
+*/
+	setFitToFigure(yesNo:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not the view will be locked during the transfer.
+*/
+	setLockViewOnTransfer(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not node hierarchies will be merged on the target figure.
+*/
+	setMergeHierarchies(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the list of morph names to transfer.
+*/
+	setMorphTransferList(list:Array):Array {
+	
+	}
+	/**
+ * @description Sets the nearness factor if near vertices will be used to calculate the projection.
+*/
+	setNearness(val:Number):Number {
+	
+	}
+	/**
+ * @description Sets whether or not to override morphs that already exist onthe target figure.
+*/
+	setOverrideExistingMorphs(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not the target figure will be parented to the source figure once the projection has been performed.
+*/
+	setParentToFigure(yesNo:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the path to a template figure to use for projection.
+*/
+	setProjectionTemplatePath(path:String):String {
+	
+	}
+	/**
+ * @description Sets whether or not unused bones should be removed from the target after skin binding is transfered.
+*/
+	setRemoveUnusedTargetBones(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not the transfer of weightmaps will respect hidden facets on the target figure.
+*/
+	setRespectHiddenFacets(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether importers that may need to be invoked should run silently, or with user input. Currently this only affects transfers using DzTransferPoserFigureAssets. This needs to be called before setSource() or setTarget() are called.
+*/
+	setSilentImporters(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not smart left/right handling will be used during projection calculation.
+*/
+	setSmartLeftRightHandling(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the source asset to be the geometry contained by the given node.
+*/
+	setSource(node:DzNode):Boolean {
+	
+	}
+	/**
+ * @description Sets the source asset to be the geometry contained by the given shape.
+*/
+	setSource(geom:shape_dz):Boolean {
+	
+	}
+	/**
+ * @description Sets the transfer utility to use the current world-space cached geometry of the source asset for the projection base instead of a morph or the unmodified base geometry. Only valid if the source asset is a node.
+*/
+	setSourceBaseCurrent() {
+	
+	}
+	/**
+ * @description Sets the morph that will be applied to the source geometry before the projection is calculated. Only valid if the source asset is a node.
+*/
+	setSourceBaseMorph(morph:morph_dz):Boolean {
+	
+	}
+	/**
+ * @description Sets the target asset to be the geometry contained by the given node.
+*/
+	setTarget(node:DzNode):Boolean {
+	
+	}
+	/**
+ * @description Sets the target asset to be the geometry contained by the given shape.
+*/
+	setTarget(geom:shape_dz):Boolean {
+	
+	}
+	/**
+ * @description Sets the transfer utility to use the current world-space cached geometry of the target asset for the projection base instead of a morph or the unmodified base geometry. Only valid if the target asset is a node.
+*/
+	setTargetBaseCurrent() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	setTargetBaseMorph(morph:morph_dz):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not the target will replace the source in the scene
+*/
+	setTargetReplacesSource(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not skin binding will be projected to the target.
+*/
+	setTransferBinding(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not face grouping will be projected to the target.
+*/
+	setTransferFaceGroups(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not material grouping will be projected to the target.
+*/
+	setTransferMaterialGroups(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not morphs will be projected to the target.
+*/
+	setTransferMorphs(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not region grouping will be projected to the target.
+*/
+	setTransferRegionGroups(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not the selection map will be created on the target.
+*/
+	setTransferSelectionMap(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets which type of morphs to project from the source figure.
+*/
+	setTransferSourceMorphs(type:SourceMorphTransferType):void {
+	
+	}
+	/**
+ * @description Sets whether or not morphs should be projected from the template figure.
+*/
+	setTransferTemplateMorphs(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not UV maps will be projected to the target.
+*/
+	setTransferUVs(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not face near vertices will be used to calculate the projection.
+*/
+	setUseNearness(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not the specified content type should be used to set the target content type.
+*/
+	setUseSpecifiedContentType(yesNo:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not UV space will be used during projection calculation.
+*/
+	setUVSpaceProjection(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether vertices or facets are looked at first on the source for projection.
+*/
+	setVertexFirstProjection(onOff:Boolean):Boolean {
+	
+	}
 
 }
 /**
  * @classdesc A generic asset container that takes on the type of the data assigned to it, which can be used to present hierarchical structures that are representable by a slash ('/') delimted path.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/typeassetcontainer_dz}*/
 class DzTypeAssetContainer extends DzAbstractAssetContainer, DzRefCountedItem {
-	static data:Object;
+	data:Object;
 	/**
  * @description Adds a new container with the given name, if one doesn't already exist.
 */
-	static addChildContainer(typePath:String):Number {
+	addChildContainer(typePath:String):Number {
+	
+	}
+	/**
+ * @description Adds the given container if one of the same type name doesn't exist.
+*/
+	addChildContainer(container:DzTypeAssetContainer):Number {
+	
+	}
+	/**
+ * @description Clears all the child containers and assets associated with this container. Emits endAssetRemove() and endChildContainerRemove().
+*/
+	clear() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findChildContainer(typePath:String):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getTextPath(ignoreRoot:Boolean):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTypeName() {
+	
+	}
+	/**
+ * @description Attempts to insert the asset to a specific type.
+*/
+	insertToSpecificType(asset:DzAsset, typePath:String):Boolean {
 	
 	}
 
@@ -20225,7 +31956,7 @@ class DzUiLoader extends QObject {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -20233,6 +31964,60 @@ class DzUiLoader extends QObject {
  * @description Adds a path to the list of paths the .ui loader searches when locating QtDesigner plug-ins.
 */
 	addPluginPath(path:String):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	availableLayouts() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	availableWidgets() {
+	
+	}
+	/**
+ * @description Clears the list of paths the .ui loader searches when locating QtDesigner plug-ins.
+*/
+	clearPluginPaths() {
+	
+	}
+	/**
+ * @description Creates a new layout.
+*/
+	createLayout(className:String, parent:QObject, name:String):DzLayout {
+	
+	}
+	/**
+ * @description Creates a new widget.
+*/
+	createWidget(className:String, parent:DzWidget, name:String):DzWidget {
+	
+	}
+	/**
+ * @description Loads a QtDesigner form (*.ui) and creates a new widget.
+*/
+	load(filePath:String, parent:DzWidget):DzWidget {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	pluginPaths() {
+	
+	}
+	/**
+ * @description Sets the base directory of the .ui loader. The .ui loader looks for other resources, such as icons and resource files, in paths relative to this directory.
+*/
+	setWorkingDirectory(dir:String):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	workingDirectory() {
 	
 	}
 
@@ -20245,7 +32030,7 @@ class DzUIPopUpWgt extends QWidget {
 	/**
  * @description Default Constructor. Creates a new ui popup widget.
  * @constructor
-*/
+*/;
 	constructor(parent:QWidget) {
 	
 	}
@@ -20253,6 +32038,42 @@ class DzUIPopUpWgt extends QWidget {
  * @description Return Value:
 */
 	getFileName() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getUIWidget() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getWorkingDirectory() {
+	
+	}
+	/**
+ * @description Sets the main widget for this popup from the ui file.
+*/
+	loadUI(filename:String):String {
+	
+	}
+	/**
+ * @description Moves the popup to the point defined.
+*/
+	movePopUp(newPos:Point):Point {
+	
+	}
+	/**
+ * @description Sets the widget for the ui popup widget.
+*/
+	setWidget(widget:QWidget):QWidget {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	setWorkingDirectory(str:String):String {
 	
 	}
 
@@ -20278,7 +32099,127 @@ class DzUndoStack extends QObject {
 	/**
  * @description It is recommended that you use Global.acceptUndo() instead of calling this function directly to avoid leaving the undo stack open.
 */
-	static accept(caption:String):String {
+	accept(caption:String):String {
+	
+	}
+	/**
+ * @description It is recommended that you use Global.beginUndo() instead of calling this function directly to avoid leaving the undo stack open.
+*/
+	beginHold() {
+	
+	}
+	/**
+ * @description It is recommended that you use Global.cancelUndo() instead of calling this function directly to avoid leaving the undo stack open.
+*/
+	cancel() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	canPushItems() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	canRedo() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	canUndo() {
+	
+	}
+	/**
+ * @description Clears the undo stack. This must be called at least whenever the list changes.
+*/
+	clearAll() {
+	
+	}
+	/**
+ * @description It is recommended that you use Global.dropUndo() instead of calling this function directly to avoid leaving the undo stack open.
+*/
+	drop() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getCaption(offset:Number):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getCurrentIndex() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumItems() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumRedoItems() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumUndoItems() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRedoCaption() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getUndoCaption() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	hasItems() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isInUndoRedo() {
+	
+	}
+	/**
+ * @description Disables items from being pushed onto the stack. This will be toggled by items to prevent undo operations from creating new undo items during an undo. Every call to lock() must be matched by a call to unlock().
+*/
+	lock() {
+	
+	}
+	/**
+ * @description Calls redo on the item at the top of the stack, then moves the pointer to the next item in the stack.
+*/
+	redo() {
+	
+	}
+	/**
+ * @description Calls undo on the item at the top of the stack, then moves the pointer to the previous item in the stack.
+*/
+	undo() {
+	
+	}
+	/**
+ * @description Enables items to be pushed onto the stack after a lock() call.
+*/
+	unlock() {
 	
 	}
 
@@ -20331,79 +32272,109 @@ Since:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/uri_dz}*/
 class DzUri extends Object {
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static NoPart;
+	static NoPart;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static Scheme;
+	static Scheme;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static NodePath;
+	static NodePath;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static ModifierPath;
+	static ModifierPath;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static PropertyPath;
+	static PropertyPath;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static IDPart;
+	static IDPart;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static FilePath;
+	static FilePath;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AllParts;
+	static AllParts;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static NoScheme;
+	static NoScheme;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static ID;
+	static ID;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static Name;
+	static Name;
 	/**
  * @description Default constructor. Creates an empty URI.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
 	/**
  * @description Copy constructor. Creates a URI as a copy of another URI.
  * @constructor
-*/
+*/;
 	constructor(uri:DzUri) {
 	
 	}
 	/**
  * @description Constructor. Creates a URI from its string representation.
  * @constructor
-*/
+*/;
 	constructor(uri:String) {
+	
+	}
+	/**
+ * @description Escapes any reserved characters in the in the given string.
+*/
+	static escape(str:String, exclude:ByteArray, closer:ByteArray):String {
+	
+	}
+	/**
+ * @description Converts the string list into an escaped path string.
+*/
+	static escapedPath(list:Array, exclude:ByteArray, include:ByteArray):String {
+	
+	}
+	/**
+ * @description Holds wether or not this uri was points to a cloud asset.
+*/
+	static fromLocalFilename(filePath:String):Boolean {
+	
+	}
+	/**
+ * @description Converts any escape sequences in the given string back to the corresponding character.
+*/
+	static unescape(str:String):String {
+	
+	}
+	/**
+ * @description Converts the string into a string list of unescaped path pieces.
+*/
+	static unescapePath(path:String):Array {
 	
 	}
 	/**
@@ -20484,7 +32455,7 @@ class DzUVSet extends DzRefCountedItem {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -20504,7 +32475,7 @@ class DzUVSupportAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -20517,8 +32488,15 @@ class DzVBoxLayout extends DzBoxLayout {
 	/**
  * @description Creates a vertical box layout that manages the children widgets of the given parent widget
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
+	
+	}
+	/**
+ * @description Creates a vertical box layout as a sub-layout of the given layout
+ * @constructor
+*/;
+	constructor(parent:DzLayout) {
 	
 	}
 
@@ -20530,7 +32508,7 @@ class DzVButtonGroup extends DzButtonGroup {
 	/**
  * @description Creates a button group as a child of the given parent widget
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -20555,8 +32533,36 @@ class DzVec2 extends Object {
 	/**
  * @description Default Constructor. Creates an uninitialized vector.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Copy Constructor.
+ * @constructor
+*/;
+	constructor(vec:DzInt2) {
+	
+	}
+	/**
+ * @description Copy Constructor.
+ * @constructor
+*/;
+	constructor(vec:DzVec2) {
+	
+	}
+	/**
+ * @description Creates and inititializes this vector with an array of 2 float values.
+ * @constructor
+*/;
+	constructor(vals:Array) {
+	
+	}
+	/**
+ * @description Creates and inititializes this vector with 2 floats.
+ * @constructor
+*/;
+	constructor(x:Number, y:Number) {
 	
 	}
 	/**
@@ -20744,28 +32750,28 @@ class DzVec3 extends Object {
 	/**
  * @description Default Constructor. Creates an uninitialized vector.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/
+*/;
 	constructor(vec:DzVec3) {
 	
 	}
 	/**
  * @description Creates and inititializes this vector with an array of 3 float values.
  * @constructor
-*/
+*/;
 	constructor(vals:Array) {
 	
 	}
 	/**
  * @description Creates and inititializes this vector with 3 floats.
  * @constructor
-*/
+*/;
 	constructor(x:Number, y:Number, z:Number) {
 	
 	}
@@ -20973,8 +32979,43 @@ class DzVersion extends Object {
 	/**
  * @description Default constructor. Creates an empty version number - i.e. 0.0.0.0
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+ * @constructor
+*/;
+	constructor(version:String) {
+	
+	}
+	/**
+ * @description Creates a version number from the 4 16-bit components.
+ * @constructor
+*/;
+	constructor(major:Number, minor:Number, revision:Number, build:Number) {
+	
+	}
+	/**
+ * @description Compatibility constructor. Creates a 64-bit version number from an old 32-bit version number.
+ * @constructor
+*/;
+	constructor(version:Number) {
+	
+	}
+	/**
+ * @description Copy constructor. Creates a version that is a copy of the given number.
+ * @constructor
+*/;
+	constructor(version:DzVersion) {
+	
+	}
+	/**
+ * @description Parses a version string into a version number.
+*/
+	static fromString(versionStr:String):String {
 	
 	}
 	/**
@@ -21088,7 +33129,7 @@ class DzVGroupBox extends DzGroupBox {
 	/**
  * @description Creates a group box as a child of the given parent widget.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -21102,14 +33143,81 @@ class DzVideoClip extends QObject {
 	/**
  * @description Default Constructor.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.
+ * @constructor
+*/;
+	constructor(width:Number, height:Number, rate:Number) {
 	
 	}
 	/**
  * @description Adds a frame to the end of the clip
 */
 	appendFrame(img:Image):Image {
+	
+	}
+	/**
+ * @description Adds a frame to the end of the clip
+*/
+	appendFrameFile(imgFilename:String):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getAudio() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getAudioStartTime() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getFrame(i:Number):Image {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getFrameRate() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getHeight() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumFrames() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getWidth() {
+	
+	}
+	/**
+ * @description Set the audio that accompanies the video clip
+*/
+	setAudio(audio:DzAudioClip, audioStartTime:DzTime):DzAudioClip {
+	
+	}
+	/**
+ * @description Set the frame rate of the clip
+*/
+	setFrameRate(rate:Number):Number {
 	
 	}
 
@@ -21122,7 +33230,31 @@ class DzVideoExporter extends DzFileIO {
 	/**
  * @description Return Value:
 */
-	static getDescription() {
+	getDescription() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getExtension() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isFileExporter() {
+	
+	}
+	/**
+ * @description Writes the file.
+*/
+	saveClip(filename:String, clip:DzVideoClip):DzError {
+	
+	}
+	/**
+ * @description Writes the file.
+*/
+	saveClip(filename:String, clip:DzVideoClip, options:DzFileIOSettings):DzError {
 	
 	}
 
@@ -21135,7 +33267,13 @@ class DzView extends QWidget {
 	/**
  * @description Return Value:
 */
-	static getDescription() {
+	getDescription() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getIcon() {
 	
 	}
 
@@ -21147,7 +33285,37 @@ class DzViewport extends QWidget {
 	/**
  * @description Return Value:
 */
-	static get3DViewport() {
+	get3DViewport() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getManager() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getView() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isCustom() {
+	
+	}
+	/**
+ * @description Sets the alternate view for the viewport; this replaces the 3D viewport while active. Pass in NULL to clear the alternate view and restore the 3D viewport.
+*/
+	setView(view:DzView):DzView {
+	
+	}
+	/**
+ * @description Sets the visible state of the alternate view for this viewport, if an alternate view has been set.
+*/
+	setViewVisible(onOff:Boolean):Boolean {
 	
 	}
 
@@ -21157,324 +33325,677 @@ class DzViewport extends QWidget {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/viewportmgr_dz}*/
 class DzViewportMgr extends QWidget {
 	/**
- * @description No visible view ports
+ * @description ENUMERATOR: No visible view ports
 */
 	
-static NO_PANES;
+	static NO_PANES;
 	/**
- * @description A single visible viewport
+ * @description ENUMERATOR: A single visible viewport
 */
 	
-static SINGLE_PANE;
+	static SINGLE_PANE;
 	/**
- * @description 2 visible view ports split the view area into right and left
+ * @description ENUMERATOR: 2 visible view ports split the view area into right and left
 */
 	
-static LEFT_RIGHT;
+	static LEFT_RIGHT;
 	/**
- * @description 2 visible view ports split the view area into top and bottom
+ * @description ENUMERATOR: 2 visible view ports split the view area into top and bottom
 */
 	
-static TOP_BOTTOM;
+	static TOP_BOTTOM;
 	/**
- * @description 3 visible view ports 2 on the left side and 1 on the right
+ * @description ENUMERATOR: 3 visible view ports 2 on the left side and 1 on the right
 */
 	
-static LEFT2_RIGHT;
+	static LEFT2_RIGHT;
 	/**
- * @description 4 visible view ports 3 on the left side and 1 on the right
+ * @description ENUMERATOR: 4 visible view ports 3 on the left side and 1 on the right
 */
 	
-static LEFT3_RIGHT;
+	static LEFT3_RIGHT;
 	/**
- * @description 3 visible view ports 2 on the right side and 1 on the left
+ * @description ENUMERATOR: 3 visible view ports 2 on the right side and 1 on the left
 */
 	
-static LEFT_RIGHT2;
+	static LEFT_RIGHT2;
 	/**
- * @description 4 visible view ports 3 on the right side and 1 on the left
+ * @description ENUMERATOR: 4 visible view ports 3 on the right side and 1 on the left
 */
 	
-static LEFT_RIGHT3;
+	static LEFT_RIGHT3;
 	/**
- * @description 3 visible view ports 2 on the top side and 1 on the bottom
+ * @description ENUMERATOR: 3 visible view ports 2 on the top side and 1 on the bottom
 */
 	
-static TOP2_BOTTOM;
+	static TOP2_BOTTOM;
 	/**
- * @description 4 visible view ports 3 on the top side and 1 on the bottom
+ * @description ENUMERATOR: 4 visible view ports 3 on the top side and 1 on the bottom
 */
 	
-static TOP3_BOTTOM;
+	static TOP3_BOTTOM;
 	/**
- * @description 3 visible view ports 2 on the bottom side and 1 on the top
+ * @description ENUMERATOR: 3 visible view ports 2 on the bottom side and 1 on the top
 */
 	
-static TOP_BOTTOM2;
+	static TOP_BOTTOM2;
 	/**
- * @description 4 visible view ports 3 on the bottom side and 1 on the top
+ * @description ENUMERATOR: 4 visible view ports 3 on the bottom side and 1 on the top
 */
 	
-static TOP_BOTTOM3;
+	static TOP_BOTTOM3;
 	/**
- * @description 4 visible view ports one in each corner
+ * @description ENUMERATOR: 4 visible view ports one in each corner
 */
 	
-static FOUR_PANE;
+	static FOUR_PANE;
 	/**
- * @description Total number of layouts
+ * @description ENUMERATOR: Total number of layouts
 */
 	
-static NUM_LAYOUTS;
+	static NUM_LAYOUTS;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static Node;
+	static Node;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static SkeletonThenNode;
+	static SkeletonThenNode;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static Skeleton;
+	static Skeleton;
 	/**
- * @description No Quick draw enabled.
+ * @description ENUMERATOR: No Quick draw enabled.
 */
 	
-static QDOff;
+	static QDOff;
 	/**
- * @description Wireframe Quick draw enabled.
+ * @description ENUMERATOR: Wireframe Quick draw enabled.
 */
 	
-static QDWire;
+	static QDWire;
 	/**
- * @description Smooth-Shade Quick draw enabled.
+ * @description ENUMERATOR: Smooth-Shade Quick draw enabled.
 */
 	
-static QDSmooth;
+	static QDSmooth;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static Nested;
+	static Nested;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static Flat;
+	static Flat;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static NoAccel;
+	static NoAccel;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static LeftClick;
+	static LeftClick;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static RightClick;
+	static RightClick;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static MidClick;
+	static MidClick;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AltLeftClick;
+	static AltLeftClick;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AltRightClick;
+	static AltRightClick;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AltMidClick;
+	static AltMidClick;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static CtrlLeftClick;
+	static CtrlLeftClick;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static CtrlRightClick;
+	static CtrlRightClick;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static CtrlMidClick;
+	static CtrlMidClick;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static ShiftLeftClick;
+	static ShiftLeftClick;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static ShiftRightClick;
+	static ShiftRightClick;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static ShiftMidClick;
+	static ShiftMidClick;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static CtrlAltLeftClick;
+	static CtrlAltLeftClick;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static CtrlAltRightClick;
+	static CtrlAltRightClick;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static CtrlAltMidClick;
+	static CtrlAltMidClick;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static CtrlShiftLeftClick;
+	static CtrlShiftLeftClick;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static CtrlShiftRightClick;
+	static CtrlShiftRightClick;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static CtrlShiftMidClick;
+	static CtrlShiftMidClick;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AltShiftLeftClick;
+	static AltShiftLeftClick;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AltShiftRightClick;
+	static AltShiftRightClick;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AltShiftMidClick;
+	static AltShiftMidClick;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static CtrlAltShiftLeftClick;
+	static CtrlAltShiftLeftClick;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static CtrlAltShiftRightClick;
+	static CtrlAltShiftRightClick;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static CtrlAltShiftMidClick;
+	static CtrlAltShiftMidClick;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static NoModifier;
+	static NoModifier;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static Alt;
+	static Alt;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static Shift;
+	static Shift;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static Ctrl;
+	static Ctrl;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static CtrlAlt;
+	static CtrlAlt;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static CtrlShift;
+	static CtrlShift;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static CtrlAltShift;
+	static CtrlAltShift;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static ShiftAlt;
+	static ShiftAlt;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static NoOperation;
+	static NoOperation;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static OrbitCamera;
+	static OrbitCamera;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static RotateCamera;
+	static RotateCamera;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static PanCamera;
+	static PanCamera;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static DollyCamera;
+	static DollyCamera;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static BankCamera;
+	static BankCamera;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static ZoomDCamera;
+	static ZoomDCamera;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static ZoomFCamera;
+	static ZoomFCamera;
 	/**
  * @description Sets the next tool in the list after the currently active tool to be the currently active tool.
 */
-	static activateNextTool() {
+	activateNextTool() {
+	
+	}
+	/**
+ * @description Sets the tool in the list before the currently active tool to be the currently active tool.
+*/
+	activatePrevTool() {
+	
+	}
+	/**
+ * @description Causes the color of each viewport to be set to their respective values, if the color is defined in the current style.
+*/
+	applyStyleColors() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	findTool(className:String):DzViewTool {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	findUserDrawStyle(name:String):DzUserDrawStyle {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getActiveTool() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getActiveViewport() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getCustomViewport(which:Number):DzViewport {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDefaultViewport(which:Number):DzViewport {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getInvertMouseWheel() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLayout() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getMouseBtnAccelerator(operation:ViewOperation):void {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getMouseBtnAccelerator(str:String):String {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getMouseBtnAccelerator(button:Qt.MouseButton, modifiers:Qt.KeyboardModifiers):void {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getMouseBtnAccelerator(mouseBtn:Number, ctrl:Boolean, alt:Boolean, shift:Boolean):Number {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getMouseBtnAcceleratorString(accel:ViewMouseBtnAccelerator):String {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getMouseBtnAcceleratorString(operation:ViewOperation):String {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getMouseModifier(str:String):String {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getMouseModifier(modifiers:Qt.KeyboardModifiers):void {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getMouseModifier(ctrl:Boolean, alt:Boolean, shift:Boolean):Boolean {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getMouseModifierString(accel:ViewMouseModifier):String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNodeClickMode() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumCustomViewports() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumDefaultViewports() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumTools() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumUserDrawStyles() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumViewCameras() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumViewports() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumViews() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumVisibleCustomViewports() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumVisibleDefaultViewports() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumVisibleViewports() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getOperation(accel:ViewMouseBtnAccelerator):void {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPropagateBackgroundColor() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRegionClickMode() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getTool(i:Number):DzViewTool {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	getUsePerPixelLighting() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getUserDrawStyle(which:Number):DzUserDrawStyle {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getView(which:Number):DzView {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getViewCamera(type:DzCamera.CameraType):DzCamera {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getViewCamera(which:Number):DzCamera {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getViewport(which:Number):DzViewport {
+	
+	}
+	/**
+ * @description A convenience method that forces a repaint of the currently active 3D viewport.
+*/
+	repaintActive3DViewport() {
+	
+	}
+	/**
+ * @description Resets all the view cameras to their defaults.
+*/
+	resetViewCameras() {
+	
+	}
+	/**
+ * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.
+*/
+	setActiveTool(which:Number):Number {
+	
+	}
+	/**
+ * @description Sets the currently active 3D tool.
+*/
+	setActiveTool(tool:DzViewTool):DzViewTool {
+	
+	}
+	/**
+ * @description Set the active DzViewport. The given DzViewport must already be attached as an interface to this Scene.
+*/
+	setActiveViewport(activeView:DzViewport):DzViewport {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	setInvertMouseWheel(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Set the current layout. If we are in single pane mode, the new layout will take effect after single pane mode is switched off.
+*/
+	setLayout(val:Layout):Layout {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	setMouseBtnAccelerator(operation:ViewOperation, accel:ViewMouseBtnAccelerator):void {
+	
+	}
+	/**
+ * @description Set the click mode for node selection tools
+*/
+	setNodeClickMode(mode:Number):Number {
+	
+	}
+	/**
+ * @description Set whether or not a background color change of a single viewport should be propagated to the other viewports.
+*/
+	setPropagateBackgroundColor(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Set the click mode for region selection tools
+*/
+	setRegionClickMode(mode:Number):Number {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	setUsePerPixelLighting(yesNo:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the ratios that are used to layout the view ports inside the view area. Each value is a percentage of the available area that will be allocated to the given view port(s). The values passed in are clamped to valid ranges before applying them. The values should be specified in decimal notation - i.e. 0.0 is 0%, 0.5 is 50%, and 1.0 is 100%. The minimum percentage of the area allocated to any viewport on any axis is 20% (0.2). Therefore, any values that are below this value will be increased to this value, and any values that would result in a remainder less than this value will be decreased.
+*/
+	setViewRatios(hSingle:Number, h1:Number, h2:Number, vSingle:Number, v1:Number, v2:Number):Number {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	validateMouseBtnAccelerator(accel:ViewMouseBtnAccelerator):Boolean {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	validateMouseWheelAccelerator(accel:ViewMouseModifier):Boolean {
 	
 	}
 
@@ -21487,7 +34008,7 @@ class DzViewRenderHandler extends DzImageRenderHandler {
 	/**
  * @description Create a new view render handler for rendering a single frame.
  * @constructor
-*/
+*/;
 	constructor(size:Size, time:DzTime, filename:String, isSoftware:Boolean) {
 	
 	}
@@ -21500,7 +34021,7 @@ class DzViewTool extends DzBase {
 	/**
  * @description Derived classes can return a popup menu that will be displayed when the user selects the options menu for the Tool pane.
 */
-	static getOptionsMenu() {
+	getOptionsMenu() {
 	
 	}
 
@@ -21519,7 +34040,7 @@ class DzWearablesAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/
+*/;
 	constructor() {
 	
 	}
@@ -21533,14 +34054,39 @@ class DzWeld extends DzBase {
 	/**
  * @description Creates a new weld operation.
  * @constructor
-*/
+*/;
 	constructor() {
+	
+	}
+	/**
+ * @description Creates a new weld operation that welds the given bones.
+ * @constructor
+*/;
+	constructor(weldBone:DzBone, targetBone:DzBone) {
 	
 	}
 	/**
  * @description Return Value:
 */
 	getTargetBone() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getWeldBone() {
+	
+	}
+	/**
+ * @description Sets the bone that will be welded to - the welding operation will not modify this bone's geometry, only the normals on the border.
+*/
+	setTargetBone(targetBone:DzBone):DzBone {
+	
+	}
+	/**
+ * @description Sets the bone that will be welded - the welding operation will move boundary points in this bone's geometry, and recalculate the affected normals.
+*/
+	setWeldBone(weldBone:DzBone):DzBone {
 	
 	}
 
@@ -21550,239 +34096,239 @@ class DzWeld extends DzBase {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/widget_dz}*/
 class DzWidget extends QObject {
 	/**
- * @description Aligns horizontally with the left edge.
+ * @description ENUMERATOR: Aligns horizontally with the left edge.
 */
 	
-static AlignLeft;
+	static AlignLeft;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AlignLeading;
+	static AlignLeading;
 	/**
- * @description Aligns horizontally with the right edge.
+ * @description ENUMERATOR: Aligns horizontally with the right edge.
 */
 	
-static AlignRight;
+	static AlignRight;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AlignTrailing;
+	static AlignTrailing;
 	/**
- * @description Aligns horizontally in the center.
+ * @description ENUMERATOR: Aligns horizontally in the center.
 */
 	
-static AlignHCenter;
+	static AlignHCenter;
 	/**
- * @description Justifies the text in the available space.
+ * @description ENUMERATOR: Justifies the text in the available space.
 */
 	
-static AlignJustify;
+	static AlignJustify;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AlignAbsolute;
+	static AlignAbsolute;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AlignHorizontal_Mask;
+	static AlignHorizontal_Mask;
 	/**
- * @description Aligns vertically with the top edge.
+ * @description ENUMERATOR: Aligns vertically with the top edge.
 */
 	
-static AlignTop;
+	static AlignTop;
 	/**
- * @description Aligns vertically with the bottom edge.
+ * @description ENUMERATOR: Aligns vertically with the bottom edge.
 */
 	
-static AlignBottom;
+	static AlignBottom;
 	/**
- * @description Aligns vertically in the center.
+ * @description ENUMERATOR: Aligns vertically in the center.
 */
 	
-static AlignVCenter;
+	static AlignVCenter;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static AlignVertical_Mask;
+	static AlignVertical_Mask;
 	/**
- * @description Aligns in the center in both dimensions.
+ * @description ENUMERATOR: Aligns in the center in both dimensions.
 */
 	
-static AlignCenter;
+	static AlignCenter;
 	/**
- * @description Aligns horizontally according to the language (left for most).
+ * @description ENUMERATOR: Aligns horizontally according to the language (left for most).
 */
 	
-static AlignAuto;
+	static AlignAuto;
 	/**
- * @description Horizontal orientation (Left to Right).
+ * @description ENUMERATOR: Horizontal orientation (Left to Right).
 */
 	
-static Horizontal;
+	static Horizontal;
 	/**
- * @description Vertical orientation (Top to Bottom).
+ * @description ENUMERATOR: Vertical orientation (Top to Bottom).
 */
 	
-static Vertical;
+	static Vertical;
 	/**
- * @description Sort in ascending order.
+ * @description ENUMERATOR: Sort in ascending order.
 */
 	
-static AscendingOrder;
+	static AscendingOrder;
 	/**
- * @description Sort in descending order.
+ * @description ENUMERATOR: Sort in descending order.
 */
 	
-static DescendingOrder;
+	static DescendingOrder;
 	/**
- * @description Provided for backward compatability.
+ * @description ENUMERATOR: Provided for backward compatability.
 */
 	
-static Ascending;
+	static Ascending;
 	/**
- * @description Provided for backward compatability.
+ * @description ENUMERATOR: Provided for backward compatability.
 */
 	
-static Descending;
+	static Descending;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static ElideLeft;
+	static ElideLeft;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static ElideRight;
+	static ElideRight;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static ElideMiddle;
+	static ElideMiddle;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static ElideNone;
+	static ElideNone;
 	/**
- * @description Treat all whitespace as spaces and print one line.
+ * @description ENUMERATOR: Treat all whitespace as spaces and print one line.
 */
 	
-static TextSingleLine;
+	static TextSingleLine;
 	/**
- * @description If it is impossible to stay within the bounds, print outside.
+ * @description ENUMERATOR: If it is impossible to stay within the bounds, print outside.
 */
 	
-static TextDontClip;
+	static TextDontClip;
 	/**
- * @description Makes the ASCII tab character move to the next tab stop.
+ * @description ENUMERATOR: Makes the ASCII tab character move to the next tab stop.
 */
 	
-static TextExpandTabs;
+	static TextExpandTabs;
 	/**
- * @description Diplays the string "&P" as P. For an ampersand, use "&&".
+ * @description ENUMERATOR: Diplays the string "&P" as P. For an ampersand, use "&&".
 */
 	
-static TextShowMnemonic;
+	static TextShowMnemonic;
 	/**
- * @description Break lines at appropriate points, e.g., word boundaries.
+ * @description ENUMERATOR: Break lines at appropriate points, e.g., word boundaries.
 */
 	
-static TextWordWrap;
+	static TextWordWrap;
 	/**
- * @description Break lines anywhere, even within words.
+ * @description ENUMERATOR: Break lines anywhere, even within words.
 */
 	
-static TextWrapAnywhere;
+	static TextWrapAnywhere;
 	/**
- * @description Treat this text as "hidden" and do not print it.
+ * @description ENUMERATOR: Treat this text as "hidden" and do not print it.
 */
 	
-static TextDontPrint;
+	static TextDontPrint;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static TextIncludeTrailingSpaces;
+	static TextIncludeTrailingSpaces;
 	/**
- * @description Same as TextShowMnemonic but does not draw the underlines.
+ * @description ENUMERATOR: Same as TextShowMnemonic but does not draw the underlines.
 */
 	
-static TextHideMnemonic;
+	static TextHideMnemonic;
 	/**
- * @description Ensures that text lines are justified.
+ * @description ENUMERATOR: Ensures that text lines are justified.
 */
 	
-static TextJustificationForced;
+	static TextJustificationForced;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static TextForceLeftToRight;
+	static TextForceLeftToRight;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static TextForceRightToLeft;
+	static TextForceRightToLeft;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static TextLongestVariant;
+	static TextLongestVariant;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static TextBypassShaping;
+	static TextBypassShaping;
 	/**
- * @description TODO: Add description.
+ * @description ENUMERATOR: TODO: Add description.
 */
 	
-static NoTextInteraction;
+	static NoTextInteraction;
 	/**
- * @description No interaction with the text is possible.
+ * @description ENUMERATOR: No interaction with the text is possible.
 */
 	
-static TextSelectableByMouse;
+	static TextSelectableByMouse;
 	/**
- * @description Text can be selected with the mouse and copied to the clipboard using a context menu or standard keyboard shortcuts.
+ * @description ENUMERATOR: Text can be selected with the mouse and copied to the clipboard using a context menu or standard keyboard shortcuts.
 */
 	
-static TextSelectableByKeyboard;
+	static TextSelectableByKeyboard;
 	/**
- * @description Text can be selected with the cursor keys on the keyboard. A text cursor is shown.
+ * @description ENUMERATOR: Text can be selected with the cursor keys on the keyboard. A text cursor is shown.
 */
 	
-static LinksAccessibleByMouse;
+	static LinksAccessibleByMouse;
 	/**
- * @description Links can be highlighted and activated with the mouse.
+ * @description ENUMERATOR: Links can be highlighted and activated with the mouse.
 */
 	
-static LinksAccessibleByKeyboard;
+	static LinksAccessibleByKeyboard;
 	/**
- * @description Links can be focused using tab and activated with enter.
+ * @description ENUMERATOR: Links can be focused using tab and activated with enter.
 */
 	
-static TextEditable;
+	static TextEditable;
 	/**
- * @description The text is fully editable.
+ * @description ENUMERATOR: The text is fully editable.
 */
 	
-static TextEditorInteraction;
+	static TextEditorInteraction;
 	/**
- * @description The default for a DzTextEdit.
+ * @description ENUMERATOR: The default for a DzTextEdit.
 */
 	
-static TextBrowserInteraction;
+	static TextBrowserInteraction;
 	/**
  * @description Creates a new widget as a child of the given parent widget.
  * @constructor
-*/
+*/;
 	constructor(parent:DzWidget) {
 	
 	}
@@ -21906,183 +34452,183 @@ static TextBrowserInteraction;
  * @classdesc This pages exists in order to indicate the DAZScript accessible properties and signals of the Qt native QWidget class.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/widget_q}*/
 class QWidget extends QObject {
-	static acceptDrops:Boolean;
-	static accessibleDescription:String;
-	static accessibleName:String;
-	static autoFillBackground:Boolean;
-	static baseSize:Size;
-	static childrenRect:Rect;
-	static enabled:Boolean;
-	static focus:Boolean;
-	static font:Font;
-	static frameGeometry:Rect;
-	static frameSize:Size;
-	static fullScreen:Boolean;
-	static geometry:Rect;
-	static height:Number;
-	static isActiveWindow:Boolean;
-	static maximized:Boolean;
-	static maximumHeight:Number;
-	static maximumSize:Size;
-	static maximumWidth:Number;
-	static minimized:Boolean;
-	static minimumHeight:Number;
-	static minimumSize:Size;
-	static minimumSizeHint:Size;
-	static minimumWidth:Number;
-	static mouseTracking:Boolean;
-	static normalGeometry:Rect;
-	static palette:Palette;
-	static pos:Point;
-	static rect:Rect;
-	static size:Size;
-	static sizeHint:Size;
-	static sizeIncrement:Size;
-	static statusTip:String;
-	static styleSheet:String;
-	static toolTip:String;
-	static updatesEnabled:Boolean;
-	static visible:Boolean;
-	static whatsThis:String;
-	static width:Number;
-	static windowFilePath:String;
-	static windowIconText:String;
-	static windowModified:Boolean;
-	static windowOpacity:Number;
-	static windowTitle:String;
-	static x:Number;
-	static y:Number;
+	acceptDrops:Boolean;
+	accessibleDescription:String;
+	accessibleName:String;
+	autoFillBackground:Boolean;
+	baseSize:Size;
+	childrenRect:Rect;
+	enabled:Boolean;
+	focus:Boolean;
+	font:Font;
+	frameGeometry:Rect;
+	frameSize:Size;
+	fullScreen:Boolean;
+	geometry:Rect;
+	height:Number;
+	isActiveWindow:Boolean;
+	maximized:Boolean;
+	maximumHeight:Number;
+	maximumSize:Size;
+	maximumWidth:Number;
+	minimized:Boolean;
+	minimumHeight:Number;
+	minimumSize:Size;
+	minimumSizeHint:Size;
+	minimumWidth:Number;
+	mouseTracking:Boolean;
+	normalGeometry:Rect;
+	palette:Palette;
+	pos:Point;
+	rect:Rect;
+	size:Size;
+	sizeHint:Size;
+	sizeIncrement:Size;
+	statusTip:String;
+	styleSheet:String;
+	toolTip:String;
+	updatesEnabled:Boolean;
+	visible:Boolean;
+	whatsThis:String;
+	width:Number;
+	windowFilePath:String;
+	windowIconText:String;
+	windowModified:Boolean;
+	windowOpacity:Number;
+	windowTitle:String;
+	x:Number;
+	y:Number;
 	/**
  * @description TODO:
 Add description.
 */
-	static close() {
+	close() {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static hide() {
+	hide() {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static lower() {
+	lower() {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static raise() {
+	raise() {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static repaint() {
+	repaint() {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static setDisabled(disable:Boolean):Boolean {
+	setDisabled(disable:Boolean):Boolean {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static setEnabled(enabled:Boolean):Boolean {
+	setEnabled(enabled:Boolean):Boolean {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static setFocus() {
+	setFocus() {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static setHidden(hidden:Boolean):Boolean {
+	setHidden(hidden:Boolean):Boolean {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static setStyleSheet(styleSheet:String):String {
+	setStyleSheet(styleSheet:String):String {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static setVisible(visible:Boolean):Boolean {
+	setVisible(visible:Boolean):Boolean {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static setWindowModified(modified:Boolean):Boolean {
+	setWindowModified(modified:Boolean):Boolean {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static setWindowTitle(title:String):String {
+	setWindowTitle(title:String):String {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static show() {
+	show() {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static showFullScreen() {
+	showFullScreen() {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static showMaximized() {
+	showMaximized() {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static showMinimized() {
+	showMinimized() {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static showNormal() {
+	showNormal() {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	static update() {
+	update() {
 	
 	}
 
@@ -22092,24 +34638,24 @@ Add description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/zipfile_dz}*/
 class DzZipFile extends DzFileInfo {
 	/**
- * @description Open the file for reading only.
+ * @description ENUMERATOR: Open the file for reading only.
 */
 	
-static ReadOnly;
+	static ReadOnly;
 	/**
- * @description Open the file for writing only.
+ * @description ENUMERATOR: Open the file for writing only.
 */
 	
-static WriteOnly;
+	static WriteOnly;
 	/**
- * @description The file is opened in append mode, so that all data is written to the end of the file.
+ * @description ENUMERATOR: The file is opened in append mode, so that all data is written to the end of the file.
 */
 	
-static Append;
+	static Append;
 	/**
  * @description Creates a zip file with the given file name.
  * @constructor
-*/
+*/;
 	constructor(file:String) {
 	
 	}
@@ -22117,6 +34663,138 @@ static Append;
  * @description Compresses all the files in the given directory.
 */
 	addDirToZip(pathOnDisk:String, pathInZip:String):Boolean {
+	
+	}
+	/**
+ * @description Compresses the file into the zip.
+*/
+	addFileToZip(pathOnDisk:String, pathInZip:String):Boolean {
+	
+	}
+	/**
+ * @description Close the file.
+*/
+	close() {
+	
+	}
+	/**
+ * @description Compresses all the files in the given directory.
+*/
+	compressAll(path:String, recursive:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Extracts all the files from the zip file. The relative path of the files are appended to the specified base path.
+*/
+	extractAll(basePath:String):Boolean {
+	
+	}
+	/**
+ * @description Extracts the current file from the zip file. The relative path of the current file is appended to the specified base path.
+*/
+	extractCurrentFile(basePath:String):Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getCurrentFileAtributes() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getCurrentFileComment() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getCurrentFileCompressedSize() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getCurrentFileCompressionMethod() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getCurrentFileCompressionRatio() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getCurrentFileCRC() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getCurrentFileIsFolder() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getCurrentFileName() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getCurrentFileUncompressedSize() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getFileNames() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getGlobalComment() {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumEntries() {
+	
+	}
+	/**
+ * @description Set the current file of the zip file to the first file.
+*/
+	goToFirstFile() {
+	
+	}
+	/**
+ * @description Set the current file of the zip file to the next file.
+*/
+	goToNextFile() {
+	
+	}
+	/**
+ * @description Attempts to locate an entry in the zip file.
+*/
+	locateFile(pathInZip:String):Boolean {
+	
+	}
+	/**
+ * @description Open the file with the given mode.
+*/
+	open(mode:AccessMode):Boolean {
+	
+	}
+	/**
+ * @description The global comment for the zip file.
+*/
+	setGlobalComment(comment:String):Boolean {
 	
 	}
 
