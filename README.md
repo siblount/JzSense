@@ -11,7 +11,7 @@ If I made your life wonderful, if you're feeling generious enough to donate to h
 - Updated methods; static methods are static, other methods are not static.
 - Fixed certain classes missing methods.
 # ⚠ Heads up ⚠ 
-##### The current version of JzIntellisense is in its early stages.
+##### The current version of JzIntellisense is in its early stages. It is still a WIP.
 - The current version does not include signals as of yet.
 - The current version does not include `String`, `Number`, `Boolean`, `Object`, `Date`, `Function`, and `JSON`, and others later explained.
 - There are a few methods missing.
