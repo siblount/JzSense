@@ -9,11 +9,12 @@ I DO NOT WORK FOR DAZ PRODUCTIONS AND THIS SCRIPT WAS NOT SUPPORTED BY OR ENDORS
 If I made your life wonderful, if you're feeling generious enough to donate to help me out... 😏👉: 🌟https://www.buymeacoffee.com/therealsoll🌟
 ## Latest Update ##
 - Updated methods; static methods are static, other methods are not static.
-- Methods without constructors now have static methods & properties.
+- Fixed certain classes missing methods.
 # ⚠ Heads up ⚠ 
 ##### The current version of JzIntellisense is in its early stages.
 - The current version does not include signals as of yet.
-- The current version does not include the `Global`, `String`, `Number`, `Boolean`, `Object`, `Date`, `Function`, and `JSON`.
+- The current version does not include `String`, `Number`, `Boolean`, `Object`, `Date`, `Function`, and `JSON`, and others later explained.
+- There are a few methods missing.
 - The current version has a few enums missing.
 - JzIntellisense comes with billions of errors. This is perfectly fine. If it bothers you, you may need to disable JS vailidation errors.
 
@@ -57,7 +58,6 @@ If you have created a new file (or opened a file) rather than a folder or worksp
 
 ## Planned Updates
 - Add signals
-- Add `Global`
 - Update enums
 - Update JSDOC for classes, constructors, and methods.
 
