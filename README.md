@@ -8,12 +8,13 @@ I DO NOT WORK FOR DAZ PRODUCTIONS AND THIS SCRIPT WAS NOT SUPPORTED BY OR ENDORS
 
 If I made your life wonderful, if you're feeling generious enough to donate to help me out... 😏👉: 🌟https://www.buymeacoffee.com/therealsoll🌟
 ## Latest Update ##
-- Added enums.
-- Methods without constructors now have static methods & properties.
+- Updated methods; static methods are static, other methods are not static.
+- Fixed certain classes missing methods.
 # ⚠ Heads up ⚠ 
 ##### The current version of JzIntellisense is in its early stages.
 - The current version does not include signals as of yet.
-- The current version does not include the `Global`, `String`, `Number`, `Boolean`, `Object`, `Date`, `Function`, and `JSON`.
+- The current version does not include `String`, `Number`, `Boolean`, `Object`, `Date`, `Function`, and `JSON`, and others later explained.
+- There are a few methods missing.
 - The current version has a few enums missing.
 - JzIntellisense comes with billions of errors. This is perfectly fine. If it bothers you, you may need to disable JS vailidation errors.
 
@@ -24,16 +25,43 @@ If I made your life wonderful, if you're feeling generious enough to donate to h
 3.  After creating a `.dsa ` file, go to the bottom-right of the screen where you see the current language. At default, you will see `Text File` . Click on it and a Language Dialog will pop up.
 4.  Select "Configure File Association for `.dsa" and then select JavaScript as your mode.
 
+If you open a folder/workspace, make sure that the file is in your working directory/workspace. 
+
+If you have created a new file (or opened a file) rather than a folder or workspace, you need to import the script using syntax like: `import * as _ from "./JzIntellisense.js"`
 ##### Optional
 ###### Disable JavaScript validation errors.
 5.  Go to File -> Preferences -> Settings. In the User tab (or Workspace) select TypeScript (TypeScript is the interpreter for JavaScript & TypeScript for VS Code). Search for `JavaScript > Validate: Enable` and disable JavaScript validation.
 
+### Missing ENUMS
+- `DzCamera`
+- `DzERCLink`
+- `Image`
+- `DzPushButton`
+- `DzRSLShader`
+- `DzShaderLight`
+- `DzTextEdit`
+- `DzWidget`
 
+## Missing Classes
+- `Array`
+- `Boolean`
+- `Date`
+- `Error`
+- `EvalError`
+- `Function`
+- `JSON`
+- `Math`
+- `NativeError`
+- `Number`
+- `URIError`
+
+There may be other things missing. If you found something thats missing and it's not mentioned in this post, please post a new issue describing what is missing and where it can be found.
 ## Planned Updates
+- Fix some methods returning void when it shouldn't be.
 - Add signals
-- Add `Global`
 - Update enums
 - Update JSDOC for classes, constructors, and methods.
+
 
 
    [Daz Documentation website]: <http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/start>
