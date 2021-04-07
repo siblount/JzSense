@@ -55,7 +55,7 @@ If you have created a new file (or opened a file) rather than a folder or worksp
 - `Number`
 - `URIError`
 
-
+There may be other things missing. If you found something thats missing and it's not mentioned in this post, please post a new issue describing what is missing and where it can be found.
 ## Planned Updates
 - Add signals
 - Update enums
