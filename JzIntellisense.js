@@ -23,6 +23,14 @@
  DzViewport.get3DViewport()
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/3dviewport_dz}*/
  class Dz3DViewport extends QWidget {
+	aspectOn:Boolean;
+	axesOn:Boolean;
+	background:Color;
+	floorStyle:FloorStyle;
+	shadeStyle:ShadeStyle;
+	showPoseTool:Boolean;
+	thirdsGuideOn:Boolean;
+	toolBarMode:ToolBarMode;
 	/**
  * @description ENUMERATOR: No floor is drawn.
 */
@@ -264,7 +272,7 @@ class Dz3DViewRenderHandler extends DzImageRenderHandler {
 	/**
  * @description Constructor. Creates a render handler that will render to the given viewport.
  * @constructor
-*/;
+*/
 	constructor(view:DzViewport, startTime:DzTime, filename:String) {
 	
 	}
@@ -300,14 +308,6 @@ Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/abstractassetcontainer_dz}*/
 class DzAbstractAssetContainer extends QObject, DzRefCountedItem {
 	canCopyContainers:Boolean;
-	canDeleteContainer:Boolean;
-	canInsertSubContainer:Boolean;
-	canModifyAssets:Boolean;
-	canRenameContainer:Boolean;
-	id:Object;
-	removeAssetCausesDelete:Boolean;
-	tooltip:String;
-	useCount:Number;
 	canDeleteContainer:Boolean;
 	canInsertSubContainer:Boolean;
 	canModifyAssets:Boolean;
@@ -615,26 +615,6 @@ class DzAction extends QObject {
 	toolTip:String;
 	visible:Boolean;
 	whatsThis:String;
-	autoRepeat:Boolean;
-	checkable:Boolean;
-	checked:Boolean;
-	defaultMenu:String;
-	defaultMenus:Array;
-	defaultShortcut:String;
-	defaultToolBar:String;
-	defaultToolBars:Array;
-	description:String;
-	enabled:Boolean;
-	iconFile:String;
-	iconText:String;
-	iconVisibleInMenu:Boolean;
-	shortcut:String;
-	statusTip:String;
-	styleIcon:Number;
-	text:String;
-	toolTip:String;
-	visible:Boolean;
-	whatsThis:String;
 	/**
  * @description Activates the action in the 'Hover' state programatically.
 */
@@ -692,6 +672,7 @@ class DzAction extends QObject {
  DzActionMgr.getMenu(), DzPane.getOptionsMenu(), DzViewTool.getOptionsMenu(), DzPersistentMenu.getActionMenu()
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/actionmenu_dz}*/
 class DzActionMenu extends QObject {
+	menuType:Number;
 	/**
  * @description ENUMERATOR: A menu where each DzActionMenuItem is explicitly defined
 */
@@ -831,6 +812,11 @@ class DzActionMenu extends QObject {
  * @classdesc Action Menu Items are registered with a DzActionMenu and are available to access via methods on that class.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/actionmenuitem_dz}*/
 class DzActionMenuItem extends QObject {
+	action:String;
+	isDefault:Boolean;
+	label:String;
+	subMenuLabel:String;
+	type:Type;
 	/**
  * @description ENUMERATOR: A menu separator (i.e. horizontal divider)
 */
@@ -895,7 +881,7 @@ class DzActionMgr extends QWidget {
 	/**
  * @description Uses the regular expression "([A-z]+[A-z0-9]*)" to strip characters/symbols/etc from a string in order to 'legalize' it.
  * @constructor
-*/;
+*/
 	constructor(name:String) {
 	
 	}
@@ -1160,11 +1146,10 @@ See Also:
 class DzActivityLayout extends QObject, DzRefCountedItem {
 	description:String;
 	label:String;
-	label:String;
 	/**
  * @description Default Constructor. Creates a new activity layout with the given name and description.
  * @constructor
-*/;
+*/
 	constructor(label:String, desc:String) {
 	
 	}
@@ -1196,7 +1181,7 @@ class DzAddBlend extends DzImageBlend {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -1222,7 +1207,7 @@ class DzAlembicExporter extends DzExporter {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -1236,7 +1221,7 @@ class DzAlphaBlend extends DzImageBlend {
 	/**
  * @description Default Constructor
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -1250,6 +1235,16 @@ class DzAlphaBlend extends DzImageBlend {
 Can be directly accessed using the global variable App.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/app_dz}*/
 class DzApp extends QObject {
+	appName:String;
+	cloudName:String;
+	exitCode:Number;
+	logSize:Number;
+	longVersionString:String;
+	orgName:String;
+	scriptArgs:Array;
+	version:Number;
+	version64:Number;
+	versionString:String;
 	/**
  * @description ENUMERATOR: No interface or graphical subsystem is initialized.
 */
@@ -2013,14 +2008,14 @@ class DzAppSettings extends DzBase {
 	/**
  * @description Default Constructor - creates a new settings object that starts out at the default application path.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Constructor - creates a new settings object that pushes the given path onto the default application path. This is the same as using the default constructor and then calling pushPath() with the given path.
  * @constructor
-*/;
+*/
 	constructor(startPath:String) {
 	
 	}
@@ -2123,6 +2118,38 @@ class DzAppSettings extends DzBase {
 
 }
 /**
+ * @classdesc TODO:
+Add detailed description.
+ * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/arrayhelper_dz}*/
+class DzArrayHelper extends QObject {
+	/**
+ * @description Default Constructor
+ * @constructor
+*/
+	constructor() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	addToArray(list:Array, value:Object):Array {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	isInArray(list:Array, value:Object):Number {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	isInArrayByName(list:Array, obj:Object):Number {
+	
+	}
+
+}
+/**
  * @classdesc An "Asset" serves as an abstraction between the presentation of a content file and the actual file that resides on disk; it is a "container" for information about a content file.
 
 
@@ -2166,52 +2193,6 @@ See Also:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/asset_dz}*/
 class DzAsset extends QObject, DzRefCountedItem {
 	assetID:Object;
-	assetName:String;
-	audience:Number;
-	categories:Array;
-	companionIsScript:Boolean;
-	companionPath:String;
-	compatibilities:Array;
-	compatibilityBase:String;
-	contentType:String;
-	dateCreated:Date;
-	dateLastModified:Date;
-	description:String;
-	displayName:String;
-	groupId:Number;
-	hasCloudMetadata:Boolean;
-	hasCompanion:Boolean;
-	hasCompanionScript:Boolean;
-	hidden:Boolean;
-	icon:Pixmap;
-	isCloudInstallable:Boolean;
-	isCloudInstalled:Boolean;
-	isCloudOwned:Boolean;
-	isInstalled:Boolean;
-	isMetadataValid:Boolean;
-	isNative:Boolean;
-	isScript:Boolean;
-	isSymLink:Boolean;
-	isVendor:Boolean;
-	needsCloudInstall:Boolean;
-	needsCloudUpdate:Boolean;
-	orginalFilename:String;
-	orginalPath:String;
-	productGUID:String;
-	productID:String;
-	productName:String;
-	productPath:String;
-	smallIcon:Pixmap;
-	storeID:String;
-	symLinkPath:String;
-	url:String;
-	urlEncoded:String;
-	userCategories:Array;
-	userCompatibilities:Array;
-	userKeywords:Array;
-	vendorCategories:Array;
-	vendorCompatibilities:Array;
-	vendorKeywords:Array;
 	assetName:String;
 	audience:Number;
 	categories:Array;
@@ -3509,9 +3490,6 @@ class DzAudioClip extends DzBase, DzRefCountedItem {
 	filename:String;
 	length:DzTime;
 	rate:Number;
-	filename:String;
-	length:DzTime;
-	rate:Number;
 	/**
  * @description Opens the file specified by filename and sets up the audio clip.
 */
@@ -3640,27 +3618,24 @@ class DzAuthor extends Object {
 	name:String;
 	url:String;
 	valid:String;
-	name:String;
-	url:String;
-	valid:String;
 	/**
  * @description Default constructor. Creates an empty author.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/;
+*/
 	constructor(author:DzAuthor) {
 	
 	}
 	/**
  * @description Create a DzAuthor with the given name, email, and url.
  * @constructor
-*/;
+*/
 	constructor(name:String, email:String, url="":String) {
 	
 	}
@@ -3677,6 +3652,12 @@ See Also:
  DzScene.setBackdrop(), DzScene.getBackdrop()
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/backdrop_dz}*/
 class DzBackdrop extends DzElement {
+	backgroundColor:Color;
+	flipHorizontal:Boolean;
+	flipVertical:Boolean;
+	rotation:Rotation;
+	visible:Boolean;
+	visibleInRender:Boolean;
 	/**
  * @description ENUMERATOR: No rotation
 */
@@ -3700,7 +3681,7 @@ class DzBackdrop extends DzElement {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -3806,15 +3787,10 @@ class DzBasicCamera extends DzCamera {
 	fStop:Number;
 	isPerspective:Boolean;
 	useActiveViewport:Boolean;
-	currentViewWidth:Number;
-	depthOfField:Boolean;
-	fStop:Number;
-	isPerspective:Boolean;
-	useActiveViewport:Boolean;
 	/**
  * @description Create a camera of the given type.
  * @constructor
-*/;
+*/
 	constructor(type=DzCamera.PERSPECTIVE_CAMERA:DzCamera::CameraType, isViewCamera=false:Boolean) {
 	
 	}
@@ -4074,7 +4050,7 @@ class DzBasicDialog extends DzDialog {
 	/**
  * @description Default Constructor. Creates a typical DAZ Studio dialog with 'What's This', 'Apply', 'Accept', and 'Cancel' buttons. By default, the 'Apply' button is hidden, call showApplyButton() to make it visible.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -4193,7 +4169,7 @@ class DzBone extends DzNode {
 	/**
  * @description Default Constructor. Creates a new Bone node.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -4218,6 +4194,50 @@ class DzBone extends DzNode {
 
 }
 /**
+ * @classdesc This class provides an animatable boolean property that is stored and can be accessed as an integer property. The integer value 0 is false, any other integer value is true.
+ * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/boolproperty_dz}*/
+class DzBoolProperty extends DzIntProperty {
+	/**
+ * @description Default Constructor. Creates a non-animatable, non-user property.
+ * @constructor
+*/
+	constructor() {
+	
+	}
+	/**
+ * @description Overloaded constructor.
+ * @constructor
+*/
+	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean, initVal=true:Boolean) {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getBoolValue():Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDefaultBoolValue():Boolean {
+	
+	}
+	/**
+ * @description Sets the boolean value for this property at the current time - or the default value if this property is not animatable.
+*/
+	setBoolValue(value:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the default boolean value for this property.
+*/
+	setDefaultBoolValue(val:Boolean):Boolean {
+	
+	}
+
+}
+/**
  * @classdesc Represents a three dimensional box by storing two three dimensional floating point vectors; an upper and lower corner for the box.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/box3_dz}*/
 class DzBox3 extends Object {
@@ -4229,38 +4249,31 @@ class DzBox3 extends Object {
 	minX:Number;
 	minY:Number;
 	minZ:Number;
-	maxX:Number;
-	maxY:Number;
-	maxZ:Number;
-	min:DzVec3;
-	minX:Number;
-	minY:Number;
-	minZ:Number;
 	/**
  * @description Creates an uninitialized box - the first point included in an uninitialized box will become the min and max for the box.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Creates an initialized box with the given min and max values.
  * @constructor
-*/;
+*/
 	constructor(xMin:Number, yMin:Number, zMin:Number, xMax:Number, yMax:Number, zMax:Number) {
 	
 	}
 	/**
  * @description Creates an initialized box with the given min and max values.
  * @constructor
-*/;
+*/
 	constructor(min:DzVec3, max:DzVec3) {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/;
+*/
 	constructor(box:DzBox3) {
 	
 	}
@@ -4337,6 +4350,7 @@ class DzBox3 extends Object {
 Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/boxlayout_dz}*/
 class DzBoxLayout extends DzLayout {
+	direction:Direction;
 	/**
  * @description ENUMERATOR: Horizontal from left to right.
 */
@@ -4360,14 +4374,14 @@ class DzBoxLayout extends DzLayout {
 	/**
  * @description Creates a box layout that manages the children widgets of the given parent widget
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget, direction=LeftToRight:Direction) {
 	
 	}
 	/**
  * @description Creates a vertical box layout as a sub-layout of the given layout
  * @constructor
-*/;
+*/
 	constructor(parent:DzLayout, direction=LeftToRight:Direction) {
 	
 	}
@@ -4411,7 +4425,7 @@ class DzBrickMaterial extends DzMaterial, DzRefCountedItem {
 	/**
  * @description Creates a new brick material.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -4582,14 +4596,6 @@ class DzButton extends DzWidget {
 	pixmap:Pixmap;
 	text:String;
 	toggleButton:Boolean;
-	autoRepeatDelay:Number;
-	autoRepeatInterval:Number;
-	checkable:Boolean;
-	checked:Boolean;
-	down:Boolean;
-	pixmap:Pixmap;
-	text:String;
-	toggleButton:Boolean;
 	/**
  * @description Toggles the state of a toggle button.
 */
@@ -4607,13 +4613,10 @@ class DzButtonGroup extends DzGroupBox {
 	exclusive:Boolean;
 	radioButtonExclusive:Boolean;
 	selected:Number;
-	exclusive:Boolean;
-	radioButtonExclusive:Boolean;
-	selected:Number;
 	/**
  * @description Creates a button group as a child of the given parent widget
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -4683,25 +4686,24 @@ Attention:
 class ByteArray extends QObject {
 	length:Number;
 	size:Number;
-	size:Number;
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/;
+*/
 	constructor(byteArray:ByteArray) {
 	
 	}
 	/**
  * @description Creates a byte array containing the ascii representation of the string.
  * @constructor
-*/;
+*/
 	constructor(str:String) {
 	
 	}
@@ -5072,6 +5074,21 @@ class DzCallBackMgr extends QObject {
 Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/camera_dz}*/
 class DzCamera extends DzNode {
+	aspectHeight:Number;
+	aspectRatio:Number;
+	aspectWidth:Number;
+	farClippingPlane:Number;
+	focalDistance:Number;
+	focalLength:Number;
+	frameWidth:Number;
+	headlightMode:HeadlightMode;
+	headlightOffset:DzVec3;
+	nearClippingPlane:Number;
+	pixelsHeight:Number;
+	pixelsWidth:Number;
+	proportionsConstrained:Boolean;
+	type:Number;
+	useLocalDimensions:Boolean;
 	/**
  * @description ENUMERATOR: The width in pixels. Since: 4.6.4.70
 */
@@ -5231,7 +5248,7 @@ class DzCameraAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -5286,7 +5303,7 @@ class DzCharacterAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -5327,11 +5344,10 @@ wDlg.exec();
 class DzCheckBox extends DzButton {
 	checked:Boolean;
 	tristate:Boolean;
-	tristate:Boolean;
 	/**
  * @description Creates a check box as a child of the given parent widget
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -5341,6 +5357,11 @@ class DzCheckBox extends DzButton {
  * @classdesc This class is not a widget, but a helper class for working with DzListView. Each DzCheckListItem represents a single item in a list view - add items to a list view by creating a new DzCheckListItem that is a child of the list view, or a child of another list view item in the list view.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/checklistitem_dz}*/
 class DzCheckListItem extends DzListViewItem {
+	height:Number;
+	on:Boolean;
+	state:ToggleState;
+	triState:Boolean;
+	type:Type;
 	/**
  * @description ENUMERATOR: The item is off
 */
@@ -5379,21 +5400,21 @@ class DzCheckListItem extends DzListViewItem {
 	/**
  * @description Creates a checklist item at the root level of the given list view
  * @constructor
-*/;
+*/
 	constructor(parent:DzListView, type=RadioButtonController:Type, id=-1:Number) {
 	
 	}
 	/**
  * @description Creates a checklist item as a child of the given list item
  * @constructor
-*/;
+*/
 	constructor(parent:DzCheckListItem, type=RadioButtonController:Type, id=-1:Number) {
 	
 	}
 	/**
  * @description Creates a checklist item as a child of the given list item
  * @constructor
-*/;
+*/
 	constructor(parent:DzListViewItem, type=RadioButtonController:Type, id=-1:Number) {
 	
 	}
@@ -5407,26 +5428,24 @@ class DzCircle3 extends Object {
 	center:DzVec3;
 	normal:DzVec3;
 	radius:Number;
-	normal:DzVec3;
-	radius:Number;
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/;
+*/
 	constructor(circle:DzCircle3) {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(center:DzVec3, normal:DzVec3, radius:Number) {
 	
 	}
@@ -5452,39 +5471,31 @@ class Color extends QObject {
 	rgb:Number;
 	saturation:Number;
 	value:Number;
-	blue:Number;
-	green:Number;
-	hue:Number;
-	name:String;
-	red:Number;
-	rgb:Number;
-	saturation:Number;
-	value:Number;
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Sets the RGB value from colorName, which may be in one of these formats (each of R, G and B is a single hex digit):
  * @constructor
-*/;
+*/
 	constructor(colorName:String) {
 	
 	}
 	/**
  * @description Component-wise constructor. Each value (i.e., r, g, b, a ) should be in the [0, 255] range.
  * @constructor
-*/;
+*/
 	constructor(r:Number, g:Number, b:Number, a=255:Number) {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/;
+*/
 	constructor(color:Color) {
 	
 	}
@@ -5597,21 +5608,21 @@ class DzColorProperty extends DzIntProperty {
 	/**
  * @description Default Constructor. Creates a non-animatable, non-user property.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean, initVal:Color) {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean) {
 	
 	}
@@ -5707,11 +5718,10 @@ class DzColorProperty extends DzIntProperty {
 class DzColorWgt extends DzWidget {
 	indeterminate:Boolean;
 	value:Color;
-	value:Color;
 	/**
  * @description Creates a color widget as a child of the given parent widget.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -5721,6 +5731,13 @@ class DzColorWgt extends DzWidget {
  * @classdesc DzComboBox provides a means of presenting a list of options to the user in a way that takes up the minimum amount of screen space.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/combobox_dz}*/
 class DzComboBox extends DzWidget {
+	count:Number;
+	currentItem:Number;
+	currentText:String;
+	insertPolicy:insertPolicy;
+	maxVisibleItems:Number;
+	minimumContentsLength:Number;
+	sizeAdjustPolicy:sizeAdjustPolicy;
 	/**
  * @description ENUMERATOR: TODO: Add description.
 */
@@ -5779,7 +5796,7 @@ class DzComboBox extends DzWidget {
 	/**
  * @description Creates a combobox as a child of the given parent widget.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -5926,13 +5943,10 @@ class DzComboEdit extends DzWidget {
 	readOnly:Boolean;
 	text:String;
 	usePathPopUp:Boolean;
-	readOnly:Boolean;
-	text:String;
-	usePathPopUp:Boolean;
 	/**
  * @description Creates a combo edit as a child of the given parent widget.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget, updateOnSelect=true:Boolean) {
 	
 	}
@@ -6007,7 +6021,6 @@ See Also:
 class DzCompatibilityBaseAssetContainer extends DzAbstractAssetContainer, DzRefCountedItem {
 	isFilter:Boolean;
 	isVendor:Boolean;
-	isVendor:Boolean;
 	/**
  * @description Return Value:
 */
@@ -6034,18 +6047,6 @@ See Also:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/contentfile_dz}*/
 class DzContentFile extends QObject, DzRefCountedItem {
 	canDelete:Boolean;
-	canRename:Boolean;
-	companionIsScript:Boolean;
-	companionPath:String;
-	fullPath:String;
-	hasCompanion:Boolean;
-	hasCompanionScript:Boolean;
-	icon:Pixmap;
-	isNative:Boolean;
-	isScript:Boolean;
-	label:String;
-	name:String;
-	smallIcon:Pixmap;
 	canRename:Boolean;
 	companionIsScript:Boolean;
 	companionPath:String;
@@ -6101,6 +6102,17 @@ See Also:
  DzContentMgr.getContentDirectory(), DzContentMgr.getImportDirectory(), DzContentMgr.getPoserDirectory(), DzContentMgr.findBaseDirectory()
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/contentfolder_dz}*/
 class DzContentFolder extends DzBase, DzRefCountedItem {
+	canAddSubFolder:Boolean;
+	canDelete:Boolean;
+	canRename:Boolean;
+	filesAreLoaded:Boolean;
+	folderName:String;
+	foldersAreLoaded:Boolean;
+	folderType:FolderType;
+	fullPath:String;
+	icon:Pixmap;
+	isBuiltInContentFolder:Boolean;
+	label:String;
 	/**
  * @description ENUMERATOR: Folder containing native content.
 */
@@ -6216,6 +6228,11 @@ class DzContentFolder extends DzBase, DzRefCountedItem {
 There is only one instance of this manager in an application. This instance is created and owned by DzApp. Do not create an instance of this class, rather request the instance from DzApp via DzApp.getContentMgr().
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/contentmgr_dz}*/
 class DzContentMgr extends DzBase {
+	autoRefresh:Boolean;
+	maxRecentFiles:Number;
+	newScene:String;
+	showBuiltInContent:Boolean;
+	startupScene:String;
 	/**
  * @description ENUMERATOR: Represents the directories that are mapped and expected to contain files in the DAZ Studio native file format.
 */
@@ -6964,6 +6981,9 @@ class DzContentReplaceMgr extends QObject {
  * @classdesc The controller class is like a modifier for DzProperty types. Controllers allow implementation of custom modulation of properties without changing the properties actual value. Common implementations of controllers include: controllers that adjust one property based on the value of another property, controllers that replace the value of one property with the value of another property, controllers that use a script expression to drive a property, etc.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/controller_dz}*/
 class DzController extends DzBase {
+	description:String;
+	effect:ControllerEffect;
+	slaveDescription:String;
 	/**
  * @description ENUMERATOR: Has no effect on the property
 */
@@ -7002,7 +7022,7 @@ class DzCr2Exporter extends DzExporter {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -7022,6 +7042,22 @@ class DzCustomData extends DzBase {
 
 }
 /**
+ * @classdesc A DzDateEdit provides a date editor.
+ * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/dateedit_dz}*/
+class DzDateEdit extends DzDateTimeEdit {
+	max:Date;
+	min:Date;
+	separator:String;
+	/**
+ * @description Creates a date edit widget as a child of the given parent widget.
+ * @constructor
+*/
+	constructor(parent:DzWidget) {
+	
+	}
+
+}
+/**
  * @classdesc A DzDateTimeEdit provides a combination date and time editor.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/datetimeedit_dz}*/
 class DzDateTimeEdit extends DzWidget {
@@ -7035,19 +7071,10 @@ class DzDateTimeEdit extends DzWidget {
 	timeMax:Date;
 	timeMin:Date;
 	timeSeparator:String;
-	dateMax:Date;
-	dateMin:Date;
-	dateSeparator:String;
-	dateTime:dateTime;
-	displayFormat:String;
-	time:Date;
-	timeMax:Date;
-	timeMin:Date;
-	timeSeparator:String;
 	/**
  * @description Creates a date time edit widget as a child of the given parent widget.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -7061,7 +7088,7 @@ class DzDefaultMaterial extends DzMaterial, DzRefCountedItem {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -7758,7 +7785,7 @@ class DzDelightRenderer extends DzRenderer {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -7776,8 +7803,6 @@ Add description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/desktopwidget_q}*/
 class QDesktopWidget extends QWidget {
 	primaryScreen:Number;
-	screenCount:Number;
-	virtualDesktop:Boolean;
 	screenCount:Number;
 	virtualDesktop:Boolean;
 
@@ -7845,7 +7870,7 @@ class DzDForm extends DzNode {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -7956,7 +7981,7 @@ class DzDFormAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -7985,7 +8010,7 @@ class DzDFormBase extends DzNode {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -8020,7 +8045,7 @@ class DzDFormZone extends DzNode {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -8052,19 +8077,10 @@ class DzDial extends DzWidget {
 	tracking:Boolean;
 	value:Number;
 	wrapping:Boolean;
-	max:Number;
-	min:Number;
-	notchesVisible:Boolean;
-	notchSize:Number;
-	notchTarget:Number;
-	pageStep:Number;
-	tracking:Boolean;
-	value:Number;
-	wrapping:Boolean;
 	/**
  * @description Creates a dial widget as a child of the given parent widget.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -8077,12 +8093,10 @@ class DzDialog extends DzWidget {
 	caption:String;
 	orientation:DzWidget;
 	sizeGripEnabled:Boolean;
-	orientation:DzWidget;
-	sizeGripEnabled:Boolean;
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor(parent=undefined:QWidget) {
 	
 	}
@@ -8319,7 +8333,7 @@ class DzDir extends QObject {
 	/**
  * @description Creates a directory object with the given path.
  * @constructor
-*/;
+*/
 	constructor(path:String) {
 	
 	}
@@ -8722,7 +8736,7 @@ class DzDistantLight extends DzLight {
 	/**
  * @description Default Constructor. Creates a new distant light.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -9237,11 +9251,10 @@ class DzDockWindow {
 class DzDomAttr extends DzDomNode {
 	name:String;
 	value:String;
-	value:String;
 	/**
  * @description Default constructor. Typically, you will not construct these directly, but will call DzDomElement.setAttribute() or DzDomDocument.createAttribute() to create a new attribute node as a member of an existing element or document.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -9266,7 +9279,7 @@ class DzDomBasicNode extends DzDomNode {
 	/**
  * @description Default constructor
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -9279,7 +9292,7 @@ class DzDomCDATASection extends DzDomText {
 	/**
  * @description Default constructor. Typically, you will not construct these directly, but will call DzDomDocument.createCDATASection() to create a new CDATA node as a member of a document.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -9291,11 +9304,10 @@ class DzDomCDATASection extends DzDomText {
 class DzDomCharacterData extends DzDomNode {
 	data:String;
 	length:Number;
-	length:Number;
 	/**
  * @description Default constructor. Typically, you will not construct these directly, but will call DzDomDocument.createText() or DzDomDocument.createCDATASection() to create a new character data node as a member of a document.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -9338,7 +9350,7 @@ class DzDomComment extends DzDomCharacterData {
 	/**
  * @description Default constructor. Typically, you will not construct these directly, but will call DzDomDocument.createComment() to create a new comment node as a member of a document.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -9370,14 +9382,14 @@ class DzDomDocument extends DzDomNode {
 	/**
  * @description Default constructor
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Overloaded constructor. Loads the given file name as the content for this document.
  * @constructor
-*/;
+*/
 	constructor(filename:String) {
 	
 	}
@@ -9492,7 +9504,7 @@ class DzDomDocumentFragment extends DzDomNode {
 	/**
  * @description Default constructor. Typically, you will not construct these directly, but will call DzDomDocument.createDocumentFragment() to create a new fragment as a member of a document.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -9506,13 +9518,10 @@ class DzDomDocumentType extends DzDomNode {
 	name:String;
 	publicId:String;
 	systemId:String;
-	name:String;
-	publicId:String;
-	systemId:String;
 	/**
  * @description Default constructor
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -9526,7 +9535,7 @@ class DzDomElement extends DzDomNode {
 	/**
  * @description Default constructor. Typically, you will not construct these directly, but will call DzDomDocument.createElement() to create a new element node as a member of a document.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -9623,12 +9632,10 @@ class DzDomEntity extends DzDomNode {
 	notationName:String;
 	publicId:String;
 	systemId:String;
-	publicId:String;
-	systemId:String;
 	/**
  * @description Default constructor
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -9641,7 +9648,7 @@ class DzDomEntityReference extends DzDomNode {
 	/**
  * @description Default constructor. Typically, you will not construct these directly, but will call DzDomDocument.createEntityReference() to create a new entity reference node as a member of a document.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -9651,6 +9658,12 @@ class DzDomEntityReference extends DzDomNode {
  * @classdesc This is an abstract base class that provides general functionality for DAZ Script DOM components.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/domnode_dz}*/
 class DzDomNode extends QObject {
+	localName:String;
+	namespaceURI:String;
+	nodeName:String;
+	nodeType:NodeType;
+	nodeValue:String;
+	prefix:String;
 	/**
  * @description ENUMERATOR: A DOM Element.  See Also: DzDomElement
 */
@@ -9921,11 +9934,10 @@ class DzDomNode extends QObject {
 class DzDomNotation extends DzDomNode {
 	publicId:String;
 	systemId:String;
-	systemId:String;
 	/**
  * @description Default constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -9937,11 +9949,10 @@ class DzDomNotation extends DzDomNode {
 class DzDomProcessingInstruction extends DzDomNode {
 	data:String;
 	target:String;
-	target:String;
 	/**
  * @description Default constructor. Typically, you will not construct these directly, but will call DzDomDocument.createProcessingInstruction() to create a new processing instruction node as a member of a document.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -9954,7 +9965,7 @@ class DzDomText extends DzDomCharacterData {
 	/**
  * @description Default constructor. Typically, you will not construct these directly, but will call DzDomDocument.createText() to create a new text node as a member of a document.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -9971,6 +9982,11 @@ class DzDomText extends DzDomCharacterData {
 Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/drawstyle_dz}*/
 class DzDrawStyle extends DzBase {
+	drawCuesDefault:Boolean;
+	drawObjectsOnly:Boolean;
+	drawShadowCastersOnly:Boolean;
+	isUserStyle:Boolean;
+	renderQuality:Boolean;
 	/**
  * @description ENUMERATOR: Draws unlit wire-frame bounding boxes
 */
@@ -10077,6 +10093,18 @@ class DzDrawStyle extends DzBase {
 For complex arrangements you can nest instances of this class by specifying them as one of the widgets via setFirstWidget( DzWidget ) or setSecondWidget( DzWidget )
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/dynamicdividerwgt_dz}*/
 class DzDynamicDividerWgt extends DzWidget {
+	actualDividerPercent:Number;
+	dividerOrientation:DividerOrientation;
+	dividerType:BarStyle;
+	margin:Number;
+	minimized:Boolean;
+	moveDisabled:Boolean;
+	preferredDividerPercent:Number;
+	preferredWidget:WidgetType;
+	preferredWidgetExtent:Number;
+	spacing:Number;
+	toggleDirection:WidgetType;
+	toggleEnabled:Boolean;
 	/**
  * @description ENUMERATOR: Use the thick divider bar.
 */
@@ -10140,14 +10168,14 @@ class DzDynamicDividerWgt extends DzWidget {
 	/**
  * @description Instantiates DzDynamicDividerWgt.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
 	/**
  * @description Instantiates DzDynamicDividerWgt.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget, firstChild:DzWidget, secondChild:DzWidget) {
 	
 	}
@@ -10213,17 +10241,10 @@ class DzEdge extends Object {
 	offsetB:Number;
 	vertIdx1:Number;
 	vertIdx2:Number;
-	facetA:Number;
-	facetB:Number;
-	index:Number;
-	offsetA:Number;
-	offsetB:Number;
-	vertIdx1:Number;
-	vertIdx2:Number;
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -10231,7 +10252,7 @@ class DzEdge extends Object {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor(vertex1:Number, vertex2:Number) {
 	
 	}
@@ -10239,7 +10260,7 @@ Add description.
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor(edge:DzEdge) {
 	
 	}
@@ -10692,7 +10713,7 @@ class DzElementPostLoadFileData extends DzElementData {
 	/**
  * @description Default constructor.
  * @constructor
-*/;
+*/
 	constructor(name:String, persistent=true:Boolean) {
 	
 	}
@@ -10717,14 +10738,14 @@ class DzEnumProperty extends DzIntProperty {
 	/**
  * @description Default Constructor. Creates a non-animatable, non-user property.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean) {
 	
 	}
@@ -10839,12 +10860,10 @@ class DzEnumSlider extends DzWidget {
 	count:Number;
 	text:String;
 	value:Number;
-	text:String;
-	value:Number;
 	/**
  * @description Creates a new enumerated slider widget.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -10920,7 +10939,7 @@ class DzERCBake extends QObject {
 	/**
  * @description Default constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -11002,7 +11021,7 @@ class DzERCFreeze extends QObject {
 	/**
  * @description Default constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -11178,6 +11197,14 @@ If B and C have keyed values - for example B is 5.0 and C is 2.0 - the final pro
 A = 10.0 B = 5.0 + (10.0 * 1.0) + 0.0 = 15.0 C = 2.0 + (15.0 * 2.0) + 1.0 = 33.0
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/erclink_dz}*/
 class DzERCLink extends DzNumericController {
+	active:Boolean;
+	addend:Number;
+	autoOverride:Boolean;
+	isUserLink:Boolean;
+	keyInterpolation:ERCKeyInterpolation;
+	saveWithOutput:Boolean;
+	scalar:Number;
+	type:ERCType;
 	/**
  * @description ENUMERATOR: Linear interpolation between key values.
 */
@@ -11231,7 +11258,7 @@ class DzERCLink extends DzNumericController {
 	/**
  * @description Default constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -11239,21 +11266,21 @@ class DzERCLink extends DzNumericController {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor(copyFrom:DzERCLink, property=undefined:DzNumericProperty) {
 	
 	}
 	/**
  * @description Creates a controller that is driven by property.
  * @constructor
-*/;
+*/
 	constructor(type:ERCType, property:DzNumericProperty, scalar=1.0:Number, addend=0.0:Number) {
 	
 	}
 	/**
  * @description Creates a controller that is driven by property.
  * @constructor
-*/;
+*/
 	constructor(property:DzNumericProperty, scalar=1.0:Number, addend=0.0:Number) {
 	
 	}
@@ -11357,6 +11384,105 @@ Add description.
  * @description Sets the property that drives this link.
 */
 	setProperty(prop:DzNumericProperty):DzNumericProperty {
+	
+	}
+
+}
+/**
+ * @classdesc 0x00000000 = DZ_NO_ERROR
+
+ 0x00000050 = DZ_ALREADY_EXISTS_ERROR
+
+ 0x00000051 = DZ_DOES_NOT_EXIST_ERROR
+
+ 0x00000052 = DZ_NON_UNIQUE_NAME_ERROR
+
+ 0x00000053 = DZ_ILLEGAL_HIERARCHY_ERROR
+
+ 0x00000060 = DZ_ILLEGAL_ARGUMENT_ERROR
+
+ 0x00000061 = DZ_ILLEGAL_OPERATION_ERROR
+
+ 0x00000062 = DZ_OPERATION_FAILED_ERROR
+
+ 0x00000063 = DZ_NO_MATCH_ERROR
+
+ 0x00000064 = DZ_USER_CANCELLED_OPERATION
+
+ 0x00000065 = DZ_UNHANDLED_EXCEPTION_ERROR
+
+ 0x00000070 = DZ_TYPE_MISMATCH_ERROR
+
+ 0x00000080 = DZ_SCRIPT_PARSE_ERROR
+
+ 0x00000090 = DZ_MEMORY_ALLOCATION_ERROR
+
+ 0x00000100 = DZ_PROFILE_NOT_SUPPORTED_ERROR
+
+ 0x00000101 = DZ_ALREADY_BOUND_ERROR
+
+ 0x00000102 = DZ_NOT_BOUND_ERROR
+
+ 0x00000200 = DZ_UNABLE_TO_OPEN_FILE_ERROR
+
+ 0x00000201 = DZ_SECTION_NOT_OPEN_ERROR
+
+ 0x00000202 = DZ_SECTION_LENGTH_EXCEEDED_ERROR
+
+ 0x00000203 = DZ_FORMAT_NOT_SUPPORTED_ERROR
+
+ 0x00000204 = DZ_FILE_FORMAT_ERROR
+
+
+
+
+Note:
+
+
+ You can use Global.getErrorMessage() to convert an error code into a user-readable string.
+ * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/error_dz}*/
+class DzError {
+	/**
+ * @description Return Value:
+*/
+	valueOf():Number {
+	
+	}
+
+}
+/**
+ * @classdesc TODO:
+Add detailed description.
+ * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/exporter_dz}*/
+class DzExporter extends DzFileIO {
+	/**
+ * @description Return Value:
+*/
+	getDescription():String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getExtension():String {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isFileExporter():Boolean {
+	
+	}
+	/**
+ * @description Exports to a file.
+*/
+	writeFile(filename:String):DzError {
+	
+	}
+	/**
+ * @description Exports to a file.
+*/
+	writeFile(filename:String, options:DzFileIOSettings):DzError {
 	
 	}
 
@@ -11470,28 +11596,10 @@ class DzFacet extends Object {
 	vertIdx2:Number;
 	vertIdx3:Number;
 	vertIdx4:Number;
-	edgeIdx1:Number;
-	edgeIdx2:Number;
-	edgeIdx3:Number;
-	edgeIdx4:Number;
-	faceGroupIndex:Number;
-	materialIndex:Number;
-	normIdx1:Number;
-	normIdx2:Number;
-	normIdx3:Number;
-	normIdx4:Number;
-	uvwIdx1:Number;
-	uvwIdx2:Number;
-	uvwIdx3:Number;
-	uvwIdx4:Number;
-	vertIdx1:Number;
-	vertIdx2:Number;
-	vertIdx3:Number;
-	vertIdx4:Number;
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -11499,7 +11607,7 @@ class DzFacet extends Object {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor(facet:DzFacet) {
 	
 	}
@@ -11621,7 +11729,7 @@ class DzFbxExporter extends DzExporter {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -11641,7 +11749,7 @@ class DzFbxImporter extends DzImporter {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -11769,7 +11877,7 @@ class DzFile extends DzFileInfo {
 	/**
  * @description Creates a file object with the given file name.
  * @constructor
-*/;
+*/
 	constructor(file:String) {
 	
 	}
@@ -12009,21 +12117,21 @@ class DzFileFilter extends QObject {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Creates a new file filter and adds a filter with the given description and extensions.
  * @constructor
-*/;
+*/
 	constructor(description:String, extensions:Array) {
 	
 	}
 	/**
  * @description Creates a new file filter and adds a filter with the given description and extension.
  * @constructor
-*/;
+*/
 	constructor(description:String, extension:String) {
 	
 	}
@@ -12150,7 +12258,7 @@ class DzFileInfo extends QObject {
 	/**
  * @description Creates a file info object to retrieve information about the given file.
  * @constructor
-*/;
+*/
 	constructor(file:String) {
 	
 	}
@@ -12689,14 +12797,14 @@ class DzFileIOSettings extends DzSettings {
 	/**
  * @description Default Constructor - creates an empty set of options
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Copy constructor.
  * @constructor
-*/;
+*/
 	constructor(settings:DzFileIOSettings) {
 	
 	}
@@ -12725,14 +12833,14 @@ class DzFileProperty extends DzStringProperty {
 	/**
  * @description Default Constructor. Creates a non-user property.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(name:String, isUserProperty:Boolean) {
 	
 	}
@@ -12806,21 +12914,21 @@ class DzFloat2Property extends DzFloatProperty {
 	/**
  * @description Default Constructor. Creates a non-animatable, non-user property.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean, initVal:DzVec2) {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean) {
 	
 	}
@@ -12943,21 +13051,21 @@ class DzFloat3Property extends DzFloatProperty {
 	/**
  * @description Default Constructor. Creates a non-animatable, non-user property.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean, initVal:DzVec3) {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean) {
 	
 	}
@@ -13080,47 +13188,45 @@ class DzFloatColor extends Object {
 	blue:String;
 	green:String;
 	red:String;
-	green:String;
-	red:String;
 	/**
  * @description Default constructor. Initializes a new color to opaque black.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Constructor that takes individual floating-point RGBA components. Initializes the color to the given values. Values should be in the [0,1] range.
  * @constructor
-*/;
+*/
 	constructor(r:Number, g:Number, b:Number, a=1.0:Number) {
 	
 	}
 	/**
  * @description Constructor that creates an achromatic color.
  * @constructor
-*/;
+*/
 	constructor(val:Number, alpha=1.0:Number) {
 	
 	}
 	/**
  * @description Constructor that takes a floating-point array to define RGBA colors. Initializes the color to the given values.
  * @constructor
-*/;
+*/
 	constructor(color:Array) {
 	
 	}
 	/**
  * @description Constructor that takes a QColor. Initializes the color to the given color. The color is assumed to be completely opaque.
  * @constructor
-*/;
+*/
 	constructor(color:Color) {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/;
+*/
 	constructor(color:DzFloatColor) {
 	
 	}
@@ -13284,21 +13390,21 @@ class DzFloatColorProperty extends DzColorProperty {
 	/**
  * @description Default Constructor. Creates a non-animatable, non-user property.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean, initVal:Color) {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean) {
 	
 	}
@@ -13572,14 +13678,14 @@ class DzFloatProperty extends DzNumericProperty {
 	/**
  * @description Default Constructor. Creates a non-animatable, non-user property.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean, defaultVal=0.0:Number) {
 	
 	}
@@ -13842,21 +13948,10 @@ class DzFloatSlider extends DzWidget {
 	textEditable:Boolean;
 	textVisible:Boolean;
 	value:Number;
-	displayAsPercent:Boolean;
-	indeterminate:Boolean;
-	label:String;
-	labelVisible:Boolean;
-	max:Number;
-	min:Number;
-	sensitivity:Number;
-	text:String;
-	textEditable:Boolean;
-	textVisible:Boolean;
-	value:Number;
 	/**
  * @description Creates a slider as a child of the given parent widget.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -13880,15 +13975,6 @@ See Also:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/folderassetcontainer_dz}*/
 class DzFolderAssetContainer extends DzAbstractAssetContainer, DzRefCountedItem {
 	excludeFolders:Array;
-	fileFilters:Array;
-	isImport:Boolean;
-	isImportTopLevel:Boolean;
-	isNative:Boolean;
-	isNativeTopLevel:Boolean;
-	isPoser:Boolean;
-	isPoserIntermediate:Boolean;
-	isPoserTopLevel:Boolean;
-	onlyIncludeFolders:Array;
 	fileFilters:Array;
 	isImport:Boolean;
 	isImportTopLevel:Boolean;
@@ -13948,30 +14034,24 @@ class Font extends QObject {
 	pointSize:Number;
 	strikeout:Boolean;
 	underline:Boolean;
-	family:String;
-	italic:Boolean;
-	pixelSize:Number;
-	pointSize:Number;
-	strikeout:Boolean;
-	underline:Boolean;
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/;
+*/
 	constructor(font:Font) {
 	
 	}
 	/**
  * @description Constructs a new font of the given family.
  * @constructor
-*/;
+*/
 	constructor(familyName:String) {
 	
 	}
@@ -14014,13 +14094,20 @@ class Font extends QObject {
 
 }
 /**
+ * @classdesc TODO:
+Add detailed description.
+ * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/geometryimporter_dz}*/
+class DzGeometryImporter extends DzImporter {
+
+}
+/**
  * @classdesc A geometry shell is a heavy instance of another scene node. It is a deep copy of the world space geometry with its own unique materials.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/geometryshellnode_dz}*/
 class DzGeometryShellNode extends DzNode {
 	/**
  * @description Default Constructor. Creates a shell with DzObject, pushmodifier_dz, and DzGeometryShellShape. This is the preferred way to create a shell node.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -14066,7 +14153,7 @@ class DzGeomSourceFileData extends DzSourceFileData {
 	/**
  * @description Creates a new Geometry Source File Data object that stores the given file path and group name.
  * @constructor
-*/;
+*/
 	constructor(filePath="":String, groupName="":String) {
 	
 	}
@@ -14075,23 +14162,6 @@ class DzGeomSourceFileData extends DzSourceFileData {
 
 ////////////////////////////////////////GLOBALS/////////////////////////////////////////////
 var false:Boolean;
-var Infinity:Number;
-var JSON:JSON;
-var Math:Math;
-var NaN:Number;
-var null:Object;
-var true:Boolean;
-var undefined:undefined;
-var App:DzApp;
-var ColorDialog:DzColorDialog;
-var FileDialog:DzFileDialog;
-var Geometry:DzGeometryUtil;
-var MainWindow:DzMainWindow;
-var MessageBox:DzMessageBox;
-var OpenGL:DzOpenGL;
-var Scene:DzScene;
-var System:DzSystem;
-var UndoStack:DzUndoStack;
 var Infinity:Number;
 var JSON:JSON;
 var Math:Math;
@@ -14466,14 +14536,14 @@ class DzGridLayout extends DzLayout {
 	/**
  * @description Creates a grid layout that manages the children widgets of the given parent widget
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
 	/**
  * @description Creates a grid layout as a sub-layout of the given layout
  * @constructor
-*/;
+*/
 	constructor(parent:DzLayout) {
 	
 	}
@@ -14576,18 +14646,10 @@ class DzGroupBox extends DzWidget {
 	insideSpacing:Number;
 	orientation:DzWidget;
 	title:String;
-	checkable:Boolean;
-	checked:Boolean;
-	columns:Number;
-	flat:Boolean;
-	insideMargin:Number;
-	insideSpacing:Number;
-	orientation:DzWidget;
-	title:String;
 	/**
  * @description Creates a group box as a child of the given parent widget.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -14611,7 +14673,7 @@ class DzGroupNode extends DzNode {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -14705,7 +14767,7 @@ class DzGZFile extends DzFileInfo {
 	/**
  * @description Creates a gzip file with the given file name.
  * @constructor
-*/;
+*/
 	constructor(file:String) {
 	
 	}
@@ -14790,14 +14852,14 @@ class DzHBoxLayout extends DzBoxLayout {
 	/**
  * @description Creates a horizontal box layout that manages the children widgets of the given parent widget
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
 	/**
  * @description Creates a horizontal box layout as a sub-layout of the given layout
  * @constructor
-*/;
+*/
 	constructor(parent:DzLayout) {
 	
 	}
@@ -14810,7 +14872,7 @@ class DzHButtonGroup extends DzButtonGroup {
 	/**
  * @description Creates a button group as a child of the given parent widget
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -14824,9 +14886,6 @@ class DzHButtonGroup extends DzButtonGroup {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/header_dz}*/
 class DzHeader extends DzWidget {
 	clickEnabled:Boolean;
-	movingEnabled:Boolean;
-	resizeEnabled:Boolean;
-	stretchEnabled:Boolean;
 	movingEnabled:Boolean;
 	resizeEnabled:Boolean;
 	stretchEnabled:Boolean;
@@ -15018,7 +15077,7 @@ class DzHGroupBox extends DzGroupBox {
 	/**
  * @description Creates a group box as a child of the given parent widget.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -15039,7 +15098,7 @@ class DzHierarchicalMaterialAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -15060,7 +15119,7 @@ class DzHierarchicalPoseAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -15077,6 +15136,16 @@ Attention:
  Inheritance will change to Object in a pending update.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/image}*/
 class Image extends QObject {
+	alphaBuffer:Boolean;
+	depth:Number;
+	dotsPerMeterX:Number;
+	dotsPerMeterY:Number;
+	format:Format;
+	height:Number;
+	numColors:Number;
+	offset:Point;
+	size:Size;
+	width:Number;
 	/**
  * @description ENUMERATOR: The image is invalid.
 */
@@ -15160,28 +15229,28 @@ class Image extends QObject {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(width:Number, height:Number, format:Format) {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/;
+*/
 	constructor(image:Image) {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(filename:String) {
 	
 	}
@@ -15503,7 +15572,6 @@ Add detailed description.
 class DzImageComponent extends QObject {
 	label:String;
 	visible:Boolean;
-	visible:Boolean;
 	/**
  * @description TODO:
 Add description.
@@ -15809,14 +15877,14 @@ class DzImageProperty extends DzProperty {
 	/**
  * @description Default Constructor. Creates a non-user property.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(name:String, isUserProperty:Boolean) {
 	
 	}
@@ -15896,14 +15964,14 @@ class DzImageRenderHandler extends DzRenderHandler {
 	/**
  * @description Create a new image render handler for rendering a single frame.
  * @constructor
-*/;
+*/
 	constructor(size:Size, renderTime:DzTime, filename:String) {
 	
 	}
 	/**
  * @description Create a new image render handler for rendering a multiple frames.
  * @constructor
-*/;
+*/
 	constructor(size:Size, startingTime:DzTime, numFrames:Number, filename:String, isMovie:Boolean) {
 	
 	}
@@ -15980,16 +16048,11 @@ class DzImageTexture extends DzTexture, DzRefCountedItem {
 	assetModifiedDate:Date;
 	assetSource:DzUri;
 	assetUri:DzUri;
-	assetFileRevision:DzVersion;
-	assetId:String;
-	assetModifiedDate:Date;
-	assetSource:DzUri;
-	assetUri:DzUri;
 	/**
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor(filename:String, gamma:Number) {
 	
 	}
@@ -15997,7 +16060,7 @@ Add description.
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor(filename:String, gamma:Number, textureType:Number) {
 	
 	}
@@ -16343,7 +16406,7 @@ class DzInstanceGroupItem extends DzBase {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -16560,7 +16623,7 @@ class DzInstanceGroupNode extends DzInstanceNode {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -16627,7 +16690,7 @@ class DzInstanceNode extends DzNode {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -16670,41 +16733,38 @@ class DzInt2 extends Object {
 	width:Number;
 	x:Number;
 	y:Number;
-	width:Number;
-	x:Number;
-	y:Number;
 	/**
  * @description Default Constructor. Creates an uninitialized vector.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/;
+*/
 	constructor(vec:DzVec2) {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/;
+*/
 	constructor(vec:DzInt2) {
 	
 	}
 	/**
  * @description Creates and inititializes this vector with an array of 2 integer values.
  * @constructor
-*/;
+*/
 	constructor(vals:Array) {
 	
 	}
 	/**
  * @description Creates and inititializes this vector with 2 integers.
  * @constructor
-*/;
+*/
 	constructor(x:Number, y:Number) {
 	
 	}
@@ -16867,21 +16927,21 @@ class DzInt2Property extends DzIntProperty {
 	/**
  * @description Default Constructor. Creates a non-animatable, non-user property.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean, initVal:DzInt2) {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean) {
 	
 	}
@@ -17226,14 +17286,14 @@ class DzIntProperty extends DzNumericProperty {
 	/**
  * @description Default Constructor. Creates a non-animatable, non-user property.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean, initVal=0:Number) {
 	
 	}
@@ -17405,21 +17465,10 @@ class DzIntSlider extends DzWidget {
 	textEditable:Boolean;
 	textVisible:Boolean;
 	value:Number;
-	displayAsPercent:Boolean;
-	indeterminate:Boolean;
-	label:String;
-	labelVisible:Boolean;
-	max:Number;
-	min:Number;
-	sensitivity:Number;
-	text:String;
-	textEditable:Boolean;
-	textVisible:Boolean;
-	value:Number;
 	/**
  * @description Creates a slider as a child of the given parent widget.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -17434,7 +17483,7 @@ class DzInvertManip extends DzImageManip {
 	/**
  * @description Holds whether or not the manipulater is active
  * @constructor
-*/;
+*/
 	constructor(onOff=false:Boolean) {
 	
 	}
@@ -17459,7 +17508,7 @@ class DzIrayRenderer extends DzRenderer {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -17473,6 +17522,66 @@ class DzIrayRenderer extends DzRenderer {
  * @description Return Value:
 */
 	isIPRRendering():Boolean {
+	
+	}
+
+}
+/**
+ * @classdesc This class provides text or image display.
+ * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/label_dz}*/
+class DzLabel extends DzWidget {
+	alignment:DzWidget;
+	elideMode:DzWidget;
+	hasSelectedText:Boolean;
+	indent:Number;
+	openExternalLinks:Boolean;
+	pixmap:Pixmap;
+	primitive:String;
+	scaledContents:Boolean;
+	selectedText:String;
+	text:String;
+	textFormat:TextFormat;
+	textInteractionFlags:DzWidget;
+	textStyle:String;
+	wordWrap:Boolean;
+	/**
+ * @description ENUMERATOR: The text string is interpreted as a plain text.
+*/
+	
+	static PlainText;
+	/**
+ * @description ENUMERATOR: The text string is interpreted as a rich text.
+*/
+	
+	static RichText;
+	/**
+ * @description ENUMERATOR: The text is interpreted as automatically.
+*/
+	
+	static AutoText;
+	/**
+ * @description Holds the elide mode to be used for the text on this label.
+ * @constructor
+*/
+	constructor(parent:DzWidget) {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	buddy():DzWidget {
+	
+	}
+	/**
+ * @description Clears the text displayed in the label.
+*/
+	clear():void {
+	
+	}
+	/**
+ * @description Sets the buddy widget for this label.
+*/
+	setBuddy(buddy:DzWidget):DzWidget {
 	
 	}
 
@@ -17492,7 +17601,7 @@ class DzLayerAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -17575,12 +17684,6 @@ class DzLayeredImage extends DzBase {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/layeredtexture_dz}*/
 class DzLayeredTexture extends DzTexture, DzRefCountedItem {
 	assetAuthor:DzAuthor;
-	assetFileRevision:DzVersion;
-	assetId:String;
-	assetModifiedDate:Date;
-	assetSource:DzUri;
-	assetUri:DzUri;
-	size:Boolean;
 	assetFileRevision:DzVersion;
 	assetId:String;
 	assetModifiedDate:Date;
@@ -17715,8 +17818,6 @@ class DzLayout extends QObject {
 	autoAdd:Boolean;
 	margin:Number;
 	spacing:Number;
-	margin:Number;
-	spacing:Number;
 	/**
  * @description Adds the given widget to the items managed by this layout
 */
@@ -17741,6 +17842,11 @@ The following digits and symbols can be displayed:
 Illegal characters are substituted with spaces.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/lcdnumber_dz}*/
 class DzLCDNumber extends DzWidget {
+	mode:Mode;
+	numDigits:Number;
+	segmentStyle:SegmentStyle;
+	smallDecimalPoint:Boolean;
+	value:Number;
 	/**
  * @description ENUMERATOR: Hexadecimal (base 16)
 */
@@ -17799,7 +17905,7 @@ class DzLCDNumber extends DzWidget {
 	/**
  * @description Creates a LCD number widget as a child of the given parent widget.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -17896,7 +18002,7 @@ class DzLightAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -17909,25 +18015,24 @@ Add detailed description.
 class DzLine3 extends Object {
 	end:DzVec3;
 	origin:DzVec3;
-	origin:DzVec3;
 	/**
  * @description Default Constructor. Creates an uninitialized line.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/;
+*/
 	constructor(line:DzLine3) {
 	
 	}
 	/**
  * @description Parameterized Constructor.
  * @constructor
-*/;
+*/
 	constructor(origin:DzVec3, end:DzVec3) {
 	
 	}
@@ -18013,7 +18118,7 @@ class DzLinearPointLight extends DzPointLight {
 	/**
  * @description Default Constructor. Creates a new linear point light.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -18059,6 +18164,21 @@ class DzLinearPointLight extends DzPointLight {
  * @classdesc This class provides a single line text editor.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/lineedit_dz}*/
 class DzLineEdit extends DzWidget {
+	acceptableInput:Boolean;
+	alignment:DzWidget;
+	cursorPosition:Number;
+	echoMode:EchoMode;
+	frame:Boolean;
+	hasSelectedText:Boolean;
+	inputMask:String;
+	maxLength:Number;
+	modified:Boolean;
+	placeholderText:String;
+	readOnly:Boolean;
+	redoAvailable:Boolean;
+	selectedText:String;
+	text:String;
+	undoAvailable:Boolean;
 	/**
  * @description ENUMERATOR: Display characters as they are entered.
 */
@@ -18082,7 +18202,7 @@ class DzLineEdit extends DzWidget {
 	/**
  * @description Creates a line edit as a child of the given parent widget.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -18243,6 +18363,19 @@ class DzLineEdit extends DzWidget {
 Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/listbox_dz}*/
 class DzListBox extends DzScrollView {
+	columnMode:LayoutMode;
+	count:Number;
+	currentItem:Number;
+	currentText:String;
+	numColumns:Number;
+	numItemsVisible:Number;
+	numRows:Number;
+	rowMode:LayoutMode;
+	selected:Number;
+	selectionMode:SelectionMode;
+	topItem:Number;
+	variableHeight:Boolean;
+	variableWidth:Boolean;
 	/**
  * @description ENUMERATOR: There is a fixed number of rows or columns
 */
@@ -18286,7 +18419,7 @@ class DzListBox extends DzScrollView {
 	/**
  * @description Creates a list box with the given parent widget
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -18336,6 +18469,19 @@ class DzListBox extends DzScrollView {
 The findItem() method takes a ComparisonFlags enum. ComparisonFlags is either not exposed or not documented.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/listview_dz}*/
 class DzListView extends DzScrollView {
+	allColumnsShowFocus:Boolean;
+	childCount:Number;
+	columns:Number;
+	defaultRenameAction:RenameAction;
+	itemMargin:Number;
+	resizeMode:ResizeMode;
+	rootIsDecorated:Boolean;
+	selectionMode:SelectionMode;
+	showSortIndicator:Boolean;
+	showToolTips:Boolean;
+	sortColumn:Number;
+	sortOrder:SortOrder;
+	treeStepSize:Number;
 	/**
  * @description ENUMERATOR: The selected items
 */
@@ -18419,7 +18565,7 @@ class DzListView extends DzScrollView {
 	/**
  * @description Creates a list view widget with the given parent widget
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -18614,27 +18760,17 @@ class DzListViewItem extends QObject {
 	selectable:Boolean;
 	selected:Boolean;
 	visible:Boolean;
-	dropEnabled:Boolean;
-	enabled:Boolean;
-	expandable:Boolean;
-	height:Number;
-	id:Number;
-	multiLinesEnabled:Boolean;
-	open:Boolean;
-	selectable:Boolean;
-	selected:Boolean;
-	visible:Boolean;
 	/**
  * @description Creates a list view item at the root level of the given list view
  * @constructor
-*/;
+*/
 	constructor(parent:DzListView, id=-1:Number) {
 	
 	}
 	/**
  * @description Creates a list view item as a child of the given list view item
  * @constructor
-*/;
+*/
 	constructor(parent:DzListViewItem, id=-1:Number) {
 	
 	}
@@ -18801,7 +18937,6 @@ class DzListViewItem extends QObject {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/mainwindow_dz}*/
 class DzMainWindow extends QWidget {
 	alwaysOnTop:Boolean;
-	toolTipsEnabled:Boolean;
 	toolTipsEnabled:Boolean;
 	/**
  * @description Presents the user with a dialog that asks if they want to save changes to the scene, and does a scene save if the user selects yes.
@@ -19039,12 +19174,6 @@ See Also:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/material_dz}*/
 class DzMaterial extends DzElement, DzRefCountedItem {
 	assetAuthor:DzAuthor;
-	assetFileRevision:DzVersion;
-	assetId:String;
-	assetModifiedDate:Date;
-	assetSource:DzUri;
-	assetUri:DzUri;
-	renderPriority:DzRenderMgr;
 	assetFileRevision:DzVersion;
 	assetId:String;
 	assetModifiedDate:Date;
@@ -19364,8 +19493,250 @@ class DzMaterialAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor() {
+	
+	}
+
+}
+/**
+ * @classdesc A transformation matrix consisting of 4 rows and 3 columns.
+ * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/matrix3_dz}*/
+class DzMatrix3 extends Object {
+	isIdentity:Boolean;
+	m11:Number;
+	m12:Number;
+	m13:Number;
+	m14:Number;
+	m21:Number;
+	m22:Number;
+	m23:Number;
+	m24:Number;
+	m31:Number;
+	m32:Number;
+	m33:Number;
+	m34:Number;
+	/**
+ * @description Default Constructor.
+ * @constructor
+*/
+	constructor(initIdentity=false:Boolean) {
+	
+	}
+	/**
+ * @description Constructs a 4×3 matrix from 12 elements in "Column Major" order.
+ * @constructor
+*/
+	constructor(m11:Number, m21:Number, m31:Number, m12:Number, m22:Number, m32:Number, m13:Number, m23:Number, m33:Number, m14:Number, m24:Number, m34:Number) {
+	
+	}
+	/**
+ * @description Constructor from three axes of the rotation coord system. These are assumed to be (but do not have to be if a sheared or warped coord system is desired) to be orthogonal unit vectors.
+ * @constructor
+*/
+	constructor(xAxis:DzVec3, yAxis:DzVec3, zAxis:DzVec3) {
+	
+	}
+	/**
+ * @description Constructs a 4×3 matrix from a quaternion. Initializes the matrix to the given rotation.
+ * @constructor
+*/
+	constructor(rot:DzQuat) {
+	
+	}
+	/**
+ * @description Copy Constructor.
+ * @constructor
+*/
+	constructor(mat:DzMatrix3) {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	det3():Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	inverse():void {
+	
+	}
+	/**
+ * @description Sets the matrix to be identity
+*/
+	makeIdentity():void {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	matrix4():DzMatrix4 {
+	
+	}
+	/**
+ * @description Calculates the multiplication of this matrix by the given matrix.
+*/
+	multiply(mat:DzMatrix3):void {
+	
+	}
+	/**
+ * @description Multiplies matrix by given column vector, giving column vector result
+*/
+	multMatrixVec(vec:DzVec3):DzVec3 {
+	
+	}
+	/**
+ * @description Transforms the given vector through this matrix.
+*/
+	multVec(vec:DzVec3):DzVec3 {
+	
+	}
+	/**
+ * @description Zero rotation part of the matrix.
+*/
+	noRot():void {
+	
+	}
+	/**
+ * @description Set scale to unity.
+*/
+	noScale():void {
+	
+	}
+	/**
+ * @description Zero translation part of the matrix.
+*/
+	noTrans():void {
+	
+	}
+	/**
+ * @description Test for orthogonal 3×3 sub-matrix (orthonormal rows)
+*/
+	orthogonal():Boolean {
+	
+	}
+	/**
+ * @description Orthogonalize the matrix.
+*/
+	orthogonalize():void {
+	
+	}
+	/**
+ * @description Accumulate rotation by pre-multiplying.
+*/
+	preRotate(rot:DzQuat):DzQuat {
+	
+	}
+	/**
+ * @description Accumulate rotation around the X axis by pre-multiplying.
+*/
+	preRotateX(radians:Number):Number {
+	
+	}
+	/**
+ * @description Accumulate rotation around the Y axis by pre-multiplying.
+*/
+	preRotateY(radians:Number):Number {
+	
+	}
+	/**
+ * @description Accumulate rotation around the Z axis by pre-multiplying.
+*/
+	preRotateZ(radians:Number):Number {
+	
+	}
+	/**
+ * @description Accumulate a translation by pre-multiplying.
+*/
+	preTranslate(vec:DzVec3):DzVec3 {
+	
+	}
+	/**
+ * @description Accumulate rotation (by post-multiplying).
+*/
+	rotate(rot:DzQuat):DzQuat {
+	
+	}
+	/**
+ * @description Accumulate rotation around the X axis (by post-multiplying).
+*/
+	rotateX(radians:Number):Number {
+	
+	}
+	/**
+ * @description Accumulate rotation around the Y axis (by post-multiplying).
+*/
+	rotateY(radians:Number):Number {
+	
+	}
+	/**
+ * @description Accumulate rotation around the Z axis (by post-multiplying).
+*/
+	rotateZ(radians:Number):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	row(i:Number):DzVec3 {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	scale(scale:Number, affectTrans:Boolean):Number {
+	
+	}
+	/**
+ * @description Accumulates a scale along an arbitrary axis (by post-multiplying).
+*/
+	scale(scale:Number, direction:DzVec3, affectTrans:Boolean):Number {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	scale(vec:DzVec3, affectTrans:Boolean):DzVec3 {
+	
+	}
+	/**
+ * @description Set translation part.
+*/
+	setTrans(vec:DzVec3):DzVec3 {
+	
+	}
+	/**
+ * @description Shears the matrix along the x and y axis (by post-multiplying).
+*/
+	shearXY(xShear:Number, yShear:Number):Number {
+	
+	}
+	/**
+ * @description Shears the matrix along the x and z axis (by post-multiplying).
+*/
+	shearXZ(xShear:Number, zShear:Number):Number {
+	
+	}
+	/**
+ * @description Shears the matrix along the y and z axis (by post-multiplying).
+*/
+	shearYZ(yShear:Number, zShear:Number):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	trace():Number {
+	
+	}
+	/**
+ * @description Accumulate a translation (by post-multiplying).
+*/
+	translate(vec:DzVec3):DzVec3 {
 	
 	}
 
@@ -19391,54 +19762,38 @@ class DzMatrix4 extends Object {
 	m42:Number;
 	m43:Number;
 	m44:Number;
-	m11:Number;
-	m12:Number;
-	m13:Number;
-	m14:Number;
-	m21:Number;
-	m22:Number;
-	m23:Number;
-	m24:Number;
-	m31:Number;
-	m32:Number;
-	m33:Number;
-	m34:Number;
-	m41:Number;
-	m42:Number;
-	m43:Number;
-	m44:Number;
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor(initIdentity=false:Boolean) {
 	
 	}
 	/**
  * @description Constructs a 4×4 matrix from 16 elements in "Column Major" order.
  * @constructor
-*/;
+*/
 	constructor(m11:Number, m21:Number, m31:Number, m41:Number, m12:Number, m22:Number, m32:Number, m42:Number, m13:Number, m23:Number, m33:Number, m43:Number, m14:Number, m24:Number, m34:Number, m44:Number) {
 	
 	}
 	/**
  * @description Constructor from three axes of the rotation coord system. These are assumed to be (but do not have to be if a sheared or warped coord system is desired) to be orthogonal unit vectors.
  * @constructor
-*/;
+*/
 	constructor(xAxis:DzVec3, yAxis:DzVec3, zAxis:DzVec3) {
 	
 	}
 	/**
  * @description Constructs a 4×4 matrix from a quaternion. Initializes the matrix to the given rotation.
  * @constructor
-*/;
+*/
 	constructor(rot:DzQuat) {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/;
+*/
 	constructor(mat:DzMatrix4) {
 	
 	}
@@ -19929,7 +20284,7 @@ class DzMorphLoader extends QObject {
 	/**
  * @description Default Constructor. Creates a morph loader with default settings.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -20269,7 +20624,7 @@ class DzMorphLoaderBatch extends QObject {
 	/**
  * @description Default Constructor. Creates a morph loader batch that will be applied to the given node.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -20410,7 +20765,7 @@ class DzMorphSupportAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -20502,8 +20857,1107 @@ class DzMultiplyBlend extends DzImageBlend {
 	/**
  * @description Default Constructor
  * @constructor
-*/;
+*/
 	constructor() {
+	
+	}
+
+}
+/**
+ * @classdesc DzNode objects all contain animatable position, rotation, and scale channels that can be set and accessed via the properties list in the DzElement class or through specialized calls in this class.
+
+
+
+The transform order is Translate/Rotate/Scale. Non-uniform scaling is supported by implementing seperate X, Y, and Z scale channels. All channels are independent internally and can have keys set on them independent of any other channel.
+
+
+
+Note that channel independence holds exactly true for translations and scales, but does not hold for rotations (which are represented as Euler angle degrees in each channel). Euler angles are inherently inter-dependent and prone to numerical singularities (gimbals) that make them less than perfect at representing rotations. For this reason, rotations are handled as DzQuat objects whenever possible. When setting keys on a DzNode, it is prefferable to use the set*Rot() methods or set*Transform() methods that take DzQuat arguments. Setting rotations as a DzQuat will create keys on all three rotation channels but will assure that the values are reasonable.
+
+
+
+Nodes have an origin and an orientation that define their default state. The origin is the center point of the node and is given in untransformed world space. In other words, the origin is the center point of the node in relation to its untransformed and undeformed geometry. The orientation of the node defines the space in which this node's rotations occur. Orientation only has an effect on the rotation of the node, it does not affect translation or scale transforms.
+
+
+
+Each node defines a local axis that is determined by evaluating the transforms of all nodes in the parent tree for this node in order.
+
+
+
+Several functions are provided for accessing the transformation data of a node. Below are descriptions of the groups of functions, and the transform space that they return data for.
+
+
+ World Space Transforms:getWSTransform(), getWSPos(), getWSRot(), getWSScale() WS (world space) transforms are just that - the transformation of the node into world space, including keyed transformation data. These functions essentially traverse up the hierarchy evaluating the local transforms for each parent node, resulting in the final World Space transform of the node.
+
+
+
+ Local Transforms:getLocalTransform(), getLocalPos(), getLocalRot(), getLocalScale() Local transforms are the full transformation of the node in the space of its immediate parent - for root nodes, the nodes origin added to the local pos is equivalent to the worldspace transform.
+
+
+
+
+Classes derived from DzNode may also be drawn in the interactive 3D views (via the draw() method) or/and may be rendered using a RenderMan- compliant renderer (via the render() method).
+ * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/node_dz}*/
+class DzNode extends DzElement {
+	assetAuthor:DzAuthor;
+	assetFileRevision:DzVersion;
+	assetId:String;
+	assetIdAliases:Array;
+	assetModifiedDate:Date;
+	assetSource:DzUri;
+	assetUri:DzUri;
+	nameAliases:Array;
+	renderPriority:DzRenderMgr;
+	/**
+ * @description Default Constructor.
+ * @constructor
+*/
+	constructor() {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	static duplicate(node:DzNode, propagate:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Adds a child to this node.
+*/
+	addNodeChild(child:DzNode, inPlace:Boolean):DzError {
+	
+	}
+	/**
+ * @description Sets the end point for this node adjusting for controllers.
+*/
+	adjustEndPoint(endPnt:DzVec3):DzVec3 {
+	
+	}
+	/**
+ * @description Sets the orientation for the node adjusting for controllers.
+*/
+	adjustOrientation(orientation:DzQuat):DzQuat {
+	
+	}
+	/**
+ * @description Sets the orientation for the node adjusting for controllers.
+*/
+	adjustOrientationAngles(angles:DzVec3):DzVec3 {
+	
+	}
+	/**
+ * @description Sets the origin for the node adjusting for controllers.
+*/
+	adjustOrigin(origin:DzVec3):DzVec3 {
+	
+	}
+	/**
+ * @description Get the current shadow-casting status of this node.
+*/
+	castsShadow():Boolean {
+	
+	}
+	/**
+ * @description Removes all local transform data.
+*/
+	clearAllTransformData():void {
+	
+	}
+	/**
+ * @description Clears the override color to be used to draw the node while using manipulation draw styles.
+*/
+	clearManipOverColor():void {
+	
+	}
+	/**
+ * @description Removes local transform data.
+*/
+	clearTransformData(range:DzTimeRange):DzTimeRange {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	duplicate(propagate:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Finalizes the node's geometry cache.
+*/
+	finalize(isRender:Boolean, allowResChange:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findChildIndex(curNode:DzNode):Number {
+	
+	}
+	/**
+ * @description Get a child from this node by name.
+*/
+	findNodeChild(name:String, recurse:Boolean):String {
+	
+	}
+	/**
+ * @description Get a child from this node by asset id.
+*/
+	findNodeChildByAssetID(assetID:String, recurse:Boolean, checkSource:Boolean):String {
+	
+	}
+	/**
+ * @description Get a child from this node by label.
+*/
+	findNodeChildByLabel(label:String, recurse:Boolean):String {
+	
+	}
+	/**
+ * @description Get a child from this node by name (or alias).
+*/
+	findNodeChildByNameOrAlias(name:String, alaises:Boolean, recurse:Boolean):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findPropertyReference(uri:DzUri):DzProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getDisableTransfromControl():DzBoolProperty {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getEndPoint(defaultVal:Boolean):DzVec3 {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getEndXControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getEndYControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getEndZControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getFirstAxisRotControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Calculate the local space bounding box for this node.
+*/
+	getLocalBoundingBox():DzBox3 {
+	
+	}
+	/**
+ * @description Calculate the local space bounding box for this node.
+*/
+	getLocalOrientedBox():DzOrientedBox3 {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLocalPos():DzVec3 {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getLocalPos(tm:DzTime, defaultVal:Boolean):DzVec3 {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLocalRot():DzQuat {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getLocalRot(tm:DzTime, defaultVal:Boolean):DzQuat {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLocalScale():DzMatrix3 {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getLocalScale(tm:DzTime, defaultVal:Boolean):DzMatrix3 {
+	
+	}
+	/**
+ * @description Get the composed local transform info for this node at the current time.
+*/
+	getLocalTransform():DzMatrix3 {
+	
+	}
+	/**
+ * @description Get the composed local transform info for this node.
+*/
+	getLocalTransform(tm:DzTime, defaultVal:Boolean):DzMatrix3 {
+	
+	}
+	/**
+ * @description Get the child at the given index.
+*/
+	getNodeChild(i:Number):Number {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getNodeChildren(recurse:Boolean):Array {
+	
+	}
+	/**
+ * @description Get the parent of this node.
+*/
+	getNodeParent():void {
+	
+	}
+	/**
+ * @description Get the number of children attached to this node.
+*/
+	getNumNodeChildren():Number {
+	
+	}
+	/**
+ * @description Get the object currently associated with this node.
+*/
+	getObject():DzObject {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getOrientation(defaultVal:Boolean):DzQuat {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getOrientXControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getOrientYControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getOrientZControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getOrigin(defaultVal:Boolean):DzVec3 {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getOriginXControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getOriginYControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getOriginZControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPointAtControl():DzNumericNodeProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getPresentation():DzPresentation {
+	
+	}
+	/**
+ * @description Get the local-space preview box for this node, if any.
+*/
+	getPreviewBox():DzOrientedBox3 {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRenderPriorityControl():DzEnumProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getRenderVisibilityControl():DzBoolProperty {
+	
+	}
+	/**
+ * @description Get the node rotation order.
+*/
+	getRotationOrder():DzRotationOrder {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getScaleControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSecondAxisRotControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSelectabilityControl():DzBoolProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSelectionMap():DzSelectionMap {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSelectionNode():void {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getShadowControl():DzBoolProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getSimulationVisibilityControl():DzBoolProperty {
+	
+	}
+	/**
+ * @description Traverse up the hierarchy and attempt to find a DzSkeleton.
+*/
+	getSkeleton():DzSkeleton {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getThirdAxisRotControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getToolFirstAxisRotControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getToolLocalRot():DzQuat {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getToolLocalRot(tm:DzTime, defaultVal:Boolean):DzQuat {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getToolSecondAxisRotControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getToolThirdAxisRotControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getToolWSRot():DzQuat {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getToolWSRot(tm:DzTime, defaultVal:Boolean):DzQuat {
+	
+	}
+	/**
+ * @description Get the world-space transformation data for this node at the current time, in the context of the current tool.
+*/
+	getToolWSTransform():DzMatrix3 {
+	
+	}
+	/**
+ * @description Get the world-space transformation data for this node, in the context of the current tool.
+*/
+	getToolWSTransform(tm:DzTime, defaultVal:Boolean):DzMatrix3 {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getToolXRotControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getToolYRotControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getToolZRotControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getVisibilityControl():DzBoolProperty {
+	
+	}
+	/**
+ * @description Calculate a world space oriented bounding box for this node.
+*/
+	getWSBoundingBox():DzBox3 {
+	
+	}
+	/**
+ * @description Calculate a world-space oriented bounding box for this node.
+*/
+	getWSOrientedBox():DzOrientedBox3 {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getWSPos():DzVec3 {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getWSPos(tm:DzTime, defaultVal:Boolean):DzVec3 {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getWSRot():DzQuat {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getWSRot(tm:DzTime, defaultVal:Boolean):DzQuat {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getWSScale():DzMatrix3 {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getWSScale(tm:DzTime, defaultVal:Boolean):DzMatrix3 {
+	
+	}
+	/**
+ * @description Get the world-space transformation data for this node at the current time.
+*/
+	getWSTransform():DzMatrix3 {
+	
+	}
+	/**
+ * @description Get the world-space transformation data for this node.
+*/
+	getWSTransform(tm:DzTime, defaultVal:Boolean):DzMatrix3 {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getXPosControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getXRotControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getXScaleControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getYPosControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getYRotControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getYScaleControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getZPosControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getZRotControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getZScaleControl():DzFloatProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	inheritsScale():Boolean {
+	
+	}
+	/**
+ * @description Invalidates the bounding boxes for this node, causing them to be recalculated.
+*/
+	invalidateBoundingBoxes(checkSkeleton:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	invisibleByGroup():Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	invisibleInRenderByGroup():Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	invisibleInSimulationByGroup():Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isBoneSelectingNode():Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isEditorNode():Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isHidden():Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isInScene():Boolean {
+	
+	}
+	/**
+ * @description Checks to see if given node is one of this node's children.
+*/
+	isNodeChild(node:DzNode):Boolean {
+	
+	}
+	/**
+ * @description Check to see if this is a root level node.
+*/
+	isRootNode():Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isSelectable():Boolean {
+	
+	}
+	/**
+ * @description Get the current selection state of this node.
+*/
+	isSelected():Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isSelectionPromoted():Boolean {
+	
+	}
+	/**
+ * @description Get the current render visibility status of this node.
+*/
+	isVisibileInRender():Boolean {
+	
+	}
+	/**
+ * @description Get the current simulation visibility status of this node.
+*/
+	isVisibileInSimulation():Boolean {
+	
+	}
+	/**
+ * @description Get the current visibility status of this node.
+*/
+	isVisible():Boolean {
+	
+	}
+	/**
+ * @description Marks the asset as being modified.
+*/
+	modifyAsset(newUri:DzUri):Boolean {
+	
+	}
+	/**
+ * @description Marks the asset as being modified.
+*/
+	modifyAsset():Boolean {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	moveNodeChildToIndex(child:DzNode, index:Number):DzError {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	moveNodeChildToIndex(childIndex:Number, newChildIndex:Number):DzError {
+	
+	}
+	/**
+ * @description Removes all the children of this node.
+*/
+	removeAllNodeChildren():void {
+	
+	}
+	/**
+ * @description Removes a child from this node.
+*/
+	removeNodeChild(child:DzNode, inPlace:Boolean):DzError {
+	
+	}
+	/**
+ * @description Sets the selection state of this node.
+*/
+	select(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the end point for this node.
+*/
+	setEndPoint(endPnt:DzVec3, makeDefault:Boolean):DzVec3 {
+	
+	}
+	/**
+ * @description Hide or show this node in the interface.
+*/
+	setHidden(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not this node inherits the scale of its parent.
+*/
+	setInheritScale(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether this nodes visibility is controlled by a DzGroupNode.
+*/
+	setInvisibleByGroup(yesNo:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not this node's visibility to rendering is controlled by a group node.
+*/
+	setInvisibleInRenderByGroup(yesNo:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not this node's visibility to simulation is controlled by a group node.
+*/
+	setInvisibleInSimulationByGroup(yesNo:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets local-space translation for the node at the current time.
+*/
+	setLocalPos(pos:DzVec3):DzVec3 {
+	
+	}
+	/**
+ * @description Sets local-space translation for the node.
+*/
+	setLocalPos(tm:DzTime, pos:DzVec3):DzTime {
+	
+	}
+	/**
+ * @description Sets local-space rotation for the node.
+*/
+	setLocalRot(tm:DzTime, rot:DzQuat):DzTime {
+	
+	}
+	/**
+ * @description Sets local-space rotation for the node at the current time.
+*/
+	setLocalRot(rot:DzQuat):DzQuat {
+	
+	}
+	/**
+ * @description Sets local-space scale for the node at the current time.
+*/
+	setLocalScale(scale:DzMatrix3):DzMatrix3 {
+	
+	}
+	/**
+ * @description Sets local-space scale for the node.
+*/
+	setLocalScale(tm:DzTime, scale:DzMatrix3, generalScale:Number):DzTime {
+	
+	}
+	/**
+ * @description Sets local-space scale for the node.
+*/
+	setLocalScale(tm:DzTime, scale:DzMatrix3):DzTime {
+	
+	}
+	/**
+ * @description Sets local-space scale for the node at the current time.
+*/
+	setLocalScale(scale:DzMatrix3, generalScale:Number):DzMatrix3 {
+	
+	}
+	/**
+ * @description Calculates the local transform matrix for this node at the given time.
+*/
+	setLocalTransform(tm:DzTime, pos:DzVec3, rot:DzQuat, scale:DzMatrix3):DzTime {
+	
+	}
+	/**
+ * @description Calculates the local transform matrix for this node at the current time.
+*/
+	setLocalTransform(pos:DzVec3, rot:DzQuat, scale:DzMatrix3, generalScale:Number):DzVec3 {
+	
+	}
+	/**
+ * @description Calculates the local transform matrix for this node at the current time.
+*/
+	setLocalTransform(pos:DzVec3, rot:DzQuat, scale:DzMatrix3):DzVec3 {
+	
+	}
+	/**
+ * @description Calculates the local transform matrix for this node at the given time.
+*/
+	setLocalTransform(tm:DzTime, pos:DzVec3, rot:DzQuat, scale:DzMatrix3, generalScale:Number):DzTime {
+	
+	}
+	/**
+ * @description Sets the override color to be used to draw the node while using manipulation draw styles.
+*/
+	setManipOverColor(color:Color):Color {
+	
+	}
+	/**
+ * @description Sets the object for this node.
+*/
+	setObject(object:DzObject):DzObject {
+	
+	}
+	/**
+ * @description Sets the orientation for the node.
+*/
+	setOrientation(orientation:DzQuat, makeDefault:Boolean):DzQuat {
+	
+	}
+	/**
+ * @description Sets the orientation for the node.
+*/
+	setOrientationAngles(angles:DzVec3, makeDefault:Boolean):DzVec3 {
+	
+	}
+	/**
+ * @description Sets the origin for the node.
+*/
+	setOrigin(origin:DzVec3, makeDefault:Boolean):DzVec3 {
+	
+	}
+	/**
+ * @description Set the strength of the point at parameter.
+*/
+	setPointAtStrength(strength:Number):Number {
+	
+	}
+	/**
+ * @description Set the target for this node to be pointed toward.
+*/
+	setPointAtTarget(target:DzNode):void {
+	
+	}
+	/**
+ * @description Sets the presentation for this node.
+*/
+	setPresentation(pres:DzPresentation):DzPresentation {
+	
+	}
+	/**
+ * @description Sets the preview box for the node.
+*/
+	setPreviewBox(box:DzOrientedBox3):DzOrientedBox3 {
+	
+	}
+	/**
+ * @description Sets whether or not to redirect selection.
+*/
+	setPromoteSelection(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the node rotation order.
+*/
+	setRotationOrder(order:DzRotationOrder):DzRotationOrder {
+	
+	}
+	/**
+ * @description Sets whether or not this node is selectable via the 3D viewport.
+*/
+	setSelectable(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets the selection map to use for this node.
+*/
+	setSelectionMap(map:DzSelectionMap):DzSelectionMap {
+	
+	}
+	/**
+ * @description Sets the local-space rotation for the node, in the context of the current tool, at the current time.
+*/
+	setToolLocalRot(tm:DzTime, rot:DzQuat):DzTime {
+	
+	}
+	/**
+ * @description Sets the local-space rotation for the node, in the context of the current tool.
+*/
+	setToolLocalRot(rot:DzQuat):DzQuat {
+	
+	}
+	/**
+ * @description Calculates the local transform matrix for this node at the current time, in the context of the current tool.
+*/
+	setToolLocalTransform(pos:DzVec3, rot:DzQuat, scale:DzMatrix3):DzVec3 {
+	
+	}
+	/**
+ * @description Calculates the local transform matrix for this node at the given time, in the context of the current tool.
+*/
+	setToolLocalTransform(tm:DzTime, pos:DzVec3, rot:DzQuat, scale:DzMatrix3, generalScale:Number):DzTime {
+	
+	}
+	/**
+ * @description Calculates the local transform matrix for this node at the current time, in the context of the current tool.
+*/
+	setToolLocalTransform(pos:DzVec3, rot:DzQuat, scale:DzMatrix3, generalScale:Number):DzVec3 {
+	
+	}
+	/**
+ * @description Calculates the local transform matrix for this node, in the context of the current tool, at the given time.
+*/
+	setToolLocalTransform(tm:DzTime, pos:DzVec3, rot:DzQuat, scale:DzMatrix3):DzTime {
+	
+	}
+	/**
+ * @description Sets world-space rotation for the node, in the context of the current tool.
+*/
+	setToolWSRot(tm:DzTime, val:DzQuat):DzTime {
+	
+	}
+	/**
+ * @description Sets world-space rotation for the node at the current time, in the context of the current tool.
+*/
+	setToolWSRot(val:DzQuat):DzQuat {
+	
+	}
+	/**
+ * @description Set world-space transform values for this node at the current time, in the context of the current tool.
+*/
+	setToolWSTransform(pos:DzVec3, rot:DzQuat, scale:DzMatrix3):DzVec3 {
+	
+	}
+	/**
+ * @description Set world-space transform values for this node, in the context of the current tool.
+*/
+	setToolWSTransform(tm:DzTime, pos:DzVec3, rot:DzQuat, scale:DzMatrix3):DzTime {
+	
+	}
+	/**
+ * @description Sets whether or not this node's selectability is controlled by a group node.
+*/
+	setUnselectableByGroup(yesNo:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not this node is visible in the 3D viewport.
+*/
+	setVisible(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not this node is visible during a render.
+*/
+	setVisibleInRender(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets whether or not this node is visible during a simulation.
+*/
+	setVisibleInSimulation(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Sets world-space translation for the node at the current time.
+*/
+	setWSPos(pos:DzVec3):DzVec3 {
+	
+	}
+	/**
+ * @description Sets world-space translation for the node.
+*/
+	setWSPos(tm:DzTime, pos:DzVec3):DzTime {
+	
+	}
+	/**
+ * @description Sets world-space rotation for the node at the current time.
+*/
+	setWSRot(val:DzQuat):DzQuat {
+	
+	}
+	/**
+ * @description Sets world-space rotation for the node.
+*/
+	setWSRot(tm:DzTime, val:DzQuat):DzTime {
+	
+	}
+	/**
+ * @description Sets world-space scale for the node at the current time.
+*/
+	setWSScale(scale:DzMatrix3):DzMatrix3 {
+	
+	}
+	/**
+ * @description Sets world-space scale for the node.
+*/
+	setWSScale(tm:DzTime, scale:DzMatrix3):DzTime {
+	
+	}
+	/**
+ * @description Set world-space transform values for this node at the current time.
+*/
+	setWSTransform(pos:DzVec3, rot:DzQuat, scale:DzMatrix3):DzVec3 {
+	
+	}
+	/**
+ * @description Set world-space transform values for this node.
+*/
+	setWSTransform(tm:DzTime, pos:DzVec3, rot:DzQuat, scale:DzMatrix3):DzTime {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	unselectableByGroup():Boolean {
+	
+	}
+	/**
+ * @description Called to update any cached or display data for this object.
+*/
+	update(isRender:Boolean):Boolean {
+	
+	}
+	/**
+ * @description Update the orientation of the node.
+*/
+	updateOrientation():void {
 	
 	}
 
@@ -20724,7 +22178,7 @@ class DzNodeAligner extends QObject {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -20875,14 +22329,14 @@ class DzNodeProperty extends DzProperty {
 	/**
  * @description Constructor. Creates a non-animatable, non-user property.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean) {
 	
 	}
@@ -20955,7 +22409,7 @@ class DzNodeSelectionComboBox extends DzWidget {
 	/**
  * @description Creates a node selection combobox as a child of the given parent widget.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget, nodeType="DzNode":String, allowNone=false:Boolean) {
 	
 	}
@@ -21024,7 +22478,7 @@ class DzNodeSupportAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -21043,20 +22497,46 @@ Add description.
 
 }
 /**
+ * @classdesc This is the base class for all controllers that can control the value of a DzNumericProperty-derived object. DzNumericProperty objects can have multiple controllers, these controllers are applied in the order they appear in the controller list.
+
+
+
+The application of controllers in a DzNumeric-derived property begins with the keyed (raw) value of the property at the given time, this is the value that is passed to the apply() function of the first controller. The result returned by the apply() call to the first controller is then passed into the apply() function on the second controller, and so on. The result returned by the apply() function of the last controller on the property is then returned as the final value of the property for the given time.
+
+
+
+The applyInverse function is used to determine the keyed (raw) value of the property when the user enters a number for the final value of the property. Controllers which have an 'Additive' effect must reimplement this method so that the value of the property appears to respond correctly to user input. Controllers which have a 'Replace' effect need not reimplement this function, since they have no inverse because they do not use the raw value of the property in their calculation.
+ * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/numericcontroller_dz}*/
+class DzNumericController extends DzController {
+	/**
+ * @description This function is called to apply the controller to the numeric property that it controls.
+*/
+	apply(val:Number, tm:DzTime, local:Boolean):Number {
+	
+	}
+	/**
+ * @description This function is called to 'unapply' the controller to the numeric property that it controls.
+*/
+	applyInverse(val:Number, tm:DzTime, local:Boolean):Number {
+	
+	}
+
+}
+/**
  * @classdesc This property tracks both a numeric value and a node value - it is essentially a combination of a DzFloatProperty and a DzNodeProperty in a single property. The main benefit of this is to display the settings to the user as a single parameter, it also provides several conveniences for the programmer in linking the two values together. Currently, this property is used by DzNode to implement the 'Point At' parameter.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/numericnodeproperty_dz}*/
 class DzNumericNodeProperty extends DzFloatProperty {
 	/**
  * @description Default Constructor. Creates a non-animatable, non-user property.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean, initVal=0.0:Number) {
 	
 	}
@@ -21455,12 +22935,163 @@ Add description.
 
 }
 /**
+ * @classdesc Responsible for evaluating the geometry pipeline, including caching and drawing of the world-space transformed shape. Can have multiple shapes assigned, though only one can be active at a time.
+ * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/object_dz}*/
+class DzObject extends DzElement {
+	/**
+ * @description Default Constructor.
+ * @constructor
+*/
+	constructor() {
+	
+	}
+	/**
+ * @description Adds a modifier to the modifier stack.
+*/
+	addModifier(modifier:DzModifier, index:Number):DzError {
+	
+	}
+	/**
+ * @description Add a shape to this object.
+*/
+	addShape(shape:shape_dz, index:Number):DzError {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findModifier(name:String):DzModifier {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findModifierIndex(mod:DzModifier):Number {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	findModifierIndexFromEnd(mod:DzModifier):Number {
+	
+	}
+	/**
+ * @description TODO:
+Add description.
+*/
+	forceCacheUpdate(node:DzNode, isRender:Boolean):DzNode {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getBoundingBox():DzBox3 {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getCachedGeom():void {
+	
+	}
+	/**
+ * @description Get the current shape.
+*/
+	getCurrentShape():void {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getGeometryControl():DzEnumProperty {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLocalBoundingBox():DzBox3 {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getLocalOrientedBox():DzOrientedBox3 {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getModifier(which:Number):DzModifier {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumModifiers():Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	getNumShapes():Number {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getShape(which:Number):Number {
+	
+	}
+	/**
+ * @description Flags this object to reevaluate its geometry pipeline the next time the cached shape is requested.
+*/
+	invalidateCache():void {
+	
+	}
+	/**
+ * @description Moves the modifier from its source obj to this modifier stack. DZ_ILLEGAL_ARGUMENT_ERROR is returned if there is not a modifier, the modifier's element parent is not an object, or the modifier is already an element child of this object. This move is not undo-able.
+*/
+	moveModifier(modifier:DzModifier, index:Number):DzError {
+	
+	}
+	/**
+ * @description Moves the given shape from its source object to this object. Operation fails if the shape's element parent is not a different dzobject with this shape in its shape list.
+*/
+	moveShape(shape:shape_dz, index:Number):DzError {
+	
+	}
+	/**
+ * @description Removes all the modifiers from the modifier stack.
+*/
+	removeAllModifiers():DzError {
+	
+	}
+	/**
+ * @description Remove all shapes from this object.
+*/
+	removeAllShapes():DzError {
+	
+	}
+	/**
+ * @description Removes a modifier from the modifier stack.
+*/
+	removeModifier(modifier:DzModifier):DzError {
+	
+	}
+	/**
+ * @description Remove a shape from this object.
+*/
+	removeShape(index:Number):DzError {
+	
+	}
+
+}
+/**
  * @classdesc TODO:
 Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/object_q}*/
 class QObject {
 	objectName:String;
-	name:String;
 	name:String;
 	/**
  * @description Schedules this object for deletion.
@@ -21520,7 +23151,7 @@ class DzObjExporter extends DzExporter {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -21540,7 +23171,7 @@ class DzObjImporter extends DzGeometryImporter {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -21553,11 +23184,10 @@ Add detailed description.
 class DzOffsetManip extends DzImageManip {
 	xOffset:Number;
 	yOffset:Number;
-	yOffset:Number;
 	/**
  * @description Holds the vertical offset.
  * @constructor
-*/;
+*/
 	constructor(x=0:Number, y=0:Number) {
 	
 	}
@@ -21578,7 +23208,7 @@ class DzOpacityManip extends DzImageManip {
 	/**
  * @description Holds the opacity value.
  * @constructor
-*/;
+*/
 	constructor(opacity=1.0:Number) {
 	
 	}
@@ -21623,7 +23253,7 @@ class DzOpenGL extends QObject {
 	/**
  * @description Return Value:
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -21857,46 +23487,45 @@ class DzOpenGL extends QObject {
 class DzOrientedBox3 extends Object {
 	localBox:DzBox3;
 	transform:DzMatrix3;
-	transform:DzMatrix3;
 	/**
  * @description Constructor. Creates an uninitialized box with an identity transform - the first point included in an uninitialized box will become the min and max for the box.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Copy constructor.
  * @constructor
-*/;
+*/
 	constructor(box:DzOrientedBox3) {
 	
 	}
 	/**
  * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Creates an uninitialized box with the given transform - the first point included in an uninitialized box will become the min and max for the box.
  * @constructor
-*/;
+*/
 	constructor(transform:DzMatrix3) {
 	
 	}
 	/**
  * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Creates an oriented box that is the given box with the given transform.
  * @constructor
-*/;
+*/
 	constructor(box:DzBox3, transform:DzMatrix3) {
 	
 	}
 	/**
  * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Creates an oriented box that is the given box with the given transform.
  * @constructor
-*/;
+*/
 	constructor(box:DzBox3, translation:DzVec3, rotation:DzQuat, scale:DzVec3) {
 	
 	}
 	/**
  * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Creates an uninitialized box with the given transform - the first point included in an uninitialized box will become the min and max for the box.
  * @constructor
-*/;
+*/
 	constructor(translation:DzVec3, rotation:DzQuat, scale:DzVec3) {
 	
 	}
@@ -21937,33 +23566,10 @@ class Palette extends QObject {
 	toolTipText:Color;
 	window:Color;
 	windowText:Color;
-	alternateBase:Color;
-	background:Color;
-	base:Color;
-	brightText:Color;
-	button:Color;
-	buttonText:Color;
-	dark:Color;
-	disabled:disabled;
-	foreground:Color;
-	highlight:Color;
-	highlightedText:Color;
-	inactive:inactive;
-	light:Color;
-	link:Color;
-	linkVisited:Color;
-	mid:Color;
-	midlight:Color;
-	shadow:Color;
-	text:Color;
-	toolTipBase:Color;
-	toolTipText:Color;
-	window:Color;
-	windowText:Color;
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor(active:Palette, disabled:Palette, inactive:Palette) {
 	
 	}
@@ -22702,7 +24308,7 @@ class DzPaneSettings extends DzSettings {
 	/**
  * @description Default Constructor
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -22727,7 +24333,7 @@ class DzPathComboBox extends DzWidget {
 	/**
  * @description Instantiates DzPathComboBox
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget, useMarkableView=false:Boolean) {
 	
 	}
@@ -22834,28 +24440,24 @@ class Pixmap extends QObject {
 	rect:Rect;
 	size:Size;
 	width:Number;
-	height:Number;
-	rect:Rect;
-	size:Size;
-	width:Number;
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/;
+*/
 	constructor(pixmap:Pixmap) {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(filename:String) {
 	
 	}
@@ -23091,25 +24693,24 @@ Attention:
 class Point extends QObject {
 	x:Number;
 	y:Number;
-	y:Number;
 	/**
  * @description Default constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(pnt:Point) {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(x:Number, y:Number) {
 	
 	}
@@ -23129,7 +24730,7 @@ class DzPointLight extends DzDistantLight {
 	/**
  * @description Default Constructor. Creates a new point light.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -23225,11 +24826,10 @@ class DzPointLight extends DzDistantLight {
 class DzPopupMenu extends DzWidget {
 	checkable:Boolean;
 	tearOff:Boolean;
-	tearOff:Boolean;
 	/**
  * @description Creates a popup menu as a child of the given parent widget.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -23433,7 +25033,7 @@ class DzPoseAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -23455,18 +25055,10 @@ class DzPresentation extends DzBase {
 	label:String;
 	preferredBase:String;
 	type:String;
-	colorA:Color;
-	colorB:Color;
-	description:String;
-	iconLarge:String;
-	iconSmall:String;
-	label:String;
-	preferredBase:String;
-	type:String;
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -23476,24 +25068,30 @@ class DzPresentation extends DzBase {
  * @classdesc See the render to rib sample (line #440+), to see this class in action.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/process_dz}*/
 class DzProcess extends QObject {
+	arguments:Array;
+	communication:Communication;
+	exitStatus:Number;
+	normalExit:Boolean;
+	running:Boolean;
+	workingDirectory:String;
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.
  * @constructor
-*/;
+*/
 	constructor(args:Array) {
 	
 	}
 	/**
  * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.
  * @constructor
-*/;
+*/
 	constructor(arg0:String) {
 	
 	}
@@ -23606,6 +25204,32 @@ See Also:
  DzAsset
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/productassetcontainer_dz}*/
 class DzProductAssetContainer extends DzAbstractAssetContainer, DzRefCountedItem {
+	artistNames:Array;
+	dateInstalled:Date;
+	dateLastUpdated:Date;
+	datePurchased:Date;
+	dateReleased:Date;
+	description:String;
+	groupId:Number;
+	guid:String;
+	hasCloudMetadata:Boolean;
+	hidden:Boolean;
+	iconPath:String;
+	isCloudInstallable:Boolean;
+	isCloudInstalled:Boolean;
+	isCloudOperationInProgress:Boolean;
+	isCloudOwned:Boolean;
+	isDownloadingFromCloud:Boolean;
+	isInstalled:Boolean;
+	isLocalUser:Boolean;
+	isLocalUserStore:Boolean;
+	isMetadataValid:Boolean;
+	isVendor:Boolean;
+	needsCloudInstall:Boolean;
+	needsCloudUpdate:Boolean;
+	store:String;
+	title:String;
+	token:String;
 	/**
  * @description ENUMERATOR: Metadata that is created, owned and maintained by the user.
 */
@@ -23795,7 +25419,7 @@ class DzPropertiesAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -23812,6 +25436,13 @@ See Also:
  DzElement
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/property_dz}*/
 class DzProperty extends DzBase {
+	assetAuthor:DzAuthor;
+	assetFileRevision:DzVersion;
+	assetId:String;
+	assetModifiedDate:Date;
+	assetSource:DzUri;
+	assetUri:DzUri;
+	emitValueChangedOnSceneClear:Boolean;
 	/**
  * @description ENUMERATOR: Best for saving/loading; includes raw value; sets without adjusting.
 */
@@ -24690,7 +26321,7 @@ class DzPropertySelectionComboBox extends DzWidget {
 	/**
  * @description Creates a property selection combobox as a child of the given parent widget.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -24818,14 +26449,14 @@ class DzPropertySettings extends DzSettings {
 	/**
  * @description Default Constructor - creates an empty set of options
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Copy constructor.
  * @constructor
-*/;
+*/
 	constructor(settings:DzSettings) {
 	
 	}
@@ -24846,7 +26477,7 @@ class DzPuppeteerAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -24857,6 +26488,19 @@ Add description.
 Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/pushbutton_dz}*/
 class DzPushButton extends DzButton {
+	autoDefault:Boolean;
+	buttonStyle:ButtonStyle;
+	buttonTextFormat:Number;
+	default:Boolean;
+	displayDownArrow:Boolean;
+	downArrowMetric:String;
+	downArrowPrimitive:String;
+	elideMode:DzWidget;
+	flat:Boolean;
+	iconMetric:String;
+	primitive:String;
+	sizedFromIcon:Boolean;
+	textStyle:String;
 	/**
  * @description ENUMERATOR: Deprecated
 */
@@ -24920,7 +26564,7 @@ class DzPushButton extends DzButton {
 	/**
  * @description Holds whether or not the button will be sized based on the size of its icon (if any). If true, this overrides iconMetric.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -24954,7 +26598,7 @@ class DzPZ3Importer extends DzImporter {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -24969,55 +26613,52 @@ class DzQuat extends Object {
 	x:Number;
 	y:Number;
 	z:Number;
-	x:Number;
-	y:Number;
-	z:Number;
 	/**
  * @description Default Constructor. Creates an identity quaternion.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/;
+*/
 	constructor(quat:DzQuat) {
 	
 	}
 	/**
  * @description Initialize with a rotation matrix.
  * @constructor
-*/;
+*/
 	constructor(mtx:DzMatrix3) {
 	
 	}
 	/**
  * @description Initialize with a rotation matrix.
  * @constructor
-*/;
+*/
 	constructor(mtx:DzMatrix4) {
 	
 	}
 	/**
  * @description Initialize with an Euler angle rotation.
  * @constructor
-*/;
+*/
 	constructor(order:DzRotationOrder, angles:DzVec3) {
 	
 	}
 	/**
  * @description Initialize with a rotation around an axis of the given angle (in radians).
  * @constructor
-*/;
+*/
 	constructor(axis:DzVec3, radians:Number) {
 	
 	}
 	/**
  * @description Initialize with 4-component quaternion.
  * @constructor
-*/;
+*/
 	constructor(x:Number, y:Number, z:Number, w:Number, normalize=true:Boolean) {
 	
 	}
@@ -25189,8 +26830,129 @@ class DzRadioButton extends DzButton {
 	/**
  * @description Creates a radio button as a child of the given parent widget
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
+	
+	}
+
+}
+/**
+ * @classdesc This is the DAZScript counterpart to the QRect type used in the DAZ Studio SDK. A Rect object is a two dimensional representation of a rectangle.
+
+
+
+Attention:
+
+
+ Inheritance will change to Object in a pending update.
+ * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/rect}*/
+class Rect extends QObject {
+	bottom:Number;
+	center:Point;
+	height:Number;
+	left:Number;
+	right:Number;
+	top:Number;
+	width:Number;
+	x:Number;
+	y:Number;
+	/**
+ * @description Default Constructor.
+ * @constructor
+*/
+	constructor() {
+	
+	}
+	/**
+ * @description Parameter(s):
+ * @constructor
+*/
+	constructor(rect:Rect) {
+	
+	}
+	/**
+ * @description Parameter(s):
+ * @constructor
+*/
+	constructor(xVal:Number, yVal:Number, wVal:Number, hVal:Number) {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	contains(rect:Rect):Boolean {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	intersection(rect:Rect):void {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	intersects(rect:Rect):Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isEmpty():Boolean {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	isNull():Boolean {
+	
+	}
+	/**
+ * @description Moves the rectangle so its bottom property is equal to pos.
+*/
+	moveBottom(pos:Number):Number {
+	
+	}
+	/**
+ * @description Translates the rectangle by dx and dy, the width and height remain unchanged.
+*/
+	moveBy(dx:Number, dy:Number):Number {
+	
+	}
+	/**
+ * @description Moves the rectangle so its left property is equal to pos.
+*/
+	moveLeft(pos:Number):Number {
+	
+	}
+	/**
+ * @description Moves the rectangle so its right property is equal to pos.
+*/
+	moveRight(pos:Number):Number {
+	
+	}
+	/**
+ * @description Moves the rectangle so its top property is equal to pos.
+*/
+	moveTop(pos:Number):Number {
+	
+	}
+	/**
+ * @description Normalizes the rectangle - changes the prefix of width/height if they are negative. The rectangle will no longer be empty after it is normalized.
+*/
+	normalize():void {
+	
+	}
+	/**
+ * @description Normalizes the rectangle - changes the prefix of width/height if they are negative. The rectangle will no longer be empty after it is normalized.
+*/
+	normalize():void {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	union(rect:Rect):void {
 	
 	}
 
@@ -25702,6 +27464,44 @@ Add description.
  * @classdesc The RenderOptions class is responsible for the inclusion/exclusion of certain aspects of a render.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/renderoptions_dz}*/
 class DzRenderOptions extends QObject {
+	aspect:Number;
+	aspectHeight:Number;
+	aspectWidth:Number;
+	doubleSided:Boolean;
+	endTime:DzTime;
+	gain:Number;
+	gamma:Number;
+	gammaCorrection:GammaCorrection;
+	imageSize:Size;
+	isAspectConstrained:Boolean;
+	isCurrentFrameRender:Boolean;
+	lastRenderImgFilename:String;
+	lastRenderMovFilename:String;
+	lastRenderSerFilename:String;
+	motionBlurOffset:Number;
+	motionBlurPct:Number;
+	motionBlurSamples:Number;
+	openGLPasses:Number;
+	pixelFilter:PixelFilter;
+	rayTraceDepth:Number;
+	renderImgFilename:String;
+	renderImgToId:RenderImgTarget;
+	renderMovFilename:String;
+	renderMovToId:RenderMovTarget;
+	renderSerFilename:String;
+	renderStyle:RenderStyle;
+	renderType:RenderType;
+	renderViewport:Boolean;
+	shadingRate:Number;
+	shadowSamples:Number;
+	showPreview:Boolean;
+	startTime:DzTime;
+	useGLSL:Boolean;
+	useMotionBlur:Boolean;
+	xFilterWidth:Number;
+	xPixelSamples:Number;
+	yFilterWidth:Number;
+	yPixelSamples:Number;
 	/**
  * @description ENUMERATOR: Gamma correction off.
 */
@@ -25790,7 +27590,7 @@ class DzRenderOptions extends QObject {
 	/**
  * @description Default Constructor. Initializes render options.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -25853,7 +27653,7 @@ class DzRenderSettingsAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -25863,6 +27663,7 @@ Add description.
  * @classdesc A manipulator that rotates an image layer in 90 degree increments.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/rotatemanip_dz}*/
 class DzRotateManip extends DzImageManip {
+	degrees:Number;
 	/**
  * @description ENUMERATOR: No rotation is performed.
 */
@@ -25886,7 +27687,7 @@ class DzRotateManip extends DzImageManip {
 	/**
  * @description Holds the amount of rotation, in degrees.
  * @constructor
-*/;
+*/
 	constructor(rot=RotNone:Rotation) {
 	
 	}
@@ -25925,34 +27726,31 @@ class DzRotationOrder extends Object {
 	order:Number;
 	secondAxis:Number;
 	thirdAxis:Number;
-	order:Number;
-	secondAxis:Number;
-	thirdAxis:Number;
 	/**
  * @description Default Constructor. Creates a new rotation order and sets it to XYZ by default.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/;
+*/
 	constructor(order:DzRotationOrder) {
 	
 	}
 	/**
  * @description Creates a new rotation order with the given axis order
  * @constructor
-*/;
+*/
 	constructor(firstAxis:Number, secondAxis:Number, thirdAxis:Number) {
 	
 	}
 	/**
  * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Creates a new rotation order with the given enumerated representation.
  * @constructor
-*/;
+*/
 	constructor(order:Number) {
 	
 	}
@@ -26381,7 +28179,7 @@ class DzRSLShader extends DzBase, DzRefCountedItem {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -26920,11 +28718,10 @@ Add detailed description.
 class DzScaleManip extends DzImageManip {
 	heightScale:Number;
 	widthScale:Number;
-	widthScale:Number;
 	/**
  * @description Holds the scaling of the image across its height.
  * @constructor
-*/;
+*/
 	constructor(w=1.0:Number, h=1.0:Number) {
 	
 	}
@@ -26940,6 +28737,8 @@ class DzScaleManip extends DzImageManip {
  * @classdesc There is only one of these objects in the application. It is the communication hub between the core code and the interface, so it tracks all nodes, skeletons, lights, cameras, etc. that become part of the scene. This object is directly available using the Global.Scene variable.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/scene_dz}*/
 class DzScene extends DzBase {
+	assetId:String;
+	assetUri:DzUri;
 	/**
  * @description ENUMERATOR: DefaultMethod - If no nodes (or only the default camera) exist, this behaves as OpenNew. Otherwise, this behaves as MergeFile.
 */
@@ -27657,7 +29456,7 @@ class DzSceneAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -27690,7 +29489,7 @@ class DzSceneHelper extends QObject {
 	/**
  * @description Default Constructor
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -27969,7 +29768,7 @@ class DzSceneSubsetAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -27994,7 +29793,7 @@ class DzSceneSupportAssetFilter extends DzSceneAssetFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -28043,14 +29842,14 @@ class DzScript extends DzBase {
 	/**
  * @description Constructor.
  * @constructor
-*/;
+*/
 	constructor(name="":String) {
 	
 	}
 	/**
  * @description Copy Constructor
  * @constructor
-*/;
+*/
 	constructor(script:DzScript) {
 	
 	}
@@ -28598,7 +30397,7 @@ class DzScriptedRenderer extends DzRenderer {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -29301,12 +31100,10 @@ class DzScrollArea extends DzWidget {
 	alignment:DzWidget;
 	maximumViewportSize:Size;
 	widgetResizable:Boolean;
-	maximumViewportSize:Size;
-	widgetResizable:Boolean;
 	/**
  * @description Creates a scroll area as a child of the given parent widget.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -29363,7 +31160,7 @@ class DzScrollView extends DzWidget {
 	/**
  * @description Creates a scroll view as a child of the given parent widget.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -29383,7 +31180,7 @@ class DzSelectionMap extends DzBase {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -29488,14 +31285,14 @@ class DzSettings extends QObject {
 	/**
  * @description Default constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Copy constructor.
  * @constructor
-*/;
+*/
 	constructor(settings:DzSettings) {
 	
 	}
@@ -29670,7 +31467,7 @@ class DzSettingsHelper extends QObject {
 	/**
  * @description Default Constructor
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -29720,21 +31517,21 @@ class DzShaderCamera extends DzBasicCamera {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.
  * @constructor
-*/;
+*/
 	constructor(definitionFile:String, renderTimeFile:String) {
 	
 	}
 	/**
  * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.
  * @constructor
-*/;
+*/
 	constructor(definitionFile:String) {
 	
 	}
@@ -29828,6 +31625,7 @@ class DzShaderCamera extends DzBasicCamera {
  * @classdesc DzShaderDescription contains information about a RenderMan shader - this includes the type of the shader, and a list of its parameters.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/shaderdescription_dz}*/
 class DzShaderDescription extends QObject {
+	type:DzShaderType;
 	/**
  * @description ENUMERATOR: Surface shader.
 */
@@ -29899,14 +31697,14 @@ class DzShaderLight extends DzLight {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(definitionFile:String, type:LightType) {
 	
 	}
@@ -30038,21 +31836,21 @@ class DzShaderMaterial extends DzMaterial, DzRefCountedItem {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.
  * @constructor
-*/;
+*/
 	constructor(mat:DzShaderMaterial, duplicateMissingProps=true:Boolean) {
 	
 	}
 	/**
  * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.
  * @constructor
-*/;
+*/
 	constructor(definitionFile:String) {
 	
 	}
@@ -30123,6 +31921,7 @@ class DzShaderMaterial extends DzMaterial, DzRefCountedItem {
 Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/shaderparameter_dz}*/
 class DzShaderParameter extends QObject {
+	type:DzShaderParamType;
 	/**
  * @description ENUMERATOR: Unknown Parameter type.
 */
@@ -30180,7 +31979,7 @@ class DzShaderSupportAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -30212,7 +32011,7 @@ class DzShapeRiggingAdjuster extends QObject {
 	/**
  * @description Default Constructor. Creates a shape rigging adjuster that can be used to adjust bone positions and orientations of the selected figure, based on the current shape.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -30275,7 +32074,7 @@ class DzShapingAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -30289,7 +32088,7 @@ class DzSimpleElementData extends DzElementData {
 	/**
  * @description Default constructor.
  * @constructor
-*/;
+*/
 	constructor(name:String, persistent=false:Boolean) {
 	
 	}
@@ -30327,7 +32126,7 @@ class DzSimpleElementScriptData extends DzSimpleElementData {
 	/**
  * @description Default constructor.
  * @constructor
-*/;
+*/
 	constructor(name:String, persistent=true:Boolean) {
 	
 	}
@@ -30353,7 +32152,7 @@ class DzSimpleSceneData extends DzSceneData {
 	/**
  * @description Default constructor.
  * @constructor
-*/;
+*/
 	constructor(name:String, persistent=false:Boolean) {
 	
 	}
@@ -30384,7 +32183,7 @@ class DzSimpleSceneScriptData extends DzSimpleSceneData {
 	/**
  * @description Default constructor.
  * @constructor
-*/;
+*/
 	constructor(name:String, persistent=true:Boolean) {
 	
 	}
@@ -30417,7 +32216,7 @@ class DzSimulationSettingsAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -30436,25 +32235,24 @@ Attention:
 class Size extends QObject {
 	height:Number;
 	width:Number;
-	width:Number;
 	/**
  * @description Default constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/;
+*/
 	constructor(size:Size) {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(width:Number, height:Number) {
 	
 	}
@@ -30474,7 +32272,7 @@ class DzSkeleton extends DzNode {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -30619,14 +32417,14 @@ class DzSkeletonProperty extends DzNodeProperty {
 	/**
  * @description Default Constructor. Creates a non-animatable, non-user property.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean) {
 	
 	}
@@ -30658,7 +32456,7 @@ class DzSourceFileData extends DzElementData {
 	/**
  * @description Creates a new Source File Data object that stores the given file path.
  * @constructor
-*/;
+*/
 	constructor(filePath="":String) {
 	
 	}
@@ -30690,13 +32488,10 @@ class DzSplitter extends DzWidget {
 	handleWidth:Number;
 	opaqueResize:Boolean;
 	orientation:DzWidget;
-	handleWidth:Number;
-	opaqueResize:Boolean;
-	orientation:DzWidget;
 	/**
  * @description Creates a splitter widget as a child of the given parent widget.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -30780,7 +32575,7 @@ class DzSpotLight extends DzDistantLight {
 	/**
  * @description Default Constructor. Creates a new spotlight.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -31026,19 +32821,81 @@ Add description.
 /**
  * @classdesc TODO:
 Add detailed description.
+ * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/stringhelper_dz}*/
+class DzStringHelper extends QObject {
+	/**
+ * @description Default Constructor
+ * @constructor
+*/
+	constructor() {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	changeSpecialChars(text:String, chars:String):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getMatches(text:String, expression:String):Array {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	getWords(text:String, removeEmpties:Boolean):Array {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	indentString(text:String, level:Number):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	prependCharsIfNumeric(text:String, chars:String):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	replaceAll(source:String, findText:String, replaceText:String):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	stripCRLF(text:String):String {
+	
+	}
+	/**
+ * @description Parameter(s):
+*/
+	stripSpaces(text:String):String {
+	
+	}
+
+}
+/**
+ * @classdesc TODO:
+Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/stringproperty_dz}*/
 class DzStringProperty extends DzProperty {
 	/**
  * @description Default Constructor. Creates a non-user property.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Parameter(s):
  * @constructor
-*/;
+*/
 	constructor(name:String, isUserProperty:Boolean) {
 	
 	}
@@ -31261,8 +33118,38 @@ class DzSubtractBlend extends DzImageBlend {
 	/**
  * @description Default Constructor
  * @constructor
-*/;
+*/
 	constructor() {
+	
+	}
+
+}
+/**
+ * @classdesc The DzSystem object provides functions to access and manipulate environment variables. It is accessible via the Global.System variable.
+ * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/system_dz}*/
+class DzSystem extends QObject {
+	/**
+ * @description Parameter(s):
+*/
+	getenv(environmentVariable:String):String {
+	
+	}
+	/**
+ * @description Deprecated
+*/
+	print(expression:String):String {
+	
+	}
+	/**
+ * @description Deprecated
+*/
+	println(expression:String):String {
+	
+	}
+	/**
+ * @description Sets the value of an environment variable. If the environment variable does not exist, it is created. The environment is only changed within the context of the script process, for the duration of said process.
+*/
+	setenv(environmentVariable:String, value:String):String {
 	
 	}
 
@@ -31271,6 +33158,13 @@ class DzSubtractBlend extends DzImageBlend {
  * @classdesc A DzTabWidget provides a stack of tabbed widgets.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/tabwidget_dz}*/
 class DzTabWidget extends DzWidget {
+	count:Number;
+	currentIndex:Number;
+	documentMode:Boolean;
+	movable:Boolean;
+	tabPosition:TabPosition;
+	tabsClosable:Boolean;
+	usesScrollButtons:Boolean;
 	/**
  * @description ENUMERATOR: The top of the widget.
 */
@@ -31294,7 +33188,7 @@ class DzTabWidget extends DzWidget {
 	/**
  * @description Creates a tab widget as a child of the given parent widget.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -31420,17 +33314,10 @@ class DzTextBrowser extends DzTextEdit {
 	openLinks:Boolean;
 	searchPaths:Array;
 	source:String;
-	forwardCount:Number;
-	isBackwardAvailable:Boolean;
-	isForwardAvailable:Boolean;
-	openExternalLinks:Boolean;
-	openLinks:Boolean;
-	searchPaths:Array;
-	source:String;
 	/**
  * @description Creates a text browser widget as a child of the given parent widget.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -31482,6 +33369,38 @@ class DzTextBrowser extends DzTextEdit {
  * @classdesc A DzTextEdit provides a powerful single-page rich text editor widget.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/textedit_dz}*/
 class DzTextEdit extends DzWidget {
+	acceptRichText:Boolean;
+	autoFormatting:AutoFormattingFlag;
+	blockCount:Number;
+	bold:Boolean;
+	characterCount:Number;
+	cursorWidth:Number;
+	documentTitle:String;
+	family:String;
+	font:Font;
+	html:String;
+	italic:Boolean;
+	lineCount:Number;
+	lineWrapColumnOrWidth:Number;
+	lineWrapMode:LineWrapMode;
+	modified:Boolean;
+	overwriteMode:Boolean;
+	plainText:String;
+	pointSize:Number;
+	readOnly:Boolean;
+	redoAvailable:Boolean;
+	selectedText:String;
+	tabChangesFocus:Boolean;
+	tabStopWidth:Number;
+	text:String;
+	textBackgroundColor:Color;
+	textColor:Color;
+	textInteractionFlags:DzWidget;
+	underline:Boolean;
+	undoAvailable:Boolean;
+	undoRedoEnabled:Boolean;
+	weight:Number;
+	wordWrapMode:WrapMode;
 	/**
  * @description ENUMERATOR: Do not perform any automatic formatting.
 */
@@ -31545,7 +33464,7 @@ class DzTextEdit extends DzWidget {
 	/**
  * @description Creates a text edit widget as a child of the given parent widget.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -31888,6 +33807,19 @@ Add description.
  * @classdesc NEEDS DESCRIPTION
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/texturecomponent_dz}*/
 class DzTextureComponent extends QObject {
+	color:Color;
+	enabled:Boolean;
+	flippedHorizontal:Boolean;
+	flippedVertical:Boolean;
+	imageFile:String;
+	invert:Boolean;
+	offset:Point;
+	opacity:Number;
+	rotation:rotation;
+	xOffset:Number;
+	xScale:Number;
+	yOffset:Number;
+	yScale:Number;
 	/**
  * @description ENUMERATOR: TODO: Add description.
 */
@@ -31928,6 +33860,7 @@ Add description.
  * @classdesc NEEDS DESCRIPTION
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/texturelayer_dz}*/
 class DzTextureLayer extends DzTextureComponent {
+	blendMode:blendMode;
 	/**
  * @description ENUMERATOR: TODO: Add description.
 */
@@ -32035,12 +33968,10 @@ class DzTimeEdit extends DzDateTimeEdit {
 	max:Date;
 	min:Date;
 	separator:String;
-	min:Date;
-	separator:String;
 	/**
  * @description Creates a time edit widget as a child of the given parent widget.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -32053,12 +33984,10 @@ class DzTimer extends QObject {
 	active:Boolean;
 	interval:Number;
 	singleShot:Number;
-	interval:Number;
-	singleShot:Number;
 	/**
  * @description Construct a timer with the given parent.
  * @constructor
-*/;
+*/
 	constructor(parent=undefined:QObject) {
 	
 	}
@@ -32089,25 +34018,24 @@ Add detailed description.
 class DzTimeRange extends Object {
 	end:Number;
 	start:Number;
-	start:Number;
 	/**
  * @description Default Constructor. Creates the time range [DZ_MIN_TIME,DZ_MAX_TIME]
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.
  * @constructor
-*/;
+*/
 	constructor(interval:DzTimeRange) {
 	
 	}
 	/**
  * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.
  * @constructor
-*/;
+*/
 	constructor(start:DzTime, end:DzTime) {
 	
 	}
@@ -32347,6 +34275,9 @@ class DzToolBar extends QWidget {
 Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/toolbaritem_dz}*/
 class DzToolBarItem extends QObject {
+	action:String;
+	type:Type;
+	uiScript:String;
 	/**
  * @description ENUMERATOR: A toolbar separator (i.e. divider)
 */
@@ -32500,7 +34431,7 @@ class DzTransferUtility extends QObject {
 	/**
  * @description Default Constructor. Creates a transfer utility that can be used to transfer weights, morph, maps, etc using projection.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -33054,6 +34985,24 @@ class DzTypeAssetContainer extends DzAbstractAssetContainer, DzRefCountedItem {
 
 }
 /**
+ * @classdesc See Also:
+
+
+ DzExportMgr.findExporterByClassName()
+
+ DzExportMgr.findExporter()
+ * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/u3dexporter_dz}*/
+class DzU3DExporter extends DzExporter {
+	/**
+ * @description Default Constructor.
+ * @constructor
+*/
+	constructor() {
+	
+	}
+
+}
+/**
  * @classdesc Provides functionality that allows QtDesigner to be used in the creation of graphical user interfaces used by scripts.
 
 
@@ -33067,7 +35016,7 @@ class DzUiLoader extends QObject {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -33141,7 +35090,7 @@ class DzUIPopUpWgt extends QWidget {
 	/**
  * @description Default Constructor. Creates a new ui popup widget.
  * @constructor
-*/;
+*/
 	constructor(parent:QWidget) {
 	
 	}
@@ -33391,6 +35340,13 @@ Since:
  4.8.1.18
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/uri_dz}*/
 class DzUri extends Object {
+	filePath:String;
+	fileVersion:DzVersion;
+	id:String;
+	modifierPath:Array;
+	nodePath:Array;
+	propertyPath:Array;
+	schemeType:schemeType;
 	/**
  * @description ENUMERATOR: TODO: Add description.
 */
@@ -33449,21 +35405,21 @@ class DzUri extends Object {
 	/**
  * @description Default constructor. Creates an empty URI.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Copy constructor. Creates a URI as a copy of another URI.
  * @constructor
-*/;
+*/
 	constructor(uri:DzUri) {
 	
 	}
 	/**
  * @description Constructor. Creates a URI from its string representation.
  * @constructor
-*/;
+*/
 	constructor(uri:String) {
 	
 	}
@@ -33561,6 +35517,25 @@ Add description.
 
 }
 /**
+ * @classdesc Any draw styles which should be available to the user for selecting need to be derived from this class. Subclasses must implement the getPixmap() to return the icon that will be displayed in the viewport drop-down list, and getDescription() to return the text that accompanies the icon.
+ * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/userdrawstyle_dz}*/
+class DzUserDrawStyle extends DzDrawStyle {
+	isEnabled:Boolean;
+	/**
+ * @description Derived classes should return a description for display in the viewport drop-down list.
+*/
+	getDescription():String {
+	
+	}
+	/**
+ * @description Derived classes should return an icon for display in the viewport drop-down list.
+*/
+	getPixmap():Pixmap {
+	
+	}
+
+}
+/**
  * @classdesc TODO:
 Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/uvset_dz}*/
@@ -33571,16 +35546,11 @@ class DzUVSet extends DzRefCountedItem {
 	assetModifiedDate:Date;
 	assetSource:DzUri;
 	assetUri:DzUri;
-	assetFileRevision:DzVersion;
-	assetId:String;
-	assetModifiedDate:Date;
-	assetSource:DzUri;
-	assetUri:DzUri;
 	/**
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -33601,7 +35571,7 @@ class DzUVSupportAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -33614,14 +35584,14 @@ class DzVBoxLayout extends DzBoxLayout {
 	/**
  * @description Creates a vertical box layout that manages the children widgets of the given parent widget
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
 	/**
  * @description Creates a vertical box layout as a sub-layout of the given layout
  * @constructor
-*/;
+*/
 	constructor(parent:DzLayout) {
 	
 	}
@@ -33634,7 +35604,7 @@ class DzVButtonGroup extends DzButtonGroup {
 	/**
  * @description Creates a button group as a child of the given parent widget
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -33657,39 +35627,38 @@ Since:
 class DzVec2 extends Object {
 	x:Number;
 	y:Number;
-	y:Number;
 	/**
  * @description Default Constructor. Creates an uninitialized vector.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/;
+*/
 	constructor(vec:DzInt2) {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/;
+*/
 	constructor(vec:DzVec2) {
 	
 	}
 	/**
  * @description Creates and inititializes this vector with an array of 2 float values.
  * @constructor
-*/;
+*/
 	constructor(vals:Array) {
 	
 	}
 	/**
  * @description Creates and inititializes this vector with 2 floats.
  * @constructor
-*/;
+*/
 	constructor(x:Number, y:Number) {
 	
 	}
@@ -33875,33 +35844,31 @@ class DzVec3 extends Object {
 	x:Number;
 	y:Number;
 	z:Number;
-	y:Number;
-	z:Number;
 	/**
  * @description Default Constructor. Creates an uninitialized vector.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Copy Constructor.
  * @constructor
-*/;
+*/
 	constructor(vec:DzVec3) {
 	
 	}
 	/**
  * @description Creates and inititializes this vector with an array of 3 float values.
  * @constructor
-*/;
+*/
 	constructor(vals:Array) {
 	
 	}
 	/**
  * @description Creates and inititializes this vector with 3 floats.
  * @constructor
-*/;
+*/
 	constructor(x:Number, y:Number, z:Number) {
 	
 	}
@@ -34115,7 +36082,7 @@ class DzVersion extends Object {
 	/**
  * @description Default constructor. Creates an empty version number - i.e. 0.0.0.0
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -34123,28 +36090,28 @@ class DzVersion extends Object {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor(version:String) {
 	
 	}
 	/**
  * @description Creates a version number from the 4 16-bit components.
  * @constructor
-*/;
+*/
 	constructor(major:Number, minor:Number, revision:Number, build:Number) {
 	
 	}
 	/**
  * @description Compatibility constructor. Creates a 64-bit version number from an old 32-bit version number.
  * @constructor
-*/;
+*/
 	constructor(version:Number) {
 	
 	}
 	/**
  * @description Copy constructor. Creates a version that is a copy of the given number.
  * @constructor
-*/;
+*/
 	constructor(version:DzVersion) {
 	
 	}
@@ -34265,7 +36232,7 @@ class DzVGroupBox extends DzGroupBox {
 	/**
  * @description Creates a group box as a child of the given parent widget.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -34279,14 +36246,14 @@ class DzVideoClip extends QObject {
 	/**
  * @description Default Constructor.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.
  * @constructor
-*/;
+*/
 	constructor(width:Number, height:Number, rate:Number) {
 	
 	}
@@ -35144,7 +37111,7 @@ class DzViewRenderHandler extends DzImageRenderHandler {
 	/**
  * @description Create a new view render handler for rendering a single frame.
  * @constructor
-*/;
+*/
 	constructor(size:Size, time:DzTime, filename:String, isSoftware:Boolean) {
 	
 	}
@@ -35177,7 +37144,7 @@ class DzWearablesAssetFilter extends DzAssetFileOutFilter {
  * @description TODO:
 Add description.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
@@ -35191,14 +37158,14 @@ class DzWeld extends DzBase {
 	/**
  * @description Creates a new weld operation.
  * @constructor
-*/;
+*/
 	constructor() {
 	
 	}
 	/**
  * @description Creates a new weld operation that welds the given bones.
  * @constructor
-*/;
+*/
 	constructor(weldBone:DzBone, targetBone:DzBone) {
 	
 	}
@@ -35232,6 +37199,32 @@ class DzWeld extends DzBase {
  * @classdesc The base class for all wrapped widgets. This is an abstract base class that provides general functionality for DAZScript widget components.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/widget_dz}*/
 class DzWidget extends QObject {
+	colorCount:Number;
+	depth:Number;
+	enabled:Boolean;
+	font:Font;
+	globalX:Number;
+	globalY:Number;
+	height:Number;
+	heightMM:Number;
+	logicalDpiX:Number;
+	logicalDpiY:Number;
+	maxHeight:Number;
+	maxWidth:Number;
+	minHeight:Number;
+	minWidth:Number;
+	palette:Palette;
+	paletteBackgroundColor:Color;
+	paletteBackgroundPixmap:Pixmap;
+	paletteForegroundColor:Color;
+	physicalDpiX:Number;
+	physicalDpiY:Number;
+	toolTip:String;
+	whatsThis:String;
+	width:Number;
+	widthMM:Number;
+	x:Number;
+	y:Number;
 	/**
  * @description ENUMERATOR: Aligns horizontally with the left edge.
 */
@@ -35465,7 +37458,7 @@ class DzWidget extends QObject {
 	/**
  * @description Creates a new widget as a child of the given parent widget.
  * @constructor
-*/;
+*/
 	constructor(parent:DzWidget) {
 	
 	}
@@ -35590,51 +37583,6 @@ class DzWidget extends QObject {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/widget_q}*/
 class QWidget extends QObject {
 	acceptDrops:Boolean;
-	accessibleDescription:String;
-	accessibleName:String;
-	autoFillBackground:Boolean;
-	baseSize:Size;
-	childrenRect:Rect;
-	enabled:Boolean;
-	focus:Boolean;
-	font:Font;
-	frameGeometry:Rect;
-	frameSize:Size;
-	fullScreen:Boolean;
-	geometry:Rect;
-	height:Number;
-	isActiveWindow:Boolean;
-	maximized:Boolean;
-	maximumHeight:Number;
-	maximumSize:Size;
-	maximumWidth:Number;
-	minimized:Boolean;
-	minimumHeight:Number;
-	minimumSize:Size;
-	minimumSizeHint:Size;
-	minimumWidth:Number;
-	mouseTracking:Boolean;
-	normalGeometry:Rect;
-	palette:Palette;
-	pos:Point;
-	rect:Rect;
-	size:Size;
-	sizeHint:Size;
-	sizeIncrement:Size;
-	statusTip:String;
-	styleSheet:String;
-	toolTip:String;
-	updatesEnabled:Boolean;
-	visible:Boolean;
-	whatsThis:String;
-	width:Number;
-	windowFilePath:String;
-	windowIconText:String;
-	windowModified:Boolean;
-	windowOpacity:Number;
-	windowTitle:String;
-	x:Number;
-	y:Number;
 	accessibleDescription:String;
 	accessibleName:String;
 	autoFillBackground:Boolean;
@@ -35837,7 +37785,7 @@ class DzZipFile extends DzFileInfo {
 	/**
  * @description Creates a zip file with the given file name.
  * @constructor
-*/;
+*/
 	constructor(file:String) {
 	
 	}
