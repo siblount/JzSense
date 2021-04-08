@@ -96,7 +96,7 @@
 	/**
  * @description Aim the viewport's camera at the selected nodes in the scene. If the scene does not have any select nodes, all nodes in the scene are aimed. Note that the viewport's camera is excluded, as are any nodes that are parented to the viewport's camera.
 */
-	aimCamera() {
+	aimCamera():void {
 	
 	}
 	/**
@@ -108,25 +108,25 @@
 	/**
  * @description Aim the viewport's camera at the selected nodes in the scene. If the scene does not have any select nodes, all nodes in the scene are aimed. Note that the viewport's camera is excluded, as are any nodes that are parented to the viewport's camera.
 */
-	aimCameraAtPrimaryNode() {
+	aimCameraAtPrimaryNode():void {
 	
 	}
 	/**
  * @description Captures the current contents from the OpenGL frame buffer as an image.
 */
-	captureImage() {
+	captureImage():Image {
 	
 	}
 	/**
  * @description Return Value:
 */
-	currentDimensions() {
+	currentDimensions():DzInt2 {
 	
 	}
 	/**
  * @description Frame the viewport's camera at the selected nodes in the scene. If the scene does not have any select nodes, all nodes in the scene are framed. Note that the viewport's camera is excluded, as are any nodes that are parented to the viewport's camera.
 */
-	frameCamera() {
+	frameCamera():void {
 	
 	}
 	/**
@@ -138,37 +138,37 @@
 	/**
  * @description Frame the viewport's camera at the selected nodes in the scene. If the scene does not have any select nodes, all nodes in the scene are framed. Note that the viewport's camera is excluded, as are any nodes that are parented to the viewport's camera.
 */
-	frameCameraOnSelectedNodes() {
+	frameCameraOnSelectedNodes():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getAspectFrameRect() {
+	getAspectFrameRect():Rect {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getCamera() {
+	getCamera():DzCamera {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getCameraCube() {
+	getCameraCube():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getUserDrawStyle() {
+	getUserDrawStyle():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getViewport() {
+	getViewport():DzViewport {
 	
 	}
 	/**
@@ -186,13 +186,13 @@
 	/**
  * @description Return Value:
 */
-	isHardwareRenderable() {
+	isHardwareRenderable():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	mouseIsDown() {
+	mouseIsDown():Boolean {
 	
 	}
 	/**
@@ -228,7 +228,7 @@
 	/**
  * @description Reset the viewport's camera to its default state.
 */
-	resetCamera() {
+	resetCamera():void {
 	
 	}
 	/**
@@ -271,25 +271,25 @@ class Dz3DViewRenderHandler extends DzImageRenderHandler {
 	/**
  * @description Return Value:
 */
-	getLeftOffset() {
+	getLeftOffset():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTopOffset() {
+	getTopOffset():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getView() {
+	getView():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getViewport() {
+	getViewport():DzViewport {
 	
 	}
 
@@ -308,10 +308,18 @@ class DzAbstractAssetContainer extends QObject, DzRefCountedItem {
 	removeAssetCausesDelete:Boolean;
 	tooltip:String;
 	useCount:Number;
+	canDeleteContainer:Boolean;
+	canInsertSubContainer:Boolean;
+	canModifyAssets:Boolean;
+	canRenameContainer:Boolean;
+	id:Object;
+	removeAssetCausesDelete:Boolean;
+	tooltip:String;
+	useCount:Number;
 	/**
  * @description Attempts to clear out the assets that can be rebuilt.
 */
-	clearRebuildableAssets() {
+	clearRebuildableAssets():Boolean {
 	
 	}
 	/**
@@ -329,7 +337,7 @@ class DzAbstractAssetContainer extends QObject, DzRefCountedItem {
 	/**
  * @description Return Value:
 */
-	getAssets() {
+	getAssets():Array {
 	
 	}
 	/**
@@ -341,55 +349,55 @@ class DzAbstractAssetContainer extends QObject, DzRefCountedItem {
 	/**
  * @description Return Value:
 */
-	getChildContainers() {
+	getChildContainers():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getChildIconSize() {
+	getChildIconSize():Size {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getContainerName() {
+	getContainerName():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getIDPath() {
+	getIDPath():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumAssets() {
+	getNumAssets():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumChildContainers() {
+	getNumChildContainers():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getOwner() {
+	getOwner():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSmallChildIconSize() {
+	getSmallChildIconSize():Size {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSupportFile() {
+	getSupportFile():String {
 	
 	}
 	/**
@@ -401,19 +409,19 @@ class DzAbstractAssetContainer extends QObject, DzRefCountedItem {
 	/**
  * @description Return Value:
 */
-	hasChildContainers() {
+	hasChildContainers():Boolean {
 	
 	}
 	/**
  * @description Boolean DzAbstractAssetContainer.ingoreAssetConflicts()
 */
-	ignoreAssetConflicts() {
+	ignoreAssetConflicts():Boolean {
 	
 	}
 	/**
  * @description Initializes this containers child containers.
 */
-	initChildren() {
+	initChildren():Boolean {
 	
 	}
 	/**
@@ -431,7 +439,7 @@ class DzAbstractAssetContainer extends QObject, DzRefCountedItem {
 	/**
  * @description Return Value:
 */
-	isFileSystemBased() {
+	isFileSystemBased():Boolean {
 	
 	}
 	/**
@@ -485,13 +493,13 @@ class DzAbstractAssetContainer extends QObject, DzRefCountedItem {
 	/**
  * @description Attemps to update this container.
 */
-	update() {
+	update():Boolean {
 	
 	}
 	/**
  * @description Attempts to update the assets associated with this container.
 */
-	updateAssets() {
+	updateAssets():Boolean {
 	
 	}
 
@@ -504,37 +512,37 @@ class DzAbstractNodeEditorPane extends DzPane {
 	/**
  * @description Return Value:
 */
-	displaySeparate() {
+	displaySeparate():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getContentTab() {
+	getContentTab():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getEditorGuidePage() {
+	getEditorGuidePage():DzGuidePage {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getInfoDivider() {
+	getInfoDivider():DzInfoDivider {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNodeEditor() {
+	getNodeEditor():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPresetGuidePage() {
+	getPresetGuidePage():DzGuidePage {
 	
 	}
 	/**
@@ -552,19 +560,19 @@ class DzAbstractNodeEditorPane extends DzPane {
 	/**
  * @description Return Value:
 */
-	showingHidden() {
+	showingHidden():Boolean {
 	
 	}
 	/**
  * @description Toggle between whether each selected node is displayed separately in the navigation list or not.
 */
-	toggleDisplaySeparate() {
+	toggleDisplaySeparate():void {
 	
 	}
 	/**
  * @description Toggle between whether hidden properties are shown in the list or not.
 */
-	toggleShowHidden() {
+	toggleShowHidden():void {
 	
 	}
 
@@ -573,7 +581,9 @@ class DzAbstractNodeEditorPane extends DzPane {
  * @classdesc This class represents an action that the user can perform in the interface via pressing a hot key or clicking on a menu/toolbar item.
 
 
+
 All action items are added to a list of interface actions which the user can customize. The user can specify their own keyboard shortcut or 'Hot Key' for the action, and any action item can be moved into a custom toolbar, as well as appear in the DAZ Studio main menu.
+
 
 
 See Also:
@@ -605,10 +615,30 @@ class DzAction extends QObject {
 	toolTip:String;
 	visible:Boolean;
 	whatsThis:String;
+	autoRepeat:Boolean;
+	checkable:Boolean;
+	checked:Boolean;
+	defaultMenu:String;
+	defaultMenus:Array;
+	defaultShortcut:String;
+	defaultToolBar:String;
+	defaultToolBars:Array;
+	description:String;
+	enabled:Boolean;
+	iconFile:String;
+	iconText:String;
+	iconVisibleInMenu:Boolean;
+	shortcut:String;
+	statusTip:String;
+	styleIcon:Number;
+	text:String;
+	toolTip:String;
+	visible:Boolean;
+	whatsThis:String;
 	/**
  * @description Activates the action in the 'Hover' state programatically.
 */
-	hover() {
+	hover():void {
 	
 	}
 	/**
@@ -644,13 +674,13 @@ class DzAction extends QObject {
 	/**
  * @description Toggles the action programatically.
 */
-	toggle() {
+	toggle():void {
 	
 	}
 	/**
  * @description Activates the action programatically.
 */
-	trigger() {
+	trigger():void {
 	
 	}
 
@@ -690,13 +720,13 @@ class DzActionMenu extends QObject {
 	/**
  * @description Removes all items from the menu.
 */
-	clear() {
+	clear():void {
 	
 	}
 	/**
  * @description Displays the menu to the user
 */
-	exec() {
+	exec():void {
 	
 	}
 	/**
@@ -720,13 +750,13 @@ class DzActionMenu extends QObject {
 	/**
  * @description Return Value:
 */
-	getItemList() {
+	getItemList():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumItems() {
+	getNumItems():Number {
 	
 	}
 	/**
@@ -738,7 +768,7 @@ class DzActionMenu extends QObject {
 	/**
  * @description Return Value:
 */
-	hasItems() {
+	hasItems():Boolean {
 	
 	}
 	/**
@@ -792,7 +822,7 @@ class DzActionMenu extends QObject {
 	/**
  * @description Removes any duplicate separators from the menu by replacing two or more adjacent separators with a single separator.
 */
-	simplifySeparators() {
+	simplifySeparators():void {
 	
 	}
 
@@ -834,13 +864,13 @@ class DzActionMenuItem extends QObject {
 	/**
  * @description Return Value:
 */
-	getSubMenu() {
+	getSubMenu():DzActionMenu {
 	
 	}
 	/**
  * @description Causes the file for a FileOpenAction or FileMergeAction item to load
 */
-	loadFile() {
+	loadFile():void {
 	
 	}
 	/**
@@ -853,6 +883,7 @@ class DzActionMenuItem extends QObject {
 }
 /**
  * @classdesc This class manages actions that the user can perform in the interface by pressing the key combination specified by its shortcut or by clicking on a menu/toolbar item. There is only one instance of this manager in an application. This instance is created and owned by DzMainWindow. Don't create an instance of this class, rather request a pointer to it from DzMainWindow via DzMainWindow.getActionMgr().
+
 
 
 See Also:
@@ -877,7 +908,7 @@ class DzActionMgr extends QWidget {
 	/**
  * @description Clears the active menu.
 */
-	clearActiveMenu() {
+	clearActiveMenu():void {
 	
 	}
 	/**
@@ -919,7 +950,7 @@ class DzActionMgr extends QWidget {
 	/**
  * @description Return Value:
 */
-	getActiveMenu() {
+	getActiveMenu():DzActionMenu {
 	
 	}
 	/**
@@ -973,25 +1004,25 @@ class DzActionMgr extends QWidget {
 	/**
  * @description Return Value:
 */
-	getMenu() {
+	getMenu():DzActionMenu {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumActions() {
+	getNumActions():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumCustomActions() {
+	getNumCustomActions():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumPersistentMenus() {
+	getNumPersistentMenus():Number {
 	
 	}
 	/**
@@ -1015,7 +1046,7 @@ class DzActionMgr extends QWidget {
 	/**
  * @description Removes all custom actions from the application.
 */
-	removeAllCustomActions() {
+	removeAllCustomActions():void {
 	
 	}
 	/**
@@ -1039,7 +1070,7 @@ class DzActionMgr extends QWidget {
 	/**
  * @description Saves the actions, menus and toolbars to their respective files in the default location.
 */
-	saveInterfaceFiles() {
+	saveInterfaceFiles():Boolean {
 	
 	}
 	/**
@@ -1120,6 +1151,7 @@ class DzActionMgr extends QWidget {
  * @classdesc Defines the layout of Toolbars, Pane Groups, Panes, Viewports and the active View Tool within an Activity of the interface.
 
 
+
 See Also:
 
 
@@ -1127,6 +1159,7 @@ See Also:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/activitylayout_dz}*/
 class DzActivityLayout extends QObject, DzRefCountedItem {
 	description:String;
+	label:String;
 	label:String;
 	/**
  * @description Default Constructor. Creates a new activity layout with the given name and description.
@@ -1138,7 +1171,7 @@ class DzActivityLayout extends QObject, DzRefCountedItem {
 	/**
  * @description Clears the memorized state of the activity.
 */
-	clearMemorizedState() {
+	clearMemorizedState():void {
 	
 	}
 	/**
@@ -1179,6 +1212,7 @@ class DzAddBlend extends DzImageBlend {
 
 
 
+
 Attention:
 
 
@@ -1210,6 +1244,7 @@ class DzAlphaBlend extends DzImageBlend {
 }
 /**
  * @classdesc Derived from QApplication, this class embodies the main event loop, and owns application-wide settings and objects not directly related to the user interface.
+
 
 
 Can be directly accessed using the global variable App.
@@ -1440,13 +1475,13 @@ Add description.
 	/**
  * @description Return Value:
 */
-	bitArchitecture() {
+	bitArchitecture():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	bitArchitectureString() {
+	bitArchitectureString():String {
 	
 	}
 	/**
@@ -1482,7 +1517,7 @@ Add description.
 	/**
  * @description Return Value:
 */
-	createUuid() {
+	createUuid():String {
 	
 	}
 	/**
@@ -1506,7 +1541,7 @@ Add description.
 	/**
  * @description Writes any currently buffered log messages to the log file. This is automatically called whenever the log buffer has more than 512 characters of data, but can be called at any time to force all messages to be written out.
 */
-	flushLogBuffer() {
+	flushLogBuffer():Boolean {
 	
 	}
 	/**
@@ -1518,277 +1553,277 @@ Add description.
 	/**
  * @description Return Value:
 */
-	getAppDataPath() {
+	getAppDataPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getApplicationBaseName() {
+	getApplicationBaseName():String {
 	
 	}
 	/**
  * @description Deprecated
 */
-	getAppSettingsMgr() {
+	getAppSettingsMgr():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getAssetIOMgr() {
+	getAssetIOMgr():DzAssetIOMgr {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getAssetMgr() {
+	getAssetMgr():DzAssetMgr {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getAuthenticationMgr() {
+	getAuthenticationMgr():DzAuthenticationMgr {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getCallBackMgr() {
+	getCallBackMgr():DzCallBackMgr {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getCommonUserDocumentPath() {
+	getCommonUserDocumentPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getContentMgr() {
+	getContentMgr():DzContentMgr {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getCurrentAuthor() {
+	getCurrentAuthor():DzAuthor {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDataFolderName() {
+	getDataFolderName():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDataFolderPath() {
+	getDataFolderPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDataFolderPathBase() {
+	getDataFolderPathBase():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDAZDataPath() {
+	getDAZDataPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDeviceMgr() {
+	getDeviceMgr():DzDeviceMgr {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDialogParent() {
+	getDialogParent():QWidget {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDocumentationPath() {
+	getDocumentationPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDocumentsPath() {
+	getDocumentsPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getExportMgr() {
+	getExportMgr():DzExportMgr {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFileIOPresetMgr() {
+	getFileIOPresetMgr():DzFileIOPresetMgr {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getGeneratedScriptsPath() {
+	getGeneratedScriptsPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getGeneratedShadersPath() {
+	getGeneratedShadersPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getGraphicsMode() {
+	getGraphicsMode():GraphicsMode {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getHelpMgr() {
+	getHelpMgr():DzHelpMgr {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getHomePath() {
+	getHomePath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getImageMgr() {
+	getImageMgr():DzImageMgr {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getImportMgr() {
+	getImportMgr():DzImportMgr {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getInterface() {
+	getInterface():DzMainWindow {
 	
 	}
 	/**
  * @description Last directory that files were loaded or saved to/from.
 */
-	getLoadSavePath() {
+	getLoadSavePath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getMultiMediaMgr() {
+	getMultiMediaMgr():DzMultiMediaMgr {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPluginMgr() {
+	getPluginMgr():DzPluginMgr {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPluginsPath() {
+	getPluginsPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getProgramDataPath() {
+	getProgramDataPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRenderMgr() {
+	getRenderMgr():DzRenderMgr {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getResourcesPath() {
+	getResourcesPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSaveFilterMgr() {
+	getSaveFilterMgr():DzSaveFilterMgr {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getScriptsPath() {
+	getScriptsPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getShadersPath() {
+	getShadersPath():String {
 	
 	}
 	/**
  * @description Get the application wide style.
 */
-	getStyle() {
+	getStyle():DzStyle {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getStyleDefinition() {
+	getStyleDefinition():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getStyleDefinitionList() {
+	getStyleDefinitionList():Array {
 	
 	}
 	/**
  * @description Get a filename for temporary storage.
 */
-	getTempFilename() {
+	getTempFilename():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTempPath() {
+	getTempPath():String {
 	
 	}
 	/**
  * @description Get a filename for temporary storage of rendered images.
 */
-	getTempRenderFilename() {
+	getTempRenderFilename():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getUtilitiesPath() {
+	getUtilitiesPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isClosing() {
+	isClosing():Boolean {
 	
 	}
 	/**
@@ -1806,31 +1841,31 @@ Add description.
 	/**
  * @description Return Value:
 */
-	isMultiThreadingEnabled() {
+	isMultiThreadingEnabled():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isRegistered() {
+	isRegistered():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isRunning() {
+	isRunning():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isSlave() {
+	isSlave():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isStarting() {
+	isStarting():Boolean {
 	
 	}
 	/**
@@ -1842,25 +1877,25 @@ Add description.
 	/**
  * @description Return Value:
 */
-	modifierKeyState() {
+	modifierKeyState():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	operatingSystem() {
+	operatingSystem():OperatingSystem {
 	
 	}
 	/**
  * @description Return Value:
 */
-	operatingSystemString() {
+	operatingSystemString():String {
 	
 	}
 	/**
  * @description The application is intended to be as platform independent as possible, but there are cases where something needs to be done differently on one platform or another. This function provides a simple way to check which platform the application is running under.
 */
-	platform() {
+	platform():Platform {
 	
 	}
 	/**
@@ -1872,31 +1907,31 @@ Add description.
 	/**
  * @description Return Value:
 */
-	releaseCycle() {
+	releaseCycle():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	releaseCycleString() {
+	releaseCycleString():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	releaseEdition() {
+	releaseEdition():ReleaseEdition {
 	
 	}
 	/**
  * @description Return Value:
 */
-	releaseEditionString() {
+	releaseEditionString():String {
 	
 	}
 	/**
  * @description Restores the temporary files directory to the default location.
 */
-	restoreDefaultTempPath() {
+	restoreDefaultTempPath():void {
 	
 	}
 	/**
@@ -1926,7 +1961,7 @@ Add description.
 	/**
  * @description Return Value:
 */
-	showPrompts() {
+	showPrompts():Boolean {
 	
 	}
 	/**
@@ -1950,7 +1985,7 @@ Add description.
 	/**
  * @description Return Value:
 */
-	usingInterface() {
+	usingInterface():Boolean {
 	
 	}
 	/**
@@ -1969,6 +2004,7 @@ Add description.
 }
 /**
  * @classdesc Application Settings are used to store and retrieve settings that persist from one execution of the appliction to the next. On Windows, the settings are saved in the registry. On Mac, these settings are saved via Mac preference plist files.
+
 
 
 You can create an instance of this class any time you need to read or write persistent settings. This class is a replacement for DzAppSettingsMgr as it is easier and safer to use. Since each instance is separate, the current path of one instance will not affect the rest of the application. It is also not necessary to call popPath() to put this class back into its previous state.
@@ -2033,7 +2069,7 @@ class DzAppSettings extends DzBase {
 	/**
  * @description Pops a temporary key path off the top of the stack.
 */
-	popPath() {
+	popPath():void {
 	
 	}
 	/**
@@ -2090,25 +2126,33 @@ class DzAppSettings extends DzBase {
  * @classdesc An "Asset" serves as an abstraction between the presentation of a content file and the actual file that resides on disk; it is a "container" for information about a content file.
 
 
+
 At a minimum, an asset contains a reference to the relative path and filename of a file.
+
 
 
 Metadata
 
 
+
 When the Content Management System (CMS) is active, an asset provides an interface to its metadata within the content database. This metadata includes information such as what type of asset it is, what it is used for, what it is compatible with, which category(ies) it is presented to the user in, etc.
+
 
 
 Conceptually, each asset belongs to exactly one "Product". By default, and until/unless modified, all newly created assets are assigned to the "LOCAL USER" product. An asset is uniquely identified within a product by the combination of its relative path and filename. While any number of products can reference a file with the same relative path and filename combination, each product's concept of that combination is unique (even if their metadata is identical).
 
 
+
 The metadata for a given asset is divided into 2 distinct types; that which is owned and/or maintained by the vendor (the originating source), and that which is owned and/or maintained by the end-user. Unless the metadata component (e.g., userKeywords, userNotes, etc), the product (e.g., "LOCAL USER"), or the store (e.g., "LOCAL USER") indicate "user" in their name, any assumption (if there is to be one) about which type the data is should be that which is owned and/or maintained by the vendor.
+
 
 
 The metadata for an asset that is "installed" and which belongs to a product associated with a "Store" (source) other than the "LOCAL USER" store is owned by the vendor. Conversely, the metadata for an asset that is created by the user and/or belongs to a product associated with the "LOCAL USER" store is owned by the user. The exceptions to this are those attributes which integrate "user" into their name; which in fact always belong to the user.
 
 
+
 The significance of the distinction between the 2 types of metadata comes down to how the data is handled during an update and whether or not an effort is made to preserve it. Metadata that is owned and/or maintained by the vendor can be summarily purged during an update. This provides a vendor with the means to clean up all potential prior versions of the metadata witout being faced with complex bookkeeping tasks.
+
 
 
 See Also:
@@ -2122,6 +2166,52 @@ See Also:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/asset_dz}*/
 class DzAsset extends QObject, DzRefCountedItem {
 	assetID:Object;
+	assetName:String;
+	audience:Number;
+	categories:Array;
+	companionIsScript:Boolean;
+	companionPath:String;
+	compatibilities:Array;
+	compatibilityBase:String;
+	contentType:String;
+	dateCreated:Date;
+	dateLastModified:Date;
+	description:String;
+	displayName:String;
+	groupId:Number;
+	hasCloudMetadata:Boolean;
+	hasCompanion:Boolean;
+	hasCompanionScript:Boolean;
+	hidden:Boolean;
+	icon:Pixmap;
+	isCloudInstallable:Boolean;
+	isCloudInstalled:Boolean;
+	isCloudOwned:Boolean;
+	isInstalled:Boolean;
+	isMetadataValid:Boolean;
+	isNative:Boolean;
+	isScript:Boolean;
+	isSymLink:Boolean;
+	isVendor:Boolean;
+	needsCloudInstall:Boolean;
+	needsCloudUpdate:Boolean;
+	orginalFilename:String;
+	orginalPath:String;
+	productGUID:String;
+	productID:String;
+	productName:String;
+	productPath:String;
+	smallIcon:Pixmap;
+	storeID:String;
+	symLinkPath:String;
+	url:String;
+	urlEncoded:String;
+	userCategories:Array;
+	userCompatibilities:Array;
+	userKeywords:Array;
+	vendorCategories:Array;
+	vendorCompatibilities:Array;
+	vendorKeywords:Array;
 	assetName:String;
 	audience:Number;
 	categories:Array;
@@ -2183,55 +2273,55 @@ class DzAsset extends QObject, DzRefCountedItem {
 	/**
  * @description Sets the asset as belonging to the default group identifier; 0.
 */
-	clearGroup() {
+	clearGroup():void {
 	
 	}
 	/**
  * @description Forces the icon to reload.
 */
-	forceImageReload() {
+	forceImageReload():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getAsLocalFile() {
+	getAsLocalFile():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getBaseExtension() {
+	getBaseExtension():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDSLinkExtension() {
+	getDSLinkExtension():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDSLinkText() {
+	getDSLinkText():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getOwner() {
+	getOwner():DzAbstractAssetContainer {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getProduct() {
+	getProduct():DzProductAssetContainer {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRelativeFilePath() {
+	getRelativeFilePath():String {
 	
 	}
 	/**
@@ -2285,7 +2375,7 @@ class DzAsset extends QObject, DzRefCountedItem {
 	/**
  * @description Return Value:
 */
-	toUri() {
+	toUri():DzUri {
 	
 	}
 	/**
@@ -2333,43 +2423,43 @@ class DzAssetIOFilter extends DzFileIO {
 	/**
  * @description Return Value:
 */
-	getCompatiblityBase() {
+	getCompatiblityBase():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getContentType() {
+	getContentType():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDescription() {
+	getDescription():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDoSavePath() {
+	getDoSavePath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLoadSavePath() {
+	getLoadSavePath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getStandardSaveRelativePath() {
+	getStandardSaveRelativePath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isSupportAssetFilter() {
+	isSupportAssetFilter():Boolean {
 	
 	}
 	/**
@@ -2382,6 +2472,7 @@ class DzAssetIOFilter extends DzFileIO {
 }
 /**
  * @classdesc There is only one instance of this manager in an application. This instance is created and owned by DzApp. Don't create an instance of this class, but rather request a pointer to it from DzApp via DzApp.getAssetIOMgr().
+
 
 
 See Also:
@@ -2432,7 +2523,7 @@ class DzAssetIOMgr extends QObject {
 	/**
  * @description Return Value:
 */
-	getNumFilters() {
+	getNumFilters():Number {
 	
 	}
 	/**
@@ -2456,31 +2547,31 @@ class DzAssetIOMgr extends QObject {
 	/**
  * @description Save the scene contents to a file. Prompts the user for a file to save to.
 */
-	doSceneSaveAs() {
+	doSceneSaveAs():DzError {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDefaultDSONAssetCachePath() {
+	getDefaultDSONAssetCachePath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDSONAssetCachePath() {
+	getDSONAssetCachePath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLoadPath() {
+	getLoadPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSavePath() {
+	getSavePath():String {
 	
 	}
 	/**
@@ -2499,6 +2590,7 @@ class DzAssetIOMgr extends QObject {
 }
 /**
  * @classdesc The manager that is responsible for all content assets.
+
 
 
 There is only one instance of this manager in an application. This instance is created and owned by DzApp. Do not create an instance of this class, rather request the instance from DzApp via DzApp.getAssetMgr().
@@ -2635,7 +2727,7 @@ class DzAssetMgr extends DzBase {
 	/**
  * @description Return Value:
 */
-	getCategoriesID() {
+	getCategoriesID():String {
 	
 	}
 	/**
@@ -2647,25 +2739,25 @@ class DzAssetMgr extends DzBase {
 	/**
  * @description Return Value:
 */
-	getImportDirID() {
+	getImportDirID():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPoserDirID() {
+	getPoserDirID():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPoserVirtualDirID() {
+	getPoserVirtualDirID():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getProductsID() {
+	getProductsID():String {
 	
 	}
 	/**
@@ -2683,25 +2775,25 @@ class DzAssetMgr extends DzBase {
 	/**
  * @description Return Value:
 */
-	getSpecialPoserFolders() {
+	getSpecialPoserFolders():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getStudioDirID() {
+	getStudioDirID():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getStudioExcludes() {
+	getStudioExcludes():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getStudioVirtualDirID() {
+	getStudioVirtualDirID():Array {
 	
 	}
 	/**
@@ -2725,13 +2817,13 @@ class DzAssetMgr extends DzBase {
 	/**
  * @description Return Value:
 */
-	canStartAndStopCMS() {
+	canStartAndStopCMS():Boolean {
 	
 	}
 	/**
  * @description Checks for new metadata scripts within the RunOnce directories.
 */
-	checkforNewMetadataScripts() {
+	checkforNewMetadataScripts():void {
 	
 	}
 	/**
@@ -2743,7 +2835,7 @@ class DzAssetMgr extends DzBase {
 	/**
  * @description Clears the metadata queue.
 */
-	clearDBMetaFileQueue() {
+	clearDBMetaFileQueue():void {
 	
 	}
 	/**
@@ -2851,13 +2943,13 @@ class DzAssetMgr extends DzBase {
 	/**
  * @description Return Value:
 */
-	getAudiences() {
+	getAudiences():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getCategories() {
+	getCategories():DzCategoryAssetContainer {
 	
 	}
 	/**
@@ -2869,7 +2961,7 @@ class DzAssetMgr extends DzBase {
 	/**
  * @description Return Value:
 */
-	getCMSOptions() {
+	getCMSOptions():Object {
 	
 	}
 	/**
@@ -2881,25 +2973,25 @@ class DzAssetMgr extends DzBase {
 	/**
  * @description Return Value:
 */
-	getContentDirs() {
+	getContentDirs():DzTopLevelAssetContainer {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDatabaseDsn() {
+	getDatabaseDsn():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDatabaseFilePath() {
+	getDatabaseFilePath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDBMetaFileQueue() {
+	getDBMetaFileQueue():Array {
 	
 	}
 	/**
@@ -2911,37 +3003,37 @@ class DzAssetMgr extends DzBase {
 	/**
  * @description Return Value:
 */
-	getGroupNewProductsAsNew() {
+	getGroupNewProductsAsNew():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getImportDirs() {
+	getImportDirs():DzTopLevelAssetContainer {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getMaxFileSearchResultSize() {
+	getMaxFileSearchResultSize():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumMaxItemsPerPage() {
+	getNumMaxItemsPerPage():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPoserDirs() {
+	getPoserDirs():DzTopLevelAssetContainer {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getProducts() {
+	getProducts():DzTopLevelAssetContainer {
 	
 	}
 	/**
@@ -2953,19 +3045,19 @@ class DzAssetMgr extends DzBase {
 	/**
  * @description Return Value:
 */
-	getRootCategoryStrings() {
+	getRootCategoryStrings():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getShowHiddenVendorCategorization() {
+	getShowHiddenVendorCategorization():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getStoresIDs() {
+	getStoresIDs():Array {
 	
 	}
 	/**
@@ -3001,13 +3093,13 @@ class DzAssetMgr extends DzBase {
 	/**
  * @description Return Value:
 */
-	getTypes() {
+	getTypes():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	haveDatabase() {
+	haveDatabase():Boolean {
 	
 	}
 	/**
@@ -3025,7 +3117,7 @@ class DzAssetMgr extends DzBase {
 	/**
  * @description Return Value:
 */
-	isConnectedToCMS() {
+	isConnectedToCMS():Boolean {
 	
 	}
 	/**
@@ -3079,25 +3171,25 @@ class DzAssetMgr extends DzBase {
 	/**
  * @description Return Value:
 */
-	isResettingDatabase() {
+	isResettingDatabase():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isSynchronizing() {
+	isSynchronizing():Boolean {
 	
 	}
 	/**
  * @description Signals that categories need to be updated.
 */
-	markCategoriesChanged() {
+	markCategoriesChanged():void {
 	
 	}
 	/**
  * @description Signals that products need to be updated.
 */
-	markProductsChanged() {
+	markProductsChanged():void {
 	
 	}
 	/**
@@ -3115,7 +3207,7 @@ class DzAssetMgr extends DzBase {
 	/**
  * @description If metadata files are queued, causes the metadata import dialog to be displayed and allows the user to select which products to process metadata for, then starts the import process on the selected products.
 */
-	processDBMetaFileQueue() {
+	processDBMetaFileQueue():void {
 	
 	}
 	/**
@@ -3127,25 +3219,25 @@ class DzAssetMgr extends DzBase {
 	/**
  * @description Causes the internal list of root categories to be rebuilt.
 */
-	refreshCategoryRoots() {
+	refreshCategoryRoots():void {
 	
 	}
 	/**
  * @description Causes the internal list of stores to be rebuilt.
 */
-	refreshStores() {
+	refreshStores():void {
 	
 	}
 	/**
  * @description Causes the internal list of content types to be rebuilt
 */
-	refreshTypes() {
+	refreshTypes():void {
 	
 	}
 	/**
  * @description Causes all *.dsx metadata files in the "./Runtime/Support" folder of each mapped native and Poser content directory to be queued, and then imported.
 */
-	reimportDBMetaFiles() {
+	reimportDBMetaFiles():void {
 	
 	}
 	/**
@@ -3163,7 +3255,7 @@ class DzAssetMgr extends DzBase {
 	/**
  * @description Triggers the connected PostgreSQL server to reset (delete) the current database and re-establish the default content types, compatibility bases, and categories.
 */
-	resetDatabase() {
+	resetDatabase():void {
 	
 	}
 	/**
@@ -3277,7 +3369,7 @@ class DzAssetMgr extends DzBase {
 	/**
  * @description Return Value:
 */
-	showAssetToolTip() {
+	showAssetToolTip():Boolean {
 	
 	}
 	/**
@@ -3289,13 +3381,13 @@ class DzAssetMgr extends DzBase {
 	/**
  * @description Return Value:
 */
-	showExtensions() {
+	showExtensions():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	showLargeIcons() {
+	showLargeIcons():Boolean {
 	
 	}
 	/**
@@ -3307,13 +3399,13 @@ class DzAssetMgr extends DzBase {
 	/**
  * @description Starts the Content Management Service (CMS), if it is not already running.
 */
-	startCMS() {
+	startCMS():void {
 	
 	}
 	/**
  * @description Stops all searches that were started by any of the search* methods on DzAssetMgr.
 */
-	stopAllSearches() {
+	stopAllSearches():void {
 	
 	}
 	/**
@@ -3325,85 +3417,86 @@ class DzAssetMgr extends DzBase {
 	/**
  * @description Stops any searches that were started by DzAssetMgr.scanFiles().
 */
-	stopFileScan() {
+	stopFileScan():void {
 	
 	}
 	/**
  * @description Stops any searches that were started by DzAssetMgr.searchFiles().
 */
-	stopFileSearch() {
+	stopFileSearch():void {
 	
 	}
 	/**
  * @description Stops any searches that were started by DzAssetMgr.searchForAssetAddOns().
 */
-	stopSearchForAssetAddOns() {
+	stopSearchForAssetAddOns():void {
 	
 	}
 	/**
  * @description Stops any searches that were started by DzAssetMgr.searchForAssets(), DzAssetMgr.searchForAssetsByKeywords() or DzAssetMgr.searchForProductAssets().
 */
-	stopSearchForAssets() {
+	stopSearchForAssets():void {
 	
 	}
 	/**
  * @description Stops any searches that were started by DzAssetMgr.searchForAssetTargets().
 */
-	stopSearchForAssetTargets() {
+	stopSearchForAssetTargets():void {
 	
 	}
 	/**
  * @description Stops any searches that were started by DzAssetMgr.searchForProducts().
 */
-	stopSearchForProducts() {
+	stopSearchForProducts():void {
 	
 	}
 	/**
  * @description Triggers an update to asset containers within the Categories top-level container.
 */
-	updateCategoryContainers() {
+	updateCategoryContainers():void {
 	
 	}
 	/**
  * @description Triggers an update to asset containers within the native formats top-level container.
 */
-	updateContentContainers() {
+	updateContentContainers():void {
 	
 	}
 	/**
  * @description Triggers an update to asset containers within the folder based top-level containers.
 */
-	updateFolderBasedContainers() {
+	updateFolderBasedContainers():void {
 	
 	}
 	/**
  * @description Triggers an update to asset containers within the other import formats top-level container.
 */
-	updateImportContainers() {
+	updateImportContainers():void {
 	
 	}
 	/**
  * @description Triggers an update to asset containers within the Poser formats top-level container.
 */
-	updatePoserContainers() {
+	updatePoserContainers():void {
 	
 	}
 	/**
  * @description Triggers an update to asset containers within the Products top-level container.
 */
-	updateProductContainers() {
+	updateProductContainers():void {
 	
 	}
 	/**
  * @description Reclaims space in the database previously occupied by deleted or updated data.
 */
-	vacuumDatabase() {
+	vacuumDatabase():Boolean {
 	
 	}
 
 }
 /**
  * @classdesc This class is implemented by platform specific audioclip classes, winaudioclip_dz and macaudioclip_dz.
+
 
 
 See Also:
@@ -3416,6 +3509,9 @@ class DzAudioClip extends DzBase, DzRefCountedItem {
 	filename:String;
 	length:DzTime;
 	rate:Number;
+	filename:String;
+	length:DzTime;
+	rate:Number;
 	/**
  * @description Opens the file specified by filename and sets up the audio clip.
 */
@@ -3425,19 +3521,19 @@ class DzAudioClip extends DzBase, DzRefCountedItem {
 	/**
  * @description Pauses the audio clip without resetting current position.
 */
-	pause() {
+	pause():void {
 	
 	}
 	/**
  * @description Plays the audio clip from current position.
 */
-	play() {
+	play():void {
 	
 	}
 	/**
  * @description Resets the current position of the audio clip to the beginning.
 */
-	reset() {
+	reset():void {
 	
 	}
 
@@ -3452,13 +3548,13 @@ class DzAudioImporter extends DzFileIO {
 	/**
  * @description Return Value:
 */
-	getDescription() {
+	getDescription():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getExtension() {
+	getExtension():String {
 	
 	}
 	/**
@@ -3486,7 +3582,9 @@ Add description.
  * @classdesc This class does not provide access to any Daz 3D user account information which could be considered an invasion of the user's the privacy. This class does provide plugins and scripts with an ability to check if a user has authenticated (logged in to) a Daz 3D account, to prompt a user to authenticate (login to) their Daz 3D account, to obtain a token that uniquely and anonymously identifies the current/last account authenticated, and to logout of an account that is currently logged in.
 
 
+
 There is only one instance of this manager in an application. This instance is created and owned by DzApp. Do not create an instance of this class, rather request the instance from DzApp via DzApp.getAuthenticationMgr().
+
 
 
 See Also:
@@ -3498,37 +3596,38 @@ class DzAuthenticationMgr extends QObject {
 	/**
  * @description This function will attempt to authenticate a Daz 3D user account. If no account information has been entered by the user, a dialog will be displayed to securely acquire the username and password to be authenticated.
 */
-	authenticateUser() {
+	authenticateUser():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getUserToken() {
+	getUserToken():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isAuthenticated() {
+	isAuthenticated():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isLoggingIn() {
+	isLoggingIn():Boolean {
 	
 	}
 	/**
  * @description Invalidates any existing authentication.
 */
-	logout() {
+	logout():void {
 	
 	}
 
 }
 /**
  * @classdesc DzAuthor is used to access authorship data for native files, and the current instance of the application.
+
 
 
 See Also:
@@ -3538,6 +3637,9 @@ See Also:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/author_dz}*/
 class DzAuthor extends Object {
 	email:String;
+	name:String;
+	url:String;
+	valid:String;
 	name:String;
 	url:String;
 	valid:String;
@@ -3566,6 +3668,7 @@ class DzAuthor extends Object {
 }
 /**
  * @classdesc This class encapsulates a 2D image and the parameters for drawing the image as a backdrop for the scene. An instance of this class only contributes to the scene if it is set as the current backdrop for the scene.
+
 
 
 See Also:
@@ -3604,67 +3707,67 @@ class DzBackdrop extends DzElement {
 	/**
  * @description Changes the render aspect ratio to match the backdrop image, and the image dimensions
 */
-	adjustRenderAspectRatioToMatchTexture() {
+	adjustRenderAspectRatioToMatchTexture():void {
 	
 	}
 	/**
  * @description Changes the render image dimensions and aspect ratio to match the backdrop image
 */
-	adjustRenderDimensionsToMatchTexture() {
+	adjustRenderDimensionsToMatchTexture():void {
 	
 	}
 	/**
  * @description Clears the current back drop image, and resets all parameters.
 */
-	clear() {
+	clear():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getBackgroundColorControl() {
+	getBackgroundColorControl():DzColorProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getHorizontalFlipControl() {
+	getHorizontalFlipControl():DzBoolProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getMaterial() {
+	getMaterial():DzMaterial {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRotationControl() {
+	getRotationControl():DzEnumProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTexture() {
+	getTexture():DzTexture {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getVerticalFlipControl() {
+	getVerticalFlipControl():DzBoolProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getVisibleControl() {
+	getVisibleControl():DzBoolProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getVisibleInRenderControl() {
+	getVisibleInRenderControl():DzBoolProperty {
 	
 	}
 	/**
@@ -3688,7 +3791,7 @@ class DzBase extends QObject {
 	/**
  * @description Provides scripts a way to make objects persistent; i.e., so that Qt will not delete them when they are no longer referenced by the script. This allows object instances to be created in script, then passed into the core and remain after the script has finished execution.
 */
-	makePersistent() {
+	makePersistent():void {
 	
 	}
 
@@ -3698,6 +3801,11 @@ class DzBase extends QObject {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/basiccamera_dz}*/
 class DzBasicCamera extends DzCamera {
 	currentViewHeight:Number;
+	currentViewWidth:Number;
+	depthOfField:Boolean;
+	fStop:Number;
+	isPerspective:Boolean;
+	useActiveViewport:Boolean;
 	currentViewWidth:Number;
 	depthOfField:Boolean;
 	fStop:Number;
@@ -3731,19 +3839,19 @@ class DzBasicCamera extends DzCamera {
 	/**
  * @description Return Value:
 */
-	getApertureBladeRotationAngleControl() {
+	getApertureBladeRotationAngleControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getApertureNumBladesControl() {
+	getApertureNumBladesControl():DzIntProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDepthOfFieldChannel() {
+	getDepthOfFieldChannel():DzBoolProperty {
 	
 	}
 	/**
@@ -3755,177 +3863,177 @@ class DzBasicCamera extends DzCamera {
 	/**
  * @description Return Value:
 */
-	getDisplayPersistenceChannel() {
+	getDisplayPersistenceChannel():DzBoolProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDofColorChannel() {
+	getDofColorChannel():DzColorProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDofOverlayColorChannel() {
+	getDofOverlayColorChannel():DzColorProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDofOverlayOpacityChannel() {
+	getDofOverlayOpacityChannel():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDofVisibilityChannel() {
+	getDofVisibilityChannel():DzBoolProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFarDofVisibilityChannel() {
+	getFarDofVisibilityChannel():DzBoolProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFocalDistChannel() {
+	getFocalDistChannel():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFocalLengthChannel() {
+	getFocalLengthChannel():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFocalPointScaleChannel() {
+	getFocalPointScaleChannel():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFovColorChannel() {
+	getFovColorChannel():DzColorProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFovLengthChannel() {
+	getFovLengthChannel():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFovOpacityChannel() {
+	getFovOpacityChannel():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFrameWidthChannel() {
+	getFrameWidthChannel():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFStopChannel() {
+	getFStopChannel():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getHeadlampIntensityControl() {
+	getHeadlampIntensityControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLensDistortionK1Control() {
+	getLensDistortionK1Control():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLensDistortionK2Control() {
+	getLensDistortionK2Control():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLensDistortionK3Control() {
+	getLensDistortionK3Control():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLensDistortionScaleControl() {
+	getLensDistortionScaleControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLensDistortionTypeControl() {
+	getLensDistortionTypeControl():DzEnumProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLensRadialBiasControl() {
+	getLensRadialBiasControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLensShiftXControl() {
+	getLensShiftXControl():DzFloatProperty {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	getLensShiftYControl() {
+	getLensShiftYControl():DzFloatProperty {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	getLensStereoOffsetControl() {
+	getLensStereoOffsetControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLensThicknessControl() {
+	getLensThicknessControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNearDofVisibilityChannel() {
+	getNearDofVisibilityChannel():DzBoolProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSightLineOpacityChannel() {
+	getSightLineOpacityChannel():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isAtDefaultSceneCameraValues() {
+	isAtDefaultSceneCameraValues():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isDefaultSceneCamera() {
+	isDefaultSceneCamera():Boolean {
 	
 	}
 	/**
@@ -3946,7 +4054,9 @@ Add description.
  * @classdesc The buttons provided by the dialog are: 'What's This', 'Apply', 'Accept', and 'Cancel'. Custom buttons can also be added to the set of default buttons by calling addButton(). All buttons but the 'Accept' button can be hidden or shown. By default, the 'Apply' button is the only hidden button. The text on the default buttons can be customized.
 
 
+
 The dialog has a vertical box layout above the horizontal set of buttons. Widgets and sub-layouts can be added to this layout using addWidget() and addLayout().
+
 
 
 See Also:
@@ -4076,6 +4186,7 @@ class DzBasicDialog extends DzDialog {
  * @classdesc This specialized DzNode subclass adds follow bone, and mesh-binding functionality to a node. All bones are assumed to be in the hierarchy of a DzSkeleton, and will not function properly if their parent is not a skeleton or another bone.
 
 
+
 The concept of a follow bone allows the bones of one skeleton (figure) to follow another skeleton (figure). This following does not reproduce transforms from one bone to another, but tries to align center (origin) and end points so that the following bone points in the same direction as the bone it is following. Typically, this is controlled at the skeleton level.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/bone_dz}*/
 class DzBone extends DzNode {
@@ -4095,13 +4206,13 @@ class DzBone extends DzNode {
 	/**
  * @description Get the node that this node is following.
 */
-	getFollowBone() {
+	getFollowBone():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFollowMode() {
+	getFollowMode():Number {
 	
 	}
 
@@ -4111,6 +4222,13 @@ class DzBone extends DzNode {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/box3_dz}*/
 class DzBox3 extends Object {
 	max:DzVec3;
+	maxX:Number;
+	maxY:Number;
+	maxZ:Number;
+	min:DzVec3;
+	minX:Number;
+	minY:Number;
+	minZ:Number;
 	maxX:Number;
 	maxY:Number;
 	maxZ:Number;
@@ -4161,7 +4279,7 @@ class DzBox3 extends Object {
 	/**
  * @description Return Value:
 */
-	getCenter() {
+	getCenter():DzVec3 {
 	
 	}
 	/**
@@ -4173,7 +4291,7 @@ class DzBox3 extends Object {
 	/**
  * @description Return Value:
 */
-	getSize() {
+	getSize():Number {
 	
 	}
 	/**
@@ -4197,7 +4315,7 @@ class DzBox3 extends Object {
 	/**
  * @description Return Value:
 */
-	isValid() {
+	isValid():Boolean {
 	
 	}
 	/**
@@ -4318,19 +4436,19 @@ class DzBrickMaterial extends DzMaterial, DzRefCountedItem {
 	/**
  * @description Return Value:
 */
-	allowsAutoBake() {
+	allowsAutoBake():Boolean {
 	
 	}
 	/**
  * @description Apply a copy of this material to all selected materials in the scene.
 */
-	applyToScene() {
+	applyToScene():void {
 	
 	}
 	/**
  * @description Deletes all bricks in this material.
 */
-	deleteAllBricks() {
+	deleteAllBricks():void {
 	
 	}
 	/**
@@ -4348,7 +4466,7 @@ class DzBrickMaterial extends DzMaterial, DzRefCountedItem {
 	/**
  * @description Takes this brick material out of edit mode.
 */
-	endEditMode() {
+	endEditMode():void {
 	
 	}
 	/**
@@ -4360,7 +4478,7 @@ class DzBrickMaterial extends DzMaterial, DzRefCountedItem {
 	/**
  * @description Return Value:
 */
-	getBrickIDs() {
+	getBrickIDs():Array {
 	
 	}
 	/**
@@ -4372,31 +4490,31 @@ class DzBrickMaterial extends DzMaterial, DzRefCountedItem {
 	/**
  * @description Return Value:
 */
-	getBrickUserName() {
+	getBrickUserName():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getExtension() {
+	getExtension():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumBrickSets() {
+	getNumBrickSets():Number {
 	
 	}
 	/**
  * @description Invalidates the brick sets, causing them to be rebuilt.
 */
-	invalidateSets() {
+	invalidateSets():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isInEditMode() {
+	isInEditMode():Boolean {
 	
 	}
 	/**
@@ -4426,7 +4544,7 @@ class DzBrickMaterial extends DzMaterial, DzRefCountedItem {
 	/**
  * @description Puts this brick material in edit mode.
 */
-	startEditMode() {
+	startEditMode():void {
 	
 	}
 	/**
@@ -4438,7 +4556,7 @@ class DzBrickMaterial extends DzMaterial, DzRefCountedItem {
 	/**
  * @description Return Value:
 */
-	usesLocalShaderSpace() {
+	usesLocalShaderSpace():Boolean {
 	
 	}
 
@@ -4447,7 +4565,9 @@ class DzBrickMaterial extends DzMaterial, DzRefCountedItem {
  * @classdesc DzButton implements an abstract button base. Subclasses specify how to respond to user interaction, and how to present the button to the user. If you want to create a button, create a DzPushButton.
 
 
+
 DzPushButton provides both push and toggle buttons. The DzRadioButton and DzCheckBox classes provide only toggle buttons.
+
 
 
 The difference between down and on is, when a user clicks a [toggle] button to toggle it on, the button is first pressed and then released into the On state (on is true, down is false). When the user clicks it again (to toggle it off), the button is first pressed and then released to the Off state (on and down are false).
@@ -4462,10 +4582,18 @@ class DzButton extends DzWidget {
 	pixmap:Pixmap;
 	text:String;
 	toggleButton:Boolean;
+	autoRepeatDelay:Number;
+	autoRepeatInterval:Number;
+	checkable:Boolean;
+	checked:Boolean;
+	down:Boolean;
+	pixmap:Pixmap;
+	text:String;
+	toggleButton:Boolean;
 	/**
  * @description Toggles the state of a toggle button.
 */
-	toggle() {
+	toggle():void {
 	
 	}
 
@@ -4476,6 +4604,9 @@ Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/buttongroup_dz}*/
 class DzButtonGroup extends DzGroupBox {
 	count:Number;
+	exclusive:Boolean;
+	radioButtonExclusive:Boolean;
+	selected:Number;
 	exclusive:Boolean;
 	radioButtonExclusive:Boolean;
 	selected:Number;
@@ -4509,14 +4640,14 @@ Add description.
  * @description TODO:
 Add description.
 */
-	buttons() {
+	buttons():Array {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	checkedButton() {
+	checkedButton():DzButton {
 	
 	}
 	/**
@@ -4543,6 +4674,7 @@ Add description.
  * @classdesc This is the DAZScript counterpart to the QByteArray type used in the DAZ Studio SDK.
 
 
+
 Attention:
 
 
@@ -4550,6 +4682,7 @@ Attention:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/bytearray}*/
 class ByteArray extends QObject {
 	length:Number;
+	size:Number;
 	size:Number;
 	/**
  * @description Default Constructor.
@@ -4587,19 +4720,19 @@ class ByteArray extends QObject {
 	/**
  * @description Return Value:
 */
-	convertToString() {
+	convertToString():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	convertToStringFromUtf16() {
+	convertToStringFromUtf16():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	convertToStringFromUtf8() {
+	convertToStringFromUtf8():String {
 	
 	}
 	/**
@@ -4623,13 +4756,13 @@ class ByteArray extends QObject {
 	/**
  * @description Return Value:
 */
-	toBase64() {
+	toBase64():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	toHex() {
+	toHex():void {
 	
 	}
 	/**
@@ -4642,6 +4775,7 @@ class ByteArray extends QObject {
 }
 /**
  * @classdesc Encapsulates an object that is used to execute a script when a signal that it is connected to is triggered.
+
 
 
 See Also:
@@ -4659,7 +4793,7 @@ class DzCallBack extends QObject {
 	/**
  * @description Disconnects from the signal that triggers this callback.
 */
-	clearConnection() {
+	clearConnection():void {
 	
 	}
 	/**
@@ -4671,19 +4805,19 @@ class DzCallBack extends QObject {
 	/**
  * @description Return Value:
 */
-	getArgCount() {
+	getArgCount():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getBlockedDuringSceneLoad() {
+	getBlockedDuringSceneLoad():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDeleteAfterExecution() {
+	getDeleteAfterExecution():Boolean {
 	
 	}
 	/**
@@ -4695,31 +4829,31 @@ class DzCallBack extends QObject {
 	/**
  * @description Return Value:
 */
-	getGroups() {
+	getGroups():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getProcessAsEvent() {
+	getProcessAsEvent():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getScript() {
+	getScript():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSender() {
+	getSender():QObject {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isEvaluated() {
+	isEvaluated():Boolean {
 	
 	}
 	/**
@@ -4782,7 +4916,9 @@ class DzCallBack extends QObject {
  * @classdesc This class manages objects that are used to execute a scripts when a signal that the object is connected to is emitted. There is only one instance of this manager in an application. This instance is created and owned by DzApp. Don't create an instance of this class, but rather request a pointer to it from DzApp via DzApp.getCallBackMgr().
 
 
+
 Example:
+
 
 
 Dynamically load a script.
@@ -4793,7 +4929,9 @@ var oCallBack = oCallBackMgr.createCallBack( "Hello World", sScript, false );
  
 oCallBack.setConnection( Scene, "nodeAdded(DzNode*)" );
 
+
 Example:
+
 
 
 Embed a script.
@@ -4808,10 +4946,13 @@ var oCallBack = oCallBackMgr.createCallBack( "Hello World", sScript, true );
  
 oCallBack.setConnection( Scene, "nodeAdded(DzNode*)" );
 
+
 Example:
 
 
+
 CallBack script (./support/CallBackExample/HelloWorld.dsa).
+
 
 
 "CallBack" is a global transient variable referring to the DzCallBack that executes the script.
@@ -4833,6 +4974,7 @@ if( nArgs > 0 ){
  
 MessageBox.information( sMessage, CallBack.className(), "&OK" );
 
+
 See Also:
 
 
@@ -4842,7 +4984,7 @@ class DzCallBackMgr extends QObject {
 	/**
  * @description Deletes all callbacks.
 */
-	clearAllCallBacks() {
+	clearAllCallBacks():void {
 	
 	}
 	/**
@@ -4902,7 +5044,7 @@ class DzCallBackMgr extends QObject {
 	/**
  * @description Return Value:
 */
-	getCallBackList() {
+	getCallBackList():Array {
 	
 	}
 	/**
@@ -4914,7 +5056,7 @@ class DzCallBackMgr extends QObject {
 	/**
  * @description Return Value:
 */
-	getNumCallBacks() {
+	getNumCallBacks():Number {
 	
 	}
 	/**
@@ -5025,31 +5167,31 @@ class DzCamera extends DzNode {
 	/**
  * @description Return Value:
 */
-	getFieldOfView() {
+	getFieldOfView():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFocalPoint() {
+	getFocalPoint():DzVec3 {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getHeadlight() {
+	getHeadlight():DzLight {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isViewCamera() {
+	isViewCamera():Boolean {
 	
 	}
 	/**
  * @description Resets the camera viewing parameters to defaults.
 */
-	reset() {
+	reset():void {
 	
 	}
 	/**
@@ -5062,7 +5204,7 @@ Add description.
 	/**
  * @description Return Value:
 */
-	shouldSortOnLoad() {
+	shouldSortOnLoad():Boolean {
 	
 	}
 	/**
@@ -5076,6 +5218,7 @@ Add description.
 }
 /**
  * @classdesc An asset save filter for saving a Camera(s) Preset in the DSON format.
+
 
 
 See Also:
@@ -5098,6 +5241,7 @@ Add description.
  * @classdesc The "Category" container type serves to provide a means of working with assets that share qualities or characteristics without moving the actual files on disk; moving or renaming files on disk breaks the correlation between the file and the asset that represents it.
 
 
+
 See Also:
 
 
@@ -5116,19 +5260,20 @@ class DzCategoryAssetContainer extends DzAbstractAssetContainer, DzRefCountedIte
 	/**
  * @description Return Value:
 */
-	getPath() {
+	getPath():String {
 	
 	}
 	/**
  * @description Updates the container using the data that is currently stored in the database.
 */
-	updateRow() {
+	updateRow():void {
 	
 	}
 
 }
 /**
  * @classdesc An asset save filter for saving a Character Preset in DSON format.
+
 
 
 See Also:
@@ -5149,6 +5294,7 @@ Add description.
 }
 /**
  * @classdesc DzRadioButton and DzCheckBox are both option buttons (e.g. they can be checked or unchecked). They differ in how the available choices are restricted. A DzCheckBox is used to define several choices that can all co-exist at the same time (e.g. "many of many"). While a DzRadioButton is used to provide several choices, where only one can be ultimately chosen (e.g. "one of many").
+
 
 
 Example:
@@ -5180,6 +5326,7 @@ wDlg.exec();
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/checkbox_dz}*/
 class DzCheckBox extends DzButton {
 	checked:Boolean;
+	tristate:Boolean;
 	tristate:Boolean;
 	/**
  * @description Creates a check box as a child of the given parent widget
@@ -5260,6 +5407,8 @@ class DzCircle3 extends Object {
 	center:DzVec3;
 	normal:DzVec3;
 	radius:Number;
+	normal:DzVec3;
+	radius:Number;
 	/**
  * @description Default Constructor.
  * @constructor
@@ -5287,6 +5436,7 @@ class DzCircle3 extends Object {
  * @classdesc This is the DAZScript counterpart to the QColor type used in the DAZ Studio SDK.
 
 
+
 Attention:
 
 
@@ -5294,6 +5444,14 @@ Attention:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/color}*/
 class Color extends QObject {
 	alpha:Number;
+	blue:Number;
+	green:Number;
+	hue:Number;
+	name:String;
+	red:Number;
+	rgb:Number;
+	saturation:Number;
+	value:Number;
 	blue:Number;
 	green:Number;
 	hue:Number;
@@ -5333,19 +5491,19 @@ class Color extends QObject {
 	/**
  * @description Return Value:
 */
-	dark() {
+	dark():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isValid() {
+	isValid():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	light() {
+	light():void {
 	
 	}
 	/**
@@ -5372,12 +5530,15 @@ class Color extends QObject {
  * @classdesc The DzColorDialog class is available in DAZScript via Global.ColorDialog.
 
 
+
 It provides a function to display an OS native color picker to the user - simply call the function as shown in the following example:
+
 
 
 Example - Have the user select a color : 
 
 var color = ColorDialog.getColor();
+
 
 Other functions are provided for getting and setting the pre-set colors listed in the picker - see the rest of the documentation for details.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/colordialog_dz}*/
@@ -5391,7 +5552,7 @@ class DzColorDialog extends QObject {
 	/**
  * @description Return Value:
 */
-	customCount() {
+	customCount():Number {
 	
 	}
 	/**
@@ -5469,13 +5630,13 @@ class DzColorProperty extends DzIntProperty {
 	/**
  * @description Return Value:
 */
-	getAnimationBlendMode() {
+	getAnimationBlendMode():AnimationBlendMode {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getColorValue() {
+	getColorValue():Color {
 	
 	}
 	/**
@@ -5487,7 +5648,7 @@ class DzColorProperty extends DzIntProperty {
 	/**
  * @description Return Value:
 */
-	getDefaultColorValue() {
+	getDefaultColorValue():Color {
 	
 	}
 	/**
@@ -5505,7 +5666,7 @@ class DzColorProperty extends DzIntProperty {
 	/**
  * @description Return Value:
 */
-	getRawColorValue() {
+	getRawColorValue():Color {
 	
 	}
 	/**
@@ -5545,6 +5706,7 @@ class DzColorProperty extends DzIntProperty {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/colorwgt_dz}*/
 class DzColorWgt extends DzWidget {
 	indeterminate:Boolean;
+	value:Color;
 	value:Color;
 	/**
  * @description Creates a color widget as a child of the given parent widget.
@@ -5636,7 +5798,7 @@ class DzComboBox extends DzWidget {
 	/**
  * @description Removes all items from the combobox.
 */
-	clear() {
+	clear():void {
 	
 	}
 	/**
@@ -5705,6 +5867,7 @@ class DzComboBox extends DzWidget {
  * @classdesc A DzComboEdit provides a compound widget comprised of a line edit and a button that, when clicked, causes a menu to be displayed. Selecting one of the items in the popup menu causes the value of the editor to update with the text of the selected item by default. A separator can be created in a menu by using a single hyphen ("-") character. Sub-menus can be created by using two consecutive greater than ("»") characters as a delimiter between the entries of a given hierarchy.
 
 
+
 Example:
 
 var oNode = Scene.getPrimarySelection();
@@ -5763,6 +5926,9 @@ class DzComboEdit extends DzWidget {
 	readOnly:Boolean;
 	text:String;
 	usePathPopUp:Boolean;
+	readOnly:Boolean;
+	text:String;
+	usePathPopUp:Boolean;
 	/**
  * @description Creates a combo edit as a child of the given parent widget.
  * @constructor
@@ -5788,7 +5954,7 @@ Add description.
  * @description TODO:
 Add description.
 */
-	clear() {
+	clear():void {
 	
 	}
 	/**
@@ -5816,7 +5982,7 @@ Add description.
  * @description TODO:
 Add description.
 */
-	items() {
+	items():Array {
 	
 	}
 	/**
@@ -5832,6 +5998,7 @@ Add description.
  * @classdesc The "Compatibility Base" container type serves to provide a means of working with assets that are defined to be compatible with a particular Compatibility Base.
 
 
+
 See Also:
 
 
@@ -5840,22 +6007,24 @@ See Also:
 class DzCompatibilityBaseAssetContainer extends DzAbstractAssetContainer, DzRefCountedItem {
 	isFilter:Boolean;
 	isVendor:Boolean;
+	isVendor:Boolean;
 	/**
  * @description Return Value:
 */
-	getPath() {
+	getPath():String {
 	
 	}
 	/**
  * @description Attempts to update the child containers of this container.
 */
-	updateChildren() {
+	updateChildren():Boolean {
 	
 	}
 
 }
 /**
  * @classdesc Represents a file in the content library that can be loaded/imported. Also provides functionality for moving the file to a new location, renaming the file, and deleting the file from the library.
+
 
 
 See Also:
@@ -5877,28 +6046,40 @@ class DzContentFile extends QObject, DzRefCountedItem {
 	label:String;
 	name:String;
 	smallIcon:Pixmap;
+	canRename:Boolean;
+	companionIsScript:Boolean;
+	companionPath:String;
+	fullPath:String;
+	hasCompanion:Boolean;
+	hasCompanionScript:Boolean;
+	icon:Pixmap;
+	isNative:Boolean;
+	isScript:Boolean;
+	label:String;
+	name:String;
+	smallIcon:Pixmap;
 	/**
  * @description Removes this file from its content folder. The default implementation of this function deletes the content file and any associated thumbnail image from the disk, so use with care!
 */
-	deleteFile() {
+	deleteFile():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFolder() {
+	getFolder():DzContentFolder {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNext() {
+	getNext():void {
 	
 	}
 	/**
  * @description Force the file to reload its icon.
 */
-	reloadIcon() {
+	reloadIcon():void {
 	
 	}
 	/**
@@ -5911,6 +6092,7 @@ class DzContentFile extends QObject, DzRefCountedItem {
 }
 /**
  * @classdesc Represents a folder in the content library that holds DzContentFile objects as well as other DzContentFolder objects.
+
 
 
 See Also:
@@ -5955,55 +6137,55 @@ class DzContentFolder extends DzBase, DzRefCountedItem {
 	/**
  * @description Removes this content folder. The default implementation of this function deletes all files and subfolders in this directory from the disk, so use with care!
 */
-	deleteFolder() {
+	deleteFolder():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFirstFile() {
+	getFirstFile():DzContentFile {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFirstFolder() {
+	getFirstFolder():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFirstHiddenFile() {
+	getFirstHiddenFile():DzContentFile {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFirstHiddenFolder() {
+	getFirstHiddenFolder():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNext() {
+	getNext():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getParent() {
+	getParent():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	hasSubFolders() {
+	hasSubFolders():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isModifiable() {
+	isModifiable():Boolean {
 	
 	}
 	/**
@@ -6028,6 +6210,7 @@ class DzContentFolder extends DzBase, DzRefCountedItem {
 }
 /**
  * @classdesc The manager that is responsible for all the content folder & file trees that are accessible from the content library.
+
 
 
 There is only one instance of this manager in an application. This instance is created and owned by DzApp. Do not create an instance of this class, rather request the instance from DzApp via DzApp.getContentMgr().
@@ -6101,7 +6284,7 @@ class DzContentMgr extends DzBase {
 	/**
  * @description Return Value:
 */
-	getCloudPathPrefix() {
+	getCloudPathPrefix():String {
 	
 	}
 	/**
@@ -6143,7 +6326,7 @@ class DzContentMgr extends DzBase {
 	/**
  * @description Clears the list of recent files.
 */
-	clearRecentFileList() {
+	clearRecentFileList():void {
 	
 	}
 	/**
@@ -6155,13 +6338,13 @@ class DzContentMgr extends DzBase {
 	/**
  * @description Displays a dialog to the user to perform a Poser content search on the local machine.
 */
-	doContentSearch() {
+	doContentSearch():Boolean {
 	
 	}
 	/**
  * @description Causes the content manager to check the number of mapped content directories, and display a warning to the user if it is excessive.
 */
-	doDirNumCheck() {
+	doDirNumCheck():void {
 	
 	}
 	/**
@@ -6227,13 +6410,13 @@ class DzContentMgr extends DzBase {
 	/**
  * @description Return Value:
 */
-	getBuiltInContentDirectory() {
+	getBuiltInContentDirectory():DzContentFolder {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getBuiltInContentDirectoryPath() {
+	getBuiltInContentDirectoryPath():String {
 	
 	}
 	/**
@@ -6257,13 +6440,13 @@ class DzContentMgr extends DzBase {
 	/**
  * @description Return Value:
 */
-	getCloudContentDirectory() {
+	getCloudContentDirectory():DzContentFolder {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getCloudContentDirectoryPath() {
+	getCloudContentDirectoryPath():String {
 	
 	}
 	/**
@@ -6287,13 +6470,13 @@ class DzContentMgr extends DzBase {
 	/**
  * @description Return Value:
 */
-	getContentReplaceMgr() {
+	getContentReplaceMgr():DzContentReplaceMgr {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDefaultContentDir() {
+	getDefaultContentDir():String {
 	
 	}
 	/**
@@ -6323,7 +6506,7 @@ class DzContentMgr extends DzBase {
 	/**
  * @description Return Value:
 */
-	getImportFileExtensions() {
+	getImportFileExtensions():Array {
 	
 	}
 	/**
@@ -6371,43 +6554,43 @@ class DzContentMgr extends DzBase {
 	/**
  * @description Return Value:
 */
-	getNativeBaseUserFacingExcludedDirs() {
+	getNativeBaseUserFacingExcludedDirs():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNativeFileExtensions() {
+	getNativeFileExtensions():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumBuiltInMDLDirectories() {
+	getNumBuiltInMDLDirectories():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumContentDirectories() {
+	getNumContentDirectories():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumImportDirectories() {
+	getNumImportDirectories():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumMDLDirectories() {
+	getNumMDLDirectories():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumPoserDirectories() {
+	getNumPoserDirectories():Number {
 	
 	}
 	/**
@@ -6419,7 +6602,7 @@ class DzContentMgr extends DzBase {
 	/**
  * @description Return Value:
 */
-	getPoserBaseUserFacingDirs() {
+	getPoserBaseUserFacingDirs():Array {
 	
 	}
 	/**
@@ -6437,13 +6620,13 @@ class DzContentMgr extends DzBase {
 	/**
  * @description Return Value:
 */
-	getPoserFileExtensions() {
+	getPoserFileExtensions():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRecentFileList() {
+	getRecentFileList():Array {
 	
 	}
 	/**
@@ -6575,25 +6758,25 @@ class DzContentMgr extends DzBase {
 	/**
  * @description Removes all native content mapped directories.
 */
-	removeAllContentDirectories() {
+	removeAllContentDirectories():void {
 	
 	}
 	/**
  * @description Removes all import content directory mappings from the list.
 */
-	removeAllImportDirectories() {
+	removeAllImportDirectories():void {
 	
 	}
 	/**
  * @description Removes all MDL directory mappings from the list.
 */
-	removeAllMDLDirectories() {
+	removeAllMDLDirectories():void {
 	
 	}
 	/**
  * @description Removes all Poser import content directory mappings from the list.
 */
-	removeAllPoserDirectories() {
+	removeAllPoserDirectories():void {
 	
 	}
 	/**
@@ -6623,7 +6806,7 @@ class DzContentMgr extends DzBase {
 	/**
  * @description Saves all currently mapped directories to the registry.
 */
-	saveAllMappedDirectories() {
+	saveAllMappedDirectories():void {
 	
 	}
 	/**
@@ -6671,13 +6854,13 @@ class DzContentMgr extends DzBase {
 	/**
  * @description Deprecated
 */
-	usingCheckCompatibility() {
+	usingCheckCompatibility():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	usingDatabaseSearch() {
+	usingDatabaseSearch():Boolean {
 	
 	}
 
@@ -6712,31 +6895,31 @@ class DzContentReplaceMgr extends QObject {
 	/**
  * @description Resets all replace data to default values, excluding replace mode.
 */
-	clearReplaceData() {
+	clearReplaceData():void {
 	
 	}
 	/**
  * @description Performs all the necessary steps to remove content marked for replacement.
 */
-	doReplace() {
+	doReplace():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNewContentPath() {
+	getNewContentPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNewContentType() {
+	getNewContentType():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getReplaceMode() {
+	getReplaceMode():ContentReplaceMode {
 	
 	}
 	/**
@@ -6748,7 +6931,7 @@ class DzContentReplaceMgr extends QObject {
 	/**
  * @description Removes all nodes in the replace list from the scene.
 */
-	removeReplaceNodes() {
+	removeReplaceNodes():void {
 	
 	}
 	/**
@@ -6800,7 +6983,7 @@ class DzController extends DzBase {
  * @description TODO:
 Add description.
 */
-	getOwner() {
+	getOwner():DzProperty {
 	
 	}
 
@@ -6833,7 +7016,7 @@ class DzCustomData extends DzBase {
 	/**
  * @description Return Value:
 */
-	isPersistent() {
+	isPersistent():Boolean {
 	
 	}
 
@@ -6843,6 +7026,15 @@ class DzCustomData extends DzBase {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/datetimeedit_dz}*/
 class DzDateTimeEdit extends DzWidget {
 	date:Date;
+	dateMax:Date;
+	dateMin:Date;
+	dateSeparator:String;
+	dateTime:dateTime;
+	displayFormat:String;
+	time:Date;
+	timeMax:Date;
+	timeMin:Date;
+	timeSeparator:String;
 	dateMax:Date;
 	dateMin:Date;
 	dateSeparator:String;
@@ -6876,433 +7068,433 @@ class DzDefaultMaterial extends DzMaterial, DzRefCountedItem {
 	/**
  * @description Return Value:
 */
-	getAmbientColor() {
+	getAmbientColor():Color {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getAmbientColorControl() {
+	getAmbientColorControl():DzColorProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getAmbientColorMap() {
+	getAmbientColorMap():DzTexture {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getAmbientStrength() {
+	getAmbientStrength():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getAmbientStrengthControl() {
+	getAmbientStrengthControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getAmbientValueMap() {
+	getAmbientValueMap():DzTexture {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getBumpControl() {
+	getBumpControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getBumpMap() {
+	getBumpMap():DzTexture {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getBumpMax() {
+	getBumpMax():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getBumpMaxControl() {
+	getBumpMaxControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getBumpMin() {
+	getBumpMin():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getBumpMinControl() {
+	getBumpMinControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getBumpStrength() {
+	getBumpStrength():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDiffuseColorControl() {
+	getDiffuseColorControl():DzColorProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDiffuseStrength() {
+	getDiffuseStrength():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDiffuseStrengthControl() {
+	getDiffuseStrengthControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDiffuseValueMap() {
+	getDiffuseValueMap():DzTexture {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDisplacementControl() {
+	getDisplacementControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDisplacementMap() {
+	getDisplacementMap():DzTexture {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDisplacementMax() {
+	getDisplacementMax():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDisplacementMaxControl() {
+	getDisplacementMaxControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDisplacementMin() {
+	getDisplacementMin():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDisplacementMinControl() {
+	getDisplacementMinControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDisplacementStrength() {
+	getDisplacementStrength():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getGlossinessControl() {
+	getGlossinessControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getGlossinessStrength() {
+	getGlossinessStrength():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getGlossinessValueMap() {
+	getGlossinessValueMap():DzTexture {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getHorizontalOffset() {
+	getHorizontalOffset():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getHorizontalOffsetControl() {
+	getHorizontalOffsetControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getHorizontalTiles() {
+	getHorizontalTiles():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getHorizontalTilesControl() {
+	getHorizontalTilesControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getIndexOfRefraction() {
+	getIndexOfRefraction():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getIndexOfRefractionControl() {
+	getIndexOfRefractionControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getMultThroughOpacityControl() {
+	getMultThroughOpacityControl():DzBoolProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNormalValueMap() {
+	getNormalValueMap():DzTexture {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNormalValueMapControl() {
+	getNormalValueMapControl():DzImageProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getOpacityControl() {
+	getOpacityControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getReflectionColor() {
+	getReflectionColor():Color {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getReflectionColorControl() {
+	getReflectionColorControl():DzColorProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getReflectionMap() {
+	getReflectionMap():DzTexture {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getReflectionStrength() {
+	getReflectionStrength():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getReflectionStrengthControl() {
+	getReflectionStrengthControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getReflectionValueMap() {
+	getReflectionValueMap():DzTexture {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRefractionColor() {
+	getRefractionColor():Color {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRefractionColorControl() {
+	getRefractionColorControl():DzColorProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRefractionColorMap() {
+	getRefractionColorMap():DzTexture {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRefractionStrength() {
+	getRefractionStrength():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRefractionStrengthControl() {
+	getRefractionStrengthControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRefractionValueMap() {
+	getRefractionValueMap():DzTexture {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getScatterColor() {
+	getScatterColor():Color {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getScatterColorControl() {
+	getScatterColorControl():DzColorProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getScatterColorMap() {
+	getScatterColorMap():DzTexture {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSheenColor() {
+	getSheenColor():Color {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSheenColorControl() {
+	getSheenColorControl():DzColorProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSheenColorMap() {
+	getSheenColorMap():DzTexture {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSpecularColor() {
+	getSpecularColor():Color {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSpecularColorControl() {
+	getSpecularColorControl():DzColorProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSpecularColorMap() {
+	getSpecularColorMap():DzTexture {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSpecularStrength() {
+	getSpecularStrength():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSpecularStrengthControl() {
+	getSpecularStrengthControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSpecularValueMap() {
+	getSpecularValueMap():DzTexture {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSurfaceType() {
+	getSurfaceType():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSurfaceTypeControl() {
+	getSurfaceTypeControl():DzEnumProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getThickness() {
+	getThickness():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getThicknessControl() {
+	getThicknessControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getThicknessValueMap() {
+	getThicknessValueMap():DzTexture {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getVerticalOffset() {
+	getVerticalOffset():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getVerticalOffsetControl() {
+	getVerticalOffsetControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getVerticalTiles() {
+	getVerticalTiles():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getVerticalTilesControl() {
+	getVerticalTilesControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isMultThroughOpacity() {
+	isMultThroughOpacity():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	needsTangentSpaceParams() {
+	needsTangentSpaceParams():Boolean {
 	
 	}
 	/**
@@ -7574,7 +7766,7 @@ class DzDelightRenderer extends DzRenderer {
  * @description TODO:
 Add description.
 */
-	resetIPRHandler() {
+	resetIPRHandler():void {
 	
 	}
 
@@ -7584,6 +7776,8 @@ Add description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/desktopwidget_q}*/
 class QDesktopWidget extends QWidget {
 	primaryScreen:Number;
+	screenCount:Number;
+	virtualDesktop:Boolean;
 	screenCount:Number;
 	virtualDesktop:Boolean;
 
@@ -7602,13 +7796,13 @@ class DzDevice extends QObject {
 	/**
  * @description Return Value:
 */
-	getDescription() {
+	getDescription():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDeviceName() {
+	getDeviceName():String {
 	
 	}
 	/**
@@ -7639,7 +7833,7 @@ class DzDeviceMgr extends QObject {
 	/**
  * @description Return Value:
 */
-	getNumDevices() {
+	getNumDevices():Number {
 	
 	}
 
@@ -7664,25 +7858,25 @@ class DzDForm extends DzNode {
 	/**
  * @description Return Value:
 */
-	getAvatarScale() {
+	getAvatarScale():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getBase() {
+	getBase():DzDFormBase {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getGradientMax() {
+	getGradientMax():Color {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getGradientMin() {
+	getGradientMin():Color {
 	
 	}
 	/**
@@ -7694,19 +7888,19 @@ class DzDForm extends DzNode {
 	/**
  * @description Return Value:
 */
-	getNumModifiers() {
+	getNumModifiers():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getOpacity() {
+	getOpacity():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getZone() {
+	getZone():DzDFormZone {
 	
 	}
 	/**
@@ -7751,6 +7945,7 @@ class DzDForm extends DzNode {
  * @classdesc An asset save filter for saving a D-Former(s) Preset in the DSON format.
 
 
+
 See Also:
 
 
@@ -7771,13 +7966,17 @@ Add description.
  * @classdesc The Base is one component of a DForm deformer. The others are the DzDForm, DzDFormZone and dformmodifier_dz.
 
 
+
 The DForm Base functions as the origin for the DForm deformation effect, as detailed in the DForm class.
+
 
 
 The DForm Base and Zone can be created separately from the DForm and then joined together with the addDForm(), addZone(), etc functions.
 
 
+
 The DForm Base is a skeleton and the DForm itself is a bone of the Base. This prevents the two components from being reparented away from each other and retains the parent-child relationship for the relative transform calculations.
+
 
 
 The DForm Base draws itself in the scene using the DForm_base_ColorMax and DForm_base_ColorMin embedded geometry. The DForm_base_ColorMax is drawn with the maximum color of the vertex weight color gradient and the DForm_base_ColorMin is drawn with the minimum color.
@@ -7793,7 +7992,7 @@ class DzDFormBase extends DzNode {
 	/**
  * @description Returns the Bases's DForm
 */
-	getDForm() {
+	getDForm():DzDForm {
 	
 	}
 
@@ -7802,13 +8001,17 @@ class DzDFormBase extends DzNode {
  * @classdesc The Zone is one component of a DForm deformer. The others are the DzDForm, DzDFormBase and dformmodifier_dz.
 
 
+
 The Zone is an independent DzNode derived object that is used to set the area of influence of the DForm's effect.
+
 
 
 It is spherical in shape but can be scaled into any form of ellipsoid.
 
 
+
 The Zone has an effect falloff zone based on a naturalspline_dz object. The falloff is the same along the x,y and z axis.
+
 
 
 The Zone has draws itself as a wireframe sphere. The base size of this sphere is controlled by the DzFloatProperty "Radius". This sphere can be made transparent and is controlled by the DzFloatProperty "Opacity". The Zone is drawn with the maximum gradient color of the DForm.
@@ -7824,13 +8027,13 @@ class DzDFormZone extends DzNode {
 	/**
  * @description Returns the DForm for the Zone.
 */
-	getDForm() {
+	getDForm():DzDForm {
 	
 	}
 	/**
  * @description Returns the spline used to compute the falloff for the Zone.
 */
-	getSpline() {
+	getSpline():void {
 	
 	}
 
@@ -7840,6 +8043,15 @@ class DzDFormZone extends DzNode {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/dial_dz}*/
 class DzDial extends DzWidget {
 	lineStep:Number;
+	max:Number;
+	min:Number;
+	notchesVisible:Boolean;
+	notchSize:Number;
+	notchTarget:Number;
+	pageStep:Number;
+	tracking:Boolean;
+	value:Number;
+	wrapping:Boolean;
 	max:Number;
 	min:Number;
 	notchesVisible:Boolean;
@@ -7865,6 +8077,8 @@ class DzDialog extends DzWidget {
 	caption:String;
 	orientation:DzWidget;
 	sizeGripEnabled:Boolean;
+	orientation:DzWidget;
+	sizeGripEnabled:Boolean;
 	/**
  * @description Default Constructor.
  * @constructor
@@ -7875,25 +8089,25 @@ class DzDialog extends DzWidget {
 	/**
  * @description Closes the dialog.
 */
-	close() {
+	close():Boolean {
 	
 	}
 	/**
  * @description Displays the dialog to the user.
 */
-	exec() {
+	exec():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	extension() {
+	extension():DzWidget {
 	
 	}
 	/**
  * @description Causes the extension widget for the dialog to be hidden.
 */
-	hideExtension() {
+	hideExtension():void {
 	
 	}
 	/**
@@ -7923,7 +8137,7 @@ class DzDialog extends DzWidget {
 	/**
  * @description Causes the extension widget for the dialog to be shown.
 */
-	showExtension() {
+	showExtension():void {
 	
 	}
 
@@ -8118,13 +8332,13 @@ class DzDir extends QObject {
 	/**
  * @description Return Value:
 */
-	current() {
+	current():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	currentPath() {
+	currentPath():String {
 	
 	}
 	/**
@@ -8136,13 +8350,13 @@ class DzDir extends QObject {
 	/**
  * @description Return Value:
 */
-	home() {
+	home():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	homePath() {
+	homePath():String {
 	
 	}
 	/**
@@ -8172,19 +8386,19 @@ class DzDir extends QObject {
 	/**
  * @description Return Value:
 */
-	root() {
+	root():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	rootPath() {
+	rootPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	separator() {
+	separator():String {
 	
 	}
 	/**
@@ -8196,13 +8410,13 @@ class DzDir extends QObject {
 	/**
  * @description Return Value:
 */
-	temp() {
+	temp():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	tempPath() {
+	tempPath():String {
 	
 	}
 	/**
@@ -8226,19 +8440,19 @@ class DzDir extends QObject {
 	/**
  * @description Return Value:
 */
-	absolutePath() {
+	absolutePath():String {
 	
 	}
 	/**
  * @description Deprecated
 */
-	absPath() {
+	absPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	canonicalPath() {
+	canonicalPath():String {
 	
 	}
 	/**
@@ -8250,7 +8464,7 @@ class DzDir extends QObject {
 	/**
  * @description Changes the directory by moving one directory up from the current directory.
 */
-	cdUp() {
+	cdUp():Boolean {
 	
 	}
 	/**
@@ -8262,13 +8476,13 @@ class DzDir extends QObject {
 	/**
  * @description Return Value:
 */
-	count() {
+	count():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	dirName() {
+	dirName():String {
 	
 	}
 	/**
@@ -8301,7 +8515,7 @@ Add description.
 	/**
  * @description Return Value:
 */
-	exists() {
+	exists():Boolean {
 	
 	}
 	/**
@@ -8319,7 +8533,7 @@ Add description.
 	/**
  * @description Return Value:
 */
-	filter() {
+	filter():Filter {
 	
 	}
 	/**
@@ -8331,31 +8545,31 @@ Add description.
 	/**
  * @description Return Value:
 */
-	isAbsolute() {
+	isAbsolute():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isReadable() {
+	isReadable():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isRelative() {
+	isRelative():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isRoot() {
+	isRoot():Boolean {
 	
 	}
 	/**
  * @description Converts the directory path to an absolute path. If it is already absolute nothing happens.
 */
-	makeAbsolute() {
+	makeAbsolute():Boolean {
 	
 	}
 	/**
@@ -8385,19 +8599,19 @@ Add description.
 	/**
  * @description Return Value:
 */
-	nameFilters() {
+	nameFilters():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	path() {
+	path():String {
 	
 	}
 	/**
  * @description Refreshes the directory information.
 */
-	refresh() {
+	refresh():void {
 	
 	}
 	/**
@@ -8439,7 +8653,7 @@ Add description.
 	/**
  * @description Sets the current working directory of the application to be this directory.
 */
-	setCurrent() {
+	setCurrent():Boolean {
 	
 	}
 	/**
@@ -8470,7 +8684,7 @@ Add description.
 	/**
  * @description Return Value:
 */
-	sorting() {
+	sorting():SortFlag {
 	
 	}
 
@@ -8515,199 +8729,199 @@ class DzDistantLight extends DzLight {
 	/**
  * @description Return Value:
 */
-	getDiffuseColor() {
+	getDiffuseColor():Color {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDiffuseColorControl() {
+	getDiffuseColorControl():DzColorProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFarClippingPlane() {
+	getFarClippingPlane():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFlux() {
+	getFlux():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getIlluminationControl() {
+	getIlluminationControl():DzEnumProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getIntensity() {
+	getIntensity():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getIntensityControl() {
+	getIntensityControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getIntensityScale() {
+	getIntensityScale():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getIntensityScaleControl() {
+	getIntensityScaleControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLightFluxControl() {
+	getLightFluxControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLightGeometry() {
+	getLightGeometry():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLightGeometryControl() {
+	getLightGeometryControl():DzEnumProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLightHeight() {
+	getLightHeight():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLightHeightControl() {
+	getLightHeightControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLightPortalControl() {
+	getLightPortalControl():DzBoolProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLightTempature() {
+	getLightTempature():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLightTemperatureControl() {
+	getLightTemperatureControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLightTwoSided() {
+	getLightTwoSided():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLightTwoSidedControl() {
+	getLightTwoSidedControl():DzBoolProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLightWidth() {
+	getLightWidth():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLightWidthControl() {
+	getLightWidthControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNearClippingPlane() {
+	getNearClippingPlane():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPhotometricModeControl() {
+	getPhotometricModeControl():DzBoolProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRenderEmitterControl() {
+	getRenderEmitterControl():DzBoolProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getShadowBiasControl() {
+	getShadowBiasControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getShadowColorControl() {
+	getShadowColorControl():DzColorProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getShadowIntensityControl() {
+	getShadowIntensityControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getShadowSoftnessControl() {
+	getShadowSoftnessControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getWSDirection() {
+	getWSDirection():DzVec3 {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isLightPortal() {
+	isLightPortal():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isOn() {
+	isOn():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	photometricMode() {
+	photometricMode():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	renderEmitter() {
+	renderEmitter():Boolean {
 	
 	}
 
@@ -8726,7 +8940,7 @@ class DzDockArea extends QWidget {
 	/**
  * @description Return Value:
 */
-	getNumColumns() {
+	getNumColumns():Number {
 	
 	}
 
@@ -8739,19 +8953,19 @@ class DzDockAreaColumn extends QWidget {
 	/**
  * @description Return Value:
 */
-	depth() {
+	depth():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumWindows() {
+	getNumWindows():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPreferredDepth() {
+	getPreferredDepth():Number {
 	
 	}
 	/**
@@ -8763,25 +8977,25 @@ class DzDockAreaColumn extends QWidget {
 	/**
  * @description Return Value:
 */
-	isMinimized() {
+	isMinimized():Boolean {
 	
 	}
 	/**
  * @description Minimizes the column, if it is not already. The column shrinks so that only its resizing handle is visible.
 */
-	minimize() {
+	minimize():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	minimumDepth() {
+	minimumDepth():Number {
 	
 	}
 	/**
  * @description Restores the column to its previous depth if the column is currently minimized.
 */
-	restore() {
+	restore():void {
 	
 	}
 	/**
@@ -8793,13 +9007,14 @@ class DzDockAreaColumn extends QWidget {
 	/**
  * @description Toggles whether this column is minimized - if minimized, the column restores itself, if full size the column becomes minimized.
 */
-	toggleMinimized() {
+	toggleMinimized():void {
 	
 	}
 
 }
 /**
  * @classdesc This class provides access to a custom bar in the interface that can be docked with a DzToolBar. This class is not intended to be constructed directly, rather it serves as a base class for other custom dockable bars. 
+
 
 
 See Also:
@@ -8842,13 +9057,13 @@ class DzDockBar {
 	/**
  * @description Return Value:
 */
-	dockedArea() {
+	dockedArea():DockArea {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isClosed() {
+	isClosed():Boolean {
 	
 	}
 	/**
@@ -8873,7 +9088,7 @@ class DzDockWindow {
 	/**
  * @description Re-Docks this window in the last area it was docked in.
 */
-	dock() {
+	dock():void {
 	
 	}
 	/**
@@ -8891,73 +9106,73 @@ class DzDockWindow {
 	/**
  * @description Return Value:
 */
-	getArea() {
+	getArea():DzDockArea {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getColumnDimension() {
+	getColumnDimension():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getColumnNum() {
+	getColumnNum():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLastSize() {
+	getLastSize():Size {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLength() {
+	getLength():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getMinimumLength() {
+	getMinimumLength():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPreferredLength() {
+	getPreferredLength():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isDocked() {
+	isDocked():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isLengthFixed() {
+	isLengthFixed():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isMinimized() {
+	isMinimized():Boolean {
 	
 	}
 	/**
  * @description Sets this window to a minimized state.
 */
-	minimize() {
+	minimize():void {
 	
 	}
 	/**
  * @description Returns this window to its former length if it is minimized.
 */
-	restore() {
+	restore():void {
 	
 	}
 	/**
@@ -8999,19 +9214,19 @@ class DzDockWindow {
 	/**
  * @description Toggles this window between its docked and undocked state. Calls dock() if this window is undocked, or undock() if it is docked.
 */
-	toggleDock() {
+	toggleDock():void {
 	
 	}
 	/**
  * @description Toggles this window between the minimized and restored state.
 */
-	toggleMinimized() {
+	toggleMinimized():void {
 	
 	}
 	/**
  * @description Undocks this window.
 */
-	undock() {
+	undock():void {
 	
 	}
 
@@ -9021,6 +9236,7 @@ class DzDockWindow {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/domattr_dz}*/
 class DzDomAttr extends DzDomNode {
 	name:String;
+	value:String;
 	value:String;
 	/**
  * @description Default constructor. Typically, you will not construct these directly, but will call DzDomElement.setAttribute() or DzDomDocument.createAttribute() to create a new attribute node as a member of an existing element or document.
@@ -9032,13 +9248,13 @@ class DzDomAttr extends DzDomNode {
 	/**
  * @description Return Value:
 */
-	ownerElement() {
+	ownerElement():DzDomNode {
 	
 	}
 	/**
  * @description Return Value:
 */
-	specified() {
+	specified():Boolean {
 	
 	}
 
@@ -9074,6 +9290,7 @@ class DzDomCDATASection extends DzDomText {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/domcharacterdata_dz}*/
 class DzDomCharacterData extends DzDomNode {
 	data:String;
+	length:Number;
 	length:Number;
 	/**
  * @description Default constructor. Typically, you will not construct these directly, but will call DzDomDocument.createText() or DzDomDocument.createCDATASection() to create a new character data node as a member of a document.
@@ -9191,7 +9408,7 @@ class DzDomDocument extends DzDomNode {
 	/**
  * @description Return Value:
 */
-	createDocumentFragment() {
+	createDocumentFragment():DzDomNode {
 	
 	}
 	/**
@@ -9227,7 +9444,7 @@ class DzDomDocument extends DzDomNode {
 	/**
  * @description Return Value:
 */
-	doctype() {
+	doctype():DzDomNode {
 	
 	}
 	/**
@@ -9263,7 +9480,7 @@ class DzDomDocument extends DzDomNode {
 	/**
  * @description Return Value:
 */
-	toString() {
+	toString():String {
 	
 	}
 
@@ -9286,6 +9503,9 @@ class DzDomDocumentFragment extends DzDomNode {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/domdocumenttype_dz}*/
 class DzDomDocumentType extends DzDomNode {
 	internalSubset:String;
+	name:String;
+	publicId:String;
+	systemId:String;
 	name:String;
 	publicId:String;
 	systemId:String;
@@ -9403,6 +9623,8 @@ class DzDomEntity extends DzDomNode {
 	notationName:String;
 	publicId:String;
 	systemId:String;
+	publicId:String;
+	systemId:String;
 	/**
  * @description Default constructor
  * @constructor
@@ -9508,7 +9730,7 @@ class DzDomNode extends QObject {
 	/**
  * @description Converts the node into an invalid (Null) node. Its type and contents are cleared.
 */
-	clear() {
+	clear():Boolean {
 	
 	}
 	/**
@@ -9520,19 +9742,19 @@ class DzDomNode extends QObject {
 	/**
  * @description Return Value:
 */
-	firstChild() {
+	firstChild():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	hasAttributes() {
+	hasAttributes():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	hasChildNodes() {
+	hasChildNodes():Boolean {
 	
 	}
 	/**
@@ -9550,79 +9772,79 @@ class DzDomNode extends QObject {
 	/**
  * @description Return Value:
 */
-	isAttr() {
+	isAttr():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isCDATASection() {
+	isCDATASection():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isCharacterData() {
+	isCharacterData():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isComment() {
+	isComment():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isDocument() {
+	isDocument():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isDocumentFragment() {
+	isDocumentFragment():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isDocumentType() {
+	isDocumentType():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isElement() {
+	isElement():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isEntity() {
+	isEntity():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isEntityReference() {
+	isEntityReference():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isNotation() {
+	isNotation():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isNull() {
+	isNull():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isProcessingInstruction() {
+	isProcessingInstruction():Boolean {
 	
 	}
 	/**
@@ -9634,13 +9856,13 @@ class DzDomNode extends QObject {
 	/**
  * @description Return Value:
 */
-	isText() {
+	isText():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	lastChild() {
+	lastChild():void {
 	
 	}
 	/**
@@ -9652,31 +9874,31 @@ class DzDomNode extends QObject {
 	/**
  * @description Return Value:
 */
-	nextSibling() {
+	nextSibling():void {
 	
 	}
 	/**
  * @description Converts all the node's children into standard form (e.g. adjacent text nodes will be merged )
 */
-	normalize() {
+	normalize():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	ownerDocument() {
+	ownerDocument():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	parentNode() {
+	parentNode():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	previousSibling() {
+	previousSibling():void {
 	
 	}
 	/**
@@ -9699,6 +9921,7 @@ class DzDomNode extends QObject {
 class DzDomNotation extends DzDomNode {
 	publicId:String;
 	systemId:String;
+	systemId:String;
 	/**
  * @description Default constructor.
  * @constructor
@@ -9713,6 +9936,7 @@ class DzDomNotation extends DzDomNode {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/domprocessinginstruction_dz}*/
 class DzDomProcessingInstruction extends DzDomNode {
 	data:String;
+	target:String;
 	target:String;
 	/**
  * @description Default constructor. Typically, you will not construct these directly, but will call DzDomDocument.createProcessingInstruction() to create a new processing instruction node as a member of a document.
@@ -9810,43 +10034,44 @@ class DzDrawStyle extends DzBase {
 	/**
  * @description Return Value:
 */
-	drawCues() {
+	drawCues():Boolean {
 	
 	}
 	/**
  * @description If the current shade style is not using lighting, this method will set the shade style to the nearest match that uses single-pass drawing and lighting.
 */
-	forceUseLighting() {
+	forceUseLighting():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	pass() {
+	pass():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	selectionMapsEnabled() {
+	selectionMapsEnabled():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	shader() {
+	shader():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	shadeStyle() {
+	shadeStyle():ShadeStyle {
 	
 	}
 
 }
 /**
  * @classdesc A Dynamic Divider takes two DzWidget objects and places a divider bar between them. It handles resize events, as well as toggling of the divider bar if toggling is enabled.
+
 
 
 For complex arrangements you can nest instances of this class by specifying them as one of the widgets via setFirstWidget( DzWidget ) or setSecondWidget( DzWidget )
@@ -9965,13 +10190,13 @@ class DzDynamicDividerWgt extends DzWidget {
 	/**
  * @description Swaps the left (or top) and right (or bottom) widget.
 */
-	swapFirstAndSecondWidgets() {
+	swapFirstAndSecondWidgets():void {
 	
 	}
 	/**
  * @description Toggles the widget in the direction specified by toggleDirection. If toggling is disabled, this method has no effect. If either the first or second widget is undefined, this method will also have no effect.
 */
-	toggleWidget() {
+	toggleWidget():void {
 	
 	}
 
@@ -9981,6 +10206,13 @@ class DzDynamicDividerWgt extends DzWidget {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/edge_dz}*/
 class DzEdge extends Object {
 	cageOffsetA:Number;
+	facetA:Number;
+	facetB:Number;
+	index:Number;
+	offsetA:Number;
+	offsetB:Number;
+	vertIdx1:Number;
+	vertIdx2:Number;
 	facetA:Number;
 	facetB:Number;
 	index:Number;
@@ -10014,7 +10246,7 @@ Add description.
 	/**
  * @description Return Value:
 */
-	isOpenEdge() {
+	isOpenEdge():Boolean {
 	
 	}
 
@@ -10023,10 +10255,13 @@ Add description.
  * @classdesc Classes derived from DzElement may have any number of properties (objects derived from DzProperty). Those properties may be added and removed at runtime and may be specified as animatable or not. There are several types of properties that have been supplied with the Studio SDK. Property names must be unique within an element. A variety of methods are provided to allow easy traversal and/or searching of the properties list for an object.
 
 
+
 Methods are provided to clear animation data on all properties of an object either over a range or over all time.
 
 
+
 DzElement takes ownership of all properties added via addProperty(). Subclasses should not attempt to delete properties that have been added to the element.
+
 
 
 DzElement also handles saving and loading of all properties. When DzElement loads a property from a file, it will delete any existing property of the same name and replace it with the new property read in - subclasses are responsible for updating any local references to properties whenever a file is loaded. The easiest and most reliable way to do this is for the subclass to write out and read back in any local pointers it maintains to properties. Another approach would be for the subclass to reimplement the postLoadFile() function and update its references by calling findProperty() to lookup the properties by name.
@@ -10054,19 +10289,19 @@ class DzElement extends DzBase {
 	/**
  * @description Begins an editing operation for this element - DzProperty.beginEdit() will be called for all properties belonging to this element.
 */
-	beginEdit() {
+	beginEdit():void {
 	
 	}
 	/**
  * @description Cancels an editing operation for this element - DzProperty.cancelEdit() will be called for all properties belonging to this element.
 */
-	cancelEdit() {
+	cancelEdit():void {
 	
 	}
 	/**
  * @description Removes all animation keys on this object.
 */
-	clearAllAnimData() {
+	clearAllAnimData():void {
 	
 	}
 	/**
@@ -10162,7 +10397,7 @@ class DzElement extends DzBase {
 	/**
  * @description finishes an editing operation for this element - DzProperty.finishEdit() will be called for all properties belonging to this element.
 */
-	finishEdit() {
+	finishEdit():void {
 	
 	}
 	/**
@@ -10180,7 +10415,7 @@ class DzElement extends DzBase {
 	/**
  * @description Return Value:
 */
-	getDataItemList() {
+	getDataItemList():Array {
 	
 	}
 	/**
@@ -10192,43 +10427,43 @@ class DzElement extends DzBase {
 	/**
  * @description Return Value:
 */
-	getElementParent() {
+	getElementParent():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLabel() {
+	getLabel():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLoadScript() {
+	getLoadScript():DzScript {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumDataItems() {
+	getNumDataItems():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumElementChildren() {
+	getNumElementChildren():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumPrivateProperties() {
+	getNumPrivateProperties():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumProperties() {
+	getNumProperties():Number {
 	
 	}
 	/**
@@ -10240,13 +10475,13 @@ class DzElement extends DzBase {
 	/**
  * @description Return Value:
 */
-	getPrivatePropertyGroups() {
+	getPrivatePropertyGroups():DzPropertyGroupTree {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPrivatePropertyList() {
+	getPrivatePropertyList():Array {
 	
 	}
 	/**
@@ -10258,13 +10493,13 @@ class DzElement extends DzBase {
 	/**
  * @description Return Value:
 */
-	getPropertyGroups() {
+	getPropertyGroups():DzPropertyGroupTree {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPropertyList() {
+	getPropertyList():Array {
 	
 	}
 	/**
@@ -10288,7 +10523,7 @@ class DzElement extends DzBase {
 	/**
  * @description Return Value:
 */
-	inEdit() {
+	inEdit():Boolean {
 	
 	}
 	/**
@@ -10378,13 +10613,13 @@ class DzElement extends DzBase {
 	/**
  * @description Return Value:
 */
-	shouldSortOnLoad() {
+	shouldSortOnLoad():Boolean {
 	
 	}
 	/**
  * @description Called to update any cached or display data for this object.
 */
-	update() {
+	update():void {
 	
 	}
 
@@ -10425,7 +10660,7 @@ class DzElementData extends DzCustomData {
 	/**
  * @description Return Value:
 */
-	getOwner() {
+	getOwner():DzElement {
 	
 	}
 
@@ -10434,16 +10669,20 @@ class DzElementData extends DzCustomData {
  * @classdesc If the file to post-load is a script:
 
 
+
 A global transient variable named DataItem, which refers to the DzElementPostLoadFileData that invoked the execution of the script, is provided to the script in the global context at runtime. Attempts to use this global variable outside of the associated script will result in a ReferenceError.
 
 
+
 A global transient variable named FileIOSettings, which refers to the DzFileIOSettings that was used when the element that owns the data item was loaded, is provided to the script in the global context at runtime. Attempts to use this global variable outside of the associated script will result in a ReferenceError. (since 4.9.4.109)
+
 
 
 Attention:
 
 
  The differences between this implementation and DzSimpleElementScriptData are that this implementation can reference the file path of a file that is not a script and it does not have an associated DzSettings that can be used to configure said script.
+
 
 
 
@@ -10460,7 +10699,7 @@ class DzElementPostLoadFileData extends DzElementData {
 	/**
  * @description Return Value:
 */
-	getPostLoadFilePath() {
+	getPostLoadFilePath():String {
 	
 	}
 	/**
@@ -10504,7 +10743,7 @@ class DzEnumProperty extends DzIntProperty {
 	/**
  * @description Return Value:
 */
-	getDefaultStringValue() {
+	getDefaultStringValue():String {
 	
 	}
 	/**
@@ -10522,13 +10761,13 @@ class DzEnumProperty extends DzIntProperty {
 	/**
  * @description Return Value:
 */
-	getNumItems() {
+	getNumItems():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRawStringValue() {
+	getRawStringValue():String {
 	
 	}
 	/**
@@ -10546,7 +10785,7 @@ class DzEnumProperty extends DzIntProperty {
 	/**
  * @description Return Value:
 */
-	getStringValue() {
+	getStringValue():String {
 	
 	}
 	/**
@@ -10558,7 +10797,7 @@ class DzEnumProperty extends DzIntProperty {
 	/**
  * @description Removes all items and makes this property essentially invalid.
 */
-	removeAllItems() {
+	removeAllItems():void {
 	
 	}
 	/**
@@ -10600,6 +10839,8 @@ class DzEnumSlider extends DzWidget {
 	count:Number;
 	text:String;
 	value:Number;
+	text:String;
+	value:Number;
 	/**
  * @description Creates a new enumerated slider widget.
  * @constructor
@@ -10616,7 +10857,7 @@ class DzEnumSlider extends DzWidget {
 	/**
  * @description Clears the list of string values for this slider.
 */
-	clear() {
+	clear():void {
 	
 	}
 	/**
@@ -10649,7 +10890,9 @@ class DzEnumSlider extends DzWidget {
  * @classdesc This utility class implements the logic of 'baking' (unlinking) the current state of a controller property on a node to the numeric properties it controls, such that the controlled properties remain at the respective values they were at in that moment of time. The DzERCLink between the 'baked' properties and the controller is removed.
 
 
+
 The controller property (the DzNumericProperty that does the controlling) must be set before calling doBake(); see setControllerProperty().
+
 
 
 See Also:
@@ -10659,10 +10902,12 @@ See Also:
 
 
 
+
 Attention:
 
 
  This object is provided by the Property Hierarchy plugin. It is only available when the Property Hierarchy plugin is activated and enabled.
+
 
 
 
@@ -10682,7 +10927,7 @@ class DzERCBake extends QObject {
 	/**
  * @description Performs the ERC bake based on the current settings.
 */
-	doBake() {
+	doBake():Boolean {
 	
 	}
 	/**
@@ -10694,7 +10939,7 @@ class DzERCBake extends QObject {
 	/**
  * @description Return Value:
 */
-	getControllerProperty() {
+	getControllerProperty():DzNumericProperty {
 	
 	}
 	/**
@@ -10709,13 +10954,17 @@ class DzERCBake extends QObject {
  * @classdesc This utility class implements the logic of 'freezing' (linking) the current state of numeric properties on a node (or multiple nodes) to a controller property, such that adjusting the controller property adjusts the linked properties in kind. The DzERCLink between the 'frozen' properties and the controller are created such that when the controller is set to the value it is at when the 'freeze' operation is performed, the 'frozen' properties will be at the respective values they were at in that moment of time.
 
 
+
 The controller node (the DzNode that the controlling property is located on) and the controller property (the DzNumericProperty that ultimately does the controlling) must be set before calling doFreeze(); see setControllerNode() and setControllerProperty().
+
 
 
 An additional property can be set and used to attentuate the effect of the controller property on the 'frozen' properties, or have its value attenuated as the controller property is applied, depending on the AttenuateMode set.
 
 
+
 The addPropertiesToFreeze() method is used to inspect the current state of the numeric properties on a a given node that are not currently set to their respective raw values and add them to the list of those properties to be linked to the controller property. This list of properties can be inspected and/or modified using the getPropertiesToFreeze() and setPropertiesToFreeze() methods.
+
 
 
 See Also:
@@ -10725,10 +10974,12 @@ See Also:
 
 
 
+
 Attention:
 
 
  This object is provided by the Property Hierarchy plugin. It is only available when the Property Hierarchy plugin is activated and enabled.
+
 
 
 
@@ -10764,61 +11015,61 @@ class DzERCFreeze extends QObject {
 	/**
  * @description Performs the ERC freeze based on the current settings.
 */
-	doFreeze() {
+	doFreeze():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getApplyController() {
+	getApplyController():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getAttenuateMode() {
+	getAttenuateMode():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getAttenuateProperty() {
+	getAttenuateProperty():DzNumericProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getControllerNode() {
+	getControllerNode():DzNode {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getControllerProperty() {
+	getControllerProperty():DzNumericProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getKeyed() {
+	getKeyed():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPropertiesToFreeze() {
+	getPropertiesToFreeze():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRestoreFigure() {
+	getRestoreFigure():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRestoreRigging() {
+	getRestoreRigging():Boolean {
 	
 	}
 	/**
@@ -10897,6 +11148,7 @@ class DzERCFreeze extends QObject {
 
 
 
+
 Where:
 
 
@@ -10910,13 +11162,17 @@ Where:
 
 
 
+
 As an example of ERC in action, lets say that there are 3 properties A, B, and C. B is linked to A with a 'ERCDeltaAdd' DzERCLink with a multiplier of 1.0 and an additive value of 0.0. C is linked to B with a 'ERCDeltaAdd' DzERCLink with a multiplier of 2.0 and an additive value of 1.0. So, if the keyed value of A is 10.0, B is 0.0, and C is 0.0, the final values of the properties would be calculated as:
+
 
 
 A = 10.0 B = 0.0 + (10.0 * 1.0) + 0.0 = 10.0 C = 0.0 + (10.0 * 2.0) + 1.0 = 21.0
 
 
+
 If B and C have keyed values - for example B is 5.0 and C is 2.0 - the final property values would be calculated as:
+
 
 
 A = 10.0 B = 5.0 + (10.0 * 1.0) + 0.0 = 15.0 C = 2.0 + (15.0 * 2.0) + 1.0 = 33.0
@@ -11016,7 +11272,7 @@ Add description.
 	/**
  * @description Clears all keyed values for links of the ERCKeyed type.
 */
-	clearKeys() {
+	clearKeys():void {
 	
 	}
 	/**
@@ -11034,7 +11290,7 @@ Add description.
 	/**
  * @description Return Value:
 */
-	getCurrentProperty() {
+	getCurrentProperty():DzNumericProperty {
 	
 	}
 	/**
@@ -11076,13 +11332,13 @@ Add description.
 	/**
  * @description Return Value:
 */
-	getNumKeyValues() {
+	getNumKeyValues():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getProperty() {
+	getProperty():DzNumericProperty {
 	
 	}
 	/**
@@ -11107,6 +11363,7 @@ Add description.
 }
 /**
  * @classdesc There is only one instance of this manager in an application. This instance is created and owned by DzApp. Don't create an instance of this class, but rather request a pointer to it from DzApp via DzApp.getExportMgr().
+
 
 
 See Also:
@@ -11160,13 +11417,13 @@ class DzExportMgr extends QObject {
 	/**
  * @description Return Value:
 */
-	getExportPath() {
+	getExportPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumExporters() {
+	getNumExporters():Number {
 	
 	}
 	/**
@@ -11187,6 +11444,7 @@ class DzExportMgr extends QObject {
  * @classdesc A 3 or 4 sided polygonal face within a polygon mesh. 
 
 
+
 See Also:
 
 
@@ -11194,6 +11452,24 @@ See Also:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/facet_dz}*/
 class DzFacet extends Object {
 	cageIndex:Number;
+	edgeIdx1:Number;
+	edgeIdx2:Number;
+	edgeIdx3:Number;
+	edgeIdx4:Number;
+	faceGroupIndex:Number;
+	materialIndex:Number;
+	normIdx1:Number;
+	normIdx2:Number;
+	normIdx3:Number;
+	normIdx4:Number;
+	uvwIdx1:Number;
+	uvwIdx2:Number;
+	uvwIdx3:Number;
+	uvwIdx4:Number;
+	vertIdx1:Number;
+	vertIdx2:Number;
+	vertIdx3:Number;
+	vertIdx4:Number;
 	edgeIdx1:Number;
 	edgeIdx2:Number;
 	edgeIdx3:Number;
@@ -11230,89 +11506,89 @@ Add description.
 	/**
  * @description Set the facet to a default state.
 */
-	clear() {
+	clear():void {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	clearTriFanCount() {
+	clearTriFanCount():void {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	clearTriFanRoot() {
+	clearTriFanRoot():void {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	getTriFanCount() {
+	getTriFanCount():Number {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	getTriFanEdgeCount() {
+	getTriFanEdgeCount():Number {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	getTriFanMaxEdgeIdx() {
+	getTriFanMaxEdgeIdx():Number {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	getTriFanOffset() {
+	getTriFanOffset():Number {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	getTriFanRoot() {
+	getTriFanRoot():Number {
 	
 	}
 	/**
  * @description return true if this is a 4 sided polygon, otherwise false
 */
-	isQuad() {
+	isQuad():Boolean {
 	
 	}
 	/**
  * @description return true if this is a 3 sided polygon, otherwise false
 */
-	isTri() {
+	isTri():Boolean {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	isTriFan() {
+	isTriFan():Boolean {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	isTriFanChild() {
+	isTriFanChild():Boolean {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	isTriFanRoot() {
+	isTriFanRoot():Boolean {
 	
 	}
 	/**
@@ -11500,7 +11776,7 @@ class DzFile extends DzFileInfo {
 	/**
  * @description Closes the file, sets its openMode() to NotOpen, and resets the error string.
 */
-	close() {
+	close():void {
 	
 	}
 	/**
@@ -11512,31 +11788,31 @@ class DzFile extends DzFileInfo {
 	/**
  * @description Return Value:
 */
-	eof() {
+	eof():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	error() {
+	error():FileError {
 	
 	}
 	/**
  * @description Return Value:
 */
-	errorString() {
+	errorString():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isOpen() {
+	isOpen():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isTextModeEnabled() {
+	isTextModeEnabled():Boolean {
 	
 	}
 	/**
@@ -11554,7 +11830,7 @@ class DzFile extends DzFileInfo {
 	/**
  * @description Return Value:
 */
-	openMode() {
+	openMode():void {
 	
 	}
 	/**
@@ -11566,13 +11842,13 @@ class DzFile extends DzFileInfo {
 	/**
  * @description Return Value:
 */
-	pos() {
+	pos():Number {
 	
 	}
 	/**
  * @description Read the entire file.
 */
-	read() {
+	read():String {
 	
 	}
 	/**
@@ -11584,13 +11860,13 @@ class DzFile extends DzFileInfo {
 	/**
  * @description Read the entire file.
 */
-	readAll() {
+	readAll():ByteArray {
 	
 	}
 	/**
  * @description Read one character from the file.
 */
-	readByte() {
+	readByte():Number {
 	
 	}
 	/**
@@ -11602,13 +11878,13 @@ class DzFile extends DzFileInfo {
 	/**
  * @description Read a line of text from the file.
 */
-	readLine() {
+	readLine():String {
 	
 	}
 	/**
  * @description Read the entire file and split it into lines of text.
 */
-	readLines() {
+	readLines():Array {
 	
 	}
 	/**
@@ -11621,7 +11897,7 @@ Add description.
 	/**
  * @description Seeks to the start of input.
 */
-	reset() {
+	reset():Boolean {
 	
 	}
 	/**
@@ -11676,6 +11952,7 @@ Add description.
 }
 /**
  * @classdesc The DzFileDialog class is available in DAZScript via Global.FileDialog.
+
 
 
 It provides functions that display OS native file dialogs to the user.
@@ -11765,7 +12042,7 @@ class DzFileFilter extends QObject {
 	/**
  * @description Return Value:
 */
-	getDefaultFilter() {
+	getDefaultFilter():Number {
 	
 	}
 	/**
@@ -11789,7 +12066,7 @@ class DzFileFilter extends QObject {
 	/**
  * @description Return Value:
 */
-	getNumFilters() {
+	getNumFilters():Number {
 	
 	}
 	/**
@@ -11880,194 +12157,194 @@ class DzFileInfo extends QObject {
 	/**
  * @description Deprecated
 */
-	absFileName() {
+	absFileName():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	absoluteDir() {
+	absoluteDir():DzDir {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	absoluteFilePath() {
+	absoluteFilePath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	absolutePath() {
+	absolutePath():String {
 	
 	}
 	/**
  * @description Deprecated
 */
-	baseName() {
+	baseName():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	bundleName() {
+	bundleName():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	caching() {
+	caching():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	canonicalFilePath() {
+	canonicalFilePath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	canonicalPath() {
+	canonicalPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	completeBaseName() {
+	completeBaseName():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	completeSuffix() {
+	completeSuffix():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	created() {
+	created():Date {
 	
 	}
 	/**
  * @description Return Value:
 */
-	dir() {
+	dir():DzDir {
 	
 	}
 	/**
  * @description Return Value:
 */
-	exists() {
+	exists():Boolean {
 	
 	}
 	/**
  * @description Deprecated
 */
-	extension() {
+	extension():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	fileName() {
+	fileName():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	filePath() {
+	filePath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isAbsolute() {
+	isAbsolute():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isBundle() {
+	isBundle():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isDir() {
+	isDir():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isExecutable() {
+	isExecutable():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isFile() {
+	isFile():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isHidden() {
+	isHidden():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isReadable() {
+	isReadable():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isRelative() {
+	isRelative():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isRoot() {
+	isRoot():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isSymLink() {
+	isSymLink():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isWritable() {
+	isWritable():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	lastModified() {
+	lastModified():Date {
 	
 	}
 	/**
  * @description Return Value:
 */
-	lastRead() {
+	lastRead():Date {
 	
 	}
 	/**
  * @description Converts the file's path to an absolute path if it is not already in that form.
 */
-	makeAbsolute() {
+	makeAbsolute():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	path() {
+	path():String {
 	
 	}
 	/**
@@ -12080,19 +12357,19 @@ Add description.
 	/**
  * @description Return Value:
 */
-	permissions() {
+	permissions():void {
 	
 	}
 	/**
  * @description Refreshes information about the file, i.e. reads in information from the file system the next time a cached property is fetched.
 */
-	refresh() {
+	refresh():void {
 	
 	}
 	/**
  * @description Delete the file from the disk.
 */
-	remove() {
+	remove():Boolean {
 	
 	}
 	/**
@@ -12122,25 +12399,25 @@ Add description.
 	/**
  * @description Return Value:
 */
-	size() {
+	size():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	sizeStr() {
+	sizeStr():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	suffix() {
+	suffix():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	symLinkTarget() {
+	symLinkTarget():String {
 	
 	}
 
@@ -12166,7 +12443,7 @@ Add description.
 	/**
  * @description Return Value:
 */
-	showOptions() {
+	showOptions():Boolean {
 	
 	}
 
@@ -12175,15 +12452,19 @@ Add description.
  * @classdesc This class manages presets in the form of DzFileIOSettings objects for various importers, exporters, and other forms of File I/O.
 
 
+
 There is only one instance of this manager in an application. This instance is created and owned by DzApp. Don't create an instance of this class, but rather request it from DzApp via DzApp.getFileIOPresetMgr().
+
 
 
 File I/O presets are defined by a unique name. They have two types of settings: Specific Settings and Common Settings.
 
 
+
 Specific Settings
 
  Specific settings are tied to a class name. This class name is typically, but not always, the name of an importer or exporter, such as "DzObjImporter" or "DzObjExporter." The key values for specific settings will vary based on the class.
+
 
 
 Common Settings
@@ -12202,6 +12483,7 @@ Common Settings
  getInvertDepthAxisKey()
 
  getScaleKey()
+
 
 
 
@@ -12278,37 +12560,37 @@ Add description.
 	/**
  * @description Return Value:
 */
-	getCustomPresetLabel() {
+	getCustomPresetLabel():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDepthAxisKey() {
+	getDepthAxisKey():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getInvertDepthAxisKey() {
+	getInvertDepthAxisKey():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getInvertLateralAxisKey() {
+	getInvertLateralAxisKey():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getInvertVerticalAxisKey() {
+	getInvertVerticalAxisKey():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLateralAxisKey() {
+	getLateralAxisKey():String {
 	
 	}
 	/**
@@ -12326,7 +12608,7 @@ Add description.
 	/**
  * @description Note:
 */
-	getScaleKey() {
+	getScaleKey():String {
 	
 	}
 	/**
@@ -12358,7 +12640,7 @@ Add description.
 	/**
  * @description Return Value:
 */
-	getVerticalAxisKey() {
+	getVerticalAxisKey():String {
 	
 	}
 	/**
@@ -12463,13 +12745,13 @@ class DzFileProperty extends DzStringProperty {
 	/**
  * @description Gets the filter value.
 */
-	getFilter() {
+	getFilter():String {
 	
 	}
 	/**
  * @description Gets the file type.
 */
-	getType() {
+	getType():FileType {
 	
 	}
 	/**
@@ -12494,13 +12776,13 @@ class DzFlipManip extends DzImageManip {
 	/**
  * @description Return Value:
 */
-	flipHorizontal() {
+	flipHorizontal():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	flipVertical() {
+	flipVertical():Boolean {
 	
 	}
 	/**
@@ -12557,14 +12839,14 @@ class DzFloat2Property extends DzFloatProperty {
 	/**
  * @description Return Value:
 */
-	getDefaultFloat2Value() {
+	getDefaultFloat2Value():DzVec2 {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	getFloat2FollowValue() {
+	getFloat2FollowValue():DzVec2 {
 	
 	}
 	/**
@@ -12577,7 +12859,7 @@ Add description.
 	/**
  * @description Return Value:
 */
-	getFloat2Value() {
+	getFloat2Value():DzVec2 {
 	
 	}
 	/**
@@ -12595,7 +12877,7 @@ Add description.
 	/**
  * @description This function is provided for the special case of ERC link redirection; sometimes called 'cross-talk'. For example, if Figure A (a piece of clothing, for example) is 'Fit To' Figure B, the ERC links on Figure A are redirected to follow channels on Figure B; this is how morphs on an item of clothing will follow morphs on the figure, etc. This function will provide the value of the property ignoring any redirection of ERC links. So, for a figure that is not 'Fit To' another figure, this will return the same value as getValue(). For a figure that is 'Fit To' another figure, this will return the value that the property would have if the ERC link had not been redirected.
 */
-	getLocalFloat2Value() {
+	getLocalFloat2Value():DzVec2 {
 	
 	}
 	/**
@@ -12613,7 +12895,7 @@ Add description.
 	/**
  * @description This function is provided to make it easy to get the 'keyed' value of the property without any modifications. When the value of a property is evaluated, first the value based on key interpolation is calculated, that value is then passed to each of the controllers on the property (ERC links for example) which can modify that value. This modified value is then returned as the value of the property by getFloat2Value(). This function returns the value of the property before the application of the controllers; strictly the result of key interpolation.
 */
-	getRawFloat2Value() {
+	getRawFloat2Value():DzVec2 {
 	
 	}
 	/**
@@ -12694,14 +12976,14 @@ class DzFloat3Property extends DzFloatProperty {
 	/**
  * @description Return Value:
 */
-	getDefaultFloat3Value() {
+	getDefaultFloat3Value():DzVec3 {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	getFloat3FollowValue() {
+	getFloat3FollowValue():DzVec3 {
 	
 	}
 	/**
@@ -12714,7 +12996,7 @@ Add description.
 	/**
  * @description Return Value:
 */
-	getFloat3Value() {
+	getFloat3Value():DzVec3 {
 	
 	}
 	/**
@@ -12732,7 +13014,7 @@ Add description.
 	/**
  * @description This function is provided for the special case of ERC link redirection; sometimes called 'cross-talk'. For example, if Figure A (a piece of clothing, for example) is 'Fit To' Figure B, the ERC links on Figure A are redirected to follow channels on Figure B; this is how morphs on an item of clothing will follow morphs on the figure, etc. This function will provide the value of the property ignoring any redirection of ERC links. So, for a figure that is not 'Fit To' another figure, this will return the same value as getValue(). For a figure that is 'Fit To' another figure, this will return the value that the property would have if the ERC link had not been redirected.
 */
-	getLocalFloat3Value() {
+	getLocalFloat3Value():DzVec3 {
 	
 	}
 	/**
@@ -12750,7 +13032,7 @@ Add description.
 	/**
  * @description This function is provided to make it easy to get the 'keyed' value of the property without any modifications. When the value of a property is evaluated, first the value based on key interpolation is calculated, that value is then passed to each of the controllers on the property (ERC links for example) which can modify that value. This modified value is then returned as the value of the property by getFloat3Value(). This function returns the value of the property before the application of the controllers; strictly the result of key interpolation.
 */
-	getRawFloat3Value() {
+	getRawFloat3Value():DzVec3 {
 	
 	}
 	/**
@@ -12796,6 +13078,8 @@ Add description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/floatcolor_dz}*/
 class DzFloatColor extends Object {
 	blue:String;
+	green:String;
+	red:String;
 	green:String;
 	red:String;
 	/**
@@ -12891,43 +13175,43 @@ class DzFloatColor extends Object {
 	/**
  * @description Holds the alpha value for the color. Should be in the [0,1] range.
 */
-	getColor() {
+	getColor():Color {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getGrayscale() {
+	getGrayscale():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getHsl() {
+	getHsl():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getHsv() {
+	getHsv():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getMaxRGBValue() {
+	getMaxRGBValue():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRelativeLuminance() {
+	getRelativeLuminance():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRgba() {
+	getRgba():Array {
 	
 	}
 	/**
@@ -13036,14 +13320,14 @@ Add description.
  * @description TODO:
 Add description.
 */
-	getDefaultFloatColorValue() {
+	getDefaultFloatColorValue():DzFloatColor {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	getFloatColorFollowValue() {
+	getFloatColorFollowValue():DzFloatColor {
 	
 	}
 	/**
@@ -13057,7 +13341,7 @@ Add description.
  * @description TODO:
 Add description.
 */
-	getFloatColorValue() {
+	getFloatColorValue():DzFloatColor {
 	
 	}
 	/**
@@ -13071,21 +13355,21 @@ Add description.
  * @description TODO:
 Add description.
 */
-	getFloatMax() {
+	getFloatMax():Number {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	getFloatMin() {
+	getFloatMin():Number {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	getFloatSensitivity() {
+	getFloatSensitivity():Number {
 	
 	}
 	/**
@@ -13106,7 +13390,7 @@ Add description.
  * @description TODO:
 Add description.
 */
-	getLocalFloatColorValue() {
+	getLocalFloatColorValue():DzFloatColor {
 	
 	}
 	/**
@@ -13120,7 +13404,7 @@ Add description.
  * @description TODO:
 Add description.
 */
-	getRawFloatColorValue() {
+	getRawFloatColorValue():DzFloatColor {
 	
 	}
 	/**
@@ -13326,19 +13610,19 @@ class DzFloatProperty extends DzNumericProperty {
 	/**
  * @description Return Value:
 */
-	getDefaultValue() {
+	getDefaultValue():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDisplayAsPercent() {
+	getDisplayAsPercent():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDoubleDefaultValue() {
+	getDoubleDefaultValue():Number {
 	
 	}
 	/**
@@ -13368,7 +13652,7 @@ class DzFloatProperty extends DzNumericProperty {
 	/**
  * @description This function is provided for the special case of ERC link redirection; sometimes called 'cross-talk'. For example, if Figure A (a piece of clothing, for example) is 'Fit To' Figure B, the ERC links on Figure A are redirected to follow channels on Figure B; this is how morphs on an item of clothing will follow morphs on the figure, etc. This function will provide the value of the property ignoring any redirection of ERC links. So, for a figure that is not 'Fit To' another figure, this will return the same value as getValue(). For a figure that is 'Fit To' another figure, this will return the value that the property would have if the ERC link had not been redirected.
 */
-	getLocalValue() {
+	getLocalValue():Number {
 	
 	}
 	/**
@@ -13380,19 +13664,19 @@ class DzFloatProperty extends DzNumericProperty {
 	/**
  * @description Return Value:
 */
-	getMax() {
+	getMax():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getMin() {
+	getMin():Number {
 	
 	}
 	/**
  * @description This function is provided to make it easy to get the 'keyed' value of the property without any modifications. When the value of a property is evaluated, first the value based on key interpolation is calculated, that value is then passed to each of the controllers on the property (ERC links for example) which can modify that value. This modified value is then returned as the value of the property by getValue(). This function returns the value of the property before the application of the controllers; strictly the result of key interpolation.
 */
-	getRawValue() {
+	getRawValue():Number {
 	
 	}
 	/**
@@ -13411,19 +13695,19 @@ Add description.
 	/**
  * @description Return Value:
 */
-	getSensitivity() {
+	getSensitivity():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTransformType() {
+	getTransformType():TransformType {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getValue() {
+	getValue():Number {
 	
 	}
 	/**
@@ -13558,6 +13842,17 @@ class DzFloatSlider extends DzWidget {
 	textEditable:Boolean;
 	textVisible:Boolean;
 	value:Number;
+	displayAsPercent:Boolean;
+	indeterminate:Boolean;
+	label:String;
+	labelVisible:Boolean;
+	max:Number;
+	min:Number;
+	sensitivity:Number;
+	text:String;
+	textEditable:Boolean;
+	textVisible:Boolean;
+	value:Number;
 	/**
  * @description Creates a slider as a child of the given parent widget.
  * @constructor
@@ -13569,6 +13864,7 @@ class DzFloatSlider extends DzWidget {
 }
 /**
  * @classdesc The "Folder" container type serves to present assets as the files they represent exist in the folder structure on disk.
+
 
 
 See Also:
@@ -13593,6 +13889,15 @@ class DzFolderAssetContainer extends DzAbstractAssetContainer, DzRefCountedItem 
 	isPoserIntermediate:Boolean;
 	isPoserTopLevel:Boolean;
 	onlyIncludeFolders:Array;
+	fileFilters:Array;
+	isImport:Boolean;
+	isImportTopLevel:Boolean;
+	isNative:Boolean;
+	isNativeTopLevel:Boolean;
+	isPoser:Boolean;
+	isPoserIntermediate:Boolean;
+	isPoserTopLevel:Boolean;
+	onlyIncludeFolders:Array;
 	/**
  * @description Return Value:
 */
@@ -13602,13 +13907,13 @@ class DzFolderAssetContainer extends DzAbstractAssetContainer, DzRefCountedItem 
 	/**
  * @description Return Value:
 */
-	getFullPath() {
+	getFullPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	hasDirectoryChildren() {
+	hasDirectoryChildren():Boolean {
 	
 	}
 	/**
@@ -13620,13 +13925,14 @@ class DzFolderAssetContainer extends DzAbstractAssetContainer, DzRefCountedItem 
 	/**
  * @description Attempts to update the child containers of this container.
 */
-	updateChildren() {
+	updateChildren():Boolean {
 	
 	}
 
 }
 /**
  * @classdesc This is the DAZScript counterpart to the QFont type used in the DAZ Studio SDK.
+
 
 
 Attention:
@@ -13636,6 +13942,12 @@ Attention:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/font}*/
 class Font extends QObject {
 	bold:Boolean;
+	family:String;
+	italic:Boolean;
+	pixelSize:Number;
+	pointSize:Number;
+	strikeout:Boolean;
+	underline:Boolean;
 	family:String;
 	italic:Boolean;
 	pixelSize:Number;
@@ -13678,7 +13990,7 @@ class Font extends QObject {
 	/**
  * @description Return Value:
 */
-	families() {
+	families():Array {
 	
 	}
 	/**
@@ -13716,7 +14028,7 @@ class DzGeometryShellNode extends DzNode {
  * @description TODO:
 Add description.
 */
-	getShellNodeControl() {
+	getShellNodeControl():DzNodeProperty {
 	
 	}
 
@@ -13760,11 +14072,510 @@ class DzGeomSourceFileData extends DzSourceFileData {
 	}
 
 }
+
+////////////////////////////////////////GLOBALS/////////////////////////////////////////////
+var false:Boolean;
+var Infinity:Number;
+var JSON:JSON;
+var Math:Math;
+var NaN:Number;
+var null:Object;
+var true:Boolean;
+var undefined:undefined;
+var App:DzApp;
+var ColorDialog:DzColorDialog;
+var FileDialog:DzFileDialog;
+var Geometry:DzGeometryUtil;
+var MainWindow:DzMainWindow;
+var MessageBox:DzMessageBox;
+var OpenGL:DzOpenGL;
+var Scene:DzScene;
+var System:DzSystem;
+var UndoStack:DzUndoStack;
+var Infinity:Number;
+var JSON:JSON;
+var Math:Math;
+var NaN:Number;
+var null:Object;
+var true:Boolean;
+var undefined:undefined;
+var App:DzApp;
+var ColorDialog:DzColorDialog;
+var FileDialog:DzFileDialog;
+var Geometry:DzGeometryUtil;
+var MainWindow:DzMainWindow;
+var MessageBox:DzMessageBox;
+var OpenGL:DzOpenGL;
+var Scene:DzScene;
+var System:DzSystem;
+var UndoStack:DzUndoStack;
+/**
+ * @description Parameter(s):
+*/
+function decodeURI(encodedURI:String):String {
+	
+	}
+/**
+ * @description Return Value:
+*/
+function decodeURIComponent(encodedURIComponent:String):String {
+	
+	}
+/**
+ * @description Parameter(s):
+*/
+function encodeURI(uri:String):String {
+	
+	}
+/**
+ * @description Return Value:
+*/
+function encodeURIComponent(uriComponent:String):String {
+	
+	}
+/**
+ * @description Deprecated
+*/
+function escape(text:String):String {
+	
+	}
+/**
+ * @description Parses and executes str, and returns the result.
+*/
+function eval(str:String):Object {
+	
+	}
+/**
+ * @description Parameter(s):
+*/
+function isFinite(expression:Object):Boolean {
+	
+	}
+/**
+ * @description Parameter(s):
+*/
+function isNaN(expression:Object):Boolean {
+	
+	}
+/**
+ * @description Parses str and returns the floating point number that it represents or NaN if the parse fails. Leading and trailing whitespace is ignored, and if the string contains a number followed by non-numeric characters, the value of the number is returned and the remainder of the string is ignored.
+*/
+function parseFloat(str:String):Number {
+	
+	}
+/**
+ * @description Parses the string and returns the integer that it represents or NaN if the parse fails. Leading and trailing whitespace is ignored, and if the string contains a number followed by non-numeric characters, the value of the number is returned and the remainder of the string is ignored.
+*/
+function parseInt(str:String, radix:Number):Number {
+	
+	}
+/**
+ * @description Deprecated
+*/
+function unescape(text:String):String {
+	
+	}
+/**
+ * @description While the garbage collector is automatically run for script objects that are no longer referenced, there is no guarantee on when it will take place. This function can be used to explicitly request garbage collection.
+*/
+function gc() {
+	
+	}
+/**
+ * @description Prints the expression to the console (if executed from within the Script Editor) or to the log.
+*/
+function print(expression:String):String {
+	
+	}
+/**
+ * @description Return Value:
+*/
+function qsTr(sourceText:String):String {
+	
+	}
+/**
+ * @description Return Value:
+*/
+function qsTranslate(sourceText:String):String {
+	
+	}
+/**
+ * @description Return Value:
+*/
+function qsTrId(id:String):String {
+	
+	}
+/**
+ * @description Scripts can call this function to accept and finish a hold on the undo stack started by calling beginUndo().
+*/
+function acceptUndo(caption:String):String {
+	
+	}
+/**
+ * @description Return Value:
+*/
+function backgroundProgressIsActive() {
+	
+	}
+/**
+ * @description Return Value:
+*/
+function backgroundProgressIsCancelled() {
+	
+	}
+/**
+ * @description Captures a view of scene seletion.
+*/
+function beginNodeSelectionHold() {
+	
+	}
+/**
+ * @description Starts a hold on the undo stack. It is recommended that scripts use this function rather than accessing DzUndoStack directly, since if the script crashes or a logic error results in leaving the undo stack open, calling this function insures that the undo stack will be closed at the end of script execution.
+*/
+function beginUndo() {
+	
+	}
+/**
+ * @description Scripts can call this function to cancel a hold on the undo stack started by calling beginUndo().
+*/
+function cancelUndo() {
+	
+	}
+/**
+ * @description Clears the application-standard busy cursor and returns the mouse cursor to the previous cursor. Match every call to setBusyCursor() with a call to this function.
+*/
+function clearBusyCursor() {
+	
+	}
+/**
+ * @description Clears all selection holds without restoring the selection.
+*/
+function clearNodeSelectionHolds() {
+	
+	}
+/**
+ * @description Scripts can call this function to clear the undo stack.
+*/
+function clearUndoStack() {
+	
+	}
+/**
+ * @description Connects a signal from one object to a function (slot) on another object.
+*/
+function connect(sender:Object, signal:String, receiver:Object, slot:String):Object {
+	
+	}
+/**
+ * @description Connects a signal from an object to a Daz Script function (slot).
+*/
+function connect(sender:Object, signal:String, functionRef:Function):Object {
+	
+	}
+/**
+ * @description Deprecated
+*/
+function ctrlPressed() {
+	
+	}
+/**
+ * @description Prints expression to the output console (stderr), followed by a newline.
+*/
+function debug(expression):void {
+	
+	}
+/**
+ * @description Disconnects a signal from one object to a function (slot).
+*/
+function disconnect(sender:Object, signal:String, functionRef:Function):Object {
+	
+	}
+/**
+ * @description Disconnects a signal from one object to a function (slot) on another object.
+*/
+function disconnect(sender:Object, signal:String, receiver:Object, slot:String):Object {
+	
+	}
+/**
+ * @description Removes a scene node selection hold on scene selection without restoring the selection.
+*/
+function dropNodeSelectionHold() {
+	
+	}
+/**
+ * @description Scripts can call this function to drop a hold on the undo stack started by calling beginUndo().
+*/
+function dropUndo() {
+	
+	}
+/**
+ * @description Ends the current background progress tracking operation, and closes the background progress if no other background progress tracking operations are active.
+*/
+function finishBackgroundProgress() {
+	
+	}
+/**
+ * @description Ends the current progress tracking operation, and closes the progress dialog if no other progress tracking operations are active.
+*/
+function finishProgress() {
+	
+	}
+/**
+ * @description Return Value:
+*/
+function getArguments() {
+	
+	}
+/**
+ * @description This function provides access to the desktop widget. This can be useful to get the size of the machine's desktop.
+*/
+function getDesktop() {
+	
+	}
+/**
+ * @description This function converts an error code into a string message.
+*/
+function getErrorMessage(errCode:DzError):String {
+	
+	}
+/**
+ * @description This function allows a script to get the object-parent of a QObject.
+*/
+function getObjectParent(obj:QObject):QObject {
+	
+	}
+/**
+ * @description Return Value:
+*/
+function getScriptAuthor() {
+	
+	}
+/**
+ * @description Return Value:
+*/
+function getScriptFileName() {
+	
+	}
+/**
+ * @description Return Value:
+*/
+function getScriptType() {
+	
+	}
+/**
+ * @description Return Value:
+*/
+function getScriptVersionString() {
+	
+	}
+/**
+ * @description Includes the contents of scriptPath in the same context as the calling script. This function should only be called within the global scope of the script; it should not be called within a nested scope and it should not be called inline. As a safeguard against circular references, the script engine keeps an internal list of unique paths for included scripts; per script context, per execution. Each time the function is called, scriptPath is checked against the list to ensure that the path has only been included once within the context of the script.
+*/
+function include(scriptPath:String):String {
+	
+	}
+/**
+ * @description This function allows a script to test if two QObject derived variables point to the same instance.
+*/
+function pointersAreEqual(ptr1:QObject, ptr2:QObject):Boolean {
+	
+	}
+/**
+ * @description Pauses execution of the script and allows the GUI thread time to process events.
+*/
+function processEvents() {
+	
+	}
+/**
+ * @description Return Value:
+*/
+function progressIsActive() {
+	
+	}
+/**
+ * @description Return Value:
+*/
+function progressIsCancelled() {
+	
+	}
+/**
+ * @description Restores the scene selection to the view at last call to beginNodeSelectionHold().
+*/
+function restoreNodeSelectionHold() {
+	
+	}
+/**
+ * @description Sets the application-standard busy cursor. Match every call to this function with a call to clearBusyCursor() to restore the previous cursor.
+*/
+function setBusyCursor() {
+	
+	}
+/**
+ * @description Deprecated
+*/
+function shiftPressed() {
+	
+	}
+/**
+ * @description Pauses the script for the specified number of milliseconds without blocking the application event loop.
+*/
+function sleep(milliseconds:Number):Number {
+	
+	}
+/**
+ * @description Displays a background progress bar to the user if one is not already being displayed and starts a progress tracking operation.
+*/
+function startBackgroundProgress(info:String, totalSteps:Number, isCancellable:Boolean):String {
+	
+	}
+/**
+ * @description Displays a progress dialog to the user if one is not already being displayed and starts a progress tracking operation.
+*/
+function startProgress(info:String, totalSteps:Number, isCancellable:Boolean, showTimeElapsed:Boolean):String {
+	
+	}
+/**
+ * @description Steps the current background progress forward the given number of steps.
+*/
+function stepBackgroundProgress(numSteps:Number):Number {
+	
+	}
+/**
+ * @description Steps the current progress dialog forward the given number of steps.
+*/
+function stepProgress(numSteps:Number):Number {
+	
+	}
+/**
+ * @description Sets the current background progress to the given number of steps.
+*/
+function updateBackgroundProgress(position:Number):Number {
+	
+	}
+/**
+ * @description Sets the current progress dialog to the given number of steps.
+*/
+function updateProgress(position:Number):Number {
+	
+	}
+
+/**
+ * @classdesc TODO:
+Add detailed description.
+ * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/gridlayout_dz}*/
+class DzGridLayout extends DzLayout {
+	/**
+ * @description Creates a grid layout that manages the children widgets of the given parent widget
+ * @constructor
+*/;
+	constructor(parent:DzWidget) {
+	
+	}
+	/**
+ * @description Creates a grid layout as a sub-layout of the given layout
+ * @constructor
+*/;
+	constructor(parent:DzLayout) {
+	
+	}
+	/**
+ * @description Adds the given layout to the items managed by this layout
+*/
+	addLayout(layout:DzLayout, row:Number, col:Number, rowSpan:Number, colSpan:Number):DzLayout {
+	
+	}
+	/**
+ * @description Deprecated
+*/
+	addMultiCellLayout(layout:DzLayout, fromRow:Number, toRow:Number, fromCol:Number, toCol:Number):DzLayout {
+	
+	}
+	/**
+ * @description Deprecated
+*/
+	addMultiCellWidget(widget:DzWidget, fromRow:Number, toRow:Number, fromCol:Number, toCol:Number):DzWidget {
+	
+	}
+	/**
+ * @description Adds the given widget to the items managed by this layout
+*/
+	addWidget(widget:DzWidget, row:Number, col:Number, rowSpan:Number, colSpan:Number):DzWidget {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	colCount():Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	colSpacing(col:Number):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	colStretch(col:Number):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	rowCount():Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	rowSpacing(row:Number):Number {
+	
+	}
+	/**
+ * @description Return Value:
+*/
+	rowStretch(row:Number):Number {
+	
+	}
+	/**
+ * @description Sets the minimum width for the given column
+*/
+	setColSpacing(col:Number, minSize:Number):Number {
+	
+	}
+	/**
+ * @description Sets the relative amount of stretch for the given column
+*/
+	setColStretch(col:Number, stretch:Number):Number {
+	
+	}
+	/**
+ * @description Sets the minimum height for the given row
+*/
+	setRowSpacing(row:Number, minSize:Number):Number {
+	
+	}
+	/**
+ * @description Sets the relative amount of stretch for the given row
+*/
+	setRowStretch(row:Number, stretch:Number):Number {
+	
+	}
+
+}
 /**
  * @classdesc A DzGroupBox provides a group box frame, with an optional title and an ability to be checked like a DzCheckBox.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/groupbox_dz}*/
 class DzGroupBox extends DzWidget {
 	alignment:DzWidget;
+	checkable:Boolean;
+	checked:Boolean;
+	columns:Number;
+	flat:Boolean;
+	insideMargin:Number;
+	insideSpacing:Number;
+	orientation:DzWidget;
+	title:String;
 	checkable:Boolean;
 	checked:Boolean;
 	columns:Number;
@@ -13792,6 +14603,7 @@ class DzGroupBox extends DzWidget {
  * @classdesc This specialized DzNode is intended for grouping multiple nodes in the scene under one parent node. This allows easy transformation, visibility and/or selectability of the whole group.
 
 
+
 The bounding box of the group is calculated by getting the world space bounding box of the immediate children of the group node. This allows better use of framing the group to see the whole of the contents of the group.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/groupnode_dz}*/
 class DzGroupNode extends DzNode {
@@ -13809,19 +14621,20 @@ Add description.
  * @classdesc Guide Pages are intended as a dynamic means of providing users with instructions on how to use a portion of the User Interface (UI), and/or provide widgets that simplify the process of getting started where an otherwise non-descript area of the UI would be displayed.
 
 
+
 These pages are typically found within a DzPane via instances of filecontenttab_dz or productcontenttab_dz, or within an embedded instance of productassetsview_dz or associatedassetsview_dz.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/guidepage_dz}*/
 class DzGuidePage extends QWidget {
 	/**
  * @description Return Value:
 */
-	defaultScriptPath() {
+	defaultScriptPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isCurrentPage() {
+	isCurrentPage():Boolean {
 	
 	}
 	/**
@@ -13833,13 +14646,13 @@ class DzGuidePage extends QWidget {
 	/**
  * @description Loads the contents of the page by calling the current script. A special script context is provided to this script which exposes a global "getWidget()" function that returns a DzWidget wrapper. This DzWidget can be used by the script to create, populate, and connect the UI components inside the widget.
 */
-	reload() {
+	reload():DzError {
 	
 	}
 	/**
  * @description Return Value:
 */
-	scriptFilename() {
+	scriptFilename():String {
 	
 	}
 	/**
@@ -13899,13 +14712,13 @@ class DzGZFile extends DzFileInfo {
 	/**
  * @description Closes the file.
 */
-	close() {
+	close():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	eof() {
+	eof():Boolean {
 	
 	}
 	/**
@@ -13917,25 +14730,25 @@ class DzGZFile extends DzFileInfo {
 	/**
  * @description Reads the entire file.
 */
-	read() {
+	read():String {
 	
 	}
 	/**
  * @description Read one uncompressed character from the file buffer.
 */
-	readByte() {
+	readByte():Number {
 	
 	}
 	/**
  * @description Read an uncompressed line of text from the file.
 */
-	readLine() {
+	readLine():String {
 	
 	}
 	/**
  * @description Uncompresses the entire file and splits it into lines of text.
 */
-	readLines() {
+	readLines():Array {
 	
 	}
 	/**
@@ -14014,6 +14827,9 @@ class DzHeader extends DzWidget {
 	movingEnabled:Boolean;
 	resizeEnabled:Boolean;
 	stretchEnabled:Boolean;
+	movingEnabled:Boolean;
+	resizeEnabled:Boolean;
+	stretchEnabled:Boolean;
 	/**
  * @description Return Value:
 */
@@ -14054,6 +14870,7 @@ class DzHeader extends DzWidget {
 }
 /**
  * @classdesc Use DzApp.getHelpMgr() to access.
+
 
 
 See daz_studio_help_generator for information on how to populate the Help Manager.
@@ -14129,7 +14946,7 @@ Add description.
 	/**
  * @description Return Value:
 */
-	getHelpContents() {
+	getHelpContents():void {
 	
 	}
 	/**
@@ -14165,19 +14982,19 @@ Add description.
 	/**
  * @description Return Value:
 */
-	getNumFilters() {
+	getNumFilters():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumIdentifiers() {
+	getNumIdentifiers():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumKeywords() {
+	getNumKeywords():Number {
 	
 	}
 	/**
@@ -14211,6 +15028,7 @@ class DzHGroupBox extends DzGroupBox {
  * @classdesc An asset save filter for saving a Hierarchical Material(s) Preset in the DSON format.
 
 
+
 See Also:
 
 
@@ -14231,6 +15049,7 @@ Add description.
  * @classdesc An asset save filter for saving a Hierarchical Pose Preset in the DSON format.
 
 
+
 See Also:
 
 
@@ -14249,6 +15068,7 @@ Add description.
 }
 /**
  * @classdesc This is the DAZScript counterpart to the QImage type used in the DAZ Studio SDK.
+
 
 
 Attention:
@@ -14488,7 +15308,7 @@ class Image extends QObject {
 	/**
  * @description Creates a copy of the image.
 */
-	copy() {
+	copy():void {
 	
 	}
 	/**
@@ -14536,7 +15356,7 @@ class Image extends QObject {
 	/**
  * @description Gets whether or not the image is Null.
 */
-	isNull() {
+	isNull():Boolean {
 	
 	}
 	/**
@@ -14554,7 +15374,7 @@ class Image extends QObject {
 	/**
  * @description Creates a copy of this image that has been mirrored vertically.
 */
-	mirror() {
+	mirror():void {
 	
 	}
 	/**
@@ -14626,7 +15446,7 @@ class Image extends QObject {
 	/**
  * @description Creates a copy of the image in which the Red and Blue values have been swapped.
 */
-	swapRGB() {
+	swapRGB():void {
 	
 	}
 	/**
@@ -14638,7 +15458,7 @@ class Image extends QObject {
 	/**
  * @description Return Value:
 */
-	textKeys() {
+	textKeys():Array {
 	
 	}
 
@@ -14657,7 +15477,7 @@ class DzImageBlend extends QObject {
 	/**
  * @description Return Value:
 */
-	getDescription() {
+	getDescription():String {
 	
 	}
 
@@ -14683,6 +15503,7 @@ Add detailed description.
 class DzImageComponent extends QObject {
 	label:String;
 	visible:Boolean;
+	visible:Boolean;
 	/**
  * @description TODO:
 Add description.
@@ -14694,13 +15515,13 @@ Add description.
  * @description TODO:
 Add description.
 */
-	freeImageData() {
+	freeImageData():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getImageData() {
+	getImageData():Image {
 	
 	}
 	/**
@@ -14714,13 +15535,13 @@ Add description.
  * @description TODO:
 Add description.
 */
-	getNumManipulators() {
+	getNumManipulators():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSize() {
+	getSize():Size {
 	
 	}
 	/**
@@ -14769,19 +15590,19 @@ class DzImageLayer extends DzImageComponent {
 	/**
  * @description Return Value:
 */
-	getBlendMode() {
+	getBlendMode():DzImageBlend {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDescription() {
+	getDescription():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getMask() {
+	getMask():DzImageMask {
 	
 	}
 	/**
@@ -14805,7 +15626,7 @@ class DzImageManip extends QObject {
 	/**
  * @description Return Value:
 */
-	getDescription() {
+	getDescription():String {
 	
 	}
 	/**
@@ -14837,7 +15658,7 @@ class DzImageMgr extends QObject {
 	/**
  * @description Called prior to editing an image; pauses image preparation.
 */
-	beginEditingImage() {
+	beginEditingImage():void {
 	
 	}
 	/**
@@ -14849,7 +15670,7 @@ class DzImageMgr extends QObject {
 	/**
  * @description This method is called from the 3D viewports to clear out any texture objects that are no longer being used. It has to be called only when a Studio OGL context is current.
 */
-	deleteUnusedTextureObjects() {
+	deleteUnusedTextureObjects():void {
 	
 	}
 	/**
@@ -14909,19 +15730,19 @@ class DzImageMgr extends QObject {
 	/**
  * @description Return Value:
 */
-	getImageOpenPath() {
+	getImageOpenPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getImageSavePath() {
+	getImageSavePath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumImages() {
+	getNumImages():Number {
 	
 	}
 	/**
@@ -14957,7 +15778,7 @@ class DzImageMgr extends QObject {
 	/**
  * @description Reloads any images whose source files have changed.
 */
-	refresh() {
+	refresh():void {
 	
 	}
 	/**
@@ -15002,31 +15823,31 @@ class DzImageProperty extends DzProperty {
 	/**
  * @description Return Value:
 */
-	getDefaultMapGamma() {
+	getDefaultMapGamma():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDefaultMapTextureType() {
+	getDefaultMapTextureType():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTextureModifier() {
+	getTextureModifier():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTextureModifierFlags() {
+	getTextureModifierFlags():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getValue() {
+	getValue():DzTexture {
 	
 	}
 	/**
@@ -15095,49 +15916,49 @@ class DzImageRenderHandler extends DzRenderHandler {
 	/**
  * @description Starts a render
 */
-	beginRender() {
+	beginRender():void {
 	
 	}
 	/**
  * @description Finishes rendering the current frame
 */
-	finishFrame() {
+	finishFrame():void {
 	
 	}
 	/**
  * @description Finishes the render and saves it out to file
 */
-	finishRender() {
+	finishRender():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getCreateThumbnail() {
+	getCreateThumbnail():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getCurrentFrameImage() {
+	getCurrentFrameImage():Image {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumFrames() {
+	getNumFrames():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSize() {
+	getSize():Size {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getStartingTime() {
+	getStartingTime():DzTime {
 	
 	}
 	/**
@@ -15154,6 +15975,11 @@ Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/imagetexture_dz}*/
 class DzImageTexture extends DzTexture, DzRefCountedItem {
 	assetAuthor:DzAuthor;
+	assetFileRevision:DzVersion;
+	assetId:String;
+	assetModifiedDate:Date;
+	assetSource:DzUri;
+	assetUri:DzUri;
 	assetFileRevision:DzVersion;
 	assetId:String;
 	assetModifiedDate:Date;
@@ -15185,7 +16011,7 @@ class DzImporter extends DzFileIO {
 	/**
  * @description Return Value:
 */
-	getDescription() {
+	getDescription():String {
 	
 	}
 	/**
@@ -15197,7 +16023,7 @@ class DzImporter extends DzFileIO {
 	/**
  * @description Return Value:
 */
-	getNumExtensions() {
+	getNumExtensions():Number {
 	
 	}
 	/**
@@ -15222,6 +16048,7 @@ class DzImporter extends DzFileIO {
 }
 /**
  * @classdesc There is only one instance of this manager in an application. This instance is created and owned by DzApp. Don't create an instance of this class, but rather request a pointer to it from DzApp via DzApp.getImportMgr().
+
 
 
 See Also:
@@ -15257,25 +16084,25 @@ class DzImportMgr extends QObject {
 	/**
  * @description Gets the full import file name.
 */
-	getImportFileName() {
+	getImportFileName():String {
 	
 	}
 	/**
  * @description Gets the default import directory - this is typically the last directory that the user imported a file from, and will be the directory that user will be taken to next time the file import dialog is displayed.
 */
-	getImportPath() {
+	getImportPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumImporters() {
+	getNumImporters():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isImporting() {
+	isImporting():Boolean {
 	
 	}
 	/**
@@ -15335,37 +16162,37 @@ class DzInfoDivider extends QWidget {
 	/**
  * @description Return Value:
 */
-	getActualDividerPercent() {
+	getActualDividerPercent():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getInfoTabs() {
+	getInfoTabs():DzInfoTabs {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPreferredDividerPercent() {
+	getPreferredDividerPercent():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getToggleState() {
+	getToggleState():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isMinimized() {
+	isMinimized():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isToggled() {
+	isToggled():Boolean {
 	
 	}
 	/**
@@ -15389,19 +16216,19 @@ class DzInfoDivider extends QWidget {
 	/**
  * @description Toggles the second widget between fully closed and fully open.
 */
-	toggleClosed() {
+	toggleClosed():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	toggleEnabled() {
+	toggleEnabled():Boolean {
 	
 	}
 	/**
  * @description Toggles the minimized state of the second widget. If toggling is disabled, this method has no effect. If either the first or second widget is null, toggling this method will also have no effect.
 */
-	toggleMinimized() {
+	toggleMinimized():void {
 	
 	}
 
@@ -15413,19 +16240,19 @@ class DzInfoTabs extends QWidget {
 	/**
  * @description Return Value:
 */
-	currentTab() {
+	currentTab():Number {
 	
 	}
 	/**
  * @description Hides the widget responsible for displaying tab contents
 */
-	hideStack() {
+	hideStack():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isStackHidden() {
+	isStackHidden():Boolean {
 	
 	}
 	/**
@@ -15497,7 +16324,7 @@ class DzInfoTabs extends QWidget {
 	/**
  * @description Shows the widget responsible for displaying the contents of the tabs
 */
-	showStack() {
+	showStack():void {
 	
 	}
 	/**
@@ -15535,79 +16362,79 @@ Add description.
 	/**
  * @description Return Value:
 */
-	getEndPointValues() {
+	getEndPointValues():DzVec3 {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getGeneralScaleValue() {
+	getGeneralScaleValue():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLabel() {
+	getLabel():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLocalPos() {
+	getLocalPos():DzVec3 {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLocalRot() {
+	getLocalRot():DzQuat {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLocalScale() {
+	getLocalScale():DzMatrix3 {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLocalTransform() {
+	getLocalTransform():DzMatrix3 {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getOrientation() {
+	getOrientation():DzQuat {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getOrientationValues() {
+	getOrientationValues():DzVec3 {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getOriginValues() {
+	getOriginValues():DzVec3 {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPositionValues() {
+	getPositionValues():DzVec3 {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRotationOrder() {
+	getRotationOrder():DzRotationOrder {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRotationValues() {
+	getRotationValues():DzVec3 {
 	
 	}
 	/**
@@ -15619,7 +16446,7 @@ Add description.
 	/**
  * @description Return Value:
 */
-	getWSPos() {
+	getWSPos():DzVec3 {
 	
 	}
 	/**
@@ -15631,7 +16458,7 @@ Add description.
 	/**
  * @description Return Value:
 */
-	getWSRot() {
+	getWSRot():DzQuat {
 	
 	}
 	/**
@@ -15643,13 +16470,13 @@ Add description.
 	/**
  * @description Return Value:
 */
-	getWSScale() {
+	getWSScale():DzMatrix3 {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getWSTransform() {
+	getWSTransform():DzMatrix3 {
 	
 	}
 	/**
@@ -15661,13 +16488,13 @@ Add description.
 	/**
  * @description Return Value:
 */
-	getXYZScaleValues() {
+	getXYZScaleValues():DzVec3 {
 	
 	}
 	/**
  * @description Return Value:
 */
-	inheritsScale() {
+	inheritsScale():Boolean {
 	
 	}
 	/**
@@ -15740,19 +16567,19 @@ class DzInstanceGroupNode extends DzInstanceNode {
 	/**
  * @description Begin edit of this node.
 */
-	beginItemEdit() {
+	beginItemEdit():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	clearItems() {
+	clearItems():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	createItem() {
+	createItem():DzInstanceGroupItem {
 	
 	}
 	/**
@@ -15764,7 +16591,7 @@ class DzInstanceGroupNode extends DzInstanceNode {
 	/**
  * @description Finish edit of this node.
 */
-	finishItemEdit() {
+	finishItemEdit():void {
 	
 	}
 	/**
@@ -15776,13 +16603,13 @@ class DzInstanceGroupNode extends DzInstanceNode {
 	/**
  * @description Return Value:
 */
-	getNumberOfGroupItems() {
+	getNumberOfGroupItems():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isEditingItems() {
+	isEditingItems():Boolean {
 	
 	}
 	/**
@@ -15807,19 +16634,19 @@ class DzInstanceNode extends DzNode {
 	/**
  * @description Return Value:
 */
-	getCopyModeControl() {
+	getCopyModeControl():DzEnumProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTarget() {
+	getTarget():DzNode {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTargetControl() {
+	getTargetControl():DzNodeProperty {
 	
 	}
 
@@ -15832,6 +16659,7 @@ class DzInstanceNode extends DzNode {
 
 
 
+
 Since:
 
 
@@ -15839,6 +16667,9 @@ Since:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/int2_dz}*/
 class DzInt2 extends Object {
 	height:Number;
+	width:Number;
+	x:Number;
+	y:Number;
 	width:Number;
 	x:Number;
 	y:Number;
@@ -15880,7 +16711,7 @@ class DzInt2 extends Object {
 	/**
  * @description Sets the value of each component to its respective absolute value.
 */
-	abs() {
+	abs():void {
 	
 	}
 	/**
@@ -15892,7 +16723,7 @@ class DzInt2 extends Object {
 	/**
  * @description Return Value:
 */
-	average() {
+	average():Number {
 	
 	}
 	/**
@@ -15940,19 +16771,19 @@ class DzInt2 extends Object {
 	/**
  * @description Return Value:
 */
-	isNull() {
+	isNull():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	length() {
+	length():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	lengthSquared() {
+	lengthSquared():Number {
 	
 	}
 	/**
@@ -15964,19 +16795,19 @@ class DzInt2 extends Object {
 	/**
  * @description Sets this vector to (1, 1).
 */
-	makeIdentity() {
+	makeIdentity():void {
 	
 	}
 	/**
  * @description Sets this vector to (0, 0).
 */
-	makeZero() {
+	makeZero():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	manhattanLength() {
+	manhattanLength():Number {
 	
 	}
 	/**
@@ -16000,7 +16831,7 @@ class DzInt2 extends Object {
 	/**
  * @description Negates each component of this vector.
 */
-	negate() {
+	negate():void {
 	
 	}
 	/**
@@ -16012,7 +16843,7 @@ class DzInt2 extends Object {
 	/**
  * @description Sets the value of each component to its respective squared value.
 */
-	square() {
+	square():void {
 	
 	}
 	/**
@@ -16024,7 +16855,7 @@ class DzInt2 extends Object {
 	/**
  * @description Swaps the values of x and y.
 */
-	transpose() {
+	transpose():void {
 	
 	}
 
@@ -16069,14 +16900,14 @@ class DzInt2Property extends DzIntProperty {
 	/**
  * @description Return Value:
 */
-	getDefaultInt2Value() {
+	getDefaultInt2Value():DzInt2 {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	getInt2FollowValue() {
+	getInt2FollowValue():DzInt2 {
 	
 	}
 	/**
@@ -16089,7 +16920,7 @@ Add description.
 	/**
  * @description Return Value:
 */
-	getInt2Value() {
+	getInt2Value():DzInt2 {
 	
 	}
 	/**
@@ -16107,7 +16938,7 @@ Add description.
 	/**
  * @description This function is provided for the special case of ERC link redirection; sometimes called 'cross-talk'. For example, if Figure A (a piece of clothing, for example) is 'Fit To' Figure B, the ERC links on Figure A are redirected to follow channels on Figure B; this is how morphs on an item of clothing will follow morphs on the figure, etc. This function will provide the value of the property ignoring any redirection of ERC links. So, for a figure that is not 'Fit To' another figure, this will return the same value as getValue(). For a figure that is 'Fit To' another figure, this will return the value that the property would have if the ERC link had not been redirected.
 */
-	getLocalInt2Value() {
+	getLocalInt2Value():DzInt2 {
 	
 	}
 	/**
@@ -16125,7 +16956,7 @@ Add description.
 	/**
  * @description This function is provided to make it easy to get the 'keyed' value of the property without any modifications. When the value of a property is evaluated, first the value based on key interpolation is calculated, that value is then passed to each of the controllers on the property (ERC links for example) which can modify that value. This modified value is then returned as the value of the property by getInt2Value(). This function returns the value of the property before the application of the controllers; strictly the result of key interpolation.
 */
-	getRawInt2Value() {
+	getRawInt2Value():DzInt2 {
 	
 	}
 	/**
@@ -16219,39 +17050,39 @@ class DzInteractiveLessonMgr extends QObject {
 	/**
  * @description Return Value:
 */
-	currentIndex() {
+	currentIndex():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	currentPath() {
+	currentPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	currentQuery() {
+	currentQuery():Boolean {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	currentQuery() {
+	currentQuery():Number {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	currentQuery() {
+	currentQuery():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	currentType() {
+	currentType():String {
 	
 	}
 	/**
@@ -16312,32 +17143,32 @@ Add description.
  * @description TODO:
 Add description.
 */
-	instructionTypes() {
+	instructionTypes():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isRunning() {
+	isRunning():Boolean {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	iterate() {
+	iterate():void {
 	
 	}
 	/**
  * @description Skips the next instruction in the lesson.
 */
-	skip() {
+	skip():void {
 	
 	}
 	/**
  * @description Stops the lesson.
 */
-	stop() {
+	stop():void {
 	
 	}
 
@@ -16352,19 +17183,19 @@ class DzInteractiveLessonObject extends QObject {
 	/**
  * @description Return Value:
 */
-	appendInstruction() {
+	appendInstruction():DzInteractiveInstructionObject {
 	
 	}
 	/**
  * @description Return Value:
 */
-	count() {
+	count():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	currentIndex() {
+	currentIndex():Number {
 	
 	}
 	/**
@@ -16382,7 +17213,7 @@ class DzInteractiveLessonObject extends QObject {
 	/**
  * @description Return Value:
 */
-	nextInstruction() {
+	nextInstruction():DzInteractiveInstructionObject {
 	
 	}
 
@@ -16421,13 +17252,13 @@ class DzIntProperty extends DzNumericProperty {
 	/**
  * @description Return Value:
 */
-	getDefaultValue() {
+	getDefaultValue():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDoubleDefaultValue() {
+	getDoubleDefaultValue():Number {
 	
 	}
 	/**
@@ -16445,7 +17276,7 @@ class DzIntProperty extends DzNumericProperty {
 	/**
  * @description This function is provided for the special case of ERC link redirection; sometimes called 'cross-talk'. For example, if Figure A (a piece of clothing, for example) is 'Fit To' Figure B, the ERC links on Figure A are redirected to follow channels on Figure B; this is how morphs on an item of clothing will follow morphs on the figure, etc. This function will provide the value of the property ignoring any redirection of ERC links. So, for a figure that is not 'Fit To' another figure, this will return the same value as getValue(). For a figure that is 'Fit To' another figure, this will return the value that the property would have if the ERC link had not been redirected.
 */
-	getLocalValue() {
+	getLocalValue():Number {
 	
 	}
 	/**
@@ -16457,13 +17288,13 @@ class DzIntProperty extends DzNumericProperty {
 	/**
  * @description Return Value:
 */
-	getMax() {
+	getMax():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getMin() {
+	getMin():Number {
 	
 	}
 	/**
@@ -16475,13 +17306,13 @@ class DzIntProperty extends DzNumericProperty {
 	/**
  * @description This function is provided to make it easy to get the 'keyed' value of the property without any modifications. When the value of a property is evaluated, first the value based on key interpolation is calculated, that value is then passed to each of the controllers on the property (ERC links for example) which can modify that value. This modified value is then returned as the value of the property by getValue(). This function returns the value of the property before the application of the controllers; strictly the result of key interpolation.
 */
-	getRawValue() {
+	getRawValue():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSensitivity() {
+	getSensitivity():Number {
 	
 	}
 	/**
@@ -16493,7 +17324,7 @@ class DzIntProperty extends DzNumericProperty {
 	/**
  * @description Return Value:
 */
-	getValue() {
+	getValue():Number {
 	
 	}
 	/**
@@ -16574,6 +17405,17 @@ class DzIntSlider extends DzWidget {
 	textEditable:Boolean;
 	textVisible:Boolean;
 	value:Number;
+	displayAsPercent:Boolean;
+	indeterminate:Boolean;
+	label:String;
+	labelVisible:Boolean;
+	max:Number;
+	min:Number;
+	sensitivity:Number;
+	text:String;
+	textEditable:Boolean;
+	textVisible:Boolean;
+	value:Number;
 	/**
  * @description Creates a slider as a child of the given parent widget.
  * @constructor
@@ -16599,7 +17441,7 @@ class DzInvertManip extends DzImageManip {
 	/**
  * @description Return Value:
 */
-	isOn() {
+	isOn():Boolean {
 	
 	}
 	/**
@@ -16624,19 +17466,20 @@ class DzIrayRenderer extends DzRenderer {
 	/**
  * @description Return Value:
 */
-	getPropertyHolder() {
+	getPropertyHolder():DzElement {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isIPRRendering() {
+	isIPRRendering():Boolean {
 	
 	}
 
 }
 /**
  * @classdesc An asset save filter for saving a Layered Image(s) Preset in the DSON format.
+
 
 
 See Also:
@@ -16680,13 +17523,13 @@ class DzLayeredImage extends DzBase {
 	/**
  * @description Return Value:
 */
-	getLayerCount() {
+	getLayerCount():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSize() {
+	getSize():Size {
 	
 	}
 	/**
@@ -16738,6 +17581,12 @@ class DzLayeredTexture extends DzTexture, DzRefCountedItem {
 	assetSource:DzUri;
 	assetUri:DzUri;
 	size:Boolean;
+	assetFileRevision:DzVersion;
+	assetId:String;
+	assetModifiedDate:Date;
+	assetSource:DzUri;
+	assetUri:DzUri;
+	size:Boolean;
 	/**
  * @description TODO:
 Add description.
@@ -16749,7 +17598,7 @@ Add description.
  * @description TODO:
 Add description.
 */
-	beginEditing() {
+	beginEditing():void {
 	
 	}
 	/**
@@ -16770,7 +17619,7 @@ Add description.
  * @description TODO:
 Add description.
 */
-	endEditing() {
+	endEditing():void {
 	
 	}
 	/**
@@ -16791,14 +17640,14 @@ Add description.
  * @description TODO:
 Add description.
 */
-	getNumLayers() {
+	getNumLayers():Number {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	getSourceDSI() {
+	getSourceDSI():String {
 	
 	}
 	/**
@@ -16819,14 +17668,14 @@ Add description.
  * @description TODO:
 Add description.
 */
-	refeshLayeredTexture() {
+	refeshLayeredTexture():void {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	removeAllLayers() {
+	removeAllLayers():void {
 	
 	}
 	/**
@@ -16866,6 +17715,8 @@ class DzLayout extends QObject {
 	autoAdd:Boolean;
 	margin:Number;
 	spacing:Number;
+	margin:Number;
+	spacing:Number;
 	/**
  * @description Adds the given widget to the items managed by this layout
 */
@@ -16878,10 +17729,13 @@ class DzLayout extends QObject {
  * @classdesc A DzLCDNumber provides a LCD-style number display.
 
 
+
 The following digits and symbols can be displayed:
 
 
+
 0/O, 1, 2, 3, 4, 5/S, 6, 7, 8, 9/g, - (minus), . (decimal point), A, B, C, D, E, F, h, H, L, o, P, r, u, U, Y, : (colon),  &deg;  (degree sign - which is specified as single quote in the string) and space.
+
 
 
 Illegal characters are substituted with spaces.
@@ -16974,61 +17828,62 @@ class DzLight extends DzCamera {
 	/**
  * @description Return Value:
 */
-	getCategories() {
+	getCategories():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getCategoriesControl() {
+	getCategoriesControl():DzStringProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDiffuseColor() {
+	getDiffuseColor():Color {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getShadowType() {
+	getShadowType():ShadowType {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getShadowTypeControl() {
+	getShadowTypeControl():DzEnumProperty {
 	
 	}
 	/**
  * @description Calculates the direction that light is being cast from this light.
 */
-	getWSDirection() {
+	getWSDirection():DzVec3 {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isAreaLight() {
+	isAreaLight():Boolean {
 	
 	}
 	/**
  * @description Indicates if this light is an infinite directional light.
 */
-	isDirectional() {
+	isDirectional():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isOn() {
+	isOn():Boolean {
 	
 	}
 
 }
 /**
  * @classdesc An asset save filter for saving a Light(s) Preset in the DSON format.
+
 
 
 See Also:
@@ -17054,6 +17909,7 @@ Add detailed description.
 class DzLine3 extends Object {
 	end:DzVec3;
 	origin:DzVec3;
+	origin:DzVec3;
 	/**
  * @description Default Constructor. Creates an uninitialized line.
  * @constructor
@@ -17078,7 +17934,7 @@ class DzLine3 extends Object {
 	/**
  * @description Return Value:
 */
-	getDirection() {
+	getDirection():DzVec3 {
 	
 	}
 	/**
@@ -17120,7 +17976,7 @@ class DzLine3 extends Object {
 	/**
  * @description Reverses the direction of the line by mirroring the endpoint.
 */
-	negate() {
+	negate():void {
 	
 	}
 	/**
@@ -17144,7 +18000,7 @@ class DzLine3 extends Object {
 	/**
  * @description Swaps the origin for the endpoint.
 */
-	swapEnds() {
+	swapEnds():void {
 	
 	}
 
@@ -17164,25 +18020,25 @@ class DzLinearPointLight extends DzPointLight {
 	/**
  * @description Return Value:
 */
-	getFallOffEnd() {
+	getFallOffEnd():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFallOffEndControl() {
+	getFallOffEndControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFallOffStart() {
+	getFallOffStart():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFallOffStartControl() {
+	getFallOffStartControl():DzFloatProperty {
 	
 	}
 	/**
@@ -17233,25 +18089,25 @@ class DzLineEdit extends DzWidget {
 	/**
  * @description If text is currently selected, it will be deleted and the cursor moved to the beginning of the selection. If no text is selected, the cursor will be moved one character to the left and the character will be deleted.
 */
-	backspace() {
+	backspace():void {
 	
 	}
 	/**
  * @description Clears the text in the editor.
 */
-	clear() {
+	clear():void {
 	
 	}
 	/**
  * @description Deprecated
 */
-	clearModified() {
+	clearModified():void {
 	
 	}
 	/**
  * @description Copies the selected text into the clipboard.
 */
-	copy() {
+	copy():void {
 	
 	}
 	/**
@@ -17281,19 +18137,19 @@ class DzLineEdit extends DzWidget {
 	/**
  * @description Copies the selected text into the clipboard and removes it from the editor.
 */
-	cut() {
+	cut():void {
 	
 	}
 	/**
  * @description If text is currently selected, it will be deleted and the cursor moved to the beginning of the selection. If no text is selected, the character to the right of the cursor will be deleted.
 */
-	del() {
+	del():void {
 	
 	}
 	/**
  * @description Clears any selection in the editor.
 */
-	deselect() {
+	deselect():void {
 	
 	}
 	/**
@@ -17305,13 +18161,13 @@ class DzLineEdit extends DzWidget {
 	/**
  * @description Return Value:
 */
-	hasAcceptableInput() {
+	hasAcceptableInput():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	hasSelectedText() {
+	hasSelectedText():Boolean {
 	
 	}
 	/**
@@ -17323,31 +18179,31 @@ class DzLineEdit extends DzWidget {
 	/**
  * @description Inserts any text on the clipboard into the line at the cursor's current position.
 */
-	paste() {
+	paste():void {
 	
 	}
 	/**
  * @description If redoAvailable is true, redoes the next operation in the editor.
 */
-	redo() {
+	redo():void {
 	
 	}
 	/**
  * @description Selects all the text in the editor.
 */
-	selectAll() {
+	selectAll():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	selectedText() {
+	selectedText():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	selectionStart() {
+	selectionStart():Number {
 	
 	}
 	/**
@@ -17377,7 +18233,7 @@ class DzLineEdit extends DzWidget {
 	/**
  * @description If undoAvailable is true, undoes the last operation in the editor.
 */
-	undo() {
+	undo():void {
 	
 	}
 
@@ -17437,7 +18293,7 @@ class DzListBox extends DzScrollView {
 	/**
  * @description Clears all items in the list box
 */
-	clear() {
+	clear():void {
 	
 	}
 	/**
@@ -17474,6 +18330,7 @@ class DzListBox extends DzScrollView {
 }
 /**
  * @classdesc Todo
+
 
 
 The findItem() method takes a ComparisonFlags enum. ComparisonFlags is either not exposed or not documented.
@@ -17575,13 +18432,13 @@ class DzListView extends DzScrollView {
 	/**
  * @description Clears all the items from the list view.
 */
-	clear() {
+	clear():void {
 	
 	}
 	/**
  * @description Clears the current selection in the view.
 */
-	clearSelection() {
+	clearSelection():void {
 	
 	}
 	/**
@@ -17611,7 +18468,7 @@ class DzListView extends DzScrollView {
 	/**
  * @description Return Value:
 */
-	currentItem() {
+	currentItem():DzListViewItem {
 	
 	}
 	/**
@@ -17635,7 +18492,7 @@ class DzListView extends DzScrollView {
 	/**
  * @description Return Value:
 */
-	firstChild() {
+	firstChild():DzListViewItem {
 	
 	}
 	/**
@@ -17659,7 +18516,7 @@ class DzListView extends DzScrollView {
 	/**
  * @description Return Value:
 */
-	isRenaming() {
+	isRenaming():Boolean {
 	
 	}
 	/**
@@ -17671,7 +18528,7 @@ class DzListView extends DzScrollView {
 	/**
  * @description Return Value:
 */
-	lastItem() {
+	lastItem():DzListViewItem {
 	
 	}
 	/**
@@ -17737,7 +18594,7 @@ class DzListView extends DzScrollView {
 	/**
  * @description Sort the view
 */
-	sort() {
+	sort():void {
 	
 	}
 
@@ -17747,6 +18604,16 @@ class DzListView extends DzScrollView {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/listviewitem_dz}*/
 class DzListViewItem extends QObject {
 	dragEnabled:Boolean;
+	dropEnabled:Boolean;
+	enabled:Boolean;
+	expandable:Boolean;
+	height:Number;
+	id:Number;
+	multiLinesEnabled:Boolean;
+	open:Boolean;
+	selectable:Boolean;
+	selected:Boolean;
+	visible:Boolean;
 	dropEnabled:Boolean;
 	enabled:Boolean;
 	expandable:Boolean;
@@ -17780,7 +18647,7 @@ class DzListViewItem extends QObject {
 	/**
  * @description Return Value:
 */
-	childCount() {
+	childCount():Number {
 	
 	}
 	/**
@@ -17798,13 +18665,13 @@ class DzListViewItem extends QObject {
 	/**
  * @description Return Value:
 */
-	depth() {
+	depth():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	firstChild() {
+	firstChild():void {
 	
 	}
 	/**
@@ -17816,7 +18683,7 @@ class DzListViewItem extends QObject {
 	/**
  * @description Return Value:
 */
-	getNumDataItems() {
+	getNumDataItems():Number {
 	
 	}
 	/**
@@ -17828,13 +18695,13 @@ class DzListViewItem extends QObject {
 	/**
  * @description Return Value:
 */
-	itemAbove() {
+	itemAbove():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	itemBelow() {
+	itemBelow():void {
 	
 	}
 	/**
@@ -17846,7 +18713,7 @@ class DzListViewItem extends QObject {
 	/**
  * @description Return Value:
 */
-	listView() {
+	listView():DzListView {
 	
 	}
 	/**
@@ -17858,13 +18725,13 @@ class DzListViewItem extends QObject {
 	/**
  * @description Return Value:
 */
-	nextSibling() {
+	nextSibling():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	parent() {
+	parent():void {
 	
 	}
 	/**
@@ -17906,7 +18773,7 @@ class DzListViewItem extends QObject {
 	/**
  * @description Sorts the children of this item according to the current sorting column and order.
 */
-	sort() {
+	sort():void {
 	
 	}
 	/**
@@ -17935,16 +18802,17 @@ class DzListViewItem extends QObject {
 class DzMainWindow extends QWidget {
 	alwaysOnTop:Boolean;
 	toolTipsEnabled:Boolean;
+	toolTipsEnabled:Boolean;
 	/**
  * @description Presents the user with a dialog that asks if they want to save changes to the scene, and does a scene save if the user selects yes.
 */
-	askSaveChanges() {
+	askSaveChanges():Boolean {
 	
 	}
 	/**
  * @description Presents the user with a dialog that asks if they want to turn off limits to apply the preset currently being loaded.
 */
-	askTurnOffLimits() {
+	askTurnOffLimits():Boolean {
 	
 	}
 	/**
@@ -17956,7 +18824,7 @@ class DzMainWindow extends QWidget {
 	/**
  * @description Clears a the current UI popup if there is one.
 */
-	clearUIPopUp() {
+	clearUIPopUp():void {
 	
 	}
 	/**
@@ -18016,7 +18884,7 @@ class DzMainWindow extends QWidget {
 	/**
  * @description Clears the scene
 */
-	doNewFile() {
+	doNewFile():Boolean {
 	
 	}
 	/**
@@ -18028,79 +18896,79 @@ class DzMainWindow extends QWidget {
 	/**
  * @description Switches from full screen back to normal mode
 */
-	exitFullScreen() {
+	exitFullScreen():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getActionMgr() {
+	getActionMgr():DzActionMgr {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getBottomDockArea() {
+	getBottomDockArea():DzDockArea {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getCenterDockArea() {
+	getCenterDockArea():DzDockArea {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getInteractiveLessonMgr() {
+	getInteractiveLessonMgr():DzInteractiveLessonMgr {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLeftDockArea() {
+	getLeftDockArea():DzDockArea {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPaneMgr() {
+	getPaneMgr():DzPaneMgr {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRightDockArea() {
+	getRightDockArea():DzDockArea {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTopDockArea() {
+	getTopDockArea():DzDockArea {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getUIPopUp() {
+	getUIPopUp():DzUIPopUpWgt {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getViewportMgr() {
+	getViewportMgr():DzViewportMgr {
 	
 	}
 	/**
  * @description Switches from normal to full screen mode
 */
-	goFullScreen() {
+	goFullScreen():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isUILocked() {
+	isUILocked():Boolean {
 	
 	}
 	/**
@@ -18112,19 +18980,19 @@ class DzMainWindow extends QWidget {
 	/**
  * @description Clear the message in the status bar.
 */
-	removePrompt() {
+	removePrompt():void {
 	
 	}
 	/**
  * @description A convenience method for forcing a repaint of the currently active 3D viewport (if any).
 */
-	repaintActive3DViewport() {
+	repaintActive3DViewport():void {
 	
 	}
 	/**
  * @description Restores the state of the UI Lock variable to the setting in the registry.
 */
-	restoreUILockState() {
+	restoreUILockState():void {
 	
 	}
 	/**
@@ -18136,7 +19004,7 @@ class DzMainWindow extends QWidget {
 	/**
  * @description Show the Home page dialog.
 */
-	showHomeDlg() {
+	showHomeDlg():void {
 	
 	}
 	/**
@@ -18155,6 +19023,7 @@ class DzMainWindow extends QWidget {
 }
 /**
  * @classdesc A "material" represents a collection of properties and settings that, when applied through the use of a "shader" (a small program/subroutine that describes how the settings are used), describe how the geometry associated with a 3D object interacts with light and ultimately what the surface of that 3D object looks like when rendered.
+
 
 
 See Also:
@@ -18176,6 +19045,12 @@ class DzMaterial extends DzElement, DzRefCountedItem {
 	assetSource:DzUri;
 	assetUri:DzUri;
 	renderPriority:DzRenderMgr;
+	assetFileRevision:DzVersion;
+	assetId:String;
+	assetModifiedDate:Date;
+	assetSource:DzUri;
+	assetUri:DzUri;
+	renderPriority:DzRenderMgr;
 	/**
  * @description Return Value:
 */
@@ -18185,7 +19060,7 @@ class DzMaterial extends DzElement, DzRefCountedItem {
 	/**
  * @description Return Value:
 */
-	getNumMaterials() {
+	getNumMaterials():Number {
 	
 	}
 	/**
@@ -18215,170 +19090,170 @@ class DzMaterial extends DzElement, DzRefCountedItem {
 	/**
  * @description Collects all the images that are being used by this material at the current time and inserts them into the given list if they are not already there.
 */
-	getAllMaps() {
+	getAllMaps():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getBakedMap() {
+	getBakedMap():DzTexture {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getBaseOpacity() {
+	getBaseOpacity():Number {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	getBoundingBox() {
+	getBoundingBox():DzBox3 {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getColorMap() {
+	getColorMap():DzTexture {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDiffuseColor() {
+	getDiffuseColor():Color {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getIndex() {
+	getIndex():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getMaterialName() {
+	getMaterialName():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumGLMaps() {
+	getNumGLMaps():Number {
 	
 	}
 	/**
  * @description Deprecated
 */
-	getNumUVMaps() {
+	getNumUVMaps():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getOpacityMap() {
+	getOpacityMap():DzTexture {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPropagatePriorityControl() {
+	getPropagatePriorityControl():DzBoolProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRenderPriorityControl() {
+	getRenderPriorityControl():DzEnumProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getShapeList() {
+	getShapeList():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSmoothAngleControl() {
+	getSmoothAngleControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSmoothControl() {
+	getSmoothControl():DzBoolProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSmoothingAngle() {
+	getSmoothingAngle():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTags() {
+	getTags():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTagsControl() {
+	getTagsControl():DzStringProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getUVSetControl() {
+	getUVSetControl():DzEnumProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isColorMappable() {
+	isColorMappable():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isHighlighted() {
+	isHighlighted():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isOpacityMappable() {
+	isOpacityMappable():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isOpaque() {
+	isOpaque():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isPropagateRenderPriorityToNodesEnabled() {
+	isPropagateRenderPriorityToNodesEnabled():Boolean {
 	
 	}
 	/**
  * @description Retrieve selection state.
 */
-	isSelected() {
+	isSelected():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isSmoothingOn() {
+	isSmoothingOn():Boolean {
 	
 	}
 	/**
  * @description Marks the asset as being modified. Makes the current author the author of the file.
 */
-	modifyAsset() {
+	modifyAsset():Boolean {
 	
 	}
 	/**
@@ -18391,13 +19266,13 @@ Add description.
  * @description TODO:
 Add description.
 */
-	needsPtex() {
+	needsPtex():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	needsTangentSpaceParams() {
+	needsTangentSpaceParams():Boolean {
 	
 	}
 	/**
@@ -18457,25 +19332,26 @@ Add description.
 	/**
  * @description Return Value:
 */
-	shouldAlwaysEmbed() {
+	shouldAlwaysEmbed():Boolean {
 	
 	}
 	/**
  * @description Causes this material to be drawn with a highlight based on the styles current highlight color. This is used by material selection tools, etc, to give visual feedback to the user about a material in the viewport.
 */
-	startDrawHighlight() {
+	startDrawHighlight():void {
 	
 	}
 	/**
  * @description Causes this material to stop being drawn with a highlight.
 */
-	stopDrawHighlight() {
+	stopDrawHighlight():void {
 	
 	}
 
 }
 /**
  * @classdesc An asset save filter for saving a Material(s) Preset in the DSON format.
+
 
 
 See Also:
@@ -18499,6 +19375,22 @@ Add description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/matrix4_dz}*/
 class DzMatrix4 extends Object {
 	isIdentity:Boolean;
+	m11:Number;
+	m12:Number;
+	m13:Number;
+	m14:Number;
+	m21:Number;
+	m22:Number;
+	m23:Number;
+	m24:Number;
+	m31:Number;
+	m32:Number;
+	m33:Number;
+	m34:Number;
+	m41:Number;
+	m42:Number;
+	m43:Number;
+	m44:Number;
 	m11:Number;
 	m12:Number;
 	m13:Number;
@@ -18553,25 +19445,25 @@ class DzMatrix4 extends Object {
 	/**
  * @description Return Value:
 */
-	inverse() {
+	inverse():void {
 	
 	}
 	/**
  * @description Test and choose best inverse for current matrix
 */
-	invert() {
+	invert():void {
 	
 	}
 	/**
  * @description Sets the matrix to be identity
 */
-	makeIdentity() {
+	makeIdentity():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	matrix3() {
+	matrix3():DzMatrix3 {
 	
 	}
 	/**
@@ -18595,7 +19487,7 @@ class DzMatrix4 extends Object {
 	/**
  * @description Test for orthogonal 3×3 sub-matrix (orthonormal rows)
 */
-	orthogonal() {
+	orthogonal():Boolean {
 	
 	}
 	/**
@@ -18722,7 +19614,7 @@ Add description.
 	/**
  * @description Return Value:
 */
-	trace() {
+	trace():Number {
 	
 	}
 	/**
@@ -18734,7 +19626,7 @@ Add description.
 	/**
  * @description Return Value:
 */
-	transpose() {
+	transpose():void {
 	
 	}
 
@@ -18783,7 +19675,7 @@ class DzMenu extends QObject {
 	/**
  * @description Shows the menu to the user.
 */
-	exec() {
+	exec():Number {
 	
 	}
 	/**
@@ -18795,7 +19687,7 @@ class DzMenu extends QObject {
 	/**
  * @description Return Value:
 */
-	isEmpty() {
+	isEmpty():Boolean {
 	
 	}
 
@@ -18804,17 +19696,22 @@ class DzMenu extends QObject {
  * @classdesc The DzMessageBox class is available in DAZScript via Global.MessageBox.
 
 
+
 It provides functions that display pre-built message boxes to the user. This is the easiest way for a script to interact with a user - simply call one of the functions as shown in the following examples:
 
 
+
 Example:
+
 
 
 Display an information box with an 'Ok' button
 
 MessageBox.information( qsTr("MyScript finished successfully."), qsTr("MyScript"), qsTr("&OK") );
 
+
 Example:
+
 
 
 Ask the user a question with 'Yes'/'No' buttons
@@ -18823,7 +19720,9 @@ if( MessageBox.question( qsTr("Do you want to reset the entire figure?"), qsTr("
 	resetEntireFigure();
 }
 
+
 Example:
+
 
 
 Display a warning message to the user
@@ -18832,7 +19731,9 @@ if( MessageBox.warning( qsTr("If you continue, the entire figure will be reset!"
 	return;
 }
 
+
 Example:
+
 
 
 Display a critical message to the user
@@ -18878,19 +19779,19 @@ class DzModifier extends DzElement {
 	/**
  * @description Return Value:
 */
-	getAssignedModifierStackSectionID() {
+	getAssignedModifierStackSectionID():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPreferredModifierStackSectionID() {
+	getPreferredModifierStackSectionID():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getUnknownModifierStackSectionID() {
+	getUnknownModifierStackSectionID():Number {
 	
 	}
 
@@ -18900,6 +19801,7 @@ class DzModifier extends DzElement {
 
 
  4.9.3.46
+
 
 
 
@@ -19052,133 +19954,133 @@ class DzMorphLoader extends QObject {
 	/**
  * @description Return Value:
 */
-	getAttenuateEdgeStrength() {
+	getAttenuateEdgeStrength():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getAttenuateMapPath() {
+	getAttenuateMapPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getAttenuateStrength() {
+	getAttenuateStrength():Number {
 	
 	}
 	/**
  * @description Gets whether or not orphans should be cleaned up when overwriting existing morphs. An 'orphan' is a morph by the same name that does not have any deltas from a new morph.
 */
-	getCleanUpOrphans() {
+	getCleanUpOrphans():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getControlNode() {
+	getControlNode():DzNode {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getControlProperty() {
+	getControlProperty():DzNumericProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getControlPropertyCustomLabel() {
+	getControlPropertyCustomLabel():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getControlPropertyERCCustomValue() {
+	getControlPropertyERCCustomValue():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getControlPropertyERCType() {
+	getControlPropertyERCType():DzERCLink {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getControlPropertyERCUseCustomValue() {
+	getControlPropertyERCUseCustomValue():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getControlPropertyUseCustomLabel() {
+	getControlPropertyUseCustomLabel():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getCreateControlProperty() {
+	getCreateControlProperty():Boolean {
 	
 	}
 	/**
  * @description Gets the minimum amount of deviation from the original position of a given vertex that will be recorded in the morph.
 */
-	getDeltaTolerance() {
+	getDeltaTolerance():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFilename() {
+	getFilename():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getHideSecondaryProperties() {
+	getHideSecondaryProperties():Boolean {
 	
 	}
 	/**
  * @description Gets the type of mirroring to apply.
 */
-	getMorphMirroring() {
+	getMorphMirroring():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getMorphName() {
+	getMorphName():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getOverwriteExisting() {
+	getOverwriteExisting():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPreserveExistingDeltas() {
+	getPreserveExistingDeltas():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPropertyGroupPath() {
+	getPropertyGroupPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getReverseDeformations() {
+	getReverseDeformations():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getReverseDeformationsPose() {
+	getReverseDeformationsPose():String {
 	
 	}
 	/**
@@ -19349,10 +20251,12 @@ class DzMorphLoader extends QObject {
  * @classdesc This class implements a batch of morph loader objects that will be applied to the same node(s).
 
 
+
 Since:
 
 
  4.9.3.46
+
 
 
 
@@ -19402,7 +20306,7 @@ class DzMorphLoaderBatch extends QObject {
 	/**
  * @description Clears the list of morphs to load.
 */
-	clear() {
+	clear():void {
 	
 	}
 	/**
@@ -19432,13 +20336,13 @@ class DzMorphLoaderBatch extends QObject {
 	/**
  * @description Return Value:
 */
-	getNode() {
+	getNode():DzNode {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumMorphs() {
+	getNumMorphs():Number {
 	
 	}
 	/**
@@ -19450,7 +20354,7 @@ class DzMorphLoaderBatch extends QObject {
 	/**
  * @description Return Value:
 */
-	presetConfigurationFile() {
+	presetConfigurationFile():String {
 	
 	}
 	/**
@@ -19486,13 +20390,14 @@ class DzMorphLoaderBatch extends QObject {
 	/**
  * @description Return Value:
 */
-	usePresetConfiguration() {
+	usePresetConfiguration():Boolean {
 	
 	}
 
 }
 /**
  * @classdesc An asset save filter for saving Morph Support Asset(s) in the DSON format.
+
 
 
 See Also:
@@ -19536,13 +20441,13 @@ class DzMultiMediaMgr extends QObject {
 	/**
  * @description Return Value:
 */
-	getNumAudioImporters() {
+	getNumAudioImporters():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumVideoExporters() {
+	getNumVideoExporters():Number {
 	
 	}
 	/**
@@ -19572,13 +20477,13 @@ class DzMultiMediaMgr extends QObject {
 	/**
  * @description Return Value:
 */
-	getAudioClipLoadPath() {
+	getAudioClipLoadPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getVideoClipSavePath() {
+	getVideoClipSavePath():String {
 	
 	}
 	/**
@@ -19611,10 +20516,12 @@ class DzMultiplyBlend extends DzImageBlend {
 
 
 
+
 Attention:
 
 
  This object is provided by the Align pane plugin. It is only available when the Align pane plugin is activated and enabled.
+
 
 
 
@@ -19830,31 +20737,31 @@ class DzNodeAligner extends QObject {
 	/**
  * @description Return Value:
 */
-	canAlign() {
+	canAlign():Boolean {
 	
 	}
 	/**
  * @description Clears the list of nodes to be processed.
 */
-	clearNodes() {
+	clearNodes():void {
 	
 	}
 	/**
  * @description Performs an alignment of nodes, based on the current options set.
 */
-	doAlign() {
+	doAlign():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNodes() {
+	getNodes():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getXAlign() {
+	getXAlign():void {
 	
 	}
 	/**
@@ -19866,13 +20773,13 @@ class DzNodeAligner extends QObject {
 	/**
  * @description Return Value:
 */
-	getXUseInterval() {
+	getXUseInterval():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getYAlign() {
+	getYAlign():void {
 	
 	}
 	/**
@@ -19884,13 +20791,13 @@ class DzNodeAligner extends QObject {
 	/**
  * @description Return Value:
 */
-	getYUseInterval() {
+	getYUseInterval():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getZAlign() {
+	getZAlign():void {
 	
 	}
 	/**
@@ -19902,7 +20809,7 @@ class DzNodeAligner extends QObject {
 	/**
  * @description Return Value:
 */
-	getZUseInterval() {
+	getZUseInterval():Boolean {
 	
 	}
 	/**
@@ -19988,7 +20895,7 @@ class DzNodeProperty extends DzProperty {
 	/**
  * @description Return Value:
 */
-	getDefaultValue() {
+	getDefaultValue():DzNode {
 	
 	}
 	/**
@@ -20006,7 +20913,7 @@ class DzNodeProperty extends DzProperty {
 	/**
  * @description Return Value:
 */
-	getValue() {
+	getValue():DzNode {
 	
 	}
 	/**
@@ -20055,25 +20962,25 @@ class DzNodeSelectionComboBox extends DzWidget {
 	/**
  * @description Clears the selection of any node(s).
 */
-	clearNodeSelection() {
+	clearNodeSelection():void {
 	
 	}
 	/**
  * @description Gets the nodes to be shown in the popup.
 */
-	getNodes() {
+	getNodes():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSelectedNode() {
+	getSelectedNode():DzNode {
 	
 	}
 	/**
  * @description Hide the popup.
 */
-	hidePopup() {
+	hidePopup():void {
 	
 	}
 	/**
@@ -20097,13 +21004,14 @@ class DzNodeSelectionComboBox extends DzWidget {
 	/**
  * @description Display the popup.
 */
-	showPopup() {
+	showPopup():void {
 	
 	}
 
 }
 /**
  * @classdesc An asset save filter for saving Figure or Prop Support Assets in the DSON format.
+
 
 
 See Also:
@@ -20123,7 +21031,7 @@ Add description.
 	/**
  * @description Return Value:
 */
-	getSetNode() {
+	getSetNode():DzNode {
 	
 	}
 	/**
@@ -20155,13 +21063,13 @@ class DzNumericNodeProperty extends DzFloatProperty {
 	/**
  * @description Return Value:
 */
-	getNode() {
+	getNode():DzNode {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isInvalidWithoutNode() {
+	isInvalidWithoutNode():Boolean {
 	
 	}
 	/**
@@ -20211,7 +21119,7 @@ class DzNumericProperty extends DzProperty {
 	/**
  * @description Clear the image map for this property.
 */
-	clearMap() {
+	clearMap():void {
 	
 	}
 	/**
@@ -20225,7 +21133,7 @@ Add description.
  * @description TODO:
 Add description.
 */
-	doesClampChangeValue() {
+	doesClampChangeValue():Boolean {
 	
 	}
 	/**
@@ -20237,20 +21145,20 @@ Add description.
 	/**
  * @description Return Value:
 */
-	getDefaultMapGamma() {
+	getDefaultMapGamma():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDefaultMapTextureType() {
+	getDefaultMapTextureType():Number {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	getDoubleDefaultValue() {
+	getDoubleDefaultValue():Number {
 	
 	}
 	/**
@@ -20262,21 +21170,21 @@ Add description.
 	/**
  * @description Return Value:
 */
-	getDoubleValue() {
+	getDoubleValue():Number {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	getFollowProperty() {
+	getFollowProperty():void {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	getFollowValue() {
+	getFollowValue():Number {
 	
 	}
 	/**
@@ -20289,13 +21197,13 @@ Add description.
 	/**
  * @description Return Value:
 */
-	getLinkProperty() {
+	getLinkProperty():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getMapValue() {
+	getMapValue():DzTexture {
 	
 	}
 	/**
@@ -20308,7 +21216,7 @@ Add description.
  * @description TODO:
 Add description.
 */
-	getNDoubleValue() {
+	getNDoubleValue():void {
 	
 	}
 	/**
@@ -20322,19 +21230,19 @@ Add description.
  * @description TODO:
 Add description.
 */
-	getNValueCount() {
+	getNValueCount():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTextureModifier() {
+	getTextureModifier():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTextureModifierFlags() {
+	getTextureModifierFlags():Number {
 	
 	}
 	/**
@@ -20348,14 +21256,14 @@ Add description.
  * @description TODO:
 Add description.
 */
-	getValueAsFloatColor() {
+	getValueAsFloatColor():DzFloatColor {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	getValueAsInt2() {
+	getValueAsInt2():DzInt2 {
 	
 	}
 	/**
@@ -20369,7 +21277,7 @@ Add description.
  * @description TODO:
 Add description.
 */
-	getValueAsVec2() {
+	getValueAsVec2():DzVec2 {
 	
 	}
 	/**
@@ -20383,7 +21291,7 @@ Add description.
  * @description TODO:
 Add description.
 */
-	getValueAsVec3() {
+	getValueAsVec3():DzVec3 {
 	
 	}
 	/**
@@ -20396,7 +21304,7 @@ Add description.
 	/**
  * @description Return Value:
 */
-	getXYZInterest() {
+	getXYZInterest():XYZInterest {
 	
 	}
 	/**
@@ -20408,43 +21316,43 @@ Add description.
 	/**
  * @description Return Value:
 */
-	isClamped() {
+	isClamped():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isInvalidWithoutMap() {
+	isInvalidWithoutMap():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isLinked() {
+	isLinked():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isMappable() {
+	isMappable():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isMapped() {
+	isMapped():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isMaster() {
+	isMaster():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isModulo() {
+	isModulo():Boolean {
 	
 	}
 	/**
@@ -20541,7 +21449,7 @@ Add description.
 	/**
  * @description Unlinks this property.
 */
-	unlink() {
+	unlink():void {
 	
 	}
 
@@ -20553,10 +21461,11 @@ Add detailed description.
 class QObject {
 	objectName:String;
 	name:String;
+	name:String;
 	/**
  * @description Schedules this object for deletion.
 */
-	deleteLater() {
+	deleteLater():void {
 	
 	}
 	/**
@@ -20574,13 +21483,13 @@ class QObject {
 	/**
  * @description Return Value:
 */
-	toString() {
+	toString():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	className() {
+	className():String {
 	
 	}
 	/**
@@ -20644,6 +21553,7 @@ Add detailed description.
 class DzOffsetManip extends DzImageManip {
 	xOffset:Number;
 	yOffset:Number;
+	yOffset:Number;
 	/**
  * @description Holds the vertical offset.
  * @constructor
@@ -20675,7 +21585,7 @@ class DzOpacityManip extends DzImageManip {
 	/**
  * @description Return Value:
 */
-	getOpacity() {
+	getOpacity():Number {
 	
 	}
 	/**
@@ -20720,139 +21630,139 @@ class DzOpenGL extends QObject {
 	/**
  * @description Return Value:
 */
-	getBoundingBoxActiveOpacity() {
+	getBoundingBoxActiveOpacity():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getBoundingBoxEdgeLength() {
+	getBoundingBoxEdgeLength():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getBoundingBoxInactiveOpacity() {
+	getBoundingBoxInactiveOpacity():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDepthBufferBits() {
+	getDepthBufferBits():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDrawNodeHighlight() {
+	getDrawNodeHighlight():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getMajorVersion() {
+	getMajorVersion():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getMaxTextureSize() {
+	getMaxTextureSize():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getMaxTextureUnits() {
+	getMaxTextureUnits():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getMinorVersion() {
+	getMinorVersion():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumAuxBuffers() {
+	getNumAuxBuffers():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumLights() {
+	getNumLights():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumOGLExtensions() {
+	getNumOGLExtensions():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getOpenGLVersion() {
+	getOpenGLVersion():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPBuffer() {
+	getPBuffer():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getReleaseNumber() {
+	getReleaseNumber():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSubDivisionWireOpacity() {
+	getSubDivisionWireOpacity():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTextureQuality() {
+	getTextureQuality():OGLTexQuality {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTextureQualityMaxSize() {
+	getTextureQualityMaxSize():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTriDivisionWireOpacity() {
+	getTriDivisionWireOpacity():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getWireframeOpacity() {
+	getWireframeOpacity():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isDisplayOptimizationEnabled() {
+	isDisplayOptimizationEnabled():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isMultisampleEnabled() {
+	isMultisampleEnabled():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isMultisampleSupported() {
+	isMultisampleSupported():Boolean {
 	
 	}
 	/**
@@ -20864,19 +21774,19 @@ class DzOpenGL extends QObject {
 	/**
  * @description Checks for support of the four following extensions: GL_ARB_shader_objects, GL_ARB_fragment_shader, GL_ARB_vertex_shader, GL_ARB_shading_language_100. All four extensions must exist for this function to return true.
 */
-	isOGLShaderLanguageSupported() {
+	isOGLShaderLanguageSupported():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isShadowingSupported() {
+	isShadowingSupported():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isVBOSupported() {
+	isVBOSupported():Boolean {
 	
 	}
 	/**
@@ -20947,6 +21857,7 @@ class DzOpenGL extends QObject {
 class DzOrientedBox3 extends Object {
 	localBox:DzBox3;
 	transform:DzMatrix3;
+	transform:DzMatrix3;
 	/**
  * @description Constructor. Creates an uninitialized box with an identity transform - the first point included in an uninitialized box will become the min and max for the box.
  * @constructor
@@ -20995,6 +21906,7 @@ class DzOrientedBox3 extends Object {
  * @classdesc This is the DAZScript counterpart to the QPalette type used in the DAZ Studio SDK.
 
 
+
 Attention:
 
 
@@ -21002,6 +21914,29 @@ Attention:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/palette}*/
 class Palette extends QObject {
 	active:active;
+	alternateBase:Color;
+	background:Color;
+	base:Color;
+	brightText:Color;
+	button:Color;
+	buttonText:Color;
+	dark:Color;
+	disabled:disabled;
+	foreground:Color;
+	highlight:Color;
+	highlightedText:Color;
+	inactive:inactive;
+	light:Color;
+	link:Color;
+	linkVisited:Color;
+	mid:Color;
+	midlight:Color;
+	shadow:Color;
+	text:Color;
+	toolTipBase:Color;
+	toolTipText:Color;
+	window:Color;
+	windowText:Color;
 	alternateBase:Color;
 	background:Color;
 	base:Color;
@@ -21038,13 +21973,17 @@ class Palette extends QObject {
  * @classdesc A "Pane" is the application's implementation of a persistent non-modal set of closely related widgets that can be stacked, ordered, docked, undocked, minimized, restored, shown, hidden, positioned and/or resized by the end-user.
 
 
+
 Each pane has a label that is attached to the outer perimeter of the pane; whether the label appears as a tab/button/etc. to the user depends on the "style" that they currently has applied. A pane's label should briefly describe the concept (product, service, etc.) presented to the user within the pane.
+
 
 
 Actions performed by the user that are closely related to the concept of a given pane, but do not warrant a persitent widget within the pane itself, or are more advanced in nature, should be considered for placement with the pane's option menu.
 
 
+
 A pane is only ever displayed to the user within a DzPaneGroup; this is what gives the pane its ability to be stacked, ordered, docked, undocked, minimized, restored, shown, hidden, positioned and/or resized. A pane can only ever exist within one DzPaneGroup at a time.
+
 
 
 Panes are singletons; there is only one instance of a given DzPane subclass. Panes are registered with DzPaneMgr and are available to access and modifiy via script. Use DzPaneMgr.findPane() to obtain a pointer to the single instance of the subclass, using its classname.
@@ -21059,43 +21998,43 @@ class DzPane extends QWidget {
 	/**
  * @description Return Value:
 */
-	getLabel() {
+	getLabel():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getOptionsMenu() {
+	getOptionsMenu():DzActionMenu {
 	
 	}
 	/**
  * @description Sub classes must reimplement this function to provide the interface manager with the ability to update the user's settings file when the pane's default menu has changed. This function should return a value of 1 or greater if the pane provides a menu. Each time the default menu changes, this number should be incremented.
 */
-	getOptionsMenuVersion() {
+	getOptionsMenuVersion():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPaneGroup() {
+	getPaneGroup():DzPaneGroup {
 	
 	}
 	/**
  * @description Hides this pane in the interface.
 */
-	hidePane() {
+	hidePane():void {
 	
 	}
 	/**
  * @description Moves the DzPaneGroup that this pane is in, out of an undockable dialog.
 */
-	makeGroupDockable() {
+	makeGroupDockable():void {
 	
 	}
 	/**
  * @description Moves the DzPaneGroup that this pane resides in to a dialog.
 */
-	makeGroupUndockable() {
+	makeGroupUndockable():void {
 	
 	}
 	/**
@@ -21113,7 +22052,7 @@ class DzPane extends QWidget {
 	/**
  * @description Called to refresh internal pane data when scene contents, etc have changed.
 */
-	refresh() {
+	refresh():void {
 	
 	}
 	/**
@@ -21137,7 +22076,7 @@ class DzPane extends QWidget {
 	/**
  * @description Shows this pane in the interface.
 */
-	showPane() {
+	showPane():void {
 	
 	}
 	/**
@@ -21161,25 +22100,25 @@ class DzPaneGroup extends DzDockWindow {
 	/**
  * @description Return Value:
 */
-	getCurrentPane() {
+	getCurrentPane():DzPane {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDragOffset() {
+	getDragOffset():Point {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumPanes() {
+	getNumPanes():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumShownPanes() {
+	getNumShownPanes():Number {
 	
 	}
 	/**
@@ -21191,7 +22130,7 @@ class DzPaneGroup extends DzDockWindow {
 	/**
  * @description Hides all panes without changing their group ownership.
 */
-	hideAllPanes() {
+	hideAllPanes():void {
 	
 	}
 	/**
@@ -21209,7 +22148,7 @@ class DzPaneGroup extends DzDockWindow {
 	/**
  * @description Return Value:
 */
-	isUndockable() {
+	isUndockable():Boolean {
 	
 	}
 	/**
@@ -21227,7 +22166,7 @@ class DzPaneGroup extends DzDockWindow {
 	/**
  * @description Return Value:
 */
-	tabBarHidden() {
+	tabBarHidden():Boolean {
 	
 	}
 
@@ -21276,13 +22215,13 @@ class DzPaneMgr extends QWidget {
 	/**
  * @description Removes all panes from all groups.
 */
-	clearAllGroups() {
+	clearAllGroups():void {
 	
 	}
 	/**
  * @description Closes all pane group dialogs.
 */
-	closeAllPaneGroupDlgs() {
+	closeAllPaneGroupDlgs():void {
 	
 	}
 	/**
@@ -21294,7 +22233,7 @@ class DzPaneMgr extends QWidget {
 	/**
  * @description Return Value:
 */
-	createEmptyPaneGroup() {
+	createEmptyPaneGroup():DzPaneGroup {
 	
 	}
 	/**
@@ -21342,25 +22281,25 @@ class DzPaneMgr extends QWidget {
 	/**
  * @description Return Value:
 */
-	getActiveActivityLayout() {
+	getActiveActivityLayout():DzActivityLayout {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getActiveActivityLayoutIndex() {
+	getActiveActivityLayoutIndex():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getActivityBarImage() {
+	getActivityBarImage():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getActivityBarImageList() {
+	getActivityBarImageList():Array {
 	
 	}
 	/**
@@ -21372,25 +22311,25 @@ class DzPaneMgr extends QWidget {
 	/**
  * @description Return Value:
 */
-	getAdvancedLayout() {
+	getAdvancedLayout():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getBasicLayout() {
+	getBasicLayout():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDefaultLayout() {
+	getDefaultLayout():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDefaultLayoutNames() {
+	getDefaultLayoutNames():Array {
 	
 	}
 	/**
@@ -21402,43 +22341,43 @@ class DzPaneMgr extends QWidget {
 	/**
  * @description Return Value:
 */
-	getNumActivityLayouts() {
+	getNumActivityLayouts():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumDockBars() {
+	getNumDockBars():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumPaneGroupDlgs() {
+	getNumPaneGroupDlgs():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumPaneGroups() {
+	getNumPaneGroups():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumPanes() {
+	getNumPanes():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumToolBars() {
+	getNumToolBars():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getOrientTabsAlongTop() {
+	getOrientTabsAlongTop():Boolean {
 	
 	}
 	/**
@@ -21456,43 +22395,43 @@ class DzPaneMgr extends QWidget {
 	/**
  * @description Return Value:
 */
-	getPaneGroupList() {
+	getPaneGroupList():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPaneList() {
+	getPaneList():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getProLayout() {
+	getProLayout():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSessionLayout() {
+	getSessionLayout():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getShowLessonStrip() {
+	getShowLessonStrip():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSimpleLayout() {
+	getSimpleLayout():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getStandardLayout() {
+	getStandardLayout():String {
 	
 	}
 	/**
@@ -21504,19 +22443,19 @@ class DzPaneMgr extends QWidget {
 	/**
  * @description Return Value:
 */
-	getUseWorkflowAssistance() {
+	getUseWorkflowAssistance():Boolean {
 	
 	}
 	/**
  * @description Hide all panes from view in the interface.
 */
-	hideAllPanes() {
+	hideAllPanes():void {
 	
 	}
 	/**
  * @description Hides all the tool bars in the application.
 */
-	hideAllToolBars() {
+	hideAllToolBars():void {
 	
 	}
 	/**
@@ -21546,13 +22485,13 @@ class DzPaneMgr extends QWidget {
 	/**
  * @description Return Value:
 */
-	isActivityBarEnabled() {
+	isActivityBarEnabled():Boolean {
 	
 	}
 	/**
  * @description Loads the next image from the directory and sets it for the activity bar.
 */
-	loadNextActivityBarImage() {
+	loadNextActivityBarImage():void {
 	
 	}
 	/**
@@ -21582,13 +22521,13 @@ class DzPaneMgr extends QWidget {
 	/**
  * @description Removes all the current layouts.
 */
-	removeAllActivityLayouts() {
+	removeAllActivityLayouts():void {
 	
 	}
 	/**
  * @description Removes all tool bars from the application.
 */
-	removeAllToolBars() {
+	removeAllToolBars():void {
 	
 	}
 	/**
@@ -21690,7 +22629,7 @@ class DzPaneMgr extends QWidget {
 	/**
  * @description Make all panes visible in the interface.
 */
-	showAllPanes() {
+	showAllPanes():void {
 	
 	}
 	/**
@@ -21776,7 +22715,7 @@ class DzParentProductContainer extends DzAbstractAssetContainer, DzRefCountedIte
 	/**
  * @description Attempts to update the child containers of this container.
 */
-	updateChildren() {
+	updateChildren():Boolean {
 	
 	}
 
@@ -21795,26 +22734,26 @@ class DzPathComboBox extends DzWidget {
 	/**
  * @description Clear selection
 */
-	clearSelection() {
+	clearSelection():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	currentType() {
+	currentType():DzTypeAssetContainer {
 	
 	}
 	/**
  * @description Return Value:
 */
-	currentType() {
+	currentType():String {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	getRoot() {
+	getRoot():DzTypeAssetContainer {
 	
 	}
 	/**
@@ -21856,19 +22795,19 @@ class DzPersistentMenu extends QObject {
 	/**
  * @description Clear the active widget for this persistent menu.
 */
-	clearActiveWgt() {
+	clearActiveWgt():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getActionMenu() {
+	getActionMenu():DzActionMenu {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getActiveWgt() {
+	getActiveWgt():QWidget {
 	
 	}
 	/**
@@ -21883,6 +22822,7 @@ class DzPersistentMenu extends QObject {
  * @classdesc This is the DAZScript counterpart to the QPixmap type used in the DAZ Studio SDK.
 
 
+
 Attention:
 
 
@@ -21890,6 +22830,10 @@ Attention:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/pixmap}*/
 class Pixmap extends QObject {
 	depth:Number;
+	height:Number;
+	rect:Rect;
+	size:Size;
+	width:Number;
 	height:Number;
 	rect:Rect;
 	size:Size;
@@ -21930,7 +22874,7 @@ class Pixmap extends QObject {
 	/**
  * @description Gets whether or not the pixmap is Null.
 */
-	isNull() {
+	isNull():Boolean {
 	
 	}
 	/**
@@ -21966,7 +22910,7 @@ class Pixmap extends QObject {
 	/**
  * @description Return Value:
 */
-	toImage() {
+	toImage():Image {
 	
 	}
 
@@ -22003,85 +22947,85 @@ class DzPlugin extends QObject {
 	/**
  * @description Return Value:
 */
-	getAuthor() {
+	getAuthor():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDescription() {
+	getDescription():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getEvaluationInformation() {
+	getEvaluationInformation():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFilename() {
+	getFilename():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLoadOnStart() {
+	getLoadOnStart():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getName() {
+	getName():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPrefixes() {
+	getPrefixes():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getStatus() {
+	getStatus():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getStatusInformation() {
+	getStatusInformation():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getStatusString() {
+	getStatusString():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getVersion() {
+	getVersion():DzVersion {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getVersionString() {
+	getVersionString():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isActivated() {
+	isActivated():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isRegistered() {
+	isRegistered():Boolean {
 	
 	}
 	/**
@@ -22099,7 +23043,7 @@ class DzPluginMgr extends QObject {
 	/**
  * @description Shows the "About Installed Plugins" dialog.
 */
-	doAboutPluginsDlg() {
+	doAboutPluginsDlg():void {
 	
 	}
 	/**
@@ -22111,7 +23055,7 @@ class DzPluginMgr extends QObject {
 	/**
  * @description Return Value:
 */
-	getNumPlugins() {
+	getNumPlugins():Number {
 	
 	}
 	/**
@@ -22123,7 +23067,7 @@ class DzPluginMgr extends QObject {
 	/**
  * @description Return Value:
 */
-	saveConfiguration() {
+	saveConfiguration():Boolean {
 	
 	}
 	/**
@@ -22138,6 +23082,7 @@ class DzPluginMgr extends QObject {
  * @classdesc This is the DAZScript counterpart to the QPoint type used in the DAZ Studio SDK. A Point object is a two dimensional representation of a x (horizontal) and y (vertical) position.
 
 
+
 Attention:
 
 
@@ -22145,6 +23090,7 @@ Attention:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/point}*/
 class Point extends QObject {
 	x:Number;
+	y:Number;
 	y:Number;
 	/**
  * @description Default constructor.
@@ -22170,7 +23116,7 @@ class Point extends QObject {
 	/**
  * @description Return Value:
 */
-	cursorPos() {
+	cursorPos():void {
 	
 	}
 
@@ -22190,25 +23136,25 @@ class DzPointLight extends DzDistantLight {
 	/**
  * @description Return Value:
 */
-	getDecay() {
+	getDecay():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDecayControl() {
+	getDecayControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDisplayPersistence() {
+	getDisplayPersistence():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDisplayPersistenceControl() {
+	getDisplayPersistenceControl():DzBoolProperty {
 	
 	}
 	/**
@@ -22220,31 +23166,31 @@ class DzPointLight extends DzDistantLight {
 	/**
  * @description Return Value:
 */
-	getLightProfile() {
+	getLightProfile():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLightProfileControl() {
+	getLightProfileControl():DzFileProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLightVisibility() {
+	getLightVisibility():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSphereOpacity() {
+	getSphereOpacity():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSphereOpacityControl() {
+	getSphereOpacityControl():DzFloatProperty {
 	
 	}
 	/**
@@ -22279,6 +23225,7 @@ class DzPointLight extends DzDistantLight {
 class DzPopupMenu extends DzWidget {
 	checkable:Boolean;
 	tearOff:Boolean;
+	tearOff:Boolean;
 	/**
  * @description Creates a popup menu as a child of the given parent widget.
  * @constructor
@@ -22302,7 +23249,7 @@ Add description.
 	/**
  * @description Removes all menu items.
 */
-	clear() {
+	clear():void {
 	
 	}
 	/**
@@ -22322,7 +23269,7 @@ Add description.
 	/**
  * @description Executes this popup synchronously. In most situations you'll want to specify the position yourself, for example at the current mouse position.
 */
-	exec() {
+	exec():Number {
 	
 	}
 	/**
@@ -22475,6 +23422,7 @@ Add description.
  * @classdesc An asset save filter for saving a Pose Preset in the DSON format.
 
 
+
 See Also:
 
 
@@ -22499,6 +23447,14 @@ Add description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/presentation_dz}*/
 class DzPresentation extends DzBase {
 	autoFitBase:String;
+	colorA:Color;
+	colorB:Color;
+	description:String;
+	iconLarge:String;
+	iconSmall:String;
+	label:String;
+	preferredBase:String;
+	type:String;
 	colorA:Color;
 	colorB:Color;
 	description:String;
@@ -22544,25 +23500,25 @@ class DzProcess extends QObject {
 	/**
  * @description Return Value:
 */
-	canReadLineStderr() {
+	canReadLineStderr():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	canReadLineStdout() {
+	canReadLineStdout():Boolean {
 	
 	}
 	/**
  * @description Closes the process' standard input and deletes any pending data that hasn't been written to standard input.
 */
-	closeStdin() {
+	closeStdin():void {
 	
 	}
 	/**
  * @description Terminates the process.
 */
-	kill() {
+	kill():void {
 	
 	}
 	/**
@@ -22574,25 +23530,25 @@ class DzProcess extends QObject {
 	/**
  * @description Return Value:
 */
-	readLineStderr() {
+	readLineStderr():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	readLineStdout() {
+	readLineStdout():String {
 	
 	}
 	/**
  * @description Reads the data that the process has written to standard error. When new data is written, the readyReadStderr() signal is emitted.
 */
-	readStderr() {
+	readStderr():String {
 	
 	}
 	/**
  * @description Reads the data that the process has written to standard output. When new data is written, the readyReadStdout() signal is emitted.
 */
-	readStdout() {
+	readStdout():String {
 	
 	}
 	/**
@@ -22604,7 +23560,7 @@ class DzProcess extends QObject {
 	/**
  * @description Attempts to terminate the process.
 */
-	tryTerminate() {
+	tryTerminate():void {
 	
 	}
 	/**
@@ -22619,13 +23575,17 @@ class DzProcess extends QObject {
  * @classdesc The "Product" container type represents a collection of assets (and supporting files/metadata) that are presented as a single entity to the end-user. Each product is assigned a Globally Unique Idendtifier (GUID) that is used to identify that entity within the content ecosystem. Once a GUID has been assigned to a product (at creation), it does not (and should not) change.
 
 
+
 While nearly all of the information that defines a product can be replicated into another, for logistical reasons a GUID can only be associated with one "Store" (source) at any single moment in its lifetime. This means that if more than one content package containing metadata that defines a given GUID is installed by an end-user, the last package installed will define the product in the database.
+
 
 
 By default, all newly created assets are assigned to a "LOCAL USER" product. This product is represented by a GUID consisting entirely of zeros; i.e., "00000000-0000-0000-0000-000000000000"
 
 
+
 The "LOCAL USER" product is associated with the "LOCAL USER" store (source); this cannot be modified.
+
 
 
 See Also:
@@ -22664,19 +23624,19 @@ class DzProductAssetContainer extends DzAbstractAssetContainer, DzRefCountedItem
 	/**
  * @description Return Value:
 */
-	getDefaultStoreIconSize() {
+	getDefaultStoreIconSize():Size {
 	
 	}
 	/**
  * @description Cancels any pending cloud operation on the product, if any.
 */
-	cancelFromCloud() {
+	cancelFromCloud():void {
 	
 	}
 	/**
  * @description Sets the product as belonging to the default group identifier; 0.
 */
-	clearGroup() {
+	clearGroup():void {
 	
 	}
 	/**
@@ -22688,13 +23648,13 @@ class DzProductAssetContainer extends DzAbstractAssetContainer, DzRefCountedItem
 	/**
  * @description Return Value:
 */
-	getIconSize() {
+	getIconSize():Size {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getImage() {
+	getImage():Image {
 	
 	}
 	/**
@@ -22712,7 +23672,7 @@ class DzProductAssetContainer extends DzAbstractAssetContainer, DzRefCountedItem
 	/**
  * @description Return Value:
 */
-	getRealtiveInstallPath() {
+	getRealtiveInstallPath():String {
 	
 	}
 	/**
@@ -22724,13 +23684,13 @@ class DzProductAssetContainer extends DzAbstractAssetContainer, DzRefCountedItem
 	/**
  * @description Return Value:
 */
-	getURL() {
+	getURL():String {
 	
 	}
 	/**
  * @description Installs a product from the cloud if it is not currently installed. The user will be prompted to authenticate if necessary.
 */
-	installFromCloud() {
+	installFromCloud():void {
 	
 	}
 	/**
@@ -22742,19 +23702,19 @@ class DzProductAssetContainer extends DzAbstractAssetContainer, DzRefCountedItem
 	/**
  * @description Loads the default icon for this product.
 */
-	loadDefaultIcon() {
+	loadDefaultIcon():Boolean {
 	
 	}
 	/**
  * @description Causes the product image to be loaded.
 */
-	loadProductImage() {
+	loadProductImage():Boolean {
 	
 	}
 	/**
  * @description Pushes the metadata information into the database.
 */
-	pushMetadata() {
+	pushMetadata():Boolean {
 	
 	}
 	/**
@@ -22778,19 +23738,19 @@ class DzProductAssetContainer extends DzAbstractAssetContainer, DzRefCountedItem
 	/**
  * @description Uninstalls the product if it is currently installed.
 */
-	uninstall() {
+	uninstall():void {
 	
 	}
 	/**
  * @description Uninstalls the product if it is currently installed.
 */
-	uninstallFromCloud() {
+	uninstallFromCloud():void {
 	
 	}
 	/**
  * @description Updates the product if no other operations are currently being performed on it. The user will be prompted to authenticate if necessary.
 */
-	updateFromCloud() {
+	updateFromCloud():void {
 	
 	}
 	/**
@@ -22803,6 +23763,7 @@ class DzProductAssetContainer extends DzAbstractAssetContainer, DzRefCountedItem
 }
 /**
  * @classdesc This container type does not directly support assets. The primary purpose of this container type is to collect results returned by a database query for products.
+
 
 
 See Also:
@@ -22823,6 +23784,7 @@ class DzProductHolderContainer extends DzTopLevelAssetContainer, DzRefCountedIte
  * @classdesc An asset save filter for saving a Properties Preset in the DSON format.
 
 
+
 See Also:
 
 
@@ -22841,6 +23803,7 @@ Add description.
 }
 /**
  * @classdesc This is the base class for all properties that are owned or controlled by Elements. Properties can be keyable or not.
+
 
 
 See Also:
@@ -22889,7 +23852,7 @@ class DzProperty extends DzBase {
 	/**
  * @description Creates an undo item for the property.
 */
-	beginEdit() {
+	beginEdit():void {
 	
 	}
 	/**
@@ -22901,19 +23864,19 @@ class DzProperty extends DzBase {
 	/**
  * @description Return Value:
 */
-	canAnimate() {
+	canAnimate():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	canAutoFollow() {
+	canAutoFollow():Boolean {
 	
 	}
 	/**
  * @description Finish the edit operation but cancel any changes.
 */
-	cancelEdit() {
+	cancelEdit():void {
 	
 	}
 	/**
@@ -22931,31 +23894,31 @@ class DzProperty extends DzBase {
 	/**
  * @description Copies the value(s) of the property to a 'clipboard' so that they may be saved and applied (pasted) to another property; or to the same property.
 */
-	copyToClipboard() {
+	copyToClipboard():void {
 	
 	}
 	/**
  * @description Creates a new property that forwards all edits of its values to the property it is an alias of.
 */
-	createAlias() {
+	createAlias():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	currentValueIsDefaultValue() {
+	currentValueIsDefaultValue():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	currentValueIsDefinitionValue() {
+	currentValueIsDefinitionValue():Boolean {
 	
 	}
 	/**
  * @description Deletes all keys on this property.
 */
-	deleteAllKeys() {
+	deleteAllKeys():void {
 	
 	}
 	/**
@@ -22973,7 +23936,7 @@ class DzProperty extends DzBase {
 	/**
  * @description Deletes all selected keys.
 */
-	deleteSelectedKeys() {
+	deleteSelectedKeys():Number {
 	
 	}
 	/**
@@ -22985,7 +23948,7 @@ class DzProperty extends DzBase {
 	/**
  * @description Finalizes the undo item and pushes it on to the undo stack.
 */
-	finishEdit() {
+	finishEdit():void {
 	
 	}
 	/**
@@ -22997,7 +23960,7 @@ class DzProperty extends DzBase {
 	/**
  * @description Return Value:
 */
-	getAliasTarget() {
+	getAliasTarget():void {
 	
 	}
 	/**
@@ -23009,7 +23972,7 @@ class DzProperty extends DzBase {
 	/**
  * @description Return Value:
 */
-	getAutoFollowTargetUri() {
+	getAutoFollowTargetUri():DzUri {
 	
 	}
 	/**
@@ -23021,13 +23984,13 @@ class DzProperty extends DzBase {
 	/**
  * @description Return Value:
 */
-	getControllerList() {
+	getControllerList():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getGroup() {
+	getGroup():DzPropertyGroup {
 	
 	}
 	/**
@@ -23039,7 +24002,7 @@ class DzProperty extends DzBase {
 	/**
  * @description Return Value:
 */
-	getKeyRange() {
+	getKeyRange():DzTimeRange {
 	
 	}
 	/**
@@ -23051,25 +24014,25 @@ class DzProperty extends DzBase {
 	/**
  * @description Return Value:
 */
-	getLabel() {
+	getLabel():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumAliases() {
+	getNumAliases():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumControllers() {
+	getNumControllers():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumKeys() {
+	getNumKeys():Number {
 	
 	}
 	/**
@@ -23081,43 +24044,43 @@ class DzProperty extends DzBase {
 	/**
  * @description Return Value:
 */
-	getNumSelectedKeys() {
+	getNumSelectedKeys():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumSlaveControllers() {
+	getNumSlaveControllers():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getOwner() {
+	getOwner():DzElement {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPath() {
+	getPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPresentation() {
+	getPresentation():DzPresentation {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRegion() {
+	getRegion():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSelectedKeyRange() {
+	getSelectedKeyRange():DzTimeRange {
 	
 	}
 	/**
@@ -23129,7 +24092,7 @@ class DzProperty extends DzBase {
 	/**
  * @description Return Value:
 */
-	getSlaveControllerList() {
+	getSlaveControllerList():Array {
 	
 	}
 	/**
@@ -23147,19 +24110,19 @@ class DzProperty extends DzBase {
 	/**
  * @description Return Value:
 */
-	hasControllers() {
+	hasControllers():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	hasKeys() {
+	hasKeys():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	hasSlaveControllers() {
+	hasSlaveControllers():Boolean {
 	
 	}
 	/**
@@ -23171,7 +24134,7 @@ class DzProperty extends DzBase {
 	/**
  * @description Return Value:
 */
-	isAlias() {
+	isAlias():Boolean {
 	
 	}
 	/**
@@ -23183,37 +24146,37 @@ class DzProperty extends DzBase {
 	/**
  * @description Return Value:
 */
-	isDynamicallyAutoFollow() {
+	isDynamicallyAutoFollow():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isDynamicallyHidden() {
+	isDynamicallyHidden():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isEditing() {
+	isEditing():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isFavorite() {
+	isFavorite():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isGlobalFavorite() {
+	isGlobalFavorite():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isHidden() {
+	isHidden():Boolean {
 	
 	}
 	/**
@@ -23225,55 +24188,55 @@ class DzProperty extends DzBase {
 	/**
  * @description Return Value:
 */
-	isLocked() {
+	isLocked():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isManipulator() {
+	isManipulator():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isNew() {
+	isNew():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isNumeric() {
+	isNumeric():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isOverridingControllers() {
+	isOverridingControllers():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isPrivateProperty() {
+	isPrivateProperty():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isRigProperty() {
+	isRigProperty():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isSelected() {
+	isSelected():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isUserProperty() {
+	isUserProperty():Boolean {
 	
 	}
 	/**
@@ -23291,7 +24254,7 @@ class DzProperty extends DzBase {
 	/**
  * @description Marks the asset as being modified.
 */
-	modifyAsset() {
+	modifyAsset():Boolean {
 	
 	}
 	/**
@@ -23309,19 +24272,19 @@ class DzProperty extends DzBase {
 	/**
  * @description Creates a copy of this property. The property will not have controllers, an owner, be in a region, or be linked.
 */
-	propertyDuplicate() {
+	propertyDuplicate():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	rawValueIsDefinitionValue() {
+	rawValueIsDefinitionValue():Boolean {
 	
 	}
 	/**
  * @description Removes all controllers from this property.
 */
-	removeAllControllers() {
+	removeAllControllers():void {
 	
 	}
 	/**
@@ -23504,6 +24467,7 @@ oProperty = new DzFloatProperty( "MyDeformer Control", true, false );
 // to the given path, creating groups if necessary.
 oProperty.setPath( "/Defomers/MyDeformerGroup" );
 
+
 See Also:
 
 
@@ -23513,7 +24477,7 @@ class DzPropertyGroup extends DzBase {
 	/**
  * @description Return Value:
 */
-	getDefaultGroupName() {
+	getDefaultGroupName():String {
 	
 	}
 	/**
@@ -23543,55 +24507,55 @@ class DzPropertyGroup extends DzBase {
 	/**
  * @description Provided for convenience and DAZ Script access.
 */
-	getAllPaths() {
+	getAllPaths():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getAllProperties() {
+	getAllProperties():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getCollapsed() {
+	getCollapsed():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFirstChild() {
+	getFirstChild():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNextSibling() {
+	getNextSibling():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumProperties() {
+	getNumProperties():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getParent() {
+	getParent():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPath() {
+	getPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPreviousSibling() {
+	getPreviousSibling():void {
 	
 	}
 	/**
@@ -23603,13 +24567,13 @@ class DzPropertyGroup extends DzBase {
 	/**
  * @description Return Value:
 */
-	getRegion() {
+	getRegion():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTree() {
+	getTree():DzPropertyGroupTree {
 	
 	}
 	/**
@@ -23621,7 +24585,7 @@ class DzPropertyGroup extends DzBase {
 	/**
  * @description Return Value:
 */
-	isRegion() {
+	isRegion():Boolean {
 	
 	}
 	/**
@@ -23645,7 +24609,7 @@ class DzPropertyGroup extends DzBase {
 	/**
  * @description Alpha-numerically sorts the property groups, and the properties in them.
 */
-	sort() {
+	sort():void {
 	
 	}
 
@@ -23672,37 +24636,37 @@ class DzPropertyGroupTree extends DzBase {
 	/**
  * @description Return Value:
 */
-	getAllPaths() {
+	getAllPaths():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getAllProperties() {
+	getAllProperties():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDefaultGroup() {
+	getDefaultGroup():DzPropertyGroup {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFirstChild() {
+	getFirstChild():DzPropertyGroup {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getOwner() {
+	getOwner():DzElement {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isPrivate() {
+	isPrivate():void {
 	
 	}
 	/**
@@ -23714,7 +24678,7 @@ class DzPropertyGroupTree extends DzBase {
 	/**
  * @description Alpha-numerically sorts the property groups, keeping "General" at the top.
 */
-	sortGroups() {
+	sortGroups():void {
 	
 	}
 
@@ -23733,31 +24697,31 @@ class DzPropertySelectionComboBox extends DzWidget {
 	/**
  * @description Clears the selection of any properties.
 */
-	clearPropertySelection() {
+	clearPropertySelection():void {
 	
 	}
 	/**
  * @description Gets the properties to be excluded in the popup.
 */
-	getExcludeList() {
+	getExcludeList():Array {
 	
 	}
 	/**
  * @description Gets the nodes to be shown in the popup.
 */
-	getNodes() {
+	getNodes():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSelectedProperty() {
+	getSelectedProperty():DzProperty {
 	
 	}
 	/**
  * @description Hide the popup.
 */
-	hidePopup() {
+	hidePopup():void {
 	
 	}
 	/**
@@ -23841,7 +24805,7 @@ class DzPropertySelectionComboBox extends DzWidget {
 	/**
  * @description Display the popup.
 */
-	showPopup() {
+	showPopup():void {
 	
 	}
 
@@ -23869,6 +24833,7 @@ class DzPropertySettings extends DzSettings {
 }
 /**
  * @classdesc An asset save filter for saving a Puppeteer Preset in the DSON format.
+
 
 
 See Also:
@@ -23977,6 +24942,7 @@ class DzPushButton extends DzButton {
  * @classdesc Class for importing files in Poser formats; .pz3, *.pz2, *.cr2, *.lt2, *.cm2, *.pp2, *.fc2, *.hd2, *.hr2, *.mc6, .pzz, *.p2z, *.crz, *.ltz, *.cmz, *.ppz, *.fcz, *.hdz, *.hrz, *.mcz
 
 
+
 See Also:
 
 
@@ -24000,6 +24966,9 @@ Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/quat_dz}*/
 class DzQuat extends Object {
 	w:Number;
+	x:Number;
+	y:Number;
+	z:Number;
 	x:Number;
 	y:Number;
 	z:Number;
@@ -24061,13 +25030,13 @@ class DzQuat extends Object {
 	/**
  * @description Return Value:
 */
-	getAngleOfRotation() {
+	getAngleOfRotation():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getAxisOfRotation() {
+	getAxisOfRotation():DzVec3 {
 	
 	}
 	/**
@@ -24079,37 +25048,37 @@ class DzQuat extends Object {
 	/**
  * @description Return Value:
 */
-	getXAxis() {
+	getXAxis():DzVec3 {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getYAxis() {
+	getYAxis():DzVec3 {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getZAxis() {
+	getZAxis():DzVec3 {
 	
 	}
 	/**
  * @description Return Value:
 */
-	inverse() {
+	inverse():void {
 	
 	}
 	/**
  * @description Changes a rotation to be its inverse.
 */
-	invert() {
+	invert():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isIdentity() {
+	isIdentity():Boolean {
 	
 	}
 	/**
@@ -24121,7 +25090,7 @@ class DzQuat extends Object {
 	/**
  * @description Sets the quaternion to the identity quaternion. Zero this rotation.
 */
-	makeIdentity() {
+	makeIdentity():void {
 	
 	}
 	/**
@@ -24139,7 +25108,7 @@ class DzQuat extends Object {
 	/**
  * @description Normalizes a rotation quaternion to unit 4D length
 */
-	normalize() {
+	normalize():void {
 	
 	}
 	/**
@@ -24184,7 +25153,9 @@ class DzQuat extends Object {
  * @classdesc DzRadioButton and DzCheckBox are both option buttons (e.g. they can be checked or unchecked). They differ in how the available choices are restricted. A DzCheckBox is used to define several choices that can all co-exist at the same time (e.g. "many of many"). While a DzRadioButton is used to provide several choices, where only one can be ultimately chosen (e.g. "one of many").
 
 
+
 The easiest way to implement a "one of many" type choice is to create radio buttons as children of a DzButtonGroup.
+
 
 
 Example:
@@ -24228,6 +25199,7 @@ class DzRadioButton extends DzButton {
  * @classdesc Instances of DzRefCountedItem are objects that are intended to be shared between multiple owners. Each owner references the object when taking ownership, and dereference the object when it no longer needs the object. The object keeps an internal reference count, and when no other objects are referencing the object (i.e. the reference count reaches zero) the object will delete itself. 
 
 
+
 Attention:
 
 
@@ -24255,37 +25227,37 @@ class DzRenderer extends DzBase {
 	/**
  * @description Return Value:
 */
-	getCurrentNode() {
+	getCurrentNode():DzNode {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getIPRRenderHandler() {
+	getIPRRenderHandler():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getName() {
+	getName():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRendererMode() {
+	getRendererMode():DzRendererMode {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getShaderCompilerPath() {
+	getShaderCompilerPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getShaderExtension() {
+	getShaderExtension():String {
 	
 	}
 	/**
@@ -24309,25 +25281,25 @@ class DzRenderer extends DzBase {
 	/**
  * @description Return Value:
 */
-	getShaderSearchPaths() {
+	getShaderSearchPaths():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTextureUtilityPath() {
+	getTextureUtilityPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isRendering() {
+	isRendering():Boolean {
 	
 	}
 	/**
  * @description Stops the render.
 */
-	killRender() {
+	killRender():void {
 	
 	}
 	/**
@@ -24363,7 +25335,7 @@ class DzRenderer extends DzBase {
 	/**
  * @description Stops an active baking operation, if possible.
 */
-	stopBaking() {
+	stopBaking():void {
 	
 	}
 	/**
@@ -24381,55 +25353,56 @@ class DzRendererMode extends QObject {
 	/**
  * @description Return Value:
 */
-	hasFeatures() {
+	hasFeatures():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isBiased() {
+	isBiased():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isPhysicallyBased() {
+	isPhysicallyBased():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isRenderManCompliant() {
+	isRenderManCompliant():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	supportedLaunguages() {
+	supportedLaunguages():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	supportsAdvancedCamera() {
+	supportsAdvancedCamera():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	supportsCameraBlades() {
+	supportsCameraBlades():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	usesCatmarkLimitSurface() {
+	usesCatmarkLimitSurface():Boolean {
 	
 	}
 
 }
 /**
  * @classdesc Render handler classes are responsible for the settings of a render, as well as collecting the final image data passed back from the renderer.
+
 
 
 See Also:
@@ -24441,37 +25414,37 @@ class DzRenderHandler extends QObject {
 	/**
  * @description Return Value:
 */
-	getBackColor() {
+	getBackColor():Color {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getCropWindow() {
+	getCropWindow():Rect {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumFrames() {
+	getNumFrames():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSize() {
+	getSize():Size {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getStartingTime() {
+	getStartingTime():DzTime {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getUseCropWindow() {
+	getUseCropWindow():Boolean {
 	
 	}
 	/**
@@ -24496,6 +25469,7 @@ class DzRenderHandler extends QObject {
 }
 /**
  * @classdesc The manager that is responsible for rendering.
+
 
 
 There is only one instance of this manager in an application. This instance is created and owned by DzApp. Do not create an instance of this class, rather request the instance from DzApp via DzApp.getRenderMgr().
@@ -24539,7 +25513,7 @@ class DzRenderMgr extends DzBase {
 	/**
  * @description Return Value:
 */
-	getIconSuffix() {
+	getIconSuffix():String {
 	
 	}
 	/**
@@ -24587,7 +25561,7 @@ class DzRenderMgr extends DzBase {
 	/**
  * @description Return Value:
 */
-	getActiveRenderer() {
+	getActiveRenderer():DzRenderer {
 	
 	}
 	/**
@@ -24599,26 +25573,26 @@ class DzRenderMgr extends DzBase {
 	/**
  * @description Return Value:
 */
-	getLastSavedRenderPath() {
+	getLastSavedRenderPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumRenderDirectories() {
+	getNumRenderDirectories():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumRenderers() {
+	getNumRenderers():Number {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	getOptionHelper() {
+	getOptionHelper():DzElement {
 	
 	}
 	/**
@@ -24631,7 +25605,7 @@ Add description.
  * @description TODO:
 Add description.
 */
-	getRenderElementObjects() {
+	getRenderElementObjects():Array {
 	
 	}
 	/**
@@ -24643,38 +25617,38 @@ Add description.
 	/**
  * @description Return Value:
 */
-	getRendererList() {
+	getRendererList():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRenderOptions() {
+	getRenderOptions():DzRenderOptions {
 	
 	}
 	/**
  * @description Return Value:
 */
-	hasRender() {
+	hasRender():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isRendering() {
+	isRendering():Boolean {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	rebuildRenderElements() {
+	rebuildRenderElements():void {
 	
 	}
 	/**
  * @description Removes all render directories.
 */
-	removeAllRenderDirectories() {
+	removeAllRenderDirectories():void {
 	
 	}
 	/**
@@ -24687,13 +25661,13 @@ Add description.
  * @description TODO:
 Add description.
 */
-	restoreDefaultRenderOptions() {
+	restoreDefaultRenderOptions():void {
 	
 	}
 	/**
  * @description Displays a dialog for saving the last render, and saves the image(s)/movie if the user does not cancel.
 */
-	saveLastRender() {
+	saveLastRender():String {
 	
 	}
 	/**
@@ -24705,21 +25679,21 @@ Add description.
 	/**
  * @description Displays the render options dialog to the user. This only works if the application is being run with the interface on, if the interface is off, this function does nothing.
 */
-	showRenderDialog() {
+	showRenderDialog():void {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	shutdown() {
+	shutdown():void {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	stopIPRRender() {
+	stopIPRRender():void {
 	
 	}
 
@@ -24823,7 +25797,7 @@ class DzRenderOptions extends QObject {
 	/**
  * @description Writes render options via the settings manager.
 */
-	applyChanges() {
+	applyChanges():void {
 	
 	}
 	/**
@@ -24841,13 +25815,13 @@ class DzRenderOptions extends QObject {
 	/**
  * @description Sets values for render options found in the stored settings.
 */
-	resetOptions() {
+	resetOptions():void {
 	
 	}
 	/**
  * @description Restores the applications default settings and replaces the stored values.
 */
-	restoreDefaultSettings() {
+	restoreDefaultSettings():void {
 	
 	}
 	/**
@@ -24859,13 +25833,14 @@ class DzRenderOptions extends QObject {
 	/**
  * @description Sets all options to the default values, but does not affect values of stored/remembered settings. Also, no "changed" signals are emitted when calling this method.
 */
-	setToDefaults() {
+	setToDefaults():void {
 	
 	}
 
 }
 /**
  * @classdesc An asset save filter for saving a Render Settings Preset in the DSON format.
+
 
 
 See Also:
@@ -24918,13 +25893,13 @@ class DzRotateManip extends DzImageManip {
 	/**
  * @description Return Value:
 */
-	getDegrees() {
+	getDegrees():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRotation() {
+	getRotation():Rotation {
 	
 	}
 	/**
@@ -24947,6 +25922,9 @@ Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/rotationorder_dz}*/
 class DzRotationOrder extends Object {
 	firstAxis:Number;
+	order:Number;
+	secondAxis:Number;
+	thirdAxis:Number;
 	order:Number;
 	secondAxis:Number;
 	thirdAxis:Number;
@@ -24990,10 +25968,13 @@ class DzRotationOrder extends Object {
  * @classdesc This class provides the ability to define RSL shaders for the elements that can use them (DzShaderMaterial, DzShaderLight, DzShaderCamera).
 
 
+
 Optimizations:
 
 
+
 Two methods in this class that should not be overlooked are setActiveInShadowPass() and setOnlyInShadowPass(), as they can have a significant impact on render times.
+
 
 
 In the context of Surface shaders, the data members set by these methods are used to identify whether the shader participates during the shadow [map] pass - the pass for each contributing light in the scene that indicates the use of Deep Shadow Maps for shadows. This affords developers a couple of key benifits:
@@ -25005,94 +25986,125 @@ In the context of Surface shaders, the data members set by these methods are use
 
 
 
+
 In the context of Light shaders, the data members set by these methods are used to identify whether this shader participates when the DzLight.ShadowType indicates shadowing is used. This affords developers the benifit of being able to use Light shaders that are optimized for either condition.
+
 
 
 Property Naming:
 
 
+
 Standard Shader and Materials Presets make an effort to copy as much as possible from one element to the next via DzElement.copyFrom(). In order for this to occur, the properties must match in both name and type. Provided below are the names and types used by DzDefaultMaterial, DzLight, DzDistantLight, DzSpotLight and DzPointLight in the event that you would like use properties that will work with the copyFrom() method.
+
 
 
 Default Material: 
 
 
+
 Default Lights: 
+
 
 
 Default Camera:  
 
 
+
 Name 
+
 
 
 Type 
 
 
+
 Name 
+
 
 
 Type  
 
 
+
 Diffuse Color 
 
 
+
 DzColorProperty
+
 
 
 Negative Bump 
 
 
+
 DzFloatProperty
+
 
 
 Diffuse Strength 
 
 
+
 DzFloatProperty
+
 
 
 Positive Bump 
 
 
+
 DzFloatProperty
+
 
 
 Glossiness 
 
 
+
 DzFloatProperty
+
 
 
 Displacement Strength 
 
 
+
 DzFloatProperty
+
 
 
 Specular Color 
 
 
+
 DzColorProperty
+
 
 
 Minimum Displacement 
 
 
+
 DzFloatProperty
+
 
 
 Specular Strength 
 
 
+
 DzFloatProperty
+
 
 
 Maximum Displacement 
 
 
+
 DzFloatProperty
+
 
 
 Multiply Specular
@@ -25100,139 +26112,185 @@ Multiply Specular
  Through Opacity 
 
 
+
 DzBoolProperty
+
 
 
 Reflection Color 
 
 
+
 DzColorProperty
+
 
 
 Ambient Color 
 
 
+
 DzColorProperty
+
 
 
 Reflection Strength 
 
 
+
 DzFloatProperty
+
 
 
 Ambient Strength 
 
 
+
 DzFloatProperty
+
 
 
 Refraction Color 
 
 
+
 DzColorProperty
+
 
 
 Opacity Strength 
 
 
+
 DzFloatProperty
+
 
 
 Refraction Strength 
 
 
+
 DzFloatProperty
+
 
 
 Bump Strength 
 
 
+
 DzFloatProperty
+
 
 
 Index of Refraction 
 
 
+
 DzFloatProperty
+
 
 
 Name 
 
 
+
 Type  
+
 
 
 Color 
 
 
+
 DzColorProperty
+
 
 
 Intensity 
 
 
+
 DzFloatProperty
+
 
 
 Shadow Type 
 
 
+
 DzEnumProperty
+
 
 
 Shadow Bias 
 
 
+
 DzFloatProperty
+
 
 
 Shadow Softness 
 
 
+
 DzFloatProperty
+
 
 
 Illumination 
 
 
+
 DzEnumProperty
+
 
 
 Spread Angle 
 
 
+
 DzFloatProperty
+
 
 
 Name 
 
 
+
 Type  
+
 
 
 Focal Length 
 
 
+
 DzFloatProperty
+
 
 
 DOF 
 
 
+
 DzBoolProperty
+
 
 
 Depth of Field 
 
 
+
 DzFloatProperty
+
 
 
 Aperature 
 
 
+
 DzFloatProperty
+
 
 
 Samples:
@@ -25241,6 +26299,7 @@ Samples:
  rispec_constant_shader_definition - The definition file for the standard RenderMan Constant Surface Shader, that builds the properties displayed to users in the Surfaces tab (Advanced sub tab).
 
  ./samples/shader swapping/
+
 
 
 
@@ -25256,6 +26315,7 @@ See Also:
  rispec_constant_surface_shader - The RSL source for the standard RenderMan Constant Surface Shader.
 
  s_standard_render_time_script - The render-time script that sets various RiAttributes dependant on the values of properties provided to the user.
+
 
 
 
@@ -25370,19 +26430,19 @@ class DzRSLShader extends DzBase, DzRefCountedItem {
 	/**
  * @description Return Value:
 */
-	getDefinitionFile() {
+	getDefinitionFile():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumProperties() {
+	getNumProperties():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getOwner() {
+	getOwner():DzElement {
 	
 	}
 	/**
@@ -25394,49 +26454,49 @@ class DzRSLShader extends DzBase, DzRefCountedItem {
 	/**
  * @description Return Value:
 */
-	getPropertyList() {
+	getPropertyList():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRenderTimeFile() {
+	getRenderTimeFile():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getShaderFile() {
+	getShaderFile():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getShaderType() {
+	getShaderType():ShaderType {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isActiveInBakePass() {
+	isActiveInBakePass():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isActiveInBeautyPass() {
+	isActiveInBeautyPass():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isActiveInShadowPass() {
+	isActiveInShadowPass():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isOnlyInShadowPass() {
+	isOnlyInShadowPass():Boolean {
 	
 	}
 	/**
@@ -25634,19 +26694,19 @@ class DzRSLShader extends DzBase, DzRefCountedItem {
 	/**
  * @description Adds a RiSpec RiTransformBegin() call.
 */
-	addTransformBegin() {
+	addTransformBegin():void {
 	
 	}
 	/**
  * @description Adds a RiSpec RiTransformEnd() call.
 */
-	addTransformEnd() {
+	addTransformEnd():void {
 	
 	}
 	/**
  * @description Adds a RiSpec RiTransformEnd() call after the owner.
 */
-	addScheduledTransformEnd() {
+	addScheduledTransformEnd():void {
 	
 	}
 	/**
@@ -25670,7 +26730,7 @@ class DzRSLShader extends DzBase, DzRefCountedItem {
 	/**
  * @description Adds a RiSpec RiIdentity() call.
 */
-	addIdentity() {
+	addIdentity():void {
 	
 	}
 	/**
@@ -25738,14 +26798,14 @@ class DzSaveFilter extends DzFileIO {
 	/**
  * @description Return Value:
 */
-	getDescription() {
+	getDescription():String {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	getLoadSavePath() {
+	getLoadSavePath():String {
 	
 	}
 	/**
@@ -25773,7 +26833,9 @@ Add description.
  * @classdesc There is only one instance of this manager in an application. This instance is created and owned by DzApp. Don't create an instance of this class, but rather request a pointer to it from DzApp via DzApp.getSaveFilterMgr().
 
 
+
 Example:
+
 
 
 Getting the class names of all DzSaveFilter objects 
@@ -25828,7 +26890,7 @@ class DzSaveFilterMgr extends QObject {
 	/**
  * @description Return Value:
 */
-	getNumFilters() {
+	getNumFilters():Number {
 	
 	}
 	/**
@@ -25840,7 +26902,7 @@ class DzSaveFilterMgr extends QObject {
 	/**
  * @description Return Value:
 */
-	getSavePath() {
+	getSavePath():String {
 	
 	}
 	/**
@@ -25857,6 +26919,7 @@ Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/scalemanip_dz}*/
 class DzScaleManip extends DzImageManip {
 	heightScale:Number;
+	widthScale:Number;
 	widthScale:Number;
 	/**
  * @description Holds the scaling of the image across its height.
@@ -25949,13 +27012,13 @@ class DzScene extends DzBase {
 	/**
  * @description Starts a time-editing operation. All changes to scene time, play range, and animation range that occur between this call and a call to finishTimeEdit() will be wrapped into a single undo item.
 */
-	beginTimeEdit() {
+	beginTimeEdit():void {
 	
 	}
 	/**
  * @description Resets the scene to its initial, clean state. All data is deleted and the undo stack is cleared.
 */
-	clear() {
+	clear():void {
 	
 	}
 	/**
@@ -26057,43 +27120,43 @@ class DzScene extends DzBase {
 	/**
  * @description Ends a time editing operation started with a call to beginTimeEdit().
 */
-	finishTimeEdit() {
+	finishTimeEdit():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getAnimRange() {
+	getAnimRange():DzTimeRange {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getAssetLoadPath() {
+	getAssetLoadPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getAudio() {
+	getAudio():DzAudioClip {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getAudioStartFrame() {
+	getAudioStartFrame():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getAuthor() {
+	getAuthor():DzAuthor {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getBackdrop() {
+	getBackdrop():DzBackdrop {
 	
 	}
 	/**
@@ -26111,7 +27174,7 @@ class DzScene extends DzBase {
 	/**
  * @description Return Value:
 */
-	getCameraList() {
+	getCameraList():Array {
 	
 	}
 	/**
@@ -26123,25 +27186,25 @@ class DzScene extends DzBase {
 	/**
  * @description Return Value:
 */
-	getDataItemList() {
+	getDataItemList():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFilename() {
+	getFilename():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFrame() {
+	getFrame():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getHighlightNode() {
+	getHighlightNode():DzNode {
 	
 	}
 	/**
@@ -26153,7 +27216,7 @@ class DzScene extends DzBase {
 	/**
  * @description Return Value:
 */
-	getLightList() {
+	getLightList():Array {
 	
 	}
 	/**
@@ -26165,97 +27228,97 @@ class DzScene extends DzBase {
 	/**
  * @description Return Value:
 */
-	getNodeList() {
+	getNodeList():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumCameras() {
+	getNumCameras():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumDataItems() {
+	getNumDataItems():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumLights() {
+	getNumLights():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumNodes() {
+	getNumNodes():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumSelectedCameras() {
+	getNumSelectedCameras():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumSelectedLights() {
+	getNumSelectedLights():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumSelectedNodes() {
+	getNumSelectedNodes():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumSelectedSkeletons() {
+	getNumSelectedSkeletons():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumSelectedTimeRanges() {
+	getNumSelectedTimeRanges():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumSkeletons() {
+	getNumSkeletons():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumStorablesInScene() {
+	getNumStorablesInScene():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumWSModifiers() {
+	getNumWSModifiers():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPlayRange() {
+	getPlayRange():DzTimeRange {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPreviewLights() {
+	getPreviewLights():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPrimarySelection() {
+	getPrimarySelection():DzNode {
 	
 	}
 	/**
@@ -26267,7 +27330,7 @@ class DzScene extends DzBase {
 	/**
  * @description Return Value:
 */
-	getSelectedCameraList() {
+	getSelectedCameraList():Array {
 	
 	}
 	/**
@@ -26279,7 +27342,7 @@ class DzScene extends DzBase {
 	/**
  * @description Return Value:
 */
-	getSelectedLightList() {
+	getSelectedLightList():Array {
 	
 	}
 	/**
@@ -26291,7 +27354,7 @@ class DzScene extends DzBase {
 	/**
  * @description Return Value:
 */
-	getSelectedNodeList() {
+	getSelectedNodeList():Array {
 	
 	}
 	/**
@@ -26303,7 +27366,7 @@ class DzScene extends DzBase {
 	/**
  * @description Return Value:
 */
-	getSelectedSkeletonList() {
+	getSelectedSkeletonList():Array {
 	
 	}
 	/**
@@ -26315,25 +27378,25 @@ class DzScene extends DzBase {
 	/**
  * @description Return Value:
 */
-	getSkeletonList() {
+	getSkeletonList():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSortedLightList() {
+	getSortedLightList():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTime() {
+	getTime():DzTime {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTimeStep() {
+	getTimeStep():DzTime {
 	
 	}
 	/**
@@ -26351,50 +27414,50 @@ class DzScene extends DzBase {
 	/**
  * @description Return Value:
 */
-	getWSModifierList() {
+	getWSModifierList():Array {
 	
 	}
 	/**
  * @description Invalidates the scene, flagging it as needing to be redrawn.
 */
-	invalidate() {
+	invalidate():void {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	invalidateLightSorting() {
+	invalidateLightSorting():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isClearing() {
+	isClearing():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isDAZLoading() {
+	isDAZLoading():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isLoading() {
+	isLoading():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isLoopingEnabled() {
+	isLoopingEnabled():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isPlaying() {
+	isPlaying():Boolean {
 	
 	}
 	/**
@@ -26412,19 +27475,19 @@ Add description.
 	/**
  * @description Indicate that the scene has changed since the last save.
 */
-	markChanged() {
+	markChanged():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	needsSave() {
+	needsSave():Boolean {
 	
 	}
 	/**
  * @description Pauses playback of the current animation.
 */
-	pause() {
+	pause():void {
 	
 	}
 	/**
@@ -26436,13 +27499,13 @@ Add description.
 	/**
  * @description Removes all cameras from the scene.
 */
-	removeAllCameras() {
+	removeAllCameras():void {
 	
 	}
 	/**
  * @description Removes all lights from the scene.
 */
-	removeAllLights() {
+	removeAllLights():void {
 	
 	}
 	/**
@@ -26460,7 +27523,7 @@ Add description.
 	/**
  * @description Removes all nodes that have items in their hierarchy that are currently selected.
 */
-	removeSelected() {
+	removeSelected():void {
 	
 	}
 	/**
@@ -26574,13 +27637,14 @@ Add description.
 	/**
  * @description Recursively updates all nodes in the scene.
 */
-	update() {
+	update():void {
 	
 	}
 
 }
 /**
  * @classdesc An asset save filter for saving a Scene in the DSON format.
+
 
 
 See Also:
@@ -26894,6 +27958,7 @@ class DzSceneHelper extends QObject {
  * @classdesc An asset save filter for saving a Scene Subset in the DSON format.
 
 
+
 See Also:
 
 
@@ -26912,6 +27977,7 @@ Add description.
 }
 /**
  * @classdesc An asset save filter for saving Figure/Prop Assets, or Dynamic Cloth Assets, for each object in the scene, in the DSON format.
+
 
 
 See Also:
@@ -27045,7 +28111,7 @@ class DzScript extends DzBase {
 	/**
  * @description Return Value:
 */
-	getScriptExtensions() {
+	getScriptExtensions():Array {
 	
 	}
 	/**
@@ -27123,37 +28189,37 @@ class DzScript extends DzBase {
 	/**
  * @description Checks the syntax of the script for errors using the current interpreter.
 */
-	checkSyntax() {
+	checkSyntax():Boolean {
 	
 	}
 	/**
  * @description Clears any code in the current script, and clears the encryption state if the script was read from an encrypted file.
 */
-	clear() {
+	clear():void {
 	
 	}
 	/**
  * @description Converts the script to DAZ Script 2 syntax.
 */
-	convertToDAZScript2() {
+	convertToDAZScript2():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	errorLine() {
+	errorLine():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	errorMessage() {
+	errorMessage():String {
 	
 	}
 	/**
  * @description Execute the script.
 */
-	execute() {
+	execute():Boolean {
 	
 	}
 	/**
@@ -27165,61 +28231,61 @@ class DzScript extends DzBase {
 	/**
  * @description Return Value:
 */
-	getAuthor() {
+	getAuthor():DzAuthor {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getCode() {
+	getCode():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFilename() {
+	getFilename():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLastStatus() {
+	getLastStatus():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getScriptLanguage() {
+	getScriptLanguage():ScriptLanguage {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getScriptType() {
+	getScriptType():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getScriptVersion() {
+	getScriptVersion():DzVersion {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getShouldReuseInterpreter() {
+	getShouldReuseInterpreter():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isEmpty() {
+	isEmpty():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isEncrypted() {
+	isEncrypted():Boolean {
 	
 	}
 	/**
@@ -27231,13 +28297,13 @@ class DzScript extends DzBase {
 	/**
  * @description Sets the script to be encrypted.
 */
-	makeEncrypted() {
+	makeEncrypted():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	result() {
+	result():Object {
 	
 	}
 	/**
@@ -27261,7 +28327,7 @@ class DzScript extends DzBase {
 	/**
  * @description Return Value:
 */
-	stackTrace() {
+	stackTrace():Array {
 	
 	}
 	/**
@@ -27285,97 +28351,97 @@ class DzScriptContext extends DzBase {
 	/**
  * @description Return Value:
 */
-	backgroundProgressIsActive() {
+	backgroundProgressIsActive():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	backgroundProgressIsCancelled() {
+	backgroundProgressIsCancelled():Boolean {
 	
 	}
 	/**
  * @description Captures a view of scene seletion.
 */
-	beginNodeSelectionHold() {
+	beginNodeSelectionHold():void {
 	
 	}
 	/**
  * @description Starts a hold on the undo stack.
 */
-	beginUndo() {
+	beginUndo():void {
 	
 	}
 	/**
  * @description Cancel a hold on the undo stack started by calling beginUndo().
 */
-	cancelUndo() {
+	cancelUndo():void {
 	
 	}
 	/**
  * @description Clears the application-standard busy cursor and returns the mouse cursor to the previous cursor. Match every call to setBusyCursor() with a call to this function.
 */
-	clearBusyCursor() {
+	clearBusyCursor():void {
 	
 	}
 	/**
  * @description Clears all selection holds without restoring the selection.
 */
-	clearNodeSelectionHolds() {
+	clearNodeSelectionHolds():void {
 	
 	}
 	/**
  * @description Clears the override cursor stack.
 */
-	clearOverrideCursor() {
+	clearOverrideCursor():void {
 	
 	}
 	/**
  * @description Clears the undo stack.
 */
-	clearUndoStack() {
+	clearUndoStack():void {
 	
 	}
 	/**
  * @description Deprecated
 */
-	ctrlPressed() {
+	ctrlPressed():Boolean {
 	
 	}
 	/**
  * @description Removes a scene node selection hold on scene selection without restoring the selection.
 */
-	dropNodeSelectionHold() {
+	dropNodeSelectionHold():void {
 	
 	}
 	/**
  * @description Drops a hold on the undo stack started by calling beginUndo().
 */
-	dropUndo() {
+	dropUndo():void {
 	
 	}
 	/**
  * @description Ends the current background progress operation in the application from script.
 */
-	finishBackgroundProgress() {
+	finishBackgroundProgress():void {
 	
 	}
 	/**
  * @description Ends the current progress operation in the application from script.
 */
-	finishProgress() {
+	finishProgress():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getArguments() {
+	getArguments():Array {
 	
 	}
 	/**
  * @description This function provides access to the desktop widget.
 */
-	getDesktop() {
+	getDesktop():QDesktopWidget {
 	
 	}
 	/**
@@ -27393,25 +28459,25 @@ class DzScriptContext extends DzBase {
 	/**
  * @description Return Value:
 */
-	getScriptAuthor() {
+	getScriptAuthor():DzAuthor {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getScriptFileName() {
+	getScriptFileName():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getScriptType() {
+	getScriptType():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getScriptVersionString() {
+	getScriptVersionString():String {
 	
 	}
 	/**
@@ -27423,37 +28489,37 @@ class DzScriptContext extends DzBase {
 	/**
  * @description Pauses execution of the script and allows the GUI thread time to process events.
 */
-	processEvents() {
+	processEvents():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	progressIsActive() {
+	progressIsActive():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	progressIsCancelled() {
+	progressIsCancelled():Boolean {
 	
 	}
 	/**
  * @description Restores the scene selection to the view at last call to beginNodeSelectionHold().
 */
-	restoreNodeSelectionHold() {
+	restoreNodeSelectionHold():void {
 	
 	}
 	/**
  * @description Sets the application-standard busy cursor. Match every call to this function with a call to clearBusyCursor() to restore the previous cursor.
 */
-	setBusyCursor() {
+	setBusyCursor():void {
 	
 	}
 	/**
  * @description Deprecated
 */
-	shiftPressed() {
+	shiftPressed():Boolean {
 	
 	}
 	/**
@@ -27504,6 +28570,7 @@ class DzScriptContext extends DzBase {
  * @classdesc Implements a scriptable RenderMan interface for the scene to render itself through the 3Delight renderer.
 
 
+
 See Also:
 
 
@@ -27518,6 +28585,7 @@ See Also:
  Sample: Rendering : Scripted Renderer Load
 
  Sample: Rendering : Scripted Renderer Pass
+
 
 
 
@@ -27537,7 +28605,7 @@ class DzScriptedRenderer extends DzRenderer {
 	/**
  * @description Builds an environment space transform that can be used by shaders to account for differences between the application and the 3Delight render engine.
 */
-	buildEnvironmentSpaceTransform() {
+	buildEnvironmentSpaceTransform():void {
 	
 	}
 	/**
@@ -27549,7 +28617,7 @@ class DzScriptedRenderer extends DzRenderer {
 	/**
  * @description Return Value:
 */
-	continueAfterPreProcess() {
+	continueAfterPreProcess():Boolean {
 	
 	}
 	/**
@@ -27567,7 +28635,7 @@ class DzScriptedRenderer extends DzRenderer {
 	/**
  * @description Causes the renderer to call the same display as the standard 3Delight renderer.
 */
-	doDefaultDisplay() {
+	doDefaultDisplay():void {
 	
 	}
 	/**
@@ -27609,25 +28677,25 @@ class DzScriptedRenderer extends DzRenderer {
 	/**
  * @description Return Value:
 */
-	getDefaultShaderSearchPath() {
+	getDefaultShaderSearchPath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDefinitionFile() {
+	getDefinitionFile():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDisplacementPreProcessScript() {
+	getDisplacementPreProcessScript():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getHandler() {
+	getHandler():DzRenderHandler {
 	
 	}
 	/**
@@ -27639,19 +28707,19 @@ class DzScriptedRenderer extends DzRenderer {
 	/**
  * @description Return Value:
 */
-	getLightCount() {
+	getLightCount():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLightPreProcessScript() {
+	getLightPreProcessScript():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLightsToRender() {
+	getLightsToRender():Array {
 	
 	}
 	/**
@@ -27663,43 +28731,43 @@ class DzScriptedRenderer extends DzRenderer {
 	/**
  * @description Return Value:
 */
-	getNodeCount() {
+	getNodeCount():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNodesToRender() {
+	getNodesToRender():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumIlluminateHandels() {
+	getNumIlluminateHandels():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getPropertyHolder() {
+	getPropertyHolder():DzElement {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRenderScript() {
+	getRenderScript():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSurfacePreProcessScript() {
+	getSurfacePreProcessScript():String {
 	
 	}
 	/**
  * @description Prepares motion samples for all nodes to render.
 */
-	prepareMotionSamples() {
+	prepareMotionSamples():void {
 	
 	}
 	/**
@@ -27765,13 +28833,13 @@ class DzScriptedRenderer extends DzRenderer {
 	/**
  * @description Script implementation of the RiSpec RiAttributeBegin() function.
 */
-	riAttributeBegin() {
+	riAttributeBegin():void {
 	
 	}
 	/**
  * @description Script implementation of the RiSpec RiAttributeEnd() function.
 */
-	riAttributeEnd() {
+	riAttributeEnd():void {
 	
 	}
 	/**
@@ -27867,7 +28935,7 @@ class DzScriptedRenderer extends DzRenderer {
 	/**
  * @description Script implementation of the RiSpec RiElse() function.
 */
-	riElse() {
+	riElse():void {
 	
 	}
 	/**
@@ -27921,7 +28989,7 @@ class DzScriptedRenderer extends DzRenderer {
 	/**
  * @description Script implementation of the RiSpec RiIdentity() function.
 */
-	riIdentity() {
+	riIdentity():void {
 	
 	}
 	/**
@@ -27933,7 +29001,7 @@ class DzScriptedRenderer extends DzRenderer {
 	/**
  * @description Script implementation of the RiSpec RiIfEnd() function.
 */
-	riIfEnd() {
+	riIfEnd():void {
 	
 	}
 	/**
@@ -28065,7 +29133,7 @@ class DzScriptedRenderer extends DzRenderer {
 	/**
  * @description Script implementation of the RiSpec RiReverseOrientation() function.
 */
-	riReverseOrientation() {
+	riReverseOrientation():void {
 	
 	}
 	/**
@@ -28143,13 +29211,13 @@ class DzScriptedRenderer extends DzRenderer {
 	/**
  * @description Script implementation of the RiSpec RiTransformBegin() function.
 */
-	riTransformBegin() {
+	riTransformBegin():void {
 	
 	}
 	/**
  * @description Script implementation of the RiSpec RiTransformEnd() function.
 */
-	riTransformEnd() {
+	riTransformEnd():void {
 	
 	}
 	/**
@@ -28161,7 +29229,7 @@ class DzScriptedRenderer extends DzRenderer {
 	/**
  * @description Script implementation of the RiSpec RiWorldBegin() function.
 */
-	riWorldBegin() {
+	riWorldBegin():void {
 	
 	}
 	/**
@@ -28233,6 +29301,8 @@ class DzScrollArea extends DzWidget {
 	alignment:DzWidget;
 	maximumViewportSize:Size;
 	widgetResizable:Boolean;
+	maximumViewportSize:Size;
+	widgetResizable:Boolean;
 	/**
  * @description Creates a scroll area as a child of the given parent widget.
  * @constructor
@@ -28255,7 +29325,7 @@ class DzScrollArea extends DzWidget {
 	/**
  * @description Hides the frame around the scroll area.
 */
-	hideFrame() {
+	hideFrame():void {
 	
 	}
 	/**
@@ -28282,7 +29352,9 @@ class DzScrollArea extends DzWidget {
  * @classdesc A DzScrollView provides a scrolling area with on-demand scroll bars.
 
 
+
 Deprecated
+
 
 
 Exists only to keep old code working. Do not use in new code. Use DzScrollArea where possible instead.
@@ -28324,7 +29396,7 @@ class DzSelectionMap extends DzBase {
 	/**
  * @description Clears all pairs in the map.
 */
-	clearAll() {
+	clearAll():void {
 	
 	}
 	/**
@@ -28360,7 +29432,7 @@ class DzSelectionMap extends DzBase {
 	/**
  * @description Return Value:
 */
-	getNumPairs() {
+	getNumPairs():Number {
 	
 	}
 	/**
@@ -28430,7 +29502,7 @@ class DzSettings extends QObject {
 	/**
  * @description Clears all values from this settings object.
 */
-	clear() {
+	clear():void {
 	
 	}
 	/**
@@ -28478,7 +29550,7 @@ class DzSettings extends QObject {
 	/**
  * @description Return Value:
 */
-	getNumValues() {
+	getNumValues():Number {
 	
 	}
 	/**
@@ -28568,13 +29640,13 @@ class DzSettings extends QObject {
 	/**
  * @description Return Value:
 */
-	toJson() {
+	toJson():Object {
 	
 	}
 	/**
  * @description Return Value:
 */
-	toJsonString() {
+	toJsonString():String {
 	
 	}
 	/**
@@ -28586,7 +29658,7 @@ class DzSettings extends QObject {
 	/**
  * @description Return Value:
 */
-	toString() {
+	toString():String {
 	
 	}
 
@@ -28632,6 +29704,7 @@ class DzSettingsHelper extends QObject {
  * @classdesc An asset save filter for saving a Shader Preset in the DSON format.
 
 
+
 See Also:
 
 
@@ -28674,25 +29747,25 @@ class DzShaderCamera extends DzBasicCamera {
 	/**
  * @description Return Value:
 */
-	getCameraName() {
+	getCameraName():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDefinitionFile() {
+	getDefinitionFile():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumShaders() {
+	getNumShaders():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRenderTimeFile() {
+	getRenderTimeFile():String {
 	
 	}
 	/**
@@ -28783,7 +29856,7 @@ class DzShaderDescription extends QObject {
 	/**
  * @description Return Value:
 */
-	getNumParameters() {
+	getNumParameters():Number {
 	
 	}
 	/**
@@ -28846,43 +29919,43 @@ class DzShaderLight extends DzLight {
 	/**
  * @description Return Value:
 */
-	getColorControl() {
+	getColorControl():DzColorProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDefinitionFile() {
+	getDefinitionFile():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getIntensity() {
+	getIntensity():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getIntensityControl() {
+	getIntensityControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLightName() {
+	getLightName():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLightType() {
+	getLightType():LightType {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumShaders() {
+	getNumShaders():Number {
 	
 	}
 	/**
@@ -28894,7 +29967,7 @@ class DzShaderLight extends DzLight {
 	/**
  * @description Return Value:
 */
-	getShadowMapPath() {
+	getShadowMapPath():String {
 	
 	}
 	/**
@@ -28930,7 +30003,7 @@ class DzShaderLight extends DzLight {
 	/**
  * @description Return Value:
 */
-	usesLocalShaderSpace() {
+	usesLocalShaderSpace():Boolean {
 	
 	}
 
@@ -28939,10 +30012,12 @@ class DzShaderLight extends DzLight {
  * @classdesc This class provides a DzMaterial derived object with creator-defined properties that will be passed to the RSL Shader at render-time. By default, the material only has two properties - Diffuse Color (Cs) and Opacity Strength (Os) - which are not passed as tokens to the shader, rather they are attributes sent directly to the renderer, via RiColor() and RiOpacity() respectively. These properties are not mappable by default, but can be made so by using DzRSLShader.addMapProperty(). All other properties for the material must be added using DzRSLShader.addShaderProperty() and DzRSLShader.addMappableProperty() in order to be used to pass values as arguments to the shader. Properties for the material that will be used by the render-time scripts to set attributes must be added via DzElement.addProperty().
 
 
+
 Samples:
 
 
  rispec_constant_shader_preset - A [heavily commented] Shader Preset that applies a material definition script (below) for the standard RenderMan Constant Surface Shader.
+
 
 
 
@@ -28990,25 +30065,25 @@ class DzShaderMaterial extends DzMaterial, DzRefCountedItem {
 	/**
  * @description Return Value:
 */
-	getDefinitionFile() {
+	getDefinitionFile():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDiffuseProperty() {
+	getDiffuseProperty():DzColorProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumShaders() {
+	getNumShaders():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getOpacityProperty() {
+	getOpacityProperty():DzFloatProperty {
 	
 	}
 	/**
@@ -29094,6 +30169,7 @@ class DzShaderParameter extends QObject {
  * @classdesc An asset save filter for saving a Shader Definition Support Asset in the DSON format.
 
 
+
 See Also:
 
 
@@ -29118,10 +30194,12 @@ Add description.
 
 
 
+
 Attention:
 
 
  This object is provided by the Joint Editor Tool plugin. It is only available when the Joint Editor Tool plugin is activated and enabled.
+
 
 
 
@@ -29141,7 +30219,7 @@ class DzShapeRiggingAdjuster extends QObject {
 	/**
  * @description Performs the rigging adjustment based on the current shape.
 */
-	doAdjustments() {
+	doAdjustments():Boolean {
 	
 	}
 	/**
@@ -29186,6 +30264,7 @@ class DzShapeRiggingAdjuster extends QObject {
  * @classdesc An asset save filter for saving a Shaping Preset in the DSON format.
 
 
+
 See Also:
 
 
@@ -29217,7 +30296,7 @@ class DzSimpleElementData extends DzElementData {
 	/**
  * @description Return Value:
 */
-	getSettings() {
+	getSettings():DzSettings {
 	
 	}
 
@@ -29226,13 +30305,17 @@ class DzSimpleElementData extends DzElementData {
  * @classdesc Implements a custom data item that causes a specified script to be executed after the element that owns the data item has been loaded into the scene.
 
 
+
 A global transient variable named DataItem, which refers to the DzSimpleElementScriptData that invoked the execution of the script, is provided to the script in the global context at runtime. Attempts to use this global variable outside of the associated script will result in a ReferenceError.
+
 
 
 A global transient variable named FileIOSettings, which refers to the DzFileIOSettings that was used when the element that owns the data item was loaded, is provided to the script in the global context at runtime. Attempts to use this global variable outside of the associated script will result in a ReferenceError. (since 4.9.4.109)
 
 
+
 If the DzSettings for this data item contains a boolean setting named RunOnce set to true, the specified script will be run once and then the data item will be deleted from the element.
+
 
 
 Attention:
@@ -29251,7 +30334,7 @@ class DzSimpleElementScriptData extends DzSimpleElementData {
 	/**
  * @description Return Value:
 */
-	getScriptFilePath() {
+	getScriptFilePath():String {
 	
 	}
 	/**
@@ -29277,7 +30360,7 @@ class DzSimpleSceneData extends DzSceneData {
 	/**
  * @description Return Value:
 */
-	getSettings() {
+	getSettings():DzSettings {
 	
 	}
 
@@ -29286,10 +30369,13 @@ class DzSimpleSceneData extends DzSceneData {
  * @classdesc Implements a custom data item that causes a specified script to be executed after the scene has been loaded.
 
 
+
 A global transient variable named DataItem, which refers to the DzSimpleSceneScriptData that invoked the execution of the script, is provided to the script in the global context at runtime. Attempts to use this global variable outside of the associated script will result in a ReferenceError.
 
 
+
 A global transient variable named FileIOSettings, which refers to the DzFileIOSettings that was used when the scene was loaded, is provided to the script in the global context at runtime. Attempts to use this global variable outside of the associated script will result in a ReferenceError. (since 4.9.4.109)
+
 
 
 If the DzSettings for this data item contains a boolean setting named RunOnce set to true, the specified script will be run once and then the data item will be deleted from the scene.
@@ -29305,7 +30391,7 @@ class DzSimpleSceneScriptData extends DzSimpleSceneData {
 	/**
  * @description Return Value:
 */
-	getScriptFilePath() {
+	getScriptFilePath():String {
 	
 	}
 	/**
@@ -29318,6 +30404,7 @@ class DzSimpleSceneScriptData extends DzSimpleSceneData {
 }
 /**
  * @classdesc An asset save filter for saving a Simulation Settings Preset in the DSON format.
+
 
 
 See Also:
@@ -29340,6 +30427,7 @@ Add description.
  * @classdesc This is the DAZScript counterpart to the QSize type used in the DAZ Studio SDK. A Size object is a two dimensional representation of a width and height.
 
 
+
 Attention:
 
 
@@ -29347,6 +30435,7 @@ Attention:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/size}*/
 class Size extends QObject {
 	height:Number;
+	width:Number;
 	width:Number;
 	/**
  * @description Default constructor.
@@ -29372,7 +30461,7 @@ class Size extends QObject {
 	/**
  * @description Swaps the width and height of the size.
 */
-	translate() {
+	translate():void {
 	
 	}
 
@@ -29398,7 +30487,7 @@ class DzSkeleton extends DzNode {
 	/**
  * @description Clears the generated morphs.
 */
-	clearGeneratedMorphs() {
+	clearGeneratedMorphs():void {
 	
 	}
 	/**
@@ -29422,43 +30511,43 @@ class DzSkeleton extends DzNode {
 	/**
  * @description Return Value:
 */
-	getAllBones() {
+	getAllBones():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDrawGLBones() {
+	getDrawGLBones():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDrawGLBonesControl() {
+	getDrawGLBonesControl():DzBoolProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFigureIDControl() {
+	getFigureIDControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFollowControl() {
+	getFollowControl():DzSkeletonProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFollowMode() {
+	getFollowMode():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFollowModeControl() {
+	getFollowModeControl():DzEnumProperty {
 	
 	}
 	/**
@@ -29470,37 +30559,37 @@ class DzSkeleton extends DzNode {
 	/**
  * @description Return Value:
 */
-	getFollowTarget() {
+	getFollowTarget():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getGLBonesColorControl() {
+	getGLBonesColorControl():DzColorProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getGLBonesEdgeOpacityControl() {
+	getGLBonesEdgeOpacityControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getGLBonesEdgeStyleControl() {
+	getGLBonesEdgeStyleControl():DzEnumProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getGLBonesFillOpacityControl() {
+	getGLBonesFillOpacityControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumFollowSkeletons() {
+	getNumFollowSkeletons():Number {
 	
 	}
 	/**
@@ -29544,7 +30633,7 @@ class DzSkeletonProperty extends DzNodeProperty {
 	/**
  * @description Return Value:
 */
-	getSkeletonValue() {
+	getSkeletonValue():DzSkeleton {
 	
 	}
 
@@ -29557,7 +30646,9 @@ class DzSkeletonProperty extends DzNodeProperty {
 Todo
 
 
+
 Examples:
+
 
 
 This class could also be used by plug-in developers for other custom importers to store the source file for imported items.
@@ -29574,13 +30665,13 @@ class DzSourceFileData extends DzElementData {
 	/**
  * @description Return Value:
 */
-	getGeometryChanged() {
+	getGeometryChanged():Boolean {
 	
 	}
 	/**
  * @description Tries to convert the source path into a "Poser" style Runtime-relative path (i.e. ":Runtime:Libraries:Character:FileName.cr2"). Returns the converted path if successful, and an empty string if unsuccessful.
 */
-	getPoserRuntimeRelativePath() {
+	getPoserRuntimeRelativePath():String {
 	
 	}
 	/**
@@ -29596,6 +30687,9 @@ class DzSourceFileData extends DzElementData {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/splitter_dz}*/
 class DzSplitter extends DzWidget {
 	childrenCollapsible:Boolean;
+	handleWidth:Number;
+	opaqueResize:Boolean;
+	orientation:DzWidget;
 	handleWidth:Number;
 	opaqueResize:Boolean;
 	orientation:DzWidget;
@@ -29617,7 +30711,7 @@ Add description.
  * @description TODO:
 Add description.
 */
-	count() {
+	count():Number {
 	
 	}
 	/**
@@ -29652,7 +30746,7 @@ Add description.
  * @description TODO:
 Add description.
 */
-	saveState() {
+	saveState():ByteArray {
 	
 	}
 	/**
@@ -29693,61 +30787,61 @@ class DzSpotLight extends DzDistantLight {
 	/**
  * @description Return Value:
 */
-	getBaseOpacity() {
+	getBaseOpacity():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getBaseOpacityControl() {
+	getBaseOpacityControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getBeamDistribution() {
+	getBeamDistribution():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getBeamDistributionControl() {
+	getBeamDistributionControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDecay() {
+	getDecay():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDecayControl() {
+	getDecayControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDisplayPersistence() {
+	getDisplayPersistence():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDisplayPersistenceControl() {
+	getDisplayPersistenceControl():DzBoolProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getEdgeOpacity() {
+	getEdgeOpacity():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getEdgeOpacityControl() {
+	getEdgeOpacityControl():DzFloatProperty {
 	
 	}
 	/**
@@ -29760,99 +30854,99 @@ Add description.
 	/**
  * @description Return Value:
 */
-	getLightExponent() {
+	getLightExponent():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLightExponentControl() {
+	getLightExponentControl():DzFloatProperty {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	getLightVisibility() {
+	getLightVisibility():Boolean {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	getLineOpacity() {
+	getLineOpacity():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getOpacityScale() {
+	getOpacityScale():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getOpacityScaleControl() {
+	getOpacityScaleControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRayLength() {
+	getRayLength():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRayLengthControl() {
+	getRayLengthControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRayOpacity() {
+	getRayOpacity():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRayOpacityControl() {
+	getRayOpacityControl():DzFloatProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getShowBase() {
+	getShowBase():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getShowBaseControl() {
+	getShowBaseControl():DzBoolProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getShowEdge() {
+	getShowEdge():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getShowEdgeControl() {
+	getShowEdgeControl():DzBoolProperty {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSpreadAngle() {
+	getSpreadAngle():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSpreadAngleControl() {
+	getSpreadAngleControl():DzFloatProperty {
 	
 	}
 	/**
@@ -29951,7 +31045,7 @@ class DzStringProperty extends DzProperty {
 	/**
  * @description Return Value:
 */
-	getValue() {
+	getValue():String {
 	
 	}
 	/**
@@ -29964,6 +31058,7 @@ class DzStringProperty extends DzProperty {
 }
 /**
  * @classdesc Example:
+
 
 
 Reset the current style colors to their default values.
@@ -30105,19 +31200,19 @@ class DzStyle extends QObject {
 	/**
  * @description Return Value:
 */
-	getNumInterfaceColors() {
+	getNumInterfaceColors():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumInterfaceNumbers() {
+	getNumInterfaceNumbers():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getStyleDefinition() {
+	getStyleDefinition():String {
 	
 	}
 	/**
@@ -30212,19 +31307,19 @@ class DzTabWidget extends DzWidget {
 	/**
  * @description Removes all the pages, but does not delete them.
 */
-	clear() {
+	clear():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	cornerWidget() {
+	cornerWidget():DzWidget {
 	
 	}
 	/**
  * @description Return Value:
 */
-	currentWidget() {
+	currentWidget():DzWidget {
 	
 	}
 	/**
@@ -30325,6 +31420,13 @@ class DzTextBrowser extends DzTextEdit {
 	openLinks:Boolean;
 	searchPaths:Array;
 	source:String;
+	forwardCount:Number;
+	isBackwardAvailable:Boolean;
+	isForwardAvailable:Boolean;
+	openExternalLinks:Boolean;
+	openLinks:Boolean;
+	searchPaths:Array;
+	source:String;
 	/**
  * @description Creates a text browser widget as a child of the given parent widget.
  * @constructor
@@ -30335,19 +31437,19 @@ class DzTextBrowser extends DzTextEdit {
 	/**
  * @description Changes the document displayed to the previous document in the list built by navigating links. Does nothing if there is no previous document.
 */
-	backward() {
+	backward():void {
 	
 	}
 	/**
  * @description Clears the history of visited documents and disables the forward and backward navigation.
 */
-	clearHistory() {
+	clearHistory():void {
 	
 	}
 	/**
  * @description Changes the document displayed to the next document in the list built by navigating links. Does nothing if there is no next document.
 */
-	forward() {
+	forward():void {
 	
 	}
 	/**
@@ -30365,13 +31467,13 @@ class DzTextBrowser extends DzTextEdit {
 	/**
  * @description Changes the current document displayed to be the first document displayed.
 */
-	home() {
+	home():void {
 	
 	}
 	/**
  * @description Reloads the current document.
 */
-	reload() {
+	reload():void {
 	
 	}
 
@@ -30462,25 +31564,25 @@ class DzTextEdit extends DzWidget {
 	/**
  * @description If text is currently selected, it will be deleted and the cursor moved to the beginning of the selection. If no text is selected, the cursor will be moved one character to the left and the character will be deleted.
 */
-	backspace() {
+	backspace():void {
 	
 	}
 	/**
  * @description If a word is currently selected, it will be deleted and the cursor moved to the beginning of the selection. If no word is selected, the cursor will be moved one word to the left and the word will be deleted.
 */
-	backspaceWord() {
+	backspaceWord():void {
 	
 	}
 	/**
  * @description Removes all text from the editor.
 */
-	clear() {
+	clear():void {
 	
 	}
 	/**
  * @description Copies the selected text into the clipboard.
 */
-	copy() {
+	copy():void {
 	
 	}
 	/**
@@ -30510,19 +31612,19 @@ class DzTextEdit extends DzWidget {
 	/**
  * @description Copies the selected text into the clipboard, and removes it from the editor.
 */
-	cut() {
+	cut():void {
 	
 	}
 	/**
  * @description If text is currently selected, it will be deleted and the cursor moved to the beginning of the selection. If no text is selected, the character to the right of the cursor will be deleted.
 */
-	del() {
+	del():void {
 	
 	}
 	/**
  * @description If a word is currently selected, it will be deleted and the cursor moved to the beginning of the selection. If no word is selected, the word to the right of the cursor will be deleted.
 */
-	deleteWord() {
+	deleteWord():void {
 	
 	}
 	/**
@@ -30540,7 +31642,7 @@ class DzTextEdit extends DzWidget {
 	/**
  * @description Ensures that the cursor is visible by scrolling the editor if necessary.
 */
-	ensureCursorVisible() {
+	ensureCursorVisible():void {
 	
 	}
 	/**
@@ -30552,7 +31654,7 @@ class DzTextEdit extends DzWidget {
 	/**
  * @description Return Value:
 */
-	hasSelectedText() {
+	hasSelectedText():Boolean {
 	
 	}
 	/**
@@ -30564,7 +31666,7 @@ class DzTextEdit extends DzWidget {
 	/**
  * @description Splits the block (paragraph) at the cursor position.
 */
-	insertBlock() {
+	insertBlock():void {
 	
 	}
 	/**
@@ -30606,13 +31708,13 @@ class DzTextEdit extends DzWidget {
 	/**
  * @description Inserts any text on the clipboard into the line at the cursor's current position.
 */
-	paste() {
+	paste():void {
 	
 	}
 	/**
  * @description If redoAvailable is true, redoes the next operation in the editor.
 */
-	redo() {
+	redo():void {
 	
 	}
 	/**
@@ -30624,25 +31726,25 @@ class DzTextEdit extends DzWidget {
 	/**
  * @description Selects all the text in the editor.
 */
-	selectAll() {
+	selectAll():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	selectedText() {
+	selectedText():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	selectionEnd() {
+	selectionEnd():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	selectionStart() {
+	selectionStart():Number {
 	
 	}
 	/**
@@ -30654,7 +31756,7 @@ class DzTextEdit extends DzWidget {
 	/**
  * @description If undoAvailable is true, undoes the last operation in the editor.
 */
-	undo() {
+	undo():void {
 	
 	}
 	/**
@@ -30704,31 +31806,31 @@ class DzTexture extends QObject, DzRefCountedItem {
 	/**
  * @description Return Value:
 */
-	getFilename() {
+	getFilename():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getGamma() {
+	getGamma():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getGLAlphaTextureSize() {
+	getGLAlphaTextureSize():Size {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getGLTextureSize() {
+	getGLTextureSize():Size {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getOriginalImageSize() {
+	getOriginalImageSize():Size {
 	
 	}
 	/**
@@ -30746,13 +31848,13 @@ class DzTexture extends QObject, DzRefCountedItem {
 	/**
  * @description Return Value:
 */
-	getTempFilename() {
+	getTempFilename():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTextureType() {
+	getTextureType():Number {
 	
 	}
 	/**
@@ -30765,7 +31867,7 @@ Add description.
 	/**
  * @description Reloads the image if its source file has changed
 */
-	refresh() {
+	refresh():void {
 	
 	}
 	/**
@@ -30850,7 +31952,7 @@ class DzTextureLayer extends DzTextureComponent {
  * @description TODO:
 Add description.
 */
-	clearMask() {
+	clearMask():void {
 	
 	}
 	/**
@@ -30864,7 +31966,7 @@ Add description.
  * @description TODO:
 Add description.
 */
-	getMask() {
+	getMask():DzTextureMask {
 	
 	}
 	/**
@@ -30886,10 +31988,12 @@ class DzTextureMask extends DzTextureComponent {
  * @classdesc DzTime is used for storing and passing time values. Time references in DAZ Studio are stored in 'ticks' - there are 4800 ticks per second. This number was chosen because of its divisibility by typical frame rates. For example, at 60 fps (frames per second) there are 80 ticks between each frame; at 30 fps, 160 ticks; at 20 fps, 180 ticks; etc.
 
 
+
 Attention:
 
 
  Methods throughout the DAZ Studio API that take a DzTime as an argument can also take a Number in its place.
+
 
 
 
@@ -30919,7 +32023,7 @@ class DzTime {
 	/**
  * @description Return Value:
 */
-	valueOf() {
+	valueOf():Number {
 	
 	}
 
@@ -30929,6 +32033,8 @@ class DzTime {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/timeedit_dz}*/
 class DzTimeEdit extends DzDateTimeEdit {
 	max:Date;
+	min:Date;
+	separator:String;
 	min:Date;
 	separator:String;
 	/**
@@ -30947,6 +32053,8 @@ class DzTimer extends QObject {
 	active:Boolean;
 	interval:Number;
 	singleShot:Number;
+	interval:Number;
+	singleShot:Number;
 	/**
  * @description Construct a timer with the given parent.
  * @constructor
@@ -30963,13 +32071,13 @@ class DzTimer extends QObject {
 	/**
  * @description Starts, or restarts, the timer with a timeout interval of interval milliseconds. If the timer is already running, it will be stopped and restarted. If singleShot is true, the timer will be started only once.
 */
-	start() {
+	start():void {
 	
 	}
 	/**
  * @description Stops the timer.
 */
-	stop() {
+	stop():void {
 	
 	}
 
@@ -30980,6 +32088,7 @@ Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/timerange_dz}*/
 class DzTimeRange extends Object {
 	end:Number;
+	start:Number;
 	start:Number;
 	/**
  * @description Default Constructor. Creates the time range [DZ_MIN_TIME,DZ_MAX_TIME]
@@ -31017,7 +32126,7 @@ class DzTimeRange extends Object {
 	/**
  * @description Return Value:
 */
-	getDuration() {
+	getDuration():Number {
 	
 	}
 	/**
@@ -31041,7 +32150,7 @@ class DzTimeRange extends Object {
 	/**
  * @description Return Value:
 */
-	isEmpty() {
+	isEmpty():Boolean {
 	
 	}
 	/**
@@ -31059,7 +32168,7 @@ class DzTimeRange extends Object {
 	/**
  * @description Sets the time range to be empty.
 */
-	makeEmpty() {
+	makeEmpty():void {
 	
 	}
 	/**
@@ -31108,7 +32217,7 @@ class DzToolBar extends QWidget {
 	/**
  * @description Removes all items from the bar.
 */
-	clear() {
+	clear():void {
 	
 	}
 	/**
@@ -31120,7 +32229,7 @@ class DzToolBar extends QWidget {
 	/**
  * @description Return Value:
 */
-	dockedArea() {
+	dockedArea():DockArea {
 	
 	}
 	/**
@@ -31132,19 +32241,19 @@ class DzToolBar extends QWidget {
 	/**
  * @description This function is provided for DAZ Script access. Plug-in developers are encouraged to use the much more efficient itemListIterator() method.
 */
-	getItemList() {
+	getItemList():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumItems() {
+	getNumItems():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	hasItems() {
+	hasItems():Boolean {
 	
 	}
 	/**
@@ -31204,7 +32313,7 @@ class DzToolBar extends QWidget {
 	/**
  * @description Return Value:
 */
-	isClosed() {
+	isClosed():Boolean {
 	
 	}
 	/**
@@ -31302,7 +32411,7 @@ class DzTopLevelAssetContainer extends DzAbstractAssetContainer, DzRefCountedIte
 	/**
  * @description Return Value:
 */
-	getState() {
+	getState():ContainerState {
 	
 	}
 	/**
@@ -31318,6 +32427,7 @@ class DzTopLevelAssetContainer extends DzAbstractAssetContainer, DzRefCountedIte
 
 
  This object is provided by the Transfer Utility plugin. It is only available when the Transfer Utility plugin is activated and enabled.
+
 
 
 
@@ -31397,259 +32507,259 @@ class DzTransferUtility extends QObject {
 	/**
  * @description Performs the projection transfer based on the current settings.
 */
-	doTransfer() {
+	doTransfer():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getAdaptiveTolerance() {
+	getAdaptiveTolerance():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getAddSmoothModifier() {
+	getAddSmoothModifier():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getAdjustTargetBase() {
+	getAdjustTargetBase():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getContentType() {
+	getContentType():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getDistanceSquaredTolerance() {
+	getDistanceSquaredTolerance():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFitToFigure() {
+	getFitToFigure():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLockViewOnTransfer() {
+	getLockViewOnTransfer():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getMergeHierarchies() {
+	getMergeHierarchies():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getMorphTransferList() {
+	getMorphTransferList():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNearness() {
+	getNearness():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getOverrideExistingMorphs() {
+	getOverrideExistingMorphs():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getParentToFigure() {
+	getParentToFigure():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getProjectionTemplatePath() {
+	getProjectionTemplatePath():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRemoveUnusedTargetBones() {
+	getRemoveUnusedTargetBones():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRespectHiddenFacets() {
+	getRespectHiddenFacets():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSmartLeftRightHandling() {
+	getSmartLeftRightHandling():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSourceBase() {
+	getSourceBase():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSourceBaseMorph() {
+	getSourceBaseMorph():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSourceGeom() {
+	getSourceGeom():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSourceNode() {
+	getSourceNode():DzNode {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getSourceType() {
+	getSourceType():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTargetBase() {
+	getTargetBase():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTargetBaseMorph() {
+	getTargetBaseMorph():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTargetGeom() {
+	getTargetGeom():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTargetNode() {
+	getTargetNode():DzNode {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTargetOutputFigure() {
+	getTargetOutputFigure():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTargetReplacesSource() {
+	getTargetReplacesSource():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTargetType() {
+	getTargetType():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTransferBinding() {
+	getTransferBinding():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTransferFaceGroups() {
+	getTransferFaceGroups():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTransferMaterialGroups() {
+	getTransferMaterialGroups():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTransferMorphs() {
+	getTransferMorphs():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTransferRegionGroups() {
+	getTransferRegionGroups():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTransferSelectionMap() {
+	getTransferSelectionMap():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTransferSourceMorphs() {
+	getTransferSourceMorphs():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTransferTemplateMorphs() {
+	getTransferTemplateMorphs():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getTransferUVs() {
+	getTransferUVs():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getUseNearness() {
+	getUseNearness():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getUseSpecifiedContentType() {
+	getUseSpecifiedContentType():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getUVSpaceProjection() {
+	getUVSpaceProjection():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getVertexFirstProjection() {
+	getVertexFirstProjection():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isSourceBaseMorphClone() {
+	isSourceBaseMorphClone():Boolean {
 	
 	}
 	/**
@@ -31775,7 +32885,7 @@ class DzTransferUtility extends QObject {
 	/**
  * @description Sets the transfer utility to use the current world-space cached geometry of the source asset for the projection base instead of a morph or the unmodified base geometry. Only valid if the source asset is a node.
 */
-	setSourceBaseCurrent() {
+	setSourceBaseCurrent():Boolean {
 	
 	}
 	/**
@@ -31799,7 +32909,7 @@ class DzTransferUtility extends QObject {
 	/**
  * @description Sets the transfer utility to use the current world-space cached geometry of the target asset for the projection base instead of a morph or the unmodified base geometry. Only valid if the target asset is a node.
 */
-	setTargetBaseCurrent() {
+	setTargetBaseCurrent():Boolean {
 	
 	}
 	/**
@@ -31914,7 +33024,7 @@ class DzTypeAssetContainer extends DzAbstractAssetContainer, DzRefCountedItem {
 	/**
  * @description Clears all the child containers and assets associated with this container. Emits endAssetRemove() and endChildContainerRemove().
 */
-	clear() {
+	clear():void {
 	
 	}
 	/**
@@ -31932,7 +33042,7 @@ class DzTypeAssetContainer extends DzAbstractAssetContainer, DzRefCountedItem {
 	/**
  * @description Return Value:
 */
-	getTypeName() {
+	getTypeName():String {
 	
 	}
 	/**
@@ -31945,6 +33055,7 @@ class DzTypeAssetContainer extends DzAbstractAssetContainer, DzRefCountedItem {
 }
 /**
  * @classdesc Provides functionality that allows QtDesigner to be used in the creation of graphical user interfaces used by scripts.
+
 
 
 See Also:
@@ -31969,19 +33080,19 @@ class DzUiLoader extends QObject {
 	/**
  * @description Return Value:
 */
-	availableLayouts() {
+	availableLayouts():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	availableWidgets() {
+	availableWidgets():Array {
 	
 	}
 	/**
  * @description Clears the list of paths the .ui loader searches when locating QtDesigner plug-ins.
 */
-	clearPluginPaths() {
+	clearPluginPaths():void {
 	
 	}
 	/**
@@ -32005,7 +33116,7 @@ class DzUiLoader extends QObject {
 	/**
  * @description Return Value:
 */
-	pluginPaths() {
+	pluginPaths():Array {
 	
 	}
 	/**
@@ -32017,7 +33128,7 @@ class DzUiLoader extends QObject {
 	/**
  * @description Return Value:
 */
-	workingDirectory() {
+	workingDirectory():String {
 	
 	}
 
@@ -32037,19 +33148,19 @@ class DzUIPopUpWgt extends QWidget {
 	/**
  * @description Return Value:
 */
-	getFileName() {
+	getFileName():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getUIWidget() {
+	getUIWidget():QWidget {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getWorkingDirectory() {
+	getWorkingDirectory():String {
 	
 	}
 	/**
@@ -32082,6 +33193,7 @@ class DzUIPopUpWgt extends QWidget {
  * @classdesc Encapsulates a widget loaded from a QtDesigner (*.ui) file. Do not create an instance of this class, request an instance via DzUiLoader.
 
 
+
 See Also:
 
 
@@ -32105,43 +33217,43 @@ class DzUndoStack extends QObject {
 	/**
  * @description It is recommended that you use Global.beginUndo() instead of calling this function directly to avoid leaving the undo stack open.
 */
-	beginHold() {
+	beginHold():void {
 	
 	}
 	/**
  * @description It is recommended that you use Global.cancelUndo() instead of calling this function directly to avoid leaving the undo stack open.
 */
-	cancel() {
+	cancel():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	canPushItems() {
+	canPushItems():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	canRedo() {
+	canRedo():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	canUndo() {
+	canUndo():Boolean {
 	
 	}
 	/**
  * @description Clears the undo stack. This must be called at least whenever the list changes.
 */
-	clearAll() {
+	clearAll():void {
 	
 	}
 	/**
  * @description It is recommended that you use Global.dropUndo() instead of calling this function directly to avoid leaving the undo stack open.
 */
-	drop() {
+	drop():void {
 	
 	}
 	/**
@@ -32153,73 +33265,73 @@ class DzUndoStack extends QObject {
 	/**
  * @description Return Value:
 */
-	getCurrentIndex() {
+	getCurrentIndex():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumItems() {
+	getNumItems():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumRedoItems() {
+	getNumRedoItems():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumUndoItems() {
+	getNumUndoItems():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRedoCaption() {
+	getRedoCaption():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getUndoCaption() {
+	getUndoCaption():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	hasItems() {
+	hasItems():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isInUndoRedo() {
+	isInUndoRedo():Boolean {
 	
 	}
 	/**
  * @description Disables items from being pushed onto the stack. This will be toggled by items to prevent undo operations from creating new undo items during an undo. Every call to lock() must be matched by a call to unlock().
 */
-	lock() {
+	lock():void {
 	
 	}
 	/**
  * @description Calls redo on the item at the top of the stack, then moves the pointer to the next item in the stack.
 */
-	redo() {
+	redo():Boolean {
 	
 	}
 	/**
  * @description Calls undo on the item at the top of the stack, then moves the pointer to the previous item in the stack.
 */
-	undo() {
+	undo():Boolean {
 	
 	}
 	/**
  * @description Enables items to be pushed onto the stack after a lock() call.
 */
-	unlock() {
+	unlock():void {
 	
 	}
 
@@ -32228,19 +33340,25 @@ class DzUndoStack extends QObject {
  * @classdesc Represents a URI as it is used for the DSON file format. DzUri provides functionality in addition to standard URI/URL representations that is specific to the DSON file format.
 
 
+
 DzUri provides for a traditional URI with path and fragment portions. In addition, it further divides the fragment into 1 to 3 parts for ease of use in the DSON file format. The following is an example of a URI as represented by the DzURI class:
+
 
 
 /Converted/Victoria4/Victoria4.dsf.rCollar?rotation/x
 
 
+
 The file path portion of this URI is: "/Converted/Victoria4/Victoria4.dsf"
+
 
 
 The fragment portion of this URI is: "rCollar?rotation/x"
 
 
+
 The fragment is further divided into an identifier and a property path. In this case the identifier is "rCollar" and the property path is "rotation/x".
+
 
 
 All the sections of the fragment are optional, however, to be valid, each section in the fragment requires the preceding section to also be valid. So, the following URIs are valid:
@@ -32254,6 +33372,7 @@ All the sections of the fragment are optional, however, to be valid, each sectio
 
 
 
+
 And the following URIs are not valid:
 
 
@@ -32262,6 +33381,7 @@ And the following URIs are not valid:
  /Converted/Victoria4/Victoria4.dsf#?/x
 
  /Converted/Victoria4/Victoria4.dsf#?rotation
+
 
 
 
@@ -32380,32 +33500,32 @@ class DzUri extends Object {
 	/**
  * @description Clears the current values of this URI.
 */
-	clear() {
+	clear():void {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	clearFoundLocalFilename() {
+	clearFoundLocalFilename():void {
 	
 	}
 	/**
  * @description Detaches this URI from any shared data. Makes the underlying data in this URI unique from all other URIs.
 */
-	detach() {
+	detach():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isEmpty() {
+	isEmpty():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isNull() {
+	isNull():Boolean {
 	
 	}
 	/**
@@ -32423,7 +33543,7 @@ Add description.
 	/**
  * @description Attempts to convert the URI to the path of a local file.
 */
-	toLocalFilename() {
+	toLocalFilename():String {
 	
 	}
 	/**
@@ -32451,6 +33571,11 @@ class DzUVSet extends DzRefCountedItem {
 	assetModifiedDate:Date;
 	assetSource:DzUri;
 	assetUri:DzUri;
+	assetFileRevision:DzVersion;
+	assetId:String;
+	assetModifiedDate:Date;
+	assetSource:DzUri;
+	assetUri:DzUri;
 	/**
  * @description TODO:
 Add description.
@@ -32463,6 +33588,7 @@ Add description.
 }
 /**
  * @classdesc An asset save filter for saving a UV Set Definition Support Asset in the DSON format.
+
 
 
 See Also:
@@ -32522,6 +33648,7 @@ class DzVButtonGroup extends DzButtonGroup {
 
 
 
+
 Since:
 
 
@@ -32529,6 +33656,7 @@ Since:
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/vec2_dz}*/
 class DzVec2 extends Object {
 	x:Number;
+	y:Number;
 	y:Number;
 	/**
  * @description Default Constructor. Creates an uninitialized vector.
@@ -32568,7 +33696,7 @@ class DzVec2 extends Object {
 	/**
  * @description Sets the value of each component to its respective absolute value.
 */
-	abs() {
+	abs():void {
 	
 	}
 	/**
@@ -32580,7 +33708,7 @@ class DzVec2 extends Object {
 	/**
  * @description Return Value:
 */
-	average() {
+	average():Number {
 	
 	}
 	/**
@@ -32652,13 +33780,13 @@ class DzVec2 extends Object {
 	/**
  * @description Return Value:
 */
-	length() {
+	length():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	lengthSquared() {
+	lengthSquared():Number {
 	
 	}
 	/**
@@ -32670,13 +33798,13 @@ class DzVec2 extends Object {
 	/**
  * @description Sets this vector to (1.0, 1.0).
 */
-	makeIdentity() {
+	makeIdentity():void {
 	
 	}
 	/**
  * @description Sets this vector to (0.0, 0.0).
 */
-	makeZero() {
+	makeZero():void {
 	
 	}
 	/**
@@ -32700,19 +33828,19 @@ class DzVec2 extends Object {
 	/**
  * @description Negates each component of this vector.
 */
-	negate() {
+	negate():void {
 	
 	}
 	/**
  * @description Modifies this vector to be its unit length.
 */
-	normalize() {
+	normalize():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	normalized() {
+	normalized():void {
 	
 	}
 	/**
@@ -32724,7 +33852,7 @@ class DzVec2 extends Object {
 	/**
  * @description Sets the value of each component to its respective squared value.
 */
-	square() {
+	square():void {
 	
 	}
 	/**
@@ -32745,6 +33873,8 @@ class DzVec2 extends Object {
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/vec3_dz}*/
 class DzVec3 extends Object {
 	x:Number;
+	y:Number;
+	z:Number;
 	y:Number;
 	z:Number;
 	/**
@@ -32778,7 +33908,7 @@ class DzVec3 extends Object {
 	/**
  * @description Sets the value of each component to its respective absolute value.
 */
-	abs() {
+	abs():void {
 	
 	}
 	/**
@@ -32790,7 +33920,7 @@ class DzVec3 extends Object {
 	/**
  * @description Return Value:
 */
-	average() {
+	average():Number {
 	
 	}
 	/**
@@ -32868,13 +33998,13 @@ class DzVec3 extends Object {
 	/**
  * @description Return Value:
 */
-	length() {
+	length():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	lengthSquared() {
+	lengthSquared():Number {
 	
 	}
 	/**
@@ -32886,13 +34016,13 @@ class DzVec3 extends Object {
 	/**
  * @description Sets this vector to (1.0, 1.0, 1.0).
 */
-	makeIdentity() {
+	makeIdentity():void {
 	
 	}
 	/**
  * @description Sets this vector to (0.0, 0.0, 0.0).
 */
-	makeZero() {
+	makeZero():void {
 	
 	}
 	/**
@@ -32916,19 +34046,19 @@ class DzVec3 extends Object {
 	/**
  * @description Negates each component of this vector.
 */
-	negate() {
+	negate():void {
 	
 	}
 	/**
  * @description Modifies this vector to be its unit length.
 */
-	normalize() {
+	normalize():void {
 	
 	}
 	/**
  * @description Return Value:
 */
-	normalized() {
+	normalized():void {
 	
 	}
 	/**
@@ -32940,7 +34070,7 @@ class DzVec3 extends Object {
 	/**
  * @description Sets the value of each component to its respective squared value.
 */
-	square() {
+	square():void {
 	
 	}
 	/**
@@ -32955,19 +34085,25 @@ class DzVec3 extends Object {
  * @classdesc This class was added to DAZ Studio 4.x to make it easier to work with 64-bit version numbers and to facilitate compatibility with the old 32-bit version numbers.
 
 
+
 Version numbers are typically displayed to the user as short version strings, e.g. 4.0, or long version strings, e.g. 4.0.0.0.
+
 
 
 The version number consists of 4 components: The Major version number, the Minor version number, the Revision number, and the Build number. This is displayed in the following order: Major.Minor.Revision.Build.
 
 
+
 In DAZ Studio, version numbers are typically stored as 64-bit unsigned integers with 16 bits for each number. This means that each number has a valid range of 0-65535. The most significant 16 bits are the Major version number, the next most significant 16 bits are the Minor version number, the next most significant 16 bits are the Revision number and the least significant 16 bits are the Build number. So, a packed version number in hexadecimal notation might look like: 0x1111222233334444 where 1111 is the Major version number, 2222 is the Minor version number 3333 is the Revision number and 4444 is the build number.
+
 
 
 It is recommended that this class be used when possible to reduce confusion when dealing with version numbers in code.
 
 
+
 This class provides methods for all of the numerical comparison operators (<, >, <=, >=, ==, !=) to make it easy to compare version numbers without directly using the packed value, or the individual components.
+
 
 
 Since:
@@ -33027,49 +34163,49 @@ Add description.
 	/**
  * @description Return Value:
 */
-	getBuildNumber() {
+	getBuildNumber():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLongVersionString() {
+	getLongVersionString():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getMajorVersion() {
+	getMajorVersion():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getMinorVersion() {
+	getMinorVersion():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRevisionNumber() {
+	getRevisionNumber():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getVersionNumber() {
+	getVersionNumber():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getVersionNumber32() {
+	getVersionNumber32():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getVersionString() {
+	getVersionString():String {
 	
 	}
 	/**
@@ -33087,7 +34223,7 @@ Add description.
 	/**
  * @description Return Value:
 */
-	isValid() {
+	isValid():Boolean {
 	
 	}
 	/**
@@ -33169,13 +34305,13 @@ class DzVideoClip extends QObject {
 	/**
  * @description Return Value:
 */
-	getAudio() {
+	getAudio():DzAudioClip {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getAudioStartTime() {
+	getAudioStartTime():DzTime {
 	
 	}
 	/**
@@ -33187,25 +34323,25 @@ class DzVideoClip extends QObject {
 	/**
  * @description Return Value:
 */
-	getFrameRate() {
+	getFrameRate():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getHeight() {
+	getHeight():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumFrames() {
+	getNumFrames():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getWidth() {
+	getWidth():Number {
 	
 	}
 	/**
@@ -33230,19 +34366,19 @@ class DzVideoExporter extends DzFileIO {
 	/**
  * @description Return Value:
 */
-	getDescription() {
+	getDescription():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getExtension() {
+	getExtension():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isFileExporter() {
+	isFileExporter():Boolean {
 	
 	}
 	/**
@@ -33267,13 +34403,13 @@ class DzView extends QWidget {
 	/**
  * @description Return Value:
 */
-	getDescription() {
+	getDescription():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getIcon() {
+	getIcon():Pixmap {
 	
 	}
 
@@ -33285,25 +34421,25 @@ class DzViewport extends QWidget {
 	/**
  * @description Return Value:
 */
-	get3DViewport() {
+	get3DViewport():Dz3DViewport {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getManager() {
+	getManager():DzViewportMgr {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getView() {
+	getView():DzView {
 	
 	}
 	/**
  * @description Return Value:
 */
-	isCustom() {
+	isCustom():Boolean {
 	
 	}
 	/**
@@ -33642,19 +34778,19 @@ class DzViewportMgr extends QWidget {
 	/**
  * @description Sets the next tool in the list after the currently active tool to be the currently active tool.
 */
-	activateNextTool() {
+	activateNextTool():void {
 	
 	}
 	/**
  * @description Sets the tool in the list before the currently active tool to be the currently active tool.
 */
-	activatePrevTool() {
+	activatePrevTool():void {
 	
 	}
 	/**
  * @description Causes the color of each viewport to be set to their respective values, if the color is defined in the current style.
 */
-	applyStyleColors() {
+	applyStyleColors():void {
 	
 	}
 	/**
@@ -33672,13 +34808,13 @@ class DzViewportMgr extends QWidget {
 	/**
  * @description Return Value:
 */
-	getActiveTool() {
+	getActiveTool():DzViewTool {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getActiveViewport() {
+	getActiveViewport():DzViewport {
 	
 	}
 	/**
@@ -33696,13 +34832,13 @@ class DzViewportMgr extends QWidget {
 	/**
  * @description Return Value:
 */
-	getInvertMouseWheel() {
+	getInvertMouseWheel():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getLayout() {
+	getLayout():Layout {
 	
 	}
 	/**
@@ -33778,67 +34914,67 @@ Add description.
 	/**
  * @description Return Value:
 */
-	getNodeClickMode() {
+	getNodeClickMode():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumCustomViewports() {
+	getNumCustomViewports():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumDefaultViewports() {
+	getNumDefaultViewports():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumTools() {
+	getNumTools():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumUserDrawStyles() {
+	getNumUserDrawStyles():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumViewCameras() {
+	getNumViewCameras():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumViewports() {
+	getNumViewports():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumViews() {
+	getNumViews():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumVisibleCustomViewports() {
+	getNumVisibleCustomViewports():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumVisibleDefaultViewports() {
+	getNumVisibleDefaultViewports():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumVisibleViewports() {
+	getNumVisibleViewports():Number {
 	
 	}
 	/**
@@ -33851,13 +34987,13 @@ Add description.
 	/**
  * @description Return Value:
 */
-	getPropagateBackgroundColor() {
+	getPropagateBackgroundColor():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getRegionClickMode() {
+	getRegionClickMode():Number {
 	
 	}
 	/**
@@ -33870,7 +35006,7 @@ Add description.
  * @description TODO:
 Add description.
 */
-	getUsePerPixelLighting() {
+	getUsePerPixelLighting():Boolean {
 	
 	}
 	/**
@@ -33906,13 +35042,13 @@ Add description.
 	/**
  * @description A convenience method that forces a repaint of the currently active 3D viewport.
 */
-	repaintActive3DViewport() {
+	repaintActive3DViewport():void {
 	
 	}
 	/**
  * @description Resets all the view cameras to their defaults.
 */
-	resetViewCameras() {
+	resetViewCameras():void {
 	
 	}
 	/**
@@ -34021,13 +35157,14 @@ class DzViewTool extends DzBase {
 	/**
  * @description Derived classes can return a popup menu that will be displayed when the user selects the options menu for the Tool pane.
 */
-	getOptionsMenu() {
+	getOptionsMenu():DzActionMenu {
 	
 	}
 
 }
 /**
  * @classdesc An asset save filter for saving a Wearable(s) Preset in the DSON format.
+
 
 
 See Also:
@@ -34068,13 +35205,13 @@ class DzWeld extends DzBase {
 	/**
  * @description Return Value:
 */
-	getTargetBone() {
+	getTargetBone():DzBone {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getWeldBone() {
+	getWeldBone():DzBone {
 	
 	}
 	/**
@@ -34347,13 +35484,13 @@ class DzWidget extends QObject {
 	/**
  * @description Return Value:
 */
-	getLayout() {
+	getLayout():DzLayout {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getWidget() {
+	getWidget():QWidget {
 	
 	}
 	/**
@@ -34371,7 +35508,7 @@ class DzWidget extends QObject {
 	/**
  * @description Hide the widget; make it invisible.
 */
-	hide() {
+	hide():void {
 	
 	}
 	/**
@@ -34443,7 +35580,7 @@ class DzWidget extends QObject {
 	/**
  * @description Show the widget; make it visible if its parent is visible.
 */
-	show() {
+	show():void {
 	
 	}
 
@@ -34498,39 +35635,84 @@ class QWidget extends QObject {
 	windowTitle:String;
 	x:Number;
 	y:Number;
+	accessibleDescription:String;
+	accessibleName:String;
+	autoFillBackground:Boolean;
+	baseSize:Size;
+	childrenRect:Rect;
+	enabled:Boolean;
+	focus:Boolean;
+	font:Font;
+	frameGeometry:Rect;
+	frameSize:Size;
+	fullScreen:Boolean;
+	geometry:Rect;
+	height:Number;
+	isActiveWindow:Boolean;
+	maximized:Boolean;
+	maximumHeight:Number;
+	maximumSize:Size;
+	maximumWidth:Number;
+	minimized:Boolean;
+	minimumHeight:Number;
+	minimumSize:Size;
+	minimumSizeHint:Size;
+	minimumWidth:Number;
+	mouseTracking:Boolean;
+	normalGeometry:Rect;
+	palette:Palette;
+	pos:Point;
+	rect:Rect;
+	size:Size;
+	sizeHint:Size;
+	sizeIncrement:Size;
+	statusTip:String;
+	styleSheet:String;
+	toolTip:String;
+	updatesEnabled:Boolean;
+	visible:Boolean;
+	whatsThis:String;
+	width:Number;
+	windowFilePath:String;
+	windowIconText:String;
+	windowModified:Boolean;
+	windowOpacity:Number;
+	windowTitle:String;
+	x:Number;
+	y:Number;
 	/**
  * @description TODO:
 Add description.
 */
-	close() {
+	close():Boolean {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	hide() {
+	hide():void {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	lower() {
+	lower():void {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	raise() {
+	raise():void {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	repaint() {
+	repaint():void {
 	
 	}
 	/**
@@ -34551,7 +35733,7 @@ Add description.
  * @description TODO:
 Add description.
 */
-	setFocus() {
+	setFocus():void {
 	
 	}
 	/**
@@ -34593,42 +35775,42 @@ Add description.
  * @description TODO:
 Add description.
 */
-	show() {
+	show():void {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	showFullScreen() {
+	showFullScreen():void {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	showMaximized() {
+	showMaximized():void {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	showMinimized() {
+	showMinimized():void {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	showNormal() {
+	showNormal():void {
 	
 	}
 	/**
  * @description TODO:
 Add description.
 */
-	update() {
+	update():void {
 	
 	}
 
@@ -34674,7 +35856,7 @@ class DzZipFile extends DzFileInfo {
 	/**
  * @description Close the file.
 */
-	close() {
+	close():void {
 	
 	}
 	/**
@@ -34698,85 +35880,85 @@ class DzZipFile extends DzFileInfo {
 	/**
  * @description Return Value:
 */
-	getCurrentFileAtributes() {
+	getCurrentFileAtributes():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getCurrentFileComment() {
+	getCurrentFileComment():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getCurrentFileCompressedSize() {
+	getCurrentFileCompressedSize():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getCurrentFileCompressionMethod() {
+	getCurrentFileCompressionMethod():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getCurrentFileCompressionRatio() {
+	getCurrentFileCompressionRatio():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getCurrentFileCRC() {
+	getCurrentFileCRC():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getCurrentFileIsFolder() {
+	getCurrentFileIsFolder():Boolean {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getCurrentFileName() {
+	getCurrentFileName():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getCurrentFileUncompressedSize() {
+	getCurrentFileUncompressedSize():Number {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getFileNames() {
+	getFileNames():Array {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getGlobalComment() {
+	getGlobalComment():String {
 	
 	}
 	/**
  * @description Return Value:
 */
-	getNumEntries() {
+	getNumEntries():Number {
 	
 	}
 	/**
  * @description Set the current file of the zip file to the first file.
 */
-	goToFirstFile() {
+	goToFirstFile():Boolean {
 	
 	}
 	/**
  * @description Set the current file of the zip file to the next file.
 */
-	goToNextFile() {
+	goToNextFile():Boolean {
 	
 	}
 	/**
