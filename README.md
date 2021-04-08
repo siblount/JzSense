@@ -1,6 +1,6 @@
 # JzIntellisense
 
-JzIntellisense is a make-shift JS file to assist developers with their DzScripts by utilizing powerful IDE's (such as Visual Studio/Code) autocompletion functionality.
+JzIntellisense is a JS file to assist developers with their DzScripts by utilizing powerful IDE's (such as Visual Studio/Code) autocompletion functionality; makeshift code compeletion.
 
 JzIntellisense contents is ported directly from the [DAZ Documentation website] and inherits the [Attribution 3.0 Unported (CC BY 3.0) License]
 # Me
@@ -8,8 +8,9 @@ I DO NOT WORK FOR DAZ PRODUCTIONS AND THIS SCRIPT WAS NOT SUPPORTED BY OR ENDORS
 
 If I made your life wonderful, if you're feeling generious enough to donate to help me out... 😏👉: 🌟https://www.buymeacoffee.com/therealsoll🌟
 ## Latest Update ##
-- Updated methods; static methods are static, other methods are not static.
-- Fixed certain classes missing methods.
+- Fixed incorrect method return type for methods w/o any parameters
+- Re-added missing Helper classes.
+- Added missing properties.
 # ⚠ Heads up ⚠ 
 ##### The current version of JzIntellisense is in its early stages. It is still a WIP.
 - The current version does not include signals as of yet.
@@ -43,6 +44,7 @@ If you have created a new file (or opened a file) rather than a folder or worksp
 - `DzWidget`
 
 ## Missing Classes
+All missing classes are EMCAScript classes which can not be added to this (or atleast I think so) 🤷‍♂️
 - `Array`
 - `Boolean`
 - `Date`
@@ -57,9 +59,9 @@ If you have created a new file (or opened a file) rather than a folder or worksp
 
 There may be other things missing. If you found something thats missing and it's not mentioned in this post, please post a new issue describing what is missing and where it can be found.
 ## Planned Updates
-- Fix some methods returning void when it shouldn't be.
+- Add missing documentation for properties.
 - Add signals
-- Update enums
+- Update classes w/ missing enums.
 - Update JSDOC for classes, constructors, and methods.
 
 
