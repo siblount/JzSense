@@ -263,6 +263,96 @@
 	setUserDrawStyle(description:String):Boolean {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a new active camera has been changed for this viewport.
+ * @signature "activeCameraChanged(DzCamera*)" * @event*/
+	activeCameraChanged(cam:DzCamera):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the projection of the active camera of this viewport has changed.
+ * @signature "activeCameraProjectionChanged()" * @event*/
+	activeCameraProjectionChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the transform of the active camera of this viewport has changed.
+ * @signature "activeCameraTransformChanged()" * @event*/
+	activeCameraTransformChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the draw state for the aspect frame changes.
+ * @signature "aspectOnChanged(bool)" * @event*/
+	aspectOnChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the draw state for the origin axes changes.
+ * @signature "axesOnChanged(bool)" * @event*/
+	axesOnChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the background color of the viewport changes.
+ * @signature "backgroundColorChanged(const QColor&)" * @event*/
+	backgroundColorChanged(color:Color):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the viewport is about to display a context menu. Other objects can connect to this signal to add custom items to the menu that is displayed to the user. Only connect to this signal if you only want to affect this particular viewport - otherwise connect to DzViewportMgr.contextMenuAboutToShow().
+ * @signature "contextMenuAboutToShow(DzMenu*,QPoint)" * @event*/
+	contextMenuAboutToShow(menu:DzMenu, pos:Point):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the current dimensions of this viewport has changed.
+ * @signature "currentDimensionsChanged()" * @event*/
+	currentDimensionsChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the dimensions of this viewport has changed.
+ * @signature "dimnesionsChanged()" * @event*/
+	dimensionsChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the draw style of the viewport has changed.
+ * @signature "drawStyleChanged(DzDrawStyle*)" * @event*/
+	drawStyleChanged(style:DzDrawStyle):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the floor style of the viewport changes.
+ * @signature "floorStyleChanged(FloorStyle)" * @event*/
+	floorStyleChanged(style:FloorStyle):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the draw state for the thirds guide changes.
+ * @signature "thirdsGuideOnChanged(bool)" * @event*/
+	thirdsGuideOnChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the view tool bar is docked or undocked.
+ * @signature "toolBarDocked(bool)" * @event*/
+	toolBarDocked(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the toolbar mode has been changed for this viewport.
+ * @signature "toolModeChanged(ToolBarMode)" * @event*/
+	toolModeChanged(mode:ToolBarMode):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the area this viewport displays has changed.
+ * @signature "viewChanged()" * @event*/
+	viewChanged():void {
+	
+	}
 
 }
 /**
@@ -502,6 +592,84 @@ class DzAbstractAssetContainer extends QObject, DzRefCountedItem {
 	updateAssets():Boolean {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted the icon for an asset has changed.
+ * @signature "assetIconChanged(DzAsset*)" * @event*/
+	assetIconChanged(asset:DzAsset):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an asset has been renamed.
+ * @signature "assetRenamed(DzAsset*,int)" * @event*/
+	assetRenamed(asset:DzAsset, index:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted before assets are added.
+ * @signature "beginAssetAdd(int,int)" * @event*/
+	beginAssetAdd(start:Number, end:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted before assets are removed.
+ * @signature "beginAssetRemove(int,int)" * @event*/
+	beginAssetRemove(start:Number, end:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted before a child container is added.
+ * @signature "beginChildContainerAdd(DzAbstractAssetContainer*,int,int)" * @event*/
+	beginChildContainerAdd(container:DzAbstractAssetContainer, start:Number, end:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted before a child container is removed.
+ * @signature "beginChildContainerRemove(DzAbstractAssetContainer*,int,int)" * @event*/
+	beginChildContainerRemove(container:DzAbstractAssetContainer, start:Number, end:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted just before a child container is removed.
+ * @signature "childContainerAboutToBeRemoved(DzAbstractAssetContainerPtr)" * @event*/
+	childContainerAboutToBeRemoved(childContainer:DzAbstractAssetContainer):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted after a child container has been removed.
+ * @signature "childContainerRemoved(DzAbstractAssetContainerPtr)" * @event*/
+	childContainerRemoved(childContainer:DzAbstractAssetContainer):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted after assets have been added.
+ * @signature "endAssetAdd()" * @event*/
+	endAssetAdd():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted after assets have been removed.
+ * @signature "endAssetRemove()" * @event*/
+	endAssetRemove():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted after a child container has been added.
+ * @signature "endChildContainerAdd()" * @event*/
+	endChildContainerAdd():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted after a child container has been removed.
+ * @signature "endChildContainerRemove()" * @event*/
+	endChildContainerRemove():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted after the icon for the container has changed.
+ * @signature "iconChanged(DzAbstractAssetContainer*)" * @event*/
+	iconChanged(container:DzAbstractAssetContainer):void {
+	
+	}
 
 }
 /**
@@ -573,6 +741,24 @@ class DzAbstractNodeEditorPane extends DzPane {
  * @description Toggle between whether hidden properties are shown in the list or not.
 */
 	toggleShowHidden():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the user hovers the cursor over an asset on the Presets page
+ * @signature "assetHoverChanged(const DzAssetPtr&)" * @event*/
+	assetHoverChanged(asset:DzAsset):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the current page changes
+ * @signature "currentTabChanged(int)" * @event*/
+	currentTabChanged(which:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the option to show hidden properties changes
+ * @signature "showingHiddenChanged(bool)" * @event*/
+	showingHiddenChanged(onOff:Boolean):void {
 	
 	}
 
@@ -661,6 +847,42 @@ class DzAction extends QObject {
  * @description Activates the action programatically.
 */
 	trigger():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an action has changed.
+ * @signature "changed()" * @event*/
+	changed():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	enabled(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an action is highlighted by the user; for example, when the user pauses with the cursor over a menu option, toolbar button, or presses an action's shortcut key combination.
+ * @signature "hovered()" * @event*/
+	hovered():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted immediately before executeAction() is called.
+ * @signature "preExecute()" * @event*/
+	preExecute():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a toggle action changes state. checked is the new action state, true for on, false for off.
+ * @signature "toggled(bool)" * @event*/
+	toggled(checked:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an action is activated by the user; for example, when the user clicks a menu option, toolbar button, or presses an action's shortcut key combination, or when trigger() was called. Notably, it is not emitted when setChecked() or toggle() is called. checked is true if the action is checked, or false if the action is unchecked.
+ * @signature "triggered(bool)" * @event*/
+	triggered(checked:Boolean):void {
 	
 	}
 
@@ -804,6 +1026,12 @@ class DzActionMenu extends QObject {
  * @description Removes any duplicate separators from the menu by replacing two or more adjacent separators with a single separator.
 */
 	simplifySeparators():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when items are added to or removed from this menu
+ * @signature "itemListChanged()" * @event*/
+	itemListChanged():void {
 	
 	}
 
@@ -1131,6 +1359,24 @@ class DzActionMgr extends QWidget {
 	unsetAccel(key:String):String {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a custom action is added to the action manager.
+ * @signature "customActionAdded(const QString&)" * @event*/
+	customActionAdded(name:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when custom actions are added to or removed from the action manager.
+ * @signature "customActionListChanged()" * @event*/
+	customActionListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a custom action is removed from the action manager.
+ * @signature "customActionRemoved(const QString&)" * @event*/
+	customActionRemoved(name:String):void {
+	
+	}
 
 }
 /**
@@ -1169,6 +1415,12 @@ class DzActivityLayout extends QObject, DzRefCountedItem {
  * @description Sets whether or not the toolbar with the given name is enabled.
 */
 	setToolbarEnabled(toolbar:String, onOff:Boolean):String {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the layout's label has changed.
+ * @signature "labelChanged(const QString&)" * @event*/
+	labelChanged(label:String):void {
 	
 	}
 
@@ -1995,6 +2247,72 @@ Add description.
 	writeConfigScript(configScriptFilename:String):Boolean {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted immediately after the main event loop exits.
+ * @signature "closing()" * @event*/
+	closing():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a debug message is sent to the application.
+ * @signature "debugMsg(const QString&)" * @event*/
+	debugMsg(msg:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the event loop is started on the application.
+ * @signature "eventLoopStarted()" * @event*/
+	eventLoopStarted():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a MouseButtonDblClick or MouseButtonRelease event occurs on the application.
+ * @signature "mouseEvent()" * @event*/
+	mouseEvent():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when multi-threading has changed on the application.
+ * @signature "multiThreadingChanged(bool)" * @event*/
+	multiThreadingChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the Scene Builder dialog has been rejected by the user, or when none of the files specified in the Scene Builder definition can be found.
+ * @signature "sceneBuilderAccepted(const QStringList&)" * @event*/
+	sceneBuilderAccepted(selections:Array):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the Scene Builder dialog has been rejected by the user, or when none of the files specified in the Scene Builder definition can be found.
+ * @signature "sceneBuilderRejected()" * @event*/
+	sceneBuilderRejected():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted after the application has finished its startup just before the main event loop begins.
+ * @signature "starting()" * @event*/
+	starting():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a the style is about to change on the application.
+ * @signature "styleAboutToChange()" * @event*/
+	styleAboutToChange():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the application wide style has changed.
+ * @signature "styleChanged(DzStyle*)" * @event*/
+	styleChanged(newStyle:DzStyle):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a warning message is sent to the application.
+ * @signature "warningMsg(const QString&)" * @event*/
+	warningMsg(msg:String):void {
+	
+	}
 
 }
 /**
@@ -2365,6 +2683,12 @@ class DzAsset extends QObject, DzRefCountedItem {
 	updateFromMetadata(guid:String):Boolean {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the image for the asset has changed.
+ * @signature "assetImageChanged(DzAsset*)" * @event*/
+	assetImageChanged(asset:DzAsset):void {
+	
+	}
 
 }
 /**
@@ -2565,6 +2889,30 @@ class DzAssetIOMgr extends QObject {
  * @description Parameter(s):
 */
 	setDSONAssetCachePath(cacheFullPath:String):String {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	assetImported():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	assetImportStarting():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	assetSaved():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	missingNodeParent(node:DzNode, uri:DzUri):void {
 	
 	}
 
@@ -3473,6 +3821,102 @@ class DzAssetMgr extends DzBase {
 	vacuumDatabase():Boolean {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the base paths list has changed.
+ * @signature "basePathsChanged()" * @event*/
+	basePathsChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a category has been changed.
+ * @signature "categoryUpdate(QVariantList)" * @event*/
+	categoryUpdate(idPath:Array):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the Data Source Name (DSN) for the Content Management Service (CMS) has changed.
+ * @signature "cmsDSNChanged()" * @event*/
+	cmsDSNChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the Content Management Service (CMS) has started.
+ * @signature "cmsStarted()" * @event*/
+	cmsStarted():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the Content Management Service (CMS) has stopped.
+ * @signature "cmsStopped()" * @event*/
+	cmsStopped():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the compatibility base list has changed.
+ * @signature "compatibilityBaseListChanged()" * @event*/
+	compatibilityBaseListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a container has been changed.
+ * @signature "containerUpdate(QVariantList)" * @event*/
+	containerUpdate(idPath:Array):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when itemsPerPage() will return a new value.
+ * @signature "itemsPerPageChanged(int)" * @event*/
+	itemsPerPageChanged(newPerPage:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the maximum file search result size has changed.
+ * @signature "maxFileSearchResultSizeChanged(int)" * @event*/
+	maxFileSearchResultSizeChanged(maxFileSearchResultSize:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a product has been created.
+ * @signature "productCreated(const QString &)" * @event*/
+	productCreated(guid:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when showAssetToolTipChanged() will return a new value.
+ * @signature "showAssetToolTipChanged()" * @event*/
+	showAssetToolTipChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when showExtensions() will return a new value.
+ * @signature "showExtensionsChanged()" * @event*/
+	showExtensionsChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when showLargeIcons() will return a new value.
+ * @signature "showLargeIconsChanged()" * @event*/
+	showLargeIconsChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the store list has changed.
+ * @signature "storeListChanged()" * @event*/
+	storeListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the type list has changed.
+ * @signature "typeListChanged()" * @event*/
+	typeListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the user interface is about to perform a database query.
+ * @signature "uiAboutToSearch(int)" * @event*/
+	uiAboutToSearch(sender:QObject, text:String, categories:Array, compatibilityBases:Array, contentTypes:Array):void {
+	
+	}
 
 }
 /**
@@ -3599,6 +4043,36 @@ class DzAuthenticationMgr extends QObject {
  * @description Invalidates any existing authentication.
 */
 	logout():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the user begins to login to a Daz 3D account.
+ * @signature "beginLogin()" * @event*/
+	beginLogin():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the user begins to log out of a Daz 3D account.
+ * @signature "beginLogout()" * @event*/
+	beginLogout():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the current Daz 3D account in use changes.
+ * @signature "currentAccountChanged()" * @event*/
+	currentAccountChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted after the user has successfully logged in to a Daz 3D account.
+ * @signature "loggedIn()" * @event*/
+	loggedIn():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted after the user has successfully logged out of a Daz 3D account.
+ * @signature "loggedOut()" * @event*/
+	loggedOut():void {
 	
 	}
 
@@ -3763,6 +4237,24 @@ class DzBackdrop extends DzElement {
 	showOptions(parent:QWidget):QWidget {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the background color of this backdrop changes.
+ * @signature "backgroundColorChanged()" * @event*/
+	backgroundColorChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the information in this backdrop changes.
+ * @signature "drawnDataChanged()" * @event*/
+	drawnDataChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the visibility of this backdrop changes.
+ * @signature "visiblityChanged()" * @event*/
+	visiblityChanged():void {
+	
+	}
 
 }
 /**
@@ -3773,6 +4265,12 @@ class DzBase extends QObject {
  * @description Provides scripts a way to make objects persistent; i.e., so that Qt will not delete them when they are no longer referenced by the script. This allows object instances to be created in script, then passed into the core and remain after the script has finished execution.
 */
 	makePersistent():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the internal name of the object has changed.
+ * @signature "nameChanged(const QString&)" * @event*/
+	nameChanged(name:String):void {
 	
 	}
 
@@ -4024,6 +4522,18 @@ Add description.
 	setType(type:DzCamera.CameraType):DzCamera {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the camera's depth of field setting has changed.
+ * @signature "projectionChanged()" * @event*/
+	depthOfFieldChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the camera's f-Stop setting has changed.
+ * @signature "fStopChanged(const DzTimeRange&)" * @event*/
+	fStopChanged(range:DzTimeRange):void {
+	
+	}
 
 }
 /**
@@ -4156,6 +4666,12 @@ class DzBasicDialog extends DzDialog {
 	showHelpButton(onOff:Boolean):Boolean {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the 'Apply' button is clicked by the user.
+ * @signature "applyClicked()" * @event*/
+	applyClicked():void {
+	
+	}
 
 }
 /**
@@ -4189,6 +4705,12 @@ class DzBone extends DzNode {
  * @description Return Value:
 */
 	getFollowMode():Number {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the follow bone has changed.
+ * @signature "followBoneChanged(DzBone*)" * @event*/
+	followBoneChanged(newFollowBone:DzBone):void {
 	
 	}
 
@@ -4573,6 +5095,30 @@ class DzBrickMaterial extends DzMaterial, DzRefCountedItem {
 	usesLocalShaderSpace():Boolean {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a brick is added to this brick material.
+ * @signature "brickAdded(DzShaderBrick*)" * @event*/
+	brickAdded(brick:shaderbrick_dz):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a brick is removed from this brick material.
+ * @signature "brickRemoved(DzShaderBrick*)" * @event*/
+	brickRemoved(brick:shaderbrick_dz):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature generateFilesFinished() * @event*/
+	generateFilesFinished():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature generateFilesStarted() * @event*/
+	generateFilesStarted():void {
+	
+	}
 
 }
 /**
@@ -4600,6 +5146,36 @@ class DzButton extends DzWidget {
  * @description Toggles the state of a toggle button.
 */
 	toggle():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the button is pressed and then released.
+ * @signature "clicked()" * @event*/
+	clicked():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the button is pressed.
+ * @signature "pressed()" * @event*/
+	pressed():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the button is released.
+ * @signature "released()" * @event*/
+	released():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when toggleState on this button has changed.
+ * @signature "stateChanged(int)" * @event*/
+	stateChanged(state:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the button is toggled.
+ * @signature "toggled(bool)" * @event*/
+	toggled(onOff:Boolean):void {
 	
 	}
 
@@ -4669,6 +5245,24 @@ Add description.
  * @description Remove button from the group
 */
 	removeButton(button:DzButton):DzButton {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a button in the group is pressed and released
+ * @signature "clicked(int)" * @event*/
+	clicked(id:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a button in the group is pressed
+ * @signature "pressed(int)" * @event*/
+	pressed(id:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a button in the group is released
+ * @signature "released(int)" * @event*/
+	released(id:Number):void {
 	
 	}
 
@@ -5231,6 +5825,96 @@ Add description.
 	updateDimensions(anchor:CameraDimension):CameraDimension {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the aspect height dimension of the camera changes.
+ * @signature "aspectHeightChanged(float)" * @event*/
+	aspectHeightChanged(height:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the camera's aspect ratio changes.
+ * @signature "aspectRatioChanged()" * @event*/
+	aspectRatioChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the aspect width dimension of the camera changes.
+ * @signature "aspectWidthChanged(float)" * @event*/
+	aspectWidthChanged(width:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when any of the local dimensions of the camera change.
+ * @signature "dimensionsChanged()" * @event*/
+	dimensionsChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the focal distance channel changes.
+ * @signature "focalDistanceChanged(const DzTimeRange&)" * @event*/
+	focalDistanceChanged(range:DzTimeRange):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the focal length channel changes.
+ * @signature "focalLengthChanged(const DzTimeRange&)" * @event*/
+	focalLengthChanged(range:DzTimeRange):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the frame width of the camera changes.
+ * @signature "frameWidthChanged(float)" * @event*/
+	frameWidthChanged(size:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when headlight mode of the camera changes.
+ * @signature "headlightModeChanged()" * @event*/
+	headlightModeChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when headlight offset of the camera changes.
+ * @signature "headlightOffsetChanged()" * @event*/
+	headlightOffsetChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the local pixel dimensions of the camera change.
+ * @signature "pixelDimensionsChanged()" * @event*/
+	pixelDimensionsChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the pixel height dimension of the camera changes.
+ * @signature "pixelsHeightChanged(int)" * @event*/
+	pixelsHeightChanged(height:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the pixel width dimension of the camera changes.
+ * @signature "pixelsWidthChanged(int)" * @event*/
+	pixelsWidthChanged(width:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when projection of the camera changes and its view must be redrawn.
+ * @signature "projectionChanged()" * @event*/
+	projectionChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the option for whether or not to constrain proportions of the local dimensions of the camera changes.
+ * @signature "proportionsConstrainedChanged(bool)" * @event*/
+	proportionsConstrainedChanged(yesNo:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the option for whether or not to use the local dimensions of the camera changes.
+ * @signature "aspectRatioChanged(bool)" * @event*/
+	useLocalDimensionsChanged(yesNo:Boolean):void {
+	
+	}
 
 }
 /**
@@ -5710,6 +6394,12 @@ class DzColorProperty extends DzIntProperty {
 	setKeyColorValue(i:Number, val:Color):Number {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the animation blend mode for this property has changed.
+ * @signature "animationBlendModeChanged()" * @event*/
+	animationBlendModeChanged():void {
+	
+	}
 
 }
 /**
@@ -5723,6 +6413,24 @@ class DzColorWgt extends DzWidget {
  * @constructor
 */
 	constructor(parent:DzWidget) {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the color is changed.
+ * @signature "colorChanged(const QColor&)" * @event*/
+	colorChanged(color:Color):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an editing operation on the slider ends - e.g. the user finishes spinning a color field.
+ * @signature "editEnd()" * @event*/
+	editEnd():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an editing operation on the widget begins - e.g. the user starts spinning a color field.
+ * @signature "editStart()" * @event*/
+	editStart():void {
 	
 	}
 
@@ -5878,6 +6586,48 @@ class DzComboBox extends DzWidget {
 	setItemText(index:Number, text:String):Number {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item is selected, passes the index of the item that was activated.
+ * @signature "activated(int)" * @event*/
+	activated(index:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item is selected, passes the text of the item that was activated.
+ * @signature "activated(const QString&)" * @event*/
+	activated(text:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the current index changes, passes the text of the item that changed.
+ * @signature "currentIndexChanged(const QString&)" * @event*/
+	currentIndexChanged(text:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the current index changes, passes the index of the item that changed.
+ * @signature "currentIndexChanged(int)" * @event*/
+	currentIndexChanged(index:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the highlighted item changes, passes the text of the item that is highlighted.
+ * @signature "highlighted(const QString&)" * @event*/
+	highlighted(text:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the highlighted item changes, passes the index of the item that is highlighted.
+ * @signature "highlighted(int)" * @event*/
+	highlighted(index:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the text of the box changes, passes the new text of the box.
+ * @signature "textChanged(const QString&)" * @event*/
+	textChanged(text:String):void {
+	
+	}
 
 }
 /**
@@ -6004,6 +6754,18 @@ Add description.
 Add description.
 */
 	removeItem(item:String):String {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	itemChanged(item:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	textChanged(text:String):void {
 	
 	}
 
@@ -6216,6 +6978,30 @@ class DzContentFolder extends DzBase, DzRefCountedItem {
  * @description Rename the folder to the given name.
 */
 	rename(newName:String):Boolean {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a new folder is added.
+ * @signature "addedFolder(DzContentFolder*)" * @event*/
+	addedFolder(newFolder:DzContentFolder):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the file list has changed.
+ * @signature "fileListChanged()" * @event*/
+	fileListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a folder is added or removed.
+ * @signature "folderListChanged()" * @event*/
+	folderListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a folder is removed.
+ * @signature "removedFolder(DzContentFolder*)" * @event*/
+	removedFolder(folder:DzContentFolder):void {
 	
 	}
 
@@ -6880,6 +7666,114 @@ class DzContentMgr extends DzBase {
 	usingDatabaseSearch():Boolean {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the enabled state of the auto refresh has changed
+ * @signature "autoRefreshChanged(bool)" * @event*/
+	autoRefreshChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the cloud content directory has changed.
+ * @signature "cloudContentDirectoryChanged()" * @event*/
+	cloudContentDirectoryChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a content directory is added or removed.
+ * @signature "contentDirectoryListChanged()" * @event*/
+	contentDirectoryListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the currently loaded tree of folders has changed and needs to be rebuilt. Usually a result of a call to refresh(), or when one of the content directory lists has changed.
+ * @signature "folderTreeChanged()" * @event*/
+	folderTreeChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an import directory is added or removed.
+ * @signature "importDirectoryListChanged()" * @event*/
+	importDirectoryListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the loading of a script has failed, or when the execution of a script has finished or failed.
+ * @signature "loadScriptFinished()" * @event*/
+	loadScriptFinished():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the loading of a script is starting.
+ * @signature "loadScriptStarting()" * @event*/
+	loadScriptStarting():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a MDL directory is added or removed.
+ * @signature "mdlDirectoryListChanged()" * @event*/
+	mdlDirectoryListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a new content file has been created.
+ * @signature "newFileCreated(const QString&)" * @event*/
+	newFileCreated(filename:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the file that is loaded on 'new' has been changed.
+ * @signature "onNewSceneChanged(const QString&)" * @event*/
+	onNewSceneChanged(filename:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a poser import directory is added or removed.
+ * @signature "poserDirectoryListChanged()" * @event*/
+	poserDirectoryListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a recent file is added or removed.
+ * @signature "recentFileListChanged()" * @event*/
+	recentFileListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the execution of a script fails.
+ * @signature "scriptFailed(const QString&)" * @event*/
+	scriptFailed(filename:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the execution of a script has finished.
+ * @signature "scriptFinished(const QString&)" * @event*/
+	scriptFinished(filename:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the loading of a script fails.
+ * @signature "scriptLoadFailed(const QString&)" * @event*/
+	scriptLoadFailed(filename:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the loading of a script is starting.
+ * @signature "scriptLoadStarting(const QString&)" * @event*/
+	scriptLoadStarting(filename:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the execution of a script is starting.
+ * @signature "scriptStarting(const QString&)" * @event*/
+	scriptStarting(filename:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the startup scene file has changed
+ * @signature "startupSceneChanged(const QString&)" * @event*/
+	startupSceneChanged(filename:String):void {
+	
+	}
 
 }
 /**
@@ -6975,6 +7869,12 @@ class DzContentReplaceMgr extends QObject {
 	updateReplaceNodes(baseNode:DzNode):DzNode {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the content replace mode has changed.
+ * @signature "contentReplaceModeChanged(DzContentReplaceMgr.ContentReplaceMode)" * @event*/
+	contentReplaceModeChanged(mode:DzContentReplaceMgr.ContentReplaceMode):void {
+	
+	}
 
 }
 /**
@@ -7004,6 +7904,18 @@ class DzController extends DzBase {
 Add description.
 */
 	getOwner():DzProperty {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	attributeChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the value of this controller has changed.
+ * @signature "currentValueChanged()" * @event*/
+	currentValueChanged():void {
 	
 	}
 
@@ -7055,6 +7967,12 @@ class DzDateEdit extends DzDateTimeEdit {
 	constructor(parent:DzWidget) {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the date in the widget has changed, passes the new date.
+ * @signature "valueChanged(const QDate&)" * @event*/
+	valueChanged(date:Date):void {
+	
+	}
 
 }
 /**
@@ -7076,6 +7994,12 @@ class DzDateTimeEdit extends DzWidget {
  * @constructor
 */
 	constructor(parent:DzWidget) {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the date/time in the widget has changed, passes the new date/time.
+ * @signature "valueChanged(const QDateTime&)" * @event*/
+	valueChanged(dateTime:DateTime):void {
 	
 	}
 
@@ -7805,6 +8729,24 @@ class QDesktopWidget extends QWidget {
 	primaryScreen:Number;
 	screenCount:Number;
 	virtualDesktop:Boolean;
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the size of screen changes.
+ * @signature "resized(int)" * @event*/
+	resized(screen:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the number of screens changes to newCount.
+ * @signature "screenCountChanged(int)" * @event*/
+	screenCountChanged(newCount:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the work area available on screen changes.
+ * @signature "workAreaResized(int)" * @event*/
+	workAreaResized(screen:Number):void {
+	
+	}
 
 }
 /**
@@ -8082,6 +9024,30 @@ class DzDial extends DzWidget {
  * @constructor
 */
 	constructor(parent:DzWidget) {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when dial moves, passes the new value of the dial.
+ * @signature "dialMoved(int)" * @event*/
+	dialMoved(value:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the dial is pressed by the user.
+ * @signature "dialPressed()" * @event*/
+	dialPressed():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the dial is released by the user.
+ * @signature "dialReleased()" * @event*/
+	dialReleased():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the value of the dial changes, passes the new value.
+ * @signature "valueChanged(int)" * @event*/
+	valueChanged(value:Number):void {
 	
 	}
 
@@ -9241,6 +10207,48 @@ class DzDockWindow {
  * @description Undocks this window.
 */
 	undock():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when this window is docked.
+ * @signature "docked()" * @event*/
+	docked():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the value returned by length() has changed.
+ * @signature "lengthChanged()" * @event*/
+	lengthChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when this window becomes minimized.
+ * @signature "minimized(DzDockWindow*)" * @event*/
+	minimized(window:DzDockWindow):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	outlineDrawFinished():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	outlineDrawStarting():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when this window is restored.
+ * @signature "restored(DzDockWindow*)" * @event*/
+	restored(window:DzDockWindow):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when this window is undocked.
+ * @signature "undocked()" * @event*/
+	undocked():void {
 	
 	}
 
@@ -10643,6 +11651,78 @@ class DzElement extends DzBase {
 	update():void {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when this object's label is changed.
+ * @signature "labelChanged(const QString&)" * @event*/
+	labelChanged(newLabel:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when this element's parent is changed.
+ * @signature "parentChanged()" * @event*/
+	parentChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a private property is added to this element.
+ * @signature "privatePropertyAdded(DzProperty*)" * @event*/
+	privatePropertyAdded(prop:DzProperty):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a private property is added to or removed from this element.
+ * @signature "privatePropertyListChanged()" * @event*/
+	privatePropertyListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	privatePropertyListInTreeChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a private property is removed from this element.
+ * @signature "privatePropertyRemoved(DzProperty*)" * @event*/
+	privatePropertyRemoved(prop:DzProperty):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the private property tree has changed.
+ * @signature "privatePropertyTreeChanged()" * @event*/
+	privatePropertyTreeChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a property is added to this element.
+ * @signature "propertyAdded(DzProperty*)" * @event*/
+	propertyAdded(prop:DzProperty):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a property is added to or removed from this element.
+ * @signature "propertyListChanged()" * @event*/
+	propertyListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	propertyListInTreeChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a property is removed from this element.
+ * @signature "propertyRemoved(DzProperty*)" * @event*/
+	propertyRemoved(prop:DzProperty):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the property tree has changed.
+ * @signature "propertyTreeChanged()" * @event*/
+	propertyTreeChanged():void {
+	
+	}
 
 }
 /**
@@ -10851,6 +11931,12 @@ class DzEnumProperty extends DzIntProperty {
 	setValueFromString(tm:DzTime, str:String):Boolean {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the item list (list of legal values for this property) changes.
+ * @signature "itemListChanged()" * @event*/
+	itemListChanged():void {
+	
+	}
 
 }
 /**
@@ -10901,6 +11987,24 @@ class DzEnumSlider extends DzWidget {
  * @description Renames the item at index which.
 */
 	renameItem(which:Number, label:String):Number {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the user releases the slider.
+ * @signature "editEnd()" * @event*/
+	editEnd():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the user starts dragging the slider.
+ * @signature "editStart()" * @event*/
+	editStart():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the value of the slider changes, passes the new value.
+ * @signature "valueChanged(int)" * @event*/
+	valueChanged(value:Number):void {
 	
 	}
 
@@ -10965,6 +12069,12 @@ class DzERCBake extends QObject {
  * @description Sets the property that controls the properties that will be baked when doBake() is called.
 */
 	setControllerProperty(prop:DzNumericProperty):DzNumericProperty {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	ERCChanged():void {
 	
 	}
 
@@ -11143,6 +12253,12 @@ class DzERCFreeze extends QObject {
  * @description Sets whether or not the Restore Figure Rigging action will be executed once the 'freeze' operation is complete.
 */
 	setRestoreRigging(yesNo:Boolean):Boolean {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	ERCChanged():void {
 	
 	}
 
@@ -11386,6 +12502,60 @@ Add description.
 	setProperty(prop:DzNumericProperty):DzNumericProperty {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	ercSourcePropertyRemoved(prop:DzProperty):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	keyChanged(which:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	keyInterpolationChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	keysListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the source property or current property is deleted.
+ * @signature "propertyDeleted(DzProperty*)" * @event*/
+	propertyDeleted(prop:DzProperty):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	saveWithOutputChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	scalarChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	stageChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	typeChanged():void {
+	
+	}
 
 }
 /**
@@ -11562,6 +12732,18 @@ class DzExportMgr extends QObject {
  * @description Sets the default directory that files are exported to.
 */
 	setExportPath(path:String):String {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a file export operation is finished
+ * @signature "fileExported()" * @event*/
+	fileExported():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a file export operation is started
+ * @signature "fileExportStarting()" * @event*/
+	fileExportStarting():void {
 	
 	}
 
@@ -12787,6 +13969,24 @@ Add description.
 	saveUserPreset(presetName:String, className:String, keepCommonSettings:Boolean, settings:DzFileIOSettings):Boolean {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a preset is added
+ * @signature presetRemoved(const QString&, const QSring&) * @event*/
+	presetAdded(presetName:String, className:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature presetLoadFinished() * @event*/
+	presetLoadFinished():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a preset is removed
+ * @signature presetRemoved(const QString&, const QSring&) * @event*/
+	presetRemoved(presetName:String, className:String):void {
+	
+	}
 
 }
 /**
@@ -12872,6 +14072,12 @@ class DzFileProperty extends DzStringProperty {
  * @description Sets the file type for the property.
 */
 	setType(type:FileType):FileType {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the filter for the property changes.
+ * @signature "filterChanged()" * @event*/
+	filterChanged():void {
 	
 	}
 
@@ -13930,6 +15136,12 @@ Add description.
 	subtract(val:Number, applyToDefault:Boolean):Number {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted if the way this property is displayed changed.
+ * @signature "displayAsPercentChanged()" * @event*/
+	displayAsPercentChanged():void {
+	
+	}
 
 }
 /**
@@ -13953,6 +15165,24 @@ class DzFloatSlider extends DzWidget {
  * @constructor
 */
 	constructor(parent:DzWidget) {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the user releases the slider.
+ * @signature "editEnd()" * @event*/
+	editEnd():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the user starts dragging the slider.
+ * @signature "editStart()" * @event*/
+	editStart():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the value of the slider changes, passes the new value.
+ * @signature "valueChanged(float)" * @event*/
+	valueChanged(value:Number):void {
 	
 	}
 
@@ -14659,6 +15889,18 @@ class DzGroupBox extends DzWidget {
 	addSpace(space:Number):Number {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the DzGroupBox's check box is clicked. Passes the new state of the check box.
+ * @signature "clicked(bool)" * @event*/
+	clicked(checked:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the DzGroupBox's check box is toggled. Passes the new state of the check box.
+ * @signature "toggled(bool)" * @event*/
+	toggled(onOff:Boolean):void {
+	
+	}
 
 }
 /**
@@ -14923,6 +16165,42 @@ class DzHeader extends DzWidget {
  * @description Sets whether or not stretch for a given section is enabled
 */
 	setStretchEnabled(enable:Boolean, section:Number):Boolean {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item in the header is clicked
+ * @signature "clicked(int)" * @event*/
+	clicked(section:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item in the header changes index
+ * @signature "indexChange(int,int,int)" * @event*/
+	indexChange(section:Number, fromIndex:Number, toIndex:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item in the header is pressed
+ * @signature "pressed(int)" * @event*/
+	pressed(section:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item in the header is released
+ * @signature "released(int)" * @event*/
+	released(section:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item in the header is double clicked
+ * @signature "sectionHandleDoubleClicked(int)" * @event*/
+	sectionHandleDoubleClicked(section:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item in the header changes size
+ * @signature "sizeChange(int,int,int)" * @event*/
+	sizeChange(section:Number, oldSize:Number, newSize:Number):void {
 	
 	}
 
@@ -15549,6 +16827,12 @@ class DzImageBlend extends QObject {
 	getDescription():String {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the blend method has changed.
+ * @signature "blendMethodChanged()" * @event*/
+	blendMethodChanged():void {
+	
+	}
 
 }
 /**
@@ -15561,6 +16845,18 @@ class DzImageColorLayer extends DzImageLayer {
  * @description Sets the size for this color layer.
 */
 	setSize(size:Size):Size {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the layer color changes
+ * @signature "colorChanged(const QColor&)" * @event*/
+	colorChanged(color:Color):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the layer size changes
+ * @signature "sizeChanged(const QSize&)" * @event*/
+	sizeChanged(size:Size):void {
 	
 	}
 
@@ -15640,6 +16936,30 @@ Add description.
 	toTextureLayer(layer:DzTextureLayer, imageSize:Size):Boolean {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the image data for the component has been changed.
+ * @signature "imageDataChanged()" * @event*/
+	imageDataChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the label of the component has been changed.
+ * @signature "labelChanged(const QString&)" * @event*/
+	labelChanged(label:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the list of manipulators for the component has been changed.
+ * @signature "manipulatorListChanged()" * @event*/
+	manipulatorListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the visibility of the component has been changed.
+ * @signature "visibilityChanged(bool)" * @event*/
+	visibilityChanged(onOff:Boolean):void {
+	
+	}
 
 }
 /**
@@ -15648,6 +16968,12 @@ Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/imagefilelayer_dz}*/
 class DzImageFileLayer extends DzImageLayer {
 	filename:String;
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the file name associated with this layer changes
+ * @signature "sizeChanged(const QString&)" * @event*/
+	filenameChanged(filename:String):void {
+	
+	}
 
 }
 /**
@@ -15685,6 +17011,18 @@ class DzImageLayer extends DzImageComponent {
 	setMask(mask:DzImageMask):DzImageMask {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	blendModeChanged(mode:DzImageBlend):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	maskChanged(mask:DzImageMask):void {
+	
+	}
 
 }
 /**
@@ -15703,6 +17041,12 @@ class DzImageManip extends QObject {
 	manipulate(img:Image):Image {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the value of the manipulator has changed and it needs to be reapplied.
+ * @signature "manipulationChanged()" * @event*/
+	manipulationChanged():void {
+	
+	}
 
 }
 /**
@@ -15711,6 +17055,12 @@ Add detailed description.
  * Go to documentation page at : {@link http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/api_reference/object_index/imagemask_dz}*/
 class DzImageMask extends DzImageComponent {
 	filename:String;
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the file name associated with this mask changes
+ * @signature "sizeChanged(const QString&)" * @event*/
+	filenameChanged(filename:String):void {
+	
+	}
 
 }
 /**
@@ -15867,6 +17217,18 @@ class DzImageMgr extends QObject {
 	setImageSavePath(path:String):String {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the auto refresh state changes.
+ * @signature "autoRefreshChanged(bool)" * @event*/
+	autoRefreshChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an image is added to or removed from the list.
+ * @signature "imageListChanged()" * @event*/
+	imageListChanged():void {
+	
+	}
 
 }
 /**
@@ -15952,6 +17314,30 @@ class DzImageProperty extends DzProperty {
  * @description Sets the image value.
 */
 	setValue(imgFile:String):Boolean {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	defaultMapGammaChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	defaultMapTextureTypeChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	textureModifierChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	textureModifierFlagsChanged():void {
 	
 	}
 
@@ -16062,6 +17448,18 @@ Add description.
  * @constructor
 */
 	constructor(filename:String, gamma:Number, textureType:Number) {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	assetModified():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	assetWasSaved():void {
 	
 	}
 
@@ -16214,6 +17612,18 @@ class DzImportMgr extends QObject {
  * @description Sets the default import directory - this is the directory that user will be taken to next time the file import dialog is displayed.
 */
 	setImportPath(path:String):String {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted after importing a file. This may not always be emitted after every fileImportStarting() signal if there were errors during file loading.
+ * @signature "fileImported()" * @event*/
+	fileImported():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted just before importing a file.
+ * @signature "fileImportStarting()" * @event*/
+	fileImportStarting():void {
 	
 	}
 
@@ -16394,6 +17804,24 @@ class DzInfoTabs extends QWidget {
  * @description Specifies whether the store tab is shown or not
 */
 	showStoreTab(onOff:Boolean):Boolean {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a keyword is clicked and the CTRL modifier key is pressed.
+ * @signature "keywordAddUniqueClicked(const QString&)" * @event*/
+	keywordAddUniqueClicked(keyword:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a keyword is clicked.
+ * @signature "keywordSetClicked(const QString&)" * @event*/
+	keywordSetClicked(keyword:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the apply button on the render tab is clicked.
+ * @signature "renderApplyClicked()" * @event*/
+	renderApplyClicked():void {
 	
 	}
 
@@ -16614,6 +18042,18 @@ Add description.
 	setScale(x:Number, y:Number, z:Number, genScale:Number):Number {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the local transform for this item has changed.
+ * @signature "localTransformChanged()" * @event*/
+	localTransformChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the transform for this item has changed.
+ * @signature "transformChanged()" * @event*/
+	transformChanged():void {
+	
+	}
 
 }
 /**
@@ -16710,6 +18150,12 @@ class DzInstanceNode extends DzNode {
  * @description Return Value:
 */
 	getTargetControl():DzNodeProperty {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the target for this instance has changed.
+ * @signature "targetChanged()" * @event*/
+	targetChanged():void {
 	
 	}
 
@@ -17231,6 +18677,30 @@ Add description.
 	stop():void {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an instruction in an interactive lesson has been skipped.
+ * @signature "skipped()" * @event*/
+	skipped():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an interactive lesson has started.
+ * @signature "started()" * @event*/
+	started():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an interactive lesson has stepped to the next instruction.
+ * @signature "stepped()" * @event*/
+	stepped():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an interactive lesson is stopped.
+ * @signature "stopped(bool)" * @event*/
+	stopped(success:Boolean):void {
+	
+	}
 
 }
 /**
@@ -17472,6 +18942,24 @@ class DzIntSlider extends DzWidget {
 	constructor(parent:DzWidget) {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the user releases the slider.
+ * @signature "editEnd()" * @event*/
+	editEnd():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the user starts dragging the slider.
+ * @signature "editStart()" * @event*/
+	editStart():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the value of the slider changes, passes the new value.
+ * @signature "valueChanged(int)" * @event*/
+	valueChanged(value:Number):void {
+	
+	}
 
 }
 /**
@@ -17584,6 +19072,36 @@ class DzLabel extends DzWidget {
 	setBuddy(buddy:DzWidget):DzWidget {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature elideModeChanged() * @event*/
+	elideModeChanged(mode:DzWidget.TextElideMode):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature primitiveChanged() * @event*/
+	primitiveChanged(name:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	textFormatChanged(format:TextFormat):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature textInteractionFlagsChanged() * @event*/
+	textInteractionFlagsChanged(flags:DzWidget.TextInteractionFlags):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature textStyleChanged() * @event*/
+	textStyleChanged(name:String):void {
+	
+	}
 
 }
 /**
@@ -17675,6 +19193,18 @@ class DzLayeredImage extends DzBase {
  * @description Parameter(s):
 */
 	toLayeredTexture(img:DzLayeredTexture):Boolean {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature layerListChanged() * @event*/
+	layerListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emits a signal that the size of canvas has changed.
+ * @signature "sizeChanged(const QSize&)" * @event*/
+	sizeChanged(size:Size):void {
 	
 	}
 
@@ -17809,6 +19339,54 @@ Add description.
 	takeLayer(index:Number):DzTextureLayer {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	aboutToInsertLayers(index:Number, count:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	aboutToRemoveLayers(index:Number, count:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	assetModified():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	assetWasSaved():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	layerListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	layersInserted(index:Number, count:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	layersRemoved(index:Number, count:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	sizeChanged(size:Size):void {
+	
+	}
 
 }
 /**
@@ -17909,6 +19487,12 @@ class DzLCDNumber extends DzWidget {
 	constructor(parent:DzWidget) {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the number is set to a value that exceeds the number of digits.
+ * @signature "overflow()" * @event*/
+	overflow():void {
+	
+	}
 
 }
 /**
@@ -17983,6 +19567,12 @@ class DzLight extends DzCamera {
  * @description Return Value:
 */
 	isOn():Boolean {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the categories that a light is in changes.
+ * @signature "categoriesChanged()" * @event*/
+	categoriesChanged():void {
 	
 	}
 
@@ -18356,6 +19946,42 @@ class DzLineEdit extends DzWidget {
 	undo():void {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the current position changes.
+ * @signature "cursorPositionChanged(int, int)" * @event*/
+	cursorPositionChanged(oldPos:Number, newPos:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the [Return] or [Enter] key is pressed or the editor loses focus.
+ * @signature "editingFinished()" * @event*/
+	editingFinished():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the user presses the [Return] key in the editor.
+ * @signature "returnPressed()" * @event*/
+	returnPressed():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the selected text in the editor changes.
+ * @signature "selectionChanged()" * @event*/
+	selectionChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the text of the editor changes, passes the new text.
+ * @signature "textChanged(const QString&)" * @event*/
+	textChanged(text:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the text edited, passes the new text.
+ * @signature "textEdited(const QString&)" * @event*/
+	textEdited(text:String):void {
+	
+	}
 
 }
 /**
@@ -18457,6 +20083,126 @@ class DzListBox extends DzScrollView {
  * @description Return Value:
 */
 	text(index:Number):String {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item is clicked (mouse button pressed and released).
+ * @signature "clicked(int)" * @event*/
+	clicked(index:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item is clicked (mouse button pressed and released).
+ * @signature "clicked(int,const QPoint&)" * @event*/
+	clicked(index:Number, pnt:Point):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the user right clicks the list box for a context menu.
+ * @signature "contextMenuRequested(int,const QPoint&)" * @event*/
+	contextMenuRequested(index:Number, pos:Point):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the current item changes.
+ * @signature "currentChanged(int)" * @event*/
+	currentChanged(index:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item is double clicked.
+ * @signature "doubleClicked(int)" * @event*/
+	doubleClicked(index:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the highlighted item changes.
+ * @signature "highlighted(int)" * @event*/
+	highlighted(index:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the highlighted item changes.
+ * @signature "highlighted(const QString&)" * @event*/
+	highlighted(str:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item is clicked with the a mouse button (mouse button pressed and released).
+ * @signature "mouseButtonClicked(int,int,const QPoint&)" * @event*/
+	mouseButtonClicked(button:Number, index:Number, pos:Point):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item is pressed with the a mouse button (mouse button pressed).
+ * @signature "mouseButtonPressed(int,int,const QPoint&)" * @event*/
+	mouseButtonPressed(button:Number, index:Number, pos:Point):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted mouse cursor moves onto an item.
+ * @signature "onItem(int)" * @event*/
+	onItem(index:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted mouse cursor moves from an item to an empty part of the list box.
+ * @signature "onViewport()" * @event*/
+	onViewport():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item is pressed (mouse button pressed).
+ * @signature "pressed(int,const QPoint&)" * @event*/
+	pressed(index:Number, pnt:Point):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item is pressed (mouse button pressed).
+ * @signature "pressed(int)" * @event*/
+	pressed(index:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when return is pressed on the current item.
+ * @signature "returnPressed(int)" * @event*/
+	returnPressed(index:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item is clicked with the right button (mouse button pressed and released).
+ * @signature "rightButtonClicked(int,const QPoint&)" * @event*/
+	rightButtonClicked(index:Number, pnt:Point):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item is pressed with the right button (mouse button pressed).
+ * @signature "rightButtonPressed(int,const QPoint&)" * @event*/
+	rightButtonPressed(index:Number, pnt:Point):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the selected item changes.
+ * @signature "selected(const QString&)" * @event*/
+	selected(str:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the selected item changes.
+ * @signature "selected(int)" * @event*/
+	selected(index:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the selection in the box changes.
+ * @signature "selectionChanged()" * @event*/
+	selectionChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a new item is selected in single selection mode.
+ * @signature "selectionChanged(int)" * @event*/
+	selectionChanged(index:Number):void {
 	
 	}
 
@@ -18741,6 +20487,120 @@ class DzListView extends DzScrollView {
  * @description Sort the view
 */
 	sort():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item is clicked (mouse button pressed and released)
+ * @signature "clicked(DzListViewItem*)" * @event*/
+	clicked(item:DzListViewItem):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item is clicked (mouse button pressed and released)
+ * @signature "clicked(DzListViewItem*,const QPoint&,int)" * @event*/
+	clicked(item:DzListViewItem, pos:Point, col:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item is collapsed (when item 's children are hidden)
+ * @signature "collapsed(DzListViewItem*)" * @event*/
+	collapsed(item:DzListViewItem):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the user right clicks the list view, or uses a special system key, for a context menu
+ * @signature "contextMenuRequested(DzListViewItem*,const QPoint&,int)" * @event*/
+	contextMenuRequested(item:DzListViewItem, pos:Point, col:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the current item changes
+ * @signature "currentChanged(DzListViewItem*)" * @event*/
+	currentChanged(item:DzListViewItem):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item is double clicked (on the second button press, not release)
+ * @signature "doubleClicked(DzListViewItem*,const QPoint&,int)" * @event*/
+	doubleClicked(item:DzListViewItem, pos:Point, col:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item is expanded (when item 's children are shown)
+ * @signature "expanded(DzListViewItem*)" * @event*/
+	expanded(item:DzListViewItem):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item is renamed
+ * @signature "itemRenamed(DzListViewItem*,int,const QString&)" * @event*/
+	itemRenamed(item:DzListViewItem, col:Number, text:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item is renamed
+ * @signature "itemRenamed(DzListViewItem*,int)" * @event*/
+	itemRenamed(item:DzListViewItem, col:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item is clicked with the a mouse button (mouse button pressed and released)
+ * @signature "mouseButtonClicked(int,DzListViewItem*,const QPoint&,int)" * @event*/
+	mouseButtonClicked(button:Number, item:DzListViewItem, pos:Point, col:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item is pressed with the a mouse button (mouse button pressed)
+ * @signature "mouseButtonPressed(int,DzListViewItem*,const QPoint&,int)" * @event*/
+	mouseButtonPressed(button:Number, item:DzListViewItem, pos:Point, col:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item is pressed (mouse button pressed)
+ * @signature "pressed(DzListViewItem*,const QPoint&,int)" * @event*/
+	pressed(item:DzListViewItem, pos:Point, col:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item is pressed (mouse button pressed)
+ * @signature "pressed(DzListViewItem*)" * @event*/
+	pressed(item:DzListViewItem):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when return is pressed on the current item
+ * @signature "returnPressed(DzListViewItem*)" * @event*/
+	returnPressed(item:DzListViewItem):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item is clicked with the right button (mouse button pressed and released)
+ * @signature "rightButtonClicked(DzListViewItem*,const QPoint&,int)" * @event*/
+	rightButtonClicked(item:DzListViewItem, pos:Point, col:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when an item is pressed with the right button (mouse button pressed)
+ * @signature "rightButtonPressed(DzListViewItem*,const QPoint&,int)" * @event*/
+	rightButtonPressed(item:DzListViewItem, pos:Point, col:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the selected item changes.
+ * @signature "selectionChanged()" * @event*/
+	selectionChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the selected item changes
+ * @signature "selectionChanged(DzListViewItem*)" * @event*/
+	selectionChanged(item:DzListViewItem):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the spacebar is pressed on the current item
+ * @signature "spacePressed(DzListViewItem*)" * @event*/
+	spacePressed(item:DzListViewItem):void {
 	
 	}
 
@@ -19154,6 +21014,30 @@ class DzMainWindow extends QWidget {
 	toggleUIPopUpWgt(filename:String, posWgt:QWidget):DzUIPopUpWgt {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted just before the main window closes.
+ * @signature "aboutToClose()" * @event*/
+	aboutToClose():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the main window is switched to/from being always on top.
+ * @signature "aboutToClose()" * @event*/
+	alwaysOnTopChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted after the startup() function has finished.
+ * @signature "started()" * @event*/
+	started():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the main window is switched to/from having the ui locked.
+ * @signature "uiLockedChanged()" * @event*/
+	uiLockedChanged():void {
+	
+	}
 
 }
 /**
@@ -19474,6 +21358,54 @@ Add description.
  * @description Causes this material to stop being drawn with a highlight.
 */
 	stopDrawHighlight():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the material has been modified.
+ * @signature "assetModified()" * @event*/
+	assetModified():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted after the material has been saved.
+ * @signature "assetWasSaved()" * @event*/
+	assetWasSaved():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when the baked map of this material changes.
+ * @signature "bakedMapChanged()" * @event*/
+	bakedMapChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when the selection state of this material changes.
+ * @signature "selectionStateChanged(DzMaterial*,bool)" * @event*/
+	selectionStateChanged(mat:DzMaterial, onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when one of the values of this material changes.
+ * @signature "settingsChanged()" * @event*/
+	settingsChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when the smoothing settings of this material change.
+ * @signature "smoothingChanged()" * @event*/
+	smoothingChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when the tags on this material change.
+ * @signature "tagsChanged()" * @event*/
+	tagsChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when the uv settings of this material change.
+ * @signature "uvsChanged()" * @event*/
+	uvsChanged():void {
 	
 	}
 
@@ -20045,6 +21977,12 @@ class DzMenu extends QObject {
 	isEmpty():Boolean {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the user selects an item in the menu, or one of its submenus.
+ * @signature "activated(int)" * @event*/
+	activated(id:Number):void {
+	
+	}
 
 }
 /**
@@ -20147,6 +22085,30 @@ class DzModifier extends DzElement {
  * @description Return Value:
 */
 	getUnknownModifierStackSectionID():Number {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted immediately before the modifier is removed from its owner.
+ * @signature "aboutToBeRemoved()" * @event*/
+	aboutToBeRemoved():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the modifier has been added to its owner.
+ * @signature "added()" * @event*/
+	added():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the modifier has changed and needs to be reapplied.
+ * @signature "currentValueChanged()" * @event*/
+	currentValueChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the modifier has been removed from its owner.
+ * @signature "removed()" * @event*/
+	removed():void {
 	
 	}
 
@@ -20600,6 +22562,132 @@ class DzMorphLoader extends QObject {
 	setReverseDeformationsPose(filePath:String):String {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	applyAfterJointChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	attenuateChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	attenuateEdgeStrengthChanged(strength:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	attenuateStrengthChanged(strength:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	controlNodeChanged(node:DzNode):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	controlPropertyChanged(prop:DzNumericProperty):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	createControlPropertyChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	deltaToleranceChanged(val:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	ercCustomValueChanged(val:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the filename has changed.
+ * @signature "filenameChanged(const QString&)" * @event*/
+	filenameChanged(name:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	hideSecondaryChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	mirroringChanged(mirroring:DzMorphLoader.MirroringType):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the morph name has changed.
+ * @signature "morphNameChanged(const QString&)" * @event*/
+	morphNameChanged(name:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	overwriteExistingChanged(value:DzMorphLoader.OverwriteMode):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	preserveExistingDeltasChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the path of the property group has changed.
+ * @signature "propertyGroupPathChanged(const QString&)" * @event*/
+	propertyGroupPathChanged(path:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	reverseDeformationsChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	secondaryLabelChanged(label:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	smoothCageChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	useErcCustomValueChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	useSecondaryLabelChanged(onOff:Boolean):void {
+	
+	}
 
 }
 /**
@@ -20746,6 +22834,30 @@ class DzMorphLoaderBatch extends QObject {
  * @description Return Value:
 */
 	usePresetConfiguration():Boolean {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	morphAdded(morph:DzMorphLoader):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	morphListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	morphMoved(srcIdx:Number, destIdx:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	morphRemoved(morph:DzMorphLoader, formerIndex:Number):void {
 	
 	}
 
@@ -21960,6 +24072,192 @@ Add description.
 	updateOrientation():void {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted immediately before the node is removed from the scene.
+ * @signature "aboutToBeRemoved()" * @event*/
+	aboutToBeRemoved():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the node is about to be deleted.
+ * @signature "aboutToDelete(DzNode*)" * @event*/
+	aboutToDelete(node:DzNode):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the node is added to the scene.
+ * @signature "added()" * @event*/
+	added():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the node has been modified.
+ * @signature "assetModified()" * @event*/
+	assetModified():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted after the node has been saved.
+ * @signature "assetWasSaved()" * @event*/
+	assetWasSaved():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted after the bounding box for this node has been invalidated.
+ * @signature "boundBoxInvalidated()" * @event*/
+	boundBoxInvalidated():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a child is added to the node.
+ * @signature "childAdded(DzNode*)" * @event*/
+	childAdded(child:DzNode):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a child is added to or removed from the node.
+ * @signature "childListChanged()" * @event*/
+	childListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted after the order of this node's children has changed.
+ * @signature "childListOrderChanged()" * @event*/
+	childListOrderChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a child is removed from the node.
+ * @signature "childRemoved(DzNode*)" * @event*/
+	childRemoved(child:DzNode):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the visual representation of this node needs to be redrawn.
+ * @signature "drawnDataChanged()" * @event*/
+	drawnDataChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the hidden state of this node is changed.
+ * @signature "hiddenChanged(bool)" * @event*/
+	hiddenChanged(hidden:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the state of this node's scale inherience has changed.
+ * @signature "inheritScaleChanged()" * @event*/
+	inheritScaleChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the list of materials for this node has changed.
+ * @signature "materialListChanged()" * @event*/
+	materialListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the list of selected materials for this node has changed.
+ * @signature "materialSelectionChanged()" * @event*/
+	materialSelectionChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the material selection sets for this node has changed.
+ * @signature "materialSelectionSetsChanged()" * @event*/
+	materialSelectionSetsChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a different object becomes associated with this node.
+ * @signature "objectSwitched(DzNode*,DzObject*,DzObject*)" * @event*/
+	objectChanged(node:DzNode, oldObject:DzObject, newObject:DzObject):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the parent of this node changes.
+ * @signature "parentChanged(DzNode*,DzNode*,DzNode*)" * @event*/
+	parentChanged(node:DzNode, oldParent:DzNode, newParent:DzNode):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the parent hierarchy for this node has changed.
+ * @signature "parentHierarchyChanged(DzNode*)" * @event*/
+	parentHierarchyChanged(node:DzNode):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	promoteSelectionChanged(promoteSelection:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the node is removed from the scene.
+ * @signature "removed()" * @event*/
+	removed():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the rotation order, orientation, center point, or end point for this node have changed.
+ * @signature "riggingChanged()" * @event*/
+	riggingChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the rotation order of this node changes.
+ * @signature "rotationOrderChanged()" * @event*/
+	rotationOrderChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the selectability of the node has changed.
+ * @signature "selectabilityChanged()" * @event*/
+	selectabilityChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Eitted when the selection state of this node changes.
+ * @signature "selected(DzNode*,bool)" * @event*/
+	selected(node:DzNode, onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the topology for this node has changed.
+ * @signature "topologyChanged()" * @event*/
+	topologyChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when transformation properties of this node change.
+ * @signature "transformChanged()" * @event*/
+	transformChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the current uv set for this node has changed.
+ * @signature "uvsChanged()" * @event*/
+	uvsChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the visibility of the node has changed.
+ * @signature "visibilityChanged()" * @event*/
+	visibilityChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	visibilityInRenderChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	visibilityInSimulationChanged():void {
+	
+	}
 
 }
 /**
@@ -22320,6 +24618,12 @@ class DzNodeAligner extends QObject {
 	setZUseInterval(onOff:Boolean):Boolean {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the state of whether or not alignment is possible has changed.
+ * @signature "canAlignChanged(bool)" * @event*/
+	canAlignChanged(onOff:Boolean):void {
+	
+	}
 
 }
 /**
@@ -22400,6 +24704,12 @@ class DzNodeProperty extends DzProperty {
 	setValue(val:DzNode):DzNode {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted immediately before the value of the property changes.
+ * @signature "aboutToChange()" * @event*/
+	aboutToChange():void {
+	
+	}
 
 }
 /**
@@ -22459,6 +24769,12 @@ class DzNodeSelectionComboBox extends DzWidget {
  * @description Display the popup.
 */
 	showPopup():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the selected DzNode changes.
+ * @signature "nodeSelectionChanged()" * @event*/
+	nodeSelectionChanged():void {
 	
 	}
 
@@ -22562,6 +24878,18 @@ class DzNumericNodeProperty extends DzFloatProperty {
  * @description Set the node for this property.
 */
 	setNode(node:DzNode):DzNode {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when this property's invalid without node state has changed.
+ * @signature "invalidWithoutNodeChanged(bool)" * @event*/
+	invalidWithoutNodeChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the node associated with this property has changed.
+ * @signature "nodeChanged(DzNode*)" * @event*/
+	nodeChanged(node:DzNode):void {
 	
 	}
 
@@ -22932,6 +25260,66 @@ Add description.
 	unlink():void {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the clamped state for this property has changed.
+ * @signature "clampedChanged(bool)" * @event*/
+	clampedChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	defaultMapGammaChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	defaultMapTextureTypeChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	isMappableChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the property is linked to another property.
+ * @signature "linked()" * @event*/
+	linked():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the image map for this property has changed.
+ * @signature "mapChanged()" * @event*/
+	mapChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the min and/or max values for this property have changed.
+ * @signature "minMaxChanged()" * @event*/
+	minMaxChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	textureModifierChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	textureModifierFlagsChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the property is unlinked from another property.
+ * @signature "unlinked()" * @event*/
+	unlinked():void {
+	
+	}
 
 }
 /**
@@ -23084,6 +25472,120 @@ Add description.
 	removeShape(index:Number):DzError {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a modifier is about to be added to this object.
+ * @signature "aboutToAddModifier(DzModifier*)" * @event*/
+	aboutToAddModifier(mod:DzModifier):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when this object is about to be deleted.
+ * @signature "aboutToDelete()" * @event*/
+	aboutToDelete():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the vertex mesh for this object is about to be finalized.
+ * @signature "aboutToFinalize(const DzVertexMesh*)" * @event*/
+	aboutToFinalize(mesh:vertexmesh_dz):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the cached geometry for this object has been finalized.
+ * @signature "cachedGeomFinalized()" * @event*/
+	cachedGeomFinalized():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the cached geometry for this object has been invalidated.
+ * @signature "cachedGeomInvalidated()" * @event*/
+	cachedGeomInvalidated():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the cached geometry for this object has been updated.
+ * @signature "cachedGeomUpdated()" * @event*/
+	cachedGeomUpdated():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the cached topology for this object has changed.
+ * @signature "cachedTopologyChanged()" * @event*/
+	cachedTopologyChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the current shape is swapped out.
+ * @signature "currentShapeSwitched()" * @event*/
+	currentShapeSwitched():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when this object needs to be redrawn.
+ * @signature "drawnDataChanged()" * @event*/
+	drawnDataChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the material list for the current shape changes.
+ * @signature "materialListChanged()" * @event*/
+	materialListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the material selection state for the current shape changes.
+ * @signature "materialSelectionChanged()" * @event*/
+	materialSelectionChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the material selection state for the current shape changes.
+ * @signature "materialSelectionSetsChanged()" * @event*/
+	materialSelectionSetsChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a modifier is added to this object.
+ * @signature "modifierAdded(DzModifier*)" * @event*/
+	modifierAdded(mod:DzModifier):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a modifier is removed from this object.
+ * @signature "modifierRemoved(DzModifier*)" * @event*/
+	modifierRemoved(mod:DzModifier):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a modifier is added to or removed from this object.
+ * @signature "modifierStackChanged()" * @event*/
+	modifierStackChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a shape is added to this object.
+ * @signature "shapeAdded(DzShape*)" * @event*/
+	shapeAdded(shape:shape_dz):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a shape is removed from this object.
+ * @signature "shapeRemoved(DzShape*)" * @event*/
+	shapeRemoved(shape:shape_dz):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the topology of the current shape for this object has changed.
+ * @signature "shapeTopologyChanged()" * @event*/
+	shapeTopologyChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the current uv set for the object has changed.
+ * @signature "uvsChanged()" * @event*/
+	uvsChanged():void {
+	
+	}
 
 }
 /**
@@ -23133,6 +25635,12 @@ class QObject {
  * @description Parameter(s):
 */
 	isA(classname:String):Boolean {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted immediately before the object is destroyed.
+ * @signature "destroyed(QObject*)" * @event*/
+	destroyed(obj:QObject):void {
 	
 	}
 
@@ -23479,6 +25987,54 @@ class DzOpenGL extends QObject {
 	setWireframeOpacity(opacity:Number):Number {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	boundingBoxActiveOpacityChanged(value:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	boundingBoxEdgeLengthChanged(value:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	boundingBoxInactiveOpacityChanged(value:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when display optimization is disabled or enabled.
+ * @signature "displayOptimizationEnabled(bool)" * @event*/
+	displayOptimizationEnabled(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when multisample is disabled or enabled.
+ * @signature "multisampleEnabled(bool)" * @event*/
+	multisampleEnabled(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	subDivisionWireOpacityChanged(value:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	subWireframeOpacityChanged(value:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the texture quality setting has changed.
+ * @signature "textureQualityChanged(DzOpenGL.OGLTexQuality)" * @event*/
+	textureQualityChanged(quality:OGLTexQuality):void {
+	
+	}
 
 }
 /**
@@ -23697,6 +26253,36 @@ class DzPane extends QWidget {
 	undockGroup(pos:Point, size:Size):Point {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the pane's label has changed.
+ * @signature "labelChanged(const QString&)" * @event*/
+	labelChanged(newLabel:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the options menu for the pane has changed.
+ * @signature "menuChanged()" * @event*/
+	menuChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	paneGroupChanged(oldGroup:DzPaneGroup, newGroup:DzPaneGroup):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the visibility of the pane's tab bar is changed. When the tab bar is hidden, it's options menu is not visible. If desired, pane instances can listen to this signal to know when the menu is hidden in order to provide an alternate method of accessing the menu options.
+ * @signature "tabBarHiddenChanged(bool)" * @event*/
+	tabBarHiddenChanged(hidden:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the pane is shown or hidden.
+ * @signature "visibilityChanged(bool)" * @event*/
+	visibilityChanged(onOff:Boolean):void {
+	
+	}
 
 }
 /**
@@ -23773,6 +26359,12 @@ class DzPaneGroup extends DzDockWindow {
  * @description Return Value:
 */
 	tabBarHidden():Boolean {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	emptyGroup():void {
 	
 	}
 
@@ -24298,6 +26890,60 @@ class DzPaneMgr extends QWidget {
 	togglePane(pane:DzPane):DzError {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Parameter(s):
+ * @signature activeLayoutAboutToChange() * @event*/
+	activeLayoutAboutToChange(newLayoutIdx:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Called when the active layout changes.
+ * @signature "activeLayoutChanged(int)" * @event*/
+	activeLayoutChanged(which:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Called when the activity bar enabled status changes.
+ * @signature "activityBarEnabled(bool)" * @event*/
+	activityBarEnabled(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the list of available layouts has changed.
+ * @signature "layoutListChanged()" * @event*/
+	layoutListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Called when a layout has been restored.
+ * @signature "layoutRestored(const QString&)" * @event*/
+	layoutRestored(filename:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	orientTabsAlongTopChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the list of available toolbars has changed.
+ * @signature "toolbarListChanged()" * @event*/
+	toolbarListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	workflowAssistanceEnableStateChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	workflowAssistanceModeChanged():void {
+	
+	}
 
 }
 /**
@@ -24390,6 +27036,18 @@ Add description.
  * @description Sets paths for the combobox.
 */
 	setTypes(list:Array):Array {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	pathSelectionChanged(path:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	viewAboutToShow():void {
 	
 	}
 
@@ -24676,6 +27334,12 @@ class DzPluginMgr extends QObject {
  * @description Sets whether or not the plug-in should load when the application starts.
 */
 	setPluginLoadOnStartup(plugin:DzPlugin, onOff:Boolean):DzPlugin {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	pluginAdded(plugin:DzPlugin):void {
 	
 	}
 
@@ -25016,6 +27680,30 @@ Add description.
 	whatsThis(id:Number):String {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description This signal is emitted just before the popup menu is hidden after it has been displayed.
+ * @signature "aboutToHide()" * @event*/
+	aboutToHide():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description This signal is emitted just before the popup menu is displayed. You can connect it to any slot that sets up the menu contents (e.g. to ensure that the right items are enabled).
+ * @signature "aboutToShow()" * @event*/
+	aboutToShow():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description This signal is emitted when a menu item is selected.
+ * @signature "activated(int)" * @event*/
+	activated(id:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a menu item is highlighted.
+ * @signature "highlighted(int)" * @event*/
+	highlighted(id:Number):void {
+	
+	}
 
 }
 /**
@@ -25165,6 +27853,36 @@ class DzProcess extends QObject {
  * @description Writes buffer to standard input. The process may, or may not, read the data. The wroteToStdin() signal is emitted once all data in buffer has been written to the process.
 */
 	writeToStdin(buffer:String):String {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the process is started with launch(). If starting the process is successful, this signal is emitted after the data passed in has been written to standard input. If starting the process fails, this signal is emitted immediately.
+ * @signature "launchFinished()" * @event*/
+	launchFinished():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the process has exited.
+ * @signature "processExited()" * @event*/
+	processExited():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the process has written data to standard error.
+ * @signature "readyReadStderr()" * @event*/
+	readyReadStderr():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the process has written data to standard output.
+ * @signature "readyReadStdout()" * @event*/
+	readyReadStdout():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted if the data sent to standard input (via writeToStdin()) was actually written to the process.
+ * @signature "wroteToStdin()" * @event*/
+	wroteToStdin():void {
 	
 	}
 
@@ -26086,6 +28804,180 @@ class DzProperty extends DzBase {
 	setWidgetClassOverride(styledWgtClassName:String, wgtClassName:String):DzError {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	aliasListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	assetModified():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	assetWasSaved():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	autoFollowTargetUriChanged(path:DzUri):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when animation for this property is enabled or disabled.
+ * @signature "canAnimateChanged(bool)" * @event*/
+	canAnimateChanged(enabled:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	canAutoFollowChanged(canAutoFollow:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	controllerListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the value of this property at the current time has changed. If the current time changes and this property has animation data, this signal is emitted as appropriate. Subclasses of DzProperty should call emitCurrentValueChanged() when the value has changed.
+ * @signature "currentValueChanged()" * @event*/
+	currentValueChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	dynamicallyAutoFollowChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	dynamicallyHiddenChanged(hidden:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	editFinished():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the group this property is in changed.
+ * @signature "groupChanged(DzPropertyGroup*)" * @event*/
+	groupChanged(group:DzPropertyGroup):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the hidden state of this property is changed.
+ * @signature "hiddenChanged(bool)" * @event*/
+	hiddenChanged(hidden:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when this property is set or unset as a favorite.
+ * @signature "isFavoriteChanged(bool)" * @event*/
+	isFavoriteChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when this property is set or unset as a global favorite.
+ * @signature "isGlobalFavoriteChanged(bool)" * @event*/
+	isGlobalFavoriteChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when this property is set or unset as a manipulator.
+ * @signature "isManipulatorChanged(bool)" * @event*/
+	isManipulatorChanged(isManip:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when this property is set or unset as a user property.
+ * @signature "isUserPropertyChanged(bool)" * @event*/
+	isUserPropertyChanged(isUserProp:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the selection state of this property's keys has changed.
+ * @signature "keySelectionChanged(const DzTimeRange&)" * @event*/
+	keySelectionChanged(range:DzTimeRange):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the label of this property is changed.
+ * @signature "labelChanged(const QString&)" * @event*/
+	labelChanged(newLabel:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the lock state of this property has changed.
+ * @signature "lockStateChanged()" * @event*/
+	lockStateChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	newStateChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the state for whether this property overrides its controllers changed.
+ * @signature "overridingControllersChanged(bool)" * @event*/
+	overridingControllersChanged(overriding:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	presentationIconChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when this property is destroyed.
+ * @signature "propertyDeleted(DzProperty*)" * @event*/
+	propertyDeleted(prop:DzProperty):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	regionChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when this property is removed.
+ * @signature "removed()" * @event*/
+	removed():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when this property is selected or deselected.
+ * @signature "selectionStateChanged()" * @event*/
+	selectionStateChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	slaveControllerListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the value of this property is changed.
+ * @signature "valueChanged(const DzTimeRange&)" * @event*/
+	valueChanged(range:DzTimeRange):void {
+	
+	}
 
 }
 /**
@@ -26243,6 +29135,42 @@ class DzPropertyGroup extends DzBase {
 	sort():void {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a child has been added to the group.
+ * @signature "addedChild(DzPropertyGroup*)" * @event*/
+	addedChild(newChild:DzPropertyGroup):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the child list of the group has changed.
+ * @signature "childListChanged()" * @event*/
+	childListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the parent of the group has changed.
+ * @signature "parentChanged(DzPropertyGroup*)" * @event*/
+	parentChanged(newParent:DzPropertyGroup):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the visibility of a property in the group has changed.
+ * @signature "propertyVisiblityChanged(DzPropertyGroup*,DzProperty*)" * @event*/
+	propertyVisiblityChanged(grp:DzPropertyGroup, prop:DzProperty):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a child has been removed from the group.
+ * @signature "removedChild(DzPropertyGroup*)" * @event*/
+	removedChild(child:DzPropertyGroup):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the tree has changed.
+ * @signature "treeChanged()" * @event*/
+	treeChanged():void {
+	
+	}
 
 }
 /**
@@ -26310,6 +29238,30 @@ class DzPropertyGroupTree extends DzBase {
  * @description Alpha-numerically sorts the property groups, keeping "General" at the top.
 */
 	sortGroups():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the child list of the group has changed.
+ * @signature "childListChanged()" * @event*/
+	childListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the visibility of a property in the tree has changed.
+ * @signature "propertyVisiblityChanged(DzPropertyGroup*,DzProperty*)" * @event*/
+	propertyVisiblityChanged(grp:DzPropertyGroup, prop:DzProperty):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the tree has changed.
+ * @signature "treeChanged()" * @event*/
+	treeChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the tree is sorted.
+ * @signature "treeSorted()" * @event*/
+	treeSorted():void {
 	
 	}
 
@@ -26437,6 +29389,12 @@ class DzPropertySelectionComboBox extends DzWidget {
  * @description Display the popup.
 */
 	showPopup():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the selected DzProperty changes.
+ * @signature "propertySelectionChanged()" * @event*/
+	propertySelectionChanged():void {
 	
 	}
 
@@ -26578,6 +29536,66 @@ class DzPushButton extends DzButton {
  * @description Deprecated
 */
 	setToggleButton(yesNo:Boolean):Boolean {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when buttonStyle on this button has changed.
+ * @signature "buttonStyleChanged(ButtonStyle)" * @event*/
+	buttonStyleChanged(style:ButtonStyle):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when buttonTextFormat on this button has changed.
+ * @signature "buttonTextFormatChanged(int)" * @event*/
+	buttonTextFormatChanged(format:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when displayDownArrow on this button has changed.
+ * @signature "displayDownArrowChanged(bool)" * @event*/
+	displayDownArrowChanged(displayArrow:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when downArrowMetric on this button has changed.
+ * @signature "downArrowMetricChanged(const QString&)" * @event*/
+	downArrowMetricChanged(name:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when downArrowPrimitive on this button has changed.
+ * @signature "downArrowPrimitiveChanged(const QString&)" * @event*/
+	downArrowPrimitiveChanged(name:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when elideMode on this button has changed.
+ * @signature "textStyleChanged(int)" * @event*/
+	elideModeChanged(mode:DzWidget.TextElideMode):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when iconMetric on this button has changed.
+ * @signature "iconMetricChanged(const QString&)" * @event*/
+	iconMetricChanged(name:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when primitive on this button has changed.
+ * @signature "primitiveChanged(const QString&)" * @event*/
+	primitiveChanged(name:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when sizedFromIcon on this button has changed.
+ * @signature "sizedFromIconChanged(bool)" * @event*/
+	sizedFromIconChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when textStyle on this button has changed.
+ * @signature "textStyleChanged(const QString&)" * @event*/
+	textStyleChanged(name:String):void {
 	
 	}
 
@@ -27106,6 +30124,48 @@ class DzRenderer extends DzBase {
 	textureConvert(handler:DzRenderHandler, camera:DzCamera, opt:DzTextureConvertorOptions):Boolean {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when just before the renderer begins rendering
+ * @signature "aboutToRender(DzRenderer*)" * @event*/
+	aboutToRender(renderer:DzRenderer):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the image preparation for img is finished. Derived classes need to make sure to emit this signal at the appropriate times.
+ * @signature "imagePrepared(const DzTexture*,const QString&)" * @event*/
+	imagePrepared(img:DzTexture, filename:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	IPRRenderHandlerChanged(renderer:DzRenderer, handler:iprrenderhandler_dz):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	rendererModeChanged(renderer:DzRenderer):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when just after the renderer finishes rendering
+ * @signature "renderFinished(DzRenderer*)" * @event*/
+	renderFinished(renderer:DzRenderer):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	shapeRenderBeginning(shape:shape_dz):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	shapeRenderFinished(shape:shape_dz):void {
+	
+	}
 
 }
 /**
@@ -27458,6 +30518,96 @@ Add description.
 	stopIPRRender():void {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the active render engine has changed.
+ * @signature "activeRendererChanged(DzRenderer*)" * @event*/
+	activeRendererChanged(renderer:DzRenderer):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	activeRendererIPRRenderHandlerChanged(renderer:DzRenderer, handler:iprrenderhandler_dz):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	doIPRRenderStop():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the value returned by DzRenderMgr.hasRender() has changed, signaling a new render operation. This signifies whether or not a call to saveLastRender() will be valid.
+ * @signature "hasRenderChanged(bool)" * @event*/
+	hasRenderChanged(state:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	IPRRenderStarted():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	IPRRenderStopped():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	renderDirectoryListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	renderElementsListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a new render engine is added to the manager. This only occurs at startup as plug-ins are being loaded.
+ * @signature "rendererAdded(DzRenderer*)" * @event*/
+	rendererAdded(renderer:DzRenderer):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	rendererIPRRenderHandlerChanged(renderer:DzRenderer, handler:iprrenderhandler_dz):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	rendererModeChanged(renderer:DzRenderer):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted just after a rendering operation is finished. This is only emitted when a render operation is performed by calling DzRenderMgr.doRender() - this includes all rendering operations that are started by the user from the interface. This may not include rendering operations performed by plug-ins, scripts, etc which do not call doRender().
+ * @signature "renderFinished(bool)" * @event*/
+	renderFinished(succeeded:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	renderFolderChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	renderOptionDefaultsRestored():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted just before a rendering operation begins. This is only emitted when a render operation is performed by calling DzRenderMgr.doRender() - this includes all rendering operations that are started by the user from the interface. This may not include rendering operations performed by plug-ins, scripts, etc which do not call doRender().
+ * @signature "renderStarting()" * @event*/
+	renderStarting():void {
+	
+	}
 
 }
 /**
@@ -27634,6 +30784,222 @@ class DzRenderOptions extends QObject {
  * @description Sets all options to the default values, but does not affect values of stored/remembered settings. Also, no "changed" signals are emitted when calling this method.
 */
 	setToDefaults():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the aspect for the render has changed, or the viewport render status has changed.
+ * @signature "aspectChanged(double)" * @event*/
+	aspectChanged(val:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the aspect for the render has changed, or the viewport render status has changed.
+ * @signature "aspectChanged(float,float)" * @event*/
+	aspectChanged(w:Number, h:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the constrain aspect ratio setting has changed.
+ * @signature "aspectConstrainChanged(bool)" * @event*/
+	aspectConstrainChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the default options have been restored.
+ * @signature "defaultsRestored()" * @event*/
+	defaultsRestored():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the double sided setting has changed.
+ * @signature "doubleSidedChanged(bool)" * @event*/
+	doubleSidedChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the end time has changed.
+ * @signature "endTimeChanged(DzTime)" * @event*/
+	endTimeChanged(time:DzTime):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the gain value has changed.
+ * @signature "gainChanged(double)" * @event*/
+	gainChanged(gain:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the gamma value has changed.
+ * @signature "gammaChanged(double)" * @event*/
+	gammaChanged(gamma:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when gamma correction state has changed.
+ * @signature "gammaCorrectionChanged(DzRenderOptions.GammaCorrection)" * @event*/
+	gammaCorrectionChanged(gc:DzRenderOptions.GammaCorrection):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the image size has changed.
+ * @signature "imageSizeChanged(const QSize&)" * @event*/
+	imageSizeChanged(size:Size):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the motion blur offset has changed.
+ * @signature "motionBlurOffsetChanged(double)" * @event*/
+	motionBlurOffsetChanged(offset:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the motion blur percentage has changed.
+ * @signature "motionBlurPctChanged(int)" * @event*/
+	motionBlurPctChanged(pct:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the motion blur samples has changed.
+ * @signature "motionBlurSamplesChanged(int)" * @event*/
+	motionBlurSamplesChanged(samples:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the number of OpenGL passes has changed.
+ * @signature "openGLPassesChanged(int)" * @event*/
+	openGLPassesChanged(passes:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the pixel filter has changed.
+ * @signature "pixelFilterChanged(DzRenderOptions.PixelFilter)" * @event*/
+	pixelFilterChanged(filter:DzRenderOptions.PixelFilter):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the ray trace depth has changed.
+ * @signature "rayTraceDepthChanged(int)" * @event*/
+	rayTraceDepthChanged(depth:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the render current frame setting has changed.
+ * @signature "renderCurrentFrameChanged(bool)" * @event*/
+	renderCurrentFrameChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the image filename for the render has changed.
+ * @signature "renderImgFilenameChanged(const QString&)" * @event*/
+	renderImgFilenameChanged(filename:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the image target type for the render has changed.
+ * @signature "renderImgTargetChanged(DzRenderOptions.RenderImgTarget)" * @event*/
+	renderImgTargetChanged(id:DzRenderOptions.RenderImgTarget):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the movie filename for the render has changed.
+ * @signature "renderMovFilenameChanged(const QString&)" * @event*/
+	renderMovFilenameChanged(filename:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the movie target type for the render has changed.
+ * @signature "renderMovTargetChanged(DzRenderOptions.RenderMovTarget)" * @event*/
+	renderMovTargetChanged(id:DzRenderOptions.RenderMovTarget):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the image series filename for the render has changed.
+ * @signature "renderSerFilenameChanged(const QString&)" * @event*/
+	renderSerFilenameChanged(filename:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the render type has changed.
+ * @signature "renderStyleChanged(DzRenderOptions.RenderStyle)" * @event*/
+	renderStyleChanged(style:DzRenderOptions.RenderStyle):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the render type has changed.
+ * @signature "renderTypeChanged(DzRenderOptions.RenderType)" * @event*/
+	renderTypeChanged(type:DzRenderOptions.RenderType):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the render to viewport setting has changed.
+ * @signature "renderViewportChanged(bool)" * @event*/
+	renderViewportChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when any of the settings has changed.
+ * @signature "settingsChanged()" * @event*/
+	settingsChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the shading rate has changed.
+ * @signature "shadingRateChanged(double)" * @event*/
+	shadingRateChanged(rate:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the number of shadow samples has changed.
+ * @signature "shadowSamplesChanged(int)" * @event*/
+	shadowSamplesChanged(samples:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the show preview setting has changed.
+ * @signature "showPreviewChanged(bool)" * @event*/
+	showPreviewChanged(onoff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the start time has changed.
+ * @signature "startTimeChanged(DzTime)" * @event*/
+	startTimeChanged(time:DzTime):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the use GLSL setting has changed.
+ * @signature "useGLSLChanged(bool)" * @event*/
+	useGLSLChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the motion blur setting has changed.
+ * @signature "useMotionBlurChanged(bool)" * @event*/
+	useMotionBlurChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the X-axis filter width has changed.
+ * @signature "xFilterWidthChanged(double)" * @event*/
+	xFilterWidthChanged(width:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the number of X-axis pixel samples has changed.
+ * @signature "xPixelSamplesChanged(int)" * @event*/
+	xPixelSamplesChanged(samples:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the Y-axis filter width has changed.
+ * @signature "yFilterWidthChanged(double)" * @event*/
+	yFilterWidthChanged(width:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the number of Y-axis pixel samples has changed.
+ * @signature "yPixelSamplesChanged(int)" * @event*/
+	yPixelSamplesChanged(samples:Number):void {
 	
 	}
 
@@ -28567,6 +31933,24 @@ class DzRSLShader extends DzBase, DzRefCountedItem {
 	addTranslate(dx:Number, dy:Number, dz:Number):Number {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when a property is added to this element.
+ * @signature "propertyAdded(DzProperty*)" * @event*/
+	propertyAdded(prop:DzProperty):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when a property is added to or removed from this element.
+ * @signature "propertyListChanged()" * @event*/
+	propertyListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when a property is removed from this element.
+ * @signature "propertyRemoved(DzProperty*)" * @event*/
+	propertyRemoved(prop:DzProperty):void {
+	
+	}
 
 }
 /**
@@ -29437,6 +32821,294 @@ Add description.
  * @description Recursively updates all nodes in the scene.
 */
 	update():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted immediately before a node is removed from the scene.
+ * @signature "aboutToRemoveNode(DzNode*)" * @event*/
+	aboutToRemoveNode(node:DzNode):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted just before the scene is rendered.
+ * @signature "aboutToRender(DzRenderer*)" * @event*/
+	aboutToRender(r:DzRenderer):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted after the scene play range is changed.
+ * @signature "animRangeChanged(const DzTimeRange&)" * @event*/
+	animRangeChanged(range:DzTimeRange):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted just after the scene has been modified.
+ * @signature "assetModified()" * @event*/
+	assetModified():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted just after the scene has been saved.
+ * @signature "assetWasSaved()" * @event*/
+	assetWasSaved():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted just after the backdrop has changed.
+ * @signature "backdropChanged()" * @event*/
+	backdropChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when cameras are added to the scene.
+ * @signature "cameraAdded(DzCamera*)" * @event*/
+	cameraAdded(node:DzCamera):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when cameras are added to or removed from the scene.
+ * @signature "cameraListChanged()" * @event*/
+	cameraListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when cameras are removed from the scene.
+ * @signature "cameraRemoved(DzCamera*)" * @event*/
+	cameraRemoved(node:DzCamera):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted after the camera selection list changes.
+ * @signature "cameraSelectionListChanged()" * @event*/
+	cameraSelectionListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted after the scene time is changed.
+ * @signature "currentTimeChanged( DzTime, DzTime )" * @event*/
+	currentTimeChanged(oldTime:DzTime, newTime:DzTime):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted if the scene has changed and needs to be redrawn.
+ * @signature "drawnDataChanged()" * @event*/
+	drawnDataChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when the highlight node changes.
+ * @signature "highlightNodeChanged(DzNode*)" * @event*/
+	highlightNodeChanged(node:DzNode):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when lights are added to the scene.
+ * @signature "lightAdded(DzLight*)" * @event*/
+	lightAdded(node:DzLight):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when lights are added to or removed from the scene.
+ * @signature "lightListChanged()" * @event*/
+	lightListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when lights are removed from the scene.
+ * @signature "lightRemoved(DzLight*)" * @event*/
+	lightRemoved(node:DzLight):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted after the light selection list changes.
+ * @signature "lightSelectionListChanged()" * @event*/
+	lightSelectionListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when the enabled state of playback looping changes.
+ * @signature "loopPlaybackChanged(bool)" * @event*/
+	loopPlaybackChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the material list of a node in the scene has changed.
+ * @signature "materialListChanged()" * @event*/
+	materialListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the material selection in the scene has changed.
+ * @signature "materialSelectionChanged()" * @event*/
+	materialSelectionChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when nodes are added to the scene.
+ * @signature "nodeAdded(DzNode*)" * @event*/
+	nodeAdded(node:DzNode):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when nodes are added to or removed from the scene.
+ * @signature "nodeListChanged()" * @event*/
+	nodeListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when nodes are removed from the scene.
+ * @signature "nodeRemoved(DzNode*)" * @event*/
+	nodeRemoved(node:DzNode):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted after the node selection list changes.
+ * @signature "nodeSelectionListChanged()" * @event*/
+	nodeSelectionListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when playback of the scene stops.
+ * @signature "playbackFinished()" * @event*/
+	playbackFinished():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when playback of the scene begins.
+ * @signature "playbackStarted()" * @event*/
+	playbackStarted():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted after the scene play range is changed.
+ * @signature "playRangeChanged(const DzTimeRange&)" * @event*/
+	playRangeChanged(range:DzTimeRange):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when the primary node selection changes.
+ * @signature "primarySelectionChanged(DzNode*)" * @event*/
+	primarySelectionChanged(node:DzNode):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted just after the scene is rendered.
+ * @signature "renderFinished(DzRenderer*)" * @event*/
+	renderFinished(r:DzRenderer):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted after the scene gets cleared.
+ * @signature "sceneCleared()" * @event*/
+	sceneCleared():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted just before the scene is cleared.
+ * @signature "sceneClearStarting()" * @event*/
+	sceneClearStarting():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when the name of the current scene file has changed.
+ * @signature "sceneFilenameChanged(const QString&)" * @event*/
+	sceneFilenameChanged(newName:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted after loading a scene file. This may not always be emitted after every sceneLoadStarting() signal if there were errors during file loading.
+ * @signature "sceneLoaded()" * @event*/
+	sceneLoaded():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted just before loading a scene.
+ * @signature "sceneLoadStarting()" * @event*/
+	sceneLoadStarting():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted after saving a scene file. This may not always be emitted after every sceneSaveStarting() signal if there were errors during file saving.
+ * @signature "sceneSaved( String )" * @event*/
+	sceneSaved(filename:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted just before saving a scene.
+ * @signature "sceneSaveStarting( String )" * @event*/
+	sceneSaveStarting(filename:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted just after the scene topology has changed.
+ * @signature "sceneTopologyChanged()" * @event*/
+	sceneTopologyChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when skeletons are added to the scene.
+ * @signature "skeletonAdded(DzSkeleton*)" * @event*/
+	skeletonAdded(node:DzSkeleton):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when skeletons are added to or removed from the scene.
+ * @signature "skeletonListChanged()" * @event*/
+	skeletonListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when skeletons are removed from the scene.
+ * @signature "skeletonRemoved(DzSkeleton*)" * @event*/
+	skeletonRemoved(node:DzSkeleton):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted after the skeleton selection list changes.
+ * @signature "skeletonSelectionListChanged()" * @event*/
+	skeletonSelectionListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted after the scene time is changed.
+ * @signature "timeChanged(DzTime)" * @event*/
+	timeChanged(time:DzTime):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when time is about to change.
+ * @signature "timeChanging(DzTime)" * @event*/
+	timeChanging(newTime:DzTime):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted after the scene time selection is changed.
+ * @signature "timeSelectionChanged()" * @event*/
+	timeSelectionChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted after the scene time step is changed.
+ * @signature "timeStepChanged(DzTime)" * @event*/
+	timeStepChanged(time:DzTime):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when world-space modifiers are added to the scene.
+ * @signature "wsModifierAdded(DzWSModifier*)" * @event*/
+	wsModifierAdded(modifier:wsmodifier_dz):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when world-space modifiers are removed from the scene.
+ * @signature "wsModifierRemoved(DzWSModifier*)" * @event*/
+	wsModifierRemoved(modifier:wsmodifier_dz):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Transmitted when world-space modifiers are added to or removed from the scene.
+ * @signature "wsModifierStackChanged()" * @event*/
+	wsModifierStackChanged():void {
 	
 	}
 
@@ -31091,6 +34763,12 @@ class DzScriptedRenderer extends DzRenderer {
 	setSurfacePreProcessScript(filename:String):String {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the definition file has changed.
+ * @signature "defintionFileChanged()" * @event*/
+	defintionFileChanged():void {
+	
+	}
 
 }
 /**
@@ -31248,6 +34926,18 @@ class DzSelectionMap extends DzBase {
  * @description Removes a face group/node mapping from the selection map.
 */
 	removePair(index:Number):DzError {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the map changes.
+ * @signature "mapModified()" * @event*/
+	mapModified():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the visibility of the node in a given pair changes.
+ * @signature "visibilityChanged()" * @event*/
+	visibilityChanged():void {
 	
 	}
 
@@ -32408,6 +36098,12 @@ class DzSkeleton extends DzNode {
 	setFollowTarget(skeleton:DzSkeleton):void {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the follow target for this skeleton has changed.
+ * @signature "followTargetChanged(DzSkeleton*)" * @event*/
+	followTargetChanged(skeleton:DzSkeleton):void {
+	
+	}
 
 }
 /**
@@ -32432,6 +36128,12 @@ class DzSkeletonProperty extends DzNodeProperty {
  * @description Return Value:
 */
 	getSkeletonValue():DzSkeleton {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted immediately before the value of the property changes.
+ * @signature "aboutToChange()" * @event*/
+	aboutToChange():void {
 	
 	}
 
@@ -33108,6 +36810,12 @@ class DzStyle extends QObject {
 	textStyleColor(styleName:String):Color {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature interfaceColorsChanged() * @event*/
+	interfaceColorsChanged():void {
+	
+	}
 
 }
 /**
@@ -33300,6 +37008,18 @@ class DzTabWidget extends DzWidget {
 	widget(index:Number):DzWidget {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted whenever the current page index changes.
+ * @signature "currentChanged(int)" * @event*/
+	currentChanged(index:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the close button on a tab is clicked.
+ * @signature "tabCloseRequested(int)" * @event*/
+	tabCloseRequested(index:Number):void {
+	
+	}
 
 }
 /**
@@ -33361,6 +37081,48 @@ class DzTextBrowser extends DzTextEdit {
  * @description Reloads the current document.
 */
 	reload():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the user clicks an anchor.
+ * @signature "anchorClicked(const QString&,const QString&)" * @event*/
+	anchorClicked(name:String, link:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the availability of backward() changes.
+ * @signature "backwardAvailable(bool)" * @event*/
+	backwardAvailable(available:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the availability of forward() changes.
+ * @signature "forwardAvailable(bool)" * @event*/
+	forwardAvailable(available:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the user selects a link but does not activate it.
+ * @signature "highlighted(const QString&)" * @event*/
+	highlighted(link:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the history changes.
+ * @signature "historyChanged()" * @event*/
+	historyChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the user clicks a link.
+ * @signature "linkClicked(const QString&)" * @event*/
+	linkClicked(link:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the mime source of the browser changes.
+ * @signature "sourceChanged(const QString&)" * @event*/
+	sourceChanged(src:String):void {
 	
 	}
 
@@ -33696,6 +37458,42 @@ class DzTextEdit extends DzWidget {
 	zoomOut(range:Number):Number {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when text is selected or de-selected in the editor.
+ * @signature "copyAvailable(bool)" * @event*/
+	copyAvailable(yesNo:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the position of the cursor has changed.
+ * @signature "cursorPositionChanged()" * @event*/
+	cursorPositionChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the availability of redo changes. If yesNo is true, redo() will work until redoAvailable(false) is next emitted.
+ * @signature "redoAvailable(bool)" * @event*/
+	redoAvailable(yesNo:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the selection changes.
+ * @signature "selectionChanged()" * @event*/
+	selectionChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the text in the editor changes.
+ * @signature "textChanged()" * @event*/
+	textChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the availability of undo changes. If yesNo is true, undo() will work until undoAvailable(false) is next emitted.
+ * @signature "undoAvailable(bool)" * @event*/
+	undoAvailable(yesNo:Boolean):void {
+	
+	}
 
 }
 /**
@@ -33801,6 +37599,18 @@ Add description.
 	setTextureType(type:Number):Number {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the data of the texture has changed - e.g. after a call to refresh()
+ * @signature "drawnDataChanged()" * @event*/
+	drawnDataChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the temp filename for the image has changed
+ * @signature "tempFilenameChanged(const QString&)" * @event*/
+	tempFilenameChanged(filename:String):void {
+	
+	}
 
 }
 /**
@@ -33852,6 +37662,78 @@ Add description.
 Add description.
 */
 	loadImageData(image:Image):Image {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	colorChanged(color:Color):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	dataChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	enabledChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	flippedHorizontalChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	flippedVerticalChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	imageChanged(filename:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	invertedChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	labelChanged(label:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	offsetChanged(offset:Point):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	opacityChanged(opacity:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	rotationChanged(rotation:Rotation):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	scaleChanged(x:Number, y:Number):void {
 	
 	}
 
@@ -33907,6 +37789,24 @@ Add description.
 Add description.
 */
 	setMask(mask:DzTextureMask):DzTextureMask {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	aboutToChangeMask(oldMask:DzTextureMask, newMask:DzTextureMask):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	blendModeChanged(mode:BlendMode):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	maskChanged(oldMask:DzTextureMask, newMask:DzTextureMask):void {
 	
 	}
 
@@ -33975,6 +37875,12 @@ class DzTimeEdit extends DzDateTimeEdit {
 	constructor(parent:DzWidget) {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the time in the widget has changed, passes the new time.
+ * @signature "valueChanged(const QTime&)" * @event*/
+	valueChanged(DzTime):void {
+	
+	}
 
 }
 /**
@@ -34007,6 +37913,12 @@ class DzTimer extends QObject {
  * @description Stops the timer.
 */
 	stop():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the timer times out.
+ * @signature "timeout()" * @event*/
+	timeout():void {
 	
 	}
 
@@ -34268,6 +38180,12 @@ class DzToolBar extends QWidget {
 	undock(pos:Point):Point {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when items are added to or removed from this toolbar
+ * @signature "itemListChanged()" * @event*/
+	itemListChanged():void {
+	
+	}
 
 }
 /**
@@ -34349,6 +38267,12 @@ class DzTopLevelAssetContainer extends DzAbstractAssetContainer, DzRefCountedIte
  * @description Sets the state of this container.
 */
 	setState(state:ContainerState):ContainerState {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the state of this container has changed.
+ * @signature "stateChanged(int)" * @event*/
+	stateChanged(state:ContainerState):void {
 	
 	}
 
@@ -34982,6 +38906,12 @@ class DzTypeAssetContainer extends DzAbstractAssetContainer, DzRefCountedItem {
 	insertToSpecificType(asset:DzAsset, typePath:String):Boolean {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when this container is about to be cleared.
+ * @signature "aboutToClear()" * @event*/
+	aboutToClear():void {
+	
+	}
 
 }
 /**
@@ -35283,6 +39213,30 @@ class DzUndoStack extends QObject {
 	unlock():void {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the availability of the redo stack changes.
+ * @signature "redoAvailable(bool)" * @event*/
+	redoAvailable(yesNo:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the caption of the redo stack changes.
+ * @signature "redoCaptionChanged(const QString&)" * @event*/
+	redoCaptionChanged(caption:String):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the availability of the undo stack changes.
+ * @signature "undoAvailable(bool)" * @event*/
+	undoAvailable(yesNo:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the caption of the undo stack changes.
+ * @signature "undoCaptionChanged(const QString&)" * @event*/
+	undoCaptionChanged(caption:String):void {
+	
+	}
 
 }
 /**
@@ -35552,6 +39506,18 @@ Add description.
  * @constructor
 */
 	constructor() {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the UV set has been modified.
+ * @signature "assetModified()" * @event*/
+	assetModified():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted after the UV set has been saved.
+ * @signature "assetWasSaved()" * @event*/
+	assetWasSaved():void {
 	
 	}
 
@@ -36421,6 +40387,24 @@ class DzViewport extends QWidget {
 	setViewVisible(onOff:Boolean):Boolean {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	dimensionsChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	view3dCurrentDimensionsChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	viewChanged(view:DzView):void {
+	
+	}
 
 }
 /**
@@ -37101,6 +41085,144 @@ Add description.
 	validateMouseWheelAccelerator(accel:ViewMouseModifier):Boolean {
 	
 	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	accelChanged(operation:ViewOperation, accel:ViewMouseBtnAccelerator):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	acceleratorsChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	acitve3DViewCurrentDimensionsChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	activeToolDrawnDataChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the active tool changes
+ * @signature "activeToolSwitched()" * @event*/
+	activeToolSwitched():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the active view changes size
+ * @signature "activeViewResized()" * @event*/
+	activeViewResized():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the active view changes
+ * @signature "activeViewSwitched()" * @event*/
+	activeViewSwitched():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the active viewport is about to display a context menu. Other objects can connect to this signal to add custom items to the menu that is displayed to the user.
+ * @signature "contextMenuAboutToShow(DzMenu*,Dz3DViewport*,QPoint)" * @event*/
+	contextMenuAboutToShow(menu:DzMenu, view:Dz3DViewport, pos:Point):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	drawElementsListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	graftDrawingChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	invertMouseWheelChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a quick draw operation is finished
+ * @signature "quickDrawFinished()" * @event*/
+	manipFinished():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when a quick draw operation is started
+ * @signature "quickDrawStarted()" * @event*/
+	manipStarted():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	manipulationBindingChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	nodeClickModeChanged(mode:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	propagateBackgroundColorChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the quick draw mode changes
+ * @signature "quickDrawModeChanged(QDMode)" * @event*/
+	quickDrawModeChanged(mode:QDMode):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the redraw lock state changes
+ * @signature "redrawsLocked(bool)" * @event*/
+	redrawsLocked(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	regionClickModeChanged(mode:Number):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	subDManipulationChanged(onOff:Boolean):void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the tool list changes
+ * @signature "toolListChanged()" * @event*/
+	toolListChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the layout of the view ports changes
+ * @signature "viewLayoutChanged()" * @event*/
+	viewLayoutChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the global list of available cameras changes
+ * @signature "viewportCameraListChanged()" * @event*/
+	viewportCameraListChanged():void {
+	
+	}
 
 }
 /**
@@ -37125,6 +41247,30 @@ class DzViewTool extends DzBase {
  * @description Derived classes can return a popup menu that will be displayed when the user selects the options menu for the Tool pane.
 */
 	getOptionsMenu():DzActionMenu {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the viewtool becomes the active tool in the viewport.
+ * @signature "activated()" * @event*/
+	activated():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the viewtool stops being the active tool in the viewport.
+ * @signature "deactivated()" * @event*/
+	deactivated():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the viewtool needs to be redrawn in the viewport.
+ * @signature "drawnDataChanged()" * @event*/
+	drawnDataChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description TODO: Add Description
+ * @signature TODO: Add Description * @event*/
+	rebuildMenu():void {
 	
 	}
 
@@ -37191,6 +41337,18 @@ class DzWeld extends DzBase {
  * @description Sets the bone that will be welded - the welding operation will move boundary points in this bone's geometry, and recalculate the affected normals.
 */
 	setWeldBone(weldBone:DzBone):DzBone {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the target bone has changed.
+ * @signature "targetBoneChanged()" * @event*/
+	targetBoneChanged():void {
+	
+	}
+	/**
+ * THIS IS A NOT AN ACTUAL FUNCTION, THIS IS A SIGNAL! USE ONLY THE SIGNATURE.  * @description Emitted when the weld bone has changed.
+ * @signature "weldBoneChanged()" * @event*/
+	weldBoneChanged():void {
 	
 	}
 
