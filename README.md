@@ -7,9 +7,11 @@ JzSense contents is ported directly from the [DAZ Documentation website] and inh
 I DO NOT WORK FOR DAZ PRODUCTIONS AND THIS SCRIPT WAS NOT SUPPORTED BY OR ENDORSED BY ANYONE AT DAZ PRODUCTIONS INC.
 
 If I made your life wonderful, if you're feeling generious enough to donate to help me out... 😏👉: 🌟https://www.buymeacoffee.com/therealsoll🌟
-## Latest Update ##
+## Latest Update: 4/10/2021 ##
 - Added missing documentation for properties.
-- 
+- Static and non-static methods now have improved documentation.
+- Renamed file to JzSense
+- Fixed methods reporting wrong return type.
 # ⚠ Heads up ⚠ 
 ##### The current version of JzSense is still a Work-In-Progress project. 
 - The current version does not include `String`, `Number`, `Boolean`, `Object`, `Date`, `Function`, and `JSON`, and others later explained.
@@ -20,7 +22,7 @@ If I made your life wonderful, if you're feeling generious enough to donate to h
 ###### ⚠  The following instructions is for Visual Studio Code  ⚠
 1.  Download the `JzSense.js` script and import it into your workspace.
 2.  If you haven't made a `.dsa` DzScript (ASCII) script yet, go ahead and do so.
-3.  After creating a `.dsa ` file, go to the bottom-right of the screen where you see the current language. At default, you will see `Text File` . Click on it and a Language Dialog will pop up.
+3.  After creating a `.dsa ` file, go to the bottom-right of the screen where you see the current language. At default, you will see `Plain Text` . Click on it and a Language Dialog will pop up.
 4.  Select "Configure File Association for `.dsa" and then select JavaScript as your mode.
 
 If you open a folder/workspace, make sure that the file is in your working directory/workspace. 
@@ -48,9 +50,7 @@ All missing classes are EMCAScript classes which can not be added to this (or at
 
 There may be other things missing. If you found something thats missing and it's not mentioned in this post, please post a new issue describing what is missing and where it can be found.
 ## Planned Updates
-- Fix incorrect method return values. 
-- Add missing documentation for properties.
-- Update JSDOC for classes, constructors, and methods.
+- Update JSDOC for classes & constructors.
 - Arrays will no longer return "any[]" (this has to be done manually afaik for 333 instances ._.)
 
 
