@@ -1,6 +1,6 @@
 # JzSense
 
-JzSense is a JS file to assist developers with their DzScripts by utilizing powerful IDE's (such as Visual Studio Code) autocompletion functionality; makeshift code compeletion.
+JzSense is a JS file to assist developers with their DzScripts by utilizing powerful source code editor (such as Visual Studio Code) autocompletion, documentation, and suggestion functionalities.
 
 JzSense contents is ported directly from the [DAZ Documentation website] and inherits the [Attribution 3.0 Unported (CC BY 3.0) License]
 # Me
@@ -50,6 +50,7 @@ All missing classes are EMCAScript classes which can not be added to this (or at
 - All classes not documented such as DzShape (`shape_dz`).
 
 # JzSense - How to use, setup, and tips video
+Click on image to be redirected to youtube video.
 [![JzSense - Overview Vid](https://img.youtube.com/vi/8ylc8F0a_jo/0.jpg)](https://www.youtube.com/watch?v=8ylc8F0a_jo)
 There may be other things missing. If you found something thats missing and it's not mentioned in this post, please post a new issue describing what is missing and where it can be found.
 ## Planned Updates
