@@ -1,12 +1,12 @@
 # JzSense
 
-JzSense is a JS file to assist developers with their DzScripts by utilizing powerful IDE's (such as Visual Studio/Code) autocompletion functionality; makeshift code compeletion.
+JzSense is a JS file to assist developers with their DzScripts by utilizing powerful IDE's (such as Visual Studio Code) autocompletion functionality; makeshift code compeletion.
 
 JzSense contents is ported directly from the [DAZ Documentation website] and inherits the [Attribution 3.0 Unported (CC BY 3.0) License]
 # Me
 I DO NOT WORK FOR DAZ PRODUCTIONS AND THIS SCRIPT WAS NOT SUPPORTED BY OR ENDORSED BY ANYONE AT DAZ PRODUCTIONS INC.
 
-If I made your life wonderful, if you're feeling generious enough to donate to help me out... 😏👉: 🌟https://www.buymeacoffee.com/therealsoll🌟
+If I made your life wonderful, and if you are feeling generious enough to donate to help me out a bit (or a lot)... 😏👉: 🌟 https://www.buymeacoffee.com/therealsoll 🌟
 ## Latest Update: 4/10/2021 ##
 - Added missing documentation for properties.
 - Static and non-static methods now have improved documentation.
