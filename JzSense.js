@@ -5348,7 +5348,7 @@ class DzAuthor extends Object {
  * @param url - The author's home page URL
  * @constructor
 */
-	constructor(name:String, email:String, url="":String) {
+	constructor(name:String, email:String, url:String) {
 	
 	};
 
@@ -5583,7 +5583,7 @@ class DzBasicCamera extends DzCamera {
  * @param isViewCamera - If true, the camera is a view camera - that is, it only exists as a camera for the purpose of viewing the scene, but is not a member of the scene and is non-animatable. If false, the camera is a normal camera that is a member of the scene.
  * @constructor
 */
-	constructor(type=DzCamera.PERSPECTIVE_CAMERA:DzCamera::CameraType, isViewCamera=false:Boolean) {
+	constructor(type:DzCamera.CameraType, isViewCamera:Boolean) {
 	
 	};
 	/**
@@ -6096,7 +6096,7 @@ class DzBoolProperty extends DzIntProperty {
  * @param initVal - Sets the default value of the property.
  * @constructor
 */
-	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean, initVal=true:Boolean) {
+	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean, initVal:Boolean) {
 	
 	};
 	/**
@@ -6316,14 +6316,14 @@ class DzBoxLayout extends DzLayout {
  * @description Creates a box layout that manages the children widgets of the given parent widget
  * @constructor
 */
-	constructor(parent:DzWidget, direction=LeftToRight:Direction) {
+	constructor(parent:DzWidget, direction:Direction) {
 	
 	};
 	/**
  * @description Creates a vertical box layout as a sub-layout of the given layout
  * @constructor
 */
-	constructor(parent:DzLayout, direction=LeftToRight:Direction) {
+	constructor(parent:DzLayout, direction:Direction) {
 	
 	};
 	/**
@@ -7774,7 +7774,7 @@ class DzCheckListItem extends DzListViewItem {
  * @param id - The identifier for this item
  * @constructor
 */
-	constructor(parent:DzListView, type=RadioButtonController:Type, id=-1:Number) {
+	constructor(parent:DzListView, type:Type, id:Number) {
 	
 	};
 	/**
@@ -7784,7 +7784,7 @@ class DzCheckListItem extends DzListViewItem {
  * @param id - The identifier for this item
  * @constructor
 */
-	constructor(parent:DzCheckListItem, type=RadioButtonController:Type, id=-1:Number) {
+	constructor(parent:DzCheckListItem, type:Type, id:Number) {
 	
 	};
 	/**
@@ -7794,7 +7794,7 @@ class DzCheckListItem extends DzListViewItem {
  * @param id - The identifier for this item
  * @constructor
 */
-	constructor(parent:DzListViewItem, type=RadioButtonController:Type, id=-1:Number) {
+	constructor(parent:DzListViewItem, type:Type, id:Number) {
 	
 	};
 
@@ -7912,7 +7912,7 @@ class Color extends QObject {
  * @param a - The alpha value for the color (since 4.9.4.4).
  * @constructor
 */
-	constructor(r:Number, g:Number, b:Number, a=255:Number) {
+	constructor(r:Number, g:Number, b:Number, a:Number) {
 	
 	};
 	/**
@@ -8551,7 +8551,7 @@ Add description.
  * @param updateOnSelect - Whether the editor should automatically update when an item is selected.
  * @constructor
 */
-	constructor(parent:DzWidget, updateOnSelect=true:Boolean) {
+	constructor(parent:DzWidget, updateOnSelect:Boolean) {
 	
 	};
 	/**
@@ -11480,7 +11480,7 @@ class DzDialog extends DzWidget {
  * @description Default Constructor.
  * @constructor
 */
-	constructor(parent=undefined:QWidget) {
+	constructor(parent:QWidget) {
 	
 	};
 	/**
@@ -14613,7 +14613,7 @@ class DzElementPostLoadFileData extends DzElementData {
  * @param persistent - If true, the data item will be saved with the element to the native file format.
  * @constructor
 */
-	constructor(name:String, persistent=true:Boolean) {
+	constructor(name:String, persistent:Boolean) {
 	
 	};
 	/**
@@ -15302,7 +15302,7 @@ class DzERCLink extends DzNumericController {
 Add description.
  * @constructor
 */
-	constructor(copyFrom:DzERCLink, property=undefined:DzNumericProperty) {
+	constructor(copyFrom:DzERCLink, property:DzNumericProperty) {
 	
 	};
 	/**
@@ -15313,7 +15313,7 @@ Add description.
  * @param addend - The addend to the value.
  * @constructor
 */
-	constructor(type:ERCType, property:DzNumericProperty, scalar=1.0:Number, addend=0.0:Number) {
+	constructor(type:ERCType, property:DzNumericProperty, scalar:Number, addend:Number) {
 	
 	};
 	/**
@@ -15323,7 +15323,7 @@ Add description.
  * @param addend - The addend to the value.
  * @constructor
 */
-	constructor(property:DzNumericProperty, scalar=1.0:Number, addend=0.0:Number) {
+	constructor(property:DzNumericProperty, scalar:Number, addend:Number) {
 	
 	};
 	/**
@@ -17716,7 +17716,7 @@ class DzFloatColor extends Object {
  * @param a - The alpha value for the color
  * @constructor
 */
-	constructor(r:Number, g:Number, b:Number, a=1.0:Number) {
+	constructor(r:Number, g:Number, b:Number, a:Number) {
 	
 	};
 	/**
@@ -17725,7 +17725,7 @@ class DzFloatColor extends Object {
  * @param alpha - The value to use for the alpha component.
  * @constructor
 */
-	constructor(val:Number, alpha=1.0:Number) {
+	constructor(val:Number, alpha:Number) {
 	
 	};
 	/**
@@ -18254,7 +18254,7 @@ class DzFloatProperty extends DzNumericProperty {
  * @param defaultVal - Sets the default value of this property.
  * @constructor
 */
-	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean, defaultVal=0.0:Number) {
+	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean, defaultVal:Number) {
 	
 	};
 	/**
@@ -18973,7 +18973,7 @@ class DzGeomSourceFileData extends DzSourceFileData {
  * @description Creates a new Geometry Source File Data object that stores the given file path and group name.
  * @constructor
 */
-	constructor(filePath="":String, groupName="":String) {
+	constructor(filePath:String, groupName:String) {
 	
 	};
 
@@ -23082,7 +23082,7 @@ class DzIntProperty extends DzNumericProperty {
  * @param defaultVal - Sets the default value of this property.
  * @constructor
 */
-	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean, initVal=0:Number) {
+	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean, initVal:Number) {
 	
 	};
 	/**
@@ -23369,7 +23369,7 @@ Add description.
  * @description Holds whether or not the manipulater is active
  * @constructor
 */
-	constructor(onOff=false:Boolean) {
+	constructor(onOff:Boolean) {
 	
 	};
 	/**
@@ -25541,7 +25541,7 @@ class DzListViewItem extends QObject {
  * @param id - The identifier for this item
  * @constructor
 */
-	constructor(parent:DzListView, id=-1:Number) {
+	constructor(parent:DzListView, id:Number) {
 	
 	};
 	/**
@@ -25550,7 +25550,7 @@ class DzListViewItem extends QObject {
  * @param id - The identifier for this item
  * @constructor
 */
-	constructor(parent:DzListViewItem, id=-1:Number) {
+	constructor(parent:DzListViewItem, id:Number) {
 	
 	};
 	/**
@@ -26516,7 +26516,7 @@ class DzMatrix3 extends Object {
  * @param initIdentity - If true, the matrix will be set to the identity matrix, otherwise, the matrix values will be indeterminate.
  * @constructor
 */
-	constructor(initIdentity=false:Boolean) {
+	constructor(initIdentity:Boolean) {
 	
 	};
 	/**
@@ -26856,7 +26856,7 @@ class DzMatrix4 extends Object {
  * @param initIdentity - If true, the matrix will be set to the identity matrix, otherwise, the matrix values will be indeterminate.
  * @constructor
 */
-	constructor(initIdentity=false:Boolean) {
+	constructor(initIdentity:Boolean) {
 	
 	};
 	/**
@@ -30579,7 +30579,7 @@ class DzNodeSelectionComboBox extends DzWidget {
  * @param allowNode - Whether or not to provide a "None" option in the list
  * @constructor
 */
-	constructor(parent:DzWidget, nodeType="DzNode":String, allowNone=false:Boolean) {
+	constructor(parent:DzWidget, nodeType:String, allowNone:Boolean) {
 	
 	};
 	/**
@@ -30731,7 +30731,7 @@ class DzNumericNodeProperty extends DzFloatProperty {
  * @param initVal - The initial value of the property.
  * @constructor
 */
-	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean, initVal=0.0:Number) {
+	constructor(name:String, canAnimate:Boolean, isUserProperty:Boolean, initVal:Number) {
 	
 	};
 	/**
@@ -31744,7 +31744,7 @@ Add description.
  * @description Holds the vertical offset.
  * @constructor
 */
-	constructor(x=0:Number, y=0:Number) {
+	constructor(x:Number, y:Number) {
 	
 	};
 	/**
@@ -31771,7 +31771,7 @@ Add description.
  * @description Holds the opacity value.
  * @constructor
 */
-	constructor(opacity=1.0:Number) {
+	constructor(opacity:Number) {
 	
 	};
 	/**
@@ -33304,7 +33304,7 @@ class DzPathComboBox extends DzWidget {
  * @param useMarkableView - Whether or not to use a view with check boxes.
  * @constructor
 */
-	constructor(parent:DzWidget, useMarkableView=false:Boolean) {
+	constructor(parent:DzWidget, useMarkableView:Boolean) {
 	
 	};
 	/**
@@ -36620,7 +36620,7 @@ class DzQuat extends Object {
  * @description Initialize with 4-component quaternion.
  * @constructor
 */
-	constructor(x:Number, y:Number, z:Number, w:Number, normalize=true:Boolean) {
+	constructor(x:Number, y:Number, z:Number, w:Number, normalize:Boolean) {
 	
 	};
 	/**
@@ -38393,7 +38393,7 @@ Add description.
  * @description Holds the amount of rotation, in degrees.
  * @constructor
 */
-	constructor(rot=RotNone:Rotation) {
+	constructor(rot:Rotation) {
 	
 	};
 	/**
@@ -39655,7 +39655,7 @@ Add description.
  * @param h - The scaling of the image across its height. 1.0 is equivalent to 100%.
  * @constructor
 */
-	constructor(w=1.0:Number, h=1.0:Number) {
+	constructor(w:Number, h:Number) {
 	
 	};
 	/**
@@ -41386,7 +41386,7 @@ class DzScript extends DzBase {
  * @param name - The name of the script
  * @constructor
 */
-	constructor(name="":String) {
+	constructor(name:String) {
 	
 	};
 	/**
@@ -43832,7 +43832,7 @@ class DzShaderMaterial extends DzMaterial, DzRefCountedItem {
  * @param duplicateMissingProps - Whether or not to duplicate missing properties
  * @constructor
 */
-	constructor(mat:DzShaderMaterial, duplicateMissingProps=true:Boolean) {
+	constructor(mat:DzShaderMaterial, duplicateMissingProps:Boolean) {
 	
 	};
 	/**
@@ -44098,7 +44098,7 @@ class DzSimpleElementData extends DzElementData {
  * @param persistent - If true, the data item will be saved with the element to the native file format.
  * @constructor
 */
-	constructor(name:String, persistent=false:Boolean) {
+	constructor(name:String, persistent:Boolean) {
 	
 	};
 	/**
@@ -44138,7 +44138,7 @@ class DzSimpleElementScriptData extends DzSimpleElementData {
  * @param persistent - If true, the data item will be saved with the element to the native file format.
  * @constructor
 */
-	constructor(name:String, persistent=true:Boolean) {
+	constructor(name:String, persistent:Boolean) {
 	
 	};
 	/**
@@ -44167,7 +44167,7 @@ class DzSimpleSceneData extends DzSceneData {
  * @param persistent - If true, the data item will be saved with the element to the native file format.
  * @constructor
 */
-	constructor(name:String, persistent=false:Boolean) {
+	constructor(name:String, persistent:Boolean) {
 	
 	};
 	/**
@@ -44200,7 +44200,7 @@ class DzSimpleSceneScriptData extends DzSimpleSceneData {
  * @param persistent - If true, the data item will be saved with the scene to the native file format.
  * @constructor
 */
-	constructor(name:String, persistent=true:Boolean) {
+	constructor(name:String, persistent:Boolean) {
 	
 	};
 	/**
@@ -44516,7 +44516,7 @@ class DzSourceFileData extends DzElementData {
  * @description Creates a new Source File Data object that stores the given file path.
  * @constructor
 */
-	constructor(filePath="":String) {
+	constructor(filePath:String) {
 	
 	};
 	/**
@@ -46743,7 +46743,7 @@ class DzTimer extends QObject {
  * @description Construct a timer with the given parent.
  * @constructor
 */
-	constructor(parent=undefined:QObject) {
+	constructor(parent:QObject) {
 	
 	};
 	/**
