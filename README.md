@@ -51,7 +51,10 @@ All missing classes are EMCAScript classes which can not be added to this (or at
 
 # JzSense - How to use, setup, and tips video
 Click on image to be redirected to youtube video.
+
 [![JzSense - Overview Vid](https://img.youtube.com/vi/8ylc8F0a_jo/0.jpg)](https://www.youtube.com/watch?v=8ylc8F0a_jo)
+
+
 There may be other things missing. If you found something thats missing and it's not mentioned in this post, please post a new issue describing what is missing and where it can be found.
 ## Planned Updates
 - Update JSDOC for classes.
