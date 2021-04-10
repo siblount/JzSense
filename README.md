@@ -12,6 +12,7 @@ If I made your life wonderful, and if you are feeling generious enough to donate
 - Static and non-static methods now have improved documentation.
 - Renamed file to JzSense
 - Fixed methods reporting wrong return type.
+- Fixed constructors w/ default values.
 # ⚠ Heads up ⚠ 
 ##### The current version of JzSense is still a Work-In-Progress project. 
 - The current version does not include `String`, `Number`, `Boolean`, `Object`, `Date`, `Function`, and `JSON`, and others later explained.
@@ -50,8 +51,9 @@ All missing classes are EMCAScript classes which can not be added to this (or at
 
 There may be other things missing. If you found something thats missing and it's not mentioned in this post, please post a new issue describing what is missing and where it can be found.
 ## Planned Updates
-- Update JSDOC for classes & constructors.
+- Update JSDOC for classes.
 - Arrays will no longer return "any[]" (this has to be done manually afaik for 333 instances ._.)
+- Enum return types
 
 
    [Daz Documentation website]: <http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/start>
