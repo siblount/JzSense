@@ -1,7 +1,6 @@
 # JzSense
 
-JzSense is a JS file to assist developers with their DzScripts by utilizing powerful source code editor (such as Visual Studio Code) autocompletion, documentation, and suggestion functionalities.
-
+JzSense is a JS file to assist developers with their DzScripts by utilizing powerful source code editors’ (such as Visual Studio Code) autocompletion, documentation, and suggestion functionalities.
 JzSense contents is ported directly from the [DAZ Documentation website] and inherits the [Attribution 3.0 Unported (CC BY 3.0) License]
 # Me
 I DO NOT WORK FOR DAZ PRODUCTIONS AND THIS SCRIPT WAS NOT SUPPORTED BY OR ENDORSED BY ANYONE AT DAZ PRODUCTIONS INC.
