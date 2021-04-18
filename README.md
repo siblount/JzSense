@@ -57,10 +57,10 @@ Click on image to be redirected to youtube video.
 There may be other things missing. If you found something thats missing and it's not mentioned in this post, please post a new issue describing what is missing and where it can be found.
 ## Planned Updates
 - Fix some void functions w/ wrong return type (should be void; instead got neighbor return type) ✅
-   - Update functions with (currently) void return type when it should return their class type.
-- Update JSDOC for classes.
+   - Update functions with (currently) void return type when it should return their class type. ❔
+- Fix overloaded methods not showing. ✅
+- Update JSDOC for classes. 
 - Arrays will no longer return "any[]" (this has to be done manually afaik for 333 instances ._.)
-- Enum return types
 
 
    [Daz Documentation website]: <http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/start>
