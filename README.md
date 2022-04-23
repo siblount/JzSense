@@ -6,12 +6,14 @@ JzSense contents is ported directly from the [DAZ Documentation website] and inh
 I DO NOT WORK FOR DAZ PRODUCTIONS AND THIS SCRIPT WAS NOT SUPPORTED BY OR ENDORSED BY ANYONE AT DAZ PRODUCTIONS INC.
 
 If I made your life wonderful, and if you are feeling generious enough to donate to help me out a bit (or a lot)... 😏👉: 🌟 https://www.buymeacoffee.com/therealsoll 🌟
-## Latest Update: 4/10/2021 ##
+## Latest Update: 4/23/2022 ##
 - Added missing documentation for properties.
 - Static and non-static methods now have improved documentation.
 - Renamed file to JzSense
 - Fixed methods reporting wrong return type.
 - Fixed constructors w/ default values.
+- Added classes from v3 documentation.
+- Fixed overloaded methods not showing.
 # ⚠ Heads up ⚠ 
 ##### The current version of JzSense is still a Work-In-Progress project. 
 - The current version does not include `String`, `Number`, `Boolean`, `Object`, `Date`, `Function`, and `JSON`, and others later explained.
@@ -46,7 +48,7 @@ All missing classes are EMCAScript classes which can not be added to this (or at
 - `NativeError`
 - `Number`
 - `URIError`
-- All classes not documented such as DzShape (`shape_dz`).
+- Some classes not documented in either v3 or v4 documentation.
 
 # JzSense - How to use, setup, and tips video
 Click on image to be redirected to youtube video.
@@ -56,10 +58,7 @@ Click on image to be redirected to youtube video.
 
 There may be other things missing. If you found something thats missing and it's not mentioned in this post, please post a new issue describing what is missing and where it can be found.
 ## Planned Updates
-- Fix some void functions w/ wrong return type (should be void; instead got neighbor return type)
-- Update JSDOC for classes.
-- Arrays will no longer return "any[]" (this has to be done manually afaik for 333 instances ._.)
-- Enum return types
+- The Daz Documentation website has been updated and therefore JzSense needs to be updated. Will update after JzSense-Generator project is more stable.
 
 
    [Daz Documentation website]: <http://docs.daz3d.com/doku.php/public/software/dazstudio/4/referenceguide/scripting/start>
